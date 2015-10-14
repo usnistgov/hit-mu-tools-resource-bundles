@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="ASCII" standalone="no"?>
+<html>
+<head>
+<style xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:util="http://hl7.nist.gov/data-specs/util" type="text/css">
+					@media screen {
+					.testStory legend {text-align:center;font-size:110%; font-weight:bold;}					
+					.testStory  {text-align:center;page-break-inside: avoid;}
+                    .testStory maskByMediaType {display:table;}
+                    .testStory  table tbody tr th {font-size:100%;}
+                    .testStory  table tbody tr td {font-size:90%;}
+                    .testStory  table tbody tr th {text-align:center;background:#436BEC}
+					.testStory  table { width:98%;border: 1px groove;table-layout: fixed; margin:0 auto;border-collapse: collapse;page-break-inside: avoid;}
+                    .testStory  table  tr { border: 3px groove; }
+                    .testStory  table  th { border: 2px groove;}
+                    .testStory  table  td { border: 2px groove; }
+                    .testStory  table tbody tr td {text-align:left}
+                    }
+                    @media print {
+					.testStory legend {text-align:center;font-size:110%; font-weight:bold;}					
+					.testStory  {text-align:center;page-break-inside: avoid;}
+                    .testStory maskByMediaType {display:table;}
+                    .testStory  table tbody tr th {font-size:100%;}
+                    .testStory  table tbody tr td {font-size:90%;}
+                    .testStory  table tbody tr th {text-align:center;background:#436BEC}
+					.testStory  table { width:98%;border: 1px groove;table-layout: fixed; margin:0 auto;border-collapse: collapse;page-break-inside: avoid;}
+                    .testStory  table  tr { border: 3px groove; }
+                    .testStory  table  th { border: 2px groove;}
+                    .testStory  table  td { border: 2px groove; }
+                    .testStory  table tbody tr td {text-align:left}
+                    }
+                    @page {
+                    counter-increment: page;
+					@bottom-center {
+                    content: "Page " counter(page);
+                    }
+                    }
+                    @page :left {
+                    margin-left: 5%;
+                    margin-right: 5%;
+                    }
+                    @page :right {
+                    margin-left: 5%;
+                    margin-right: 5%;
+                    }
+}
+</style>
+</head>
+<body>
+	<div class="testStory">
+	<fieldset>
+		<table>
+			<tr>
+				<th colspan="1">Description</th>
+			</tr>
+			<tr>
+				<td><p>The patient`s vital signs gradually return to normal. At 2 PM, the patient`s laboratory and radiology tests results are provided to the attending physician. The tests indicate that the infant has influenza and pneumonia. The patient`s mother is provided with treatment information and prescriptions for her infant son. The working diagnosis (ICD-9 CM 487.1) is resolved/inactivated, and at 5 PM the patient is discharged home with a final diagnosis of influenza with pneumonia. Big City Children&#39;s Urgent Care is an outpatient facility operated by Children&rsquo;s Hospital of Big City that routinely sends electronic syndromic surveillance data to the Big City Health Department (BCHD) in accordance with a city regulation. At 6:00 PM on February 20, 2010, the facility`s electronic health record module for syndromic surveillance data assembles and transmits a Discharge ADT message about this patient encounter to BCHD.</p>
+</td>
+			</tr>
+		</table>
+		<br />
+		<table>
+			<tr>
+				<th colspan="1">Comments</th>
+			</tr>
+			<tr>
+				<td><p>This Test Scenario provides an example of clinical encounter that could take place in either an urgent care or emergency clinical setting. It is therefore applicable to EHR technology used in some ambulatory settings. Dates and times are provided in this test scenario to illustrate the sequence of clinical and messaging events. Since the exact dates and times are not reproducible when modeling the test scenario with EHR technology, only date and time format will be validated within tester submitted test data.</p>
+</td>
+			</tr>
+		</table>
+		<br />
+		<table>
+			<tr>
+				<th colspan="1">PreCondition</th>
+			</tr>
+			<tr>
+				<td><p>A04-Registration message is sent before A03-Discharge message.</p>
+</td>
+			</tr>
+		</table>
+		<br />
+		<table>
+			<tr>
+				<th colspan="1">PostCondition</th>
+			</tr>
+			<tr>
+				<td><p>No PostCondition</p>
+</td>
+			</tr>
+		</table>
+		<br />
+		<table>
+			<tr>
+				<th colspan="1">Test Objectives</th>
+			</tr>
+			<tr>
+				<td><p>Output an ADT A03 discharge message in HL7 2.5.1 containing the syndromic surveillance data for the patient encounter.</p>
+</td>
+			</tr>
+		</table>
+		<br />
+		<table>
+			<tr>
+				<th colspan="1">Evaluation Criteria</th>
+			</tr>
+			<tr>
+				<td><p>No evaluation criteria</p>
+</td>
+			</tr>
+		</table>
+		<br />
+		<table>
+			<tr>
+				<th colspan="1">Notes to Testers</th>
+			</tr>
+			<tr>
+				<td><p>Although the other units of measure for patient age are acceptable in general (and the Context-free validation accepts any of the valid units of measure for age), Scenario #1 specifies that &quot;mo&quot; for months be used in this message for the Context-based validation. ICD 9 CM diagnosis codes are acceptable with or without decimals.</p>
+</td>
+			</tr>
+		</table>
+	</fieldset>
+	</div>
+</body>
+</html>

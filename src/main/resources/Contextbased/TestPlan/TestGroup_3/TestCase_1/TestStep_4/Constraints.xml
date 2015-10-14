@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ConformanceContext UUID="3f0f24dc-62c4-4dd0-8877-261386447eb4">
+  <Constraints>
+    <Group>
+      <ByName Name="ADT_A04">
+        <Constraint ID="TCAMT_PID[1].8[1]_2" Target="4[1].8[1]">
+          <Reference GeneratedBy="TCAMT" ReferencePath="PID[1].8[1]" Source="Test Case" TestDataCategorization="Presence-Test Case Proper"/>
+          <Description>PID[1].8[1] SHALL be valued.</Description>
+          <Assertion>
+            <Presence Path="4[1].8[1]"/>
+          </Assertion>
+        </Constraint>
+      </ByName>
+    </Group>
+  </Constraints>
+</ConformanceContext>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ConformanceContext UUID="86747c06-6a8b-4c52-9885-ff2e7285cf17">
+  <Constraints>
+    <Group>
+      <ByName Name="ADT_A03">
+        <Constraint ID="TCAMT_MSH[1].21[1].2[1]_3" Target="1[1].21[1].2[1]">
+          <Reference GeneratedBy="TCAMT" ReferencePath="MSH[1].21[1].2[1]" Source="Test Case" TestDataCategorization="Value-Profile Fixed"/>
+          <Description>MSH[1].21[1].2[1] SHALL be valued.</Description>
+          <Assertion>
+            <Presence Path="1[1].21[1].2[1]"/>
+          </Assertion>
+        </Constraint>
+        <Constraint ID="TCAMT_MSH[1].21[1].1[1]_3" Target="1[1].21[1].1[1]">
+          <Reference GeneratedBy="TCAMT" ReferencePath="MSH[1].21[1].1[1]" Source="Test Case" TestDataCategorization="Value-Profile Fixed"/>
+          <Description>MSH[1].21[1].1[1] SHALL be valued.</Description>
+          <Assertion>
+            <Presence Path="1[1].21[1].1[1]"/>
+          </Assertion>
+        </Constraint>
+      </ByName>
+    </Group>
+  </Constraints>
+</ConformanceContext>

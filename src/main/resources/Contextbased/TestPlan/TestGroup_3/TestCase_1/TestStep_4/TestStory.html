@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="ASCII" standalone="no"?>
+<html>
+<head>
+<style xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:util="http://hl7.nist.gov/data-specs/util" type="text/css">
+					@media screen {
+					.testStory legend {text-align:center;font-size:110%; font-weight:bold;}					
+					.testStory  {text-align:center;page-break-inside: avoid;}
+                    .testStory maskByMediaType {display:table;}
+                    .testStory  table tbody tr th {font-size:100%;}
+                    .testStory  table tbody tr td {font-size:90%;}
+                    .testStory  table tbody tr th {text-align:center;background:#436BEC}
+					.testStory  table { width:98%;border: 1px groove;table-layout: fixed; margin:0 auto;border-collapse: collapse;page-break-inside: avoid;}
+                    .testStory  table  tr { border: 3px groove; }
+                    .testStory  table  th { border: 2px groove;}
+                    .testStory  table  td { border: 2px groove; }
+                    .testStory  table tbody tr td {text-align:left}
+                    }
+                    @media print {
+					.testStory legend {text-align:center;font-size:110%; font-weight:bold;}					
+					.testStory  {text-align:center;page-break-inside: avoid;}
+                    .testStory maskByMediaType {display:table;}
+                    .testStory  table tbody tr th {font-size:100%;}
+                    .testStory  table tbody tr td {font-size:90%;}
+                    .testStory  table tbody tr th {text-align:center;background:#436BEC}
+					.testStory  table { width:98%;border: 1px groove;table-layout: fixed; margin:0 auto;border-collapse: collapse;page-break-inside: avoid;}
+                    .testStory  table  tr { border: 3px groove; }
+                    .testStory  table  th { border: 2px groove;}
+                    .testStory  table  td { border: 2px groove; }
+                    .testStory  table tbody tr td {text-align:left}
+                    }
+                    @page {
+                    counter-increment: page;
+					@bottom-center {
+                    content: "Page " counter(page);
+                    }
+                    }
+                    @page :left {
+                    margin-left: 5%;
+                    margin-right: 5%;
+                    }
+                    @page :right {
+                    margin-left: 5%;
+                    margin-right: 5%;
+                    }
+}
+</style>
+</head>
+<body>
+	<div class="testStory">
+	<fieldset>
+		<table>
+			<tr>
+				<th colspan="1">Description</th>
+			</tr>
+			<tr>
+				<td><p>While the patient is prepared for transport within the hospital for HBOT, the clinical staffers complete an admission record. The admit reason is recorded as, “Toxic effect of carbon monoxide (disorder) (SNOMED code 17383000)”. Southern Midwest Medical Center reports syndromic surveillance data to the city health department (CHD). At 8:35 AM on February 1, 2010, the hospitals electronic health record module for syndromic surveillance data assembles and transmits an Admission message about this encounter to SHD.</p>
+</td>
+			</tr>
+		</table>
+		<br />
+		<table>
+			<tr>
+				<th colspan="1">Comments</th>
+			</tr>
+			<tr>
+				<td><p>This Test Case provides an example of an ED visit for which the patient&#39;s chief complaint is captured as free-text, working diagnosis and final diagnosis are captured with SNOMED CT codes, the patient is discharged from the ED and admitted for inpatient care, and the Admit/Encounter Reason is captured with a SNOMEDE CT code. Dates and times are provided in this test case to illustrate the sequence of clinical and messaging events. Since the exact dates and times are not reproducible when modeling the Test Case with a Health IT Module, only date and time format will be validated within tester submitted test data.</p>
+</td>
+			</tr>
+		</table>
+		<br />
+		<table>
+			<tr>
+				<th colspan="1">PreCondition</th>
+			</tr>
+			<tr>
+				<td><p>A03-Discharge message is sent before A01-Admission message.</p>
+</td>
+			</tr>
+		</table>
+		<br />
+		<table>
+			<tr>
+				<th colspan="1">PostCondition</th>
+			</tr>
+			<tr>
+				<td>No PostCondition</td>
+			</tr>
+		</table>
+		<br />
+		<table>
+			<tr>
+				<th colspan="1">Test Objectives</th>
+			</tr>
+			<tr>
+				<td><p>This test case examines a Health IT Module&#39;s ability to create ADT A01-Admission message within the PHIN Messaging Guide&#39;s conformance requirements for syndromic surveillance.</p>
+</td>
+			</tr>
+		</table>
+		<br />
+		<table>
+			<tr>
+				<th colspan="1">Evaluation Criteria</th>
+			</tr>
+			<tr>
+				<td>No evaluation criteria</td>
+			</tr>
+		</table>
+		<br />
+		<table>
+			<tr>
+				<th colspan="1">Notes to Testers</th>
+			</tr>
+			<tr>
+				<td><p>The OBX segment in the A01 message provides the originating visit type information through Facility/Visit Type. The admit described in the ED_Visit_Admit Test Scenario originated in the emergency department; therefore, &quot;Emergency Care&quot; is messaged in the OBX.5 element in the A01 message.</p>
+</td>
+			</tr>
+		</table>
+	</fieldset>
+	</div>
+</body>
+</html>

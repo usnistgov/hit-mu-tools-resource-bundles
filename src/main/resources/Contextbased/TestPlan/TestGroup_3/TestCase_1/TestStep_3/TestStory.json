@@ -1,0 +1,9 @@
+{
+  "teststorydesc" : "<p>The patient is quickly discharged from the emergency department (ED) and transported within the facility to a hyperbaric chamber for HBOT. At 8:25 AM, ED staff complete the patient record and administratively discharge the patient from the ED. The working diagnosis is updated to final diagnosis. The patient's final diagnosis is Toxic effect of carbon monoxide (disorder) (SNOMED code 17383000). Southern Midwest Medical Center reports syndromic surveillance data to the city health department (CHD). At 8:30 AM on February 1, 2010, the hospital's electronic health record module for syndromic surveillance data assembles and transmits a Discharge message about this encounter to SHD.</p>\r\n",
+  "comments" : "<p>This Test Case provides an example of an ED visit for which the patient&#39;s chief complaint is captured as free-text, working diagnosis and final diagnosis are captured with SNOMED CT codes, the patient is discharged from the ED and admitted for inpatient care, and the Admit/Encounter Reason is captured with a SNOMEDE CT code. Dates and times are provided in this test case to illustrate the sequence of clinical and messaging events. Since the exact dates and times are not reproducible when modeling the Test Case with a Health IT Module, only date and time format will be validated within tester submitted test data.</p>\r\n",
+  "preCondition" : "<p>A08-Update message is sent before A03-Discharge message.</p>\r\n",
+  "postCondition" : "No PostCondition",
+  "testObjectives" : "<p>This test case examines an Health IT Module&#39;s ability to create ADT A03-Discharge message within the PHIN Messaging Guide&#39;s conformance requirements.</p>\r\n",
+  "evaluationCriteria" : "<p>No evaluation criteria</p>\r\n",
+  "notes" : "<p>This Test Case does not prescribe the method used by the Health IT Module to change a Working diagnosis to a Final diagnosis. The Test Case only validates a specific ADT message type.</p>\r\n"
+}

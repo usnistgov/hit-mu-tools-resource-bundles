@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="ASCII" standalone="no"?>
+<html>
+<head>
+<style xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:util="http://hl7.nist.gov/data-specs/util" type="text/css">
+					@media screen {
+					.testStory legend {text-align:center;font-size:110%; font-weight:bold;}					
+					.testStory  {text-align:center;page-break-inside: avoid;}
+                    .testStory maskByMediaType {display:table;}
+                    .testStory  table tbody tr th {font-size:100%;}
+                    .testStory  table tbody tr td {font-size:90%;}
+                    .testStory  table tbody tr th {text-align:center;background:#436BEC}
+					.testStory  table { width:98%;border: 1px groove;table-layout: fixed; margin:0 auto;border-collapse: collapse;page-break-inside: avoid;}
+                    .testStory  table  tr { border: 3px groove; }
+                    .testStory  table  th { border: 2px groove;}
+                    .testStory  table  td { border: 2px groove; }
+                    .testStory  table tbody tr td {text-align:left}
+                    }
+                    @media print {
+					.testStory legend {text-align:center;font-size:110%; font-weight:bold;}					
+					.testStory  {text-align:center;page-break-inside: avoid;}
+                    .testStory maskByMediaType {display:table;}
+                    .testStory  table tbody tr th {font-size:100%;}
+                    .testStory  table tbody tr td {font-size:90%;}
+                    .testStory  table tbody tr th {text-align:center;background:#436BEC}
+					.testStory  table { width:98%;border: 1px groove;table-layout: fixed; margin:0 auto;border-collapse: collapse;page-break-inside: avoid;}
+                    .testStory  table  tr { border: 3px groove; }
+                    .testStory  table  th { border: 2px groove;}
+                    .testStory  table  td { border: 2px groove; }
+                    .testStory  table tbody tr td {text-align:left}
+                    }
+                    @page {
+                    counter-increment: page;
+					@bottom-center {
+                    content: "Page " counter(page);
+                    }
+                    }
+                    @page :left {
+                    margin-left: 5%;
+                    margin-right: 5%;
+                    }
+                    @page :right {
+                    margin-left: 5%;
+                    margin-right: 5%;
+                    }
+}
+</style>
+</head>
+<body>
+	<div class="testStory">
+	<fieldset>
+		<table>
+			<tr>
+				<th colspan="1">Description</th>
+			</tr>
+			<tr>
+				<td><p>The patient is quickly discharged from the emergency department (ED) and transported within the facility to a hyperbaric chamber for HBOT. At 8:25 AM, ED staff complete the patient record and administratively discharge the patient from the ED. The working diagnosis is updated to final diagnosis. The patient's final diagnosis is Toxic effect of carbon monoxide (disorder) (SNOMED code 17383000). Southern Midwest Medical Center reports syndromic surveillance data to the city health department (CHD). At 8:30 AM on February 1, 2010, the hospital's electronic health record module for syndromic surveillance data assembles and transmits a Discharge message about this encounter to SHD.</p>
+</td>
+			</tr>
+		</table>
+		<br />
+		<table>
+			<tr>
+				<th colspan="1">Comments</th>
+			</tr>
+			<tr>
+				<td><p>This Test Case provides an example of an ED visit for which the patient&#39;s chief complaint is captured as free-text, working diagnosis and final diagnosis are captured with SNOMED CT codes, the patient is discharged from the ED and admitted for inpatient care, and the Admit/Encounter Reason is captured with a SNOMEDE CT code. Dates and times are provided in this test case to illustrate the sequence of clinical and messaging events. Since the exact dates and times are not reproducible when modeling the Test Case with a Health IT Module, only date and time format will be validated within tester submitted test data.</p>
+</td>
+			</tr>
+		</table>
+		<br />
+		<table>
+			<tr>
+				<th colspan="1">PreCondition</th>
+			</tr>
+			<tr>
+				<td><p>A08-Update message is sent before A03-Discharge message.</p>
+</td>
+			</tr>
+		</table>
+		<br />
+		<table>
+			<tr>
+				<th colspan="1">PostCondition</th>
+			</tr>
+			<tr>
+				<td>No PostCondition</td>
+			</tr>
+		</table>
+		<br />
+		<table>
+			<tr>
+				<th colspan="1">Test Objectives</th>
+			</tr>
+			<tr>
+				<td><p>This test case examines an Health IT Module&#39;s ability to create ADT A03-Discharge message within the PHIN Messaging Guide&#39;s conformance requirements.</p>
+</td>
+			</tr>
+		</table>
+		<br />
+		<table>
+			<tr>
+				<th colspan="1">Evaluation Criteria</th>
+			</tr>
+			<tr>
+				<td><p>No evaluation criteria</p>
+</td>
+			</tr>
+		</table>
+		<br />
+		<table>
+			<tr>
+				<th colspan="1">Notes to Testers</th>
+			</tr>
+			<tr>
+				<td><p>This Test Case does not prescribe the method used by the Health IT Module to change a Working diagnosis to a Final diagnosis. The Test Case only validates a specific ADT message type.</p>
+</td>
+			</tr>
+		</table>
+	</fieldset>
+	</div>
+</body>
+</html>
