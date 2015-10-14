@@ -445,13 +445,13 @@
                     <Assertion>
                         <FORALL>
                             <!-- First check that all values are present because PlainText returns true when something is not present -->
-                            <Presence Path="9[1].1[1]"/>
-                            <Presence Path="9[1].2[1]"/>
-                            <Presence Path="9[1].3[1]"/>
+                            <Presence Path="1[1].9[1].1[1]"/>
+                            <Presence Path="1[1].9[1].2[1]"/>
+                            <Presence Path="1[1].9[1].3[1]"/>
                             <!--  now check the values -->
-                            <PlainText Path="9[1].1[1]" Text="ADT" IgnoreCase="false"/>
-                            <PlainText Path="9[1].2[1]" Text="A03" IgnoreCase="false"/>
-                            <PlainText Path="9[1].3[1]" Text="ADT_A03" IgnoreCase="false"/>                            
+                            <PlainText Path="1[1].9[1].1[1]" Text="ADT" IgnoreCase="false"/>
+                            <PlainText Path="1[1].9[1].2[1]" Text="A03" IgnoreCase="false"/>
+                            <PlainText Path="1[1].9[1].3[1]" Text="ADT_A03" IgnoreCase="false"/>                            
                         </FORALL>
                     </Assertion>
                 </Constraint>
