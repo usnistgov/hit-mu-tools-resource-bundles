@@ -110,7 +110,7 @@
                 </Constraint>
                 <!-- MSH.7 -->
                 <Constraint ID="SS-013">
-                    <Description>MSH-7 (Date/Time of Message) SHALL be expressed with a minimum precision of the nearest minute, and be represented in the following format: ‘YYYYMMDDHHMM[SS[.S[S[S[S]]]]] [+/- ZZZZ]’</Description>
+                    <Description>MSH-7 (Date/Time of Message) SHALL be expressed with a minimum precision of the nearest minute, and be represented in the following format: 'YYYYMMDDHHMM[SS[.S[S[S[S]]]]] [+/- ZZZZ]'</Description>
                     <Assertion>
                         <Format Path="7[1]" Regex="([0-9]{12}*)"/>
                     </Assertion>
@@ -131,7 +131,7 @@
                 </Constraint>
                 <!-- MSH.11 -->
                 <Constraint ID="SS-015">
-                    <Description>MSH-11 (Processing ID) SHALL have a value in the set of literal values: “P” for Production, “D” for Debug or “T” for Training.</Description>
+                    <Description>MSH-11 (Processing ID) SHALL have a value in the set of literal values: "P" for Production, "D" for Debug or "T" for Training.</Description>
                     <Assertion>
                         <StringList Path="11[1]" CSV="P,T,D"/>
                     </Assertion>
@@ -192,7 +192,7 @@
             <ByID ID="EVN">
                 <!-- EVN.2 -->
                 <Constraint ID="SS-018">
-                    <Description>EVN-2 (Recorded Date/Time of Message) SHALL be expressed with a minimum precision of the nearest minute, and be represented in the following format: ‘YYYYMMDDHHMM[SS[.S[S[S[S]]]]] [+/- ZZZZ]’</Description>
+                    <Description>EVN-2 (Recorded Date/Time of Message) SHALL be expressed with a minimum precision of the nearest minute, and be represented in the following format: 'YYYYMMDDHHMM[SS[.S[S[S[S]]]]] [+/- ZZZZ]'</Description>
                     <Assertion>
                         <!-- TODO -->
                         <Format Path="7[1]" Regex="([0-9]{12}*)"/>
@@ -441,7 +441,7 @@
             <!-- ADT_A03.1 -->
             <ByID ID="52f1dab8-d538-4c7e-b71b-39619b94c3bf">
                 <Constraint ID="SS-038">
-                    <Description>MSH-9 (Message Type) SHALL be the literal value: ‘ADT^A03^ADT_A03’ for Discharge Messages</Description>
+                    <Description>MSH-9 (Message Type) SHALL be the literal value: 'ADT^A03^ADT_A03' for Discharge Messages</Description>
                     <Assertion>
                         <FORALL>
                             <!-- First check that all values are present because PlainText returns true when something is not present -->
@@ -459,7 +459,7 @@
             <!-- ADT_A04.1 -->
             <ByID ID="0d741773-619a-4ec1-b6c2-2589faa75b93">
                 <Constraint ID="SS-004">
-                    <Description>MSH-9 (Message Type) SHALL be the literal value: ‘ADT^A04^ADT_A01’ for Registration Messages</Description>
+                    <Description>MSH-9 (Message Type) SHALL be the literal value: 'ADT^A04^ADT_A01' for Registration Messages</Description>
                     <Assertion>
                         <FORALL>
                             <!-- First check that all values are present because PlainText returns true when something is not present -->
@@ -477,7 +477,7 @@
             <!-- ADT_A08.1 -->
             <ByID ID="0d741773-619a-4ec1-b6c2-2589faa75b94">
                 <Constraint ID="SS-035">
-                    <Description>MSH-9 (Message Type) SHALL be the literal value: ‘ADT^A08^ADT_A01’ for Update Messages</Description>
+                    <Description>MSH-9 (Message Type) SHALL be the literal value: 'ADT^A08^ADT_A01' for Update Messages</Description>
                     <Assertion>
                         <FORALL>
                             <!-- First check that all values are present because PlainText returns true when something is not present -->
