@@ -1297,7 +1297,7 @@
         <Datatype ID="CE_PR1" Name="CE" Description="Coded Element">
             <Component Name="Identifier" Usage="R" Datatype="ST" MinLength="1" MaxLength="20"/>
             <Component Name="Text" Usage="RE" Datatype="ST" MinLength="1" MaxLength="199"/>
-            <Component Name="Name of Coding System" Usage="R" Datatype="ID" MinLength="1" MaxLength="20" Binding="HL70396" BindingStrength="R" BindingLocation="1" />
+            <Component Name="Name of Coding System" Usage="R" Datatype="ID" MinLength="1" MaxLength="20" Binding="PHVS_CodingSystem_HL7_2x_Table0396" BindingStrength="R" BindingLocation="1" />
             <Component Name="Alternate Identifier" Usage="X" Datatype="ST" MinLength="1" MaxLength="20"/>
             <Component Name="Alternate Text" Usage="X" Datatype="ST" MinLength="1" MaxLength="199"/>
             <Component Name="Name of Alternate Coding System" Usage="X" Datatype="ID" MinLength="1" MaxLength="20" Binding="HL70396" BindingStrength="R" BindingLocation="1" />
