@@ -8,9 +8,9 @@
 			"elements" : 
 			[
 				{"location" : "MSH.1", "dataelement" : "Field Separator", "data" : "|", "categorization"
-: "Presence Length-System Generated"},
+: "Value-Profile Fixed"},
 				{"location" : "MSH.2", "dataelement" : "Encoding Characters", "data" : "^~\&amp;",
-"categorization" : "Presence Length-System Generated"},
+"categorization" : "Value-Profile Fixed"},
 				{"location" : "MSH.4", "dataelement" : "Sending Facility", "data" : "", "categorization"
 : ""},
 							{"location" : "MSH.4.1", "dataelement" : "Namespace ID", "data" : "BgCtyChldrnUrgntCar",
@@ -40,21 +40,21 @@
 				{"location" : "MSH.12", "dataelement" : "Version ID", "data" : "", "categorization"
 : ""},
 							{"location" : "MSH.12.1", "dataelement" : "Version ID", "data" : "2.5.1", "categorization"
-: "Presence Length-System Generated"},
+: "Value-Profile Fixed"},
 				{"location" : "MSH.15", "dataelement" : "Accept Acknowledgment Type", "data" :
-"", "categorization" : "Presence Length-Test Case Proper"},
+"", "categorization" : "Value-Profile Fixed List"},
 				{"location" : "MSH.16", "dataelement" : "Application Acknowledgment Type", "data"
-: "", "categorization" : "Value-Profile Fixed List"},
+: "", "categorization" : "Value-Test Case Fixed List"},
 				{"location" : "MSH.21", "dataelement" : "Message Profile Identifier", "data" :
 "", "categorization" : ""},
 							{"location" : "MSH.21.1", "dataelement" : "Entity Identifier", "data" : "PH_SS-NoAck",
-"categorization" : "Presence Length-System Generated"},
+"categorization" : "Value-Profile Fixed"},
 							{"location" : "MSH.21.2", "dataelement" : "Namespace ID", "data" : "SS Sender",
-"categorization" : "Presence Length-System Generated"},
+"categorization" : "Value-Profile Fixed"},
 							{"location" : "MSH.21.3", "dataelement" : "Universal ID", "data" : "2.16.840.1.114222.4.10.3",
-"categorization" : "Presence Length-System Generated"},
+"categorization" : "Value-Profile Fixed"},
 							{"location" : "MSH.21.4", "dataelement" : "Universal ID Type", "data" : "ISO
-", "categorization" : "Presence Length-System Generated"},		]
+", "categorization" : "Value-Profile Fixed"},		]
 		{
 			"title":"EVN : Event Type",
 			"elements" : 
@@ -76,7 +76,7 @@
 			"elements" : 
 			[
 				{"location" : "PID.1", "dataelement" : "Set ID - PID", "data" : "1", "categorization"
-: "Presence Length-System Generated"},
+: "Value-Profile Fixed"},
 				{"location" : "PID.3", "dataelement" : "Patient Identifier List", "data" : "",
 "categorization" : ""},
 							{"location" : "PID.3.1", "dataelement" : "ID Number", "data" : "11111", "categorization"
@@ -92,13 +92,13 @@
 				{"location" : "PID.5[1]", "dataelement" : "Patient Name", "data" : "", "categorization"
 : ""},
 							{"location" : "PID.5[1].7", "dataelement" : "Name Type Code", "data" : "",
-"categorization" : "Presence Length-Configuration"},
+"categorization" : "NonPresence"},
 				{"location" : "PID.5[2]", "dataelement" : "Patient Name", "data" : "", "categorization"
 : ""},
 							{"location" : "PID.5[2].7", "dataelement" : "Name Type Code", "data" : "S",
 "categorization" : ""},
 				{"location" : "PID.8", "dataelement" : "Administrative Sex", "data" : "M", "categorization"
-: "Value-Profile Fixed"},
+: "Value-Test Case Fixed"},
 				{"location" : "PID.10[1]", "dataelement" : "Race", "data" : "", "categorization"
 : ""},
 							{"location" : "PID.10[1].1", "dataelement" : "Identifier", "data" : "2106-3",
@@ -144,11 +144,11 @@ or Other Pacific Islander", "categorization" : ""},
 				{"location" : "PID.22", "dataelement" : "Ethnic Group", "data" : "", "categorization"
 : ""},
 							{"location" : "PID.22.1", "dataelement" : "Identifier", "data" : "2186-5",
-"categorization" : "Value-Profile Fixed"},
+"categorization" : "Value-Test Case Fixed"},
 							{"location" : "PID.22.2", "dataelement" : "Text", "data" : "Not Hispanic or
 Latino", "categorization" : "Presence-Content Indifferent"},
 							{"location" : "PID.22.3", "dataelement" : "Name of Coding System", "data" :
-"CDCREC ", "categorization" : "Presence Length-System Generated"},
+"CDCREC ", "categorization" : "Value-Profile Fixed"},
 							{"location" : "PID.22.6", "dataelement" : "Name of Alternate Coding System",
 "data" : "", "categorization" : ""},
 				{"location" : "PID.29", "dataelement" : "Patient Death Date and Time", "data"
@@ -156,13 +156,13 @@ Latino", "categorization" : "Presence-Content Indifferent"},
 							{"location" : "PID.29.1", "dataelement" : "Time", "data" : "", "categorization"
 : ""},
 				{"location" : "PID.30", "dataelement" : "Patient Death Indicator", "data" : "",
-"categorization" : "Value-Profile Fixed"},		]
+"categorization" : "Value-Test Case Fixed"},		]
 		{
 			"title":"PV1 : Patient Visit",
 			"elements" : 
 			[
 				{"location" : "PV1.1", "dataelement" : "Set ID - PV1", "data" : "1", "categorization"
-: "Value-Profile Fixed"},
+: "Value-Test Case Fixed"},
 				{"location" : "PV1.2", "dataelement" : "Patient Class", "data" : "O", "categorization"
 : ""},
 				{"location" : "PV1.19", "dataelement" : "Visit Number", "data" : "", "categorization"
@@ -205,7 +205,7 @@ Latino", "categorization" : "Presence-Content Indifferent"},
 				{"location" : "OBX.1", "dataelement" : "Set ID - OBX", "data" : "1", "categorization"
 : "Presence-Content Indifferent"},
 				{"location" : "OBX.2", "dataelement" : "Value Type", "data" : "CWE", "categorization"
-: "Presence Length-Test Case Proper"},
+: "Value-Profile Fixed List"},
 				{"location" : "OBX.3", "dataelement" : "Observation Identifier", "data" : "",
 "categorization" : ""},
 							{"location" : "OBX.3.1", "dataelement" : "Identifier", "data" : "SS003", "categorization"
@@ -243,7 +243,7 @@ Latino", "categorization" : "Presence-Content Indifferent"},
 							{"location" : "OBX.6.6", "dataelement" : "Name of Alternate Coding System",
 "data" : "", "categorization" : ""},
 				{"location" : "OBX.11", "dataelement" : "Observation Result Status", "data" :
-"F ", "categorization" : "Presence Length-Test Case Proper"},		]
+"F ", "categorization" : "Value-Profile Fixed List"},		]
 		{
 			"title":"OBX : Observation/Result",
 			"elements" : 
@@ -428,13 +428,13 @@ Latino", "categorization" : "Presence-Content Indifferent"},
 				{"location" : "DG1.3", "dataelement" : "Diagnosis Code - DG1", "data" : "", "categorization"
 : ""},
 							{"location" : "DG1.3.1", "dataelement" : "Identifier", "data" : "4871", "categorization"
-: "Presence Length-Test Case Proper"},
+: "Value-Profile Fixed List"},
 							{"location" : "DG1.3.2", "dataelement" : "Text", "data" : "Influenza with other
 respiratory manifestations", "categorization" : "Presence-Content Indifferent"},
 							{"location" : "DG1.3.3", "dataelement" : "Name of Coding System", "data" :
-"I9CDX", "categorization" : "Presence Length-Test Case Proper"},
+"I9CDX", "categorization" : "Value-Profile Fixed List"},
 				{"location" : "DG1.6", "dataelement" : "Diagnosis Type", "data" : "W ", "categorization"
-: "Presence Length-Test Case Proper"},		]
+: "Value-Profile Fixed List"},		]
 
 		}
 ]
