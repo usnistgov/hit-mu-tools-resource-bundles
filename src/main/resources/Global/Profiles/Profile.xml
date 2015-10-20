@@ -1135,7 +1135,7 @@
             <Component Name="Check Digit Scheme" Usage="O" Datatype="ID" MinLength="1" MaxLength="20" Binding="HL70061" BindingStrength="R" BindingLocation="1" />
             <Component Name="Assigning Authority" Usage="R" Datatype="HD" MinLength="1" MaxLength="227" Binding="HL70363" BindingStrength="R" BindingLocation="1" />
             <Component Name="Identifier Type Code" Usage="O" Datatype="ID" MinLength="1" MaxLength="5" Binding="PHVS_IdentifierType_SyndromicSurveillance" BindingStrength="R" BindingLocation="1" />
-            <Component Name="Assigning Facility" Usage="O" Datatype="HD" MinLength="1" MaxLength="227" Binding="HL70396" BindingStrength="R" BindingLocation="1" />
+            <Component Name="Assigning Facility" Usage="O" Datatype="HD" MinLength="1" MaxLength="227" Binding="PHVS_CodingSystem_HL7_2x_Table0396" BindingStrength="R" BindingLocation="1" />
             <Component Name="Effective Date" Usage="O" Datatype="DT" MinLength="1" MaxLength="8"/>
             <Component Name="Expiration Date" Usage="O" Datatype="DT" MinLength="1" MaxLength="8"/>
             <Component Name="Assigning Jurisdiction" Usage="O" Datatype="CWE" MinLength="1" MaxLength="705"/>
@@ -1170,10 +1170,10 @@
         <Datatype ID="CWE" Name="CWE" Description="Coded with Exceptions">
             <Component Name="Identifier" Usage="RE" Datatype="ST" MinLength="1" MaxLength="20"/>
             <Component Name="Text" Usage="RE" Datatype="ST" MinLength="1" MaxLength="199"/>
-            <Component Name="Name of Coding System" Usage="C" Datatype="ID" MinLength="1" MaxLength="20" Binding="HL70396" BindingStrength="R" BindingLocation="1" />
+            <Component Name="Name of Coding System" Usage="C" Datatype="ID" MinLength="1" MaxLength="20" Binding="PHVS_CodingSystem_HL7_2x_Table0396" BindingStrength="R" BindingLocation="1" />
             <Component Name="Alternate Identifier" Usage="O" Datatype="ST" MinLength="1" MaxLength="20"/>
             <Component Name="Alternate Text" Usage="O" Datatype="ST" MinLength="1" MaxLength="199"/>
-            <Component Name="Name of Alternate Coding System" Usage="C" Datatype="ID" MinLength="1" MaxLength="20" Binding="HL70396" BindingStrength="R" BindingLocation="1" />
+            <Component Name="Name of Alternate Coding System" Usage="C" Datatype="ID" MinLength="1" MaxLength="20" Binding="PHVS_CodingSystem_HL7_2x_Table0396" BindingStrength="R" BindingLocation="1" />
             <Component Name="Coding System Version ID" Usage="O" Datatype="ST" MinLength="1" MaxLength="10"/>
             <Component Name="Alternate Coding System Version ID" Usage="O" Datatype="ST" MinLength="1" MaxLength="10"/>
             <Component Name="Original Text" Usage="RE" Datatype="ST" MinLength="1" MaxLength="199"/>
@@ -1181,10 +1181,10 @@
         <Datatype ID="CWE_OBX" Name="CWE" Description="Coded with Exceptions">
             <Component Name="Identifier" Usage="R" Datatype="ST" MinLength="1" MaxLength="20"/>
             <Component Name="Text" Usage="RE" Datatype="ST" MinLength="1" MaxLength="199"/>
-            <Component Name="Name of Coding System" Usage="R" Datatype="ID" MinLength="1" MaxLength="20" Binding="HL70396" BindingStrength="R" BindingLocation="1" />
+            <Component Name="Name of Coding System" Usage="R" Datatype="ID" MinLength="1" MaxLength="20" Binding="PHVS_CodingSystem_HL7_2x_Table0396" BindingStrength="R" BindingLocation="1" />
             <Component Name="Alternate Identifier" Usage="RE" Datatype="ST" MinLength="1" MaxLength="20"/>
             <Component Name="Alternate Text" Usage="RE" Datatype="ST" MinLength="1" MaxLength="199"/>
-            <Component Name="Name of Alternate Coding System" Usage="C" Datatype="ID" MinLength="1" MaxLength="20" Binding="HL70396" BindingStrength="R" BindingLocation="1" />
+            <Component Name="Name of Alternate Coding System" Usage="C" Datatype="ID" MinLength="1" MaxLength="20" Binding="PHVS_CodingSystem_HL7_2x_Table0396" BindingStrength="R" BindingLocation="1" />
             <Component Name="Coding System Version ID" Usage="O" Datatype="ST" MinLength="1" MaxLength="10"/>
             <Component Name="Alternate Coding System Version ID" Usage="O" Datatype="ST" MinLength="1" MaxLength="10"/>
             <Component Name="Original Text" Usage="RE" Datatype="ST" MinLength="1" MaxLength="199"/>
@@ -1289,10 +1289,10 @@
         <Datatype ID="CE_DG1" Name="CE" Description="Coded Element">
             <Component Name="Identifier" Usage="R" Datatype="ST" MinLength="1" MaxLength="20"/>
             <Component Name="Text" Usage="RE" Datatype="ST" MinLength="1" MaxLength="199"/>
-            <Component Name="Name of Coding System" Usage="R" Datatype="ID" MinLength="1" MaxLength="20" Binding="HL70396" BindingStrength="R" BindingLocation="1" />
+            <Component Name="Name of Coding System" Usage="R" Datatype="ID" MinLength="1" MaxLength="20" Binding="PHVS_CodingSystem_HL7_2x_Table0396" BindingStrength="R" BindingLocation="1" />
             <Component Name="Alternate Identifier" Usage="X" Datatype="ST" MinLength="1" MaxLength="20"/>
             <Component Name="Alternate Text" Usage="X" Datatype="ST" MinLength="1" MaxLength="199"/>
-            <Component Name="Name of Alternate Coding System" Usage="X" Datatype="ID" MinLength="1" MaxLength="20" Binding="HL70396" BindingStrength="R" BindingLocation="1" />
+            <Component Name="Name of Alternate Coding System" Usage="X" Datatype="ID" MinLength="1" MaxLength="20" Binding="PHVS_CodingSystem_HL7_2x_Table0396" BindingStrength="R" BindingLocation="1" />
         </Datatype>
         <Datatype ID="CE_PR1" Name="CE" Description="Coded Element">
             <Component Name="Identifier" Usage="R" Datatype="ST" MinLength="1" MaxLength="20"/>
@@ -1300,7 +1300,7 @@
             <Component Name="Name of Coding System" Usage="R" Datatype="ID" MinLength="1" MaxLength="20" Binding="PHVS_CodingSystem_HL7_2x_Table0396" BindingStrength="R" BindingLocation="1" />
             <Component Name="Alternate Identifier" Usage="X" Datatype="ST" MinLength="1" MaxLength="20"/>
             <Component Name="Alternate Text" Usage="X" Datatype="ST" MinLength="1" MaxLength="199"/>
-            <Component Name="Name of Alternate Coding System" Usage="X" Datatype="ID" MinLength="1" MaxLength="20" Binding="HL70396" BindingStrength="R" BindingLocation="1" />
+            <Component Name="Name of Alternate Coding System" Usage="X" Datatype="ID" MinLength="1" MaxLength="20" Binding="PHVS_CodingSystem_HL7_2x_Table0396" BindingStrength="R" BindingLocation="1" />
         </Datatype>
         <Datatype ID="OSP" Name="OSP" Description="Occurrence Span Code and Date">
             <Component Name="Occurrence Span Code" Usage="R" Datatype="CNE" MinLength="1" MaxLength="705" Binding="HL70351" BindingStrength="R" BindingLocation="1" />
