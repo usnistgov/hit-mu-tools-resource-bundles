@@ -1055,7 +1055,7 @@
         <Datatype ID="MSG" Name="MSG" Description="Message Type">
             <Component Name="Message Code" Usage="R" Datatype="ID" MinLength="1" MaxLength="3" Binding="PHVS_MessageType_SyndromicSurveillance" BindingStrength="R" BindingLocation="1" />
             <Component Name="Trigger Event" Usage="R" Datatype="ID" MinLength="1" MaxLength="3" Binding="PHVS_EventType_SyndromicSurveillance" BindingStrength="R" BindingLocation="1" />
-            <Component Name="Message Structure" Usage="R" Datatype="ID" MinLength="1" MaxLength="3" Binding="PHVS_MessageStructure_SyndromicSurveillance" BindingStrength="R" BindingLocation="1" />
+            <Component Name="Message Structure" Usage="R" Datatype="ID" MinLength="1" MaxLength="8" Binding="PHVS_MessageStructure_SyndromicSurveillance" BindingStrength="R" BindingLocation="1" />
         </Datatype>
         <Datatype ID="ST" Name="ST" Description="String Data"/>
         <Datatype ID="FN" Name="FN" Description="Family Name">
