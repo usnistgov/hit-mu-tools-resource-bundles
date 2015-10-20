@@ -1,9 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<ConformanceContext UUID="b8d47a20-19e6-47a7-a4a5-fd94aa772692">
+<ConformanceContext UUID="f26ff7d1-c455-4c8d-9a90-3d63fd319bee">
   <Constraints>
     <Group>
       <ByName Name="ADT_A04">
+        <Constraint ID="TCAMT_DG1[1].3[1].1[1]_1" Target="14[1]">
+          <Reference GeneratedBy="TCAMT" ReferencePath="DG1[1].3[1].1[1]" Source="Test Case" TestDataCategorization="Value-Profile Fixed List"/>
+          <Description>DG1[1] SHALL be valued.</Description>
+          <Assertion>
+            <Presence Path="14[1]"/>
+          </Assertion>
+        </Constraint>
         <Constraint ID="TCAMT_DG1[1].3[1].2[1]_1" Target="14[1]">
           <Reference GeneratedBy="TCAMT" ReferencePath="DG1[1].3[1].2[1]" Source="Test Case" TestDataCategorization="Presence-Content Indifferent"/>
           <Description>DG1[1] SHALL be valued.</Description>
@@ -16,6 +23,41 @@
           <Description>DG1[1].3[1].2[1] SHALL be valued.</Description>
           <Assertion>
             <Presence Path="14[1].3[1].2[1]"/>
+          </Assertion>
+        </Constraint>
+        <Constraint ID="TCAMT_MSH[1].21[1].2[1]_3" Target="1[1].21[1].2[1]">
+          <Reference GeneratedBy="TCAMT" ReferencePath="MSH[1].21[1].2[1]" Source="Test Case" TestDataCategorization="Value-Profile Fixed"/>
+          <Description>MSH[1].21[1].2[1] SHALL be valued.</Description>
+          <Assertion>
+            <Presence Path="1[1].21[1].2[1]"/>
+          </Assertion>
+        </Constraint>
+        <Constraint ID="TCAMT_PV1[1].1[1]" Target="8[1].1[1]">
+          <Reference GeneratedBy="TCAMT" ReferencePath="PV1[1].1[1]" Source="Test Case" TestDataCategorization="Value-Test Case Fixed"/>
+          <Description>PV1[1].1[1] SHALL be valued ' .</Description>
+          <Assertion>
+            <PlainText IgnoreCase="false" Path="8[1].1[1]" Text=""/>
+          </Assertion>
+        </Constraint>
+        <Constraint ID="TCAMT_DG1[1].1[1]_1" Target="14[1]">
+          <Reference GeneratedBy="TCAMT" ReferencePath="DG1[1].1[1]" Source="Test Case" TestDataCategorization="Presence-Configuration"/>
+          <Description>DG1[1] SHALL be valued.</Description>
+          <Assertion>
+            <Presence Path="14[1]"/>
+          </Assertion>
+        </Constraint>
+        <Constraint ID="TCAMT_MSH[1].21[1].1[1]_3" Target="1[1].21[1].1[1]">
+          <Reference GeneratedBy="TCAMT" ReferencePath="MSH[1].21[1].1[1]" Source="Test Case" TestDataCategorization="Value-Profile Fixed"/>
+          <Description>MSH[1].21[1].1[1] SHALL be valued.</Description>
+          <Assertion>
+            <Presence Path="1[1].21[1].1[1]"/>
+          </Assertion>
+        </Constraint>
+        <Constraint ID="TCAMT_DG1[1].6[1]_1" Target="14[1]">
+          <Reference GeneratedBy="TCAMT" ReferencePath="DG1[1].6[1]" Source="Test Case" TestDataCategorization="Value-Profile Fixed List"/>
+          <Description>DG1[1] SHALL be valued.</Description>
+          <Assertion>
+            <Presence Path="14[1]"/>
           </Assertion>
         </Constraint>
         <Constraint ID="TCAMT_PID[1].22[1].2[1]_2" Target="4[1].22[1]">
@@ -33,108 +75,94 @@
           </Assertion>
         </Constraint>
         <Constraint ID="TCAMT_MSH[1].16[1]_2" Target="1[1].16[1]">
-          <Reference GeneratedBy="TCAMT" ReferencePath="MSH[1].16[1]" Source="Test Case" TestDataCategorization="Value-Profile Fixed List"/>
+          <Reference GeneratedBy="TCAMT" ReferencePath="MSH[1].16[1]" Source="Test Case" TestDataCategorization="Value-Test Case Fixed List"/>
           <Description>MSH[1].16[1] SHALL be valued.</Description>
           <Assertion>
             <Presence Path="1[1].16[1]"/>
           </Assertion>
         </Constraint>
-        <Constraint ID="TCAMT_DG1[1].6[1]_1" Target="14[1]">
-          <Reference GeneratedBy="TCAMT" ReferencePath="DG1[1].6[1]" Source="Test Case" TestDataCategorization="Presence Length-Test Case Proper"/>
-          <Description>DG1[1] SHALL be valued.</Description>
+        <Constraint ID="TCAMT_MSH[1].16[1]" Target="1[1].16[1]">
+          <Reference GeneratedBy="TCAMT" ReferencePath="MSH[1].16[1]" Source="Test Case" TestDataCategorization="Value-Test Case Fixed List"/>
+          <Description>MSH[1].16[1] SHALL be one of list values: AL.</Description>
           <Assertion>
-            <Presence Path="14[1]"/>
-          </Assertion>
-        </Constraint>
-        <Constraint ID="TCAMT_PID[1].30[1]_2" Target="4[1].30[1]">
-          <Reference GeneratedBy="TCAMT" ReferencePath="PID[1].30[1]" Source="Test Case" TestDataCategorization="Value-Profile Fixed"/>
-          <Description>PID[1].30[1] SHALL be valued.</Description>
-          <Assertion>
-            <Presence Path="4[1].30[1]"/>
+            <StringList CSV="AL" IgnoreCase="false" Path="1[1].16[1]"/>
           </Assertion>
         </Constraint>
         <Constraint ID="TCAMT_PID[1].22[1].3[1]_2" Target="4[1].22[1]">
-          <Reference GeneratedBy="TCAMT" ReferencePath="PID[1].22[1].3[1]" Source="Test Case" TestDataCategorization="Presence Length-System Generated"/>
+          <Reference GeneratedBy="TCAMT" ReferencePath="PID[1].22[1].3[1]" Source="Test Case" TestDataCategorization="Value-Profile Fixed"/>
           <Description>PID[1].22[1] SHALL be valued.</Description>
           <Assertion>
             <Presence Path="4[1].22[1]"/>
           </Assertion>
         </Constraint>
         <Constraint ID="TCAMT_PID[1].22[1].3[1]_3" Target="4[1].22[1].3[1]">
-          <Reference GeneratedBy="TCAMT" ReferencePath="PID[1].22[1].3[1]" Source="Test Case" TestDataCategorization="Presence Length-System Generated"/>
+          <Reference GeneratedBy="TCAMT" ReferencePath="PID[1].22[1].3[1]" Source="Test Case" TestDataCategorization="Value-Profile Fixed"/>
           <Description>PID[1].22[1].3[1] SHALL be valued.</Description>
           <Assertion>
             <Presence Path="4[1].22[1].3[1]"/>
           </Assertion>
         </Constraint>
-        <Constraint ID="TCAMT_MSH[1].15[1]_2" Target="1[1].15[1]">
-          <Reference GeneratedBy="TCAMT" ReferencePath="MSH[1].15[1]" Source="Test Case" TestDataCategorization="Presence Length-Test Case Proper"/>
-          <Description>MSH[1].15[1] SHALL be valued.</Description>
-          <Assertion>
-            <Presence Path="1[1].15[1]"/>
-          </Assertion>
-        </Constraint>
-        <Constraint ID="TCAMT_DG1[1].3[1].1[1]_1" Target="14[1]">
-          <Reference GeneratedBy="TCAMT" ReferencePath="DG1[1].3[1].1[1]" Source="Test Case" TestDataCategorization="Presence Length-Test Case Proper"/>
-          <Description>DG1[1] SHALL be valued.</Description>
-          <Assertion>
-            <Presence Path="14[1]"/>
-          </Assertion>
-        </Constraint>
-        <Constraint ID="TCAMT_MSH[1].21[1].1[1]_3" Target="1[1].21[1].1[1]">
-          <Reference GeneratedBy="TCAMT" ReferencePath="MSH[1].21[1].1[1]" Source="Test Case" TestDataCategorization="Presence Length-System Generated"/>
-          <Description>MSH[1].21[1].1[1] SHALL be valued.</Description>
-          <Assertion>
-            <Presence Path="1[1].21[1].1[1]"/>
-          </Assertion>
-        </Constraint>
-        <Constraint ID="TCAMT_PID[1].5[1].7[1]_3" Target="4[1].5[1].7[1]">
-          <Reference GeneratedBy="TCAMT" ReferencePath="PID[1].5[1].7[1]" Source="Test Case" TestDataCategorization="Presence Length-Configuration"/>
-          <Description>PID[1].5[1].7[1] SHALL be valued.</Description>
-          <Assertion>
-            <Presence Path="4[1].5[1].7[1]"/>
-          </Assertion>
-        </Constraint>
         <Constraint ID="TCAMT_PID[1].22[1].1[1]_2" Target="4[1].22[1]">
-          <Reference GeneratedBy="TCAMT" ReferencePath="PID[1].22[1].1[1]" Source="Test Case" TestDataCategorization="Value-Profile Fixed"/>
+          <Reference GeneratedBy="TCAMT" ReferencePath="PID[1].22[1].1[1]" Source="Test Case" TestDataCategorization="Value-Test Case Fixed"/>
           <Description>PID[1].22[1] SHALL be valued.</Description>
           <Assertion>
             <Presence Path="4[1].22[1]"/>
           </Assertion>
         </Constraint>
         <Constraint ID="TCAMT_PID[1].22[1].1[1]_3" Target="4[1].22[1].1[1]">
-          <Reference GeneratedBy="TCAMT" ReferencePath="PID[1].22[1].1[1]" Source="Test Case" TestDataCategorization="Value-Profile Fixed"/>
+          <Reference GeneratedBy="TCAMT" ReferencePath="PID[1].22[1].1[1]" Source="Test Case" TestDataCategorization="Value-Test Case Fixed"/>
           <Description>PID[1].22[1].1[1] SHALL be valued.</Description>
           <Assertion>
             <Presence Path="4[1].22[1].1[1]"/>
           </Assertion>
         </Constraint>
+        <Constraint ID="TCAMT_PID[1].22[1].1[1]" Target="4[1].22[1].1[1]">
+          <Reference GeneratedBy="TCAMT" ReferencePath="PID[1].22[1].1[1]" Source="Test Case" TestDataCategorization="Value-Test Case Fixed"/>
+          <Description>PID[1].22[1].1[1] SHALL be valued '2186-5.</Description>
+          <Assertion>
+            <PlainText IgnoreCase="false" Path="4[1].22[1].1[1]" Text="2186-5"/>
+          </Assertion>
+        </Constraint>
+        <Constraint ID="TCAMT_DG1[1].3[1].3[1]_1" Target="14[1]">
+          <Reference GeneratedBy="TCAMT" ReferencePath="DG1[1].3[1].3[1]" Source="Test Case" TestDataCategorization="Value-Profile Fixed List"/>
+          <Description>DG1[1] SHALL be valued.</Description>
+          <Assertion>
+            <Presence Path="14[1]"/>
+          </Assertion>
+        </Constraint>
         <Constraint ID="TCAMT_PID[1].8[1]_2" Target="4[1].8[1]">
-          <Reference GeneratedBy="TCAMT" ReferencePath="PID[1].8[1]" Source="Test Case" TestDataCategorization="Value-Profile Fixed"/>
+          <Reference GeneratedBy="TCAMT" ReferencePath="PID[1].8[1]" Source="Test Case" TestDataCategorization="Value-Test Case Fixed"/>
           <Description>PID[1].8[1] SHALL be valued.</Description>
           <Assertion>
             <Presence Path="4[1].8[1]"/>
           </Assertion>
         </Constraint>
-        <Constraint ID="TCAMT_DG1[1].3[1].3[1]_1" Target="14[1]">
-          <Reference GeneratedBy="TCAMT" ReferencePath="DG1[1].3[1].3[1]" Source="Test Case" TestDataCategorization="Presence Length-Test Case Proper"/>
-          <Description>DG1[1] SHALL be valued.</Description>
+        <Constraint ID="TCAMT_PID[1].8[1]" Target="4[1].8[1]">
+          <Reference GeneratedBy="TCAMT" ReferencePath="PID[1].8[1]" Source="Test Case" TestDataCategorization="Value-Test Case Fixed"/>
+          <Description>PID[1].8[1] SHALL be valued 'M.</Description>
           <Assertion>
-            <Presence Path="14[1]"/>
+            <PlainText IgnoreCase="false" Path="4[1].8[1]" Text="M"/>
           </Assertion>
         </Constraint>
-        <Constraint ID="TCAMT_DG1[1].1[1]_1" Target="14[1]">
-          <Reference GeneratedBy="TCAMT" ReferencePath="DG1[1].1[1]" Source="Test Case" TestDataCategorization="Presence-Configuration"/>
-          <Description>DG1[1] SHALL be valued.</Description>
+        <Constraint ID="TCAMT_PID[1].30[1]_2" Target="4[1].30[1]">
+          <Reference GeneratedBy="TCAMT" ReferencePath="PID[1].30[1]" Source="Test Case" TestDataCategorization="Value-Test Case Fixed"/>
+          <Description>PID[1].30[1] SHALL be valued.</Description>
           <Assertion>
-            <Presence Path="14[1]"/>
+            <Presence Path="4[1].30[1]"/>
           </Assertion>
         </Constraint>
-        <Constraint ID="TCAMT_MSH[1].21[1].2[1]_3" Target="1[1].21[1].2[1]">
-          <Reference GeneratedBy="TCAMT" ReferencePath="MSH[1].21[1].2[1]" Source="Test Case" TestDataCategorization="Presence Length-System Generated"/>
-          <Description>MSH[1].21[1].2[1] SHALL be valued.</Description>
+        <Constraint ID="TCAMT_PID[1].30[1]" Target="4[1].30[1]">
+          <Reference GeneratedBy="TCAMT" ReferencePath="PID[1].30[1]" Source="Test Case" TestDataCategorization="Value-Test Case Fixed"/>
+          <Description>PID[1].30[1] SHALL be valued '.</Description>
           <Assertion>
-            <Presence Path="1[1].21[1].2[1]"/>
+            <PlainText IgnoreCase="false" Path="4[1].30[1]" Text=""/>
+          </Assertion>
+        </Constraint>
+        <Constraint ID="TCAMT_MSH[1].15[1]_2" Target="1[1].15[1]">
+          <Reference GeneratedBy="TCAMT" ReferencePath="MSH[1].15[1]" Source="Test Case" TestDataCategorization="Value-Profile Fixed List"/>
+          <Description>MSH[1].15[1] SHALL be valued.</Description>
+          <Assertion>
+            <Presence Path="1[1].15[1]"/>
           </Assertion>
         </Constraint>
       </ByName>

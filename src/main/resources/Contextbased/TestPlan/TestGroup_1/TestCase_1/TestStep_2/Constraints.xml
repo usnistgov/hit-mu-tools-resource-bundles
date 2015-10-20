@@ -1,21 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<ConformanceContext UUID="c3bbe88f-ea66-4b1c-a700-b52aa0a1860f">
+<ConformanceContext UUID="60e80cd8-0c4c-4be6-96c0-fe0bbf73ed99">
   <Constraints>
     <Group>
       <ByName Name="ADT_A03">
         <Constraint ID="TCAMT_MSH[1].21[1].2[1]_3" Target="1[1].21[1].2[1]">
-          <Reference GeneratedBy="TCAMT" ReferencePath="MSH[1].21[1].2[1]" Source="Test Case" TestDataCategorization="Value-Profile Fixed"/>
+          <Reference GeneratedBy="TCAMT" ReferencePath="MSH[1].21[1].2[1]" Source="Test Case" TestDataCategorization="Value-Test Case Fixed"/>
           <Description>MSH[1].21[1].2[1] SHALL be valued.</Description>
           <Assertion>
             <Presence Path="1[1].21[1].2[1]"/>
           </Assertion>
         </Constraint>
+        <Constraint ID="TCAMT_MSH[1].21[1].2[1]" Target="1[1].21[1].2[1]">
+          <Reference GeneratedBy="TCAMT" ReferencePath="MSH[1].21[1].2[1]" Source="Test Case" TestDataCategorization="Value-Test Case Fixed"/>
+          <Description>MSH[1].21[1].2[1] SHALL be valued 'SS Sender.</Description>
+          <Assertion>
+            <PlainText IgnoreCase="false" Path="1[1].21[1].2[1]" Text="SS Sender"/>
+          </Assertion>
+        </Constraint>
         <Constraint ID="TCAMT_MSH[1].21[1].1[1]_3" Target="1[1].21[1].1[1]">
-          <Reference GeneratedBy="TCAMT" ReferencePath="MSH[1].21[1].1[1]" Source="Test Case" TestDataCategorization="Value-Profile Fixed"/>
+          <Reference GeneratedBy="TCAMT" ReferencePath="MSH[1].21[1].1[1]" Source="Test Case" TestDataCategorization="Value-Test Case Fixed"/>
           <Description>MSH[1].21[1].1[1] SHALL be valued.</Description>
           <Assertion>
             <Presence Path="1[1].21[1].1[1]"/>
+          </Assertion>
+        </Constraint>
+        <Constraint ID="TCAMT_MSH[1].21[1].1[1]" Target="1[1].21[1].1[1]">
+          <Reference GeneratedBy="TCAMT" ReferencePath="MSH[1].21[1].1[1]" Source="Test Case" TestDataCategorization="Value-Test Case Fixed"/>
+          <Description>MSH[1].21[1].1[1] SHALL be valued 'PH_SS-NoAck.</Description>
+          <Assertion>
+            <PlainText IgnoreCase="false" Path="1[1].21[1].1[1]" Text="PH_SS-NoAck"/>
           </Assertion>
         </Constraint>
       </ByName>
