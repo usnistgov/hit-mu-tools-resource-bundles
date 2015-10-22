@@ -38,11 +38,11 @@
 					.test-data-specs-main  panel { margin: 10px 5px 5px 5px; }
 
 
-					.testStory legend {text-align:center;font-size:110%; font-weight:bold;}					
+					.testStory legend {text-align:center;font-size:130%; font-weight:bold;}					
 					.testStory  {text-align:center;page-break-inside: avoid;}
                     .testStory maskByMediaType {display:table;}
-                    .testStory  table tbody tr th {font-size:100%;}
-                    .testStory  table tbody tr td {font-size:90%;}
+                    .testStory  table tbody tr th {font-size:120%;}
+                    .testStory  table tbody tr td {font-size:110%;}
                     .testStory  table tbody tr th {text-align:center;background:#436BEC}
 					.testStory  table { width:98%;border: 1px groove;table-layout: fixed; margin:0 auto;border-collapse: collapse;page-break-inside: avoid;}
                     .testStory  table  tr { border: 3px groove; }
@@ -196,7 +196,7 @@
 <h2></h2>
 <h2><h2>
 <h2><h2>
-<h2>2015-10-16 16:34:06<h2>
+<h2>2015-10-22 09:39:16<h2>
 <p style="page-break-after:always;"></p>
 <p style="page-break-after:always;"></p><ol>
 <li><a href="#1">1. Urgent Care Visit</a></li>
@@ -237,7 +237,7 @@
 </ol>
 
 <p style="page-break-after:always;"></p><A NAME="1"><h2>1. Urgent Care Visit</h2>
-<span>No Description</span>
+<span><span style="text-align: justify; font-family: Arial; font-size: small;">Patient is seen in Urgent Care Center and is discharged/dispositioned to home.</span></span>
 <p style="page-break-after:always;"></p><A NAME="1.1"><h2>1.1. TC-1-UC Visit-Influenza_Child</h2>
 <span>Test case addresses a child brought to an urgent care center with influenza.</span>
 <h3>Test Story</h3>
@@ -249,13 +249,13 @@
 				<th colspan="1">Description</th>
 			</tr>
 			<tr>
-				<td><p>Syndromic surveillance is public health surveillance that emphasizes the use of near "real-time" health data and statistical tools for disease or hazardous event detection, situation awareness for mass gatherings and public health emergencies, and ad hoc and population health trend analyses. For syndromic surveillance purposes, required data on all clinical encounters must be sent to the jurisdictional public health agency within 24 hours of any given encounter, and in accordance with local or state laws and practices.</p>
+				<td><p><span style="font-family: Arial; font-size: small;">Syndromic surveillance is public health surveillance that emphasizes the use of near "real-time" health data and statistical tools for disease or hazardous event detection, situation awareness for mass gatherings and public health emergencies, and ad hoc and population health trend analyses. For syndromic surveillance purposes, required data on all clinical encounters must be sent to the jurisdictional public health agency within 24 hours of any given encounter, and in accordance with local or state laws and practices.</span></p>
 
-<p><span style="font-size: 10pt;">The Child_Influenza Test Case provides an example of a clinical encounter that could take place in either an urgent care or emergency clinical setting. It is therefore applicable to EHR technology used in some ambulatory settings. This test case also provides an example where the facility sending the syndromic surveillance message is different than the facility where the patient received care.</span></p>
+<p><span style="font-family: Arial; font-size: small;">The Child_Influenza Test Case provides an example of a clinical encounter that could take place in either an urgent care or emergency clinical setting. It is therefore applicable to EHR technology used in some ambulatory settings. This test case also provides an example where the facility sending the syndromic surveillance message is different than the facility where the patient received care.</span></p>
 
-<p><span style="font-size: 10pt;">In this test case, an infant is seen at an urgent care center for fever and cough. Diagnostic tests show that he has influenza with pneumonia. He is discharged to home with treatment instructions and a prescription. Syndromic surveillance data about the visit are transmitted to the local health department.</span></p>
+<p><span style="font-family: Arial; font-size: small;">In this test case, an infant is seen at an urgent care center for fever and cough. Diagnostic tests show that he has influenza with pneumonia. He is discharged to home with treatment instructions and a prescription. Syndromic surveillance data about the visit are transmitted to the local health department.</span></p>
 
-<p><span style="font-size: 10pt;">This test case involves 2 steps: a registration message (ADT A04) followed by a discharge message (ADTA03).</span></p>
+<p><span style="font-family: Arial; font-size: small;">This test case involves 2 steps: a registration message (ADT A04) followed by a discharge message (ADTA03).</span></p>
 </td>
 			</tr>
 		</table>
@@ -318,7 +318,7 @@
 	</fieldset>
 	</div>
 <p style="page-break-after:always;"></p><A NAME="1.1.1"><h2>1.1.1. TS-1 Registration-A04</h2>
-<span>Test step addresses registration of patient and an assignment of a working diagnosis.</span>
+<span>Patient is registered at an Urgent Care Center and is assigned a working diagnosis.</span>
 <h3>Test Story</h3>
 
 	<div class="testStory">
@@ -328,7 +328,7 @@
 				<th colspan="1">Description</th>
 			</tr>
 			<tr>
-				<td><p>A mother brings her 6 month old male infant to Big City Children's Urgent Care on February 20, 2010 at 8:30 am. A clerical assistant registers the patient. She records the patient`s name, date of birth, race, ethnicity, residence, insurance information, and health history. The clerical assistant also records the patient's chief complaint in free-text is, "Fever, cough." At 8:35AM a nurse sees the patient and performs a vital sign assessment, noting that the child currently has a temperature of 101.2 with a productive cough along with upper respiratory congestion. At 9:00 AM the physician orders a treatment and diagnostic tests, and assigns the patient with a working diagnosis of influenza with other respiratory manifestations (ICD-9 CM diagnosis code of 487.1) within the patient`s electronic medical record. Big City Children's Urgent Care is an outpatient facility operated by Children's Hospital of Big City that routinely sends electronic syndromic surveillance data to the Big City Health Department (BCHD) in accordance with a city regulation. At 10:00 AM on February 20, 2010, the facility`s electronic health record module for syndromic surveillance data assembles and transmits a Registration ADT message about this patient encounter.</p>
+				<td><p>A mother brings her 6 month old male infant to Big City Children's Urgent Care on February 20, 2010 at 8:30 am. A clerical assistant registers the patient. She records the patient`s name, date of birth, race, ethnicity, residence, insurance information, and health history. The clerical assistant also records the patient's chief complaint in free-text is, "Fever, cough." At 8:35AM a nurse sees the patient and performs a vital sign assessment, noting that the child currently has a temperature of 101.2 with a productive cough along with upper respiratory congestion. At 9:00 AM the physician orders a treatment and diagnostic tests, and assigns the patient with a working diagnosis of influenza with other respiratory manifestations (ICD-9 CM diagnosis code of 487.1) within the patient`s electronic medical record. Big City Children's Urgent Care is an outpatient facility operated by Children's Hospital of Big City that routinely sends electronic syndromic surveillance data to the Big City Health Department (BCHD) in accordance with a city regulation. At 10:00 AM on February 20, 2010, the facility's electronic health record module for syndromic surveillance data assembles and transmits a Registration ADT message about this patient encounter.</p>
 </td>
 			</tr>
 		</table>
@@ -378,7 +378,7 @@
 				<th colspan="1">Evaluation Criteria</th>
 			</tr>
 			<tr>
-				<td>No evaluation criteria</td>
+				<td><p>No evaluation criteria</p></td>
 			</tr>
 		</table>
 		<br />
@@ -387,7 +387,7 @@
 				<th colspan="1">Notes to Testers</th>
 			</tr>
 			<tr>
-				<td><p>Although the other units of measure for patient age are acceptable in general (and the Context-free validation accepts any of the valid units of measure for age), Scenario #1 specifies that &quot;mo&quot; for months be used in this message for the Context-based validation. ICD 9 CM diagnosis codes are acceptable with or without decimals.&nbsp;</p>
+				<td><p>Although the other units of measure for patient age are acceptable in general (and the Context-free validation accepts any of the valid units of measure for age), Scenario #1 specifies that "mo" for months be used in this message for the Context-based validation. ICD 9 CM diagnosis codes are acceptable with or without decimals.</p>
 </td>
 			</tr>
 		</table>
@@ -1419,6 +1419,24 @@
 					<td class="noData">
 					</td></tr>
 					<tr>
+					<td class="Component">OBX-5.4
+					</td>
+					<td class="Component">Alternate Identifier
+					</td>
+					<td class="noData">
+					</td>
+					<td class="noData">
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-5.5
+					</td>
+					<td class="Component">Alternate Text
+					</td>
+					<td class="noData">
+					</td>
+					<td class="noData">
+					</td></tr>
+					<tr>
 					<td class="Component">OBX-5.6
 					</td>
 					<td class="Component">Name of Alternate Coding System
@@ -2154,6 +2172,24 @@
 					<td class="noData">
 					</td></tr>
 					<tr>
+					<td class="Component">OBX-5.4
+					</td>
+					<td class="Component">Alternate Identifier
+					</td>
+					<td class="noData">
+					</td>
+					<td class="noData">
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-5.5
+					</td>
+					<td class="Component">Alternate Text
+					</td>
+					<td class="noData">
+					</td>
+					<td class="noData">
+					</td></tr>
+					<tr>
 					<td class="Component">OBX-5.6
 					</td>
 					<td class="Component">Name of Alternate Coding System
@@ -2595,7 +2631,7 @@
 		</div>
 </fieldset></body>
 </html><p style="page-break-after:always;"></p><A NAME="1.1.2"><h2>1.1.2. TS-2 Discharge-A03</h2>
-<span>Test step addresses discharge with final diagnosis of influenza and pneumonia.</span>
+<span>Patient is discharged from Urgent Care Center and is assigned a final diagnosis.</span>
 <h3>Test Story</h3>
 
 	<div class="testStory">
@@ -2605,7 +2641,7 @@
 				<th colspan="1">Description</th>
 			</tr>
 			<tr>
-				<td><p>The patient`s vital signs gradually return to normal. At 2 PM, the patient`s laboratory and radiology tests results are provided to the attending physician. The tests indicate that the infant has influenza and pneumonia. The patient`s mother is provided with treatment information and prescriptions for her infant son. The working diagnosis (ICD-9 CM 487.1) is resolved/inactivated, and at 5 PM the patient is discharged home with a final diagnosis of influenza with pneumonia. Big City Children's Urgent Care is an outpatient facility operated by Children?s Hospital of Big City that routinely sends electronic syndromic surveillance data to the Big City Health Department (BCHD) in accordance with a city regulation. At 6:00 PM on February 20, 2010, the facility`s electronic health record module for syndromic surveillance data assembles and transmits a Discharge ADT message about this patient encounter to BCHD.</p>
+				<td><p>The patient`s vital signs gradually return to normal. At 2 PM, the patient`s laboratory and radiology tests results are provided to the attending physician. The tests indicate that the infant has influenza and pneumonia. The patient`s mother is provided with treatment information and prescriptions for her infant son. The working diagnosis (ICD-9 CM 487.1) is resolved/inactivated, and at 5 PM the patient is discharged home with a final diagnosis of influenza with pneumonia. Big City Children's Urgent Care is an outpatient facility operated by Children's Hospital of Big City that routinely sends electronic syndromic surveillance data to the Big City Health Department (BCHD) in accordance with a city regulation. At 6:00 PM on February 20, 2010, the facility's electronic health record module for syndromic surveillance data assembles and transmits a Discharge ADT message about this patient encounter to BCHD.</p>
 </td>
 			</tr>
 		</table>
@@ -2665,7 +2701,7 @@
 				<th colspan="1">Notes to Testers</th>
 			</tr>
 			<tr>
-				<td><p>Although the other units of measure for patient age are acceptable in general (and the Context-free validation accepts any of the valid units of measure for age), Scenario #1 specifies that &quot;mo&quot; for months be used in this message for the Context-based validation. ICD 9 CM diagnosis codes are acceptable with or without decimals.</p>
+				<td><p>Although the other units of measure for patient age are acceptable in general (and the Context-free validation accepts any of the valid units of measure for age), Scenario #1 specifies that "mo" for months be used in this message for the Context-based validation. ICD 9 CM diagnosis codes are acceptable with or without decimals.</p>
 </td>
 			</tr>
 		</table>
@@ -3790,6 +3826,24 @@
 					<td class="noData">
 					</td></tr>
 					<tr>
+					<td class="Component">OBX-5.4
+					</td>
+					<td class="Component">Alternate Identifier
+					</td>
+					<td class="noData">
+					</td>
+					<td class="noData">
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-5.5
+					</td>
+					<td class="Component">Alternate Text
+					</td>
+					<td class="noData">
+					</td>
+					<td class="noData">
+					</td></tr>
+					<tr>
 					<td class="Component">OBX-5.6
 					</td>
 					<td class="Component">Name of Alternate Coding System
@@ -4105,6 +4159,24 @@
 					<td class="Component">OBX-5.3
 					</td>
 					<td class="Component">Name of Coding System
+					</td>
+					<td class="noData">
+					</td>
+					<td class="noData">
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-5.4
+					</td>
+					<td class="Component">Alternate Identifier
+					</td>
+					<td class="noData">
+					</td>
+					<td class="noData">
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-5.5
+					</td>
+					<td class="Component">Alternate Text
 					</td>
 					<td class="noData">
 					</td>
@@ -4570,6 +4642,24 @@
 					<td class="noData">
 					</td></tr>
 					<tr>
+					<td class="Component">OBX-5.4
+					</td>
+					<td class="Component">Alternate Identifier
+					</td>
+					<td class="noData">
+					</td>
+					<td class="noData">
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-5.5
+					</td>
+					<td class="Component">Alternate Text
+					</td>
+					<td class="noData">
+					</td>
+					<td class="noData">
+					</td></tr>
+					<tr>
 					<td class="Component">OBX-5.6
 					</td>
 					<td class="Component">Name of Alternate Coding System
@@ -4963,15 +5053,13 @@
 				<th colspan="1">Description</th>
 			</tr>
 			<tr>
-				<td><p>Syndromic surveillance is public health surveillance that emphasizes the use of near "real-time" health data and statistical tools for disease or hazardous event detection, situation awareness for mass gatherings and public health emergencies, and ad hoc and population health trend analyses. For syndromic surveillance purposes, required data on all clinical encounters must be sent to the jurisdictional public health agency within 24 hours of any given encounter, and in accordance with local or state laws and practices.</p>
+				<td><p><span style="font-family: Arial; font-size: small;">Syndromic surveillance is public health surveillance that emphasizes the use of near "real-time" health data and statistical tools for disease or hazardous event detection, situation awareness for mass gatherings and public health emergencies, and ad hoc and population health trend analyses. For syndromic surveillance purposes, required data on all clinical encounters must be sent to the jurisdictional public health agency within 24 hours of any given encounter, and in accordance with local or state laws and practices.</span></p>
 
-<p><span style="font-size: 10pt;">The ED Visit Test Case provides an example of an ED visit where the patient's demographic information is unavailable at registration, admit/encounter reason is captured as a coded value using an ICD-10 CM code, a working diagnosis and a final diagnosis are captured using ICD-10 CM codes, and the patient dies.</span></p>
+<p><span style="font-family: Arial; font-size: small;">The ED Visit Test Case provides an example of an ED visit where the patient's demographic information is unavailable at registration, admit/encounter reason is captured as a coded value using an ICD-10 CM code, a working diagnosis and a final diagnosis are captured using ICD-10 CM codes, and the patient dies.</span></p>
 
-<p><span style="font-size: 10pt;">In this test case, an unconscious, unknown female patient is brought to an emergency department by ambulance after she sustained critical head and neck injuries due to a collision with a bus while she was riding a bicycle. She is placed on a ventilator, diagnosed as having severe head trauma, and expires from her injuries. Syndromic surveillance data about the visit are transmitted to the state health department.</span></p>
+<p><span style="font-family: Arial; font-size: small;">In this test case, an unconscious, unknown female patient is brought to an emergency department by ambulance after she sustained critical head and neck injuries due to a collision with a bus while she was riding a bicycle. She is placed on a ventilator, diagnosed as having severe head trauma, and expires from her injuries. Syndromic surveillance data about the visit are transmitted to the state health department.</span></p>
 
-<p>&nbsp;</p>
-
-<p>This test case involves 3 steps: a registration message (ADTA04), an update message (ADTA08), and a discharge message (ADTA03).</p>
+<p><span style="font-family: Arial; font-size: small;">This test case involves 3 steps: a registration message (ADTA04), an update message (ADTA08), and a discharge message (ADTA03).</span></p>
 </td>
 			</tr>
 		</table>
@@ -5042,8 +5130,7 @@
 				<th colspan="1">Description</th>
 			</tr>
 			<tr>
-				<td><p>An unconscious white female with critical injuries to her head and neck is brought by ambulance to Western Regional Medical Center's Emergency Department at 5:00 PM on July 17, 2012. The paramedics report that the patient turned her bicycle in to a bus moving at 35 mph. The collision threw the cyclist, who was not wearing a helmet, head first to the ground. The patient's vital signs are stable, but she is on ventilation. Unable to find any identification, the patient is registered without her true name, date of birth, race, ethnicity, insurance information, and health history. Her admit/encounter reason is logged as V13.9XXA. No working diagnoses are assigned. Western Regional Medical Center reports syndromic surveillance data to the state health department (SHD). At 5:00 PM on July 17, 2012 the hospital's electronic health record module for syndromic surveillance data assembles and transmits an ADT 04 Registration message about this encounter to SHD.</p>
-</td>
+				<td><p>An unconscious white female with critical injuries to her head and neck is brought by ambulance to Western Regional Medical Center's Emergency Department at 5:00 PM on July 17, 2012. The paramedics report that the patient turned her bicycle in to a bus moving at 35 mph. The collision threw the cyclist, who was not wearing a helmet, head first to the ground. The patient's vital signs are stable, but she is on ventilation. Unable to find any identification, the patient is registered without her true name, date of birth, race, ethnicity, insurance information, and health history. Her admit/encounter reason is logged as V13.9XXA. No working diagnoses are assigned. Western Regional Medical Center reports syndromic surveillance data to the state health department (SHD). At 5:00 PM on July 17, 2012 the hospital's electronic health record module for syndromic surveillance data assembles and transmits an ADT 04 Registration message about this encounter to SHD.</p></td>
 			</tr>
 		</table>
 		<br />
@@ -5052,7 +5139,7 @@
 				<th colspan="1">Comments</th>
 			</tr>
 			<tr>
-				<td><p>This Test Case provides an example of an ED visit where the patient&#39;s demographic information is unavailable at registration, admit/encounter reason is captured as a coded value using an ICD-10 CM code, two working diagnoses and a final diagnosis are captured using ICD-10 CM codes, and the patient dies. The dates and times in this test case illustrate the sequence of clinical and messaging events. Since the exact dates and times are not reproducible when modeling the test case with a Health IT Module, only date and time format will be validated within tester submitted test data. ICD-10 CM diagnosis codes are acceptable with or without decimals.</p>
+				<td><p>This Test Case provides an example of an ED visit where the patient's demographic information is unavailable at registration, admit/encounter reason is captured as a coded value using an ICD-10 CM code, two working diagnoses and a final diagnosis are captured using ICD-10 CM codes, and the patient dies. The dates and times in this test case illustrate the sequence of clinical and messaging events. Since the exact dates and times are not reproducible when modeling the test case with a Health IT Module, only date and time format will be validated within tester submitted test data. ICD-10 CM diagnosis codes are acceptable with or without decimals.</p>
 </td>
 			</tr>
 		</table>
@@ -5072,7 +5159,7 @@
 				<th colspan="1">PostCondition</th>
 			</tr>
 			<tr>
-				<td>No PostCondition</td>
+				<td><p>No PostCondition</p></td>
 			</tr>
 		</table>
 		<br />
@@ -5081,7 +5168,7 @@
 				<th colspan="1">Test Objectives</th>
 			</tr>
 			<tr>
-				<td><p>This test step examines a Health IT Module&#39;s ability to create ADT A04-Registration message within PHIN Syndromic Surveillance Messaging Guide&#39;s conformance requirements.</p>
+				<td><p>This test step examines a Health IT Module's ability to create ADT A04-Registration message within PHIN Syndromic Surveillance Messaging Guide's conformance requirements.</p>
 </td>
 			</tr>
 		</table>
@@ -5091,7 +5178,7 @@
 				<th colspan="1">Evaluation Criteria</th>
 			</tr>
 			<tr>
-				<td>No evaluation criteria</td>
+				<td><p>No evaluation criteria</p></td>
 			</tr>
 		</table>
 		<br />
@@ -5100,7 +5187,7 @@
 				<th colspan="1">Notes to Testers</th>
 			</tr>
 			<tr>
-				<td><p>An ICD-10CM code is used for coding the admit/encounter reason. The Tester may ignore errors generated by the Test Tool related to incorrect code when the ICD-10 code used in the message is determined to be a valid code.</p>
+				<td><p><p>An ICD-10CM code is used for coding the admit/encounter reason. The Tester may ignore errors generated by the Test Tool related to incorrect code when the ICD-10 code used in the message is determined to be a valid code.</p></p>
 </td>
 			</tr>
 		</table>
@@ -6042,24 +6129,6 @@
 					<td class="noData">
 					</td></tr>
 					<tr>
-					<td class="Component">OBX-5.4
-					</td>
-					<td class="Component">Alternate Identifier
-					</td>
-					<td class="noData">
-					</td>
-					<td class="noData">
-					</td></tr>
-					<tr>
-					<td class="Component">OBX-5.5
-					</td>
-					<td class="Component">Alternate Text
-					</td>
-					<td class="noData">
-					</td>
-					<td class="noData">
-					</td></tr>
-					<tr>
 					<td class="Component">OBX-5.6
 					</td>
 					<td class="Component">Name of Alternate Coding System
@@ -6657,24 +6726,6 @@
 					<td class="noData">
 					</td></tr>
 					<tr>
-					<td class="Component">OBX-5.4
-					</td>
-					<td class="Component">Alternate Identifier
-					</td>
-					<td class="noData">
-					</td>
-					<td class="noData">
-					</td></tr>
-					<tr>
-					<td class="Component">OBX-5.5
-					</td>
-					<td class="Component">Alternate Text
-					</td>
-					<td class="noData">
-					</td>
-					<td class="noData">
-					</td></tr>
-					<tr>
 					<td class="Component">OBX-5.6
 					</td>
 					<td class="Component">Name of Alternate Coding System
@@ -7043,7 +7094,7 @@
 				<th colspan="1">Comments</th>
 			</tr>
 			<tr>
-				<td><p>This Test Case provides an example of an ED visit where the patient&#39;s demographic information is unavailable at registration, admit/encounter reason is captured as a coded value using an ICD-10 CM code, two working diagnoses and a final diagnosis are captured using ICD-10 CM codes, and the patient dies. The dates and times in this test case illustrate the sequence of clinical and messaging events. Since the exact dates and times are not reproducible when modeling the test case with a Health IT Module, only date and time format will be validated within tester submitted test data. ICD-10 CM diagnosis codes are acceptable with or without decimals.</p>
+				<td><p>This Test Case provides an example of an ED visit where the patient's demographic information is unavailable at registration, admit/encounter reason is captured as a coded value using an ICD-10 CM code, two working diagnoses and a final diagnosis are captured using ICD-10 CM codes, and the patient dies. The dates and times in this test case illustrate the sequence of clinical and messaging events. Since the exact dates and times are not reproducible when modeling the test case with a Health IT Module, only date and time format will be validated within tester submitted test data. ICD-10 CM diagnosis codes are acceptable with or without decimals.</p>
 </td>
 			</tr>
 		</table>
@@ -7063,7 +7114,7 @@
 				<th colspan="1">PostCondition</th>
 			</tr>
 			<tr>
-				<td>No PostCondition</td>
+				<td><p>No PostCondition</p></td>
 			</tr>
 		</table>
 		<br />
@@ -7072,7 +7123,7 @@
 				<th colspan="1">Test Objectives</th>
 			</tr>
 			<tr>
-				<td><p>This test case examines a Health IT Module&#39;s ability to create ADT A08-Update message within PHIN Messaging Guide&#39;s conformance requirements</p>
+				<td><p>This test case examines a Health IT Module's ability to create ADT A08-Update message within PHIN Messaging Guide's conformance requirements</p>
 </td>
 			</tr>
 		</table>
@@ -8061,6 +8112,24 @@
 					<td class="noData">
 					</td></tr>
 					<tr>
+					<td class="Component">OBX-5.4
+					</td>
+					<td class="Component">Alternate Identifier
+					</td>
+					<td class="noData">
+					</td>
+					<td class="noData">
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-5.5
+					</td>
+					<td class="Component">Alternate Text
+					</td>
+					<td class="noData">
+					</td>
+					<td class="noData">
+					</td></tr>
+					<tr>
 					<td class="Component">OBX-5.6
 					</td>
 					<td class="Component">Name of Alternate Coding System
@@ -8658,6 +8727,24 @@
 					<td class="noData">
 					</td></tr>
 					<tr>
+					<td class="Component">OBX-5.4
+					</td>
+					<td class="Component">Alternate Identifier
+					</td>
+					<td class="noData">
+					</td>
+					<td class="noData">
+					</td></tr>
+					<tr>
+					<td class="Component">OBX-5.5
+					</td>
+					<td class="Component">Alternate Text
+					</td>
+					<td class="noData">
+					</td>
+					<td class="noData">
+					</td></tr>
+					<tr>
 					<td class="Component">OBX-5.6
 					</td>
 					<td class="Component">Name of Alternate Coding System
@@ -9173,7 +9260,7 @@
 				<th colspan="1">Comments</th>
 			</tr>
 			<tr>
-				<td><p>This Test Case provides an example of an ED visit where the patient&#39;s demographic information is unavailable at registration, admit/encounter reason is captured as a coded value using an ICD-10 CM code, two working diagnoses and a final diagnosis are captured using ICD-10 CM codes, and the patient dies. The dates and times in this test case illustrate the sequence of clinical and messaging events. Since the exact dates and times are not reproducible when modeling the test case with a Health IT Module, only date and time format will be validated within tester submitted test data. ICD-10 CM diagnosis codes are acceptable with or without decimals.</p>
+				<td><p>This Test Case provides an example of an ED visit where the patient's demographic information is unavailable at registration, admit/encounter reason is captured as a coded value using an ICD-10 CM code, two working diagnoses and a final diagnosis are captured using ICD-10 CM codes, and the patient dies. The dates and times in this test case illustrate the sequence of clinical and messaging events. Since the exact dates and times are not reproducible when modeling the test case with a Health IT Module, only date and time format will be validated within tester submitted test data. ICD-10 CM diagnosis codes are acceptable with or without decimals.</p>
 </td>
 			</tr>
 		</table>
@@ -9203,7 +9290,7 @@
 				<th colspan="1">Test Objectives</th>
 			</tr>
 			<tr>
-				<td><p>This test case examines a Health IT Module&#39;s ability to create ADT A03-Discharge message within PHIN Messaging Guide&#39;s conformance requirements for emergency department (ED) data.</p>
+				<td><p>This test case examines a Health IT Module's ability to create ADT A03-Discharge message within PHIN Messaging Guide's conformance requirements for emergency department (ED) data.</p>
 </td>
 			</tr>
 		</table>
@@ -9213,7 +9300,7 @@
 				<th colspan="1">Evaluation Criteria</th>
 			</tr>
 			<tr>
-				<td>No evaluation criteria</td>
+				<td><p>No evaluation criteria</p></td>
 			</tr>
 		</table>
 		<br />
@@ -11241,7 +11328,7 @@
 		</div>
 </fieldset></body>
 </html><p style="page-break-after:always;"></p><A NAME="3"><h2>3. ED Visit with Inpatient Admission</h2>
-<span>ED Visit with Inpatient Admission</span>
+<span>Patient seen in ED and admitted to hospital.</span>
 <p style="page-break-after:always;"></p><A NAME="3.1"><h2>3.1. TC-3 ED Visit-Patient Admitted</h2>
 <span>ED Visit with addmission for HBOT.</span>
 <h3>Test Story</h3>
@@ -11253,13 +11340,13 @@
 				<th colspan="1">Description</th>
 			</tr>
 			<tr>
-				<td><p>Syndromic surveillance is public health surveillance that emphasizes the use of near "real-time" health data and statistical tools for disease or hazardous event detection, situation awareness for mass gatherings and public health emergencies, and ad hoc and population health trend analyses. For syndromic surveillance purposes, required data on all clinical encounters must be sent to the jurisdictional public health agency within 24 hours of the start of any given encounter, and in accordance with local or state laws and practices.</p>
+				<td><p><span style="font-family: Arial; font-size: small;">Syndromic surveillance is public health surveillance that emphasizes the use of near "real-time" health data and statistical tools for disease or hazardous event detection, situation awareness for mass gatherings and public health emergencies, and ad hoc and population health trend analyses. For syndromic surveillance purposes, required data on all clinical encounters must be sent to the jurisdictional public health agency within 24 hours of the start of any given encounter, and in accordance with local or state laws and practices.</span></p>
 
-<p><span style="font-size: 10pt;">The ED Visit with Admit Test Case provides an example of an ED visit for which the patient's chief complaint is captured as free-text, working diagnosis and final diagnosis are captured with SNOMED CT codes, the patient is discharged from the ED and admitted for inpatient care, and the Admit/Encounter Reason is captured with a SNOMED CT code.</span></p>
+<p><span style="font-family: Arial; font-size: small;">The ED Visit with Admit Test Case provides an example of an ED visit for which the patient's chief complaint is captured as free-text, working diagnosis and final diagnosis are captured with SNOMED CT codes, the patient is discharged from the ED and admitted for inpatient care, and the Admit/Encounter Reason is captured with a SNOMED CT code.</span></p>
 
-<p><span style="font-size: 10pt;">In this test case, a disoriented, elderly male is brought to the emergency department on the day following a blizzard that caused power outages. He was nearly unconscious when found in his kitchen next to a gas oven. He states that he has a headache, nausea, and dizziness. The physician diagnoses him with carbon monoxide poisoning and orders him to be admitted as an inpatient for hyperbaric oxygen therapy. He is discharged from the ED and prepared for admission. Syndromic surveillance data about the visit are transmitted to the state health department.</span></p>
+<p><span style="font-family: Arial; font-size: small;">In this test case, a disoriented, elderly male is brought to the emergency department on the day following a blizzard that caused power outages. He was nearly unconscious when found in his kitchen next to a gas oven. He states that he has a headache, nausea, and dizziness. The physician diagnoses him with carbon monoxide poisoning and orders him to be admitted as an inpatient for hyperbaric oxygen therapy. He is discharged from the ED and prepared for admission. Syndromic surveillance data about the visit are transmitted to the state health department.</span></p>
 
-<p><span style="font-size: 10pt;">This test case involves 4 steps: a registration message (ADTA04), an update message (ADTA08), a discharge message (ADTA03), and an admission message (ADTA01).</span></p>
+<p><span style="font-family: Arial; font-size: small;">This test case involves 4 steps: a registration message (ADTA04), an update message (ADTA08), a discharge message (ADTA03), and an admission message (ADTA01).</span></p>
 </td>
 			</tr>
 		</table>
@@ -11320,7 +11407,7 @@
 	</fieldset>
 	</div>
 <p style="page-break-after:always;"></p><A NAME="3.1.1"><h2>3.1.1. TS-1 Registration-A04</h2>
-<span>No Description</span>
+<span><span style="font-size: 13.3333px;">Patient is registered in the ED.</span></span>
 <h3>Test Story</h3>
 
 	<div class="testStory">
@@ -11340,7 +11427,7 @@
 				<th colspan="1">Comments</th>
 			</tr>
 			<tr>
-				<td><p>This Test Case provides an example of an ED visit for which the patient&#39;s chief complaint is captured as free-text, working diagnosis and final diagnosis are captured with SNOMED CT codes, the patient is discharged from the ED and admitted for inpatient care, and the Admit/Encounter Reason is captured with a SNOMED CT code. Dates and times are provided in this test case to illustrate the sequence of clinical and messaging events. Since the exact dates and times are not reproducible when modeling the Test Case with a Health IT Module, only date and time format will be validated within tester submitted test data.</p>
+				<td><p>This Test Case provides an example of an ED visit for which the patient's chief complaint is captured as free-text, working diagnosis and final diagnosis are captured with SNOMED CT codes, the patient is discharged from the ED and admitted for inpatient care, and the Admit/Encounter Reason is captured with a SNOMED CT code. Dates and times are provided in this test case to illustrate the sequence of clinical and messaging events. Since the exact dates and times are not reproducible when modeling the Test Case with a Health IT Module, only date and time format will be validated within tester submitted test data.</p>
 </td>
 			</tr>
 		</table>
@@ -11350,7 +11437,7 @@
 				<th colspan="1">PreCondition</th>
 			</tr>
 			<tr>
-				<td>No PreCondition</td>
+				<td><p>No PreCondition</p></td>
 			</tr>
 		</table>
 		<br />
@@ -11359,7 +11446,7 @@
 				<th colspan="1">PostCondition</th>
 			</tr>
 			<tr>
-				<td>No PostCondition</td>
+				<td><p>No PostCondition</p></td>
 			</tr>
 		</table>
 		<br />
@@ -11368,7 +11455,7 @@
 				<th colspan="1">Test Objectives</th>
 			</tr>
 			<tr>
-				<td><p>This test case examines a Health IT Module&#39;s ability to create ADT A04-Registration message within the PHIN Messaging Guide&#39;s conformance requirements for syndromic surveillance.</p>
+				<td><p>This test case examines a Health IT Module's ability to create ADT A04-Registration message within the PHIN Messaging Guide's conformance requirements for syndromic surveillance.</p>
 </td>
 			</tr>
 		</table>
@@ -11378,7 +11465,7 @@
 				<th colspan="1">Evaluation Criteria</th>
 			</tr>
 			<tr>
-				<td>No evaluation criteria</td>
+				<td><p>No evaluation criteria</p></td>
 			</tr>
 		</table>
 		<br />
@@ -13476,7 +13563,7 @@
 		</div>
 </fieldset></body>
 </html><p style="page-break-after:always;"></p><A NAME="3.1.2"><h2>3.1.2. TS-2 Update-A08</h2>
-<span>No Description</span>
+<span><span style="font-size: 13.3333px;">ED sends updated Syndromic Surveillance message to state health department.</span></span>
 <h3>Test Story</h3>
 
 	<div class="testStory">
@@ -13496,7 +13583,7 @@
 				<th colspan="1">Comments</th>
 			</tr>
 			<tr>
-				<td><p>This Test Case provides an example of an ED visit for which the patient&#39;s chief complaint is captured as free-text, working diagnosis and final diagnosis are captured with SNOMED CT codes, the patient is discharged from the ED and admitted for inpatient care, and the Admit/Encounter Reason is captured with a SNOMED CT code. Dates and times are provided in this test case to illustrate the sequence of clinical and messaging events. Since the exact dates and times are not reproducible when modeling the Test Case with a Health IT Module, only date and time format will be validated within tester submitted test data.</p>
+				<td><p>This Test Case provides an example of an ED visit for which the patient's chief complaint is captured as free-text, working diagnosis and final diagnosis are captured with SNOMED CT codes, the patient is discharged from the ED and admitted for inpatient care, and the Admit/Encounter Reason is captured with a SNOMED CT code. Dates and times are provided in this test case to illustrate the sequence of clinical and messaging events. Since the exact dates and times are not reproducible when modeling the Test Case with a Health IT Module, only date and time format will be validated within tester submitted test data.</p>
 </td>
 			</tr>
 		</table>
@@ -13516,7 +13603,7 @@
 				<th colspan="1">PostCondition</th>
 			</tr>
 			<tr>
-				<td>No PostCondition</td>
+				<td><p>No PostCondition</p></td>
 			</tr>
 		</table>
 		<br />
@@ -13525,7 +13612,7 @@
 				<th colspan="1">Test Objectives</th>
 			</tr>
 			<tr>
-				<td><p>This test case examines a Health IT Module&#39;s ability to create ADT A08-Update message, within the parameters of the PHIN Messaging Guide&#39;s conformance requirements.</p>
+				<td><p>This test case examines a Health IT Module's ability to create ADT A08-Update message, within the parameters of the PHIN Messaging Guide's conformance requirements.</p>
 </td>
 			</tr>
 		</table>
@@ -13545,7 +13632,7 @@
 				<th colspan="1">Notes to Testers</th>
 			</tr>
 			<tr>
-				<td>No Note</td>
+				<td><p>No Note</p></td>
 			</tr>
 		</table>
 	</fieldset>
@@ -15736,7 +15823,7 @@
 		</div>
 </fieldset></body>
 </html><p style="page-break-after:always;"></p><A NAME="3.1.3"><h2>3.1.3. TS-3 Discharge-A03</h2>
-<span>No Description</span>
+<span><span style="font-size: 13.3333px;">Patient is discharged (dispositioned) from ED in preparation for admission to hospital.</span></span>
 <h3>Test Story</h3>
 
 	<div class="testStory">
@@ -15756,7 +15843,7 @@
 				<th colspan="1">Comments</th>
 			</tr>
 			<tr>
-				<td><p>This Test Case provides an example of an ED visit for which the patient&#39;s chief complaint is captured as free-text, working diagnosis and final diagnosis are captured with SNOMED CT codes, the patient is discharged from the ED and admitted for inpatient care, and the Admit/Encounter Reason is captured with a SNOMEDE CT code. Dates and times are provided in this test case to illustrate the sequence of clinical and messaging events. Since the exact dates and times are not reproducible when modeling the Test Case with a Health IT Module, only date and time format will be validated within tester submitted test data.</p>
+				<td><p>This Test Case provides an example of an ED visit for which the patient's chief complaint is captured as free-text, working diagnosis and final diagnosis are captured with SNOMED CT codes, the patient is discharged from the ED and admitted for inpatient care, and the Admit/Encounter Reason is captured with a SNOMED CT code. Dates and times are provided in this test case to illustrate the sequence of clinical and messaging events. Since the exact dates and times are not reproducible when modeling the Test Case with a Health IT Module, only date and time format will be validated within tester submitted test data.</p>
 </td>
 			</tr>
 		</table>
@@ -15776,7 +15863,7 @@
 				<th colspan="1">PostCondition</th>
 			</tr>
 			<tr>
-				<td>No PostCondition</td>
+				<td><p>No PostCondition</p></td>
 			</tr>
 		</table>
 		<br />
@@ -15785,7 +15872,7 @@
 				<th colspan="1">Test Objectives</th>
 			</tr>
 			<tr>
-				<td><p>This test case examines an Health IT Module&#39;s ability to create ADT A03-Discharge message within the PHIN Messaging Guide&#39;s conformance requirements.</p>
+				<td><p>This test case examines an Health IT Module's ability to create ADT A03-Discharge message within the PHIN Messaging Guide's conformance requirements.</p>
 </td>
 			</tr>
 		</table>
@@ -18016,7 +18103,7 @@
 				<th colspan="1">Comments</th>
 			</tr>
 			<tr>
-				<td><p>This Test Case provides an example of an ED visit for which the patient&#39;s chief complaint is captured as free-text, working diagnosis and final diagnosis are captured with SNOMED CT codes, the patient is discharged from the ED and admitted for inpatient care, and the Admit/Encounter Reason is captured with a SNOMEDE CT code. Dates and times are provided in this test case to illustrate the sequence of clinical and messaging events. Since the exact dates and times are not reproducible when modeling the Test Case with a Health IT Module, only date and time format will be validated within tester submitted test data.</p>
+				<td><p>This Test Case provides an example of an ED visit for which the patient's chief complaint is captured as free-text, working diagnosis and final diagnosis are captured with SNOMED CT codes, the patient is discharged from the ED and admitted for inpatient care, and the Admit/Encounter Reason is captured with a SNOMED CT code. Dates and times are provided in this test case to illustrate the sequence of clinical and messaging events. Since the exact dates and times are not reproducible when modeling the Test Case with a Health IT Module, only date and time format will be validated within tester submitted test data.</p>
 </td>
 			</tr>
 		</table>
@@ -18036,7 +18123,7 @@
 				<th colspan="1">PostCondition</th>
 			</tr>
 			<tr>
-				<td>No PostCondition</td>
+				<td><p>No PostCondition</p></td>
 			</tr>
 		</table>
 		<br />
@@ -18045,7 +18132,7 @@
 				<th colspan="1">Test Objectives</th>
 			</tr>
 			<tr>
-				<td><p>This test case examines a Health IT Module&#39;s ability to create ADT A01-Admission message within the PHIN Messaging Guide&#39;s conformance requirements for syndromic surveillance.</p>
+				<td><p>This test case examines a Health IT Module's ability to create ADT A01-Admission message within the PHIN Messaging Guide's conformance requirements for syndromic surveillance.</p>
 </td>
 			</tr>
 		</table>
@@ -18055,7 +18142,7 @@
 				<th colspan="1">Evaluation Criteria</th>
 			</tr>
 			<tr>
-				<td>No evaluation criteria</td>
+				<td><p>No evaluation criteria</p></td>
 			</tr>
 		</table>
 		<br />
@@ -18064,7 +18151,7 @@
 				<th colspan="1">Notes to Testers</th>
 			</tr>
 			<tr>
-				<td><p>The OBX segment in the A01 message provides the originating visit type information through Facility/Visit Type. The admit described in the ED_Visit_Admit Test Scenario originated in the emergency department; therefore, &quot;Emergency Care&quot; is messaged in the OBX.5 element in the A01 message.</p>
+				<td><p>The OBX segment in the A01 message provides the originating visit type information through Facility/Visit Type. The admit described in the ED_Visit_Admit Test Scenario originated in the emergency department; therefore, "Emergency Care" is messaged in the OBX.5 element in the A01 message.</p>
 </td>
 			</tr>
 		</table>
@@ -20174,7 +20261,7 @@
 		</div>
 </fieldset></body>
 </html><p style="page-break-after:always;"></p><A NAME="4"><h2>4. Inpatient Visit</h2>
-<span>Patient Visits Hospital</span>
+<span>Patient is admitted and discharged from hospital.</span>
 <p style="page-break-after:always;"></p><A NAME="4.1"><h2>4.1. TC-4 Inpatient Visit_Surgery</h2>
 <span>Patient has cardiac surgery</span>
 <h3>Test Story</h3>
@@ -20186,32 +20273,9 @@
 				<th colspan="1">Description</th>
 			</tr>
 			<tr>
-				<td><p class="MsoNormal" style="margin-bottom: 0.0001pt;">Syndromic surveillance is public health surveillance that emphasizes
-the use of near ?real-time? health data and statistical tools for disease or
-hazardous event detection, situation awareness for mass gatherings and public
-health emergencies, and ad hoc and population health trend analyses. For
-syndromic surveillance purposes, required data on all clinical encounters must
-be sent to the jurisdictional public health agency within 24 hours of the any
-given encounter, and in accordance with local or state laws and practices.<o:p></o:p></p><p class="MsoNormal" style="margin-bottom: 0.0001pt;"><o:p>&nbsp;</o:p></p><p class="MsoNormal" style="margin-bottom: 0.0001pt;">The IP Visit-Cardiac Surgery Test Case provides an example of an
-inpatient surgical visit for a patient with multiple diagnoses. In this
-scenario, syndromic surveillance data are sent to a state public health agency
-in accordance with guidelines recommended by the International Society for
-Disease Surveillance (i.e., once following admission and once following discharge).<o:p></o:p></p><p class="MsoNormal" style="margin-bottom: 0.0001pt;"><o:p>&nbsp;</o:p></p><p class="MsoNormal" style="margin-bottom: 0.0001pt;">In this test case, a middle aged man is admitted for a pre-scheduled
-surgical removal of a coronary artery obstruction and insertion of stents,
-spends one night in the hospital for observation, and is discharged home.<o:p></o:p></p><p class="MsoNormal" style="margin-bottom: 0.0001pt;">&nbsp;<o:p></o:p></p><p class="MsoNormal" style="margin-bottom: 0.0001pt;">
-
-
-
-
-
-
-
-
-
-
-
-</p><p class="MsoNormal" style="margin-bottom: 0.0001pt;">This test case involves 2 steps: an admission message (ADTA01); and a
-discharge message (ADTA03).<o:p></o:p></p></td>
+				<td><p><span style="font-family: Arial; font-size: small;">Syndromic surveillance is public health surveillance that emphasizes the use of near "real-time" health data and statistical tools for disease or hazardous event detection, situation awareness for mass gatherings and public health emergencies, and ad hoc and population health trend analyses. For syndromic surveillance purposes, required data on all clinical encounters must be sent to the jurisdictional public health agency within 24 hours of the any given encounter, and in accordance with local or state laws and practices.</span></p>
+<p><span style="font-family: Arial; font-size: small;">The IP Visit-Cardiac Surgery Test Case provides an example of an inpatient surgical visit for a patient with multiple diagnoses. In this scenario, syndromic surveillance data are sent to a state public health agency in accordance with guidelines recommended by the International Society for Disease Surveillance (i.e., once following admission and once following discharge).</span></p><p></p><p><span style="font-family: Arial; font-size: small;">In this test case, a middle aged man is admitted for a pre-scheduled surgical removal of a coronary artery obstruction and insertion of stents, spends one night in the hospital for observation, and is discharged home.</span></p>
+<p><span style="font-family: Arial; font-size: small;">This test case involves 2 steps: an admission message (ADTA01); and a discharge message (ADTA03).</span></p></td>
 			</tr>
 		</table>
 		<br />
@@ -20281,10 +20345,9 @@ discharge message (ADTA03).<o:p></o:p></p></td>
 				<th colspan="1">Description</th>
 			</tr>
 			<tr>
-				<td><p>On August 17, 2015 at 7:00 AM, a 51-year old male arrives at Our Lady of Perpetual Misery Hospital for a pre-scheduled surgical removal of a coronary artery obstruction and insertion of stents. A clerical assistant registers the patient for admission. He records the patient?s name, date of birth, race, ethnicity, residence, and insurance information. At 7:30 AM the patient is escorted to a pre-operation room where a nurse captures the patient?s health history which includes chest pain, inputs the reason for visit as z95.5, and the patient and inputs multiple diagnoses for the patient (Primary I25.0, secondary I20.9, and tertiary R07.4). The patient is then prepared surgery, and at 8:30 AM the patient has the surgery. It occurs without incident, and the patient goes to post-operation recovery unit to wake from anesthesia, and receive a post-op examination. At 2:00 PM the patient, who is in good condition, is transported to a cardiac unit for overnight observation.</p>
+				<td><p>On August 17, 2015 at 7:00 AM, a 51-year old male arrives at Mountainview General Hospital for a pre-scheduled surgical removal of a coronary artery obstruction and insertion of stents. A clerical assistant registers the patient for admission. He records the patient's name, date of birth, race, ethnicity, residence, and insurance information. At 7:30 AM the patient is escorted to a pre-operation room where a nurse captures the patient's health history which includes chest pain, inputs the reason for visit as z95.5, and the patient and inputs multiple diagnoses for the patient (Primary I25.0, secondary I20.9, and tertiary R07.4). The patient is then prepared surgery, and at 8:30 AM the patient has the surgery. It occurs without incident, and the patient goes to post-operation recovery unit to wake from anesthesia, and receive a post-op examination. At 2:00 PM the patient, who is in good condition, is transported to a cardiac unit for overnight observation.</p>
 
-<p>Our Lady of Perpetual Healing Hospital reports inpatient syndromic surveillance data to the state health department (SHD) for all new patient admissions once per day. At 1:00 AM on August 18, 2015, the hospital's electronic health record module for syndromic surveillance data assembles and transmits an ADT 01 Admission message about this encounter to SHD.</p>
-</td>
+<p>Mountainview General Hospital reports inpatient syndromic surveillance data to the state health department (SHD) for all new patient admissions once per day. At 1:00 AM on August 18, 2015, the hospital's electronic health record module for syndromic surveillance data assembles and transmits an ADT 01 Admission message about this encounter to SHD.</p></td>
 			</tr>
 		</table>
 		<br />
@@ -20293,7 +20356,7 @@ discharge message (ADTA03).<o:p></o:p></p></td>
 				<th colspan="1">Comments</th>
 			</tr>
 			<tr>
-				<td><p>This Test Case provides an example of an inpatient visit where syndromic surveillance data are sent to a public health agency in accordance with guidelines recommended by the International Society for Disease Surveillance. The dates and times in this test case illustrate the sequence of clinical and messaging events. Since the exact dates and times are not reproducible when modeling the test case with EHR technology, only date and time format will be validated within tester submitted test data. ICD-10 diagnosis codes are acceptable with or without decimals</p>
+				<td><p>This Test Case provides an example of an inpatient visit where syndromic surveillance data are sent to a public health agency in accordance with <a href="http://www.syndromic.org/storage/documents/meaningfuluse/ISDS_2012-MUse-Recommendations.pdf" target="_blank">guidelines recommended by the International Society for Disease Surveillance</a>. The dates and times in this test case illustrate the sequence of clinical and messaging events. Since the exact dates and times are not reproducible when modeling the test case with EHR technology, only date and time format will be validated within tester submitted test data. ICD-10 diagnosis codes are acceptable with or without decimals.</p>
 </td>
 			</tr>
 		</table>
@@ -20303,7 +20366,7 @@ discharge message (ADTA03).<o:p></o:p></p></td>
 				<th colspan="1">PreCondition</th>
 			</tr>
 			<tr>
-				<td>No PreCondition</td>
+				<td><p>No PreCondition</p></td>
 			</tr>
 		</table>
 		<br />
@@ -20312,7 +20375,7 @@ discharge message (ADTA03).<o:p></o:p></p></td>
 				<th colspan="1">PostCondition</th>
 			</tr>
 			<tr>
-				<td>No PostCondition</td>
+				<td><p>No PostCondition</p></td>
 			</tr>
 		</table>
 		<br />
@@ -20321,7 +20384,7 @@ discharge message (ADTA03).<o:p></o:p></p></td>
 				<th colspan="1">Test Objectives</th>
 			</tr>
 			<tr>
-				<td><p>This test case examines a Health IT Module&#39;s ability to create ADT A01-Admission message within PHIN Syndromic Surveillance Messaging Guide&#39;s conformance requirements.</p>
+				<td><p>This test case examines a Health IT Module's ability to create ADT A01-Admission message within PHIN Syndromic Surveillance Messaging Guide's conformance requirements.</p>
 </td>
 			</tr>
 		</table>
@@ -20341,10 +20404,7 @@ discharge message (ADTA03).<o:p></o:p></p></td>
 				<th colspan="1">Notes to Testers</th>
 			</tr>
 			<tr>
-				<td><div>
-<p>An ICD-10 CM code is used for coding the working diagnosis. The Tester may ignore errors generated by the Test Tool related to incorrect code when the ICD-10 code used in the message is determined to be a valid code.</p>
-</div>
-</td>
+				<td><p>An ICD-10 CM code is used for coding the working diagnosis. The Tester may ignore errors generated by the Test Tool related to incorrect code when the ICD-10 code used in the message is determined to be a valid code.</p></td>
 			</tr>
 		</table>
 	</fieldset>
@@ -20470,7 +20530,7 @@ discharge message (ADTA03).<o:p></o:p></p></td>
 					</td>
 					<td class="Component">Namespace ID
 					</td>
-					<td class="Data">OurLadyPerpetualMisery
+					<td class="Data">MountainviewGeneral
 					</td>
 					<td class="noData">
 					</td></tr>
@@ -20698,7 +20758,7 @@ discharge message (ADTA03).<o:p></o:p></p></td>
 					</td>
 					<td class="Component">Namespace ID
 					</td>
-					<td class="Data">OurLadyPerpetualMisery
+					<td class="Data">MountainviewGeneral
 					</td>
 					<td class="noData">
 					</td></tr>
@@ -21235,7 +21295,7 @@ discharge message (ADTA03).<o:p></o:p></p></td>
 					</td>
 					<td class="Component">Namespace ID
 					</td>
-					<td class="Data">OurLadyPerpetualMisery
+					<td class="Data">MountainviewGeneral
 					</td>
 					<td class="noData">
 					</td></tr>
@@ -21244,7 +21304,7 @@ discharge message (ADTA03).<o:p></o:p></p></td>
 					</td>
 					<td class="Component">Universal ID
 					</td>
-					<td class="Data">9876543210
+					<td class="Data">1231231236
 					</td>
 					<td class="noData">
 					</td></tr>
@@ -21419,24 +21479,6 @@ discharge message (ADTA03).<o:p></o:p></p></td>
 					<td class="Component">Name of Coding System
 					</td>
 					<td class="Data">HCPTNUCC
-					</td>
-					<td class="noData">
-					</td></tr>
-					<tr>
-					<td class="Component">OBX-5.4
-					</td>
-					<td class="Component">Alternate Identifier
-					</td>
-					<td class="noData">
-					</td>
-					<td class="noData">
-					</td></tr>
-					<tr>
-					<td class="Component">OBX-5.5
-					</td>
-					<td class="Component">Alternate Text
-					</td>
-					<td class="noData">
 					</td>
 					<td class="noData">
 					</td></tr>
@@ -22038,24 +22080,6 @@ discharge message (ADTA03).<o:p></o:p></p></td>
 					<td class="noData">
 					</td></tr>
 					<tr>
-					<td class="Component">OBX-5.4
-					</td>
-					<td class="Component">Alternate Identifier
-					</td>
-					<td class="noData">
-					</td>
-					<td class="noData">
-					</td></tr>
-					<tr>
-					<td class="Component">OBX-5.5
-					</td>
-					<td class="Component">Alternate Text
-					</td>
-					<td class="noData">
-					</td>
-					<td class="noData">
-					</td></tr>
-					<tr>
 					<td class="Component">OBX-5.6
 					</td>
 					<td class="Component">Name of Alternate Coding System
@@ -22429,8 +22453,8 @@ discharge message (ADTA03).<o:p></o:p></p></td>
 		<tr>
 		<td>Observation  Value</td>
 		<td>
-      OurLadyPerpetualMisery
-      9876543210
+      MountainviewGeneral
+      1231231236
       NPI
     </td></tr>
 		<tr>
@@ -22574,20 +22598,10 @@ discharge message (ADTA03).<o:p></o:p></p></td>
 				<th colspan="1">Description</th>
 			</tr>
 			<tr>
-				<td><h4 style="margin: 0in 0in 0.0001pt;"><span style="font-size: 10pt; font-weight: normal;" arial","sans-serif";font-weight:normal"="">At 9:00 the next day,
-August 18, 2015, the patient is visited by the surgeon and an attending
-physician who perform a physical to check for signs and symptoms of any
-post-operation compilations. The patient reports that he is not experiencing
-any chest pain. The physicians both observe that the patient with signs of
-cardiac arrhythmia, but conclude that he is otherwise in good condition. They
-clear the patient for discharge. At 12:00 PM the patient goes home.<u1:p></u1:p><o:p></o:p></span></h4><h4>
+				<td><p>At 9:00 the next day,
+August 18, 2015, the patient is visited by the surgeon and an attending physician who perform a physical to check for signs and symptoms of any post-operation compilations. The patient reports that he is not experiencing any chest pain. The physicians both observe that the patient with signs of cardiac arrhythmia, but conclude that he is otherwise in good condition. They clear the patient for discharge. At 12:00 PM the patient goes home.</p>
 
-</h4><h4 style="margin: 0in 0in 0.0001pt;"><span style="font-size: 10pt; font-weight: normal;" arial","sans-serif";font-weight:normal"="">Our Lady of Perpetual
-Misery Hospital reports inpatient syndromic surveillance data to the state
-health department (SHD) for all new patient discharges once per day. At 1:00 AM
-on August 19, 2015, the hospital's electronic health record module for
-syndromic surveillance data assembles and transmits an ADT 04 Discharge message
-about this encounter to SHD.</span><span style="font-weight: normal; font-size: 10pt; font-family: Arial, sans-serif;"><o:p></o:p></span></h4></td>
+<p>Mountainview General Hospital reports inpatient syndromic surveillance data to the state health department (SHD) for all new patient discharges once per day. At 1:00 AM on August 19, 2015, the hospital's electronic health record module for syndromic surveillance data assembles and transmits an ADT 04 Discharge message about this encounter to SHD.</p></td>
 			</tr>
 		</table>
 		<br />
@@ -22596,14 +22610,7 @@ about this encounter to SHD.</span><span style="font-weight: normal; font-size: 
 				<th colspan="1">Comments</th>
 			</tr>
 			<tr>
-				<td><p class="MsoNormal" style="margin-bottom: 0.0001pt;"><span style="font-size: 10pt; font-family: Arial, sans-serif;">This Test Case provides an example of an
-inpatient visit where syndromic surveillance data are sent to a public health
-agency in accordance with<span class="apple-converted-space">&nbsp;</span></span><span style="font-size:10.0pt;mso-bidi-font-size:11.0pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;"><a href="http://www.syndromic.org/storage/documents/meaningfuluse/ISDS_2012-MUse-Recommendations.pdf">guidelines recommended by the International Society for
-Disease Surveillance</a>. The dates and times in this test case illustrate the
-sequence of clinical and messaging events. Since the exact dates and times are
-not reproducible when modeling the test case with EHR technology, only date and
-time format will be validated within tester submitted test data. ICD-10
-diagnosis codes are acceptable with or without decimals.<o:p></o:p></span></p></td>
+				<td><p>This Test Case provides an example of an inpatient visit where syndromic surveillance data are sent to a public health agency in accordance with <a href="http://www.syndromic.org/storage/documents/meaningfuluse/ISDS_2012-MUse-Recommendations.pdf" target="_blank">guidelines recommended by the International Society for Disease Surveillance</a>. The dates and times in this test case illustrate the sequence of clinical and messaging events. Since the exact dates and times are not reproducible when modeling the test case with EHR technology, only date and time format will be validated within tester submitted test data. ICD-10 diagnosis codes are acceptable with or without decimals.</p></td>
 			</tr>
 		</table>
 		<br />
@@ -22612,7 +22619,7 @@ diagnosis codes are acceptable with or without decimals.<o:p></o:p></span></p></
 				<th colspan="1">PreCondition</th>
 			</tr>
 			<tr>
-				<td><p class="MsoNormal">A01-Admission message is sent before A03-Discharge message.<o:p></o:p></p></td>
+				<td><p>A01-Admission message is sent before A03-Discharge message.</p></td>
 			</tr>
 		</table>
 		<br />
@@ -22621,7 +22628,7 @@ diagnosis codes are acceptable with or without decimals.<o:p></o:p></span></p></
 				<th colspan="1">PostCondition</th>
 			</tr>
 			<tr>
-				<td>No PostCondition</td>
+				<td><p>No PostCondition</p></td>
 			</tr>
 		</table>
 		<br />
@@ -22630,9 +22637,7 @@ diagnosis codes are acceptable with or without decimals.<o:p></o:p></span></p></
 				<th colspan="1">Test Objectives</th>
 			</tr>
 			<tr>
-				<td><p class="MsoNormal">This test case examines a Health IT Module's ability to
-create ADT A04-Discharge message within PHIN Messaging Guide's conformance
-requirements.<o:p></o:p></p></td>
+				<td><p>This test case examines a Health IT Module's ability to create ADT A04-Discharge message within PHIN Messaging Guide's conformance requirements.</p></td>
 			</tr>
 		</table>
 		<br />
@@ -22641,7 +22646,7 @@ requirements.<o:p></o:p></p></td>
 				<th colspan="1">Evaluation Criteria</th>
 			</tr>
 			<tr>
-				<td>No evaluation criteria</td>
+				<td><p>No evaluation criteria</p></td>
 			</tr>
 		</table>
 		<br />
@@ -22650,9 +22655,7 @@ requirements.<o:p></o:p></p></td>
 				<th colspan="1">Notes to Testers</th>
 			</tr>
 			<tr>
-				<td><p class="MsoNormal">An ICD-10 CM code is used for coding the working diagnosis.
-The Tester may ignore errors generated by the Test Tool related to incorrect
-code when the ICD-10 code used in the message is determined to be a valid code.<o:p></o:p></p></td>
+				<td><p>An ICD-10 CM code is used for coding the working diagnosis. The Tester may ignore errors generated by the Test Tool related to incorrect code when the ICD-10 code used in the message is determined to be a valid code.</p></td>
 			</tr>
 		</table>
 	</fieldset>
@@ -22778,7 +22781,7 @@ code when the ICD-10 code used in the message is determined to be a valid code.<
 					</td>
 					<td class="Component">Namespace ID
 					</td>
-					<td class="Data">OurLadyPerpetualMisery
+					<td class="Data">MountainviewGeneral
 					</td>
 					<td class="noData">
 					</td></tr>
@@ -23006,7 +23009,7 @@ code when the ICD-10 code used in the message is determined to be a valid code.<
 					</td>
 					<td class="Component">Namespace ID
 					</td>
-					<td class="Data">OurLadyPerpetualMisery
+					<td class="Data">MountainviewGeneral
 					</td>
 					<td class="noData">
 					</td></tr>
@@ -23663,7 +23666,7 @@ code when the ICD-10 code used in the message is determined to be a valid code.<
 					</td>
 					<td class="Component">Namespace ID
 					</td>
-					<td class="Data">OurLadyPerpetualMisery
+					<td class="Data">MountainviewGeneral
 					</td>
 					<td class="noData">
 					</td></tr>
@@ -23672,7 +23675,7 @@ code when the ICD-10 code used in the message is determined to be a valid code.<
 					</td>
 					<td class="Component">Universal ID
 					</td>
-					<td class="Data">9876543210
+					<td class="Data">1231231236
 					</td>
 					<td class="noData">
 					</td></tr>
@@ -23847,24 +23850,6 @@ code when the ICD-10 code used in the message is determined to be a valid code.<
 					<td class="Component">Name of Coding System
 					</td>
 					<td class="Data">HCPTNUCC
-					</td>
-					<td class="noData">
-					</td></tr>
-					<tr>
-					<td class="Component">OBX-5.4
-					</td>
-					<td class="Component">Alternate Identifier
-					</td>
-					<td class="noData">
-					</td>
-					<td class="noData">
-					</td></tr>
-					<tr>
-					<td class="Component">OBX-5.5
-					</td>
-					<td class="Component">Alternate Text
-					</td>
-					<td class="noData">
 					</td>
 					<td class="noData">
 					</td></tr>
@@ -24466,24 +24451,6 @@ code when the ICD-10 code used in the message is determined to be a valid code.<
 					<td class="noData">
 					</td></tr>
 					<tr>
-					<td class="Component">OBX-5.4
-					</td>
-					<td class="Component">Alternate Identifier
-					</td>
-					<td class="noData">
-					</td>
-					<td class="noData">
-					</td></tr>
-					<tr>
-					<td class="Component">OBX-5.5
-					</td>
-					<td class="Component">Alternate Text
-					</td>
-					<td class="noData">
-					</td>
-					<td class="noData">
-					</td></tr>
-					<tr>
 					<td class="Component">OBX-5.6
 					</td>
 					<td class="Component">Name of Alternate Coding System
@@ -24551,7 +24518,7 @@ code when the ICD-10 code used in the message is determined to be a valid code.<
 		</td>
 		<td class="Field">Observation Result Status
 		</td>
-		<td class="Field">F 
+		<td class="Field">F
 		</td>
 		<td class="Field">
 		</td></tr>
@@ -24732,8 +24699,8 @@ code when the ICD-10 code used in the message is determined to be a valid code.<
 		<tr>
 		<td>Observation  Value</td>
 		<td>
-      OurLadyPerpetualMisery
-      9876543210
+      MountainviewGeneral
+      1231231236
       NPI
     </td></tr>
 		<tr>

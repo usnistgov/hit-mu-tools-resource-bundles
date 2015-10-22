@@ -4,4 +4,16 @@
   <artifactId>ss-r2-resource-bundle</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <name>ss-r2-resource-bundle</name>
+  
+    <distributionManagement>
+    <repository>
+      <id>releases</id>
+      <url>http://vm-070.nist.gov:8081/nexus/content/repositories/releases</url>
+    </repository>
+    <snapshotRepository>
+      <id>snapshots</id>
+      <name>Internal Snapshots</name>
+      <url>http://vm-070.nist.gov:8081/nexus/content/repositories/snapshots</url>
+    </snapshotRepository>
+  </distributionManagement>	
 </project>

@@ -1,35 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<ConformanceContext UUID="881232e1-4501-43d7-8937-58484834b14d">
+<ConformanceContext UUID="baa0f521-bfc4-4399-abbd-d230d011f258">
   <Constraints>
     <Group>
       <ByName Name="ADT_A03">
-        <Constraint ID="TCAMT_MSH[1].21[1].2[1]_3" Target="1[1].21[1].2[1]">
-          <Reference GeneratedBy="TCAMT" ReferencePath="MSH[1].21[1].2[1]" Source="Test Case" TestDataCategorization="Value-Test Case Fixed"/>
-          <Description>MSH[1].21[1].2[1] SHALL be valued.</Description>
-          <Assertion>
-            <Presence Path="1[1].21[1].2[1]"/>
-          </Assertion>
-        </Constraint>
-        <Constraint ID="TCAMT_MSH[1].21[1].2[1]" Target="1[1].21[1].2[1]">
-          <Reference GeneratedBy="TCAMT" ReferencePath="MSH[1].21[1].2[1]" Source="Test Case" TestDataCategorization="Value-Test Case Fixed"/>
-          <Description>MSH[1].21[1].2[1] SHALL be valued 'SS Sender.</Description>
-          <Assertion>
-            <PlainText IgnoreCase="false" Path="1[1].21[1].2[1]" Text="SS Sender"/>
-          </Assertion>
-        </Constraint>
-        <Constraint ID="TCAMT_MSH[1].21[1].1[1]_3" Target="1[1].21[1].1[1]">
-          <Reference GeneratedBy="TCAMT" ReferencePath="MSH[1].21[1].1[1]" Source="Test Case" TestDataCategorization="Value-Test Case Fixed"/>
-          <Description>MSH[1].21[1].1[1] SHALL be valued.</Description>
+        <Constraint ID="TCA-1-3" Target="1[1].21[1].1[1]">
+          <Reference GeneratedBy="Test Case Authoring &amp; Management Tool(TCAMT)" ReferencePath="MSH[1].21[1].1[1]" Source="Message" TestDataCategorization="Value-Test Case Fixed"/>
+          <Description>Expected content is missing. The empty value at MSH[1].21[1].1[1](Entity Identifier) is expected to be present.</Description>
           <Assertion>
             <Presence Path="1[1].21[1].1[1]"/>
           </Assertion>
         </Constraint>
-        <Constraint ID="TCAMT_MSH[1].21[1].1[1]" Target="1[1].21[1].1[1]">
-          <Reference GeneratedBy="TCAMT" ReferencePath="MSH[1].21[1].1[1]" Source="Test Case" TestDataCategorization="Value-Test Case Fixed"/>
-          <Description>MSH[1].21[1].1[1] SHALL be valued 'PH_SS-NoAck.</Description>
+        <Constraint ID="TCA-1" Target="1[1].21[1].1[1]">
+          <Reference GeneratedBy="Test Case Authoring &amp; Management Tool(TCAMT)" ReferencePath="MSH[1].21[1].1[1]" Source="Message" TestDataCategorization="Value-Test Case Fixed"/>
+          <Description>Expected test case fixed content is missing. The value at MSH[1].21[1].1[1](Entity Identifier) does not match the expected value: 'PH_SS-NoAck'.</Description>
           <Assertion>
             <PlainText IgnoreCase="false" Path="1[1].21[1].1[1]" Text="PH_SS-NoAck"/>
+          </Assertion>
+        </Constraint>
+        <Constraint ID="TCA-8-3" Target="1[1].21[1].2[1]">
+          <Reference GeneratedBy="Test Case Authoring &amp; Management Tool(TCAMT)" ReferencePath="MSH[1].21[1].2[1]" Source="Message" TestDataCategorization="Value-Test Case Fixed"/>
+          <Description>Expected content is missing. The empty value at MSH[1].21[1].2[1](Namespace ID) is expected to be present.</Description>
+          <Assertion>
+            <Presence Path="1[1].21[1].2[1]"/>
+          </Assertion>
+        </Constraint>
+        <Constraint ID="TCA-8" Target="1[1].21[1].2[1]">
+          <Reference GeneratedBy="Test Case Authoring &amp; Management Tool(TCAMT)" ReferencePath="MSH[1].21[1].2[1]" Source="Message" TestDataCategorization="Value-Test Case Fixed"/>
+          <Description>Expected test case fixed content is missing. The value at MSH[1].21[1].2[1](Namespace ID) does not match the expected value: 'SS Sender'.</Description>
+          <Assertion>
+            <PlainText IgnoreCase="false" Path="1[1].21[1].2[1]" Text="SS Sender"/>
           </Assertion>
         </Constraint>
       </ByName>

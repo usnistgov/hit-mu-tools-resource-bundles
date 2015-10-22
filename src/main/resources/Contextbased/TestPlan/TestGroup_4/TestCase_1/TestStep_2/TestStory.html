@@ -3,11 +3,11 @@
 <head>
 <style xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:util="http://hl7.nist.gov/data-specs/util" type="text/css">
 					@media screen {
-					.testStory legend {text-align:center;font-size:110%; font-weight:bold;}					
+					.testStory legend {text-align:center;font-size:130%; font-weight:bold;}					
 					.testStory  {text-align:center;page-break-inside: avoid;}
                     .testStory maskByMediaType {display:table;}
-                    .testStory  table tbody tr th {font-size:100%;}
-                    .testStory  table tbody tr td {font-size:90%;}
+                    .testStory  table tbody tr th {font-size:120%;}
+                    .testStory  table tbody tr td {font-size:110%;}
                     .testStory  table tbody tr th {text-align:center;background:#436BEC}
 					.testStory  table { width:98%;border: 1px groove;table-layout: fixed; margin:0 auto;border-collapse: collapse;page-break-inside: avoid;}
                     .testStory  table  tr { border: 3px groove; }
@@ -16,11 +16,11 @@
                     .testStory  table tbody tr td {text-align:left}
                     }
                     @media print {
-					.testStory legend {text-align:center;font-size:110%; font-weight:bold;}					
+					.testStory legend {text-align:center;font-size:130%; font-weight:bold;}					
 					.testStory  {text-align:center;page-break-inside: avoid;}
                     .testStory maskByMediaType {display:table;}
-                    .testStory  table tbody tr th {font-size:100%;}
-                    .testStory  table tbody tr td {font-size:90%;}
+                    .testStory  table tbody tr th {font-size:120%;}
+                    .testStory  table tbody tr td {font-size:110%;}
                     .testStory  table tbody tr th {text-align:center;background:#436BEC}
 					.testStory  table { width:98%;border: 1px groove;table-layout: fixed; margin:0 auto;border-collapse: collapse;page-break-inside: avoid;}
                     .testStory  table  tr { border: 3px groove; }
@@ -53,20 +53,10 @@
 				<th colspan="1">Description</th>
 			</tr>
 			<tr>
-				<td><h4 style="margin: 0in 0in 0.0001pt;"><span style="font-size: 10pt; font-weight: normal;" arial","sans-serif";font-weight:normal"="">At 9:00 the next day,
-August 18, 2015, the patient is visited by the surgeon and an attending
-physician who perform a physical to check for signs and symptoms of any
-post-operation compilations. The patient reports that he is not experiencing
-any chest pain. The physicians both observe that the patient with signs of
-cardiac arrhythmia, but conclude that he is otherwise in good condition. They
-clear the patient for discharge. At 12:00 PM the patient goes home.<u1:p></u1:p><o:p></o:p></span></h4><h4>
+				<td><p>At 9:00 the next day,
+August 18, 2015, the patient is visited by the surgeon and an attending physician who perform a physical to check for signs and symptoms of any post-operation compilations. The patient reports that he is not experiencing any chest pain. The physicians both observe that the patient with signs of cardiac arrhythmia, but conclude that he is otherwise in good condition. They clear the patient for discharge. At 12:00 PM the patient goes home.</p>
 
-</h4><h4 style="margin: 0in 0in 0.0001pt;"><span style="font-size: 10pt; font-weight: normal;" arial","sans-serif";font-weight:normal"="">Our Lady of Perpetual
-Misery Hospital reports inpatient syndromic surveillance data to the state
-health department (SHD) for all new patient discharges once per day. At 1:00 AM
-on August 19, 2015, the hospital's electronic health record module for
-syndromic surveillance data assembles and transmits an ADT 04 Discharge message
-about this encounter to SHD.</span><span style="font-weight: normal; font-size: 10pt; font-family: Arial, sans-serif;"><o:p></o:p></span></h4></td>
+<p>Mountainview General Hospital reports inpatient syndromic surveillance data to the state health department (SHD) for all new patient discharges once per day. At 1:00 AM on August 19, 2015, the hospital's electronic health record module for syndromic surveillance data assembles and transmits an ADT 04 Discharge message about this encounter to SHD.</p></td>
 			</tr>
 		</table>
 		<br />
@@ -75,14 +65,7 @@ about this encounter to SHD.</span><span style="font-weight: normal; font-size: 
 				<th colspan="1">Comments</th>
 			</tr>
 			<tr>
-				<td><p class="MsoNormal" style="margin-bottom: 0.0001pt;"><span style="font-size: 10pt; font-family: Arial, sans-serif;">This Test Case provides an example of an
-inpatient visit where syndromic surveillance data are sent to a public health
-agency in accordance with<span class="apple-converted-space">&nbsp;</span></span><span style="font-size:10.0pt;mso-bidi-font-size:11.0pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;"><a href="http://www.syndromic.org/storage/documents/meaningfuluse/ISDS_2012-MUse-Recommendations.pdf">guidelines recommended by the International Society for
-Disease Surveillance</a>. The dates and times in this test case illustrate the
-sequence of clinical and messaging events. Since the exact dates and times are
-not reproducible when modeling the test case with EHR technology, only date and
-time format will be validated within tester submitted test data. ICD-10
-diagnosis codes are acceptable with or without decimals.<o:p></o:p></span></p></td>
+				<td><p>This Test Case provides an example of an inpatient visit where syndromic surveillance data are sent to a public health agency in accordance with <a href="http://www.syndromic.org/storage/documents/meaningfuluse/ISDS_2012-MUse-Recommendations.pdf" target="_blank">guidelines recommended by the International Society for Disease Surveillance</a>. The dates and times in this test case illustrate the sequence of clinical and messaging events. Since the exact dates and times are not reproducible when modeling the test case with EHR technology, only date and time format will be validated within tester submitted test data. ICD-10 diagnosis codes are acceptable with or without decimals.</p></td>
 			</tr>
 		</table>
 		<br />
@@ -91,7 +74,7 @@ diagnosis codes are acceptable with or without decimals.<o:p></o:p></span></p></
 				<th colspan="1">PreCondition</th>
 			</tr>
 			<tr>
-				<td><p class="MsoNormal">A01-Admission message is sent before A03-Discharge message.<o:p></o:p></p></td>
+				<td><p>A01-Admission message is sent before A03-Discharge message.</p></td>
 			</tr>
 		</table>
 		<br />
@@ -100,7 +83,7 @@ diagnosis codes are acceptable with or without decimals.<o:p></o:p></span></p></
 				<th colspan="1">PostCondition</th>
 			</tr>
 			<tr>
-				<td>No PostCondition</td>
+				<td><p>No PostCondition</p></td>
 			</tr>
 		</table>
 		<br />
@@ -109,9 +92,7 @@ diagnosis codes are acceptable with or without decimals.<o:p></o:p></span></p></
 				<th colspan="1">Test Objectives</th>
 			</tr>
 			<tr>
-				<td><p class="MsoNormal">This test case examines a Health IT Module's ability to
-create ADT A04-Discharge message within PHIN Messaging Guide's conformance
-requirements.<o:p></o:p></p></td>
+				<td><p>This test case examines a Health IT Module's ability to create ADT A04-Discharge message within PHIN Messaging Guide's conformance requirements.</p></td>
 			</tr>
 		</table>
 		<br />
@@ -120,7 +101,7 @@ requirements.<o:p></o:p></p></td>
 				<th colspan="1">Evaluation Criteria</th>
 			</tr>
 			<tr>
-				<td>No evaluation criteria</td>
+				<td><p>No evaluation criteria</p></td>
 			</tr>
 		</table>
 		<br />
@@ -129,9 +110,7 @@ requirements.<o:p></o:p></p></td>
 				<th colspan="1">Notes to Testers</th>
 			</tr>
 			<tr>
-				<td><p class="MsoNormal">An ICD-10 CM code is used for coding the working diagnosis.
-The Tester may ignore errors generated by the Test Tool related to incorrect
-code when the ICD-10 code used in the message is determined to be a valid code.<o:p></o:p></p></td>
+				<td><p>An ICD-10 CM code is used for coding the working diagnosis. The Tester may ignore errors generated by the Test Tool related to incorrect code when the ICD-10 code used in the message is determined to be a valid code.</p></td>
 			</tr>
 		</table>
 	</fieldset>

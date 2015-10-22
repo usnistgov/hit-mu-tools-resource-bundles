@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<ConformanceContext UUID="23c403e4-d7ef-4828-823d-249cf01bc3ac">
+<ConformanceContext UUID="729568fa-e977-4790-9d4a-86e6267eccf5">
   <Constraints>
     <Group>
       <ByName Name="ADT_A04">
-        <Constraint ID="TCAMT_PID[1].8[1]_2" Target="4[1].8[1]">
-          <Reference GeneratedBy="TCAMT" ReferencePath="PID[1].8[1]" Source="Test Case" TestDataCategorization="Presence-Test Case Proper"/>
-          <Description>PID[1].8[1] SHALL be valued.</Description>
+        <Constraint ID="TCA-1-2" Target="4[1].8[1]">
+          <Reference GeneratedBy="Test Case Authoring &amp; Management Tool(TCAMT)" ReferencePath="PID[1].8[1]" Source="DataInstanceTestCase" TestDataCategorization="Presence-Test Case Proper"/>
+          <Description>Expected content is missing. The empty value at PID[1].8[1](Administrative Sex) is expected to be present.</Description>
           <Assertion>
             <Presence Path="4[1].8[1]"/>
           </Assertion>

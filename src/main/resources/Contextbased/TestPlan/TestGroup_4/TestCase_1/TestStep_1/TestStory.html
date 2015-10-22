@@ -3,11 +3,11 @@
 <head>
 <style xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:util="http://hl7.nist.gov/data-specs/util" type="text/css">
 					@media screen {
-					.testStory legend {text-align:center;font-size:110%; font-weight:bold;}					
+					.testStory legend {text-align:center;font-size:130%; font-weight:bold;}					
 					.testStory  {text-align:center;page-break-inside: avoid;}
                     .testStory maskByMediaType {display:table;}
-                    .testStory  table tbody tr th {font-size:100%;}
-                    .testStory  table tbody tr td {font-size:90%;}
+                    .testStory  table tbody tr th {font-size:120%;}
+                    .testStory  table tbody tr td {font-size:110%;}
                     .testStory  table tbody tr th {text-align:center;background:#436BEC}
 					.testStory  table { width:98%;border: 1px groove;table-layout: fixed; margin:0 auto;border-collapse: collapse;page-break-inside: avoid;}
                     .testStory  table  tr { border: 3px groove; }
@@ -16,11 +16,11 @@
                     .testStory  table tbody tr td {text-align:left}
                     }
                     @media print {
-					.testStory legend {text-align:center;font-size:110%; font-weight:bold;}					
+					.testStory legend {text-align:center;font-size:130%; font-weight:bold;}					
 					.testStory  {text-align:center;page-break-inside: avoid;}
                     .testStory maskByMediaType {display:table;}
-                    .testStory  table tbody tr th {font-size:100%;}
-                    .testStory  table tbody tr td {font-size:90%;}
+                    .testStory  table tbody tr th {font-size:120%;}
+                    .testStory  table tbody tr td {font-size:110%;}
                     .testStory  table tbody tr th {text-align:center;background:#436BEC}
 					.testStory  table { width:98%;border: 1px groove;table-layout: fixed; margin:0 auto;border-collapse: collapse;page-break-inside: avoid;}
                     .testStory  table  tr { border: 3px groove; }
@@ -53,10 +53,9 @@
 				<th colspan="1">Description</th>
 			</tr>
 			<tr>
-				<td><p>On August 17, 2015 at 7:00 AM, a 51-year old male arrives at Our Lady of Perpetual Misery Hospital for a pre-scheduled surgical removal of a coronary artery obstruction and insertion of stents. A clerical assistant registers the patient for admission. He records the patient’s name, date of birth, race, ethnicity, residence, and insurance information. At 7:30 AM the patient is escorted to a pre-operation room where a nurse captures the patient’s health history which includes chest pain, inputs the reason for visit as z95.5, and the patient and inputs multiple diagnoses for the patient (Primary I25.0, secondary I20.9, and tertiary R07.4). The patient is then prepared surgery, and at 8:30 AM the patient has the surgery. It occurs without incident, and the patient goes to post-operation recovery unit to wake from anesthesia, and receive a post-op examination. At 2:00 PM the patient, who is in good condition, is transported to a cardiac unit for overnight observation.</p>
+				<td><p>On August 17, 2015 at 7:00 AM, a 51-year old male arrives at Mountainview General Hospital for a pre-scheduled surgical removal of a coronary artery obstruction and insertion of stents. A clerical assistant registers the patient for admission. He records the patient's name, date of birth, race, ethnicity, residence, and insurance information. At 7:30 AM the patient is escorted to a pre-operation room where a nurse captures the patient's health history which includes chest pain, inputs the reason for visit as z95.5, and the patient and inputs multiple diagnoses for the patient (Primary I25.0, secondary I20.9, and tertiary R07.4). The patient is then prepared surgery, and at 8:30 AM the patient has the surgery. It occurs without incident, and the patient goes to post-operation recovery unit to wake from anesthesia, and receive a post-op examination. At 2:00 PM the patient, who is in good condition, is transported to a cardiac unit for overnight observation.</p>
 
-<p>Our Lady of Perpetual Healing Hospital reports inpatient syndromic surveillance data to the state health department (SHD) for all new patient admissions once per day. At 1:00 AM on August 18, 2015, the hospital's electronic health record module for syndromic surveillance data assembles and transmits an ADT 01 Admission message about this encounter to SHD.</p>
-</td>
+<p>Mountainview General Hospital reports inpatient syndromic surveillance data to the state health department (SHD) for all new patient admissions once per day. At 1:00 AM on August 18, 2015, the hospital's electronic health record module for syndromic surveillance data assembles and transmits an ADT 01 Admission message about this encounter to SHD.</p></td>
 			</tr>
 		</table>
 		<br />
@@ -65,7 +64,7 @@
 				<th colspan="1">Comments</th>
 			</tr>
 			<tr>
-				<td><p>This Test Case provides an example of an inpatient visit where syndromic surveillance data are sent to a public health agency in accordance with guidelines recommended by the International Society for Disease Surveillance. The dates and times in this test case illustrate the sequence of clinical and messaging events. Since the exact dates and times are not reproducible when modeling the test case with EHR technology, only date and time format will be validated within tester submitted test data. ICD-10 diagnosis codes are acceptable with or without decimals</p>
+				<td><p>This Test Case provides an example of an inpatient visit where syndromic surveillance data are sent to a public health agency in accordance with <a href="http://www.syndromic.org/storage/documents/meaningfuluse/ISDS_2012-MUse-Recommendations.pdf" target="_blank">guidelines recommended by the International Society for Disease Surveillance</a>. The dates and times in this test case illustrate the sequence of clinical and messaging events. Since the exact dates and times are not reproducible when modeling the test case with EHR technology, only date and time format will be validated within tester submitted test data. ICD-10 diagnosis codes are acceptable with or without decimals.</p>
 </td>
 			</tr>
 		</table>
@@ -75,7 +74,7 @@
 				<th colspan="1">PreCondition</th>
 			</tr>
 			<tr>
-				<td>No PreCondition</td>
+				<td><p>No PreCondition</p></td>
 			</tr>
 		</table>
 		<br />
@@ -84,7 +83,7 @@
 				<th colspan="1">PostCondition</th>
 			</tr>
 			<tr>
-				<td>No PostCondition</td>
+				<td><p>No PostCondition</p></td>
 			</tr>
 		</table>
 		<br />
@@ -93,7 +92,7 @@
 				<th colspan="1">Test Objectives</th>
 			</tr>
 			<tr>
-				<td><p>This test case examines a Health IT Module&#39;s ability to create ADT A01-Admission message within PHIN Syndromic Surveillance Messaging Guide&#39;s conformance requirements.</p>
+				<td><p>This test case examines a Health IT Module's ability to create ADT A01-Admission message within PHIN Syndromic Surveillance Messaging Guide's conformance requirements.</p>
 </td>
 			</tr>
 		</table>
@@ -113,10 +112,7 @@
 				<th colspan="1">Notes to Testers</th>
 			</tr>
 			<tr>
-				<td><div>
-<p>An ICD-10 CM code is used for coding the working diagnosis. The Tester may ignore errors generated by the Test Tool related to incorrect code when the ICD-10 code used in the message is determined to be a valid code.</p>
-</div>
-</td>
+				<td><p>An ICD-10 CM code is used for coding the working diagnosis. The Tester may ignore errors generated by the Test Tool related to incorrect code when the ICD-10 code used in the message is determined to be a valid code.</p></td>
 			</tr>
 		</table>
 	</fieldset>
