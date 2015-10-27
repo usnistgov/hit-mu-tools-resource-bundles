@@ -400,7 +400,7 @@
             <Field Name="Next of Kin Birth Place" Usage="O" Min="0" Max="1" Datatype="ST" MinLength="1" MaxLength="250" ItemNo="01905"/>
             <Field Name="VIP Indicator" Usage="O" Min="0" Max="1" Datatype="IS" MinLength="1" MaxLength="2" Binding="HL70099" BindingStrength="R" BindingLocation="1" ItemNo="00146"/>
         </Segment>
-        <Segment ID="PV1_A01_A04" Name="PV1" Description="Patient Visit">
+        <Segment ID="PV1_A01" Name="PV1" Description="Patient Visit">
             <Field Name="Set ID - PV1" Usage="R" Min="1" Max="1" Datatype="SI" MinLength="1" MaxLength="4" ItemNo="00131"/>
             <Field Name="Patient Class" Usage="R" Min="1" Max="1" Datatype="IS" MinLength="1" MaxLength="1" Binding="HL70004" BindingStrength="R" BindingLocation="1" ItemNo="00132"/>
             <Field Name="Assigned Patient Location" Usage="O" Min="0" Max="1" Datatype="PL" MinLength="1" MaxLength="1220" ItemNo="00133"/>
@@ -437,6 +437,60 @@
             <Field Name="Delete Account Indicator" Usage="X" Min="0" Max="1" Datatype="IS" MinLength="1" MaxLength="1" Binding="HL70111" BindingStrength="R" BindingLocation="1" ItemNo="00164"/>
             <Field Name="Delete Account Date" Usage="X" Min="0" Max="1" Datatype="DT" MinLength="1" MaxLength="8" ItemNo="00165"/>
             <Field Name="Discharge Disposition" Usage="X" Min="0" Max="0" Datatype="IS" MinLength="1" MaxLength="3" Binding="HL70112" BindingStrength="R" BindingLocation="1" ItemNo="00166"/>
+            <Field Name="Discharged to Location" Usage="X" Min="0" Max="1" Datatype="DLD" MinLength="1" MaxLength="47" Binding="HL70113" BindingStrength="R" BindingLocation="1" ItemNo="00167"/>
+            <Field Name="Diet Type" Usage="X" Min="0" Max="1" Datatype="CE" MinLength="1" MaxLength="478" Binding="HL70114" BindingStrength="R" BindingLocation="1" ItemNo="00168"/>
+            <Field Name="Servicing Facility" Usage="X" Min="0" Max="1" Datatype="IS" MinLength="1" MaxLength="2" Binding="HL70115" BindingStrength="R" BindingLocation="1" ItemNo="00169"/>
+            <Field Name="Bed Status" Usage="X" Min="0" Max="0" Datatype="IS" MinLength="1" MaxLength="1" Binding="HL70116" BindingStrength="R" BindingLocation="1" ItemNo="00170"/>
+            <Field Name="Account Status" Usage="X" Min="0" Max="1" Datatype="IS" MinLength="1" MaxLength="2" Binding="HL70117" BindingStrength="R" BindingLocation="1" ItemNo="00171"/>
+            <Field Name="Pending Location" Usage="X" Min="0" Max="1" Datatype="PL" MinLength="1" MaxLength="1220" ItemNo="00172"/>
+            <Field Name="Prior Temporary Location" Usage="X" Min="0" Max="1" Datatype="PL" MinLength="1" MaxLength="1220" ItemNo="00173"/>
+            <Field Name="Admit Date/Time" Usage="R" Min="1" Max="1" Datatype="TS" MinLength="1" MaxLength="26" ItemNo="00174"/>
+            <Field Name="Discharge Date/Time" Usage="X" Min="0" Max="0" Datatype="TS" MinLength="1" MaxLength="26" ItemNo="00175"/>
+            <Field Name="Current Patient Balance" Usage="X" Min="0" Max="1" Datatype="NM" MinLength="1" MaxLength="12" ItemNo="00176"/>
+            <Field Name="Total Charges" Usage="X" Min="0" Max="1" Datatype="NM" MinLength="1" MaxLength="12" ItemNo="00177"/>
+            <Field Name="Total Adjustments" Usage="X" Min="0" Max="1" Datatype="NM" MinLength="1" MaxLength="12" ItemNo="00178"/>
+            <Field Name="Total Payments" Usage="X" Min="0" Max="1" Datatype="NM" MinLength="1" MaxLength="12" ItemNo="00179"/>
+            <Field Name="Alternate Visit ID" Usage="X" Min="0" Max="1" Datatype="CX" MinLength="1" MaxLength="250" Binding="HL70203" BindingStrength="R" BindingLocation="1" ItemNo="00180"/>
+            <Field Name="Visit Indicator" Usage="X" Min="0" Max="1" Datatype="IS" MinLength="1" MaxLength="1" Binding="HL70326" BindingStrength="R" BindingLocation="1" ItemNo="01226"/>
+            <Field Name="Other Healthcare Provider" Usage="X" Min="0" Max="0" Datatype="XCN" MinLength="1" MaxLength="309" Binding="HL70010" BindingStrength="R" BindingLocation="1" ItemNo="01274"/>
+        </Segment>
+        <Segment ID="PV1_A04" Name="PV1" Description="Patient Visit">
+            <Field Name="Set ID - PV1" Usage="R" Min="1" Max="1" Datatype="SI" MinLength="1" MaxLength="4" ItemNo="00131"/>
+            <Field Name="Patient Class" Usage="R" Min="1" Max="1" Datatype="IS" MinLength="1" MaxLength="1" Binding="HL70004" BindingStrength="R" BindingLocation="1" ItemNo="00132"/>
+            <Field Name="Assigned Patient Location" Usage="O" Min="0" Max="1" Datatype="PL" MinLength="1" MaxLength="1220" ItemNo="00133"/>
+            <Field Name="Admission Type" Usage="O" Min="0" Max="1" Datatype="IS" MinLength="1" MaxLength="2" Binding="HL70007" BindingStrength="R" BindingLocation="1" ItemNo="00134"/>
+            <Field Name="Preadmit Number" Usage="X" Min="0" Max="1" Datatype="CX" MinLength="1" MaxLength="250" ItemNo="00135"/>
+            <Field Name="Prior Patient Location" Usage="O" Min="0" Max="1" Datatype="PL" MinLength="1" MaxLength="1220" ItemNo="00136"/>
+            <Field Name="Attending Doctor" Usage="O" Min="0" Max="*" Datatype="XCN" MinLength="1" MaxLength="309" Binding="HL70010" BindingStrength="R" BindingLocation="1" ItemNo="00137"/>
+            <Field Name="Referring Doctor" Usage="X" Min="0" Max="*" Datatype="XCN" MinLength="1" MaxLength="309" Binding="HL70010" BindingStrength="R" BindingLocation="1" ItemNo="00138"/>
+            <Field Name="Consulting Doctor" Usage="X" Min="0" Max="*" Datatype="XCN" MinLength="1" MaxLength="309" Binding="HL70010" BindingStrength="R" BindingLocation="1" ItemNo="00139"/>
+            <Field Name="Hospital Service" Usage="O" Min="0" Max="1" Datatype="IS" MinLength="1" MaxLength="3" Binding="HL70069" BindingStrength="R" BindingLocation="1" ItemNo="00140"/>
+            <Field Name="Temporary Location" Usage="X" Min="0" Max="1" Datatype="PL" MinLength="1" MaxLength="1220" ItemNo="00141"/>
+            <Field Name="Preadmit Test Indicator" Usage="X" Min="0" Max="1" Datatype="IS" MinLength="1" MaxLength="2" Binding="HL70087" BindingStrength="R" BindingLocation="1" ItemNo="00142"/>
+            <Field Name="Re-admission Indicator" Usage="X" Min="0" Max="1" Datatype="IS" MinLength="1" MaxLength="2" Binding="HL70092" BindingStrength="R" BindingLocation="1" ItemNo="00143"/>
+            <Field Name="Admit Source" Usage="O" Min="0" Max="1" Datatype="IS" MinLength="1" MaxLength="6" Binding="HL70023" BindingStrength="R" BindingLocation="1" ItemNo="00144"/>
+            <Field Name="Ambulatory Status" Usage="O" Min="0" Max="*" Datatype="IS" MinLength="1" MaxLength="2" Binding="HL70009" BindingStrength="R" BindingLocation="1" ItemNo="00145"/>
+            <Field Name="VIP Indicator" Usage="X" Min="0" Max="1" Datatype="IS" MinLength="1" MaxLength="2" Binding="HL70099" BindingStrength="R" BindingLocation="1" ItemNo="00146"/>
+            <Field Name="Admitting Doctor" Usage="X" Min="0" Max="*" Datatype="XCN" MinLength="1" MaxLength="309" Binding="HL70010" BindingStrength="R" BindingLocation="1" ItemNo="00147"/>
+            <Field Name="Patient Type" Usage="X" Min="0" Max="1" Datatype="IS" MinLength="1" MaxLength="2" Binding="HL70018" BindingStrength="R" BindingLocation="1" ItemNo="00148"/>
+            <Field Name="Visit Number" Usage="R" Min="1" Max="1" Datatype="CX" MinLength="1" MaxLength="478" ItemNo="00149"/>
+            <Field Name="Financial Class" Usage="X" Min="0" Max="*" Datatype="FC" MinLength="1" MaxLength="50" Binding="HL70064" BindingStrength="R" BindingLocation="1" ItemNo="00150"/>
+            <Field Name="Charge Price Indicator" Usage="X" Min="0" Max="1" Datatype="IS" MinLength="1" MaxLength="2" Binding="HL70032" BindingStrength="R" BindingLocation="1" ItemNo="00151"/>
+            <Field Name="Courtesy Code" Usage="X" Min="0" Max="1" Datatype="IS" MinLength="1" MaxLength="2" Binding="HL70045" BindingStrength="R" BindingLocation="1" ItemNo="00152"/>
+            <Field Name="Credit Rating" Usage="X" Min="0" Max="1" Datatype="IS" MinLength="1" MaxLength="2" Binding="HL70046" BindingStrength="R" BindingLocation="1" ItemNo="00153"/>
+            <Field Name="Contract Code" Usage="X" Min="0" Max="*" Datatype="IS" MinLength="1" MaxLength="2" Binding="HL70044" BindingStrength="R" BindingLocation="1" ItemNo="00154"/>
+            <Field Name="Contract Effective Date" Usage="X" Min="0" Max="*" Datatype="DT" MinLength="1" MaxLength="8" ItemNo="00155"/>
+            <Field Name="Contract Amount" Usage="X" Min="0" Max="*" Datatype="NM" MinLength="1" MaxLength="12" ItemNo="00156"/>
+            <Field Name="Contract Period" Usage="X" Min="0" Max="*" Datatype="NM" MinLength="1" MaxLength="3" ItemNo="00157"/>
+            <Field Name="Interest Code" Usage="X" Min="0" Max="1" Datatype="IS" MinLength="1" MaxLength="2" Binding="HL70073" BindingStrength="R" BindingLocation="1" ItemNo="00158"/>
+            <Field Name="Transfer to Bad Debt Code" Usage="X" Min="0" Max="1" Datatype="IS" MinLength="1" MaxLength="4" Binding="HL70110" BindingStrength="R" BindingLocation="1" ItemNo="00159"/>
+            <Field Name="Transfer to Bad Debt Date" Usage="X" Min="0" Max="1" Datatype="DT" MinLength="1" MaxLength="8" ItemNo="00160"/>
+            <Field Name="Bad Debt Agency Code" Usage="X" Min="0" Max="1" Datatype="IS" MinLength="1" MaxLength="10" Binding="HL70021" BindingStrength="R" BindingLocation="1" ItemNo="00161"/>
+            <Field Name="Bad Debt Transfer Amount" Usage="X" Min="0" Max="1" Datatype="NM" MinLength="1" MaxLength="12" ItemNo="00162"/>
+            <Field Name="Bad Debt Recovery Amount" Usage="X" Min="0" Max="1" Datatype="NM" MinLength="1" MaxLength="12" ItemNo="00163"/>
+            <Field Name="Delete Account Indicator" Usage="X" Min="0" Max="1" Datatype="IS" MinLength="1" MaxLength="1" Binding="HL70111" BindingStrength="R" BindingLocation="1" ItemNo="00164"/>
+            <Field Name="Delete Account Date" Usage="X" Min="0" Max="1" Datatype="DT" MinLength="1" MaxLength="8" ItemNo="00165"/>
+            <Field Name="Discharge Disposition" Usage="RE" Min="0" Max="1" Datatype="IS" MinLength="1" MaxLength="3" Binding="HL70112" BindingStrength="R" BindingLocation="1" ItemNo="00166"/>
             <Field Name="Discharged to Location" Usage="X" Min="0" Max="1" Datatype="DLD" MinLength="1" MaxLength="47" Binding="HL70113" BindingStrength="R" BindingLocation="1" ItemNo="00167"/>
             <Field Name="Diet Type" Usage="X" Min="0" Max="1" Datatype="CE" MinLength="1" MaxLength="478" Binding="HL70114" BindingStrength="R" BindingLocation="1" ItemNo="00168"/>
             <Field Name="Servicing Facility" Usage="X" Min="0" Max="1" Datatype="IS" MinLength="1" MaxLength="2" Binding="HL70115" BindingStrength="R" BindingLocation="1" ItemNo="00169"/>
