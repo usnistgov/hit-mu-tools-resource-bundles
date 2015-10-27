@@ -262,8 +262,8 @@
                 <Description>PV1-1 (Set ID) SHALL be valued with the constant value '1'.</Description>
                 <Assertion>
                     <AND>
-                        <Presence Path="1[1]"/>
-                        <PlainText Path="1[1]" Text="1" IgnoreCase="false"/>
+                        <Presence Path="1[1].1[1]"/>
+                        <PlainText Path="1[1].1[1]" Text="1" IgnoreCase="false"/>
                     </AND>
                 </Assertion>
                 </Constraint>
