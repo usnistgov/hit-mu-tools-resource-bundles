@@ -53,8 +53,8 @@
 "categorization" : "Value-Profile Fixed"},
 							{"location" : "MSH.21.3", "dataelement" : "Universal ID", "data" : "2.16.840.1.114222.4.10.3",
 "categorization" : "Value-Profile Fixed"},
-							{"location" : "MSH.21.4", "dataelement" : "Universal ID Type", "data" : "ISO
-", "categorization" : "Value-Profile Fixed"},		]
+							{"location" : "MSH.21.4", "dataelement" : "Universal ID Type", "data" : "ISO",
+"categorization" : "Value-Profile Fixed"},		]
 		{
 			"title":"EVN : Event Type",
 			"elements" : 
@@ -69,8 +69,8 @@
 "categorization" : ""},
 							{"location" : "EVN.7.2", "dataelement" : "Universal ID", "data" : "1231231234",
 "categorization" : ""},
-							{"location" : "EVN.7.3", "dataelement" : "Universal ID Type", "data" : "NPI
-", "categorization" : ""},		]
+							{"location" : "EVN.7.3", "dataelement" : "Universal ID Type", "data" : "NPI",
+"categorization" : ""},		]
 		{
 			"title":"PID : Patient Identification",
 			"elements" : 
@@ -83,12 +83,12 @@
 : "Indifferent"},
 							{"location" : "PID.3.4", "dataelement" : "Assigning Authority", "data" : "",
 "categorization" : ""},
-									{"location" : "PID.3.4.1", "dataelement" : "Namespace ID", "data" : "", "categorization"
-: ""},
-									{"location" : "PID.3.4.2", "dataelement" : "Universal ID", "data" : "", "categorization"
-: ""},
+									{"location" : "PID.3.4.1", "dataelement" : "Namespace ID", "data" : "BgCtyChldrnUrgntCar",
+"categorization" : ""},
+									{"location" : "PID.3.4.2", "dataelement" : "Universal ID", "data" : "1231231234",
+"categorization" : ""},
 									{"location" : "PID.3.4.3", "dataelement" : "Universal ID Type", "data" :
-"", "categorization" : ""},
+"NPI", "categorization" : ""},
 				{"location" : "PID.5[1]", "dataelement" : "Patient Name", "data" : "", "categorization"
 : ""},
 							{"location" : "PID.5[1].7", "dataelement" : "Name Type Code", "data" : "",
@@ -148,7 +148,7 @@ or Other Pacific Islander", "categorization" : ""},
 							{"location" : "PID.22.2", "dataelement" : "Text", "data" : "Not Hispanic or
 Latino", "categorization" : "Presence-Content Indifferent"},
 							{"location" : "PID.22.3", "dataelement" : "Name of Coding System", "data" :
-"CDCREC ", "categorization" : "Value-Profile Fixed"},
+"CDCREC", "categorization" : "Value-Profile Fixed"},
 							{"location" : "PID.22.6", "dataelement" : "Name of Alternate Coding System",
 "data" : "", "categorization" : ""},
 				{"location" : "PID.29", "dataelement" : "Patient Death Date and Time", "data"
@@ -171,15 +171,15 @@ Latino", "categorization" : "Presence-Content Indifferent"},
 "categorization" : ""},
 							{"location" : "PV1.19.4", "dataelement" : "Assigning Authority", "data" : "",
 "categorization" : ""},
-									{"location" : "PV1.19.4.1", "dataelement" : "Namespace ID", "data" : "",
+									{"location" : "PV1.19.4.1", "dataelement" : "Namespace ID", "data" : "BgCtyChldrnUrgntCar",
 "categorization" : ""},
-									{"location" : "PV1.19.4.2", "dataelement" : "Universal ID", "data" : "",
+									{"location" : "PV1.19.4.2", "dataelement" : "Universal ID", "data" : "1231231234",
 "categorization" : ""},
 									{"location" : "PV1.19.4.3", "dataelement" : "Universal ID Type", "data" :
-"", "categorization" : ""},
+"NPI", "categorization" : ""},
 				{"location" : "PV1.44", "dataelement" : "Admit Date/Time", "data" : "", "categorization"
 : ""},
-							{"location" : "PV1.44.1", "dataelement" : "Time", "data" : "201002200830 ",
+							{"location" : "PV1.44.1", "dataelement" : "Time", "data" : "201002200830",
 "categorization" : ""},		]
 		{
 			"title":"PV2 : Patient Visit - Additional Information",
@@ -189,8 +189,8 @@ Latino", "categorization" : "Presence-Content Indifferent"},
 : ""},
 							{"location" : "PV2.3.1", "dataelement" : "Identifier", "data" : "", "categorization"
 : ""},
-							{"location" : "PV2.3.2", "dataelement" : "Text", "data" : "Fever, cough ",
-"categorization" : ""},
+							{"location" : "PV2.3.2", "dataelement" : "Text", "data" : "Fever, cough", "categorization"
+: ""},
 							{"location" : "PV2.3.3", "dataelement" : "Name of Coding System", "data" :
 "", "categorization" : ""},
 							{"location" : "PV2.3.6", "dataelement" : "Name of Alternate Coding System",
@@ -223,7 +223,7 @@ Latino", "categorization" : "Presence-Content Indifferent"},
 							{"location" : "OBX.5.2", "dataelement" : "Text", "data" : "Urgent Care", "categorization"
 : ""},
 							{"location" : "OBX.5.3", "dataelement" : "Name of Coding System", "data" :
-"NUCC", "categorization" : ""},
+"HCPT", "categorization" : ""},
 							{"location" : "OBX.5.4", "dataelement" : "Alternate Identifier", "data" : "",
 "categorization" : ""},
 							{"location" : "OBX.5.5", "dataelement" : "Alternate Text", "data" : "", "categorization"
@@ -243,7 +243,7 @@ Latino", "categorization" : "Presence-Content Indifferent"},
 							{"location" : "OBX.6.6", "dataelement" : "Name of Alternate Coding System",
 "data" : "", "categorization" : ""},
 				{"location" : "OBX.11", "dataelement" : "Observation Result Status", "data" :
-"F ", "categorization" : "Value-Profile Fixed List"},		]
+"F", "categorization" : "Value-Profile Fixed List"},		]
 		{
 			"title":"OBX : Observation/Result",
 			"elements" : 
@@ -275,7 +275,7 @@ Latino", "categorization" : "Presence-Content Indifferent"},
 							{"location" : "OBX.6.6", "dataelement" : "Name of Alternate Coding System",
 "data" : "", "categorization" : ""},
 				{"location" : "OBX.11", "dataelement" : "Observation Result Status", "data" :
-"F ", "categorization" : ""},		]
+"F", "categorization" : ""},		]
 		{
 			"title":"OBX : Observation/Result",
 			"elements" : 
@@ -307,7 +307,7 @@ Latino", "categorization" : "Presence-Content Indifferent"},
 							{"location" : "OBX.6.6", "dataelement" : "Name of Alternate Coding System",
 "data" : "", "categorization" : ""},
 				{"location" : "OBX.11", "dataelement" : "Observation Result Status", "data" :
-"F ", "categorization" : ""},		]
+"F", "categorization" : ""},		]
 		{
 			"title":"OBX : Observation/Result",
 			"elements" : 
@@ -339,7 +339,7 @@ Latino", "categorization" : "Presence-Content Indifferent"},
 							{"location" : "OBX.6.6", "dataelement" : "Name of Alternate Coding System",
 "data" : "", "categorization" : ""},
 				{"location" : "OBX.11", "dataelement" : "Observation Result Status", "data" :
-"F ", "categorization" : ""},		]
+"F", "categorization" : ""},		]
 		{
 			"title":"OBX : Observation/Result",
 			"elements" : 
@@ -371,7 +371,7 @@ Latino", "categorization" : "Presence-Content Indifferent"},
 							{"location" : "OBX.6.6", "dataelement" : "Name of Alternate Coding System",
 "data" : "", "categorization" : ""},
 				{"location" : "OBX.11", "dataelement" : "Observation Result Status", "data" :
-"F ", "categorization" : ""},		]
+"F", "categorization" : ""},		]
 		{
 			"title":"OBX : Observation/Result",
 			"elements" : 
@@ -417,7 +417,7 @@ Latino", "categorization" : "Presence-Content Indifferent"},
 							{"location" : "OBX.6.6", "dataelement" : "Name of Alternate Coding System",
 "data" : "", "categorization" : ""},
 				{"location" : "OBX.11", "dataelement" : "Observation Result Status", "data" :
-"F ", "categorization" : ""},		]
+"F", "categorization" : ""},		]
 
 </accordion>		{
 			"title":"DG1 : Diagnosis",
@@ -433,7 +433,7 @@ Latino", "categorization" : "Presence-Content Indifferent"},
 respiratory manifestations", "categorization" : "Presence-Content Indifferent"},
 							{"location" : "DG1.3.3", "dataelement" : "Name of Coding System", "data" :
 "I9CDX", "categorization" : "Value-Profile Fixed List"},
-				{"location" : "DG1.6", "dataelement" : "Diagnosis Type", "data" : "W ", "categorization"
+				{"location" : "DG1.6", "dataelement" : "Diagnosis Type", "data" : "W", "categorization"
 : "Value-Profile Fixed List"},		]
 
 		}

@@ -170,7 +170,7 @@
             <Field Name="Alternate Character Set Handling Scheme" Usage="X" Min="0" Max="1" Datatype="ID" MinLength="1" MaxLength="20" Binding="HL70356" BindingStrength="R" BindingLocation="1" ItemNo="00020"/>
             <Field Name="Message Profile Identifier" Usage="R" Min="1" Max="1" Datatype="EI" MinLength="1" MaxLength="427" ItemNo="00021"/>
         </Segment>
-        <Segment Name="MSA" ID="MSA_LRI" Description="Acknowledgement">
+        <Segment Name="MSA" ID="MSA" Description="Acknowledgement">
         <Field Name="Acknowledgment Code" Usage="R" Min="1" Max="1" Datatype="ID" Binding="PHVS_AcknowledgementCode_HL7_2x" MaxLength="2" MinLength="2"/>
         <Field Name="Message Control ID" Usage="R" Min="1" Max="1" Datatype="ST" MaxLength="20" MinLength="1"/>
         <Field Name="Text Message" Usage="X" Min="0" Max="0" Datatype="ST" MaxLength="80" MinLength="1"/>
