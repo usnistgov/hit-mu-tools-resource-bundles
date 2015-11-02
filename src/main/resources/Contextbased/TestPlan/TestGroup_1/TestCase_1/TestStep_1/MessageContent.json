@@ -189,8 +189,8 @@ Latino", "categorization" : "Presence-Content Indifferent"},
 : ""},
 							{"location" : "PV2.3.1", "dataelement" : "Identifier", "data" : "", "categorization"
 : ""},
-							{"location" : "PV2.3.2", "dataelement" : "Text", "data" : "Fever, cough", "categorization"
-: ""},
+							{"location" : "PV2.3.2", "dataelement" : "Text", "data" : "Fever, cough, earache",
+"categorization" : ""},
 							{"location" : "PV2.3.3", "dataelement" : "Name of Coding System", "data" :
 "", "categorization" : ""},
 							{"location" : "PV2.3.6", "dataelement" : "Name of Alternate Coding System",
@@ -224,10 +224,6 @@ Latino", "categorization" : "Presence-Content Indifferent"},
 : ""},
 							{"location" : "OBX.5.3", "dataelement" : "Name of Coding System", "data" :
 "HCPT", "categorization" : ""},
-							{"location" : "OBX.5.4", "dataelement" : "Alternate Identifier", "data" : "",
-"categorization" : ""},
-							{"location" : "OBX.5.5", "dataelement" : "Alternate Text", "data" : "", "categorization"
-: ""},
 							{"location" : "OBX.5.6", "dataelement" : "Name of Alternate Coding System",
 "data" : "", "categorization" : ""},
 							{"location" : "OBX.5.9", "dataelement" : "Original Text", "data" : "", "categorization"
@@ -294,7 +290,7 @@ Latino", "categorization" : "Presence-Content Indifferent"},
 "LN", "categorization" : ""},
 							{"location" : "OBX.3.6", "dataelement" : "Name of Alternate Coding System",
 "data" : "", "categorization" : ""},
-				{"location" : "OBX.5", "dataelement" : "Observation Value", "data" : "Fever,cough",
+				{"location" : "OBX.5", "dataelement" : "Observation Value", "data" : "Fever,cough,earache",
 "categorization" : ""},
 				{"location" : "OBX.6", "dataelement" : "Units", "data" : "", "categorization"
 : ""},
@@ -398,10 +394,6 @@ Latino", "categorization" : "Presence-Content Indifferent"},
 : ""},
 							{"location" : "OBX.5.3", "dataelement" : "Name of Coding System", "data" :
 "SCT", "categorization" : ""},
-							{"location" : "OBX.5.4", "dataelement" : "Alternate Identifier", "data" : "",
-"categorization" : ""},
-							{"location" : "OBX.5.5", "dataelement" : "Alternate Text", "data" : "", "categorization"
-: ""},
 							{"location" : "OBX.5.6", "dataelement" : "Name of Alternate Coding System",
 "data" : "", "categorization" : ""},
 							{"location" : "OBX.5.9", "dataelement" : "Original Text", "data" : "", "categorization"
@@ -420,6 +412,9 @@ Latino", "categorization" : "Presence-Content Indifferent"},
 "F", "categorization" : ""},		]
 
 </accordion>		{
+			"title":"DG1[*]",
+
+<accordion>		{
 			"title":"DG1 : Diagnosis",
 			"elements" : 
 			[
@@ -435,7 +430,24 @@ respiratory manifestations", "categorization" : "Presence-Content Indifferent"},
 "I9CDX", "categorization" : "Value-Profile Fixed List"},
 				{"location" : "DG1.6", "dataelement" : "Diagnosis Type", "data" : "W", "categorization"
 : "Value-Profile Fixed List"},		]
+		{
+			"title":"DG1 : Diagnosis",
+			"elements" : 
+			[
+				{"location" : "DG1.1", "dataelement" : "Set ID - DG1", "data" : "1", "categorization"
+: ""},
+				{"location" : "DG1.3", "dataelement" : "Diagnosis Code - DG1", "data" : "", "categorization"
+: ""},
+							{"location" : "DG1.3.1", "dataelement" : "Identifier", "data" : "38053", "categorization"
+: ""},
+							{"location" : "DG1.3.2", "dataelement" : "Text", "data" : "Stenosis of external
+ear canal due to inflammation", "categorization" : ""},
+							{"location" : "DG1.3.3", "dataelement" : "Name of Coding System", "data" :
+"I9CDX", "categorization" : ""},
+				{"location" : "DG1.6", "dataelement" : "Diagnosis Type", "data" : "W", "categorization"
+: ""},		]
 
+</accordion>
 		}
 ]
 }

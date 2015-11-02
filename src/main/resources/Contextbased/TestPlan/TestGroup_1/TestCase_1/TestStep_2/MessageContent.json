@@ -195,13 +195,16 @@ Latino", "categorization" : ""},
 : ""},
 							{"location" : "PV2.3.1", "dataelement" : "Identifier", "data" : "", "categorization"
 : ""},
-							{"location" : "PV2.3.2", "dataelement" : "Text", "data" : "Fever, cough", "categorization"
-: ""},
+							{"location" : "PV2.3.2", "dataelement" : "Text", "data" : "Fever, cough, earache",
+"categorization" : ""},
 							{"location" : "PV2.3.3", "dataelement" : "Name of Coding System", "data" :
 "", "categorization" : ""},
 							{"location" : "PV2.3.6", "dataelement" : "Name of Alternate Coding System",
 "data" : "", "categorization" : ""},		]
 		{
+			"title":"DG1[*]",
+
+<accordion>		{
 			"title":"DG1 : Diagnosis",
 			"elements" : 
 			[
@@ -209,15 +212,32 @@ Latino", "categorization" : ""},
 : ""},
 				{"location" : "DG1.3", "dataelement" : "Diagnosis Code - DG1", "data" : "", "categorization"
 : ""},
-							{"location" : "DG1.3.1", "dataelement" : "Identifier", "data" : "4870", "categorization"
+							{"location" : "DG1.3.1", "dataelement" : "Identifier", "data" : "4871", "categorization"
 : ""},
-							{"location" : "DG1.3.2", "dataelement" : "Text", "data" : "Influenza with pneumonia",
-"categorization" : ""},
+							{"location" : "DG1.3.2", "dataelement" : "Text", "data" : "Influenza with other
+respiratory manifestations", "categorization" : ""},
 							{"location" : "DG1.3.3", "dataelement" : "Name of Coding System", "data" :
 "I9CDX", "categorization" : ""},
 				{"location" : "DG1.6", "dataelement" : "Diagnosis Type", "data" : "F", "categorization"
 : ""},		]
 		{
+			"title":"DG1 : Diagnosis",
+			"elements" : 
+			[
+				{"location" : "DG1.1", "dataelement" : "Set ID - DG1", "data" : "2", "categorization"
+: ""},
+				{"location" : "DG1.3", "dataelement" : "Diagnosis Code - DG1", "data" : "", "categorization"
+: ""},
+							{"location" : "DG1.3.1", "dataelement" : "Identifier", "data" : "38053", "categorization"
+: ""},
+							{"location" : "DG1.3.2", "dataelement" : "Text", "data" : "Stenosis of external
+ear canal due to inflammation", "categorization" : ""},
+							{"location" : "DG1.3.3", "dataelement" : "Name of Coding System", "data" :
+"I9CDX", "categorization" : ""},
+				{"location" : "DG1.6", "dataelement" : "Diagnosis Type", "data" : "F", "categorization"
+: ""},		]
+
+</accordion>		{
 			"title":"OBX[*]",
 
 <accordion>		{
@@ -314,7 +334,7 @@ Latino", "categorization" : ""},
 "data" : "", "categorization" : ""},
 				{"location" : "OBX.5", "dataelement" : "Observation Value", "data" : "", "categorization"
 : ""},
-							{"location" : "OBX.5.1", "dataelement" : "Identifier", "data" : "Fever,cough",
+							{"location" : "OBX.5.1", "dataelement" : "Identifier", "data" : "Fever,cough,earache",
 "categorization" : ""},
 							{"location" : "OBX.5.2", "dataelement" : "Text", "data" : "", "categorization"
 : ""},
