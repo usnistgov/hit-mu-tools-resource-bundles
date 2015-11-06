@@ -1357,7 +1357,7 @@
 			<Component Name="County/Parish Code" Usage="RE" Datatype="IS_SS" MinLength="1" MaxLength="20" Binding="PHVS_County_FIPS_6-4" BindingStrength="R"/>
 			<Component Name="Census Tract" Usage="O" Datatype="IS" MinLength="1" MaxLength="20"/>
 			<Component Name="Address Representation Code" Usage="O" Datatype="ID" MinLength="1" MaxLength="1"/>
-			<Component Name="Address Validity Range" Usage="X" Datatype="ST" MinLength="0" MaxLength="0"/>
+			<Component Name="Address Validity Range" Usage="X" Datatype="DR_DTM" MinLength="0" MaxLength="0"/>
 			<Component Name="Effective Date" Usage="O" Datatype="TS" MinLength="1" MaxLength="26"/>
 			<Component Name="Expiration Date" Usage="O" Datatype="TS" MinLength="1" MaxLength="26"/>
 		</Datatype>
@@ -1375,7 +1375,7 @@
 			<Component Name="County/Parish Code" Usage="RE" Datatype="IS_SS" MinLength="1" MaxLength="20"/>
 			<Component Name="Census Tract" Usage="X" Datatype="IS" MinLength="0" MaxLength="20"/>
 			<Component Name="Address Representation Code" Usage="X" Datatype="ID" MinLength="0" MaxLength="1"/>
-			<Component Name="Address Validity Range" Usage="X" Datatype="DR" MinLength="0" MaxLength="53"/>
+			<Component Name="Address Validity Range" Usage="X" Datatype="DR_DTM" MinLength="0" MaxLength="53"/>
 			<Component Name="Effective Date" Usage="X" Datatype="TS" MinLength="1" MaxLength="26"/>
 			<Component Name="Expiration Date" Usage="X" Datatype="TS" MinLength="1" MaxLength="26"/>
 		</Datatype>
@@ -1397,7 +1397,7 @@
 			<Component Name="Assigning Facility" Usage="O" Datatype="HD" MinLength="1" MaxLength="227"/>
 			<Component Name="Name Representation Code" Usage="O" Datatype="ID" MinLength="1" MaxLength="1" Binding="HL70465" BindingStrength="U" />
 			<Component Name="Name Context" Usage="O" Datatype="CE" MinLength="1" MaxLength="483" Binding="HL70448" BindingStrength="U" />
-			<Component Name="Name Validity Range" Usage="B" Datatype="DR" MinLength="1" MaxLength="53"/>
+			<Component Name="Name Validity Range" Usage="B" Datatype="DR_DTM" MinLength="1" MaxLength="53"/>
 			<Component Name="Name Assembly Order" Usage="O" Datatype="ID" MinLength="1" MaxLength="1" Binding="HL70444" BindingStrength="U" />
 			<Component Name="Effective Date" Usage="O" Datatype="TS" MinLength="1" MaxLength="26"/>
 			<Component Name="Expiration Date" Usage="O" Datatype="TS" MinLength="1" MaxLength="26"/>
@@ -1417,7 +1417,7 @@
 			<Component Name="Name Type Code" Usage="C" Datatype="ID_SS" MinLength="1" MaxLength="1" Binding="HL70200" BindingStrength="R"/>
 			<Component Name="Name Representation Code" Usage="X" Datatype="ID" MinLength="1" MaxLength="1" Binding="HL70465"/>
 			<Component Name="Name Context" Usage="X" Datatype="CE" MinLength="1" MaxLength="483" Binding="HL70448"/>
-			<Component Name="Name Validity Range" Usage="X" Datatype="DR" MinLength="1" MaxLength="53"/>
+			<Component Name="Name Validity Range" Usage="X" Datatype="DR_DTM" MinLength="1" MaxLength="53"/>
 			<Component Name="Name Assembly Order" Usage="X" Datatype="ID" MinLength="1" MaxLength="1" Binding="HL70444"/>
 			<Component Name="Effective Date" Usage="X" Datatype="TS" MinLength="1" MaxLength="26"/>
 			<Component Name="Expiration Date" Usage="X" Datatype="TS" MinLength="1" MaxLength="26"/>
@@ -1473,12 +1473,17 @@
 			<Component Name="Range End Date/Time" Usage="O" Datatype="TS" MinLength="1" MaxLength="26"/>
 		</Datatype>
 		<Datatype ID="DT" Name="DT" Description="Date"/>
+		<Datatype Description="Date/time" ID="DTM" Name="DTM"/>
 		<Datatype ID="DTN" Name="DTN" Description="Day Type and Number">
 			<Component Name="Day Type" Usage="R" Datatype="IS" MinLength="1" MaxLength="2" Binding="HL70149" BindingStrength="R"/>
 			<Component Name="Number of Days" Usage="R" Datatype="NM" MinLength="1" MaxLength="3"/>
 		</Datatype>
-		<!-- [Caroline] [TODO] -->
-		<Datatype ID="EI" Name="EI" Description="Entity Identifier"/>
+		<Datatype Description="Entity Identifier" ID="EI" Name="EI">
+			<Component Datatype="ST" MaxLength="199" MinLength="1" Name="Entity Identifier" Usage="O"/>
+			<Component Datatype="IS" MaxLength="20" MinLength="1" Name="Namespace ID" Binding="0363" Usage="O"/>
+			<Component Datatype="ST" MaxLength="199" MinLength="1" Name="Universal ID" Usage="C"/>
+			<Component Datatype="ID" MaxLength="6" MinLength="1" Name="Universal ID Type" Binding="0301" Usage="C"/>
+		</Datatype>
 		<Datatype ID="FC" Name="FC" Description="Financial Class">
 			<Component Name="Financial Class Code" Usage="R" Datatype="IS" MinLength="1" MaxLength="20" Binding="HL70064" BindingStrength="R"/>
 			<Component Name="Effective Date" Usage="O" Datatype="TS" MinLength="1" MaxLength="26"/>
@@ -1631,7 +1636,7 @@
 			<Component Name="Name Type Code" Usage="C" Datatype="ID" MinLength="1" MaxLength="1" Binding="HL70200" BindingStrength="R" />
 			<Component Name="Name Representation Code" Usage="X" Datatype="ID" MinLength="1" MaxLength="1" Binding="HL70465"/>
 			<Component Name="Name Context" Usage="X" Datatype="CE" MinLength="1" MaxLength="483" Binding="HL70448"/>
-			<Component Name="Name Validity Range" Usage="X" Datatype="DR" MinLength="1" MaxLength="53"/>
+			<Component Name="Name Validity Range" Usage="X" Datatype="DR_DTM" MinLength="1" MaxLength="53"/>
 			<Component Name="Name Assembly Order" Usage="X" Datatype="ID" MinLength="1" MaxLength="1" Binding="HL70444"/>
 			<Component Name="Effective Date" Usage="X" Datatype="TS" MinLength="1" MaxLength="26"/>
 			<Component Name="Expiration Date" Usage="X" Datatype="TS" MinLength="1" MaxLength="26"/>
@@ -1650,6 +1655,11 @@
 			<Component Name="Extension Prefix" Usage="O" Datatype="ST" MinLength="1" MaxLength="4"/>
 			<Component Name="Speed Dial Code" Usage="O" Datatype="ST" MinLength="1" MaxLength="6"/>
 			<Component Name="Unformatted Telephone number" Usage="C" Datatype="ST" MinLength="1" MaxLength="199"/>
+		</Datatype>
+		<!-- DR_DTM created to avoid issues when DR is used at a component level -->
+		<Datatype Description="Date/time Range" ID="DR_DTM" Name="DR">
+			<Component Datatype="DTM" MaxLength="26" MinLength="1" Name="Range Start Date/Time" Usage="O"/>
+			<Component Datatype="DTM" MaxLength="26" MinLength="1" Name="Range End Date/Time" Usage="O"/>
 		</Datatype>
 	</Datatypes>
 </ConformanceProfile>
