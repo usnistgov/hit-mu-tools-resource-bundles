@@ -1,47 +1,44 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>gov.nist.healthcare.mu.ss</groupId>
-  <artifactId>ss-r2-resource-bundle</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
-  <name>ss-r2-resource-bundle</name>
-  
-    <distributionManagement>
-    <repository>
-      <id>releases</id>
-      <url>http://vm-070.nist.gov:8081/nexus/content/repositories/releases</url>
-    </repository>
-    <snapshotRepository>
-      <id>snapshots</id>
-      <name>Internal Snapshots</name>
-      <url>http://vm-070.nist.gov:8081/nexus/content/repositories/snapshots</url>
-    </snapshotRepository>
-  </distributionManagement>	
-  
-  <dependencies>
-  
-  		<dependency>
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>gov.nist.healthcare.mu.ss</groupId>
+	<artifactId>ss-r2-resource-bundle</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>ss-r2-resource-bundle</name>
+
+	<distributionManagement>
+		<repository>
+			<id>releases</id>
+			<url>http://vm-070.nist.gov:8081/nexus/content/repositories/releases</url>
+		</repository>
+		<snapshotRepository>
+			<id>snapshots</id>
+			<name>Internal Snapshots</name>
+			<url>http://vm-070.nist.gov:8081/nexus/content/repositories/snapshots</url>
+		</snapshotRepository>
+	</distributionManagement>	
+
+	<dependencies>
+		<dependency>
 			<groupId>gov.nist.healthcare.mu</groupId>
 			<artifactId>resource-bundle-generator</artifactId>
 			<version>0.0.3-SNAPSHOT</version>
-			 <scope>test</scope>
-		<optional>true</optional>	
+			<scope>test</scope>
+			<optional>true</optional>	
 		</dependency>
-		
 		<dependency>
-		  <groupId>org.apache.commons</groupId>
-		  <artifactId>commons-lang3</artifactId>
-		  <version>3.4</version>	
-		  <scope>test</scope>
-		<optional>true</optional>	
-	  </dependency>
-	  		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+			<version>3.4</version>	
+			<scope>test</scope>
+			<optional>true</optional>	
+		</dependency>
+		<dependency>
 			<groupId>commons-io</groupId>
 			<artifactId>commons-io</artifactId>
 			<version>2.4</version>
-					  <scope>test</scope>
-		<optional>true</optional>	
+			<scope>test</scope>
+			<optional>true</optional>	
 		</dependency>
-		
 		<dependency>
 			<groupId>gov.nist</groupId>
 			<artifactId>hl7-v2-validation</artifactId>

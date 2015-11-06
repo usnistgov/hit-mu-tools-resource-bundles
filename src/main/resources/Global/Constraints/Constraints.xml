@@ -4,6 +4,7 @@
 		<Description>Conformance context for ADT_A01</Description>
 		<Authors>
 			<Author FirstName="Olivier" LastName="MARIE-ROSE"/>
+			<Author FirstName="Caroline" LastName="Rosin"/>
 		</Authors>
 	</MetaData>
 	<Predicates>
@@ -182,45 +183,45 @@
 		<Segment>
 			<ByName Name="MSH">
 				<!-- MSH-1 -->
-				<Constraint ID="SS-043">
+				<Constraint ID="SS-043" Target="1[1]">
 					<Description>MSH-1 (Field Separator) SHALL be literal '|' (ASCII 124).</Description>
 					<Assertion>
 						<PlainText Path="1[1]" Text="|" IgnoreCase="false"/>
 					</Assertion>
 				</Constraint>
 				<!-- MSH-2 -->
-				<Constraint ID="SS-044">
+				<Constraint ID="SS-044" Target="2[1]">
 					<Description>MSH-2 (Encoding Characters) SHALL be literal value '^~\&amp;' (ASCII 94, 126, 92, and 38 respectively).</Description>
 					<Assertion>
 						<PlainText Path="2[1]" Text="^~\&amp;" IgnoreCase="false"/>
 					</Assertion>
 				</Constraint>
 				<!-- MSH-7 -->
-				<Constraint ID="SS-013">
+				<Constraint ID="SS-013" Target="7[1].1[1]">
 					<Description>MSH-7 (Date/Time of Message) SHALL be expressed with a minimum precision of the nearest minute, and be represented in the following format: 'YYYYMMDDHHMM[SS[.S[S[S[S]]]]] [+/- ZZZZ]'</Description>
 					<Assertion>
 						<Format Path="7[1].1[1]" Regex="([0-9]{12}.*)"/>
 					</Assertion>
 				</Constraint>
 				<!-- MSH-11 -->
-				<Constraint ID="SS-015">
+				<Constraint ID="SS-015" Target="11[1].1[1]">
 					<Description>MSH-11 (Processing ID) SHALL have a value in the set of literal values: "P" for Production, "D" for Debug or "T" for Training.</Description>
 					<Assertion>
 						<StringList Path="11[1].1[1]" CSV="P,T,D"/>
 					</Assertion>
 				</Constraint>
 				<!-- MSH-12 -->
-				<Constraint ID="SS-016">
-					<Description>MSH-12 (Version ID) SHALL have a value ‘2.5.1’</Description>
+				<Constraint ID="SS-016" Target="12[1].1[1]">
+					<Description>MSH-12 (Version ID) SHALL have a value '2.5.1'</Description>
 					<Assertion>
 						<PlainText Path="12[1].1[1]" Text="2.5.1" IgnoreCase="false"/>
 					</Assertion>
 				</Constraint>
 			</ByName>
-			<ByID ID="MSH_SS_A01">
-				<!-- MSH-9 -->
-				<Constraint ID="SS-014">
-					<Description>MSH-9 (Message Type) SHALL be the literal value: ‘ADT^A01^ADT_A01’ for Admission Messages</Description>
+			<ByID ID="MSH_SS_A01_ACK"> 
+				<Constraint ID="SS-014" Target="9[1]">
+					<!-- MSH-9 -->
+					<Description>MSH-9 (Message Type) SHALL be the literal value: 'ADT^A01^ADT_A01' for Admission Messages</Description>
 					<Assertion>
 						<FORALL>
 							<!-- First check that all values are present because PlainText returns true when something is not present -->
@@ -234,11 +235,30 @@
 						</FORALL>
 					</Assertion>
 				</Constraint>
+				<!-- MSH-15 -->
+				<Constraint ID="SS-xxx" Target="9[1]">
+					<Description>MSH-15 (Accept Acknowledgment Type) SHALL be the literal value: 'AL'.</Description>
+					<Assertion>
+						<PlainText Path="15[1]" Text="AL" IgnoreCase="false"/>
+					</Assertion>
+				</Constraint>				
+				<!--MSH-21-->
+				<Constraint ID="SS-017" Target="21[1]">
+					<Description>PH_SS-Ack^SS Sender^2.16.840.1.114222.4.10.3^ISO</Description>
+					<Assertion>
+						<FORALL>
+							<PlainText Path="21[1].1[1]" Text="PH_SS-Ack" IgnoreCase="false"/>
+							<PlainText Path="21[1].2[1]" Text="SS Sender" IgnoreCase="false"/>
+							<PlainText Path="21[1].3[1]" Text="2.16.840.1.114222.4.10.3" IgnoreCase="false"/>
+							<PlainText Path="21[1].4[1]" Text="ISO" IgnoreCase="false"/>
+						</FORALL>
+					</Assertion>
+				</Constraint>			
 			</ByID>
-			<ByID ID="MSH_SS_A04">
+			<ByID ID="MSH_SS_A04_ACK">
 				<!-- MSH-9 -->
-				<Constraint ID="SS-004">
-					<Description>MSH-9 (Message Type) SHALL be the literal value: ‘ADT^A04^ADT_A01’ for Registration Messages</Description>
+				<Constraint ID="SS-004" Target="9[1]">
+					<Description>MSH-9 (Message Type) SHALL be the literal value: 'ADT^A04^ADT_A01' for Registration Messages</Description>
 					<Assertion>
 						<FORALL>
 							<!-- First check that all values are present because PlainText returns true when something is not present -->
@@ -252,11 +272,30 @@
 						</FORALL>
 					</Assertion>
 				</Constraint>
+				<!-- MSH-15 -->
+				<Constraint ID="SS-xxx" Target="9[1]">
+					<Description>MSH-15 (Accept Acknowledgment Type) SHALL be the literal value: 'AL'.</Description>
+					<Assertion>
+						<PlainText Path="15[1]" Text="AL" IgnoreCase="false"/>
+					</Assertion>
+				</Constraint>
+				<!--MSH-21-->
+				<Constraint ID="SS-017" Target="21[1]">
+					<Description>PH_SS-Ack^SS Sender^2.16.840.1.114222.4.10.3^ISO</Description>
+					<Assertion>
+						<FORALL>
+							<PlainText Path="21[1].1[1]" Text="PH_SS-Ack" IgnoreCase="false"/>
+							<PlainText Path="21[1].2[1]" Text="SS Sender" IgnoreCase="false"/>
+							<PlainText Path="21[1].3[1]" Text="2.16.840.1.114222.4.10.3" IgnoreCase="false"/>
+							<PlainText Path="21[1].4[1]" Text="ISO" IgnoreCase="false"/>
+						</FORALL>
+					</Assertion>
+				</Constraint>	
 			</ByID>
-			<ByID ID="MSH_SS_A08">
+			<ByID ID="MSH_SS_A08_ACK">
 				<!-- MSH-9 -->
-				<Constraint ID="SS-035">
-					<Description>MSH-9 (Message Type) SHALL be the literal value: ‘ADT^A08^ADT_A01’ for Registration Messages</Description>
+				<Constraint ID="SS-035" Target="9[1]">
+					<Description>MSH-9 (Message Type) SHALL be the literal value: 'ADT^A08^ADT_A01' for Registration Messages</Description>
 					<Assertion>
 						<FORALL>
 							<!-- First check that all values are present because PlainText returns true when something is not present -->
@@ -270,11 +309,30 @@
 						</FORALL>
 					</Assertion>
 				</Constraint>
+				<!-- MSH-15 -->
+				<Constraint ID="SS-xxx" Target="9[1]">
+					<Description>MSH-15 (Accept Acknowledgment Type) SHALL be the literal value: 'AL'.</Description>
+					<Assertion>
+						<PlainText Path="15[1]" Text="AL" IgnoreCase="false"/>
+					</Assertion>
+				</Constraint>
+				<!--MSH-21-->
+				<Constraint ID="SS-017" Target="21[1]">
+					<Description>PH_SS-Ack^SS Sender^2.16.840.1.114222.4.10.3^ISO</Description>
+					<Assertion>
+						<FORALL>
+							<PlainText Path="21[1].1[1]" Text="PH_SS-Ack" IgnoreCase="false"/>
+							<PlainText Path="21[1].2[1]" Text="SS Sender" IgnoreCase="false"/>
+							<PlainText Path="21[1].3[1]" Text="2.16.840.1.114222.4.10.3" IgnoreCase="false"/>
+							<PlainText Path="21[1].4[1]" Text="ISO" IgnoreCase="false"/>
+						</FORALL>
+					</Assertion>
+				</Constraint>	
 			</ByID>
-			<ByID ID="MSH_SS_A03">
+			<ByID ID="MSH_SS_A03_ACK">
 				<!-- MSH-9 -->
-				<Constraint ID="SS-038">
-					<Description>MSH-9 (Message Type) SHALL be the literal value: ‘ADT^A03^ADT_A03’ for Registration Messages</Description>
+				<Constraint ID="SS-038" Target="9[1]">
+					<Description>MSH-9 (Message Type) SHALL be the literal value: 'ADT^A03^ADT_A03' for Registration Messages</Description>
 					<Assertion>
 						<FORALL>
 							<!-- First check that all values are present because PlainText returns true when something is not present -->
@@ -288,10 +346,29 @@
 						</FORALL>
 					</Assertion>
 				</Constraint>
+				<!-- MSH-15 -->
+				<Constraint ID="SS-xxx" Target="9[1]">
+					<Description>MSH-15 (Accept Acknowledgment Type) SHALL be the literal value: 'AL'.</Description>
+					<Assertion>
+						<PlainText Path="15[1]" Text="AL" IgnoreCase="false"/>
+					</Assertion>
+				</Constraint>
+				<!--MSH-21-->
+				<Constraint ID="SS-017" Target="21[1]">
+					<Description>PH_SS-Ack^SS Sender^2.16.840.1.114222.4.10.3^ISO</Description>
+					<Assertion>
+						<FORALL>
+							<PlainText Path="21[1].1[1]" Text="PH_SS-Ack" IgnoreCase="false"/>
+							<PlainText Path="21[1].2[1]" Text="SS Sender" IgnoreCase="false"/>
+							<PlainText Path="21[1].3[1]" Text="2.16.840.1.114222.4.10.3" IgnoreCase="false"/>
+							<PlainText Path="21[1].4[1]" Text="ISO" IgnoreCase="false"/>
+						</FORALL>
+					</Assertion>
+				</Constraint>	
 			</ByID>
 			<ByID ID="EVN_SS">
 				<!-- EVN-2 -->
-				<Constraint ID="SS-018">
+				<Constraint ID="SS-018" Target="2[1].1[1]">
 					<Description>EVN-2 (Recorded Date/Time of Message) SHALL be expressed with a minimum precision of the nearest minute, and be represented in the following format: 'YYYYMMDDHHMM[SS[.S[S[S[S]]]]] [+/- ZZZZ]'</Description>
 					<Assertion>
 						<Format Path="2[1].1[1]" Regex="([0-9]{12}.*)"/>
@@ -300,14 +377,14 @@
 			</ByID>
 			<ByName Name="PID">
 				<!-- PID-1 -->
-				<Constraint ID="SS-019">
+				<Constraint ID="SS-019" Target="1[1]">
 					<Description>PID-1 (Set ID - PID) SHALL be valued with the constant value '1'.</Description>
 					<Assertion>
 						<PlainText Path="1[1]" Text="1" IgnoreCase="false"/>
 					</Assertion>
 				</Constraint>
 				<!-- PID-5 -->
-				<Constraint ID="SS-023">
+				<Constraint ID="SS-023" Target="5[1]">
 					<Description>PID-5 (Patient Name) SHALL be valued as |~^^^^^^S| or |~^^^^^^U|). </Description>
 					<Assertion>
 						<FORALL>
@@ -338,7 +415,7 @@
 					</Assertion>
 				</Constraint>
 				<!-- PID-29 -->
-				<Constraint ID="SS-036">
+				<Constraint ID="SS-036" Target="29[1].1[1]">
 					<Description>If valued, PID-29 (Patient Death and Time), SHALL be expressed with a minimum precision of the nearest minute and be represented in the following format:'YYYYMMDDHHMM[SS[.S[S[S[S]]]]][+/- ZZZZ]'</Description>
 					<Assertion>
 						<OR>
@@ -352,7 +429,7 @@
 			</ByName>
 			<ByName Name="PV1">
 				<!-- PV1-1 -->
-				<Constraint ID="SS-024">
+				<Constraint ID="SS-024" Target="1[1]">
 					<Description>PV1-1 (Set ID) SHALL be valued with the constant value '1'.</Description>
 					<Assertion>
 						<PlainText Path="1[1]" Text="1" IgnoreCase="false"/>
@@ -369,15 +446,15 @@
 					</Assertion>
 				</Constraint>-->
 				<!-- PV1-44 -->
-				<Constraint ID="SS-010">
+				<Constraint ID="SS-010" Target="44[1].1[1]">
 					<Description>PV1-44 (Admit Date/Time) SHALL be expressed with a minimum precision of the nearest minute and be represented in the following format: 'YYYYMMDDHHMM[SS[.S[S[S[S]]]]] [+/-ZZZZ]'</Description>
 					<Assertion>
 						<Format Path="44[1].1[1]" Regex="([0-9]{12}.*)"/>
 					</Assertion>
 				</Constraint>
 				<!-- PV1-45 -->
-				<Constraint ID="SS-045">
-					<Description>PV1-45 (Discharge Date/Time) SHALL be expressed with a minimum precision of the nearest minute and be represented in the following format: ‘YYYYMMDDHHMM[SS[.S[S[S[S]]]]] [+/-ZZZZ]’</Description>
+				<Constraint ID="SS-045" Target="45[1].1[1]">
+					<Description>PV1-45 (Discharge Date/Time) SHALL be expressed with a minimum precision of the nearest minute and be represented in the following format: 'YYYYMMDDHHMM[SS[.S[S[S[S]]]]] [+/-ZZZZ]'</Description>
 					<Assertion>
 						<OR>
 							<NOT>
@@ -390,14 +467,14 @@
 			</ByName>
 			<ByID ID="DG1_SS">
 				<!-- DG1-1 -->
-				<Constraint ID="SS-032">
-					<Description>DG1-1 (Set ID) for the first occurrence of a DG1 Segment SHALL have the Literal Value of ‘1’.  Each following occurrence SHALL be numbered consecutively</Description>
+				<Constraint ID="SS-032" Target="1[1]">
+					<Description>DG1-1 (Set ID) for the first occurrence of a DG1 Segment SHALL have the Literal Value of '1'.  Each following occurrence SHALL be numbered consecutively</Description>
 					<Assertion>
 						<SetID Path="1[1]"/>
 					</Assertion>
 				</Constraint>
 				<!-- DG1-6 -->
-				<Constraint ID="SS-040">
+				<Constraint ID="SS-040" Target="6[1]">
 					<Description>DG1-6 Diagnosis Type SHALL be either A (Admitting), F (Final) or W (Working).</Description>
 					<Assertion>
 						<StringList Path="6[1]" CSV="A,F,W"/>
@@ -406,14 +483,14 @@
 			</ByID>
 			<ByID ID="OBX_SS">
 				<!-- OBX-1 -->
-				<Constraint ID="SS-027">
+				<Constraint ID="SS-027" Target="1[1]">
 					<Description>OBX-1(SetID) for the first instance of an OBX Segment SHALL have the Literal Value of '1'. Each following occurrence SHALL be numbered consecutively.</Description>
 					<Assertion>
 						<SetID Path="1[1]"/>
 					</Assertion>
 				</Constraint>
 				<!-- OBX-6 -->
-				<Constraint ID="SS-029">
+				<Constraint ID="SS-029" Target="6[1].1[1]">
 					<Description>If OBX 3.1 (Observation Identifier) is valued with 21612-7 AGE-REPORTED (LOINC), then OBX-6.1 (Unit Identifier) SHALL be valued to a member of the set: PHVS_AgeUnit_SyndromicSurveillance</Description>
 					<Assertion>
 						<IMPLY>
@@ -425,7 +502,7 @@
 						</IMPLY>
 					</Assertion>
 				</Constraint>
-				<Constraint ID="SS-030">
+				<Constraint ID="SS-030" Target="6[1].1[1]">
 					<Description>If OBX 3.1 (Observation Identifier) is valued with 11289-6 BODY TEMPERATURE, INITIAL (LOINC), then OBX-6.1 (Unit Identifier) SHALL be valued to a member of the set: PHVS_TemperatureUnit_UCUM</Description>
 					<Assertion>
 						<IMPLY>
@@ -437,7 +514,7 @@
 						</IMPLY>
 					</Assertion>
 				</Constraint>
-				<Constraint ID="SS-031">
+				<Constraint ID="SS-031" Target="6[1].1[1]">
 					<Description>If OBX 3.1 (Observation Identifier) is valued with 59408-5 OXYGEN SATURATION IN ARTERIAL BLOOD BY PULSE OXIMETRY (LOINC),, then OBX-6.1 (Unit Identifier) SHALL be valued to a member of the set: PHVS_TemperatureUnit_UCUM.</Description>
 					<Assertion>
 						<IMPLY>
@@ -452,7 +529,7 @@
 			</ByID>
 			<ByID ID="PR1_SS">
 				<!-- PR1-1 -->
-				<Constraint ID="SS-034">
+				<Constraint ID="SS-034" Target="1[1]">
 					<Description>PR1-1(SetID) for the first instance of an PR1 Segment SHALL have the Literal Value of '1'. Each following occurrence SHALL be numbered consecutively.</Description>
 					<Assertion>
 						<SetID Path="1[1]"/>
@@ -461,7 +538,7 @@
 			</ByID>
 			<ByID ID="IN1_SS">
 				<!-- IN1-1 -->
-				<Constraint ID="SS-TBD">
+				<Constraint ID="SS-TBD" Target="1[1]">
 					<Description>IN1-1(SetID) for the first instance of an IN1 Segment SHALL have the Literal Value of '1'. Each following occurrence SHALL be numbered consecutively.</Description>
 					<Assertion>
 						<SetID Path="1[1]"/>
@@ -473,8 +550,8 @@
 			<!-- ADT_A01 -->
 			<ByID ID="0d741773-619a-4ec1-b6c2-2589faa75b92">
 				<!-- PID-30 -->
-				<Constraint ID="SS-037">
-					<Description>If PV1-36 (Discharge Disposition) is valued with any of the following: ‘20’, ‘40’, ‘41’, ‘42’ then PID-30 (Patient Death Indicator) SHALL be valued to the Literal Value ‘Y’. </Description>
+				<Constraint ID="SS-037" Target="4[1].30[1]">
+					<Description>If PV1-36 (Discharge Disposition) is valued with any of the following: '20', '40', '41', '42' then PID-30 (Patient Death Indicator) SHALL be valued to the Literal Value 'Y'. </Description>
 					<Assertion>
 						<IMPLY>
 							<AND>
@@ -489,8 +566,8 @@
 			<!-- ADT_A03 -->
 			<ByID ID="0d741773-619a-4ec1-b975-2589faa75b92">
 				<!-- PID-30 -->
-				<Constraint ID="SS-037">
-					<Description>If PV1-36 (Discharge Disposition) is valued with any of the following: ‘20’, ‘40’, ‘41’, ‘42’ then PID-30 (Patient Death Indicator) SHALL be valued to the Literal Value ‘Y’. </Description>
+				<Constraint ID="SS-037" Target="4[1].30[1]">
+					<Description>If PV1-36 (Discharge Disposition) is valued with any of the following: '20', '40', '41', '42' then PID-30 (Patient Death Indicator) SHALL be valued to the Literal Value 'Y'. </Description>
 					<Assertion>
 						<IMPLY>
 							<AND>
@@ -505,8 +582,8 @@
 			<!-- ADT_A04 -->
 			<ByID ID="0d741773-619a-4ec1-b6c2-2589faa75b93">
 				<!-- PID-30 -->
-				<Constraint ID="SS-037">
-					<Description>If PV1-36 (Discharge Disposition) is valued with any of the following: ‘20’, ‘40’, ‘41’, ‘42’ then PID-30 (Patient Death Indicator) SHALL be valued to the Literal Value ‘Y’. </Description>
+				<Constraint ID="SS-037" Target="4[1].30[1]">
+					<Description>If PV1-36 (Discharge Disposition) is valued with any of the following: '20', '40', '41', '42' then PID-30 (Patient Death Indicator) SHALL be valued to the Literal Value 'Y'. </Description>
 					<Assertion>
 						<IMPLY>
 							<AND>
@@ -521,8 +598,8 @@
 			<!-- ADT_A08 -->
 			<ByID ID="0d741773-619a-4ec1-b6c2-2589faa75b94">
 				<!-- PID-30 -->
-				<Constraint ID="SS-037">
-					<Description>If PV1-36 (Discharge Disposition) is valued with any of the following: ‘20’, ‘40’, ‘41’, ‘42’ then PID-30 (Patient Death Indicator) SHALL be valued to the Literal Value ‘Y’. </Description>
+				<Constraint ID="SS-037" Target="4[1].30[1]">
+					<Description>If PV1-36 (Discharge Disposition) is valued with any of the following: '20', '40', '41', '42' then PID-30 (Patient Death Indicator) SHALL be valued to the Literal Value 'Y'. </Description>
 					<Assertion>
 						<IMPLY>
 							<AND>

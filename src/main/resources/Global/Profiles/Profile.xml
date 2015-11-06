@@ -20,8 +20,9 @@
 			<Segment Ref="MSH_SS" Usage="R" Min="1" Max="1"/>
 			<Segment Ref="MSA_SS" Usage="O" Min="1" Max="1"/>
 		</Message>
+		<!-- PH_SS-Ack -->
 		<Message ID="0d741773-619a-4ec1-b6c2-2589faa75b92" Type="ADT" Event="A01" StructID="ADT_A01" Description="ADT message">
-			<Segment Ref="MSH_SS_A01" Usage="R" Min="1" Max="1"/>
+			<Segment Ref="MSH_SS_A01_ACK" Usage="R" Min="1" Max="1"/>
 			<Segment Ref="SFT_HL7" Usage="O" Min="0" Max="*"/>
 			<Segment Ref="EVN_SS" Usage="R" Min="1" Max="1"/>
 			<Segment Ref="PID_SS_A01" Usage="R" Min="1" Max="1"/>
@@ -53,7 +54,7 @@
 			<Segment Ref="PDA_HL7" Usage="O" Min="0" Max="1"/>
 		</Message>
 		<Message ID="52f1dab8-d538-4c7e-b71b-39619b94c3bf" Type="ADT" Event="A03" StructID="ADT_A03" Description="ADT message">
-			<Segment Ref="MSH_SS_A03" Usage="R" Min="1" Max="1"/>
+			<Segment Ref="MSH_SS_A03_ACK" Usage="R" Min="1" Max="1"/>
 			<Segment Ref="SFT_HL7" Usage="O" Min="0" Max="*"/>
 			<Segment Ref="EVN_SS" Usage="R" Min="1" Max="1"/>
 			<Segment Ref="PID_SS_A03_A04_A08" Usage="R" Min="1" Max="1"/>
@@ -83,7 +84,7 @@
 			<Segment Ref="PDA_HL7" Usage="O" Min="0" Max="1"/>
 		</Message>
 		<Message ID="0d741773-619a-4ec1-b6c2-2589faa75b93" Type="ADT" Event="A04" StructID="ADT_A04" Description="ADT message">
-			<Segment Ref="MSH_SS_A04" Usage="R" Min="1" Max="1"/>
+			<Segment Ref="MSH_SS_A04_ACK" Usage="R" Min="1" Max="1"/>
 			<Segment Ref="SFT_HL7" Usage="O" Min="0" Max="*"/>
 			<Segment Ref="EVN_SS" Usage="R" Min="1" Max="1"/>
 			<Segment Ref="PID_SS_A03_A04_A08" Usage="R" Min="1" Max="1"/>
@@ -115,7 +116,7 @@
 			<Segment Ref="PDA_HL7" Usage="O" Min="0" Max="1"/>
 		</Message>
 		<Message ID="0d741773-619a-4ec1-b6c2-2589faa75b94" Type="ADT" Event="A08" StructID="ADT_A08" Description="ADT message">
-			<Segment Ref="MSH_SS_A08" Usage="R" Min="1" Max="1"/>
+			<Segment Ref="MSH_SS_A08_ACK" Usage="R" Min="1" Max="1"/>
 			<Segment Ref="SFT_HL7" Usage="O" Min="0" Max="*"/>
 			<Segment Ref="EVN_SS" Usage="R" Min="1" Max="1"/>
 			<Segment Ref="PID_SS_A03_A04_A08" Usage="R" Min="1" Max="1"/>
@@ -146,7 +147,9 @@
 			<Segment Ref="UB2_HL7" Usage="O" Min="0" Max="1"/>
 			<Segment Ref="PDA_HL7" Usage="O" Min="0" Max="1"/>
 		</Message>
-	</Messages>
+		<!-- PH_SS-NoAck -->
+		<!-- [Caroline] [TODO] add PH_SS-NoAck profiles -->
+	</Messages> 
 	<Segments>
 		<!-- MSH EVN PID PV1 PV2 DG1 PR1 OBX IN1 MSA -->
 		<Segment ID="MSH_SS" Name="MSH" Description="Message Header">
@@ -164,17 +167,15 @@
 			<Field Name="Version ID" Usage="R" Min="1" Max="1" Datatype="VID_SS" MinLength="1" MaxLength="5" ItemNo="00012"/>
 			<Field Name="Sequence Number" Usage="X" Min="0" Max="1" Datatype="NM" MinLength="1" MaxLength="15" ItemNo="00013"/>
 			<Field Name="Continuation Pointer" Usage="X" Min="0" Max="1" Datatype="ST" MinLength="1" MaxLength="180" ItemNo="00014"/>
-			<!-- [Caroline] [IG] not sure what the usage is. Errata 2.2 sets it to C(R/X) but errata 4.2 sets it to another usage. What is right ? -->
-			<Field Name="Accept Acknowledgment Type" Usage="C" Min="0" Max="1" Datatype="ID_SS" MinLength="1" MaxLength="2" Binding="HL70155" BindingStrength="R" ItemNo="00015"/>
-			<!-- [Caroline] [IG] not sure what the usage is. Errata 2.3 sets it to C(R/X) but errata 4.3 sets it to another usage. What is right ? -->
-			<Field Name="Application Acknowledgment Type" Usage="C" Min="0" Max="1" Datatype="ID_SS" MinLength="1" MaxLength="2" Binding="HL70155" BindingStrength="R" ItemNo="00016"/>
+			<Field Name="Accept Acknowledgment Type" Usage="O" Min="0" Max="1" Datatype="ID_SS" MinLength="1" MaxLength="2" Binding="HL70155" BindingStrength="R" ItemNo="00015"/>
+			<Field Name="Application Acknowledgment Type" Usage="X" Min="0" Max="1" Datatype="ID_SS" MinLength="1" MaxLength="2" Binding="HL70155" BindingStrength="R" ItemNo="00016"/>
 			<Field Name="Country Code" Usage="X" Min="0" Max="1" Datatype="ID" MinLength="1" MaxLength="3" Binding="HL70399" ItemNo="00017"/>
 			<Field Name="Character Set" Usage="X" Min="0" Max="*" Datatype="ID" MinLength="1" MaxLength="16" Binding="HL70211" ItemNo="00018"/>
 			<Field Name="Principal Language Of Message" Usage="X" Min="0" Max="1" Datatype="CE" MinLength="1" MaxLength="478" ItemNo="00019"/>
 			<Field Name="Alternate Character Set Handling Scheme" Usage="X" Min="0" Max="1" Datatype="ID" MinLength="1" MaxLength="20" Binding="HL70356" ItemNo="00020"/>
 			<Field Name="Message Profile Identifier" Usage="R" Min="1" Max="1" Datatype="EI_SS" MinLength="1" MaxLength="427" ItemNo="00021"/>
 		</Segment>
-		<Segment ID="MSH_SS_A01" Name="MSH" Description="Message Header">
+		<Segment ID="MSH_SS_A01_ACK" Name="MSH" Description="Message Header">
 			<Field Name="Field Separator" Usage="R" Min="1" Max="1" Datatype="ST_SS" MinLength="1" MaxLength="1" ItemNo="00001"/>
 			<Field Name="Encoding Characters" Usage="R" Min="1" Max="1" Datatype="ST_SS" MinLength="1" MaxLength="4" ItemNo="00002"/>
 			<Field Name="Sending Application" Usage="O" Min="0" Max="1" Datatype="HD" MinLength="1" MaxLength="227" Binding="HL70361" BindingStrength="U" ItemNo="00003"/>
@@ -189,17 +190,15 @@
 			<Field Name="Version ID" Usage="R" Min="1" Max="1" Datatype="VID_SS" MinLength="1" MaxLength="5" ItemNo="00012"/>
 			<Field Name="Sequence Number" Usage="X" Min="0" Max="1" Datatype="NM" MinLength="1" MaxLength="15" ItemNo="00013"/>
 			<Field Name="Continuation Pointer" Usage="X" Min="0" Max="1" Datatype="ST" MinLength="1" MaxLength="180" ItemNo="00014"/>
-			<!-- [Caroline] [IG] not sure what the usage is. Errata 2.2 sets it to C(R/X) but errata 4.2 sets it to another usage. What is right ? -->
-			<Field Name="Accept Acknowledgment Type" Usage="C" Min="0" Max="1" Datatype="ID_SS" MinLength="1" MaxLength="2" Binding="HL70155" BindingStrength="R" ItemNo="00015"/>
-			<!-- [Caroline] [IG] not sure what the usage is. Errata 2.3 sets it to C(R/X) but errata 4.3 sets it to another usage. What is right ? -->
-			<Field Name="Application Acknowledgment Type" Usage="C" Min="0" Max="1" Datatype="ID_SS" MinLength="1" MaxLength="2" Binding="HL70155" BindingStrength="R" ItemNo="00016"/>
+			<Field Name="Accept Acknowledgment Type" Usage="R" Min="1" Max="1" Datatype="ID_SS" MinLength="1" MaxLength="2" Binding="HL70155" BindingStrength="R" ItemNo="00015"/>
+			<Field Name="Application Acknowledgment Type" Usage="RE" Min="0" Max="1" Datatype="ID_SS" MinLength="1" MaxLength="2" Binding="HL70155" BindingStrength="R" ItemNo="00016"/>
 			<Field Name="Country Code" Usage="X" Min="0" Max="1" Datatype="ID" MinLength="1" MaxLength="3" Binding="HL70399" BindingStrength="R" ItemNo="00017"/>
 			<Field Name="Character Set" Usage="X" Min="0" Max="*" Datatype="ID" MinLength="1" MaxLength="16" Binding="HL70211" BindingStrength="R" ItemNo="00018"/>
 			<Field Name="Principal Language Of Message" Usage="X" Min="0" Max="1" Datatype="CE" MinLength="1" MaxLength="478" ItemNo="00019"/>
 			<Field Name="Alternate Character Set Handling Scheme" Usage="X" Min="0" Max="1" Datatype="ID" MinLength="1" MaxLength="20" Binding="HL70356" BindingStrength="R" ItemNo="00020"/>
 			<Field Name="Message Profile Identifier" Usage="R" Min="1" Max="1" Datatype="EI_SS" MinLength="1" MaxLength="427" ItemNo="00021"/>
 		</Segment>
-		<Segment ID="MSH_SS_A03" Name="MSH" Description="Message Header">
+		<Segment ID="MSH_SS_A03_ACK" Name="MSH" Description="Message Header">
 			<Field Name="Field Separator" Usage="R" Min="1" Max="1" Datatype="ST_SS" MinLength="1" MaxLength="1" ItemNo="00001"/>
 			<Field Name="Encoding Characters" Usage="R" Min="1" Max="1" Datatype="ST_SS" MinLength="1" MaxLength="4" ItemNo="00002"/>
 			<Field Name="Sending Application" Usage="O" Min="0" Max="1" Datatype="HD" MinLength="1" MaxLength="227" Binding="HL70361" BindingStrength="U" ItemNo="00003"/>
@@ -214,17 +213,15 @@
 			<Field Name="Version ID" Usage="R" Min="1" Max="1" Datatype="VID_SS" MinLength="1" MaxLength="5" ItemNo="00012"/>
 			<Field Name="Sequence Number" Usage="X" Min="0" Max="1" Datatype="NM" MinLength="1" MaxLength="15" ItemNo="00013"/>
 			<Field Name="Continuation Pointer" Usage="X" Min="0" Max="1" Datatype="ST" MinLength="1" MaxLength="180" ItemNo="00014"/>
-			<!-- [Caroline] [IG] not sure what the usage is. Errata 2.2 sets it to C(R/X) but errata 4.2 sets it to another usage. What is right ? -->
-			<Field Name="Accept Acknowledgment Type" Usage="C" Min="0" Max="1" Datatype="ID_SS" MinLength="1" MaxLength="2" Binding="HL70155" BindingStrength="R" ItemNo="00015"/>
-			<!-- [Caroline] [IG] not sure what the usage is. Errata 2.3 sets it to C(R/X) but errata 4.3 sets it to another usage. What is right ? -->
-			<Field Name="Application Acknowledgment Type" Usage="C" Min="0" Max="1" Datatype="ID_SS" MinLength="1" MaxLength="2" Binding="HL70155" BindingStrength="R" ItemNo="00016"/>
+			<Field Name="Accept Acknowledgment Type" Usage="R" Min="1" Max="1" Datatype="ID_SS" MinLength="1" MaxLength="2" Binding="HL70155" BindingStrength="R" ItemNo="00015"/>
+			<Field Name="Application Acknowledgment Type" Usage="RE" Min="0" Max="1" Datatype="ID_SS" MinLength="1" MaxLength="2" Binding="HL70155" BindingStrength="R" ItemNo="00016"/>
 			<Field Name="Country Code" Usage="X" Min="0" Max="1" Datatype="ID" MinLength="1" MaxLength="3" Binding="HL70399" ItemNo="00017"/>
 			<Field Name="Character Set" Usage="X" Min="0" Max="*" Datatype="ID" MinLength="1" MaxLength="16" Binding="HL70211" ItemNo="00018"/>
 			<Field Name="Principal Language Of Message" Usage="X" Min="0" Max="1" Datatype="CE" MinLength="1" MaxLength="478" ItemNo="00019"/>
 			<Field Name="Alternate Character Set Handling Scheme" Usage="X" Min="0" Max="1" Datatype="ID" MinLength="1" MaxLength="20" Binding="HL70356" ItemNo="00020"/>
 			<Field Name="Message Profile Identifier" Usage="R" Min="1" Max="1" Datatype="EI_SS" MinLength="1" MaxLength="427" ItemNo="00021"/>
 		</Segment>
-		<Segment ID="MSH_SS_A04" Name="MSH" Description="Message Header">
+		<Segment ID="MSH_SS_A04_ACK" Name="MSH" Description="Message Header">
 			<Field Name="Field Separator" Usage="R" Min="1" Max="1" Datatype="ST_SS" MinLength="1" MaxLength="1" ItemNo="00001"/>
 			<Field Name="Encoding Characters" Usage="R" Min="1" Max="1" Datatype="ST_SS" MinLength="1" MaxLength="4" ItemNo="00002"/>
 			<Field Name="Sending Application" Usage="O" Min="0" Max="1" Datatype="HD" MinLength="1" MaxLength="227" Binding="HL70361" BindingStrength="U" ItemNo="00003"/>
@@ -239,17 +236,15 @@
 			<Field Name="Version ID" Usage="R" Min="1" Max="1" Datatype="VID_SS" MinLength="1" MaxLength="5" ItemNo="00012"/>
 			<Field Name="Sequence Number" Usage="X" Min="0" Max="1" Datatype="NM" MinLength="1" MaxLength="15" ItemNo="00013"/>
 			<Field Name="Continuation Pointer" Usage="X" Min="0" Max="1" Datatype="ST" MinLength="1" MaxLength="180" ItemNo="00014"/>
-			<!-- [Caroline] [IG] not sure what the usage is. Errata 2.2 sets it to C(R/X) but errata 4.2 sets it to another usage. What is right ? -->
-			<Field Name="Accept Acknowledgment Type" Usage="C" Min="0" Max="1" Datatype="ID_SS" MinLength="1" MaxLength="2" Binding="HL70155" BindingStrength="R" ItemNo="00015"/>
-			<!-- [Caroline] [IG] not sure what the usage is. Errata 2.3 sets it to C(R/X) but errata 4.3 sets it to another usage. What is right ? -->
-			<Field Name="Application Acknowledgment Type" Usage="C" Min="0" Max="1" Datatype="ID_SS" MinLength="1" MaxLength="2" Binding="HL70155" BindingStrength="R" ItemNo="00016"/>
+			<Field Name="Accept Acknowledgment Type" Usage="R" Min="1" Max="1" Datatype="ID_SS" MinLength="1" MaxLength="2" Binding="HL70155" BindingStrength="R" ItemNo="00015"/>
+			<Field Name="Application Acknowledgment Type" Usage="RE" Min="0" Max="1" Datatype="ID_SS" MinLength="1" MaxLength="2" Binding="HL70155" BindingStrength="R" ItemNo="00016"/>
 			<Field Name="Country Code" Usage="X" Min="0" Max="1" Datatype="ID" MinLength="1" MaxLength="3" Binding="HL70399" ItemNo="00017"/>
 			<Field Name="Character Set" Usage="X" Min="0" Max="*" Datatype="ID" MinLength="1" MaxLength="16" Binding="HL70211" ItemNo="00018"/>
 			<Field Name="Principal Language Of Message" Usage="X" Min="0" Max="1" Datatype="CE" MinLength="1" MaxLength="478" ItemNo="00019"/>
 			<Field Name="Alternate Character Set Handling Scheme" Usage="X" Min="0" Max="1" Datatype="ID" MinLength="1" MaxLength="20" Binding="HL70356" ItemNo="00020"/>
 			<Field Name="Message Profile Identifier" Usage="R" Min="1" Max="1" Datatype="EI_SS" MinLength="1" MaxLength="427" ItemNo="00021"/>
 		</Segment>
-		<Segment ID="MSH_SS_A08" Name="MSH" Description="Message Header">
+		<Segment ID="MSH_SS_A08_ACK" Name="MSH" Description="Message Header">
 			<Field Name="Field Separator" Usage="R" Min="1" Max="1" Datatype="ST_SS" MinLength="1" MaxLength="1" ItemNo="00001"/>
 			<Field Name="Encoding Characters" Usage="R" Min="1" Max="1" Datatype="ST_SS" MinLength="1" MaxLength="4" ItemNo="00002"/>
 			<Field Name="Sending Application" Usage="O" Min="0" Max="1" Datatype="HD" MinLength="1" MaxLength="227" Binding="HL70361" BindingStrength="U" ItemNo="00003"/>
@@ -264,10 +259,8 @@
 			<Field Name="Version ID" Usage="R" Min="1" Max="1" Datatype="VID_SS" MinLength="1" MaxLength="5" ItemNo="00012"/>
 			<Field Name="Sequence Number" Usage="X" Min="0" Max="1" Datatype="NM" MinLength="1" MaxLength="15" ItemNo="00013"/>
 			<Field Name="Continuation Pointer" Usage="X" Min="0" Max="1" Datatype="ST" MinLength="1" MaxLength="180" ItemNo="00014"/>
-			<!-- [Caroline] [IG] not sure what the usage is. Errata 2.2 sets it to C(R/X) but errata 4.2 sets it to another usage. What is right ? -->
-			<Field Name="Accept Acknowledgment Type" Usage="C" Min="0" Max="1" Datatype="ID_SS" MinLength="1" MaxLength="2" Binding="HL70155" BindingStrength="R" ItemNo="00015"/>
-			<!-- [Caroline] [IG] not sure what the usage is. Errata 2.3 sets it to C(R/X) but errata 4.3 sets it to another usage. What is right ? -->
-			<Field Name="Application Acknowledgment Type" Usage="C" Min="0" Max="1" Datatype="ID_SS" MinLength="1" MaxLength="2" Binding="HL70155" BindingStrength="R" ItemNo="00016"/>
+			<Field Name="Accept Acknowledgment Type" Usage="R" Min="1" Max="1" Datatype="ID_SS" MinLength="1" MaxLength="2" Binding="HL70155" BindingStrength="R" ItemNo="00015"/>
+			<Field Name="Application Acknowledgment Type" Usage="RE" Min="0" Max="1" Datatype="ID_SS" MinLength="1" MaxLength="2" Binding="HL70155" BindingStrength="R" ItemNo="00016"/>
 			<Field Name="Country Code" Usage="X" Min="0" Max="1" Datatype="ID" MinLength="1" MaxLength="3" Binding="HL70399" ItemNo="00017"/>
 			<Field Name="Character Set" Usage="X" Min="0" Max="*" Datatype="ID" MinLength="1" MaxLength="16" Binding="HL70211" ItemNo="00018"/>
 			<Field Name="Principal Language Of Message" Usage="X" Min="0" Max="1" Datatype="CE" MinLength="1" MaxLength="478" ItemNo="00019"/>
@@ -293,7 +286,7 @@
 			<Field Name="Date/Time of Birth" Usage="O" Min="0" Max="1" Datatype="TS" MinLength="1" MaxLength="26" ItemNo="00110"/>
 			<Field Name="Administrative Sex" Usage="RE" Min="0" Max="1" Datatype="IS_SS" MinLength="1" MaxLength="1" Binding="PHVS_Gender_SyndromicSurveillance" BindingStrength="R" ItemNo="00111"/>
 			<Field Name="Patient Alias" Usage="X" Min="0" Max="*" Datatype="XPN" MinLength="1" MaxLength="294" ItemNo="00112"/>
-			<Field Name="Race" Usage="RE" Min="0" Max="*" Datatype="CE_SS" MinLength="1" MaxLength="478" Binding="PHVS_RaceCategory_CDC" BindingStrength="R" BindingLocation="1" ItemNo="00113"/>
+ 			<Field Name="Race" Usage="RE" Min="0" Max="*" Datatype="CE_SS" MinLength="1" MaxLength="478" Binding="PHVS_RaceCategory_CDC" BindingStrength="R" BindingLocation="1" ItemNo="00113"/>
 			<Field Name="Patient Address" Usage="RE" Min="0" Max="1" Datatype="XAD_SS" MinLength="1" MaxLength="513" ItemNo="00114"/>
 			<Field Name="County Code" Usage="X" Min="0" Max="0" Datatype="IS" MinLength="1" MaxLength="4" Binding="HL70289" ItemNo="00115"/>
 			<Field Name="Phone Number - Home" Usage="X" Min="0" Max="*" Datatype="XTN" MinLength="1" MaxLength="250" ItemNo="00116"/>
