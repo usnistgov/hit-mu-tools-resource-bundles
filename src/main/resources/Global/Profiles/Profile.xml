@@ -929,7 +929,7 @@
 			</DynamicMapping>
 			<Field Name="Set ID - OBX" Usage="R" Min="1" Max="1" Datatype="SI_SS" MinLength="1" MaxLength="4" ItemNo="00569"/>
 			<Field Name="Value Type" Usage="R" Min="1" Max="1" Datatype="ID_SS" MinLength="1" MaxLength="3" Binding="PHVS_ValueType_SyndromicSurveillance" BindingStrength="R" ItemNo="00570"/>
-			<Field Name="Observation Identifier" Usage="R" Min="1" Max="1" Datatype="CE_SS" MinLength="1" MaxLength="478" Binding="PHVS_ObservationIdentifier_SyndromicSurveillance" BindingStrength="R" BindingLocation="1" ItemNo="00571"/>
+			<Field Name="Observation Identifier" Usage="R" Min="1" Max="1" Datatype="CE_SS" MinLength="1" MaxLength="478" Binding="PHVS_ObservationIdentifier_SyndromicSurveillance:PHVS_VitalSignResult_HITSP" BindingStrength="R" BindingLocation="1" ItemNo="00571"/>
 			<Field Name="Observation Sub-ID" Usage="O" Min="0" Max="1" Datatype="ST" MinLength="1" MaxLength="20" ItemNo="00572"/>
 			<Field Name="Observation Value" Usage="RE" Min="0" Max="*" Datatype="varies" MinLength="1" MaxLength="99999" ItemNo="00573"/>
 			<!-- [Caroline] [Binding] for that one the Binding should be specified as a constraint because it depends on the value of OBX-3 -->
