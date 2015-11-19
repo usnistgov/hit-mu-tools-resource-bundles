@@ -10,7 +10,9 @@ package gov.nist.healthcare.mu.ss.r2.test;
  */
 
 import gov.nist.healthcare.mu.bundle.documentation.model.json.JTestStep;
+import gov.nist.validation.report.Entry;
 import gov.nist.validation.report.Report;
+import gov.nist.validation.report.Trace;
 import hl7.v2.profile.Profile;
 import hl7.v2.profile.XMLDeserializer;
 import hl7.v2.validation.SyncHL7Validator;
@@ -24,6 +26,7 @@ import java.io.InputStream;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
+import java.util.Map;
 import java.util.logging.Logger;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.filefilter.IOFileFilter;
@@ -42,7 +45,7 @@ public class TestBundle {
     private static String testCaseDir = "./src/main/resources/Contextbased";
     private static String integrationProfile = "/Global/Profiles/Profile.xml";
     private static String conformanceContext = "/Global/Constraints/Constraints.xml";
-    private static String tableLibrary = "/Global/Tables/ValueSetLibrary_SS.xml";
+    private static String tableLibrary = "/Global/Tables/ValueSetLibrary_SS_CB.xml";
 
     @BeforeClass
     public static void setUp() {
@@ -90,7 +93,60 @@ public class TestBundle {
 
                     // report.toJson();
                     System.out.println(folderName);
-                    System.out.println(report.toText());
+                    // System.out.println(report.toText());
+
+                    Map<String, List<Entry>> entries = report.getEntries();
+                    for (String key : entries.keySet()) {
+                        List<Entry> entryList = entries.get(key);
+                        System.out.println(key);
+
+                        // error = "Error"
+                        // warning = "Warning"
+                        // alert = "Alert"
+                        // informational = "Informational"
+                        // affirmative = "Affirmative"
+
+                        boolean error = true;
+                        boolean warning = true;
+                        boolean alert = true;
+                        boolean informational = false;
+                        boolean affirmative = false;
+
+                        for (Entry entry : entryList) {
+                            String path = entry.getPath();
+                            String category = entry.getCategory();
+                            String classification = entry.getClassification();
+                            String description = entry.getDescription();
+                            List<Trace> stack = entry.getStackTrace();
+
+                            boolean print = false;
+                            if ("Error".equals(classification) && error) {
+                                print = true;
+                            } else if ("Warning".equals(classification)
+                                    && warning) {
+                                print = true;
+                            } else if ("Alert".equals(classification) && alert) {
+                                print = true;
+                            } else if ("Informational".equals(classification)
+                                    && informational) {
+                                print = true;
+                            } else if ("Affirmative".equals(classification)
+                                    && affirmative) {
+                                print = true;
+                            }
+
+                            if (print) {
+                                System.out.println(String.format(
+                                        "[%s] [%s] [%s] : %s", classification,
+                                        category, path, description));
+                                if ("Error".equals(classification)
+                                        && stack != null && stack.size() > 0) {
+                                    System.out.println(entry.getStackTrace());
+                                }
+                            }
+                        }
+                        System.out.println();
+                    }
                     // System.out.println(report.toJson());
                 }
             }
