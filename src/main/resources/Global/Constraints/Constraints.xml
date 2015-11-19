@@ -218,7 +218,7 @@
 					</Assertion>
 				</Constraint>
 			</ByName>
-			<ByID ID="MSH_SS_A01_ACK"> 
+			<ByID ID="MSH_SS_A01_ACK">
 				<Constraint ID="SS-014" Target="9[1]">
 					<!-- MSH-9 -->
 					<Description>MSH-9 (Message Type) SHALL be the literal value: 'ADT^A01^ADT_A01' for Admission Messages</Description>
@@ -241,7 +241,7 @@
 					<Assertion>
 						<PlainText Path="15[1]" Text="AL" IgnoreCase="false"/>
 					</Assertion>
-				</Constraint>				
+				</Constraint>
 				<!--MSH-21-->
 				<Constraint ID="SS-017-ack" Target="21[1]">
 					<Description>MSH.21 (Message Profile Identifier) SHALL contain the constant value: PH_SS-Ack^SS Sender^2.16.840.1.114222.4.10.3^ISO</Description>
@@ -253,9 +253,9 @@
 							<PlainText Path="21[1].4[1]" Text="ISO" IgnoreCase="false"/>
 						</FORALL>
 					</Assertion>
-				</Constraint>			
+				</Constraint>
 			</ByID>
-			<ByID ID="MSH_SS_A01_NOACK"> 
+			<ByID ID="MSH_SS_A01_NOACK">
 				<Constraint ID="SS-014" Target="9[1]">
 					<!-- MSH-9 -->
 					<Description>MSH-9 (Message Type) SHALL be the literal value: 'ADT^A01^ADT_A01' for Admission Messages</Description>
@@ -278,7 +278,7 @@
 					<Assertion>
 						<PlainText Path="15[1]" Text="NE" IgnoreCase="false"/>
 					</Assertion>
-				</Constraint>				
+				</Constraint>
 				<!--MSH-21-->
 				<Constraint ID="SS-017-no-ack" Target="21[1]">
 					<Description>MSH.21 (Message Profile Identifier) SHALL contain the constant value: PH_SS-NoAck^SS Sender^2.16.840.1.114222.4.10.3^ISO</Description>
@@ -290,7 +290,7 @@
 							<PlainText Path="21[1].4[1]" Text="ISO" IgnoreCase="false"/>
 						</FORALL>
 					</Assertion>
-				</Constraint>			
+				</Constraint>
 			</ByID>
 			<ByID ID="MSH_SS_A04_ACK">
 				<!-- MSH-9 -->
@@ -327,7 +327,7 @@
 							<PlainText Path="21[1].4[1]" Text="ISO" IgnoreCase="false"/>
 						</FORALL>
 					</Assertion>
-				</Constraint>	
+				</Constraint>
 			</ByID>
 			<ByID ID="MSH_SS_A04_NOACK">
 				<!-- MSH-9 -->
@@ -364,7 +364,7 @@
 							<PlainText Path="21[1].4[1]" Text="ISO" IgnoreCase="false"/>
 						</FORALL>
 					</Assertion>
-				</Constraint>	
+				</Constraint>
 			</ByID>
 			<ByID ID="MSH_SS_A08_ACK">
 				<!-- MSH-9 -->
@@ -401,7 +401,7 @@
 							<PlainText Path="21[1].4[1]" Text="ISO" IgnoreCase="false"/>
 						</FORALL>
 					</Assertion>
-				</Constraint>	
+				</Constraint>
 			</ByID>
 			<ByID ID="MSH_SS_A08_NOACK">
 				<!-- MSH-9 -->
@@ -438,7 +438,7 @@
 							<PlainText Path="21[1].4[1]" Text="ISO" IgnoreCase="false"/>
 						</FORALL>
 					</Assertion>
-				</Constraint>	
+				</Constraint>
 			</ByID>
 			<ByID ID="MSH_SS_A03_ACK">
 				<!-- MSH-9 -->
@@ -475,7 +475,7 @@
 							<PlainText Path="21[1].4[1]" Text="ISO" IgnoreCase="false"/>
 						</FORALL>
 					</Assertion>
-				</Constraint>	
+				</Constraint>
 			</ByID>
 			<ByID ID="MSH_SS_A03_NOACK">
 				<!-- MSH-9 -->
@@ -512,7 +512,7 @@
 							<PlainText Path="21[1].4[1]" Text="ISO" IgnoreCase="false"/>
 						</FORALL>
 					</Assertion>
-				</Constraint>	
+				</Constraint>
 			</ByID>
 			<ByID ID="EVN_SS">
 				<!-- EVN-2 -->
@@ -613,12 +613,28 @@
 					</Assertion>
 				</Constraint>
 			</ByName>
+			<ById ID="PV2_SS">
+				<!-- PV2-3 -->
+				<Constraint ID="SS-TDB" Target="3[1].3[1]">
+					<Description>PV2-3.3 SHALL be valued "I9CDX" or "I10" or "SCT".</Description>
+					<Assertion>
+						<StringList Path="3[1].3[1]" CSV="I9CDX,I10,SCT"/>
+					</Assertion>
+				</Constraint>
+			</ById>
 			<ByID ID="DG1_SS">
 				<!-- DG1-1 -->
 				<Constraint ID="SS-032" Target="1[1]">
 					<Description>DG1-1 (Set ID) for the first occurrence of a DG1 Segment SHALL have the Literal Value of '1'.  Each following occurrence SHALL be numbered consecutively</Description>
 					<Assertion>
 						<SetID Path="1[1]"/>
+					</Assertion>
+				</Constraint>
+				<!-- DG1-3 -->
+				<Constraint ID="SS-TDB" Target="3[1].3[1]">
+					<Description>DG1-3.3 SHALL be valued "I9CDX" or "I10" or "SCT".</Description>
+					<Assertion>
+						<StringList Path="3[1].3[1]" CSV="I9CDX,I10,SCT"/>
 					</Assertion>
 				</Constraint>
 				<!-- DG1-6 -->
@@ -671,6 +687,20 @@
 								<PlainText Path="3[1].1[1]" Text="59408-5" IgnoreCase="false"/>
 							</AND>
 							<ValueSet Path="6[1]" ValueSetID="PHVS_PulseOximetryUnit_UCUM" BindingStrength="R" BindingLocation="1"/>
+						</IMPLY>
+					</Assertion>
+				</Constraint>
+				<Constraint ID="SS-TBD" Target="3[1]">
+					<Description>If OBX 3.1 (Observation Identifier) is valued with 8661-1 CHIEF COMPLAINT–REPORTED (LOINC), then OBX-2 () SHALL be valued 'TX'.</Description>
+					<Assertion>
+						<IMPLY>
+							<FORALL>
+								<Presence Path="3[1].1[1]"/>
+								<PlainText Path="3[1].1[1]" Text="8661-1" IgnoreCase="false"/>
+								<Presence Path="3[1].3[1]"/>
+								<PlainText Path="3[1].3[1]" Text="LN" IgnoreCase="false"/>
+							</FORALL>
+							<PlainText Path="2[1]" Text="TX" IgnoreCase="false"/>
 						</IMPLY>
 					</Assertion>
 				</Constraint>
