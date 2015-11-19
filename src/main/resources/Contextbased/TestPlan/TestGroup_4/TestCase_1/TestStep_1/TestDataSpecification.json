@@ -1,5 +1,5 @@
 {
-"version" : "2.9.3",
+"version" : "2.9.6",
 "profile" : "ADT_A01",
 "tables":
 [
@@ -9,7 +9,7 @@
 			[
 				{"element" : "Name", "data" : "Unspecified"},
 				{"element" : "Sex", "data" : "Male"},
-				{"element" : "Race1", "data" : "White"},
+				{"element" : "Race", "data" : "White"},
 				{"element" : "Ethnic Group", "data" : "Hispanic or Latino"},
 				{"element" : "City", "data" : "Columbus"},
 				{"element" : "State", "data" : "Ohio"},
@@ -22,13 +22,12 @@
 			[
 				{"element" : "Admit or Encounter Reason", "data" : "Removal of coronary artery
 obstruction, and stent insertions"},
-				{"element" : "Admit Date and Time", "data" : "08/17/2015 2:00 PM"},
-				{"element" : "Patient Class", "data" : ""},
+				{"element" : "Admit Date and Time", "data" : "08/17/2015 7:00 AM"},
+				{"element" : "Patient Class", "data" : "Inpatient"},
 				{"element" : "Diagnosis Type", "data" : "Working"},
-				{"element" : "Diagnosis", "data" : "Atherosclerotic heart disease of native coronary
-artery without angina pectoris"},
+				{"element" : "Diagnosis", "data" : "Chronic ischemic heart disease, unspecified"},
 				{"element" : "Diagnosis", "data" : "Angina pectoris, unspecified"},
-				{"element" : "Diagnosis", "data" : "Chest Pain"},		]
+				{"element" : "Diagnosis", "data" : "Chest Pain, unspecified"},		]
 		{
 			"title":"Observations[*]",
 
@@ -52,12 +51,8 @@ changed with a corrected result."}
 			"title":"Observation Results Information",
 			"elements" : 
 			[
-				{"element" : "Observation  Identifier", "data" : "Facility / Visit Type"},
-				{"element" : "Observation  Value", "data" : "
-261QP2300X
-Primary Care
-HCPTNUCC
-"},
+				{"element" : "Observation  Identifier", "data" : "Patient Location/ Hospital Unit"},
+				{"element" : "Observation  Value", "data" : "Medical cardiac critical care unit"},
 				{"element" : "Units", "data" : ""},
 				{"element" : "Observation Results Status", "data" : "Final results; Can only be
 changed with a corrected result."}

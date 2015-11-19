@@ -1,5 +1,5 @@
 {
-"version" : "1.7",
+"version" : "1.8.2",
 "profile" : "MessageContent",
 "tables":
 [
@@ -13,9 +13,9 @@
 "categorization" : "Value-Profile Fixed"},
 				{"location" : "MSH.4", "dataelement" : "Sending Facility", "data" : "", "categorization"
 : ""},
-							{"location" : "MSH.4.1", "dataelement" : "Namespace ID", "data" : "BgCtyChldrnUrgntCar",
+							{"location" : "MSH.4.1", "dataelement" : "Namespace ID", "data" : "ChildHospBigCity",
 "categorization" : ""},
-							{"location" : "MSH.4.2", "dataelement" : "Universal ID", "data" : "1231231234",
+							{"location" : "MSH.4.2", "dataelement" : "Universal ID", "data" : "1331231234",
 "categorization" : ""},
 							{"location" : "MSH.4.3", "dataelement" : "Universal ID Type", "data" : "NPI",
 "categorization" : ""},
@@ -223,7 +223,11 @@ Latino", "categorization" : "Presence-Content Indifferent"},
 							{"location" : "OBX.5.2", "dataelement" : "Text", "data" : "Urgent Care", "categorization"
 : ""},
 							{"location" : "OBX.5.3", "dataelement" : "Name of Coding System", "data" :
-"HCPT", "categorization" : ""},
+"HCPTNUCC", "categorization" : ""},
+							{"location" : "OBX.5.4", "dataelement" : "Alternate Identifier", "data" : "",
+"categorization" : ""},
+							{"location" : "OBX.5.5", "dataelement" : "Alternate Text", "data" : "", "categorization"
+: ""},
 							{"location" : "OBX.5.6", "dataelement" : "Name of Alternate Coding System",
 "data" : "", "categorization" : ""},
 							{"location" : "OBX.5.9", "dataelement" : "Original Text", "data" : "", "categorization"
@@ -290,8 +294,8 @@ Latino", "categorization" : "Presence-Content Indifferent"},
 "LN", "categorization" : ""},
 							{"location" : "OBX.3.6", "dataelement" : "Name of Alternate Coding System",
 "data" : "", "categorization" : ""},
-				{"location" : "OBX.5", "dataelement" : "Observation Value", "data" : "Fever,cough,earache",
-"categorization" : ""},
+				{"location" : "OBX.5", "dataelement" : "Observation Value", "data" : "Patient&amp;apos;s
+mother states that patient has fever, cough, and earache", "categorization" : ""},
 				{"location" : "OBX.6", "dataelement" : "Units", "data" : "", "categorization"
 : ""},
 							{"location" : "OBX.6.1", "dataelement" : "Identifier", "data" : "", "categorization"
@@ -394,6 +398,10 @@ Latino", "categorization" : "Presence-Content Indifferent"},
 : ""},
 							{"location" : "OBX.5.3", "dataelement" : "Name of Coding System", "data" :
 "SCT", "categorization" : ""},
+							{"location" : "OBX.5.4", "dataelement" : "Alternate Identifier", "data" : "",
+"categorization" : ""},
+							{"location" : "OBX.5.5", "dataelement" : "Alternate Text", "data" : "", "categorization"
+: ""},
 							{"location" : "OBX.5.6", "dataelement" : "Name of Alternate Coding System",
 "data" : "", "categorization" : ""},
 							{"location" : "OBX.5.9", "dataelement" : "Original Text", "data" : "", "categorization"
@@ -434,7 +442,7 @@ respiratory manifestations", "categorization" : "Presence-Content Indifferent"},
 			"title":"DG1 : Diagnosis",
 			"elements" : 
 			[
-				{"location" : "DG1.1", "dataelement" : "Set ID - DG1", "data" : "1", "categorization"
+				{"location" : "DG1.1", "dataelement" : "Set ID - DG1", "data" : "2", "categorization"
 : ""},
 				{"location" : "DG1.3", "dataelement" : "Diagnosis Code - DG1", "data" : "", "categorization"
 : ""},

@@ -1,5 +1,5 @@
 {
-"version" : "1.7",
+"version" : "1.8.2",
 "profile" : "MessageContent",
 "tables":
 [
@@ -21,7 +21,7 @@
 "categorization" : ""},
 				{"location" : "MSH.7", "dataelement" : "Date/Time Of Message", "data" : "", "categorization"
 : ""},
-							{"location" : "MSH.7.1", "dataelement" : "Time", "data" : "201002010830", "categorization"
+							{"location" : "MSH.7.1", "dataelement" : "Time", "data" : "201508190100", "categorization"
 : "Presence-Content Indifferent"},
 				{"location" : "MSH.9", "dataelement" : "Message Type", "data" : "", "categorization"
 : ""},
@@ -83,12 +83,12 @@
 : ""},
 							{"location" : "PID.3.4", "dataelement" : "Assigning Authority", "data" : "",
 "categorization" : ""},
-									{"location" : "PID.3.4.1", "dataelement" : "Namespace ID", "data" : "", "categorization"
-: ""},
-									{"location" : "PID.3.4.2", "dataelement" : "Universal ID", "data" : "", "categorization"
-: ""},
+									{"location" : "PID.3.4.1", "dataelement" : "Namespace ID", "data" : "MountainviewGeneral",
+"categorization" : ""},
+									{"location" : "PID.3.4.2", "dataelement" : "Universal ID", "data" : "1231231236",
+"categorization" : ""},
 									{"location" : "PID.3.4.3", "dataelement" : "Universal ID Type", "data" :
-"", "categorization" : ""},
+"NPI", "categorization" : ""},
 				{"location" : "PID.5[1]", "dataelement" : "Patient Name", "data" : "", "categorization"
 : ""},
 							{"location" : "PID.5[1].7", "dataelement" : "Name Type Code", "data" : "",
@@ -143,7 +143,7 @@
 			[
 				{"location" : "PV1.1", "dataelement" : "Set ID - PV1", "data" : "1", "categorization"
 : ""},
-				{"location" : "PV1.2", "dataelement" : "Patient Class", "data" : "", "categorization"
+				{"location" : "PV1.2", "dataelement" : "Patient Class", "data" : "I", "categorization"
 : ""},
 				{"location" : "PV1.19", "dataelement" : "Visit Number", "data" : "", "categorization"
 : ""},
@@ -151,22 +151,22 @@
 "categorization" : ""},
 							{"location" : "PV1.19.4", "dataelement" : "Assigning Authority", "data" : "",
 "categorization" : ""},
-									{"location" : "PV1.19.4.1", "dataelement" : "Namespace ID", "data" : "",
+									{"location" : "PV1.19.4.1", "dataelement" : "Namespace ID", "data" : "MountainviewGeneral",
 "categorization" : ""},
-									{"location" : "PV1.19.4.2", "dataelement" : "Universal ID", "data" : "",
+									{"location" : "PV1.19.4.2", "dataelement" : "Universal ID", "data" : "1231231236",
 "categorization" : ""},
 									{"location" : "PV1.19.4.3", "dataelement" : "Universal ID Type", "data" :
-"", "categorization" : ""},
+"NPI", "categorization" : ""},
 				{"location" : "PV1.36", "dataelement" : "Discharge Disposition", "data" : "01",
 "categorization" : ""},
 				{"location" : "PV1.44", "dataelement" : "Admit Date/Time", "data" : "", "categorization"
 : ""},
-							{"location" : "PV1.44.1", "dataelement" : "Time", "data" : "201508181200",
+							{"location" : "PV1.44.1", "dataelement" : "Time", "data" : "201508170700",
 "categorization" : ""},
 				{"location" : "PV1.45", "dataelement" : "Discharge Date/Time", "data" : "", "categorization"
 : ""},
-							{"location" : "PV1.45.1", "dataelement" : "Time", "data" : "", "categorization"
-: ""},		]
+							{"location" : "PV1.45.1", "dataelement" : "Time", "data" : "201508181200",
+"categorization" : ""},		]
 		{
 			"title":"PV2 : Patient Visit - Additional Information",
 			"elements" : 
@@ -210,8 +210,8 @@ artery obstruction, and stent insertions", "categorization" : ""},
 : ""},
 							{"location" : "DG1.3.1", "dataelement" : "Identifier", "data" : "I499", "categorization"
 : ""},
-							{"location" : "DG1.3.2", "dataelement" : "Text", "data" : "Arrhythmia", "categorization"
-: ""},
+							{"location" : "DG1.3.2", "dataelement" : "Text", "data" : "Cardiac arrhythmia,
+unspecified", "categorization" : ""},
 							{"location" : "DG1.3.3", "dataelement" : "Name of Coding System", "data" :
 "I10", "categorization" : ""},
 				{"location" : "DG1.6", "dataelement" : "Diagnosis Type", "data" : "F", "categorization"
@@ -268,22 +268,22 @@ IDENTIFIER", "categorization" : ""},
 : ""},
 				{"location" : "OBX.3", "dataelement" : "Observation Identifier", "data" : "",
 "categorization" : ""},
-							{"location" : "OBX.3.1", "dataelement" : "Identifier", "data" : "SS003", "categorization"
-: ""},
-							{"location" : "OBX.3.2", "dataelement" : "Text", "data" : "FACILITY/VISIT TYPE",
+							{"location" : "OBX.3.1", "dataelement" : "Identifier", "data" : "56816-2",
+"categorization" : ""},
+							{"location" : "OBX.3.2", "dataelement" : "Text", "data" : "PATIENT LOCATION",
 "categorization" : ""},
 							{"location" : "OBX.3.3", "dataelement" : "Name of Coding System", "data" :
-"PHINQUESTION", "categorization" : ""},
+"LN", "categorization" : ""},
 							{"location" : "OBX.3.6", "dataelement" : "Name of Alternate Coding System",
 "data" : "", "categorization" : ""},
 				{"location" : "OBX.5", "dataelement" : "Observation Value", "data" : "", "categorization"
 : ""},
-							{"location" : "OBX.5.1", "dataelement" : "Identifier", "data" : "261QP2300X",
-"categorization" : ""},
-							{"location" : "OBX.5.2", "dataelement" : "Text", "data" : "Primary Care", "categorization"
+							{"location" : "OBX.5.1", "dataelement" : "Identifier", "data" : "1028-0", "categorization"
 : ""},
+							{"location" : "OBX.5.2", "dataelement" : "Text", "data" : "Medical cardiac
+critical care unit", "categorization" : ""},
 							{"location" : "OBX.5.3", "dataelement" : "Name of Coding System", "data" :
-"HCPTNUCC", "categorization" : ""},
+"HSLOC", "categorization" : ""},
 							{"location" : "OBX.5.6", "dataelement" : "Name of Alternate Coding System",
 "data" : "", "categorization" : ""},
 							{"location" : "OBX.5.9", "dataelement" : "Original Text", "data" : "", "categorization"

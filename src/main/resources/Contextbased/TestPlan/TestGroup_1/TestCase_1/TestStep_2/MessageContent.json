@@ -1,5 +1,5 @@
 {
-"version" : "1.7",
+"version" : "1.8.2",
 "profile" : "MessageContent",
 "tables":
 [
@@ -13,9 +13,9 @@
 "categorization" : "Value-Profile Fixed"},
 				{"location" : "MSH.4", "dataelement" : "Sending Facility", "data" : "", "categorization"
 : ""},
-							{"location" : "MSH.4.1", "dataelement" : "Namespace ID", "data" : "BgCtyChldrnUrgntCar",
+							{"location" : "MSH.4.1", "dataelement" : "Namespace ID", "data" : "ChildHospBigCity",
 "categorization" : ""},
-							{"location" : "MSH.4.2", "dataelement" : "Universal ID", "data" : "1231231234",
+							{"location" : "MSH.4.2", "dataelement" : "Universal ID", "data" : "1331231234",
 "categorization" : ""},
 							{"location" : "MSH.4.3", "dataelement" : "Universal ID Type", "data" : "NPI",
 "categorization" : ""},
@@ -83,12 +83,12 @@
 : ""},
 							{"location" : "PID.3.4", "dataelement" : "Assigning Authority", "data" : "",
 "categorization" : ""},
-									{"location" : "PID.3.4.1", "dataelement" : "Namespace ID", "data" : "", "categorization"
-: ""},
-									{"location" : "PID.3.4.2", "dataelement" : "Universal ID", "data" : "", "categorization"
-: ""},
+									{"location" : "PID.3.4.1", "dataelement" : "Namespace ID", "data" : "BgCtyChldrnUrgntCar",
+"categorization" : ""},
+									{"location" : "PID.3.4.2", "dataelement" : "Universal ID", "data" : "1231231234",
+"categorization" : ""},
 									{"location" : "PID.3.4.3", "dataelement" : "Universal ID Type", "data" :
-"", "categorization" : ""},
+"NPI", "categorization" : ""},
 				{"location" : "PID.5[1]", "dataelement" : "Patient Name", "data" : "", "categorization"
 : ""},
 							{"location" : "PID.5[1].7", "dataelement" : "Name Type Code", "data" : "",
@@ -171,12 +171,12 @@ Latino", "categorization" : ""},
 "categorization" : ""},
 							{"location" : "PV1.19.4", "dataelement" : "Assigning Authority", "data" : "",
 "categorization" : ""},
-									{"location" : "PV1.19.4.1", "dataelement" : "Namespace ID", "data" : "",
+									{"location" : "PV1.19.4.1", "dataelement" : "Namespace ID", "data" : "BgCtyChldrnUrgntCar",
 "categorization" : ""},
-									{"location" : "PV1.19.4.2", "dataelement" : "Universal ID", "data" : "",
+									{"location" : "PV1.19.4.2", "dataelement" : "Universal ID", "data" : "1231231234",
 "categorization" : ""},
 									{"location" : "PV1.19.4.3", "dataelement" : "Universal ID Type", "data" :
-"", "categorization" : ""},
+"NPI", "categorization" : ""},
 				{"location" : "PV1.36", "dataelement" : "Discharge Disposition", "data" : "01",
 "categorization" : ""},
 				{"location" : "PV1.44", "dataelement" : "Admit Date/Time", "data" : "", "categorization"
@@ -265,7 +265,11 @@ ear canal due to inflammation", "categorization" : ""},
 							{"location" : "OBX.5.2", "dataelement" : "Text", "data" : "Urgent Care", "categorization"
 : ""},
 							{"location" : "OBX.5.3", "dataelement" : "Name of Coding System", "data" :
-"NUCC", "categorization" : ""},
+"HCPTNUCC", "categorization" : ""},
+							{"location" : "OBX.5.4", "dataelement" : "Alternate Identifier", "data" : "",
+"categorization" : ""},
+							{"location" : "OBX.5.5", "dataelement" : "Alternate Text", "data" : "", "categorization"
+: ""},
 							{"location" : "OBX.5.6", "dataelement" : "Name of Alternate Coding System",
 "data" : "", "categorization" : ""},
 							{"location" : "OBX.5.9", "dataelement" : "Original Text", "data" : "", "categorization"
@@ -320,7 +324,7 @@ ear canal due to inflammation", "categorization" : ""},
 			[
 				{"location" : "OBX.1", "dataelement" : "Set ID - OBX", "data" : "3", "categorization"
 : ""},
-				{"location" : "OBX.2", "dataelement" : "Value Type", "data" : "CWE", "categorization"
+				{"location" : "OBX.2", "dataelement" : "Value Type", "data" : "TX", "categorization"
 : ""},
 				{"location" : "OBX.3", "dataelement" : "Observation Identifier", "data" : "",
 "categorization" : ""},
@@ -332,18 +336,8 @@ ear canal due to inflammation", "categorization" : ""},
 "LN", "categorization" : ""},
 							{"location" : "OBX.3.6", "dataelement" : "Name of Alternate Coding System",
 "data" : "", "categorization" : ""},
-				{"location" : "OBX.5", "dataelement" : "Observation Value", "data" : "", "categorization"
-: ""},
-							{"location" : "OBX.5.1", "dataelement" : "Identifier", "data" : "Fever,cough,earache",
-"categorization" : ""},
-							{"location" : "OBX.5.2", "dataelement" : "Text", "data" : "", "categorization"
-: ""},
-							{"location" : "OBX.5.3", "dataelement" : "Name of Coding System", "data" :
-"", "categorization" : ""},
-							{"location" : "OBX.5.6", "dataelement" : "Name of Alternate Coding System",
-"data" : "", "categorization" : ""},
-							{"location" : "OBX.5.9", "dataelement" : "Original Text", "data" : "", "categorization"
-: ""},
+				{"location" : "OBX.5", "dataelement" : "Observation Value", "data" : "Patient&amp;apos;s
+mother states that patient has fever, cough, and earache", "categorization" : ""},
 				{"location" : "OBX.6", "dataelement" : "Units", "data" : "", "categorization"
 : ""},
 							{"location" : "OBX.6.1", "dataelement" : "Identifier", "data" : "", "categorization"
@@ -446,6 +440,10 @@ ear canal due to inflammation", "categorization" : ""},
 : ""},
 							{"location" : "OBX.5.3", "dataelement" : "Name of Coding System", "data" :
 "SCT", "categorization" : ""},
+							{"location" : "OBX.5.4", "dataelement" : "Alternate Identifier", "data" : "",
+"categorization" : ""},
+							{"location" : "OBX.5.5", "dataelement" : "Alternate Text", "data" : "", "categorization"
+: ""},
 							{"location" : "OBX.5.6", "dataelement" : "Name of Alternate Coding System",
 "data" : "", "categorization" : ""},
 							{"location" : "OBX.5.9", "dataelement" : "Original Text", "data" : "", "categorization"
