@@ -6,8 +6,7 @@ Description="ValueSet for Syndromic Surveillance Context Free validation"
 Name="Vocab for SS Context Free" 
 OrganizationName="HL7 NIST" 
 Status="Active" 
-ValueSetLibraryVersion="20151119">
-
+ValueSetLibraryVersion="20151123">
 	<NoValidation>
 		<!-- excluded because locally defined -->
 		<BindingIdentifier>HL70300</BindingIdentifier>
@@ -20,7 +19,6 @@ ValueSetLibraryVersion="20151119">
 		<BindingIdentifier>PHVS_AdministrativeDiagnosis_CDC_ICD-10CM</BindingIdentifier>
 		<!-- excluded because does not apply to context free -->
 		<BindingIdentifier>[NIST]PHVS_Disease_CDC&amp;PHVS_AdministrativeDiagnosis_CDC_ICD-9CM&amp;PHVS_AdministrativeDiagnosis_CDC_ICD-10CM</BindingIdentifier>
-		
 	</NoValidation>
 	<ValueSetDefinitions Group="External-SS" Order="1">
 		<!-- [Caroline] removed because too large (130k codes) -->
@@ -29,7 +27,6 @@ ValueSetLibraryVersion="20151119">
 		<ValueSetDefinition BindingIdentifier="PHVS_AdministrativeDiagnosis_CDC_ICD-9CM" Oid="2.16.840.1.114222.4.11.856" Name="Diagnosis (ICD-9 CM)"/>
 		<!-- [Caroline] removed because too large (90k codes) -->
 		<ValueSetDefinition BindingIdentifier="PHVS_AdministrativeDiagnosis_CDC_ICD-10CM" Oid="2.16.840.1.114222.4.11.7356" Name="Diagnosis (ICD-10 CM)"/>
-		
 		<!-- NIST version for PV2-3/DG1-3 validation in Context based -->
 		<ValueSetDefinition BindingIdentifier="[NIST]PHVS_Disease_CDC&amp;PHVS_AdministrativeDiagnosis_CDC_ICD-9CM&amp;PHVS_AdministrativeDiagnosis_CDC_ICD-10CM" Name="Disease&amp;Diagnosis (ICD-9 CM)&amp;Diagnosis (ICD-10 CM)">
 			<!-- values from PHVS_Disease_CDC_NIST -->
@@ -56,7 +53,41 @@ ValueSetLibraryVersion="20151119">
 			<ValueElement Value="I250" CodeSystem="I10" DisplayName="Atherosclerosis"/>
 			<ValueElement Value="I499" CodeSystem="I10" DisplayName="Cardiac arrhythmia, unspecified"/>
 		</ValueSetDefinition>
-
+		<!-- NIST version for OBX-3 validation -->
+		<ValueSetDefinition  BindingIdentifier="[NIST]PHVS_ObservationIdentifier_SyndromicSurveillance&amp;PHVS_VitalSignResult_HITSP" Name="Observation Identifier (Syndromic Surveillance)&amp;Vital Sign Result Value Set">
+			<!-- values from  PHVS_ObservationIdentifier_SyndromicSurveillance -->
+			<ValueElement Value="11283-9" CodeSystem="LN" DisplayName="Acuity assessment [Function] at First encounter"/>
+			<ValueElement Value="21612-7" CodeSystem="LN" DisplayName="Age:Time:Pt:Patient:Qn:Reported"/>
+			<ValueElement Value="39156-5" CodeSystem="LN" DisplayName="BMI"/>
+			<ValueElement Value="11289-6" CodeSystem="LN" DisplayName="Body temperature:Temp:Enctr^frst:^Patient:Qn:"/>
+			<ValueElement Value="8661-1" CodeSystem="LN" DisplayName="Chief complaint:Find:Pt:^Patient:Nom:Reported"/>
+			<ValueElement Value="44833-2" CodeSystem="LN" DisplayName="Diagnosis.preliminary:Imp:Pt:Patient:Nom:"/>
+			<ValueElement Value="SS003" CodeSystem="PHINQUESTION" DisplayName="Facility / Visit Type"/>
+			<ValueElement Value="11368-8" CodeSystem="LN" DisplayName="Illness or injury onset date and time:TmStp:Pt:^Patient:Qn:"/>
+			<ValueElement Value="8677-7" CodeSystem="LN" DisplayName="Medication use Hx Reported"/>
+			<ValueElement Value="10160-0" CodeSystem="LN" DisplayName="Medication use Hx Reported"/>
+			<ValueElement Value="59408-5" CodeSystem="LN" DisplayName="Oxygen saturation:MFr:Pt:BldA:Qn:Pulse oximetry"/>
+			<ValueElement Value="56816-2" CodeSystem="LN" DisplayName="Patient location"/>
+			<ValueElement Value="11449-6" CodeSystem="LN" DisplayName="Pregnancy status - reported"/>
+			<ValueElement Value="11450-4" CodeSystem="LN" DisplayName="Problem list Reported"/>
+			<ValueElement Value="54582-2" CodeSystem="LN" DisplayName="Provider type [MDSv3]"/>
+			<ValueElement Value="72166-2" CodeSystem="LN" DisplayName="Tobacco smoking status"/>
+			<ValueElement Value="10182-4" CodeSystem="LN" DisplayName="Travel Hx Reported"/>
+			<ValueElement Value="SS001" CodeSystem="PHINQUESTION" DisplayName="Treating Facility Identifier"/>
+			<ValueElement Value="SS002" CodeSystem="PHINQUESTION" DisplayName="Treating Facility Location"/>
+			<ValueElement Value="54094-8" CodeSystem="LN" DisplayName="Triage note:Find:Pt:Emergency department:Doc:"/>
+			<!-- values from  PHVS_VitalSignResult_HITSP -->
+			<ValueElement Value="8310-5" CodeSystem="LN" DisplayName="Body temperature:Temp:Pt:^Patient:Qn:"/>
+			<ValueElement Value="8462-4" CodeSystem="LN" DisplayName="Intravascular diastolic:Pres:Pt:Arterial system:Qn:"/>
+			<ValueElement Value="8480-6" CodeSystem="LN" DisplayName="Intravascular systolic:Pres:Pt:Arterial system:Qn:"/>
+			<ValueElement Value="8287-5" CodeSystem="LN" DisplayName="Circumference.occipital-frontal:Len:Pt:Head:Qn:Tape measure"/>
+			<ValueElement Value="8867-4" CodeSystem="LN" DisplayName="Heart beat:NRat:Pt:XXX:Qn:"/>
+			<ValueElement Value="8302-2" CodeSystem="LN" DisplayName="Body height:Len:Pt:^Patient:Qn:"/>
+			<ValueElement Value="8306-3" CodeSystem="LN" DisplayName="Body height^lying:Len:Pt:^Patient:Qn:"/>
+			<ValueElement Value="2710-2" CodeSystem="LN" DisplayName="Oxygen saturation:SFr:Pt:BldC:Qn:Oximetry"/>
+			<ValueElement Value="9279-1" CodeSystem="LN" DisplayName="Breaths:NRat:Pt:Respiratory system:Qn:"/>
+			<ValueElement Value="3141-9" CodeSystem="LN" DisplayName="Body weight:Mass:Pt:^Patient:Qn:Measured"/>
+		</ValueSetDefinition>
 		<ValueSetDefinition BindingIdentifier="PHVS_County_FIPS_6-4" Oid="2.16.840.1.114222.4.11.829" Name="Country">
 			<ValueElement Value="45001" CodeSystem="FIPS6_4" DisplayName="Abbeville"/>
 			<ValueElement Value="22001" CodeSystem="FIPS6_4" DisplayName="Acadia"/>
@@ -3335,6 +3366,7 @@ ValueSetLibraryVersion="20151119">
 		</ValueSetDefinition>
 		<!-- value sets from PHINVADS -->
 		<ValueSetDefinition BindingIdentifier="PHVS_VitalSignResult_HITSP" Oid="2.16.840.1.113883.3.88.12.80.62" Name="Vital Sign Result Value Set">
+			<!-- [Caroline] CodeSystem should be LN - not LOINC -->
 			<ValueElement Value="8310-5" CodeSystem="LOINC" DisplayName="Body temperature:Temp:Pt:^Patient:Qn:"/>
 			<ValueElement Value="8462-4" CodeSystem="LOINC" DisplayName="Intravascular diastolic:Pres:Pt:Arterial system:Qn:"/>
 			<ValueElement Value="8480-6" CodeSystem="LOINC" DisplayName="Intravascular systolic:Pres:Pt:Arterial system:Qn:"/>
