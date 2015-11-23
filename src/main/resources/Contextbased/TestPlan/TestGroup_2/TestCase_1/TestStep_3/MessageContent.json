@@ -42,12 +42,12 @@
 							{"location" : "MSH.12.1", "dataelement" : "Version ID", "data" : "2.5.1", "categorization"
 : "Value-Profile Fixed"},
 				{"location" : "MSH.15", "dataelement" : "Accept Acknowledgment Type", "data" :
-"", "categorization" : ""},
+"AL", "categorization" : ""},
 				{"location" : "MSH.16", "dataelement" : "Application Acknowledgment Type", "data"
 : "", "categorization" : ""},
 				{"location" : "MSH.21", "dataelement" : "Message Profile Identifier", "data" :
 "", "categorization" : ""},
-							{"location" : "MSH.21.1", "dataelement" : "Entity Identifier", "data" : "PH_SS-NoAck",
+							{"location" : "MSH.21.1", "dataelement" : "Entity Identifier", "data" : "PH_SS-Ack",
 "categorization" : "Value-Test Case Fixed"},
 							{"location" : "MSH.21.2", "dataelement" : "Namespace ID", "data" : "SS Sender",
 "categorization" : "Value-Test Case Fixed"},
@@ -91,12 +91,8 @@
 "NPI", "categorization" : ""},
 				{"location" : "PID.5[1]", "dataelement" : "Patient Name", "data" : "", "categorization"
 : ""},
-							{"location" : "PID.5[1].7", "dataelement" : "Name Type Code", "data" : "",
-"categorization" : ""},
 				{"location" : "PID.5[2]", "dataelement" : "Patient Name", "data" : "", "categorization"
 : ""},
-							{"location" : "PID.5[2].7", "dataelement" : "Name Type Code", "data" : "S",
-"categorization" : ""},
 				{"location" : "PID.8", "dataelement" : "Administrative Sex", "data" : "F", "categorization"
 : ""},
 				{"location" : "PID.10", "dataelement" : "Race", "data" : "", "categorization"
@@ -130,13 +126,7 @@
 							{"location" : "PID.22.3", "dataelement" : "Name of Coding System", "data" :
 "", "categorization" : ""},
 							{"location" : "PID.22.6", "dataelement" : "Name of Alternate Coding System",
-"data" : "", "categorization" : ""},
-				{"location" : "PID.29", "dataelement" : "Patient Death Date and Time", "data"
-: "", "categorization" : ""},
-							{"location" : "PID.29.1", "dataelement" : "Time", "data" : "201207171741",
-"categorization" : ""},
-				{"location" : "PID.30", "dataelement" : "Patient Death Indicator", "data" : "Y",
-"categorization" : ""},		]
+"data" : "", "categorization" : ""},		]
 		{
 			"title":"PV1 : Patient Visit",
 			"elements" : 
@@ -236,16 +226,6 @@ loss of consciousness of unspecified duration, initial encounter", "categorizati
 "data" : "", "categorization" : ""},
 							{"location" : "OBX.5.9", "dataelement" : "Original Text", "data" : "", "categorization"
 : ""},
-				{"location" : "OBX.6", "dataelement" : "Units", "data" : "", "categorization"
-: ""},
-							{"location" : "OBX.6.1", "dataelement" : "Identifier", "data" : "", "categorization"
-: ""},
-							{"location" : "OBX.6.2", "dataelement" : "Text", "data" : "", "categorization"
-: ""},
-							{"location" : "OBX.6.3", "dataelement" : "Name of Coding System", "data" :
-"", "categorization" : ""},
-							{"location" : "OBX.6.6", "dataelement" : "Name of Alternate Coding System",
-"data" : "", "categorization" : ""},
 				{"location" : "OBX.11", "dataelement" : "Observation Result Status", "data" :
 "F", "categorization" : ""},		]
 		{
@@ -268,16 +248,6 @@ loss of consciousness of unspecified duration, initial encounter", "categorizati
 "data" : "", "categorization" : ""},
 				{"location" : "OBX.5", "dataelement" : "Observation Value", "data" : "35", "categorization"
 : ""},
-				{"location" : "OBX.6", "dataelement" : "Units", "data" : "", "categorization"
-: ""},
-							{"location" : "OBX.6.1", "dataelement" : "Identifier", "data" : "a", "categorization"
-: ""},
-							{"location" : "OBX.6.2", "dataelement" : "Text", "data" : "year", "categorization"
-: ""},
-							{"location" : "OBX.6.3", "dataelement" : "Name of Coding System", "data" :
-"UCUM", "categorization" : ""},
-							{"location" : "OBX.6.6", "dataelement" : "Name of Alternate Coding System",
-"data" : "", "categorization" : ""},
 				{"location" : "OBX.11", "dataelement" : "Observation Result Status", "data" :
 "F", "categorization" : ""},		]
 		{
@@ -300,16 +270,6 @@ loss of consciousness of unspecified duration, initial encounter", "categorizati
 "data" : "", "categorization" : ""},
 				{"location" : "OBX.5", "dataelement" : "Observation Value", "data" : "65", "categorization"
 : ""},
-				{"location" : "OBX.6", "dataelement" : "Units", "data" : "", "categorization"
-: ""},
-							{"location" : "OBX.6.1", "dataelement" : "Identifier", "data" : "[in_us]",
-"categorization" : ""},
-							{"location" : "OBX.6.2", "dataelement" : "Text", "data" : "inch", "categorization"
-: ""},
-							{"location" : "OBX.6.3", "dataelement" : "Name of Coding System", "data" :
-"UCUM ", "categorization" : ""},
-							{"location" : "OBX.6.6", "dataelement" : "Name of Alternate Coding System",
-"data" : "", "categorization" : ""},
 				{"location" : "OBX.11", "dataelement" : "Observation Result Status", "data" :
 "F", "categorization" : ""},		]
 		{
@@ -332,16 +292,6 @@ loss of consciousness of unspecified duration, initial encounter", "categorizati
 "data" : "", "categorization" : ""},
 				{"location" : "OBX.5", "dataelement" : "Observation Value", "data" : "128", "categorization"
 : ""},
-				{"location" : "OBX.6", "dataelement" : "Units", "data" : "", "categorization"
-: ""},
-							{"location" : "OBX.6.1", "dataelement" : "Identifier", "data" : "[lb_av]",
-"categorization" : ""},
-							{"location" : "OBX.6.2", "dataelement" : "Text", "data" : "pound", "categorization"
-: ""},
-							{"location" : "OBX.6.3", "dataelement" : "Name of Coding System", "data" :
-"UCUM ", "categorization" : ""},
-							{"location" : "OBX.6.6", "dataelement" : "Name of Alternate Coding System",
-"data" : "", "categorization" : ""},
 				{"location" : "OBX.11", "dataelement" : "Observation Result Status", "data" :
 "F", "categorization" : ""},		]
 		{
@@ -378,16 +328,6 @@ smoked", "categorization" : ""},
 "data" : "", "categorization" : ""},
 							{"location" : "OBX.5.9", "dataelement" : "Original Text", "data" : "", "categorization"
 : ""},
-				{"location" : "OBX.6", "dataelement" : "Units", "data" : "", "categorization"
-: ""},
-							{"location" : "OBX.6.1", "dataelement" : "Identifier", "data" : "", "categorization"
-: ""},
-							{"location" : "OBX.6.2", "dataelement" : "Text", "data" : "", "categorization"
-: ""},
-							{"location" : "OBX.6.3", "dataelement" : "Name of Coding System", "data" :
-"", "categorization" : ""},
-							{"location" : "OBX.6.6", "dataelement" : "Name of Alternate Coding System",
-"data" : "", "categorization" : ""},
 				{"location" : "OBX.11", "dataelement" : "Observation Result Status", "data" :
 "F", "categorization" : ""},		]
 

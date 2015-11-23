@@ -42,12 +42,12 @@
 							{"location" : "MSH.12.1", "dataelement" : "Version ID", "data" : "2.5.1", "categorization"
 : "Value-Profile Fixed"},
 				{"location" : "MSH.15", "dataelement" : "Accept Acknowledgment Type", "data" :
-"", "categorization" : "Value-Profile Fixed List"},
+"AL", "categorization" : "Value-Profile Fixed List"},
 				{"location" : "MSH.16", "dataelement" : "Application Acknowledgment Type", "data"
 : "", "categorization" : "Value-Test Case Fixed List"},
 				{"location" : "MSH.21", "dataelement" : "Message Profile Identifier", "data" :
 "", "categorization" : ""},
-							{"location" : "MSH.21.1", "dataelement" : "Entity Identifier", "data" : "PH_SS-NoAck",
+							{"location" : "MSH.21.1", "dataelement" : "Entity Identifier", "data" : "PH_SS-Ack",
 "categorization" : "Value-Profile Fixed"},
 							{"location" : "MSH.21.2", "dataelement" : "Namespace ID", "data" : "SS Sender",
 "categorization" : "Value-Profile Fixed"},
@@ -91,12 +91,8 @@
 "NPI", "categorization" : ""},
 				{"location" : "PID.5[1]", "dataelement" : "Patient Name", "data" : "", "categorization"
 : ""},
-							{"location" : "PID.5[1].7", "dataelement" : "Name Type Code", "data" : "",
-"categorization" : "NonPresence"},
 				{"location" : "PID.5[2]", "dataelement" : "Patient Name", "data" : "", "categorization"
 : ""},
-							{"location" : "PID.5[2].7", "dataelement" : "Name Type Code", "data" : "S",
-"categorization" : ""},
 				{"location" : "PID.8", "dataelement" : "Administrative Sex", "data" : "M", "categorization"
 : "Value-Test Case Fixed"},
 				{"location" : "PID.10[1]", "dataelement" : "Race", "data" : "", "categorization"
@@ -150,13 +146,7 @@ Latino", "categorization" : "Presence-Content Indifferent"},
 							{"location" : "PID.22.3", "dataelement" : "Name of Coding System", "data" :
 "CDCREC", "categorization" : "Value-Profile Fixed"},
 							{"location" : "PID.22.6", "dataelement" : "Name of Alternate Coding System",
-"data" : "", "categorization" : ""},
-				{"location" : "PID.29", "dataelement" : "Patient Death Date and Time", "data"
-: "", "categorization" : ""},
-							{"location" : "PID.29.1", "dataelement" : "Time", "data" : "", "categorization"
-: ""},
-				{"location" : "PID.30", "dataelement" : "Patient Death Indicator", "data" : "",
-"categorization" : "Value-Test Case Fixed"},		]
+"data" : "", "categorization" : ""},		]
 		{
 			"title":"PV1 : Patient Visit",
 			"elements" : 
@@ -177,6 +167,8 @@ Latino", "categorization" : "Presence-Content Indifferent"},
 "categorization" : ""},
 									{"location" : "PV1.19.4.3", "dataelement" : "Universal ID Type", "data" :
 "NPI", "categorization" : ""},
+				{"location" : "PV1.36", "dataelement" : "Discharge Disposition", "data" : "",
+"categorization" : ""},
 				{"location" : "PV1.44", "dataelement" : "Admit Date/Time", "data" : "", "categorization"
 : ""},
 							{"location" : "PV1.44.1", "dataelement" : "Time", "data" : "201002200830",
@@ -232,16 +224,6 @@ Latino", "categorization" : "Presence-Content Indifferent"},
 "data" : "", "categorization" : ""},
 							{"location" : "OBX.5.9", "dataelement" : "Original Text", "data" : "", "categorization"
 : ""},
-				{"location" : "OBX.6", "dataelement" : "Units", "data" : "", "categorization"
-: ""},
-							{"location" : "OBX.6.1", "dataelement" : "Identifier", "data" : "", "categorization"
-: ""},
-							{"location" : "OBX.6.2", "dataelement" : "Text", "data" : "", "categorization"
-: ""},
-							{"location" : "OBX.6.3", "dataelement" : "Name of Coding System", "data" :
-"", "categorization" : ""},
-							{"location" : "OBX.6.6", "dataelement" : "Name of Alternate Coding System",
-"data" : "", "categorization" : ""},
 				{"location" : "OBX.11", "dataelement" : "Observation Result Status", "data" :
 "F", "categorization" : "Value-Profile Fixed List"},		]
 		{
@@ -264,16 +246,6 @@ Latino", "categorization" : "Presence-Content Indifferent"},
 "data" : "", "categorization" : ""},
 				{"location" : "OBX.5", "dataelement" : "Observation Value", "data" : "6", "categorization"
 : ""},
-				{"location" : "OBX.6", "dataelement" : "Units", "data" : "", "categorization"
-: ""},
-							{"location" : "OBX.6.1", "dataelement" : "Identifier", "data" : "mo", "categorization"
-: ""},
-							{"location" : "OBX.6.2", "dataelement" : "Text", "data" : "age", "categorization"
-: ""},
-							{"location" : "OBX.6.3", "dataelement" : "Name of Coding System", "data" :
-"UCUM", "categorization" : ""},
-							{"location" : "OBX.6.6", "dataelement" : "Name of Alternate Coding System",
-"data" : "", "categorization" : ""},
 				{"location" : "OBX.11", "dataelement" : "Observation Result Status", "data" :
 "F", "categorization" : ""},		]
 		{
@@ -296,16 +268,6 @@ Latino", "categorization" : "Presence-Content Indifferent"},
 "data" : "", "categorization" : ""},
 				{"location" : "OBX.5", "dataelement" : "Observation Value", "data" : "Patient&amp;apos;s
 mother states that patient has fever, cough, and earache", "categorization" : ""},
-				{"location" : "OBX.6", "dataelement" : "Units", "data" : "", "categorization"
-: ""},
-							{"location" : "OBX.6.1", "dataelement" : "Identifier", "data" : "", "categorization"
-: ""},
-							{"location" : "OBX.6.2", "dataelement" : "Text", "data" : "", "categorization"
-: ""},
-							{"location" : "OBX.6.3", "dataelement" : "Name of Coding System", "data" :
-"", "categorization" : ""},
-							{"location" : "OBX.6.6", "dataelement" : "Name of Alternate Coding System",
-"data" : "", "categorization" : ""},
 				{"location" : "OBX.11", "dataelement" : "Observation Result Status", "data" :
 "F", "categorization" : ""},		]
 		{
@@ -328,16 +290,6 @@ mother states that patient has fever, cough, and earache", "categorization" : ""
 "data" : "", "categorization" : ""},
 				{"location" : "OBX.5", "dataelement" : "Observation Value", "data" : "27", "categorization"
 : ""},
-				{"location" : "OBX.6", "dataelement" : "Units", "data" : "", "categorization"
-: ""},
-							{"location" : "OBX.6.1", "dataelement" : "Identifier", "data" : "[in_us]",
-"categorization" : ""},
-							{"location" : "OBX.6.2", "dataelement" : "Text", "data" : "inch", "categorization"
-: ""},
-							{"location" : "OBX.6.3", "dataelement" : "Name of Coding System", "data" :
-"UCUM ", "categorization" : ""},
-							{"location" : "OBX.6.6", "dataelement" : "Name of Alternate Coding System",
-"data" : "", "categorization" : ""},
 				{"location" : "OBX.11", "dataelement" : "Observation Result Status", "data" :
 "F", "categorization" : ""},		]
 		{
@@ -360,16 +312,6 @@ mother states that patient has fever, cough, and earache", "categorization" : ""
 "data" : "", "categorization" : ""},
 				{"location" : "OBX.5", "dataelement" : "Observation Value", "data" : "17", "categorization"
 : ""},
-				{"location" : "OBX.6", "dataelement" : "Units", "data" : "", "categorization"
-: ""},
-							{"location" : "OBX.6.1", "dataelement" : "Identifier", "data" : "[lb_av]",
-"categorization" : ""},
-							{"location" : "OBX.6.2", "dataelement" : "Text", "data" : "pound", "categorization"
-: ""},
-							{"location" : "OBX.6.3", "dataelement" : "Name of Coding System", "data" :
-"UCUM ", "categorization" : ""},
-							{"location" : "OBX.6.6", "dataelement" : "Name of Alternate Coding System",
-"data" : "", "categorization" : ""},
 				{"location" : "OBX.11", "dataelement" : "Observation Result Status", "data" :
 "F", "categorization" : ""},		]
 		{
@@ -406,16 +348,6 @@ mother states that patient has fever, cough, and earache", "categorization" : ""
 "data" : "", "categorization" : ""},
 							{"location" : "OBX.5.9", "dataelement" : "Original Text", "data" : "", "categorization"
 : ""},
-				{"location" : "OBX.6", "dataelement" : "Units", "data" : "", "categorization"
-: ""},
-							{"location" : "OBX.6.1", "dataelement" : "Identifier", "data" : "", "categorization"
-: ""},
-							{"location" : "OBX.6.2", "dataelement" : "Text", "data" : "", "categorization"
-: ""},
-							{"location" : "OBX.6.3", "dataelement" : "Name of Coding System", "data" :
-"", "categorization" : ""},
-							{"location" : "OBX.6.6", "dataelement" : "Name of Alternate Coding System",
-"data" : "", "categorization" : ""},
 				{"location" : "OBX.11", "dataelement" : "Observation Result Status", "data" :
 "F", "categorization" : ""},		]
 
