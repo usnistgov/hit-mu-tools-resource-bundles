@@ -6,7 +6,7 @@ Description="ValueSet for Syndromic Surveillance Context Based validation"
 Name="Vocab for SS Context Based" 
 OrganizationName="HL7 NIST" 
 Status="Active" 
-ValueSetLibraryVersion="20151123">
+ValueSetLibraryVersion="20151124">
 	<NoValidation>
 		<!-- excluded because locally defined -->
 		<BindingIdentifier>HL70300</BindingIdentifier>
@@ -35,6 +35,9 @@ ValueSetLibraryVersion="20151123">
 			<ValueElement Value="38053" CodeSystem="I9CDX" DisplayName="Stenosis of external ear canal due to inflammation"/>
 			<ValueElement Value="380.53" CodeSystem="I9CDX" DisplayName="Stenosis of external ear canal due to inflammation"/>
 			<!-- values from PHVS_AdministrativeDiagnosis_CDC_ICD-10CM_NIST -->
+			<ValueElement Value="V134XXA" CodeSystem="I10" DisplayName="Pedal cycle driver injured in collision with car, pick-up truck or van in traffic accident, initial encounter"/>
+			<ValueElement Value="S06.0X9A" CodeSystem="I10" DisplayName="concussion with loss of consciousness of unspecified duration, initial encounter)"/>
+			<ValueElement Value="S02.10XA" CodeSystem="I10" DisplayName="unspecified fracture of base of skull, initial encounter for closed fracture"/>
 			<ValueElement Value="V139XXA" CodeSystem="I10" DisplayName="Unspecified pedal cyclist injured in collision with car, pick-up truck or van in traffic accident, initial encounter"/>
 			<ValueElement Value="V13.9XXA" CodeSystem="I10" DisplayName="Unspecified pedal cyclist injured in collision with car, pick-up truck or van in traffic accident, initial encounter"/>
 			<ValueElement Value="S0210XA" CodeSystem="I10" DisplayName="Unspecified fracture of base of skull, initial encounter for closed fracture"/>
