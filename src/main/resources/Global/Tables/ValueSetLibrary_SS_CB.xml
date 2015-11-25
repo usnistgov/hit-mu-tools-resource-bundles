@@ -6,7 +6,7 @@ Description="ValueSet for Syndromic Surveillance Context Based validation"
 Name="Vocab for SS Context Based" 
 OrganizationName="HL7 NIST" 
 Status="Active" 
-ValueSetLibraryVersion="20151124">
+ValueSetLibraryVersion="20151125">
 	<NoValidation>
 		<!-- excluded because locally defined -->
 		<BindingIdentifier>HL70300</BindingIdentifier>
@@ -35,28 +35,38 @@ ValueSetLibraryVersion="20151124">
 			<ValueElement Value="38053" CodeSystem="I9CDX" DisplayName="Stenosis of external ear canal due to inflammation"/>
 			<ValueElement Value="380.53" CodeSystem="I9CDX" DisplayName="Stenosis of external ear canal due to inflammation"/>
 			<!-- values from PHVS_AdministrativeDiagnosis_CDC_ICD-10CM_NIST -->
-			<ValueElement Value="J11.1" CodeSystem="I10" DisplayName="Influenza due to unidentified influenza virus with other respiratory manifestations"/>
+			<ValueElement Value="H16329" CodeSystem="I10" DisplayName="Acquired stenosis of external ear canal secondary to inflammation and infection, unspecified ear."/>
 			<ValueElement Value="H16.329" CodeSystem="I10" DisplayName="Acquired stenosis of external ear canal secondary to inflammation and infection, unspecified ear."/>
-			<ValueElement Value="T58.14XA" CodeSystem="I10" DisplayName="Toxic effect of carbon monoxide from utility gas, undetermined, initial encounter; and E87.2, Metabolic Acidosis"/>
-			<ValueElement Value="T58.11XA" CodeSystem="I10" DisplayName="Toxic effect of carbon monoxide from utility gas, accidental (unintentional), initial encounter."/>			
-			<ValueElement Value="V134XXA" CodeSystem="I10" DisplayName="Pedal cycle driver injured in collision with car, pick-up truck or van in traffic accident, initial encounter"/>
-			<ValueElement Value="S06.0X9A" CodeSystem="I10" DisplayName="concussion with loss of consciousness of unspecified duration, initial encounter)"/>
-			<ValueElement Value="S02.10XA" CodeSystem="I10" DisplayName="unspecified fracture of base of skull, initial encounter for closed fracture"/>
-			<ValueElement Value="V139XXA" CodeSystem="I10" DisplayName="Unspecified pedal cyclist injured in collision with car, pick-up truck or van in traffic accident, initial encounter"/>
-			<ValueElement Value="V13.9XXA" CodeSystem="I10" DisplayName="Unspecified pedal cyclist injured in collision with car, pick-up truck or van in traffic accident, initial encounter"/>
+			<ValueElement Value="I250" CodeSystem="I10" DisplayName="Atherosclerosis"/>
+			<ValueElement Value="I25.0" CodeSystem="I10" DisplayName="Atherosclerosis"/>
+			<ValueElement Value="I25.110" CodeSystem="I10" DisplayName="Atherosclerotic heart disease of native coronary artery with unstable angina pectoris"/>
+			<ValueElement Value="I25110" CodeSystem="I10" DisplayName="Atherosclerotic heart disease of native coronary artery with unstable angina pectoris"/>
+			<ValueElement Value="I259" CodeSystem="I10" DisplayName="Chronic ischemic heart disease, unspecified"/>
+			<ValueElement Value="I25.9 " CodeSystem="I10" DisplayName="Chronic ischemic heart disease, unspecified"/>
+			<ValueElement Value="I209" CodeSystem="I10" DisplayName="Angina pectoris, unspecified"/>
+			<ValueElement Value="I20.9" CodeSystem="I10" DisplayName="Angina pectoris, unspecified"/>
+			<ValueElement Value="I499" CodeSystem="I10" DisplayName="Cardiac arrhythmia, unspecified"/>
+			<ValueElement Value="I49.9" CodeSystem="I10" DisplayName="Cardiac arrhythmia, unspecified"/>
+			<ValueElement Value="J11.1" CodeSystem="I10" DisplayName="Influenza due to unidentified influenza virus with other respiratory manifestations"/>
+			<ValueElement Value="J111" CodeSystem="I10" DisplayName="Influenza due to unidentified influenza virus with other respiratory manifestations"/>
+			<ValueElement Value="R079" CodeSystem="I10" DisplayName="Chest Pain, unspecified"/>
+			<ValueElement Value="R07.9" CodeSystem="I10" DisplayName="Chest Pain, unspecified"/>			
 			<ValueElement Value="S0210XA" CodeSystem="I10" DisplayName="Unspecified fracture of base of skull, initial encounter for closed fracture"/>
 			<ValueElement Value="S02.10XA" CodeSystem="I10" DisplayName="Unspecified fracture of base of skull, initial encounter for closed fracture"/>
 			<ValueElement Value="S069X6A" CodeSystem="I10" DisplayName="Unspecified intracranial injury with loss of consciousness greater than 24 hours without return to pre-existing conscious level with patient surviving, initial encounter"/>
 			<ValueElement Value="S06.9X6A" CodeSystem="I10" DisplayName="Unspecified intracranial injury with loss of consciousness greater than 24 hours without return to pre-existing conscious level with patient surviving, initial encounter"/>
 			<ValueElement Value="S060X9A" CodeSystem="I10" DisplayName="Concussion with loss of consciousness of unspecified duration, initial encounter"/>
-			<ValueElement Value="S06.0X9A" CodeSystem="I10" DisplayName="Concussion with loss of consciousness of unspecified duration, initial encounter"/>
+			<ValueElement Value="S06.0X9A" CodeSystem="I10" DisplayName="Concussion with loss of consciousness of unspecified duration, initial encounter"/>			
+			<ValueElement Value="T58.14XA" CodeSystem="I10" DisplayName="Toxic effect of carbon monoxide from utility gas, undetermined, initial encounter; and E87.2, Metabolic Acidosis"/>
+			<ValueElement Value="T5814XA" CodeSystem="I10" DisplayName="Toxic effect of carbon monoxide from utility gas, undetermined, initial encounter; and E87.2, Metabolic Acidosis"/>
+			<ValueElement Value="T58.11XA" CodeSystem="I10" DisplayName="Toxic effect of carbon monoxide from utility gas, accidental (unintentional), initial encounter."/>			
+			<ValueElement Value="T5811XA" CodeSystem="I10" DisplayName="Toxic effect of carbon monoxide from utility gas, accidental (unintentional), initial encounter."/>			
+			<ValueElement Value="V134XXA" CodeSystem="I10" DisplayName="Pedal cycle driver injured in collision with car, pick-up truck or van in traffic accident, initial encounter"/>
+			<ValueElement Value="V13.4XX1" CodeSystem="I10" DisplayName="Pedal cycle driver injured in collision with car, pick-up truck or van in traffic accident, initial encounter"/>
+			<ValueElement Value="V139XXA" CodeSystem="I10" DisplayName="Unspecified pedal cyclist injured in collision with car, pick-up truck or van in traffic accident, initial encounter"/>
+			<ValueElement Value="V13.9XXA" CodeSystem="I10" DisplayName="Unspecified pedal cyclist injured in collision with car, pick-up truck or van in traffic accident, initial encounter"/>
 			<ValueElement Value="z955" CodeSystem="I10" DisplayName="Removal of coronary artery obstruction, and stent insertions"/>
 			<ValueElement Value="z95.5" CodeSystem="I10" DisplayName="Removal of coronary artery obstruction, and stent insertions"/>
-			<ValueElement Value="I259" CodeSystem="I10" DisplayName="Chronic ischemic heart disease, unspecified"/>
-			<ValueElement Value="I209" CodeSystem="I10" DisplayName="Angina pectoris, unspecified"/>
-			<ValueElement Value="R079" CodeSystem="I10" DisplayName="Chest Pain, unspecified"/>
-			<ValueElement Value="I250" CodeSystem="I10" DisplayName="Atherosclerosis"/>
-			<ValueElement Value="I499" CodeSystem="I10" DisplayName="Cardiac arrhythmia, unspecified"/>
 		</ValueSetDefinition>
 		<!-- NIST version for OBX-3 validation -->
 		<ValueSetDefinition  BindingIdentifier="[NIST]PHVS_ObservationIdentifier_SyndromicSurveillance&amp;PHVS_VitalSignResult_HITSP" Name="Observation Identifier (Syndromic Surveillance)&amp;Vital Sign Result Value Set">
