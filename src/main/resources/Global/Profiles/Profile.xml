@@ -299,7 +299,7 @@
 			<Field Name="Character Set" Usage="X" Min="0" Max="*" Datatype="ID" MinLength="1" MaxLength="16" Binding="HL70211" ItemNo="00018"/>
 			<Field Name="Principal Language Of Message" Usage="X" Min="0" Max="1" Datatype="CE" MinLength="1" MaxLength="478" ItemNo="00019"/>
 			<Field Name="Alternate Character Set Handling Scheme" Usage="X" Min="0" Max="1" Datatype="ID" MinLength="1" MaxLength="20" Binding="HL70356" ItemNo="00020"/>
-			<Field Name="Message Profile Identifier" Usage="R" Min="1" Max="1" Datatype="EI_SS" MinLength="1" MaxLength="427" ItemNo="00021"/>
+			<Field Name="Message Profile Identifier" Usage="R" Min="1" Max="*" Datatype="EI_SS" MinLength="1" MaxLength="427" ItemNo="00021"/>
 		</Segment>
 		<Segment ID="MSH_SS_A01_ACK" Name="MSH" Label="MSH_SS_A01_ACK" Description="Message Header">
 			<Field Name="Field Separator" Usage="R" Min="1" Max="1" Datatype="ST_SS" MinLength="1" MaxLength="1" ItemNo="00001"/>
@@ -322,7 +322,7 @@
 			<Field Name="Character Set" Usage="X" Min="0" Max="*" Datatype="ID" MinLength="1" MaxLength="16" Binding="HL70211" BindingStrength="R" ItemNo="00018"/>
 			<Field Name="Principal Language Of Message" Usage="X" Min="0" Max="1" Datatype="CE" MinLength="1" MaxLength="478" ItemNo="00019"/>
 			<Field Name="Alternate Character Set Handling Scheme" Usage="X" Min="0" Max="1" Datatype="ID" MinLength="1" MaxLength="20" Binding="HL70356" BindingStrength="R" ItemNo="00020"/>
-			<Field Name="Message Profile Identifier" Usage="R" Min="1" Max="1" Datatype="EI_SS" MinLength="1" MaxLength="427" ItemNo="00021"/>
+			<Field Name="Message Profile Identifier" Usage="R" Min="1" Max="*" Datatype="EI_SS" MinLength="1" MaxLength="427" ItemNo="00021"/>
 		</Segment>
 		<Segment ID="MSH_SS_A03_ACK" Name="MSH" Label="MSH_SS_A03_ACK" Description="Message Header">
 			<Field Name="Field Separator" Usage="R" Min="1" Max="1" Datatype="ST_SS" MinLength="1" MaxLength="1" ItemNo="00001"/>
@@ -345,7 +345,7 @@
 			<Field Name="Character Set" Usage="X" Min="0" Max="*" Datatype="ID" MinLength="1" MaxLength="16" Binding="HL70211" ItemNo="00018"/>
 			<Field Name="Principal Language Of Message" Usage="X" Min="0" Max="1" Datatype="CE" MinLength="1" MaxLength="478" ItemNo="00019"/>
 			<Field Name="Alternate Character Set Handling Scheme" Usage="X" Min="0" Max="1" Datatype="ID" MinLength="1" MaxLength="20" Binding="HL70356" ItemNo="00020"/>
-			<Field Name="Message Profile Identifier" Usage="R" Min="1" Max="1" Datatype="EI_SS" MinLength="1" MaxLength="427" ItemNo="00021"/>
+			<Field Name="Message Profile Identifier" Usage="R" Min="1" Max="*" Datatype="EI_SS" MinLength="1" MaxLength="427" ItemNo="00021"/>
 		</Segment>
 		<Segment ID="MSH_SS_A04_ACK" Name="MSH" Label="MSH_SS_A04_ACK" Description="Message Header">
 			<Field Name="Field Separator" Usage="R" Min="1" Max="1" Datatype="ST_SS" MinLength="1" MaxLength="1" ItemNo="00001"/>
@@ -368,7 +368,7 @@
 			<Field Name="Character Set" Usage="X" Min="0" Max="*" Datatype="ID" MinLength="1" MaxLength="16" Binding="HL70211" ItemNo="00018"/>
 			<Field Name="Principal Language Of Message" Usage="X" Min="0" Max="1" Datatype="CE" MinLength="1" MaxLength="478" ItemNo="00019"/>
 			<Field Name="Alternate Character Set Handling Scheme" Usage="X" Min="0" Max="1" Datatype="ID" MinLength="1" MaxLength="20" Binding="HL70356" ItemNo="00020"/>
-			<Field Name="Message Profile Identifier" Usage="R" Min="1" Max="1" Datatype="EI_SS" MinLength="1" MaxLength="427" ItemNo="00021"/>
+			<Field Name="Message Profile Identifier" Usage="R" Min="1" Max="*" Datatype="EI_SS" MinLength="1" MaxLength="427" ItemNo="00021"/>
 		</Segment>
 		<Segment ID="MSH_SS_A08_ACK" Name="MSH" Label="MSH_SS_A08_ACK" Description="Message Header">
 			<Field Name="Field Separator" Usage="R" Min="1" Max="1" Datatype="ST_SS" MinLength="1" MaxLength="1" ItemNo="00001"/>
@@ -391,7 +391,7 @@
 			<Field Name="Character Set" Usage="X" Min="0" Max="*" Datatype="ID" MinLength="1" MaxLength="16" Binding="HL70211" ItemNo="00018"/>
 			<Field Name="Principal Language Of Message" Usage="X" Min="0" Max="1" Datatype="CE" MinLength="1" MaxLength="478" ItemNo="00019"/>
 			<Field Name="Alternate Character Set Handling Scheme" Usage="X" Min="0" Max="1" Datatype="ID" MinLength="1" MaxLength="20" Binding="HL70356" ItemNo="00020"/>
-			<Field Name="Message Profile Identifier" Usage="R" Min="1" Max="1" Datatype="EI_SS" MinLength="1" MaxLength="427" ItemNo="00021"/>
+			<Field Name="Message Profile Identifier" Usage="R" Min="1" Max="*" Datatype="EI_SS" MinLength="1" MaxLength="427" ItemNo="00021"/>
 		</Segment>
 		<Segment ID="MSH_SS_A01_NOACK" Name="MSH" Label="MSH_SS_A01_NOACK" Description="Message Header">
 			<Field Name="Field Separator" Usage="R" Min="1" Max="1" Datatype="ST_SS" MinLength="1" MaxLength="1" ItemNo="00001"/>
@@ -414,7 +414,7 @@
 			<Field Name="Character Set" Usage="X" Min="0" Max="*" Datatype="ID" MinLength="1" MaxLength="16" Binding="HL70211" BindingStrength="R" ItemNo="00018"/>
 			<Field Name="Principal Language Of Message" Usage="X" Min="0" Max="1" Datatype="CE" MinLength="1" MaxLength="478" ItemNo="00019"/>
 			<Field Name="Alternate Character Set Handling Scheme" Usage="X" Min="0" Max="1" Datatype="ID" MinLength="1" MaxLength="20" Binding="HL70356" BindingStrength="R" ItemNo="00020"/>
-			<Field Name="Message Profile Identifier" Usage="R" Min="1" Max="1" Datatype="EI_SS" MinLength="1" MaxLength="427" ItemNo="00021"/>
+			<Field Name="Message Profile Identifier" Usage="R" Min="1" Max="*" Datatype="EI_SS" MinLength="1" MaxLength="427" ItemNo="00021"/>
 		</Segment>
 		<Segment ID="MSH_SS_A03_NOACK" Name="MSH" Label="MSH_SS_A03_NOACK" Description="Message Header">
 			<Field Name="Field Separator" Usage="R" Min="1" Max="1" Datatype="ST_SS" MinLength="1" MaxLength="1" ItemNo="00001"/>
@@ -437,7 +437,7 @@
 			<Field Name="Character Set" Usage="X" Min="0" Max="*" Datatype="ID" MinLength="1" MaxLength="16" Binding="HL70211" ItemNo="00018"/>
 			<Field Name="Principal Language Of Message" Usage="X" Min="0" Max="1" Datatype="CE" MinLength="1" MaxLength="478" ItemNo="00019"/>
 			<Field Name="Alternate Character Set Handling Scheme" Usage="X" Min="0" Max="1" Datatype="ID" MinLength="1" MaxLength="20" Binding="HL70356" ItemNo="00020"/>
-			<Field Name="Message Profile Identifier" Usage="R" Min="1" Max="1" Datatype="EI_SS" MinLength="1" MaxLength="427" ItemNo="00021"/>
+			<Field Name="Message Profile Identifier" Usage="R" Min="1" Max="*" Datatype="EI_SS" MinLength="1" MaxLength="427" ItemNo="00021"/>
 		</Segment>
 		<Segment ID="MSH_SS_A04_NOACK" Name="MSH" Label="MSH_SS_A04_NOACK" Description="Message Header">
 			<Field Name="Field Separator" Usage="R" Min="1" Max="1" Datatype="ST_SS" MinLength="1" MaxLength="1" ItemNo="00001"/>
@@ -460,7 +460,7 @@
 			<Field Name="Character Set" Usage="X" Min="0" Max="*" Datatype="ID" MinLength="1" MaxLength="16" Binding="HL70211" ItemNo="00018"/>
 			<Field Name="Principal Language Of Message" Usage="X" Min="0" Max="1" Datatype="CE" MinLength="1" MaxLength="478" ItemNo="00019"/>
 			<Field Name="Alternate Character Set Handling Scheme" Usage="X" Min="0" Max="1" Datatype="ID" MinLength="1" MaxLength="20" Binding="HL70356" ItemNo="00020"/>
-			<Field Name="Message Profile Identifier" Usage="R" Min="1" Max="1" Datatype="EI_SS" MinLength="1" MaxLength="427" ItemNo="00021"/>
+			<Field Name="Message Profile Identifier" Usage="R" Min="1" Max="*" Datatype="EI_SS" MinLength="1" MaxLength="427" ItemNo="00021"/>
 		</Segment>
 		<Segment ID="MSH_SS_A08_NOACK" Name="MSH" Label="MSH_SS_A08_NOACK" Description="Message Header">
 			<Field Name="Field Separator" Usage="R" Min="1" Max="1" Datatype="ST_SS" MinLength="1" MaxLength="1" ItemNo="00001"/>
@@ -483,7 +483,7 @@
 			<Field Name="Character Set" Usage="X" Min="0" Max="*" Datatype="ID" MinLength="1" MaxLength="16" Binding="HL70211" ItemNo="00018"/>
 			<Field Name="Principal Language Of Message" Usage="X" Min="0" Max="1" Datatype="CE" MinLength="1" MaxLength="478" ItemNo="00019"/>
 			<Field Name="Alternate Character Set Handling Scheme" Usage="X" Min="0" Max="1" Datatype="ID" MinLength="1" MaxLength="20" Binding="HL70356" ItemNo="00020"/>
-			<Field Name="Message Profile Identifier" Usage="R" Min="1" Max="1" Datatype="EI_SS" MinLength="1" MaxLength="427" ItemNo="00021"/>
+			<Field Name="Message Profile Identifier" Usage="R" Min="1" Max="*" Datatype="EI_SS" MinLength="1" MaxLength="427" ItemNo="00021"/>
 		</Segment>
 		<Segment ID="EVN_SS" Name="EVN" Label="EVN_SS" Description="Event Type">
 			<Field Name="Event Type Code" Usage="O" Min="0" Max="1" Datatype="ID" MinLength="1" MaxLength="3" Binding="HL70003" BindingStrength="U" ItemNo="00099"/>
