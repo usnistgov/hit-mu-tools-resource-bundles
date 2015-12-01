@@ -82,7 +82,7 @@
 			<ByID ID="OBX_SS">
 				<!-- OBX-5 (XAD) -->
 				<Predicate Target="5[1].1[1]" TrueUsage="R" FalseUsage="O" ID="1">
-					<Description>If OBX-3=SS002.</Description>
+					<Description>If OBX-2 = "XAD" and OBX-3="SS002".</Description>
 					<Condition>
 						<FORALL>
 							<Presence Path="2[1]"/>
@@ -263,18 +263,6 @@
 						<PlainText Path="15[1]" Text="AL" IgnoreCase="false"/>
 					</Assertion>
 				</Constraint>
-				<!--MSH-21-->
-				<Constraint ID="SS-017-ack" Target="21[1]">
-					<Description>An instance of MSH.21 (Message Profile Identifier) SHALL contain the constant value: PH_SS-Ack^SS Sender^2.16.840.1.114222.4.10.3^ISO</Description>
-					<Assertion>
-						<FORALL>
-							<PlainText Path="21[1].1[1]" Text="PH_SS-Ack" IgnoreCase="false"/>
-							<PlainText Path="21[1].2[1]" Text="SS Sender" IgnoreCase="false"/>
-							<PlainText Path="21[1].3[1]" Text="2.16.840.1.114222.4.10.3" IgnoreCase="false"/>
-							<PlainText Path="21[1].4[1]" Text="ISO" IgnoreCase="false"/>
-						</FORALL>
-					</Assertion>
-				</Constraint>
 			</ByID>
 			<ByID ID="MSH_SS_A01_NOACK">
 				<Constraint ID="SS-014" Target="9[1]">
@@ -298,18 +286,6 @@
 					<Description>MSH-15 (Accept Acknowledgment Type) SHALL be the literal value: 'NE'.</Description>
 					<Assertion>
 						<PlainText Path="15[1]" Text="NE" IgnoreCase="false"/>
-					</Assertion>
-				</Constraint>
-				<!--MSH-21-->
-				<Constraint ID="SS-017-no-ack" Target="21[1]">
-					<Description>An instance of MSH.21 (Message Profile Identifier) SHALL contain the constant value: PH_SS-NoAck^SS Sender^2.16.840.1.114222.4.10.3^ISO</Description>
-					<Assertion>
-						<FORALL>
-							<PlainText Path="21[1].1[1]" Text="PH_SS-NoAck" IgnoreCase="false"/>
-							<PlainText Path="21[1].2[1]" Text="SS Sender" IgnoreCase="false"/>
-							<PlainText Path="21[1].3[1]" Text="2.16.840.1.114222.4.10.3" IgnoreCase="false"/>
-							<PlainText Path="21[1].4[1]" Text="ISO" IgnoreCase="false"/>
-						</FORALL>
 					</Assertion>
 				</Constraint>
 			</ByID>
@@ -337,18 +313,6 @@
 						<PlainText Path="15[1]" Text="AL" IgnoreCase="false"/>
 					</Assertion>
 				</Constraint>
-				<!--MSH-21-->
-				<Constraint ID="SS-017-ack" Target="21[1]">
-					<Description>An instance of MSH.21 (Message Profile Identifier) SHALL contain the constant value: PH_SS-Ack^SS Sender^2.16.840.1.114222.4.10.3^ISO</Description>
-					<Assertion>
-						<FORALL>
-							<PlainText Path="21[1].1[1]" Text="PH_SS-Ack" IgnoreCase="false"/>
-							<PlainText Path="21[1].2[1]" Text="SS Sender" IgnoreCase="false"/>
-							<PlainText Path="21[1].3[1]" Text="2.16.840.1.114222.4.10.3" IgnoreCase="false"/>
-							<PlainText Path="21[1].4[1]" Text="ISO" IgnoreCase="false"/>
-						</FORALL>
-					</Assertion>
-				</Constraint>
 			</ByID>
 			<ByID ID="MSH_SS_A04_NOACK">
 				<!-- MSH-9 -->
@@ -372,18 +336,6 @@
 					<Description>MSH-15 (Accept Acknowledgment Type) SHALL be the literal value: 'NE'.</Description>
 					<Assertion>
 						<PlainText Path="15[1]" Text="NE" IgnoreCase="false"/>
-					</Assertion>
-				</Constraint>
-				<!--MSH-21-->
-				<Constraint ID="SS-017-no-ack" Target="21[1]">
-					<Description>An instance of MSH.21 (Message Profile Identifier) SHALL contain the constant value: PH_SS-NoAck^SS Sender^2.16.840.1.114222.4.10.3^ISO</Description>
-					<Assertion>
-						<FORALL>
-							<PlainText Path="21[1].1[1]" Text="PH_SS-NoAck" IgnoreCase="false"/>
-							<PlainText Path="21[1].2[1]" Text="SS Sender" IgnoreCase="false"/>
-							<PlainText Path="21[1].3[1]" Text="2.16.840.1.114222.4.10.3" IgnoreCase="false"/>
-							<PlainText Path="21[1].4[1]" Text="ISO" IgnoreCase="false"/>
-						</FORALL>
 					</Assertion>
 				</Constraint>
 			</ByID>
@@ -411,18 +363,6 @@
 						<PlainText Path="15[1]" Text="AL" IgnoreCase="false"/>
 					</Assertion>
 				</Constraint>
-				<!--MSH-21-->
-				<Constraint ID="SS-017-ack" Target="21[1]">
-					<Description>An instance of MSH.21 (Message Profile Identifier) SHALL contain the constant value: PH_SS-Ack^SS Sender^2.16.840.1.114222.4.10.3^ISO</Description>
-					<Assertion>
-						<FORALL>
-							<PlainText Path="21[1].1[1]" Text="PH_SS-Ack" IgnoreCase="false"/>
-							<PlainText Path="21[1].2[1]" Text="SS Sender" IgnoreCase="false"/>
-							<PlainText Path="21[1].3[1]" Text="2.16.840.1.114222.4.10.3" IgnoreCase="false"/>
-							<PlainText Path="21[1].4[1]" Text="ISO" IgnoreCase="false"/>
-						</FORALL>
-					</Assertion>
-				</Constraint>
 			</ByID>
 			<ByID ID="MSH_SS_A08_NOACK">
 				<!-- MSH-9 -->
@@ -446,18 +386,6 @@
 					<Description>MSH-15 (Accept Acknowledgment Type) SHALL be the literal value: 'NE'.</Description>
 					<Assertion>
 						<PlainText Path="15[1]" Text="AL" IgnoreCase="false"/>
-					</Assertion>
-				</Constraint>
-				<!--MSH-21-->
-				<Constraint ID="SS-017-no-ack" Target="21[1]">
-					<Description>An instance of MSH.21 (Message Profile Identifier) SHALL contain the constant value: PH_SS-NoAck^SS Sender^2.16.840.1.114222.4.10.3^ISO</Description>
-					<Assertion>
-						<FORALL>
-							<PlainText Path="21[1].1[1]" Text="PH_SS-NoAck" IgnoreCase="false"/>
-							<PlainText Path="21[1].2[1]" Text="SS Sender" IgnoreCase="false"/>
-							<PlainText Path="21[1].3[1]" Text="2.16.840.1.114222.4.10.3" IgnoreCase="false"/>
-							<PlainText Path="21[1].4[1]" Text="ISO" IgnoreCase="false"/>
-						</FORALL>
 					</Assertion>
 				</Constraint>
 			</ByID>
@@ -485,18 +413,6 @@
 						<PlainText Path="15[1]" Text="AL" IgnoreCase="false"/>
 					</Assertion>
 				</Constraint>
-				<!--MSH-21-->
-				<Constraint ID="SS-017-ack" Target="21[1]">
-					<Description>An instance of MSH.21 (Message Profile Identifier) SHALL contain the constant value: PH_SS-Ack^SS Sender^2.16.840.1.114222.4.10.3^ISO</Description>
-					<Assertion>
-						<FORALL>
-							<PlainText Path="21[1].1[1]" Text="PH_SS-Ack" IgnoreCase="false"/>
-							<PlainText Path="21[1].2[1]" Text="SS Sender" IgnoreCase="false"/>
-							<PlainText Path="21[1].3[1]" Text="2.16.840.1.114222.4.10.3" IgnoreCase="false"/>
-							<PlainText Path="21[1].4[1]" Text="ISO" IgnoreCase="false"/>
-						</FORALL>
-					</Assertion>
-				</Constraint>
 			</ByID>
 			<ByID ID="MSH_SS_A03_NOACK">
 				<!-- MSH-9 -->
@@ -520,18 +436,6 @@
 					<Description>MSH-15 (Accept Acknowledgment Type) SHALL be the literal value: 'NE'.</Description>
 					<Assertion>
 						<PlainText Path="15[1]" Text="NE" IgnoreCase="false"/>
-					</Assertion>
-				</Constraint>
-				<!--MSH-21-->
-				<Constraint ID="SS-017-no-ack" Target="21[1]">
-					<Description>An instance of MSH.21 (Message Profile Identifier) SHALL contain the constant value: PH_SS-NoAck^SS Sender^2.16.840.1.114222.4.10.3^ISO</Description>
-					<Assertion>
-						<FORALL>
-							<PlainText Path="21[1].1[1]" Text="PH_SS-NoAck" IgnoreCase="false"/>
-							<PlainText Path="21[1].2[1]" Text="SS Sender" IgnoreCase="false"/>
-							<PlainText Path="21[1].3[1]" Text="2.16.840.1.114222.4.10.3" IgnoreCase="false"/>
-							<PlainText Path="21[1].4[1]" Text="ISO" IgnoreCase="false"/>
-						</FORALL>
 					</Assertion>
 				</Constraint>
 			</ByID>
@@ -825,6 +729,73 @@
 					</Assertion>
 				</Constraint>
 			</ByName>
+		<!-- PH_SS-Ack -->
+			<ByID ID="0d741773-619a-4ec1-b6c2-2589faa75b92">
+				<Constraint ID="SS-017-ack" Target="1[1].21[1]">
+					<Description>An instance of MSH.21 (Message Profile Identifier) SHALL contain the constant value: PH_SS-Ack^SS Sender^2.16.840.1.114222.4.10.3^ISO</Description>
+					<Assertion>
+						<Plugin QualifiedClassName="gov.nist.healthcare.mu.ss.custom.SS_017_ACK"/>
+					</Assertion>
+				</Constraint>
+			</ByID>
+			<ByID ID="52f1dab8-d538-4c7e-b71b-39619b94c3bf">
+				<Constraint ID="SS-017-ack" Target="1[1].21[1]">
+					<Description>An instance of MSH.21 (Message Profile Identifier) SHALL contain the constant value: PH_SS-Ack^SS Sender^2.16.840.1.114222.4.10.3^ISO</Description>
+					<Assertion>
+						<Plugin QualifiedClassName="gov.nist.healthcare.mu.ss.custom.SS_017_ACK"/>
+					</Assertion>
+				</Constraint>
+			</ByID>
+			<ByID ID="0d741773-619a-4ec1-b6c2-2589faa75b93">
+				<Constraint ID="SS-017-ack" Target="1[1].21[1]">
+					<Description>An instance of MSH.21 (Message Profile Identifier) SHALL contain the constant value: PH_SS-Ack^SS Sender^2.16.840.1.114222.4.10.3^ISO</Description>
+					<Assertion>
+						<Plugin QualifiedClassName="gov.nist.healthcare.mu.ss.custom.SS_017_ACK"/>
+					</Assertion>
+				</Constraint>			
+			</ByID>
+			<ByID ID="0d741773-619a-4ec1-b6c2-2589faa75b94">
+				<Constraint ID="SS-017-ack" Target="1[1].21[1]">
+					<Description>An instance of MSH.21 (Message Profile Identifier) SHALL contain the constant value: PH_SS-Ack^SS Sender^2.16.840.1.114222.4.10.3^ISO</Description>
+					<Assertion>
+						<Plugin QualifiedClassName="gov.nist.healthcare.mu.ss.custom.SS_017_ACK"/>
+					</Assertion>
+				</Constraint>
+			</ByID>
+		<!-- PH_SS-NoAck -->
+
+						<ByID ID="0d741773-619a-4ec1-b6c2-2589faa75b92-2">
+				<Constraint ID="SS-017-ack" Target="1[1].21[1]">
+					<Description>An instance of MSH.21 (Message Profile Identifier) SHALL contain the constant value: PH_SS-Ack^SS Sender^2.16.840.1.114222.4.10.3^ISO</Description>
+					<Assertion>
+						<Plugin QualifiedClassName="gov.nist.healthcare.mu.ss.custom.SS_017_NO_ACK"/>
+					</Assertion>
+				</Constraint>
+			</ByID>
+			<ByID ID="52f1dab8-d538-4c7e-b71b-39619b94c3bf-2">
+				<Constraint ID="SS-017-ack" Target="1[1].21[1]">
+					<Description>An instance of MSH.21 (Message Profile Identifier) SHALL contain the constant value: PH_SS-Ack^SS Sender^2.16.840.1.114222.4.10.3^ISO</Description>
+					<Assertion>
+						<Plugin QualifiedClassName="gov.nist.healthcare.mu.ss.custom.SS_017_NO_ACK"/>
+					</Assertion>
+				</Constraint>
+			</ByID>
+			<ByID ID="0d741773-619a-4ec1-b6c2-2589faa75b93-2">
+				<Constraint ID="SS-017-ack" Target="1[1].21[1]">
+					<Description>An instance of MSH.21 (Message Profile Identifier) SHALL contain the constant value: PH_SS-Ack^SS Sender^2.16.840.1.114222.4.10.3^ISO</Description>
+					<Assertion>
+						<Plugin QualifiedClassName="gov.nist.healthcare.mu.ss.custom.SS_017_NO_ACK"/>
+					</Assertion>
+				</Constraint>			
+			</ByID>
+			<ByID ID="0d741773-619a-4ec1-b6c2-2589faa75b94-2">
+				<Constraint ID="SS-017-ack" Target="1[1].21[1]">
+					<Description>An instance of MSH.21 (Message Profile Identifier) SHALL contain the constant value: PH_SS-Ack^SS Sender^2.16.840.1.114222.4.10.3^ISO</Description>
+					<Assertion>
+						<Plugin QualifiedClassName="gov.nist.healthcare.mu.ss.custom.SS_017_NO_ACK"/>
+					</Assertion>
+				</Constraint>
+			</ByID>
 		</Group>
 	</Constraints>
 </ConformanceContext>
