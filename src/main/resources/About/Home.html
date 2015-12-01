@@ -1,16 +1,57 @@
 <style>
 .home-page-panel {
-    height: 350px;
+	height: 350px;
+	border-top-right-radius: 3px;
+	border-top-left-radius: 3px;
+}
+
+.panel-heading {
+	padding: 10px 15px;
+	border-bottom: 1px solid transparent;
+	border-top-right-radius: 0px;
+	border-top-left-radius: 0px;
+}
+
+@media screen and (min-width: 1768px) {
+	.home-page-panel-content-with-header {
+		max-height: 295px !important;
+		overflow: auto;
+		text-align: left;
+	}
+}
+
+@media screen and (max-width: 1768px) {
+	.home-page-panel-content-with-header {
+		max-height: 280px !important;
+		overflow: auto;
+		text-align: left;
+	}
+}
+
+@media screen and (max-width: 1233px) {
+	.home-page-panel-content-with-header {
+		max-height: 280px !important;
+		overflow: auto;
+		text-align: left;
+	}
+}
+
+@media screen and (max-width: 1183px) {
+	.home-page-panel-content-with-header {
+		max-height: 260px !important;
+		overflow: auto;
+		text-align: left;
+	}
 }
 
 .home-page-panel-content {
-    max-height: 350px!important;
-    overflow: auto;
-    text-align: left;
+	max-height: 300px !important;
+	overflow: auto;
+	text-align: left;
 }
 
-.redhome{
-	color:red;
+.redhome {
+	color: red;
 }
 </style>
 <div class="panel-body">
@@ -45,7 +86,7 @@
 						</a>
 					</div>
 					<div class="panel-body">
-						<div class="home-page-panel-content home-page-onc">
+						<div class="home-page-panel-content-with-header home-page-onc">
 							<p style="text-align: left">The NIST Syndromic Surveillance Test
 								Suite is the test tool used for certifying ONC 2015 Edition
 								Health IT Modules. The capability used for ONC Certification can
