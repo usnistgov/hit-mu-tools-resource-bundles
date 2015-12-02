@@ -7,19 +7,27 @@
 	<Messages>
 		<Message ID="0d741773-619a-4ec1-b972-2589faa75b92" Type="ACK" Event="A01" StructID="ACK_A01">
 			<Segment Ref="MSH_SS" Usage="R" Min="1" Max="1"/>
-			<Segment Ref="MSA_SS" Usage="O" Min="1" Max="1"/>
+			<Segment Ref="SFT_HL7" Usage="O" Min="0" Max="*"/>
+			<Segment Ref="MSA_SS" Usage="R" Min="1" Max="1"/>
+			<Segment Ref="ERR_HL7" Usage="O" Min="0" Max="*"/>
 		</Message>
 		<Message ID="0d741773-619a-4ec1-b973-2589faa75b92" Type="ACK" Event="A04" StructID="ACK_A01">
 			<Segment Ref="MSH_SS" Usage="R" Min="1" Max="1"/>
-			<Segment Ref="MSA_SS" Usage="O" Min="1" Max="1"/>
+			<Segment Ref="SFT_HL7" Usage="O" Min="0" Max="*"/>
+			<Segment Ref="MSA_SS" Usage="R" Min="1" Max="1"/>
+			<Segment Ref="ERR_HL7" Usage="O" Min="0" Max="*"/>
 		</Message>
 		<Message ID="0d741773-619a-4ec1-b974-2589faa75b92" Type="ACK" Event="A08" StructID="ACK_A01">
 			<Segment Ref="MSH_SS" Usage="R" Min="1" Max="1"/>
-			<Segment Ref="MSA_SS" Usage="O" Min="1" Max="1"/>
+			<Segment Ref="SFT_HL7" Usage="O" Min="0" Max="*"/>
+			<Segment Ref="MSA_SS" Usage="R" Min="1" Max="1"/>
+			<Segment Ref="ERR_HL7" Usage="O" Min="0" Max="*"/>
 		</Message>
 		<Message ID="0d741773-619a-4ec1-b975-2589faa75b92" Type="ACK" Event="A03" StructID="ACK_A01">
 			<Segment Ref="MSH_SS" Usage="R" Min="1" Max="1"/>
-			<Segment Ref="MSA_SS" Usage="O" Min="1" Max="1"/>
+			<Segment Ref="SFT_HL7" Usage="O" Min="0" Max="*"/>
+			<Segment Ref="MSA_SS" Usage="R" Min="1" Max="1"/>
+			<Segment Ref="ERR_HL7" Usage="O" Min="0" Max="*"/>
 		</Message>
 		<!-- PH_SS-Ack -->
 		<Message ID="0d741773-619a-4ec1-b6c2-2589faa75b92" Type="ADT" Event="A01" StructID="ADT_A01" Description="ADT message">
@@ -1412,6 +1420,20 @@
 			<Field Name="Autopsy Performed By" Usage="O" Min="0" Max="1" Datatype="XCN" MinLength="1" MaxLength="250" ItemNo="01581"/>
 			<Field Name="Coroner Indicator" Usage="O" Min="0" Max="1" Datatype="ID" MinLength="1" MaxLength="1" Binding="HL70136" BindingStrength="U" ItemNo="01582"/>
 		</Segment>
+		<Segment Name="ERR" ID="ERR_HL7" Label="ERR_HL7"  Description="Error">
+			<Field Name="Error Code and Location" Usage="O" Min="0" Max="0" Datatype="ELD" MaxLength="493" MinLength="1"/>
+			<Field Name="Error Location" Usage="O" Min="0" Max="*" Datatype="ERL" MaxLength="18" MinLength="1"/>
+			<Field Name="HL7 Error Code" Usage="R" Min="1" Max="1" Datatype="CWE" Binding="HL70357" BindingStrength="U" MaxLength="705" MinLength="1"/>
+			<Field Name="Severity" Usage="R" Min="1" Max="1" Datatype="ID" Binding="HL70516" BindingStrength="U" MaxLength="2" MinLength="1"/>
+			<Field Name="Application Error Code" Usage="O" Min="0" Max="1" Datatype="CWE" Binding="HL70533" BindingStrength="U" MaxLength="705" MinLength="1"/>
+			<Field Name="Application Error Parameter" Usage="O" Min="0" Max="10" Datatype="ST" MaxLength="80" MinLength="1"/>
+			<Field Name="Diagnostic Information" Usage="O" Min="1" Max="1" Datatype="TX" MaxLength="2048" MinLength="1"/>
+			<Field Name="User Message" Usage="O" Min="1" Max="1" Datatype="TX" MaxLength="250" MinLength="1"/>
+			<Field Name="Inform Person Indicator" Usage="O" Min="0" Max="*" Datatype="IS" Binding="HL70517" BindingStrength="U" MaxLength="20" MinLength="1"/>
+			<Field Name="Override Type" Usage="O" Min="0" Max="1" Datatype="CWE" Binding="HL70518" BindingStrength="U" MaxLength="705" MinLength="1"/>
+			<Field Name="Override Reason Code" Usage="O" Min="0" Max="*" Datatype="CWE" Binding="HL70519" BindingStrength="U" MaxLength="705" MinLength="1"/>
+			<Field Name="Help Desk Contact Point" Usage="O" Min="0" Max="*" Datatype="XTN" MaxLength="652" MinLength="1"/>
+		</Segment>
 	</Segments>
 	<Datatypes>
 		<!-- CE -->
@@ -1694,7 +1716,20 @@
 			<Component Datatype="ST" MaxLength="199" MinLength="1" Name="Universal ID" Usage="C"/>
 			<Component Datatype="ID" MaxLength="6" MinLength="1" Name="Universal ID Type" Binding="0301" Usage="C"/>
 		</Datatype>
-		<Datatype ID="FC" Name="FC" Label="FC" Description="Financial Class">
+		<Datatype Description="Error Location And Description" ID="ELD" Label="ELD" Name="ELD">
+			<Component Datatype="ST" MaxLength="3" MinLength="1" Name="Segment ID" Usage="O"/>
+			<Component Datatype="NM" MaxLength="2" MinLength="1" Name="Segment Sequence" Usage="O"/>
+			<Component Datatype="NM" MaxLength="2" MinLength="1" Name="Field Position" Usage="O"/>
+			<Component Datatype="CE" MaxLength="483" MinLength="1" Name="Code Identifying Error" Binding="0357" BindingStrength="U" Usage="O"/>
+		</Datatype>
+		<Datatype Description="Error Location" ID="ERL" Name="ERL" Label="ERL">
+			<Component Datatype="ST" MaxLength="3" MinLength="1" Name="Segment ID" Usage="R"/>
+			<Component Datatype="NM" MaxLength="2" MinLength="1" Name="Segment Sequence" Usage="R"/>
+			<Component Datatype="NM" MaxLength="2" MinLength="1" Name="Field Position" Usage="O"/>
+			<Component Datatype="NM" MaxLength="2" MinLength="1" Name="Field Repetition" Usage="O"/>
+			<Component Datatype="NM" MaxLength="2" MinLength="1" Name="Component Number" Usage="O"/>
+			<Component Datatype="NM" MaxLength="2" MinLength="1" Name="Sub-Component Number" Usage="O"/>
+		</Datatype>		<Datatype ID="FC" Name="FC" Label="FC" Description="Financial Class">
 			<Component Name="Financial Class Code" Usage="R" Datatype="IS" MinLength="1" MaxLength="20" Binding="HL70064" BindingStrength="R"/>
 			<Component Name="Effective Date" Usage="O" Datatype="TS" MinLength="1" MaxLength="26"/>
 		</Datatype>
