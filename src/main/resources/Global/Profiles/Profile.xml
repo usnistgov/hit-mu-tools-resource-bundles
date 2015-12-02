@@ -1504,7 +1504,7 @@
 		<!-- EI -->
 		<Datatype ID="EI_SS" Name="EI" Label="EI_SS" Description="Entity Identifier">
 			<Component Name="Entity Identifier" Usage="RE" Datatype="ST_SS" MinLength="1" MaxLength="199"/>
-			<Component Name="Namespace ID" Usage="RE" Datatype="IS_SS" MinLength="1" MaxLength="20"/>
+			<Component Name="Namespace ID" Usage="R" Datatype="IS_SS" MinLength="1" MaxLength="20"/>
 			<Component Name="Universal ID" Usage="R" Datatype="ST_SS" MinLength="1" MaxLength="199"/>
 			<Component Name="Universal ID Type" Usage="R" Datatype="ID_SS" MinLength="1" MaxLength="6" Binding="PHVS_UniversalIDType_SyndromicSurveillance" BindingStrength="R"/>
 		</Datatype>
