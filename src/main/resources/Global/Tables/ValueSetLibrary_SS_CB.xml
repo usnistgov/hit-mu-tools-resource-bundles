@@ -6,7 +6,7 @@ Description="ValueSet for Syndromic Surveillance Context Based validation"
 Name="Vocab for SS Context Based" 
 OrganizationName="HL7 NIST" 
 Status="Active" 
-ValueSetLibraryVersion="20151202">
+ValueSetLibraryVersion="20151203">
 	<NoValidation>
 		<!-- excluded because locally defined -->
 		<BindingIdentifier>HL70300</BindingIdentifier>
@@ -108,6 +108,14 @@ ValueSetLibraryVersion="20151202">
 			<ValueElement Value="2710-2" CodeSystem="LN" DisplayName="Oxygen saturation:SFr:Pt:BldC:Qn:Oximetry"/>
 			<ValueElement Value="9279-1" CodeSystem="LN" DisplayName="Breaths:NRat:Pt:Respiratory system:Qn:"/>
 			<ValueElement Value="3141-9" CodeSystem="LN" DisplayName="Body weight:Mass:Pt:^Patient:Qn:Measured"/>
+		</ValueSetDefinition>
+		<ValueSetDefinition BindingIdentifier="PHVS_AcknowledgementCode_HL7_2x" Oid="2.16.840.1.114222.4.11.958" Name="Acknowledgment Code (HL7)">
+			<ValueElement Value="CA" CodeSystem="HL70008" DisplayName="Enhanced mode: Accept acknowledgment: Commit Accept"/>
+			<ValueElement Value="CE" CodeSystem="HL70008" DisplayName="Enhanced mode: Accept acknowledgment: Commit Error"/>
+			<ValueElement Value="CR" CodeSystem="HL70008" DisplayName="Enhanced mode: Accept acknowledgment: Commit Reject"/>
+			<ValueElement Value="AA" CodeSystem="HL70008" DisplayName="Original mode: Application Accept - Enhanced mode: Application acknowledgment: Accept"/>
+			<ValueElement Value="AE" CodeSystem="HL70008" DisplayName="Original mode: Application Error - Enhanced mode: Application acknowledgment: Error"/>
+			<ValueElement Value="AR" CodeSystem="HL70008" DisplayName="Original mode: Application Reject - Enhanced mode: Application acknowledgment: Reject"/>
 		</ValueSetDefinition>
 		<ValueSetDefinition BindingIdentifier="PHVS_County_FIPS_6-4" Oid="2.16.840.1.114222.4.11.829" Name="Country">
 			<ValueElement Value="45001" CodeSystem="FIPS6_4" DisplayName="Abbeville"/>
