@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ConformanceContext UUID="389e0acf-69a6-46b1-9834-7581ee13a60f" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<MetaData>
-		<Description>Conformance context for ADT_A01</Description>
+		<Description>Conformance context for SS</Description>
 		<Authors>
 			<Author FirstName="Olivier" LastName="MARIE-ROSE"/>
 			<Author FirstName="Caroline" LastName="Rosin"/>
@@ -68,9 +68,6 @@
 				<!-- XCN.12 -->
 				<!-- predicate not defined -->
 			</ByID>
-			<ByID ID="XPN_SS">
-				<!-- TODO  : usages are incorrect for now, need to fix usages first -->
-			</ByID>
 		</Datatype>
 		<Segment>
 			<ByID ID="PID_SS_A03_A04_A08">
@@ -104,11 +101,12 @@
 				</Predicate>
 			</ByID>
 		</Segment>
-		<Group>
+		<Group/>
+		<Message>
 			<!-- ADT_A01 -->
-			<ByName Name="ADT_A01">
-				<!-- PID-29 -->
-				<Predicate Target="4[1].29[1]" TrueUsage="R" FalseUsage="RE" ID="1">
+<!--			<ByName Name="ADT_A01">
+				<!{1}** PID-29 **{1}>
+				<!{1}** <Predicate Target="4[1].29[1]" TrueUsage="R" FalseUsage="RE" ID="1">
 					<Description>If PV1-36 (Discharge Disposition) is valued with any of the following: '20', '40', '41', '42'</Description>
 					<Condition>
 						<AND>
@@ -116,9 +114,9 @@
 							<StringList Path="8[1].36[1]" CSV="20,40,41,42"/>
 						</AND>
 					</Condition>
-				</Predicate>
-				<!-- PID-30 -->
-				<Predicate Target="4[1].30[1]" TrueUsage="R" FalseUsage="RE" ID="1">
+				</Predicate> **{1}>
+				<!{1}** PID-30 **{1}>
+				<!{1}** <Predicate Target="4[1].30[1]" TrueUsage="R" FalseUsage="RE" ID="1">
 					<Description>If PV1-36 (Discharge Disposition) is valued with any of the following: '20', '40', '41', '42'</Description>
 					<Condition>
 						<AND>
@@ -126,8 +124,8 @@
 							<StringList Path="8[1].36[1]" CSV="20,40,41,42"/>
 						</AND>
 					</Condition>
-				</Predicate>
-			</ByName>
+				</Predicate>**{1}>
+			</ByName>-->
 			<!-- ADT_A03 -->
 			<ByName Name="ADT_A03">
 				<!-- PID-29 -->
@@ -197,7 +195,8 @@
 					</Condition>
 				</Predicate>
 			</ByName>
-		</Group>
+				
+		</Message>
 	</Predicates>
 	<Constraints>
 		<Datatype/>
@@ -664,7 +663,8 @@
 				</Constraint>
 			</ByID>
 		</Segment>
-		<Group>
+		<Group/>
+		<Message>
 			<!-- ADT_A01 -->
 			<ByName Name="ADT_A01">
 				<!-- PID-30 -->
@@ -729,7 +729,7 @@
 					</Assertion>
 				</Constraint>
 			</ByName>
-		<!-- PH_SS-Ack -->
+			<!-- PH_SS-Ack -->
 			<ByID ID="0d741773-619a-4ec1-b6c2-2589faa75b92">
 				<Constraint ID="SS-017-ack" Target="1[1].21[1]">
 					<Description>An instance of MSH.21 (Message Profile Identifier) SHALL contain the constant value: PH_SS-Ack^SS Sender^2.16.840.1.114222.4.10.3^ISO</Description>
@@ -762,9 +762,8 @@
 					</Assertion>
 				</Constraint>
 			</ByID>
-		<!-- PH_SS-NoAck -->
-
-						<ByID ID="0d741773-619a-4ec1-b6c2-2589faa75b92-2">
+			<!-- PH_SS-NoAck -->
+			<ByID ID="0d741773-619a-4ec1-b6c2-2589faa75b92-2">
 				<Constraint ID="SS-017-ack" Target="1[1].21[1]">
 					<Description>An instance of MSH.21 (Message Profile Identifier) SHALL contain the constant value: PH_SS-Ack^SS Sender^2.16.840.1.114222.4.10.3^ISO</Description>
 					<Assertion>
@@ -796,6 +795,6 @@
 					</Assertion>
 				</Constraint>
 			</ByID>
-		</Group>
+		</Message>
 	</Constraints>
 </ConformanceContext>
