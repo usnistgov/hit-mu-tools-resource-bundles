@@ -507,7 +507,7 @@
 			<Field Name="Patient ID" Usage="X" Min="0" Max="0" Datatype="CX" MinLength="1" MaxLength="20" ItemNo="00105"/>
 			<Field Name="Patient Identifier List" Usage="R" Min="1" Max="*" Datatype="CX_SS" MinLength="1" MaxLength="478" ItemNo="00106"/>
 			<Field Name="Alternate Patient ID - PID" Usage="X" Min="0" Max="0" Datatype="CX" MinLength="1" MaxLength="20" ItemNo="00107"/>
-			<Field Name="Patient Name" Usage="R" Min="1" Max="*" Datatype="XPN_SS" MinLength="1" MaxLength="294" ItemNo="00108"/>
+			<Field Name="Patient Name" Usage="R" Min="2" Max="2" Datatype="XPN_SS" MinLength="1" MaxLength="294" ItemNo="00108"/>
 			<Field Name="Mother's Maiden Name" Usage="X" Min="0" Max="*" Datatype="XPN" MinLength="1" MaxLength="294" ItemNo="00109"/>
 			<Field Name="Date/Time of Birth" Usage="O" Min="0" Max="1" Datatype="TS" MinLength="1" MaxLength="26" ItemNo="00110"/>
 			<Field Name="Administrative Sex" Usage="RE" Min="0" Max="1" Datatype="IS_SS" MinLength="1" MaxLength="1" Binding="PHVS_Gender_SyndromicSurveillance" BindingStrength="R" ItemNo="00111"/>
@@ -548,7 +548,7 @@
 			<Field Name="Patient ID" Usage="X" Min="0" Max="0" Datatype="CX" MinLength="1" MaxLength="20" ItemNo="00105"/>
 			<Field Name="Patient Identifier List" Usage="R" Min="1" Max="*" Datatype="CX_SS" MinLength="1" MaxLength="478" ItemNo="00106"/>
 			<Field Name="Alternate Patient ID - PID" Usage="X" Min="0" Max="0" Datatype="CX" MinLength="1" MaxLength="20" ItemNo="00107"/>
-			<Field Name="Patient Name" Usage="R" Min="1" Max="*" Datatype="XPN_SS" MinLength="1" MaxLength="294" ItemNo="00108"/>
+			<Field Name="Patient Name" Usage="R" Min="2" Max="2" Datatype="XPN_SS" MinLength="1" MaxLength="294" ItemNo="00108"/>
 			<Field Name="Mother's Maiden Name" Usage="X" Min="0" Max="*" Datatype="XPN" MinLength="1" MaxLength="294" ItemNo="00109"/>
 			<Field Name="Date/Time of Birth" Usage="O" Min="0" Max="1" Datatype="TS" MinLength="1" MaxLength="26" ItemNo="00110"/>
 			<Field Name="Administrative Sex" Usage="RE" Min="0" Max="1" Datatype="IS_SS" MinLength="1" MaxLength="1" Binding="PHVS_Gender_SyndromicSurveillance" BindingStrength="R" ItemNo="00111"/>
@@ -1621,7 +1621,8 @@
 			<Component Name="Suffix (e.g., JR or III)" Usage="X" Datatype="ST" MinLength="1" MaxLength="20"/>
 			<Component Name="Prefix (e.g., DR)" Usage="X" Datatype="ST" MinLength="1" MaxLength="20"/>
 			<Component Name="Degree (e.g., MD)" Usage="X" Datatype="IS" MinLength="1" MaxLength="6" Binding="HL70360"/>
-			<Component Name="Name Type Code" Usage="C" Datatype="ID_SS" MinLength="1" MaxLength="1" Binding="HL70200" BindingStrength="R"/>
+			<!-- [Caroline] [TODO] changed the usage from C to R, need to document -->
+			<Component Name="Name Type Code" Usage="R" Datatype="ID_SS" MinLength="1" MaxLength="1" Binding="HL70200" BindingStrength="R"/>
 			<Component Name="Name Representation Code" Usage="X" Datatype="ID" MinLength="1" MaxLength="1" Binding="HL70465"/>
 			<Component Name="Name Context" Usage="X" Datatype="CE" MinLength="1" MaxLength="483" Binding="HL70448"/>
 			<Component Name="Name Validity Range" Usage="X" Datatype="DR_DTM" MinLength="1" MaxLength="53"/>
