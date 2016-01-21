@@ -5,7 +5,15 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<name>ss-r2-resource-bundle</name>
 
+	<properties>
+		<maven.build.timestamp.format>yyyyMMddHHmm</maven.build.timestamp.format>
+  		<ts>${maven.build.timestamp}</ts>
+  	</properties>
+  	
+  	
+
 	<distributionManagement>
+	
 		<repository>
 			<id>releases</id>
 			<url>http://vm-070.nist.gov:8081/nexus/content/repositories/releases</url>
@@ -16,6 +24,7 @@
 			<url>http://vm-070.nist.gov:8081/nexus/content/repositories/snapshots</url>
 		</snapshotRepository>
 	</distributionManagement>	
+
 
 	<dependencies>
 		<dependency>
@@ -62,4 +71,25 @@
 			<optional>true</optional>
 		</dependency>
 	</dependencies>
+	
+	<build>
+		<resources>
+	           <resource>
+	                 <!-- enable filtering for About/MetaData.json -->
+	                 <directory>src/main/resources</directory>
+	                 <filtering>true</filtering>
+	                 <includes>
+	                        <include>About/MetaData.json</include>
+	                 </includes>
+	           </resource>
+	           <resource>
+	                 <!-- disable filtering for all other resources -->
+	                 <directory>src/main/resources</directory>
+	                 <filtering>false</filtering>
+	                 <excludes>
+	                        <exclude>About/MetaData.json</exclude>
+	                 </excludes>
+	           </resource>
+	    </resources>
+	</build>
 </project>
