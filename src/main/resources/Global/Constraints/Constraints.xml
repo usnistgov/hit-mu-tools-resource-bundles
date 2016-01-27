@@ -540,9 +540,9 @@
 			<ById ID="PV2_SS">
 				<!-- PV2-3 -->
 				<Constraint ID="NIST-SS-009" Target="3[1].3[1]">
-					<Description>PV2-3.3 SHALL be valued "I9CDX" or "I10" or "SCT".</Description>
+					<Description>PV2-3.3 SHALL be valued "I9CDX" or "I10C" or "SCT".</Description>
 					<Assertion>
-						<StringList Path="3[1].3[1]" CSV="I9CDX,I10,SCT"/>
+						<StringList Path="3[1].3[1]" CSV="I9CDX,I10C,SCT"/>
 					</Assertion>
 				</Constraint>
 			</ById>
@@ -556,9 +556,9 @@
 				</Constraint>
 				<!-- DG1-3 -->
 				<Constraint ID="NIST-SS-010" Target="3[1].3[1]">
-					<Description>DG1-3.3 SHALL be valued "I9CDX" or "I10" or "SCT".</Description>
+					<Description>DG1-3.3 SHALL be valued "I9CDX" or "I10C" or "SCT".</Description>
 					<Assertion>
-						<StringList Path="3[1].3[1]" CSV="I9CDX,I10,SCT"/>
+						<StringList Path="3[1].3[1]" CSV="I9CDX,I10C,SCT"/>
 					</Assertion>
 				</Constraint>
 				<!-- DG1-6 -->
