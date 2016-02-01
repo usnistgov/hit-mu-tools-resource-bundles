@@ -1,12 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- edited with XMLSpy v2016 (http://www.altova.com) by Nicolas Crouzier (NIST) -->
-<ValueSetLibrary xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-ValueSetLibraryIdentifier="5674a4b2-0e26-4f6a-9dc8-ba78a4727c83" 
-Description="ValueSet for Syndromic Surveillance Context Based validation" 
-Name="Vocab for SS Context Based" 
-OrganizationName="HL7 NIST" 
-Status="Active" 
-ValueSetLibraryVersion="20151203">
+<ValueSetLibrary xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ValueSetLibraryIdentifier="5674a4b2-0e26-4f6a-9dc8-ba78a4727c83" Description="ValueSet for Syndromic Surveillance Context Based validation" Name="Vocab for SS Context Based" OrganizationName="HL7 NIST" Status="Active" ValueSetLibraryVersion="20151203">
 	<NoValidation>
 		<!-- excluded because locally defined -->
 		<BindingIdentifier>HL70300</BindingIdentifier>
@@ -50,7 +44,7 @@ ValueSetLibraryVersion="20151203">
 			<ValueElement Value="J11.1" CodeSystem="I10C" DisplayName="Influenza due to unidentified influenza virus with other respiratory manifestations"/>
 			<ValueElement Value="J111" CodeSystem="I10C" DisplayName="Influenza due to unidentified influenza virus with other respiratory manifestations"/>
 			<ValueElement Value="R079" CodeSystem="I10C" DisplayName="Chest Pain, unspecified"/>
-			<ValueElement Value="R07.9" CodeSystem="I10C" DisplayName="Chest Pain, unspecified"/>			
+			<ValueElement Value="R07.9" CodeSystem="I10C" DisplayName="Chest Pain, unspecified"/>
 			<ValueElement Value="S0210XA" CodeSystem="I10C" DisplayName="Unspecified fracture of base of skull, initial encounter for closed fracture"/>
 			<ValueElement Value="S02.10XA" CodeSystem="I10C" DisplayName="Unspecified fracture of base of skull, initial encounter for closed fracture"/>
 			<ValueElement Value="S02.112A" CodeSystem="I10C" DisplayName="Type III occipital condyle fracture, initial encounter for closed fracture"/>
@@ -62,11 +56,11 @@ ValueSetLibraryVersion="20151203">
 			<ValueElement Value="S069X6A" CodeSystem="I10C" DisplayName="Unspecified intracranial injury with loss of consciousness greater than 24 hours without return to pre-existing conscious level with patient surviving, initial encounter"/>
 			<ValueElement Value="S06.9X6A" CodeSystem="I10C" DisplayName="Unspecified intracranial injury with loss of consciousness greater than 24 hours without return to pre-existing conscious level with patient surviving, initial encounter"/>
 			<ValueElement Value="S060X9A" CodeSystem="I10C" DisplayName="Concussion with loss of consciousness of unspecified duration, initial encounter"/>
-			<ValueElement Value="S06.0X9A" CodeSystem="I10C" DisplayName="Concussion with loss of consciousness of unspecified duration, initial encounter"/>			
+			<ValueElement Value="S06.0X9A" CodeSystem="I10C" DisplayName="Concussion with loss of consciousness of unspecified duration, initial encounter"/>
 			<ValueElement Value="T58.14XA" CodeSystem="I10C" DisplayName="Toxic effect of carbon monoxide from utility gas, undetermined, initial encounter; and E87.2, Metabolic Acidosis"/>
 			<ValueElement Value="T5814XA" CodeSystem="I10C" DisplayName="Toxic effect of carbon monoxide from utility gas, undetermined, initial encounter; and E87.2, Metabolic Acidosis"/>
-			<ValueElement Value="T58.11XA" CodeSystem="I10C" DisplayName="Toxic effect of carbon monoxide from utility gas, accidental (unintentional), initial encounter."/>			
-			<ValueElement Value="T5811XA" CodeSystem="I10C" DisplayName="Toxic effect of carbon monoxide from utility gas, accidental (unintentional), initial encounter."/>			
+			<ValueElement Value="T58.11XA" CodeSystem="I10C" DisplayName="Toxic effect of carbon monoxide from utility gas, accidental (unintentional), initial encounter."/>
+			<ValueElement Value="T5811XA" CodeSystem="I10C" DisplayName="Toxic effect of carbon monoxide from utility gas, accidental (unintentional), initial encounter."/>
 			<ValueElement Value="V134XXA" CodeSystem="I10C" DisplayName="Pedal cycle driver injured in collision with car, pick-up truck or van in traffic accident, initial encounter"/>
 			<ValueElement Value="V13.4XXA" CodeSystem="I10C" DisplayName="Pedal cycle driver injured in collision with car, pick-up truck or van in traffic accident, initial encounter"/>
 			<ValueElement Value="V139XXA" CodeSystem="I10C" DisplayName="Unspecified pedal cyclist injured in collision with car, pick-up truck or van in traffic accident, initial encounter"/>
@@ -75,7 +69,7 @@ ValueSetLibraryVersion="20151203">
 			<ValueElement Value="z95.5" CodeSystem="I10C" DisplayName="Removal of coronary artery obstruction, and stent insertions"/>
 		</ValueSetDefinition>
 		<!-- NIST version for OBX-3 validation -->
-		<ValueSetDefinition  BindingIdentifier="[NIST]PHVS_ObservationIdentifier_SyndromicSurveillance&amp;PHVS_VitalSignResult_HITSP" Name="Observation Identifier (Syndromic Surveillance)&amp;Vital Sign Result Value Set">
+		<ValueSetDefinition BindingIdentifier="[NIST]PHVS_ObservationIdentifier_SyndromicSurveillance&amp;PHVS_VitalSignResult_HITSP" Name="Observation Identifier (Syndromic Surveillance)&amp;Vital Sign Result Value Set">
 			<!-- values from  PHVS_ObservationIdentifier_SyndromicSurveillance -->
 			<ValueElement Value="11283-9" CodeSystem="LN" DisplayName="Acuity assessment [Function] at First encounter"/>
 			<ValueElement Value="21612-7" CodeSystem="LN" DisplayName="Age:Time:Pt:Patient:Qn:Reported"/>
@@ -3408,14 +3402,12 @@ ValueSetLibraryVersion="20151203">
 			<ValueElement Value="3141-9" CodeSystem="LOINC" DisplayName="Body weight:Mass:Pt:^Patient:Qn:Measured"/>
 		</ValueSetDefinition>
 		<ValueSetDefinition BindingIdentifier="PHVS_CodingSystem_HL7_2x_Table0396" Oid="2.16.840.1.114222.4.11.3338" Name="Coding System HL7 2x Table 0396">
-			<!-- codes added -->
-			<ValueElement Value="HCPTNUCC" CodeSystem="HL70396" DisplayName="Health Care Provider Taxonomy"/>
-			<!-- end of codes added -->
 			<ValueElement Value="ACR" CodeSystem="HL70396" DisplayName="American College of Radiology finding codes"/>
 			<ValueElement Value="ATC" CodeSystem="HL70396" DisplayName="American Type Culture Collection"/>
 			<ValueElement Value="AS4E" CodeSystem="HL70396" DisplayName="AS4 Neurophysiology Codes"/>
 			<ValueElement Value="X12DEnnnn" CodeSystem="HL70396" DisplayName="ASC X12 Code List nnnn"/>
 			<ValueElement Value="AS4" CodeSystem="HL70396" DisplayName="ASTM E1238/ E1467 Universal"/>
+			<ValueElement Value="AMTv2" CodeSystem="HL70396" DisplayName="Australian Medicines Terminology (v2)"/>
 			<ValueElement Value="CDCA" CodeSystem="HL70396" DisplayName="CDC Analyte Codes"/>
 			<ValueElement Value="CDCOBS" CodeSystem="HL70396" DisplayName="CDC BioSense RT observations (Census) - CDC"/>
 			<ValueElement Value="CDCEDACUITY" CodeSystem="HL70396" DisplayName="CDC Emergency Department Acuity"/>
@@ -3433,6 +3425,7 @@ ValueSetLibraryVersion="20151203">
 			<ValueElement Value="CE (obsolete)" CodeSystem="HL70396" DisplayName="CEN ECG diagnostic codes"/>
 			<ValueElement Value="CAS" CodeSystem="HL70396" DisplayName="Chemical abstract codes"/>
 			<ValueElement Value="CCC" CodeSystem="HL70396" DisplayName="Clinical Care Classification system"/>
+			<ValueElement Value="VIS" CodeSystem="HL70396" DisplayName="Clinicians are required to track the Vaccine Information Sheet (VIS) that was shared with the recipient of a vaccination.  This code system contains codes that  identify the document type and the owner of the document."/>
 			<ValueElement Value="CLP" CodeSystem="HL70396" DisplayName="CLIP"/>
 			<ValueElement Value="HPC" CodeSystem="HL70396" DisplayName="CMS (formerly HCFA )Procedure Codes (HCPCS)"/>
 			<ValueElement Value="HCPCS" CodeSystem="HL70396" DisplayName="CMS (formerly HCFA)  Common Procedure Coding System"/>
@@ -3474,6 +3467,7 @@ ValueSetLibraryVersion="20151203">
 			<ValueElement Value="GMDC2006" CodeSystem="HL70396" DisplayName="German Major v2006 Diagnostic Codes"/>
 			<ValueElement Value="O301" CodeSystem="HL70396" DisplayName="German Procedure Codes"/>
 			<ValueElement Value="HCPT" CodeSystem="HL70396" DisplayName="Health Care Provider Taxonomy"/>
+			<ValueElement Value="HCPTNUCC" CodeSystem="HL70396" DisplayName="Health Care Provider Taxonomy"/>
 			<ValueElement Value="HI" CodeSystem="HL70396" DisplayName="Health Outcomes"/>
 			<ValueElement Value="HSLOC" CodeSystem="HL70396" DisplayName="Healthcare Service Location"/>
 			<ValueElement Value="HB" CodeSystem="HL70396" DisplayName="HIBCC"/>
@@ -3496,12 +3490,15 @@ ValueSetLibraryVersion="20151203">
 			<ValueElement Value="I9CDX" CodeSystem="HL70396" DisplayName="ICD-9CM Diagnosis codes"/>
 			<ValueElement Value="I9CP" CodeSystem="HL70396" DisplayName="ICD-9CM Procedure codes"/>
 			<ValueElement Value="IC2" CodeSystem="HL70396" DisplayName="ICHPPC-2"/>
+			<ValueElement Value="IHELAW" CodeSystem="HL70396" DisplayName="IHE Laboratory Analytical Workflow (LAW) Profile Codes."/>
 			<ValueElement Value="NAICS" CodeSystem="HL70396" DisplayName="Industry (NAICS)"/>
 			<ValueElement Value="SIC" CodeSystem="HL70396" DisplayName="Industry (SIC)"/>
 			<ValueElement Value="ITIS" CodeSystem="HL70396" DisplayName="Integrated Taxonomic Information System"/>
 			<ValueElement Value="ICDO2" CodeSystem="HL70396" DisplayName="International Classification of Disease for Oncology Second Edition"/>
 			<ValueElement Value="ICDO3" CodeSystem="HL70396" DisplayName="International Classification of Disease for Oncology Third Edition"/>
 			<ValueElement Value="ICDO" CodeSystem="HL70396" DisplayName="International Classification of Diseases for Oncology"/>
+			<ValueElement Value="I10C" CodeSystem="HL70396" DisplayName="International Classification of Diseases, 10th  Revision, Clinical Modification (ICD-10-CM)"/>
+			<ValueElement Value="ICF" CodeSystem="HL70396" DisplayName="International Classification of Functioning, Disability and Health (ICF)"/>
 			<ValueElement Value="ICSD" CodeSystem="HL70396" DisplayName="International Classification of Sleep Disorders"/>
 			<ValueElement Value="IBT" CodeSystem="HL70396" DisplayName="ISBT"/>
 			<ValueElement Value="IBT0001" CodeSystem="HL70396" DisplayName="ISBT 128 Standard transfusion/transplantation data items"/>
@@ -3557,7 +3554,7 @@ ValueSetLibraryVersion="20151203">
 			<ValueElement Value="UB04FL15" CodeSystem="HL70396" DisplayName="Point of Origin"/>
 			<ValueElement Value="POS" CodeSystem="HL70396" DisplayName="POS Codes"/>
 			<ValueElement Value="UB04FL14" CodeSystem="HL70396" DisplayName="Priority (Type) of Visit"/>
-			<ValueElement Value="CDCREC" CodeSystem="HL70396" DisplayName="Race and Ethnicity - CDC"/>
+			<ValueElement Value="CDCREC" CodeSystem="HL70396" DisplayName="Race &amp; Ethnicity - CDC"/>
 			<ValueElement Value="RC" CodeSystem="HL70396" DisplayName="Read Classification"/>
 			<ValueElement Value="NIP009" CodeSystem="HL70396" DisplayName="Reported adverse event previously"/>
 			<ValueElement Value="RXNORM" CodeSystem="HL70396" DisplayName="RxNorm"/>
@@ -3567,6 +3564,7 @@ ValueSetLibraryVersion="20151203">
 			<ValueElement Value="SNM3" CodeSystem="HL70396" DisplayName="SNOMED International"/>
 			<ValueElement Value="SNT" CodeSystem="HL70396" DisplayName="SNOMED topology codes (anatomic sites)"/>
 			<ValueElement Value="NIP001" CodeSystem="HL70396" DisplayName="Source of Information (Immunization)"/>
+			<ValueElement Value="PHDSCSOPT" CodeSystem="HL70396" DisplayName="Source of Payment Typology"/>
 			<ValueElement Value="RSPMODE" CodeSystem="HL70396" DisplayName="Specifies the mode, immediate versus deferred or queued, by which a receiver should communicate its receiver responsibilities."/>
 			<ValueElement Value="NIP002" CodeSystem="HL70396" DisplayName="Substance refusal reason"/>
 			<ValueElement Value="SNM" CodeSystem="HL70396" DisplayName="Systemized Nomenclature of Medicine (SNOMED)"/>
@@ -3579,6 +3577,7 @@ ValueSetLibraryVersion="20151203">
 			<ValueElement Value="USPS" CodeSystem="HL70396" DisplayName="United States Postal Service"/>
 			<ValueElement Value="UPC" CodeSystem="HL70396" DisplayName="Universal Product Code"/>
 			<ValueElement Value="UPIN" CodeSystem="HL70396" DisplayName="UPIN"/>
+			<ValueElement Value="ROLECLASS" CodeSystem="HL70396" DisplayName="Used initially for contact roles."/>
 			<ValueElement Value="ACTRELSS" CodeSystem="HL70396" DisplayName="Used to indicate that the target of the relationship will be a filtered subset of the total related set of targets"/>
 			<ValueElement Value="NIP007" CodeSystem="HL70396" DisplayName="Vaccinated at location (facility)"/>
 			<ValueElement Value="NIP004" CodeSystem="HL70396" DisplayName="Vaccination - Contraindications, Precautions, and Immunities"/>
