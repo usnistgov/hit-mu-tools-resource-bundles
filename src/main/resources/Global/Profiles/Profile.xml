@@ -1640,10 +1640,10 @@
 		<Datatype ID="CE" Description="Coded Element" Name="CE" Label="CE">
 			<Component Datatype="ST" MaxLength="20" MinLength="1" Name="Identifier" Usage="O"/>
 			<Component Datatype="ST" MaxLength="199" MinLength="1" Name="Text" Usage="O"/>
-			<Component Datatype="ID" MaxLength="20" MinLength="1" Name="Name of Coding System" Binding="0396" Usage="O"/>
+			<Component Datatype="ID" MaxLength="20" MinLength="1" Name="Name of Coding System" Binding="HL70396" Usage="O"/>
 			<Component Datatype="ST" MaxLength="20" MinLength="1" Name="Alternate Identifier" Usage="O"/>
 			<Component Datatype="ST" MaxLength="199" MinLength="1" Name="Alternate Text" Usage="O"/>
-			<Component Datatype="ID" MaxLength="20" MinLength="1" Name="Name of Alternate Coding System" Binding="0396" Usage="O"/>
+			<Component Datatype="ID" MaxLength="20" MinLength="1" Name="Name of Alternate Coding System" Binding="HL70396" Usage="O"/>
 		</Datatype>
 		<Datatype ID="CNE" Name="CNE" Label="CNE" Description="Coded with No Exceptions">
 			<Component Name="Identifier" Usage="R" Datatype="ST" MinLength="1" MaxLength="20"/>
@@ -1667,10 +1667,10 @@
 		<Datatype ID="CWE" Description="Coded With Exceptions" Name="CWE" Label="CWE">
 			<Component Datatype="ST" MaxLength="20" MinLength="1" Name="Identifier" Usage="O"/>
 			<Component Datatype="ST" MaxLength="199" MinLength="1" Name="Text" Usage="O"/>
-			<Component Datatype="ID" MaxLength="20" MinLength="1" Name="Name of Coding System" Binding="0396" Usage="O"/>
+			<Component Datatype="ID" MaxLength="20" MinLength="1" Name="Name of Coding System" Binding="HL70396" Usage="O"/>
 			<Component Datatype="ST" MaxLength="20" MinLength="1" Name="Alternate Identifier" Usage="O"/>
 			<Component Datatype="ST" MaxLength="199" MinLength="1" Name="Alternate Text" Usage="O"/>
-			<Component Datatype="ID" MaxLength="20" MinLength="1" Name="Name of Alternate Coding System" Binding="0396" Usage="O"/>
+			<Component Datatype="ID" MaxLength="20" MinLength="1" Name="Name of Alternate Coding System" Binding="HL70396" Usage="O"/>
 			<Component Datatype="ST" MaxLength="10" MinLength="1" Name="Coding System Version ID" Usage="C"/>
 			<Component Datatype="ST" MaxLength="10" MinLength="1" Name="Alternate Coding System Version ID" Usage="O"/>
 			<Component Datatype="ST" MaxLength="199" MinLength="1" Name="Original Text" Usage="O"/>
@@ -1678,9 +1678,9 @@
 		<Datatype ID="CX" Description="Extended Composite Id With Check Digit" Name="CX" Label="CX">
 			<Component Datatype="ST" MaxLength="15" MinLength="1" Name="ID Number" Usage="R"/>
 			<Component Datatype="ST" MaxLength="1" MinLength="1" Name="Check Digit" Usage="O"/>
-			<Component Datatype="ID" MaxLength="3" MinLength="1" Name="Check Digit Scheme" Binding="0061" Usage="O"/>
-			<Component Datatype="HD" MaxLength="227" MinLength="1" Name="Assigning Authority" Binding="0363" Usage="O"/>
-			<Component Datatype="ID" MaxLength="5" MinLength="1" Name="Identifier Type Code" Binding="0203" Usage="O"/>
+			<Component Datatype="ID" MaxLength="3" MinLength="1" Name="Check Digit Scheme" Binding="HL70061" Usage="O"/>
+			<Component Datatype="HD" MaxLength="227" MinLength="1" Name="Assigning Authority" Binding="HL70363" Usage="O"/>
+			<Component Datatype="ID" MaxLength="5" MinLength="1" Name="Identifier Type Code" Binding="HL70203" Usage="O"/>
 			<Component Datatype="HD" MaxLength="227" MinLength="1" Name="Assigning Facility" Usage="O"/>
 			<Component Datatype="DT" MaxLength="8" MinLength="1" Name="Effective Date" Usage="O"/>
 			<Component Datatype="DT" MaxLength="8" MinLength="1" Name="Expiration Date" Usage="O"/>
@@ -1713,15 +1713,15 @@
 		</Datatype>
 		<Datatype ID="EI" Description="Entity Identifier" Name="EI" Label="EI">
 			<Component Datatype="ST" MaxLength="199" MinLength="1" Name="Entity Identifier" Usage="O"/>
-			<Component Datatype="IS" MaxLength="20" MinLength="1" Name="Namespace ID" Binding="0363" Usage="O"/>
+			<Component Datatype="IS" MaxLength="20" MinLength="1" Name="Namespace ID" Binding="HL70363" Usage="O"/>
 			<Component Datatype="ST" MaxLength="199" MinLength="1" Name="Universal ID" Usage="C"/>
-			<Component Datatype="ID" MaxLength="6" MinLength="1" Name="Universal ID Type" Binding="0301" Usage="C"/>
+			<Component Datatype="ID" MaxLength="6" MinLength="1" Name="Universal ID Type" Binding="HL70301" Usage="C"/>
 		</Datatype>
 		<Datatype Description="Error Location And Description" ID="ELD" Label="ELD" Name="ELD">
 			<Component Datatype="ST" MaxLength="3" MinLength="1" Name="Segment ID" Usage="O"/>
 			<Component Datatype="NM" MaxLength="2" MinLength="1" Name="Segment Sequence" Usage="O"/>
 			<Component Datatype="NM" MaxLength="2" MinLength="1" Name="Field Position" Usage="O"/>
-			<Component Datatype="CE" MaxLength="483" MinLength="1" Name="Code Identifying Error" Binding="0357" BindingStrength="U" Usage="O"/>
+			<Component Datatype="CE" MaxLength="483" MinLength="1" Name="Code Identifying Error" Binding="HL70357" BindingStrength="U" Usage="O"/>
 		</Datatype>
 		<Datatype Description="Error Location" ID="ERL" Name="ERL" Label="ERL">
 			<Component Datatype="ST" MaxLength="3" MinLength="1" Name="Segment ID" Usage="R"/>
@@ -1742,9 +1742,9 @@
 			<Component Name="Surname From Partner/Spouse" Usage="O" Datatype="ST" MinLength="1" MaxLength="50"/>
 		</Datatype>
 		<Datatype ID="HD" Description="Hierarchic Designator" Name="HD" Label="HD">
-			<Component Datatype="IS" MaxLength="20" MinLength="1" Name="Namespace ID" Binding="0300" Usage="O"/>
+			<Component Datatype="IS" MaxLength="20" MinLength="1" Name="Namespace ID" Binding="HL70300" Usage="O"/>
 			<Component Datatype="ST" MaxLength="199" MinLength="1" Name="Universal ID" Usage="C"/>
-			<Component Datatype="ID" MaxLength="6" MinLength="1" Name="Universal ID Type" Binding="0301" Usage="C"/>
+			<Component Datatype="ID" MaxLength="6" MinLength="1" Name="Universal ID Type" Binding="HL70301" Usage="C"/>
 		</Datatype>
 		<Datatype ID="ICD" Name="ICD" Label="ICD" Description="Insurance Certification Definition">
 			<Component Name="Certification Patient Type" Usage="O" Datatype="IS" MinLength="1" MaxLength="11" Binding="HL70150" BindingStrength="U"/>
@@ -1811,7 +1811,7 @@
 		<Datatype ID="ST" Name="ST" Label="ST" Description="String Data"/>
 		<Datatype ID="TS" Description="Time Stamp" Name="TS" Label="TS">
 			<Component Datatype="DTM" MaxLength="24" MinLength="1" Name="Time" Usage="R"/>
-			<Component Datatype="ID" MaxLength="1" MinLength="1" Name="Degree of Precision" Binding="0529" Usage="B"/>
+			<Component Datatype="ID" MaxLength="1" MinLength="1" Name="Degree of Precision" Binding="HL70529" Usage="B"/>
 		</Datatype>
 		<Datatype ID="TX" Name="TX" Label="TX" Description="Text Data"/>
 		<Datatype ID="UVC" Name="UVC" Label="UVC" Description="UB Value Code and Amount">
@@ -1825,12 +1825,12 @@
 			<Component Datatype="ST" MaxLength="50" MinLength="1" Name="City" Usage="O"/>
 			<Component Datatype="ST" MaxLength="50" MinLength="1" Name="State or Province" Usage="O"/>
 			<Component Datatype="ST" MaxLength="12" MinLength="1" Name="Zip or Postal Code" Usage="O"/>
-			<Component Datatype="ID" MaxLength="3" MinLength="1" Name="Country" Binding="0399" Usage="O"/>
-			<Component Datatype="ID" MaxLength="3" MinLength="1" Name="Address Type" Binding="0190" Usage="O"/>
+			<Component Datatype="ID" MaxLength="3" MinLength="1" Name="Country" Binding="HL70399" Usage="O"/>
+			<Component Datatype="ID" MaxLength="3" MinLength="1" Name="Address Type" Binding="HL70190" Usage="O"/>
 			<Component Datatype="ST" MaxLength="50" MinLength="1" Name="Other Geographic Designation" Usage="O"/>
-			<Component Datatype="IS" MaxLength="20" MinLength="1" Name="County/Parish Code" Binding="0289" Usage="O"/>
-			<Component Datatype="IS" MaxLength="20" MinLength="1" Name="Census Tract" Binding="0288" Usage="O"/>
-			<Component Datatype="ID" MaxLength="1" MinLength="1" Name="Address Representation Code" Binding="0465" Usage="O"/>
+			<Component Datatype="IS" MaxLength="20" MinLength="1" Name="County/Parish Code" Binding="HL70289" Usage="O"/>
+			<Component Datatype="IS" MaxLength="20" MinLength="1" Name="Census Tract" Binding="HL70288" Usage="O"/>
+			<Component Datatype="ID" MaxLength="1" MinLength="1" Name="Address Representation Code" Binding="HL70465" Usage="O"/>
 			<Component Datatype="DR_DTM" MaxLength="53" MinLength="1" Name="Address Validity Range" Usage="B"/>
 			<Component Datatype="TS" MaxLength="26" MinLength="1" Name="Effective Date" Usage="O"/>
 			<Component Datatype="TS" MaxLength="26" MinLength="1" Name="Expiration Date" Usage="O"/>
@@ -1842,18 +1842,18 @@
 			<Component Datatype="ST" MaxLength="30" MinLength="1" Name="Second and Further Given Names or Initials Thereof" Usage="O"/>
 			<Component Datatype="ST" MaxLength="20" MinLength="1" Name="Suffix (e.g., JR or III)" Usage="O"/>
 			<Component Datatype="ST" MaxLength="20" MinLength="1" Name="Prefix (e.g., DR)" Usage="O"/>
-			<Component Datatype="IS" MaxLength="5" MinLength="1" Name="Degree (e.g., MD)" Binding="0360" Usage="B"/>
-			<Component Datatype="IS" MaxLength="4" MinLength="1" Name="Source Table" Binding="0297" Usage="C"/>
-			<Component Datatype="HD" MaxLength="227" MinLength="1" Name="Assigning Authority" Binding="0363" Usage="O"/>
-			<Component Datatype="ID" MaxLength="1" MinLength="1" Name="Name Type Code" Binding="0200" Usage="O"/>
+			<Component Datatype="IS" MaxLength="5" MinLength="1" Name="Degree (e.g., MD)" Binding="HL70360" Usage="B"/>
+			<Component Datatype="IS" MaxLength="4" MinLength="1" Name="Source Table" Binding="HL70297" Usage="C"/>
+			<Component Datatype="HD" MaxLength="227" MinLength="1" Name="Assigning Authority" Binding="HL70363" Usage="O"/>
+			<Component Datatype="ID" MaxLength="1" MinLength="1" Name="Name Type Code" Binding="HL70200" Usage="O"/>
 			<Component Datatype="ST" MaxLength="1" MinLength="1" Name="Identifier Check Digit" Usage="O"/>
-			<Component Datatype="ID" MaxLength="3" MinLength="1" Name="Check Digit Scheme" Binding="0061" Usage="C"/>
-			<Component Datatype="ID" MaxLength="5" MinLength="1" Name="Identifier Type Code" Binding="0203" Usage="O"/>
+			<Component Datatype="ID" MaxLength="3" MinLength="1" Name="Check Digit Scheme" Binding="HL70061" Usage="C"/>
+			<Component Datatype="ID" MaxLength="5" MinLength="1" Name="Identifier Type Code" Binding="HL70203" Usage="O"/>
 			<Component Datatype="HD" MaxLength="227" MinLength="1" Name="Assigning Facility" Usage="O"/>
-			<Component Datatype="ID" MaxLength="1" MinLength="1" Name="Name Representation Code" Binding="0465" Usage="O"/>
-			<Component Datatype="CE" MaxLength="483" MinLength="1" Name="Name Context" Binding="0448" Usage="O"/>
+			<Component Datatype="ID" MaxLength="1" MinLength="1" Name="Name Representation Code" Binding="HL70465" Usage="O"/>
+			<Component Datatype="CE" MaxLength="483" MinLength="1" Name="Name Context" Binding="HL70448" Usage="O"/>
 			<Component Datatype="DR_DTM" MaxLength="53" MinLength="1" Name="Name Validity Range" Usage="B"/>
-			<Component Datatype="ID" MaxLength="1" MinLength="1" Name="Name Assembly Order" Binding="0444" Usage="O"/>
+			<Component Datatype="ID" MaxLength="1" MinLength="1" Name="Name Assembly Order" Binding="HL70444" Usage="O"/>
 			<Component Datatype="TS" MaxLength="26" MinLength="1" Name="Effective Date" Usage="O"/>
 			<Component Datatype="TS" MaxLength="26" MinLength="1" Name="Expiration Date" Usage="O"/>
 			<Component Datatype="ST" MaxLength="199" MinLength="1" Name="Professional Suffix" Usage="O"/>
