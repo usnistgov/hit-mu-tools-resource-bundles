@@ -43,6 +43,7 @@ public class TestBundle {
 
     private static Logger logger = Logger.getLogger(TestBundle.class.getName());
     private static String testCaseDir = "./src/main/resources/Contextbased";
+    // private static String testCaseDir = "./src/main/resources/Contextfree";
     private static String integrationProfile = "/Global/Profiles/Profile.xml";
     private static String conformanceContext = "/Global/Constraints/Constraints.xml";
     private static String tableLibrary = "/Global/Tables/ValueSetLibrary_SS_CB.xml";
@@ -73,6 +74,8 @@ public class TestBundle {
                     TrueFileFilter.INSTANCE);
 
             File json = new File(message.getParentFile(), "TestStep.json");
+            // File json = new File(message.getParentFile(), "TestObject.json");
+
             // read profile
             String jsonSt = FileUtils.readFileToString(json);
             JTestStep js = JTestStep.fromJson(jsonSt);
