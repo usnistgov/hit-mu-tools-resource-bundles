@@ -3973,7 +3973,10 @@
 			<ValueElement Value="GUID" CodeSystem="HL70301" DisplayName="Same as UUID."/>
 			<ValueElement Value="HCD" CodeSystem="HL70301" DisplayName="The CEN Healthcare Coding Scheme Designator. (Identifiers used in DICOM follow this assignment scheme.)"/>
 			<ValueElement Value="UUID" CodeSystem="HL70301" DisplayName="The DCE Universal Unique Identifier"/>
-			<ValueElement Value="L,M,N" CodeSystem="HL70301" DisplayName="These are reserved for locally defined coding schemes."/>
+			<!-- <ValueElement Value="L,M,N" CodeSystem="HL70301" DisplayName="These are reserved for locally defined coding schemes."/> -->
+			<ValueElement Value="L" CodeSystem="HL70301" DisplayName="These are reserved for locally defined coding schemes."/>
+			<ValueElement Value="M" CodeSystem="HL70301" DisplayName="These are reserved for locally defined coding schemes."/>
+			<ValueElement Value="N" CodeSystem="HL70301" DisplayName="These are reserved for locally defined coding schemes."/>
 			<ValueElement Value="URI" CodeSystem="HL70301" DisplayName="Uniform Resource Identifier"/>
 			<ValueElement Value="Random" CodeSystem="HL70301" DisplayName="Usually a base64 encoded string of random bits."/>
 		</ValueSetDefinition>
