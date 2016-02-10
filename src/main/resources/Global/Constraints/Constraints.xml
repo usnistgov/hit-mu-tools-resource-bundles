@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ConformanceContext UUID="389e0acf-69a6-46b1-9834-7581ee13a60f" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<ConformanceContext UUID="389e0acf-69a6-46b1-9834-7581ee13a60f" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="file:///D:/sourceforge/lri-nist/mu-nist/resource-bundle-generator/src/main/resources/schema/ConformanceContext.xsd">
 	<MetaData>
 		<Description>Conformance context for SS</Description>
 		<Authors>
@@ -53,7 +53,7 @@
 			</ByID>
 			<ByID ID="CWE_SS_OBX">
 				<!-- CWE.6 -->
-			`<Predicate Target="6[1]" TrueUsage="R" FalseUsage="X">
+			<Predicate Target="6[1]" TrueUsage="R" FalseUsage="X">
 					<Description>If CWE.4 (Identifier) is valued.</Description>
 					<Condition>
 						<Presence Path="4[1]"/>
@@ -104,7 +104,7 @@
 		<Group/>
 		<Message>
 			<!-- ADT_A01 -->
-<!--			<ByName Name="ADT_A01">
+			<!--			<ByName Name="ADT_A01">
 				<!{1}** PID-29 **{1}>
 				<!{1}** <Predicate Target="4[1].29[1]" TrueUsage="R" FalseUsage="RE" ID="1">
 					<Description>If PV1-36 (Discharge Disposition) is valued with any of the following: '20', '40', '41', '42'</Description>
@@ -195,7 +195,6 @@
 					</Condition>
 				</Predicate>
 			</ByName>
-				
 		</Message>
 	</Predicates>
 	<Constraints>
@@ -537,7 +536,7 @@
 					</Assertion>
 				</Constraint>
 			</ByName>
-			<ById ID="PV2_SS">
+			<ByID ID="PV2_SS">
 				<!-- PV2-3 -->
 				<Constraint ID="NIST-SS-009" Target="3[1].3[1]">
 					<Description>PV2-3.3 SHALL be valued "I9CDX" or "I10C" or "SCT".</Description>
@@ -545,7 +544,7 @@
 						<StringList Path="3[1].3[1]" CSV="I9CDX,I10C,SCT"/>
 					</Assertion>
 				</Constraint>
-			</ById>
+			</ByID>
 			<ByID ID="DG1_SS">
 				<!-- DG1-1 -->
 				<Constraint ID="SS-032" Target="1[1]">
@@ -642,7 +641,6 @@
 						</IMPLY>
 					</Assertion>
 				</Constraint>
-				
 			</ByID>
 			<ByID ID="PR1_SS">
 				<!-- PR1-1 -->
@@ -752,7 +750,7 @@
 					<Assertion>
 						<Plugin QualifiedClassName="gov.nist.healthcare.mu.ss.custom.SS_017_ACK"/>
 					</Assertion>
-				</Constraint>			
+				</Constraint>
 			</ByID>
 			<ByID ID="0d741773-619a-4ec1-b6c2-2589faa75b94">
 				<Constraint ID="SS-017-ack" Target="1[1].21[1]">
@@ -785,7 +783,7 @@
 					<Assertion>
 						<Plugin QualifiedClassName="gov.nist.healthcare.mu.ss.custom.SS_017_NO_ACK"/>
 					</Assertion>
-				</Constraint>			
+				</Constraint>
 			</ByID>
 			<ByID ID="0d741773-619a-4ec1-b6c2-2589faa75b94-2">
 				<Constraint ID="SS-017-ack" Target="1[1].21[1]">
