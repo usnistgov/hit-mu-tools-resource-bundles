@@ -22,7 +22,7 @@
 				{"location" : "MSH.7", "dataelement" : "Date/Time Of Message", "data" : "", "categorization"
 : ""},
 							{"location" : "MSH.7.1", "dataelement" : "Time", "data" : "201508190100", "categorization"
-: "Presence Length-System Generated"},
+: "Presence-System Generated"},
 				{"location" : "MSH.9", "dataelement" : "Message Type", "data" : "", "categorization"
 : ""},
 							{"location" : "MSH.9.1", "dataelement" : "Message Code", "data" : "ADT", "categorization"
@@ -32,7 +32,7 @@
 							{"location" : "MSH.9.3", "dataelement" : "Message Structure", "data" : "ADT_A03",
 "categorization" : "Value-Profile Fixed"},
 				{"location" : "MSH.10", "dataelement" : "Message Control ID", "data" : "NIST-SS-003.31",
-"categorization" : "Presence Length-System Generated"},
+"categorization" : "Presence-System Generated"},
 				{"location" : "MSH.11", "dataelement" : "Processing ID", "data" : "", "categorization"
 : ""},
 							{"location" : "MSH.11.1", "dataelement" : "Processing ID", "data" : "P", "categorization"
@@ -95,7 +95,7 @@
 "categorization" : "NonPresence"},
 				{"location" : "PID.5[2]", "dataelement" : "Patient Name", "data" : "", "categorization"
 : ""},
-							{"location" : "PID.5[2].7", "dataelement" : "Name Type Code", "data" : "U",
+							{"location" : "PID.5[2].7", "dataelement" : "Name Type Code", "data" : "S",
 "categorization" : "Value-Test Case Fixed"},
 				{"location" : "PID.8", "dataelement" : "Administrative Sex", "data" : "M", "categorization"
 : "Value-Test Case Fixed"},
@@ -162,11 +162,11 @@
 				{"location" : "PV1.44", "dataelement" : "Admit Date/Time", "data" : "", "categorization"
 : ""},
 							{"location" : "PV1.44.1", "dataelement" : "Time", "data" : "201508170700",
-"categorization" : "Presence-System Generated"},
+"categorization" : "Presence-Content Indifferent"},
 				{"location" : "PV1.45", "dataelement" : "Discharge Date/Time", "data" : "", "categorization"
 : ""},
 							{"location" : "PV1.45.1", "dataelement" : "Time", "data" : "201508181200",
-"categorization" : "Presence-System Generated"},		]
+"categorization" : "Presence-Content Indifferent"},		]
 		{
 			"title":"PV2 : Patient Visit - Additional Information",
 			"elements" : 
