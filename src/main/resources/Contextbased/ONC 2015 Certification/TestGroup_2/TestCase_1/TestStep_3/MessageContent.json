@@ -18,7 +18,7 @@
 							{"location" : "MSH.4.2", "dataelement" : "Universal ID", "data" : "1231231235",
 "categorization" : "Presence-Configuration"},
 							{"location" : "MSH.4.3", "dataelement" : "Universal ID Type", "data" : "NPI",
-"categorization" : "Value-Profile Fixed"},
+"categorization" : "Presence-Content Indifferent"},
 				{"location" : "MSH.7", "dataelement" : "Date/Time Of Message", "data" : "", "categorization"
 : ""},
 							{"location" : "MSH.7.1", "dataelement" : "Time", "data" : "201207171800", "categorization"
@@ -52,9 +52,9 @@
 							{"location" : "MSH.21.2", "dataelement" : "Namespace ID", "data" : "SS Sender",
 "categorization" : "Value-Profile Fixed"},
 							{"location" : "MSH.21.3", "dataelement" : "Universal ID", "data" : "2.16.840.1.114222.4.10.3",
-"categorization" : "Presence-Content Indifferent"},
+"categorization" : "Value-Profile Fixed"},
 							{"location" : "MSH.21.4", "dataelement" : "Universal ID Type", "data" : "ISO",
-"categorization" : "Presence-Content Indifferent"},		]
+"categorization" : "Value-Profile Fixed"},		]
 		{
 			"title":"EVN : Event Type",
 			"elements" : 
@@ -62,7 +62,7 @@
 				{"location" : "EVN.2", "dataelement" : "Recorded Date/Time", "data" : "", "categorization"
 : ""},
 							{"location" : "EVN.2.1", "dataelement" : "Time", "data" : "201207171800", "categorization"
-: "Presence-Content Indifferent"},
+: "Presence-System Generated"},
 				{"location" : "EVN.7", "dataelement" : "Event Facility", "data" : "", "categorization"
 : ""},
 							{"location" : "EVN.7.1", "dataelement" : "Namespace ID", "data" : "WstrnRgnlMedCntr",
@@ -70,7 +70,7 @@
 							{"location" : "EVN.7.2", "dataelement" : "Universal ID", "data" : "1231231235",
 "categorization" : "Presence-Configuration"},
 							{"location" : "EVN.7.3", "dataelement" : "Universal ID Type", "data" : "NPI",
-"categorization" : "Value-Profile Fixed"},		]
+"categorization" : "Presence-Content Indifferent"},		]
 		{
 			"title":"PID : Patient Identification",
 			"elements" : 
@@ -88,11 +88,11 @@
 									{"location" : "PID.3.4.2", "dataelement" : "Universal ID", "data" : "1231231235",
 "categorization" : "Presence-Content Indifferent"},
 									{"location" : "PID.3.4.3", "dataelement" : "Universal ID Type", "data" :
-"NPI", "categorization" : "Value-Profile Fixed"},
+"NPI", "categorization" : "Presence-Content Indifferent"},
 				{"location" : "PID.5[1]", "dataelement" : "Patient Name", "data" : "", "categorization"
 : ""},
 							{"location" : "PID.5[1].7", "dataelement" : "Name Type Code", "data" : "",
-"categorization" : "Indifferent"},
+"categorization" : "NonPresence"},
 				{"location" : "PID.5[2]", "dataelement" : "Patient Name", "data" : "", "categorization"
 : ""},
 							{"location" : "PID.5[2].7", "dataelement" : "Name Type Code", "data" : "S",
@@ -134,9 +134,9 @@
 				{"location" : "PID.29", "dataelement" : "Patient Death Date and Time", "data"
 : "", "categorization" : ""},
 							{"location" : "PID.29.1", "dataelement" : "Time", "data" : "201207171741",
-"categorization" : "Presence-Test Case Proper"},
+"categorization" : "Presence-Content Indifferent"},
 				{"location" : "PID.30", "dataelement" : "Patient Death Indicator", "data" : "Y",
-"categorization" : "Value-Test Case Fixed"},		]
+"categorization" : "Value-Profile Fixed"},		]
 		{
 			"title":"PV1 : Patient Visit",
 			"elements" : 
@@ -144,7 +144,7 @@
 				{"location" : "PV1.1", "dataelement" : "Set ID - PV1", "data" : "1", "categorization"
 : "Value-Profile Fixed"},
 				{"location" : "PV1.2", "dataelement" : "Patient Class", "data" : "E", "categorization"
-: "Presence-Content Indifferent"},
+: "Value-Test Case Fixed"},
 				{"location" : "PV1.19", "dataelement" : "Visit Number", "data" : "", "categorization"
 : ""},
 							{"location" : "PV1.19.1", "dataelement" : "ID Number", "data" : "20120709_0064",
@@ -156,7 +156,7 @@
 									{"location" : "PV1.19.4.2", "dataelement" : "Universal ID", "data" : "1231231235",
 "categorization" : "Presence-Content Indifferent"},
 									{"location" : "PV1.19.4.3", "dataelement" : "Universal ID Type", "data" :
-"NPI", "categorization" : "Value-Profile Fixed"},
+"NPI", "categorization" : "Presence-Content Indifferent"},
 				{"location" : "PV1.36", "dataelement" : "Discharge Disposition", "data" : "20",
 "categorization" : "Value-Test Case Fixed"},
 				{"location" : "PV1.44", "dataelement" : "Admit Date/Time", "data" : "", "categorization"
@@ -173,13 +173,13 @@
 			[
 				{"location" : "PV2.3", "dataelement" : "Admit Reason", "data" : "", "categorization"
 : ""},
-							{"location" : "PV2.3.1", "dataelement" : "Identifier", "data" : "V13.9XXA",
+							{"location" : "PV2.3.1", "dataelement" : "Identifier", "data" : "V134XXA",
 "categorization" : "Value-Test Case Fixed List"},
-							{"location" : "PV2.3.2", "dataelement" : "Text", "data" : "Unspecified pedal
-cyclist injured in collision with car, pick-up truck or van in traffic accident, initial
-encounter", "categorization" : "Presence-Test Case Proper"},
+							{"location" : "PV2.3.2", "dataelement" : "Text", "data" : "Pedal cycle driver
+injured in collision with car, pick-up truck or van in traffic accident, initial encounter",
+"categorization" : "Presence-Test Case Proper"},
 							{"location" : "PV2.3.3", "dataelement" : "Name of Coding System", "data" :
-"I10C", "categorization" : "Value-Profile Fixed"},
+"I10C", "categorization" : "Value-Test Case Fixed"},
 							{"location" : "PV2.3.6", "dataelement" : "Name of Alternate Coding System",
 "data" : "", "categorization" : "Indifferent"},		]
 		{
@@ -193,13 +193,13 @@ encounter", "categorization" : "Presence-Test Case Proper"},
 : "Value-Profile Fixed"},
 				{"location" : "DG1.3", "dataelement" : "Diagnosis Code - DG1", "data" : "", "categorization"
 : ""},
-							{"location" : "DG1.3.1", "dataelement" : "Identifier", "data" : "S06.0X8A",
+							{"location" : "DG1.3.1", "dataelement" : "Identifier", "data" : "S060X8A",
 "categorization" : "Value-Test Case Fixed List"},
 							{"location" : "DG1.3.2", "dataelement" : "Text", "data" : "Concussion with
 LOC of any duration with death due to other cause prior to regaining consciousness",
 "categorization" : "Presence-Test Case Proper"},
 							{"location" : "DG1.3.3", "dataelement" : "Name of Coding System", "data" :
-"I10C", "categorization" : "Value-Profile Fixed"},
+"I10C", "categorization" : "Value-Test Case Fixed"},
 				{"location" : "DG1.6", "dataelement" : "Diagnosis Type", "data" : "F", "categorization"
 : "Value-Test Case Fixed"},		]
 		{
@@ -210,13 +210,13 @@ LOC of any duration with death due to other cause prior to regaining consciousne
 : "Value-Profile Fixed"},
 				{"location" : "DG1.3", "dataelement" : "Diagnosis Code - DG1", "data" : "", "categorization"
 : ""},
-							{"location" : "DG1.3.1", "dataelement" : "Identifier", "data" : "S02.112A",
+							{"location" : "DG1.3.1", "dataelement" : "Identifier", "data" : "S02112A",
 "categorization" : "Value-Test Case Fixed List"},
 							{"location" : "DG1.3.2", "dataelement" : "Text", "data" : "Type III occipital
 condyle fracture, initial encounter for closed fracture", "categorization" : "Presence-Test
 Case Proper"},
 							{"location" : "DG1.3.3", "dataelement" : "Name of Coding System", "data" :
-"I10C", "categorization" : "Value-Profile Fixed"},
+"I10C", "categorization" : "Value-Test Case Fixed"},
 				{"location" : "DG1.6", "dataelement" : "Diagnosis Type", "data" : "F", "categorization"
 : "Value-Test Case Fixed"},		]
 
@@ -268,7 +268,7 @@ Case Proper"},
 							{"location" : "OBX.6.6", "dataelement" : "Name of Alternate Coding System",
 "data" : "", "categorization" : "NonPresence"},
 				{"location" : "OBX.11", "dataelement" : "Observation Result Status", "data" :
-"F", "categorization" : "Value-Profile Fixed"},		]
+"F", "categorization" : "Value-Test Case Fixed"},		]
 		{
 			"title":"OBX : Observation/Result",
 			"elements" : 
@@ -300,7 +300,7 @@ Reported", "categorization" : "Presence-Test Case Proper"},
 							{"location" : "OBX.6.6", "dataelement" : "Name of Alternate Coding System",
 "data" : "", "categorization" : "Indifferent"},
 				{"location" : "OBX.11", "dataelement" : "Observation Result Status", "data" :
-"F", "categorization" : "Value-Profile Fixed"},		]
+"F", "categorization" : "Value-Test Case Fixed"},		]
 		{
 			"title":"OBX : Observation/Result",
 			"elements" : 
@@ -332,7 +332,7 @@ Reported", "categorization" : "Presence-Test Case Proper"},
 							{"location" : "OBX.6.6", "dataelement" : "Name of Alternate Coding System",
 "data" : "", "categorization" : "Indifferent"},
 				{"location" : "OBX.11", "dataelement" : "Observation Result Status", "data" :
-"F", "categorization" : "Value-Profile Fixed"},		]
+"F", "categorization" : "Value-Test Case Fixed"},		]
 		{
 			"title":"OBX : Observation/Result",
 			"elements" : 
@@ -364,7 +364,7 @@ Reported", "categorization" : "Presence-Test Case Proper"},
 							{"location" : "OBX.6.6", "dataelement" : "Name of Alternate Coding System",
 "data" : "", "categorization" : "Indifferent"},
 				{"location" : "OBX.11", "dataelement" : "Observation Result Status", "data" :
-"F", "categorization" : "Value-Profile Fixed"},		]
+"F", "categorization" : "Value-Test Case Fixed"},		]
 		{
 			"title":"OBX : Observation/Result",
 			"elements" : 
@@ -410,7 +410,7 @@ smoked", "categorization" : "Presence-Test Case Proper"},
 							{"location" : "OBX.6.6", "dataelement" : "Name of Alternate Coding System",
 "data" : "", "categorization" : "NonPresence"},
 				{"location" : "OBX.11", "dataelement" : "Observation Result Status", "data" :
-"F", "categorization" : "Value-Profile Fixed"},		]
+"F", "categorization" : "Value-Test Case Fixed"},		]
 
 </accordion>
 		}
