@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- edited with XMLSpy v2016 (http://www.altova.com) by Nicolas Crouzier (NIST) -->
-<ValueSetLibrary xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ValueSetLibraryIdentifier="5674a4b2-0e26-4f6a-9dc8-ba78a4727c83-2" xsi:noNamespaceSchemaLocation="file:///D:/sourceforge/lri-nist/mu-nist/resource-bundle-generator/src/main/resources/schema/ValueSets.xsd">
+<ValueSetLibrary xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ValueSetLibraryIdentifier="5674a4b2-0e26-4f6a-9dc8-ba78a4727c83-2" xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/Jungyubw/NIST_healthcare_hl7_v2_profile_schema/master/Schema/ValueSets.xsd">
 	<MetaData Name="Vocab for SS Context Free" OrgName="NIST" Version="1.0.0" Date="20160222"/>
 	<NoValidation>
 		<!-- excluded because empty -->
@@ -149,7 +149,7 @@
 		<!-- excluded because does not apply to context free -->
 		<BindingIdentifier>[NIST]PHVS_Disease_CDC&amp;PHVS_AdministrativeDiagnosis_CDC_ICD-9CM&amp;PHVS_AdministrativeDiagnosis_CDC_ICD-10CM</BindingIdentifier>
 	</NoValidation>
-	<ValueSetDefinitions Group="External-SS" Order="1">
+	<ValueSetDefinitions Group="CDC-SS" Order="2">
 		<!-- [Caroline] removed because too large (130k codes) -->
 		<ValueSetDefinition BindingIdentifier="PHVS_Disease_CDC" Oid="2.16.840.1.114222.4.11.909" Name="Disease"/>
 		<!-- [Caroline] removed because too large (30k codes) -->
@@ -14093,7 +14093,7 @@
 			<ValueElement Value="B46.9" CodeSystem="I10" DisplayName="Zygomycosis, unspecified"/>
 		</ValueSetDefinition>-->
 	</ValueSetDefinitions>
-	<ValueSetDefinitions Group="HL7 Defined" Order="2">
+	<ValueSetDefinitions Group="CDC-HL7-SS" Order="1">
 		<ValueSetDefinition BindingIdentifier="HL70003" Name="Event type" Version="2.5.1">
 			<ValueElement Value="A01" DisplayName="ADT/ACK - Admit/visit notification" CodeSystem="HL70003"/>
 			<ValueElement Value="A02" DisplayName="ADT/ACK - Transfer a patient" CodeSystem="HL70003"/>
@@ -18015,8 +18015,6 @@
 			<ValueElement Value="WRIST" DisplayName="Wrist" CodeSystem="HL70550"/>
 		</ValueSetDefinition>
 		<ValueSetDefinition BindingIdentifier="HL70552" Name="Advanced beneficiary notice override reason" Version="2.5.1"/>
-	</ValueSetDefinitions>
-	<ValueSetDefinitions Group="HL7 User" Order="3">
 		<ValueSetDefinition BindingIdentifier="HL70001" Name="Administrative Sex" Version="2.5.1">
 			<ValueElement Value="F" DisplayName="Female" CodeSystem="HL70001"/>
 			<ValueElement Value="M" DisplayName="Male" CodeSystem="HL70001"/>
