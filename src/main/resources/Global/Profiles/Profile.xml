@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- edited with XMLSpy v2014 rel. 2 sp1 (http://www.altova.com) by Caroline Rosin (NIST) -->
 <!-- [Caroline] [TODO] do we want to add BindingStrength="U" to X & B usages ? -->
-<ConformanceProfile ID="51c61ea8-3424-49bd-b05c-b5c58c55c329" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="file:///C:/Users/crosin/Desktop/ProfileSchema.xsd">
+<ConformanceProfile ID="51c61ea8-3424-49bd-b05c-b5c58c55c329" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="file:///D:/sourceforge/lri-nist/mu-nist/resource-bundle-generator/src/main/resources/schema/Profile.xsd">
 	<!--   Added by Nicolas 9/11 -->
-	<MetaData Name="SS integration profile" OrgName="NIST"/>
+	<MetaData Name="SS integration profile" OrgName="NIST" Version="1.0.0" Date="20160222"/>
 	<Messages>
 		<Message ID="0d741773-619a-4ec1-b972-2589faa75b92" Type="ACK" Event="A01" StructID="ACK_A01">
 			<Segment Ref="MSH_SS" Usage="R" Min="1" Max="1"/>
@@ -1420,7 +1420,7 @@
 			<Field Name="Autopsy Performed By" Usage="O" Min="0" Max="1" Datatype="XCN" MinLength="1" MaxLength="250" ItemNo="01581"/>
 			<Field Name="Coroner Indicator" Usage="O" Min="0" Max="1" Datatype="ID" MinLength="1" MaxLength="1" Binding="HL70136" BindingStrength="U" ItemNo="01582"/>
 		</Segment>
-		<Segment Name="ERR" ID="ERR_HL7" Label="ERR_HL7"  Description="Error">
+		<Segment Name="ERR" ID="ERR_HL7" Label="ERR_HL7" Description="Error">
 			<Field Name="Error Code and Location" Usage="O" Min="0" Max="0" Datatype="ELD" MaxLength="493" MinLength="1"/>
 			<Field Name="Error Location" Usage="O" Min="0" Max="*" Datatype="ERL" MaxLength="18" MinLength="1"/>
 			<Field Name="HL7 Error Code" Usage="R" Min="1" Max="1" Datatype="CWE" Binding="HL70357" BindingStrength="U" MaxLength="705" MinLength="1"/>
@@ -1730,7 +1730,8 @@
 			<Component Datatype="NM" MaxLength="2" MinLength="1" Name="Field Repetition" Usage="O"/>
 			<Component Datatype="NM" MaxLength="2" MinLength="1" Name="Component Number" Usage="O"/>
 			<Component Datatype="NM" MaxLength="2" MinLength="1" Name="Sub-Component Number" Usage="O"/>
-		</Datatype>		<Datatype ID="FC" Name="FC" Label="FC" Description="Financial Class">
+		</Datatype>
+		<Datatype ID="FC" Name="FC" Label="FC" Description="Financial Class">
 			<Component Name="Financial Class Code" Usage="R" Datatype="IS" MinLength="1" MaxLength="20" Binding="HL70064" BindingStrength="R"/>
 			<Component Name="Effective Date" Usage="O" Datatype="TS" MinLength="1" MaxLength="26"/>
 		</Datatype>

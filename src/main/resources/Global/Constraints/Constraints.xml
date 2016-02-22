@@ -1,12 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ConformanceContext UUID="389e0acf-69a6-46b1-9834-7581ee13a60f" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="file:///D:/sourceforge/lri-nist/mu-nist/resource-bundle-generator/src/main/resources/schema/ConformanceContext.xsd">
-	<MetaData>
-		<Description>Conformance context for SS</Description>
-		<Authors>
-			<Author FirstName="Olivier" LastName="MARIE-ROSE"/>
-			<Author FirstName="Caroline" LastName="Rosin"/>
-		</Authors>
-	</MetaData>
+<ConformanceContext UUID="389e0acf-69a6-46b1-9834-7581ee13a60f" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../../sourceforge/lri-nist/mu-nist/resource-bundle-generator/src/main/resources/schema/ConformanceContext.xsd">
+	<MetaData Name="Conformance context for SS" OrgName="NIST" Version="1.0.0" Date="20160222"/>
 	<Predicates>
 		<Datatype>
 			<ByID ID="CE_SS">
@@ -53,7 +47,7 @@
 			</ByID>
 			<ByID ID="CWE_SS_OBX">
 				<!-- CWE.6 -->
-			<Predicate Target="6[1]" TrueUsage="R" FalseUsage="X">
+				<Predicate Target="6[1]" TrueUsage="R" FalseUsage="X">
 					<Description>If CWE.4 (Identifier) is valued.</Description>
 					<Condition>
 						<Presence Path="4[1]"/>
