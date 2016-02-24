@@ -18,7 +18,7 @@
 							{"location" : "MSH.4.2", "dataelement" : "Universal ID", "data" : "1231231236",
 "categorization" : "Presence-Configuration"},
 							{"location" : "MSH.4.3", "dataelement" : "Universal ID Type", "data" : "NPI",
-"categorization" : "Presence-Content Indifferent"},
+"categorization" : "Presence-Configuration"},
 				{"location" : "MSH.7", "dataelement" : "Date/Time Of Message", "data" : "", "categorization"
 : ""},
 							{"location" : "MSH.7.1", "dataelement" : "Time", "data" : "201002010815", "categorization"
@@ -70,7 +70,7 @@
 							{"location" : "EVN.7.2", "dataelement" : "Universal ID", "data" : "1231231236",
 "categorization" : "Presence-Configuration"},
 							{"location" : "EVN.7.3", "dataelement" : "Universal ID Type", "data" : "NPI",
-"categorization" : "Presence-Content Indifferent"},		]
+"categorization" : "Presence-Configuration"},		]
 		{
 			"title":"PID : Patient Identification",
 			"elements" : 
@@ -88,7 +88,7 @@
 									{"location" : "PID.3.4.2", "dataelement" : "Universal ID", "data" : "1231231236",
 "categorization" : "Presence-Content Indifferent"},
 									{"location" : "PID.3.4.3", "dataelement" : "Universal ID Type", "data" :
-"NPI", "categorization" : "Presence-Content Indifferent"},
+"NPI", "categorization" : "Presence-Configuration"},
 				{"location" : "PID.5[1]", "dataelement" : "Patient Name", "data" : "", "categorization"
 : ""},
 							{"location" : "PID.5[1].7", "dataelement" : "Name Type Code", "data" : "",
@@ -176,7 +176,7 @@ Latino", "categorization" : "Presence-Test Case Proper"},
 									{"location" : "PV1.19.4.2", "dataelement" : "Universal ID", "data" : "1231231236",
 "categorization" : "Presence-Content Indifferent"},
 									{"location" : "PV1.19.4.3", "dataelement" : "Universal ID Type", "data" :
-"NPI", "categorization" : "Presence-Content Indifferent"},
+"NPI", "categorization" : "Presence-Configuration"},
 				{"location" : "PV1.36", "dataelement" : "Discharge Disposition", "data" : "",
 "categorization" : "NonPresence"},
 				{"location" : "PV1.44", "dataelement" : "Admit Date/Time", "data" : "", "categorization"
@@ -259,13 +259,13 @@ Reported", "categorization" : "Presence-Test Case Proper"},
 				{"location" : "OBX.6", "dataelement" : "Units", "data" : "", "categorization"
 : ""},
 							{"location" : "OBX.6.1", "dataelement" : "Identifier", "data" : "a", "categorization"
-: "NonPresence"},
+: "Value-Test Case Fixed"},
 							{"location" : "OBX.6.2", "dataelement" : "Text", "data" : "year", "categorization"
-: "NonPresence"},
+: "Presence-Test Case Proper"},
 							{"location" : "OBX.6.3", "dataelement" : "Name of Coding System", "data" :
-"UCUM", "categorization" : "NonPresence"},
+"UCUM", "categorization" : "Value-Profile Fixed"},
 							{"location" : "OBX.6.6", "dataelement" : "Name of Alternate Coding System",
-"data" : "", "categorization" : "NonPresence"},
+"data" : "", "categorization" : "Indifferent"},
 				{"location" : "OBX.11", "dataelement" : "Observation Result Status", "data" :
 "F", "categorization" : "Value-Test Case Fixed"},		]
 		{
