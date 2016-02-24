@@ -3,34 +3,34 @@
 <!-- [Caroline] [TODO] do we want to add BindingStrength="U" to X & B usages ? -->
 <ConformanceProfile ID="51c61ea8-3424-49bd-b05c-b5c58c55c329" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/Jungyubw/NIST_healthcare_hl7_v2_profile_schema/master/Schema/Profile.xsd">
 	<!--   Added by Nicolas 9/11 -->
-	<MetaData Name="SS integration profile" OrgName="NIST" Version="1.0.0" Date="20160222"/>
+	<MetaData Name="SS integration profile" OrgName="NIST" Version="1.0.0" Date="20160224"/>
 	<Messages>
-		<Message ID="0d741773-619a-4ec1-b972-2589faa75b92" Type="ACK" Event="A01" StructID="ACK_A01">
+		<Message ID="0d741773-619a-4ec1-b972-2589faa75b92" Type="ACK" Event="A01" StructID="ACK_A01" Description="ACK-A01">
 			<Segment Ref="MSH_SS" Usage="R" Min="1" Max="1"/>
 			<Segment Ref="SFT_HL7" Usage="O" Min="0" Max="*"/>
 			<Segment Ref="MSA_SS" Usage="R" Min="1" Max="1"/>
 			<Segment Ref="ERR_HL7" Usage="O" Min="0" Max="*"/>
 		</Message>
-		<Message ID="0d741773-619a-4ec1-b973-2589faa75b92" Type="ACK" Event="A04" StructID="ACK_A01">
+		<Message ID="0d741773-619a-4ec1-b973-2589faa75b92" Type="ACK" Event="A04" StructID="ACK_A01" Description="ACK-A04">
 			<Segment Ref="MSH_SS" Usage="R" Min="1" Max="1"/>
 			<Segment Ref="SFT_HL7" Usage="O" Min="0" Max="*"/>
 			<Segment Ref="MSA_SS" Usage="R" Min="1" Max="1"/>
 			<Segment Ref="ERR_HL7" Usage="O" Min="0" Max="*"/>
 		</Message>
-		<Message ID="0d741773-619a-4ec1-b974-2589faa75b92" Type="ACK" Event="A08" StructID="ACK_A01">
+		<Message ID="0d741773-619a-4ec1-b974-2589faa75b92" Type="ACK" Event="A08" StructID="ACK_A01" Description="ACK-A08">
 			<Segment Ref="MSH_SS" Usage="R" Min="1" Max="1"/>
 			<Segment Ref="SFT_HL7" Usage="O" Min="0" Max="*"/>
 			<Segment Ref="MSA_SS" Usage="R" Min="1" Max="1"/>
 			<Segment Ref="ERR_HL7" Usage="O" Min="0" Max="*"/>
 		</Message>
-		<Message ID="0d741773-619a-4ec1-b975-2589faa75b92" Type="ACK" Event="A03" StructID="ACK_A01">
+		<Message ID="0d741773-619a-4ec1-b975-2589faa75b92" Type="ACK" Event="A03" StructID="ACK_A01" Description="ACK-A03">
 			<Segment Ref="MSH_SS" Usage="R" Min="1" Max="1"/>
 			<Segment Ref="SFT_HL7" Usage="O" Min="0" Max="*"/>
 			<Segment Ref="MSA_SS" Usage="R" Min="1" Max="1"/>
 			<Segment Ref="ERR_HL7" Usage="O" Min="0" Max="*"/>
 		</Message>
 		<!-- PH_SS-Ack -->
-		<Message ID="0d741773-619a-4ec1-b6c2-2589faa75b92" Type="ADT" Event="A01" StructID="ADT_A01" Description="ADT message">
+		<Message ID="0d741773-619a-4ec1-b6c2-2589faa75b92" Type="ADT" Event="A01" StructID="ADT_A01" Description="ADT-A01-PH_SS-Ack">
 			<Segment Ref="MSH_SS_A01_ACK" Usage="R" Min="1" Max="1"/>
 			<Segment Ref="SFT_HL7" Usage="O" Min="0" Max="*"/>
 			<Segment Ref="EVN_SS" Usage="R" Min="1" Max="1"/>
@@ -62,7 +62,7 @@
 			<Segment Ref="UB2_HL7" Usage="O" Min="0" Max="1"/>
 			<Segment Ref="PDA_HL7" Usage="O" Min="0" Max="1"/>
 		</Message>
-		<Message ID="52f1dab8-d538-4c7e-b71b-39619b94c3bf" Type="ADT" Event="A03" StructID="ADT_A03" Description="ADT message">
+		<Message ID="52f1dab8-d538-4c7e-b71b-39619b94c3bf" Type="ADT" Event="A03" StructID="ADT_A03" Description="ADT-A03-PH_SS-Ack">
 			<Segment Ref="MSH_SS_A03_ACK" Usage="R" Min="1" Max="1"/>
 			<Segment Ref="SFT_HL7" Usage="O" Min="0" Max="*"/>
 			<Segment Ref="EVN_SS" Usage="R" Min="1" Max="1"/>
@@ -92,7 +92,7 @@
 			<Segment Ref="ACC_HL7" Usage="O" Min="0" Max="1"/>
 			<Segment Ref="PDA_HL7" Usage="O" Min="0" Max="1"/>
 		</Message>
-		<Message ID="0d741773-619a-4ec1-b6c2-2589faa75b93" Type="ADT" Event="A04" StructID="ADT_A04" Description="ADT message">
+		<Message ID="0d741773-619a-4ec1-b6c2-2589faa75b93" Type="ADT" Event="A04" StructID="ADT_A04" Description="ADT-A04-PH_SS-Ack">
 			<Segment Ref="MSH_SS_A04_ACK" Usage="R" Min="1" Max="1"/>
 			<Segment Ref="SFT_HL7" Usage="O" Min="0" Max="*"/>
 			<Segment Ref="EVN_SS" Usage="R" Min="1" Max="1"/>
@@ -124,7 +124,7 @@
 			<Segment Ref="UB2_HL7" Usage="O" Min="0" Max="1"/>
 			<Segment Ref="PDA_HL7" Usage="O" Min="0" Max="1"/>
 		</Message>
-		<Message ID="0d741773-619a-4ec1-b6c2-2589faa75b94" Type="ADT" Event="A08" StructID="ADT_A08" Description="ADT message">
+		<Message ID="0d741773-619a-4ec1-b6c2-2589faa75b94" Type="ADT" Event="A08" StructID="ADT_A08" Description="ADT-A08-PH_SS-Ack">
 			<Segment Ref="MSH_SS_A08_ACK" Usage="R" Min="1" Max="1"/>
 			<Segment Ref="SFT_HL7" Usage="O" Min="0" Max="*"/>
 			<Segment Ref="EVN_SS" Usage="R" Min="1" Max="1"/>
@@ -157,7 +157,7 @@
 			<Segment Ref="PDA_HL7" Usage="O" Min="0" Max="1"/>
 		</Message>
 		<!-- PH_SS-NoAck -->
-		<Message ID="0d741773-619a-4ec1-b6c2-2589faa75b92-2" Type="ADT" Event="A01" StructID="ADT_A01" Description="ADT message">
+		<Message ID="0d741773-619a-4ec1-b6c2-2589faa75b92-2" Type="ADT" Event="A01" StructID="ADT_A01" Description="ADT-A01-PH_SS-NoAck">
 			<Segment Ref="MSH_SS_A01_NOACK" Usage="R" Min="1" Max="1"/>
 			<Segment Ref="SFT_HL7" Usage="O" Min="0" Max="*"/>
 			<Segment Ref="EVN_SS" Usage="R" Min="1" Max="1"/>
@@ -189,7 +189,7 @@
 			<Segment Ref="UB2_HL7" Usage="O" Min="0" Max="1"/>
 			<Segment Ref="PDA_HL7" Usage="O" Min="0" Max="1"/>
 		</Message>
-		<Message ID="52f1dab8-d538-4c7e-b71b-39619b94c3bf-2" Type="ADT" Event="A03" StructID="ADT_A03" Description="ADT message">
+		<Message ID="52f1dab8-d538-4c7e-b71b-39619b94c3bf-2" Type="ADT" Event="A03" StructID="ADT_A03" Description="ADT-A03-PH_SS-NoAck">
 			<Segment Ref="MSH_SS_A03_NOACK" Usage="R" Min="1" Max="1"/>
 			<Segment Ref="SFT_HL7" Usage="O" Min="0" Max="*"/>
 			<Segment Ref="EVN_SS" Usage="R" Min="1" Max="1"/>
@@ -219,7 +219,7 @@
 			<Segment Ref="ACC_HL7" Usage="O" Min="0" Max="1"/>
 			<Segment Ref="PDA_HL7" Usage="O" Min="0" Max="1"/>
 		</Message>
-		<Message ID="0d741773-619a-4ec1-b6c2-2589faa75b93-2" Type="ADT" Event="A04" StructID="ADT_A04" Description="ADT message">
+		<Message ID="0d741773-619a-4ec1-b6c2-2589faa75b93-2" Type="ADT" Event="A04" StructID="ADT_A04" Description="ADT-A04-PH_SS-NoAck">
 			<Segment Ref="MSH_SS_A04_NOACK" Usage="R" Min="1" Max="1"/>
 			<Segment Ref="SFT_HL7" Usage="O" Min="0" Max="*"/>
 			<Segment Ref="EVN_SS" Usage="R" Min="1" Max="1"/>
@@ -251,7 +251,7 @@
 			<Segment Ref="UB2_HL7" Usage="O" Min="0" Max="1"/>
 			<Segment Ref="PDA_HL7" Usage="O" Min="0" Max="1"/>
 		</Message>
-		<Message ID="0d741773-619a-4ec1-b6c2-2589faa75b94-2" Type="ADT" Event="A08" StructID="ADT_A08" Description="ADT message">
+		<Message ID="0d741773-619a-4ec1-b6c2-2589faa75b94-2" Type="ADT" Event="A08" StructID="ADT_A08" Description="ADT-A08-PH_SS-NoAck">
 			<Segment Ref="MSH_SS_A08_NOACK" Usage="R" Min="1" Max="1"/>
 			<Segment Ref="SFT_HL7" Usage="O" Min="0" Max="*"/>
 			<Segment Ref="EVN_SS" Usage="R" Min="1" Max="1"/>
