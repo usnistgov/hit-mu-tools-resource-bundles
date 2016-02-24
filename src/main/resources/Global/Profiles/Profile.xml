@@ -1443,7 +1443,7 @@
 			<Component Name="Name of Coding System" Usage="C" Datatype="ID_SS" MinLength="1" MaxLength="20" Binding="PHVS_CodingSystem_HL7_2x_Table0396" BindingStrength="R"/>
 			<Component Name="Alternate Identifier" Usage="O" Datatype="ST" MinLength="1" MaxLength="20"/>
 			<Component Name="Alternate Text" Usage="O" Datatype="ST" MinLength="1" MaxLength="199"/>
-			<Component Name="Name of Alternate Coding System" Usage="C" Datatype="ID_SS" MinLength="1" MaxLength="20" Binding="PHVS_CodingSystem_HL7_2x_Table0396" BindingStrength="R"/>
+			<Component Name="Name of Alternate Coding System" Usage="C" Datatype="ID_SS" MinLength="1" MaxLength="20" Binding="PHVS_CodingSystem_HL7_2x_Table0396" BindingStrength="R" Hide="true"/>
 		</Datatype>
 		<Datatype ID="CE_SS_DG1" Name="CE" Label="CE_SS_DG1" Description="Coded Element">
 			<Component Name="Identifier" Usage="R" Datatype="ST_SS" MinLength="1" MaxLength="20"/>
@@ -1468,7 +1468,7 @@
 			<Component Name="Name of Coding System" Usage="C" Datatype="ID_SS" MinLength="1" MaxLength="20" Binding="PHVS_CodingSystem_HL7_2x_Table0396" BindingStrength="R"/>
 			<Component Name="Alternate Identifier" Usage="O" Datatype="ST" MinLength="1" MaxLength="20"/>
 			<Component Name="Alternate Text" Usage="O" Datatype="ST" MinLength="1" MaxLength="199"/>
-			<Component Name="Name of Alternate Coding System" Usage="C" Datatype="ID_SS" MinLength="1" MaxLength="20" Binding="PHVS_CodingSystem_HL7_2x_Table0396" BindingStrength="R"/>
+			<Component Name="Name of Alternate Coding System" Usage="C" Datatype="ID_SS" MinLength="1" MaxLength="20" Binding="PHVS_CodingSystem_HL7_2x_Table0396" BindingStrength="R" Hide="true"/>
 			<Component Name="Coding System Version ID" Usage="O" Datatype="ST" MinLength="1" MaxLength="10"/>
 			<Component Name="Alternate Coding System Version ID" Usage="O" Datatype="ST" MinLength="1" MaxLength="10"/>
 			<Component Name="Original Text" Usage="RE" Datatype="ST" MinLength="1" MaxLength="199"/>
