@@ -1,0 +1,1091 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ConformanceProfile ID="0d741773-619a-4ec1-b6c2-2589faa75b93-2">
+    <MetaData Name="SS integration profile" OrgName="NIST" Version="1.0.0" Date="20160224"/>
+    <Messages>
+        <Message ID="0d741773-619a-4ec1-b6c2-2589faa75b93-2" Type="ADT" Event="A04" StructID="ADT_A04" Description="ADT-A04-PH_SS-NoAck">
+            <Segment Ref="MSH_SS_A04_NOACK" Usage="R" Min="1" Max="1"/>
+            <Segment Ref="SFT_HL7" Usage="O" Min="0" Max="*"/>
+            <Segment Ref="EVN_SS" Usage="R" Min="1" Max="1"/>
+            <Segment Ref="PID_SS_A03_A04_A08" Usage="R" Min="1" Max="1"/>
+            <Segment Ref="PD1_HL7" Usage="O" Min="0" Max="1"/>
+            <Segment Ref="ROL_HL7" Usage="O" Min="0" Max="*"/>
+            <Segment Ref="NK1_HL7" Usage="O" Min="0" Max="*"/>
+            <Segment Ref="PV1_SS_A04" Usage="R" Min="1" Max="1"/>
+            <Segment Ref="PV2_SS" Usage="RE" Min="0" Max="1"/>
+            <Segment Ref="ROL_HL7" Usage="O" Min="0" Max="*"/>
+            <Segment Ref="DB1_HL7" Usage="O" Min="0" Max="*"/>
+            <Segment Ref="OBX_SS" Usage="R" Min="1" Max="*"/>
+            <Segment Ref="AL1_HL7" Usage="O" Min="0" Max="*"/>
+            <Segment Ref="DG1_SS" Usage="RE" Min="0" Max="*"/>
+            <Segment Ref="DRG_HL7" Usage="O" Min="0" Max="1"/>
+            <Group ID="ADT_A01.PROCEDURE" Name="ADT_A01.PROCEDURE" Usage="O" Min="0" Max="*">
+                <Segment Ref="PR1_HL7" Usage="R" Min="1" Max="1"/>
+                <Segment Ref="ROL_HL7" Usage="O" Min="0" Max="*"/>
+            </Group>
+            <Segment Ref="GT1_HL7" Usage="O" Min="0" Max="*"/>
+            <Group ID="ADT_A01.INSURANCE" Name="ADT_A01.INSURANCE" Usage="O" Min="0" Max="*">
+                <Segment Ref="IN1_HL7" Usage="R" Min="1" Max="1"/>
+                <Segment Ref="IN2_HL7" Usage="O" Min="0" Max="1"/>
+                <Segment Ref="IN3_HL7" Usage="O" Min="0" Max="*"/>
+                <Segment Ref="ROL_HL7" Usage="O" Min="0" Max="*"/>
+            </Group>
+            <Segment Ref="ACC_HL7" Usage="O" Min="0" Max="1"/>
+            <Segment Ref="UB1_HL7" Usage="O" Min="0" Max="1"/>
+            <Segment Ref="UB2_HL7" Usage="O" Min="0" Max="1"/>
+            <Segment Ref="PDA_HL7" Usage="O" Min="0" Max="1"/>
+        </Message>
+    </Messages>
+    <Segments>
+        <Segment ID="MSH_SS_A04_NOACK" Name="MSH" Label="MSH_SS_A04_NOACK" Description="Message Header">
+            <Field ItemNo="00001" Min="1" Max="1" Name="Field Separator" Usage="R" Datatype="ST_SS" MinLength="1" MaxLength="1"/>
+            <Field ItemNo="00002" Min="1" Max="1" Name="Encoding Characters" Usage="R" Datatype="ST_SS" MinLength="1" MaxLength="4"/>
+            <Field ItemNo="00003" Min="0" Max="1" Name="Sending Application" Usage="O" Datatype="HD" MinLength="1" MaxLength="227" Binding="HL70361" BindingStrength="U" BindingLocation="1"/>
+            <Field ItemNo="00004" Min="1" Max="1" Name="Sending Facility" Usage="R" Datatype="HD_SS" MinLength="1" MaxLength="227" Binding="HL70362" BindingStrength="R" BindingLocation="1"/>
+            <Field ItemNo="00005" Min="0" Max="1" Name="Receiving Application" Usage="O" Datatype="HD" MinLength="1" MaxLength="227" Binding="HL70361" BindingStrength="U" BindingLocation="1"/>
+            <Field ItemNo="00006" Min="0" Max="1" Name="Receiving Facility" Usage="O" Datatype="HD" MinLength="1" MaxLength="227" Binding="HL70362" BindingStrength="U" BindingLocation="1"/>
+            <Field ItemNo="00007" Min="1" Max="1" Name="Date/Time Of Message" Usage="R" Datatype="TS_SS" MinLength="1" MaxLength="26"/>
+            <Field ItemNo="00008" Min="0" Max="1" Name="Security" Usage="X" Datatype="ST" MinLength="1" MaxLength="40"/>
+            <Field ItemNo="00009" Min="1" Max="1" Name="Message Type" Usage="R" Datatype="MSG_SS" MinLength="1" MaxLength="15"/>
+            <Field ItemNo="00010" Min="1" Max="1" Name="Message Control ID" Usage="R" Datatype="ST_SS" MinLength="1" MaxLength="199"/>
+            <Field ItemNo="00011" Min="1" Max="1" Name="Processing ID" Usage="R" Datatype="PT_SS" MinLength="1" MaxLength="3"/>
+            <Field ItemNo="00012" Min="1" Max="1" Name="Version ID" Usage="R" Datatype="VID_SS" MinLength="1" MaxLength="5"/>
+            <Field ItemNo="00013" Min="0" Max="1" Name="Sequence Number" Usage="X" Datatype="NM" MinLength="1" MaxLength="15"/>
+            <Field ItemNo="00014" Min="0" Max="1" Name="Continuation Pointer" Usage="X" Datatype="ST" MinLength="1" MaxLength="180"/>
+            <Field ItemNo="00015" Min="1" Max="1" Name="Accept Acknowledgment Type" Usage="R" Datatype="ID_SS" MinLength="1" MaxLength="2" Binding="HL70155" BindingStrength="R"/>
+            <Field ItemNo="00016" Min="0" Max="1" Name="Application Acknowledgment Type" Usage="RE" Datatype="ID_SS" MinLength="1" MaxLength="2" Binding="HL70155" BindingStrength="R"/>
+            <Field ItemNo="00017" Min="0" Max="1" Name="Country Code" Usage="X" Datatype="ID" MinLength="1" MaxLength="3" Binding="HL70399"/>
+            <Field ItemNo="00018" Min="0" Max="*" Name="Character Set" Usage="X" Datatype="ID" MinLength="1" MaxLength="16" Binding="HL70211"/>
+            <Field ItemNo="00019" Min="0" Max="1" Name="Principal Language Of Message" Usage="X" Datatype="CE" MinLength="1" MaxLength="478"/>
+            <Field ItemNo="00020" Min="0" Max="1" Name="Alternate Character Set Handling Scheme" Usage="X" Datatype="ID" MinLength="1" MaxLength="20" Binding="HL70356"/>
+            <Field ItemNo="00021" Min="1" Max="*" Name="Message Profile Identifier" Usage="R" Datatype="EI_SS" MinLength="1" MaxLength="427"/>
+        </Segment>
+        <Segment ID="EVN_SS" Name="EVN" Label="EVN_SS" Description="Event Type">
+            <Field ItemNo="00099" Min="0" Max="1" Name="Event Type Code" Usage="O" Datatype="ID" MinLength="1" MaxLength="3" Binding="HL70003" BindingStrength="U"/>
+            <Field ItemNo="00100" Min="1" Max="1" Name="Recorded Date/Time" Usage="R" Datatype="TS_SS" MinLength="1" MaxLength="26"/>
+            <Field ItemNo="00101" Min="0" Max="1" Name="Date/Time Planned Event" Usage="X" Datatype="TS" MinLength="1" MaxLength="26"/>
+            <Field ItemNo="00102" Min="0" Max="1" Name="Event Reason Code" Usage="X" Datatype="IS" MinLength="1" MaxLength="3" Binding="HL70062"/>
+            <Field ItemNo="00103" Min="0" Max="*" Name="Operator ID" Usage="X" Datatype="XCN" MinLength="1" MaxLength="309" Binding="HL70188" BindingLocation="1"/>
+            <Field ItemNo="01278" Min="0" Max="1" Name="Event Occurred" Usage="X" Datatype="TS" MinLength="1" MaxLength="26"/>
+            <Field ItemNo="01534" Min="1" Max="1" Name="Event Facility" Usage="R" Datatype="HD_SS" MinLength="1" MaxLength="241" BindingStrength="R" BindingLocation="1"/>
+        </Segment>
+        <Segment ID="PID_SS_A03_A04_A08" Name="PID" Label="PID_SS_A03_A04_A08" Description="Patient Identification">
+            <Field ItemNo="00104" Min="1" Max="1" Name="Set ID - PID" Usage="R" Datatype="SI_SS" MinLength="1" MaxLength="4"/>
+            <Field ItemNo="00105" Min="0" Max="0" Name="Patient ID" Usage="X" Datatype="CX" MinLength="1" MaxLength="20"/>
+            <Field ItemNo="00106" Min="1" Max="*" Name="Patient Identifier List" Usage="R" Datatype="CX_SS" MinLength="1" MaxLength="478"/>
+            <Field ItemNo="00107" Min="0" Max="0" Name="Alternate Patient ID - PID" Usage="X" Datatype="CX" MinLength="1" MaxLength="20"/>
+            <Field ItemNo="00108" Min="2" Max="2" Name="Patient Name" Usage="R" Datatype="XPN_SS" MinLength="1" MaxLength="294"/>
+            <Field ItemNo="00109" Min="0" Max="*" Name="Mother's Maiden Name" Usage="X" Datatype="XPN" MinLength="1" MaxLength="294"/>
+            <Field ItemNo="00110" Min="0" Max="1" Name="Date/Time of Birth" Usage="O" Datatype="TS" MinLength="1" MaxLength="26"/>
+            <Field ItemNo="00111" Min="0" Max="1" Name="Administrative Sex" Usage="RE" Datatype="IS_SS" MinLength="1" MaxLength="1" Binding="PHVS_Gender_SyndromicSurveillance" BindingStrength="R"/>
+            <Field ItemNo="00112" Min="0" Max="*" Name="Patient Alias" Usage="X" Datatype="XPN" MinLength="1" MaxLength="294"/>
+            <Field ItemNo="00113" Min="0" Max="*" Name="Race" Usage="RE" Datatype="CE_SS" MinLength="1" MaxLength="478" Binding="PHVS_RaceCategory_CDC" BindingStrength="R" BindingLocation="1"/>
+            <Field ItemNo="00114" Min="0" Max="1" Name="Patient Address" Usage="RE" Datatype="XAD_SS" MinLength="1" MaxLength="513"/>
+            <Field ItemNo="00115" Min="0" Max="0" Name="County Code" Usage="X" Datatype="IS" MinLength="1" MaxLength="4" Binding="HL70289"/>
+            <Field ItemNo="00116" Min="0" Max="*" Name="Phone Number - Home" Usage="X" Datatype="XTN" MinLength="1" MaxLength="250"/>
+            <Field ItemNo="00117" Min="0" Max="*" Name="Phone Number - Business" Usage="X" Datatype="XTN" MinLength="1" MaxLength="250"/>
+            <Field ItemNo="00118" Min="0" Max="1" Name="Primary Language" Usage="X" Datatype="CE" MinLength="1" MaxLength="478" Binding="HL70296" BindingLocation="1:4"/>
+            <Field ItemNo="00119" Min="0" Max="1" Name="Marital Status" Usage="X" Datatype="CE" MinLength="1" MaxLength="478" Binding="HL70002" BindingLocation="1:4"/>
+            <Field ItemNo="00120" Min="0" Max="1" Name="Religion" Usage="X" Datatype="CE" MinLength="1" MaxLength="478" Binding="HL70006" BindingLocation="1:4"/>
+            <Field ItemNo="00121" Min="0" Max="1" Name="Patient Account Number" Usage="O" Datatype="CX" MinLength="1" MaxLength="250"/>
+            <Field ItemNo="00122" Min="0" Max="0" Name="SSN Number - Patient" Usage="X" Datatype="ST" MinLength="1" MaxLength="16"/>
+            <Field ItemNo="00123" Min="0" Max="0" Name="Driver's License Number - Patient" Usage="X" Datatype="DLN" MinLength="1" MaxLength="64"/>
+            <Field ItemNo="00124" Min="0" Max="*" Name="Mother's Identifier" Usage="X" Datatype="CX" MinLength="1" MaxLength="250"/>
+            <Field ItemNo="00125" Min="0" Max="*" Name="Ethnic Group" Usage="RE" Datatype="CE_SS" MinLength="1" MaxLength="478" Binding="PHVS_EthnicityGroup_CDC" BindingStrength="R" BindingLocation="1"/>
+            <Field ItemNo="00126" Min="0" Max="1" Name="Birth Place" Usage="X" Datatype="ST" MinLength="1" MaxLength="250"/>
+            <Field ItemNo="00127" Min="0" Max="1" Name="Multiple Birth Indicator" Usage="X" Datatype="ID" MinLength="1" MaxLength="1" Binding="HL70136"/>
+            <Field ItemNo="00128" Min="0" Max="1" Name="Birth Order" Usage="X" Datatype="NM" MinLength="1" MaxLength="2"/>
+            <Field ItemNo="00129" Min="0" Max="*" Name="Citizenship" Usage="X" Datatype="CE" MinLength="1" MaxLength="478" Binding="HL70171" BindingLocation="1:4"/>
+            <Field ItemNo="00130" Min="0" Max="1" Name="Veterans Military Status" Usage="X" Datatype="CE" MinLength="1" MaxLength="478" Binding="HL70172" BindingLocation="1:4"/>
+            <Field ItemNo="00739" Min="0" Max="0" Name="Nationality" Usage="X" Datatype="CE" MinLength="1" MaxLength="478" Binding="HL70212" BindingLocation="1:4"/>
+            <Field ItemNo="00740" Min="0" Max="1" Name="Patient Death Date and Time" Usage="C" Datatype="TS_SS" MinLength="1" MaxLength="26"/>
+            <Field ItemNo="00741" Min="0" Max="1" Name="Patient Death Indicator" Usage="C" Datatype="ID_SS" MinLength="1" MaxLength="1" Binding="HL70136" BindingStrength="R"/>
+            <Field ItemNo="01535" Min="0" Max="1" Name="Identity Unknown Indicator" Usage="X" Datatype="ID" MinLength="1" MaxLength="1" Binding="HL70136"/>
+            <Field ItemNo="01536" Min="0" Max="*" Name="Identity Reliability Code" Usage="X" Datatype="IS" MinLength="1" MaxLength="20" Binding="HL70445"/>
+            <Field ItemNo="01537" Min="0" Max="1" Name="Last Update Date/Time" Usage="O" Datatype="TS" MinLength="1" MaxLength="26"/>
+            <Field ItemNo="01538" Min="0" Max="1" Name="Last Update Facility" Usage="O" Datatype="HD" MinLength="1" MaxLength="241"/>
+            <Field ItemNo="01539" Min="0" Max="1" Name="Species Code" Usage="X" Datatype="CE" MinLength="1" MaxLength="478" Binding="HL70446" BindingLocation="1:4"/>
+            <Field ItemNo="01540" Min="0" Max="1" Name="Breed Code" Usage="X" Datatype="CE" MinLength="1" MaxLength="478" Binding="HL70447" BindingLocation="1:4"/>
+            <Field ItemNo="01541" Min="0" Max="1" Name="Strain" Usage="X" Datatype="ST" MinLength="1" MaxLength="80"/>
+            <Field ItemNo="01542" Min="0" Max="1" Name="Production Class Code" Usage="X" Datatype="CE" MinLength="1" MaxLength="478" Binding="HL70429" BindingLocation="1:4"/>
+            <Field ItemNo="01840" Min="0" Max="*" Name="Tribal Citizenship" Usage="X" Datatype="CWE" MinLength="1" MaxLength="697" Binding="HL70171" BindingLocation="1:4"/>
+        </Segment>
+        <Segment ID="PV1_SS_A04" Name="PV1" Label="PV1_SS_A04" Description="Patient Visit">
+            <Field ItemNo="00131" Min="1" Max="1" Name="Set ID - PV1" Usage="R" Datatype="SI_SS" MinLength="1" MaxLength="4"/>
+            <Field ItemNo="00132" Min="1" Max="1" Name="Patient Class" Usage="R" Datatype="IS_SS" MinLength="1" MaxLength="1" Binding="PHVS_PatientClass_SyndromicSurveillance" BindingStrength="R"/>
+            <Field ItemNo="00133" Min="0" Max="1" Name="Assigned Patient Location" Usage="O" Datatype="PL" MinLength="1" MaxLength="1220"/>
+            <Field ItemNo="00134" Min="0" Max="1" Name="Admission Type" Usage="O" Datatype="IS" MinLength="1" MaxLength="2" Binding="HL70007" BindingStrength="U"/>
+            <Field ItemNo="00135" Min="0" Max="1" Name="Preadmit Number" Usage="X" Datatype="CX" MinLength="1" MaxLength="250"/>
+            <Field ItemNo="00136" Min="0" Max="1" Name="Prior Patient Location" Usage="O" Datatype="PL" MinLength="1" MaxLength="1220"/>
+            <Field ItemNo="00137" Min="0" Max="*" Name="Attending Doctor" Usage="O" Datatype="XCN" MinLength="1" MaxLength="309" Binding="HL70010" BindingStrength="U" BindingLocation="1"/>
+            <Field ItemNo="00138" Min="0" Max="*" Name="Referring Doctor" Usage="X" Datatype="XCN" MinLength="1" MaxLength="309" Binding="HL70010" BindingLocation="1"/>
+            <Field ItemNo="00139" Min="0" Max="*" Name="Consulting Doctor" Usage="X" Datatype="XCN" MinLength="1" MaxLength="309" Binding="HL70010" BindingLocation="1"/>
+            <Field ItemNo="00140" Min="0" Max="1" Name="Hospital Service" Usage="O" Datatype="IS" MinLength="1" MaxLength="3" Binding="HL70069" BindingStrength="U"/>
+            <Field ItemNo="00141" Min="0" Max="1" Name="Temporary Location" Usage="X" Datatype="PL" MinLength="1" MaxLength="1220"/>
+            <Field ItemNo="00142" Min="0" Max="1" Name="Preadmit Test Indicator" Usage="X" Datatype="IS" MinLength="1" MaxLength="2" Binding="HL70087"/>
+            <Field ItemNo="00143" Min="0" Max="1" Name="Re-admission Indicator" Usage="X" Datatype="IS" MinLength="1" MaxLength="2" Binding="HL70092"/>
+            <Field ItemNo="00144" Min="0" Max="1" Name="Admit Source" Usage="O" Datatype="IS" MinLength="1" MaxLength="6" Binding="HL70023" BindingStrength="U"/>
+            <Field ItemNo="00145" Min="0" Max="*" Name="Ambulatory Status" Usage="O" Datatype="IS" MinLength="1" MaxLength="2" Binding="HL70009" BindingStrength="U"/>
+            <Field ItemNo="00146" Min="0" Max="1" Name="VIP Indicator" Usage="X" Datatype="IS" MinLength="1" MaxLength="2" Binding="HL70099"/>
+            <Field ItemNo="00147" Min="0" Max="*" Name="Admitting Doctor" Usage="X" Datatype="XCN" MinLength="1" MaxLength="309" Binding="HL70010" BindingLocation="1"/>
+            <Field ItemNo="00148" Min="0" Max="1" Name="Patient Type" Usage="X" Datatype="IS" MinLength="1" MaxLength="2" Binding="HL70018"/>
+            <Field ItemNo="00149" Min="1" Max="1" Name="Visit Number" Usage="R" Datatype="CX_SS" MinLength="1" MaxLength="478"/>
+            <Field ItemNo="00150" Min="0" Max="*" Name="Financial Class" Usage="X" Datatype="FC" MinLength="1" MaxLength="50" Binding="HL70064" BindingLocation="1"/>
+            <Field ItemNo="00151" Min="0" Max="1" Name="Charge Price Indicator" Usage="X" Datatype="IS" MinLength="1" MaxLength="2" Binding="HL70032"/>
+            <Field ItemNo="00152" Min="0" Max="1" Name="Courtesy Code" Usage="X" Datatype="IS" MinLength="1" MaxLength="2" Binding="HL70045"/>
+            <Field ItemNo="00153" Min="0" Max="1" Name="Credit Rating" Usage="X" Datatype="IS" MinLength="1" MaxLength="2" Binding="HL70046"/>
+            <Field ItemNo="00154" Min="0" Max="*" Name="Contract Code" Usage="X" Datatype="IS" MinLength="1" MaxLength="2" Binding="HL70044"/>
+            <Field ItemNo="00155" Min="0" Max="*" Name="Contract Effective Date" Usage="X" Datatype="DT" MinLength="1" MaxLength="8"/>
+            <Field ItemNo="00156" Min="0" Max="*" Name="Contract Amount" Usage="X" Datatype="NM" MinLength="1" MaxLength="12"/>
+            <Field ItemNo="00157" Min="0" Max="*" Name="Contract Period" Usage="X" Datatype="NM" MinLength="1" MaxLength="3"/>
+            <Field ItemNo="00158" Min="0" Max="1" Name="Interest Code" Usage="X" Datatype="IS" MinLength="1" MaxLength="2" Binding="HL70073"/>
+            <Field ItemNo="00159" Min="0" Max="1" Name="Transfer to Bad Debt Code" Usage="X" Datatype="IS" MinLength="1" MaxLength="4" Binding="HL70110"/>
+            <Field ItemNo="00160" Min="0" Max="1" Name="Transfer to Bad Debt Date" Usage="X" Datatype="DT" MinLength="1" MaxLength="8"/>
+            <Field ItemNo="00161" Min="0" Max="1" Name="Bad Debt Agency Code" Usage="X" Datatype="IS" MinLength="1" MaxLength="10" Binding="HL70021"/>
+            <Field ItemNo="00162" Min="0" Max="1" Name="Bad Debt Transfer Amount" Usage="X" Datatype="NM" MinLength="1" MaxLength="12"/>
+            <Field ItemNo="00163" Min="0" Max="1" Name="Bad Debt Recovery Amount" Usage="X" Datatype="NM" MinLength="1" MaxLength="12"/>
+            <Field ItemNo="00164" Min="0" Max="1" Name="Delete Account Indicator" Usage="X" Datatype="IS" MinLength="1" MaxLength="1" Binding="HL70111"/>
+            <Field ItemNo="00165" Min="0" Max="1" Name="Delete Account Date" Usage="X" Datatype="DT" MinLength="1" MaxLength="8"/>
+            <Field ItemNo="00166" Min="0" Max="1" Name="Discharge Disposition" Usage="RE" Datatype="IS_SS" MinLength="1" MaxLength="3" Binding="PHVS_DischargeDisposition_HL7_2x"/>
+            <Field ItemNo="00167" Min="0" Max="1" Name="Discharged to Location" Usage="X" Datatype="DLD" MinLength="1" MaxLength="47" Binding="HL70113" BindingLocation="1"/>
+            <Field ItemNo="00168" Min="0" Max="1" Name="Diet Type" Usage="X" Datatype="CE" MinLength="1" MaxLength="478" Binding="HL70114" BindingLocation="1:4"/>
+            <Field ItemNo="00169" Min="0" Max="1" Name="Servicing Facility" Usage="X" Datatype="IS" MinLength="1" MaxLength="2" Binding="HL70115"/>
+            <Field ItemNo="00170" Min="0" Max="0" Name="Bed Status" Usage="X" Datatype="IS" MinLength="1" MaxLength="1" Binding="HL70116"/>
+            <Field ItemNo="00171" Min="0" Max="1" Name="Account Status" Usage="X" Datatype="IS" MinLength="1" MaxLength="2" Binding="HL70117"/>
+            <Field ItemNo="00172" Min="0" Max="1" Name="Pending Location" Usage="X" Datatype="PL" MinLength="1" MaxLength="1220"/>
+            <Field ItemNo="00173" Min="0" Max="1" Name="Prior Temporary Location" Usage="X" Datatype="PL" MinLength="1" MaxLength="1220"/>
+            <Field ItemNo="00174" Min="1" Max="1" Name="Admit Date/Time" Usage="R" Datatype="TS_SS" MinLength="1" MaxLength="26"/>
+            <Field ItemNo="00175" Min="0" Max="0" Name="Discharge Date/Time" Usage="X" Datatype="TS" MinLength="1" MaxLength="26"/>
+            <Field ItemNo="00176" Min="0" Max="1" Name="Current Patient Balance" Usage="X" Datatype="NM" MinLength="1" MaxLength="12"/>
+            <Field ItemNo="00177" Min="0" Max="1" Name="Total Charges" Usage="X" Datatype="NM" MinLength="1" MaxLength="12"/>
+            <Field ItemNo="00178" Min="0" Max="1" Name="Total Adjustments" Usage="X" Datatype="NM" MinLength="1" MaxLength="12"/>
+            <Field ItemNo="00179" Min="0" Max="1" Name="Total Payments" Usage="X" Datatype="NM" MinLength="1" MaxLength="12"/>
+            <Field ItemNo="00180" Min="0" Max="1" Name="Alternate Visit ID" Usage="X" Datatype="CX" MinLength="1" MaxLength="250" Binding="HL70203" BindingLocation="1"/>
+            <Field ItemNo="01226" Min="0" Max="1" Name="Visit Indicator" Usage="X" Datatype="IS" MinLength="1" MaxLength="1" Binding="HL70326"/>
+            <Field ItemNo="01274" Min="0" Max="0" Name="Other Healthcare Provider" Usage="X" Datatype="XCN" MinLength="1" MaxLength="309" Binding="HL70010" BindingLocation="1"/>
+        </Segment>
+        <Segment ID="PV2_SS" Name="PV2" Label="PV2_SS" Description="Patient Visit - Additional Information">
+            <Field ItemNo="00181" Min="0" Max="1" Name="Prior Pending Location" Usage="X" Datatype="PL" MinLength="1" MaxLength="1220"/>
+            <Field ItemNo="00182" Min="0" Max="1" Name="Accommodation Code" Usage="X" Datatype="CE" MinLength="1" MaxLength="478" Binding="HL70129" BindingLocation="1:4"/>
+            <Field ItemNo="00183" Min="0" Max="1" Name="Admit Reason" Usage="RE" Datatype="CE_SS" MinLength="1" MaxLength="478" Binding="[NIST]PHVS_Disease_CDC&amp;PHVS_AdministrativeDiagnosis_CDC_ICD-9CM&amp;PHVS_AdministrativeDiagnosis_CDC_ICD-10CM" BindingStrength="R" BindingLocation="1"/>
+            <Field ItemNo="00184" Min="0" Max="1" Name="Transfer Reason" Usage="X" Datatype="CE" MinLength="1" MaxLength="478"/>
+            <Field ItemNo="00185" Min="0" Max="*" Name="Patient Valuables" Usage="X" Datatype="ST" MinLength="1" MaxLength="25"/>
+            <Field ItemNo="00186" Min="0" Max="1" Name="Patient Valuables Location" Usage="X" Datatype="ST" MinLength="1" MaxLength="25"/>
+            <Field ItemNo="00187" Min="0" Max="*" Name="Visit User Code" Usage="X" Datatype="IS" MinLength="1" MaxLength="2" Binding="HL70130"/>
+            <Field ItemNo="00188" Min="0" Max="1" Name="Expected Admit Date/Time" Usage="X" Datatype="TS" MinLength="1" MaxLength="26"/>
+            <Field ItemNo="00189" Min="0" Max="1" Name="Expected Discharge Date/Time" Usage="X" Datatype="TS" MinLength="1" MaxLength="26"/>
+            <Field ItemNo="00711" Min="0" Max="1" Name="Estimated Length of Inpatient Stay" Usage="X" Datatype="NM" MinLength="1" MaxLength="3"/>
+            <Field ItemNo="00712" Min="0" Max="1" Name="Actual Length of Inpatient Stay" Usage="X" Datatype="NM" MinLength="1" MaxLength="3"/>
+            <Field ItemNo="00713" Min="0" Max="1" Name="Visit Description" Usage="X" Datatype="ST" MinLength="1" MaxLength="50"/>
+            <Field ItemNo="00714" Min="0" Max="*" Name="Referral Source Code" Usage="X" Datatype="XCN" MinLength="1" MaxLength="309"/>
+            <Field ItemNo="00715" Min="0" Max="1" Name="Previous Service Date" Usage="X" Datatype="DT" MinLength="1" MaxLength="8"/>
+            <Field ItemNo="00716" Min="0" Max="1" Name="Employment Illness Related Indicator" Usage="X" Datatype="ID" MinLength="1" MaxLength="1" Binding="HL70136"/>
+            <Field ItemNo="00717" Min="0" Max="1" Name="Purge Status Code" Usage="X" Datatype="IS" MinLength="1" MaxLength="1" Binding="HL70213"/>
+            <Field ItemNo="00718" Min="0" Max="1" Name="Purge Status Date" Usage="X" Datatype="DT" MinLength="1" MaxLength="8"/>
+            <Field ItemNo="00719" Min="0" Max="1" Name="Special Program Code" Usage="X" Datatype="IS" MinLength="1" MaxLength="2" Binding="HL70214"/>
+            <Field ItemNo="00720" Min="0" Max="1" Name="Retention Indicator" Usage="X" Datatype="ID" MinLength="1" MaxLength="1" Binding="HL70136"/>
+            <Field ItemNo="00721" Min="0" Max="1" Name="Expected Number of Insurance Plans" Usage="X" Datatype="NM" MinLength="1" MaxLength="1"/>
+            <Field ItemNo="00722" Min="0" Max="1" Name="Visit Publicity Code" Usage="X" Datatype="IS" MinLength="1" MaxLength="1" Binding="HL70215"/>
+            <Field ItemNo="00723" Min="0" Max="1" Name="Visit Protection Indicator" Usage="X" Datatype="ID" MinLength="1" MaxLength="1" Binding="HL70136"/>
+            <Field ItemNo="00724" Min="0" Max="*" Name="Clinic Organization Name" Usage="X" Datatype="XON" MinLength="1" MaxLength="250"/>
+            <Field ItemNo="00725" Min="0" Max="1" Name="Patient Status Code" Usage="X" Datatype="IS" MinLength="1" MaxLength="2" Binding="HL70216"/>
+            <Field ItemNo="00726" Min="0" Max="1" Name="Visit Priority Code" Usage="X" Datatype="IS" MinLength="1" MaxLength="1" Binding="HL70217"/>
+            <Field ItemNo="00727" Min="0" Max="1" Name="Previous Treatment Date" Usage="X" Datatype="DT" MinLength="1" MaxLength="8"/>
+            <Field ItemNo="00728" Min="0" Max="1" Name="Expected Discharge Disposition" Usage="X" Datatype="IS" MinLength="1" MaxLength="2" Binding="HL70112"/>
+            <Field ItemNo="00729" Min="0" Max="1" Name="Signature on File Date" Usage="X" Datatype="DT" MinLength="1" MaxLength="8"/>
+            <Field ItemNo="00730" Min="0" Max="1" Name="First Similar Illness Date" Usage="X" Datatype="DT" MinLength="1" MaxLength="8"/>
+            <Field ItemNo="00731" Min="0" Max="1" Name="Patient Charge Adjustment Code" Usage="X" Datatype="CE" MinLength="1" MaxLength="478" Binding="HL70218" BindingLocation="1:4"/>
+            <Field ItemNo="00732" Min="0" Max="1" Name="Recurring Service Code" Usage="X" Datatype="IS" MinLength="1" MaxLength="2" Binding="HL70219"/>
+            <Field ItemNo="00733" Min="0" Max="1" Name="Billing Media Code" Usage="X" Datatype="ID" MinLength="1" MaxLength="1" Binding="HL70136"/>
+            <Field ItemNo="00734" Min="0" Max="1" Name="Expected Surgery Date and Time" Usage="X" Datatype="TS" MinLength="1" MaxLength="26"/>
+            <Field ItemNo="00735" Min="0" Max="1" Name="Military Partnership Code" Usage="X" Datatype="ID" MinLength="1" MaxLength="1" Binding="HL70136"/>
+            <Field ItemNo="00736" Min="0" Max="1" Name="Military Non-Availability Code" Usage="X" Datatype="ID" MinLength="1" MaxLength="1" Binding="HL70136"/>
+            <Field ItemNo="00737" Min="0" Max="1" Name="Newborn Baby Indicator" Usage="X" Datatype="ID" MinLength="1" MaxLength="1" Binding="HL70136"/>
+            <Field ItemNo="00738" Min="0" Max="1" Name="Baby Detained Indicator" Usage="X" Datatype="ID" MinLength="1" MaxLength="1" Binding="HL70136"/>
+            <Field ItemNo="01543" Min="0" Max="1" Name="Mode of Arrival Code" Usage="X" Datatype="CE" MinLength="1" MaxLength="478" Binding="HL70430" BindingLocation="1:4"/>
+            <Field ItemNo="01544" Min="0" Max="*" Name="Recreational Drug Use Code" Usage="X" Datatype="CE" MinLength="1" MaxLength="478" Binding="HL70431" BindingLocation="1:4"/>
+            <Field ItemNo="01545" Min="0" Max="1" Name="Admission Level of Care Code" Usage="X" Datatype="CE" MinLength="1" MaxLength="478" Binding="HL70432" BindingLocation="1:4"/>
+            <Field ItemNo="01546" Min="0" Max="*" Name="Precaution Code" Usage="X" Datatype="CE" MinLength="1" MaxLength="478" Binding="HL70433" BindingLocation="1:4"/>
+            <Field ItemNo="01547" Min="0" Max="1" Name="Patient Condition Code" Usage="X" Datatype="CE" MinLength="1" MaxLength="478" Binding="HL70434" BindingLocation="1:4"/>
+            <Field ItemNo="00759" Min="0" Max="1" Name="Living Will Code" Usage="X" Datatype="IS" MinLength="1" MaxLength="2" Binding="HL70315"/>
+            <Field ItemNo="00760" Min="0" Max="1" Name="Organ Donor Code" Usage="X" Datatype="IS" MinLength="1" MaxLength="2" Binding="HL70316"/>
+            <Field ItemNo="01548" Min="0" Max="*" Name="Advance Directive Code" Usage="X" Datatype="CE" MinLength="1" MaxLength="478" Binding="HL70435" BindingLocation="1:4"/>
+            <Field ItemNo="01549" Min="0" Max="1" Name="Patient Status Effective Date" Usage="X" Datatype="DT" MinLength="1" MaxLength="8"/>
+            <Field ItemNo="01550" Min="0" Max="1" Name="Expected LOA Return Date/Time" Usage="X" Datatype="TS" MinLength="1" MaxLength="26"/>
+            <Field ItemNo="01841" Min="0" Max="1" Name="Expected Pre-admission Testing Date/Time" Usage="X" Datatype="TS" MinLength="1" MaxLength="26"/>
+            <Field ItemNo="01842" Min="0" Max="*" Name="Notify Clergy Code" Usage="X" Datatype="IS" MinLength="1" MaxLength="20" Binding="HL70534"/>
+        </Segment>
+        <Segment ID="DG1_SS" Name="DG1" Label="DG1_SS" Description="Diagnosis">
+            <Field ItemNo="00375" Min="1" Max="1" Name="Set ID - DG1" Usage="R" Datatype="SI_SS" MinLength="1" MaxLength="4"/>
+            <Field ItemNo="00376" Min="0" Max="1" Name="Diagnosis Coding Method" Usage="X" Datatype="ID" MinLength="1" MaxLength="2" Binding="HL70053"/>
+            <Field ItemNo="00377" Min="1" Max="1" Name="Diagnosis Code - DG1" Usage="R" Datatype="CE_SS_DG1" MinLength="1" MaxLength="478" Binding="[NIST]PHVS_Disease_CDC&amp;PHVS_AdministrativeDiagnosis_CDC_ICD-9CM&amp;PHVS_AdministrativeDiagnosis_CDC_ICD-10CM" BindingStrength="R" BindingLocation="1"/>
+            <Field ItemNo="00378" Min="0" Max="0" Name="Diagnosis Description" Usage="X" Datatype="ST" MinLength="1" MaxLength="40"/>
+            <Field ItemNo="00379" Min="0" Max="1" Name="Diagnosis Date/Time" Usage="O" Datatype="TS" MinLength="1" MaxLength="26"/>
+            <Field ItemNo="00380" Min="1" Max="1" Name="Diagnosis Type" Usage="R" Datatype="IS_SS" MinLength="1" MaxLength="2" Binding="PHVS_DiagnosisType_HL7_2x"/>
+            <Field ItemNo="00381" Min="0" Max="0" Name="Major Diagnostic Category" Usage="X" Datatype="CE" MinLength="1" MaxLength="478" Binding="HL70118" BindingLocation="1:4"/>
+            <Field ItemNo="00382" Min="0" Max="0" Name="Diagnostic Related Group" Usage="X" Datatype="CE" MinLength="1" MaxLength="478" Binding="HL70055" BindingLocation="1:4"/>
+            <Field ItemNo="00383" Min="0" Max="0" Name="DRG Approval Indicator" Usage="X" Datatype="ID" MinLength="1" MaxLength="1" Binding="HL70136"/>
+            <Field ItemNo="00384" Min="0" Max="0" Name="DRG Grouper Review Code" Usage="X" Datatype="IS" MinLength="1" MaxLength="2" Binding="HL70056"/>
+            <Field ItemNo="00385" Min="0" Max="0" Name="Outlier Type" Usage="X" Datatype="CE" MinLength="1" MaxLength="478" Binding="HL70083" BindingLocation="1:4"/>
+            <Field ItemNo="00386" Min="0" Max="0" Name="Outlier Days" Usage="X" Datatype="NM" MinLength="1" MaxLength="3"/>
+            <Field ItemNo="00387" Min="0" Max="0" Name="Outlier Cost" Usage="X" Datatype="CP" MinLength="1" MaxLength="538"/>
+            <Field ItemNo="00388" Min="0" Max="0" Name="Grouper Version And Type" Usage="X" Datatype="ST" MinLength="1" MaxLength="4"/>
+            <Field ItemNo="00389" Min="0" Max="1" Name="Diagnosis Priority" Usage="X" Datatype="ID" MinLength="1" MaxLength="2" Binding="HL70359"/>
+            <Field ItemNo="00390" Min="0" Max="*" Name="Diagnosing Clinician" Usage="X" Datatype="XCN" MinLength="1" MaxLength="309"/>
+            <Field ItemNo="00766" Min="0" Max="1" Name="Diagnosis Classification" Usage="X" Datatype="IS" MinLength="1" MaxLength="3" Binding="HL70228"/>
+            <Field ItemNo="00767" Min="0" Max="1" Name="Confidential Indicator" Usage="X" Datatype="ID" MinLength="1" MaxLength="1" Binding="HL70136"/>
+            <Field ItemNo="00768" Min="0" Max="1" Name="Attestation Date/Time" Usage="X" Datatype="TS" MinLength="1" MaxLength="26"/>
+            <Field ItemNo="01850" Min="0" Max="1" Name="Diagnosis Identifier" Usage="X" Datatype="EI" MinLength="1" MaxLength="427"/>
+            <Field ItemNo="01894" Min="0" Max="1" Name="Diagnosis Action Code" Usage="X" Datatype="ID" MinLength="1" MaxLength="1" Binding="HL70206"/>
+        </Segment>
+        <Segment ID="PR1_HL7" Name="PR1" Label="PR1_HL7" Description="Procedures">
+            <Field ItemNo="00391" Min="1" Max="1" Name="Set ID - PR1" Usage="R" Datatype="SI" MinLength="1" MaxLength="4"/>
+            <Field ItemNo="00392" Min="0" Max="1" Name="Procedure Coding Method" Usage="B" Datatype="IS" MinLength="1" MaxLength="3" Binding="HL70089" BindingStrength="U"/>
+            <Field ItemNo="00393" Min="1" Max="1" Name="Procedure Code" Usage="R" Datatype="CE" MinLength="1" MaxLength="250" Binding="HL70088" BindingStrength="U" BindingLocation="1:4"/>
+            <Field ItemNo="00394" Min="0" Max="1" Name="Procedure Description" Usage="B" Datatype="ST" MinLength="1" MaxLength="40"/>
+            <Field ItemNo="00395" Min="1" Max="1" Name="Procedure Date/Time" Usage="R" Datatype="TS" MinLength="1" MaxLength="26"/>
+            <Field ItemNo="00396" Min="0" Max="1" Name="Procedure Functional Type" Usage="O" Datatype="IS" MinLength="1" MaxLength="2" Binding="HL70230" BindingStrength="U"/>
+            <Field ItemNo="00397" Min="0" Max="1" Name="Procedure Minutes" Usage="O" Datatype="NM" MinLength="1" MaxLength="4"/>
+            <Field ItemNo="00398" Min="0" Max="1" Name="Anesthesiologist" Usage="B" Datatype="XCN" MinLength="1" MaxLength="205" Binding="HL70010" BindingStrength="U" BindingLocation="1"/>
+            <Field ItemNo="00399" Min="0" Max="1" Name="Anesthesia Code" Usage="O" Datatype="IS" MinLength="1" MaxLength="2" Binding="HL70019" BindingStrength="U"/>
+            <Field ItemNo="00400" Min="0" Max="1" Name="Anesthesia Minutes" Usage="O" Datatype="NM" MinLength="1" MaxLength="4"/>
+            <Field ItemNo="00401" Min="0" Max="*" Name="Surgeon" Usage="B" Datatype="XCN" MinLength="1" MaxLength="205" Binding="HL70010" BindingStrength="U" BindingLocation="1"/>
+            <Field ItemNo="00402" Min="0" Max="*" Name="Procedure Practitioner" Usage="B" Datatype="XCN" MinLength="1" MaxLength="250" Binding="HL70010" BindingStrength="U" BindingLocation="1"/>
+            <Field ItemNo="00403" Min="0" Max="1" Name="Consent Code" Usage="O" Datatype="CE" MinLength="1" MaxLength="250" Binding="HL70059" BindingStrength="U" BindingLocation="1:4"/>
+            <Field ItemNo="00404" Min="0" Max="1" Name="Procedure Priority" Usage="O" Datatype="ID" MinLength="1" MaxLength="2" Binding="HL70418" BindingStrength="U"/>
+            <Field ItemNo="00772" Min="0" Max="1" Name="Associated Diagnosis Code" Usage="O" Datatype="CE" MinLength="1" MaxLength="220" Binding="HL70051" BindingStrength="U" BindingLocation="1:4"/>
+            <Field ItemNo="01316" Min="0" Max="*" Name="Procedure Code Modifier" Usage="O" Datatype="CE" MinLength="1" MaxLength="250" Binding="HL70340" BindingStrength="U" BindingLocation="1:4"/>
+            <Field ItemNo="01501" Min="0" Max="1" Name="Procedure DRG Type" Usage="O" Datatype="IS" MinLength="1" MaxLength="20" Binding="HL70416" BindingStrength="U"/>
+            <Field ItemNo="01502" Min="0" Max="*" Name="Tissue Type Code" Usage="O" Datatype="CE" MinLength="1" MaxLength="250" Binding="HL70417" BindingStrength="U" BindingLocation="1:4"/>
+            <Field ItemNo="01848" Min="0" Max="1" Name="Procedure Identifier" Usage="C" Datatype="EI" MinLength="1" MaxLength="427"/>
+            <Field ItemNo="01849" Min="0" Max="1" Name="Procedure Action Code" Usage="C" Datatype="ID" MinLength="1" MaxLength="1" Binding="HL70206" BindingStrength="U"/>
+        </Segment>
+        <Segment ID="OBX_SS" Name="OBX" Label="OBX_SS" Description="Observation/Result">
+            <DynamicMapping>
+                <Mapping Position="5" Reference="2">
+                    <Case Value="TS" Datatype="TS_SS"/>
+                    <Case Value="TX" Datatype="TX_SS"/>
+                    <Case Value="NM" Datatype="NM_SS"/>
+                    <Case Value="CWE" Datatype="CWE_SS_OBX"/>
+                    <Case Value="XAD" Datatype="XAD_SS_OBX"/>
+                    <Case Value="HD" Datatype="HD_SS"/>
+                </Mapping>
+            </DynamicMapping>
+            <Field ItemNo="00569" Min="1" Max="1" Name="Set ID - OBX" Usage="R" Datatype="SI_SS" MinLength="1" MaxLength="4"/>
+            <Field ItemNo="00570" Min="1" Max="1" Name="Value Type" Usage="R" Datatype="ID_SS" MinLength="1" MaxLength="3" Binding="PHVS_ValueType_SyndromicSurveillance" BindingStrength="R"/>
+            <Field ItemNo="00571" Min="1" Max="1" Name="Observation Identifier" Usage="R" Datatype="CE_SS" MinLength="1" MaxLength="478" Binding="[NIST]PHVS_ObservationIdentifier_SyndromicSurveillance&amp;PHVS_VitalSignResult_HITSP" BindingStrength="R" BindingLocation="1"/>
+            <Field ItemNo="00572" Min="0" Max="1" Name="Observation Sub-ID" Usage="O" Datatype="ST" MinLength="1" MaxLength="20"/>
+            <Field ItemNo="00573" Min="0" Max="*" Name="Observation Value" Usage="RE" Datatype="varies" MinLength="1" MaxLength="99999"/>
+            <Field ItemNo="00574" Min="0" Max="1" Name="Units" Usage="C" Datatype="CE_SS" MinLength="1" MaxLength="62"/>
+            <Field ItemNo="00575" Min="0" Max="1" Name="References Range" Usage="X" Datatype="ST" MinLength="1" MaxLength="60"/>
+            <Field ItemNo="00576" Min="0" Max="*" Name="Abnormal Flags" Usage="X" Datatype="IS" MinLength="1" MaxLength="5" Binding="HL70078"/>
+            <Field ItemNo="00577" Min="0" Max="1" Name="Probability" Usage="X" Datatype="NM" MinLength="1" MaxLength="5"/>
+            <Field ItemNo="00578" Min="0" Max="*" Name="Nature of Abnormal Test" Usage="X" Datatype="ID" MinLength="1" MaxLength="2" Binding="HL70080"/>
+            <Field ItemNo="00579" Min="1" Max="1" Name="Observation Result Status" Usage="R" Datatype="ID_SS" MinLength="1" MaxLength="1" Binding="HL70085" BindingStrength="R"/>
+            <Field ItemNo="00580" Min="0" Max="1" Name="Effective Date of Reference Range Values" Usage="X" Datatype="TS" MinLength="1" MaxLength="26"/>
+            <Field ItemNo="00581" Min="0" Max="1" Name="User Defined Access Checks" Usage="X" Datatype="ST" MinLength="1" MaxLength="20"/>
+            <Field ItemNo="00582" Min="0" Max="1" Name="Date/Time of the Observation" Usage="O" Datatype="TS" MinLength="1" MaxLength="26"/>
+            <Field ItemNo="00583" Min="0" Max="1" Name="Producer's ID" Usage="X" Datatype="CE" MinLength="1" MaxLength="478"/>
+            <Field ItemNo="00584" Min="0" Max="*" Name="Responsible Observer" Usage="X" Datatype="XCN" MinLength="1" MaxLength="309"/>
+            <Field ItemNo="00936" Min="0" Max="*" Name="Observation Method" Usage="X" Datatype="CE" MinLength="1" MaxLength="478"/>
+            <Field ItemNo="01479" Min="0" Max="*" Name="Equipment Instance Identifier" Usage="X" Datatype="EI" MinLength="1" MaxLength="424"/>
+            <Field ItemNo="01480" Min="0" Max="1" Name="Date/Time of the Analysis" Usage="X" Datatype="TS" MinLength="1" MaxLength="26"/>
+            <Field ItemNo="09999" Min="0" Max="1" Name="Reserved for harmonization with V2.6" Usage="X" Datatype="varies" MinLength="0" MaxLength="0"/>
+            <Field ItemNo="09999" Min="0" Max="1" Name="Reserved for harmonization with V2.6" Usage="X" Datatype="varies" MinLength="0" MaxLength="0"/>
+            <Field ItemNo="09999" Min="0" Max="1" Name="Reserved for harmonization with V2.6" Usage="X" Datatype="varies" MinLength="0" MaxLength="0"/>
+            <Field ItemNo="02283" Min="0" Max="1" Name="Performing Organization Name" Usage="X" Datatype="XON" MinLength="1" MaxLength="567"/>
+            <Field ItemNo="02284" Min="0" Max="1" Name="Performing Organization Address" Usage="X" Datatype="XAD" MinLength="1" MaxLength="631"/>
+            <Field ItemNo="02285" Min="0" Max="1" Name="Performing Organization Medical Director" Usage="X" Datatype="XCN" MinLength="1" MaxLength="3002"/>
+        </Segment>
+        <Segment ID="IN1_HL7" Name="IN1" Label="IN1_HL7" Description="Insurance">
+            <Field ItemNo="00426" Min="1" Max="1" Name="Set ID - IN1" Usage="R" Datatype="SI" MinLength="1" MaxLength="4"/>
+            <Field ItemNo="00368" Min="1" Max="1" Name="Insurance Plan ID" Usage="R" Datatype="CE" MinLength="1" MaxLength="478" Binding="HL70072" BindingStrength="U" BindingLocation="1:4"/>
+            <Field ItemNo="00428" Min="1" Max="*" Name="Insurance Company ID" Usage="R" Datatype="CX" MinLength="1" MaxLength="250"/>
+            <Field ItemNo="00429" Min="0" Max="*" Name="Insurance Company Name" Usage="O" Datatype="XON" MinLength="1" MaxLength="250"/>
+            <Field ItemNo="00430" Min="0" Max="*" Name="Insurance Company Address" Usage="O" Datatype="XAD" MinLength="1" MaxLength="513"/>
+            <Field ItemNo="00431" Min="0" Max="*" Name="Insurance Co Contact Person" Usage="O" Datatype="XPN" MinLength="1" MaxLength="294"/>
+            <Field ItemNo="00432" Min="0" Max="*" Name="Insurance Co Phone Number" Usage="O" Datatype="XTN" MinLength="1" MaxLength="250"/>
+            <Field ItemNo="00433" Min="0" Max="1" Name="Group Number" Usage="O" Datatype="ST" MinLength="1" MaxLength="12"/>
+            <Field ItemNo="00434" Min="0" Max="*" Name="Group Name" Usage="O" Datatype="XON" MinLength="1" MaxLength="250"/>
+            <Field ItemNo="00435" Min="0" Max="*" Name="Insured's Group Emp ID" Usage="O" Datatype="CX" MinLength="1" MaxLength="250"/>
+            <Field ItemNo="00436" Min="0" Max="*" Name="Insured's Group Emp Name" Usage="O" Datatype="XON" MinLength="1" MaxLength="250"/>
+            <Field ItemNo="00437" Min="0" Max="1" Name="Plan Effective Date" Usage="O" Datatype="DT" MinLength="1" MaxLength="8"/>
+            <Field ItemNo="00438" Min="0" Max="1" Name="Plan Expiration Date" Usage="O" Datatype="DT" MinLength="1" MaxLength="8"/>
+            <Field ItemNo="00439" Min="0" Max="1" Name="Authorization Information" Usage="O" Datatype="AUI" MinLength="1" MaxLength="239"/>
+            <Field ItemNo="00440" Min="0" Max="1" Name="Plan Type" Usage="O" Datatype="IS" MinLength="1" MaxLength="3" Binding="HL70086" BindingStrength="U"/>
+            <Field ItemNo="00441" Min="0" Max="*" Name="Name Of Insured" Usage="O" Datatype="XPN" MinLength="1" MaxLength="294"/>
+            <Field ItemNo="00442" Min="0" Max="1" Name="Insured's Relationship To Patient" Usage="O" Datatype="CE" MinLength="1" MaxLength="478" Binding="HL70063" BindingLocation="1:4"/>
+            <Field ItemNo="00443" Min="0" Max="1" Name="Insured's Date Of Birth" Usage="O" Datatype="TS" MinLength="1" MaxLength="26"/>
+            <Field ItemNo="00444" Min="0" Max="*" Name="Insured's Address" Usage="O" Datatype="XAD" MinLength="1" MaxLength="513"/>
+            <Field ItemNo="00445" Min="0" Max="1" Name="Assignment Of Benefits" Usage="O" Datatype="IS" MinLength="1" MaxLength="2" Binding="HL70135"/>
+            <Field ItemNo="00446" Min="0" Max="1" Name="Coordination Of Benefits" Usage="O" Datatype="IS" MinLength="1" MaxLength="2" Binding="HL70173"/>
+            <Field ItemNo="00447" Min="0" Max="1" Name="Coord Of Ben. Priority" Usage="O" Datatype="ST" MinLength="1" MaxLength="2"/>
+            <Field ItemNo="00448" Min="0" Max="1" Name="Notice Of Admission Flag" Usage="O" Datatype="ID" MinLength="1" MaxLength="1" Binding="HL70136"/>
+            <Field ItemNo="00449" Min="0" Max="1" Name="Notice Of Admission Date" Usage="O" Datatype="DT" MinLength="1" MaxLength="8"/>
+            <Field ItemNo="00450" Min="0" Max="1" Name="Report Of Eligibility Flag" Usage="O" Datatype="ID" MinLength="1" MaxLength="1" Binding="HL70136"/>
+            <Field ItemNo="00451" Min="0" Max="1" Name="Report Of Eligibility Date" Usage="O" Datatype="DT" MinLength="1" MaxLength="8"/>
+            <Field ItemNo="00452" Min="0" Max="1" Name="Release Information Code" Usage="O" Datatype="IS" MinLength="1" MaxLength="2" Binding="HL70093"/>
+            <Field ItemNo="00453" Min="0" Max="1" Name="Pre-Admit Cert (PAC)" Usage="O" Datatype="ST" MinLength="1" MaxLength="15"/>
+            <Field ItemNo="00454" Min="0" Max="1" Name="Verification Date/Time" Usage="O" Datatype="TS" MinLength="1" MaxLength="26"/>
+            <Field ItemNo="00455" Min="0" Max="*" Name="Verification By" Usage="O" Datatype="XCN" MinLength="1" MaxLength="309"/>
+            <Field ItemNo="00456" Min="0" Max="1" Name="Type Of Agreement Code" Usage="O" Datatype="IS" MinLength="1" MaxLength="2" Binding="HL70098"/>
+            <Field ItemNo="00457" Min="0" Max="1" Name="Billing Status" Usage="O" Datatype="IS" MinLength="1" MaxLength="2" Binding="HL70022"/>
+            <Field ItemNo="00458" Min="0" Max="1" Name="Lifetime Reserve Days" Usage="O" Datatype="NM" MinLength="1" MaxLength="4"/>
+            <Field ItemNo="00459" Min="0" Max="1" Name="Delay Before L.R. Day" Usage="O" Datatype="NM" MinLength="1" MaxLength="4"/>
+            <Field ItemNo="00460" Min="0" Max="1" Name="Company Plan Code" Usage="O" Datatype="IS" MinLength="1" MaxLength="8" Binding="HL70042"/>
+            <Field ItemNo="00461" Min="0" Max="1" Name="Policy Number" Usage="O" Datatype="ST" MinLength="1" MaxLength="15"/>
+            <Field ItemNo="00462" Min="0" Max="1" Name="Policy Deductible" Usage="O" Datatype="CP" MinLength="1" MaxLength="538"/>
+            <Field ItemNo="00463" Min="0" Max="0" Name="Policy Limit - Amount" Usage="B" Datatype="CP" MinLength="1" MaxLength="538"/>
+            <Field ItemNo="00464" Min="0" Max="1" Name="Policy Limit - Days" Usage="O" Datatype="NM" MinLength="1" MaxLength="4"/>
+            <Field ItemNo="00465" Min="0" Max="1" Name="Room Rate - Semi-Private" Usage="B" Datatype="CP" MinLength="1" MaxLength="538"/>
+            <Field ItemNo="00466" Min="0" Max="1" Name="Room Rate - Private" Usage="B" Datatype="CP" MinLength="1" MaxLength="538"/>
+            <Field ItemNo="00467" Min="0" Max="1" Name="Insured's Employment Status" Usage="O" Datatype="CE" MinLength="1" MaxLength="478" Binding="HL70066" BindingLocation="1:4"/>
+            <Field ItemNo="00468" Min="0" Max="1" Name="Insured's Administrative Sex" Usage="O" Datatype="IS" MinLength="1" MaxLength="1" Binding="HL70001"/>
+            <Field ItemNo="00469" Min="0" Max="*" Name="Insured's Employer's Address" Usage="O" Datatype="XAD" MinLength="1" MaxLength="513"/>
+            <Field ItemNo="00470" Min="0" Max="1" Name="Verification Status" Usage="O" Datatype="ST" MinLength="1" MaxLength="2"/>
+            <Field ItemNo="00471" Min="0" Max="1" Name="Prior Insurance Plan ID" Usage="O" Datatype="IS" MinLength="1" MaxLength="8" Binding="HL70072"/>
+            <Field ItemNo="01227" Min="0" Max="1" Name="Coverage Type" Usage="O" Datatype="IS" MinLength="1" MaxLength="3" Binding="HL70309"/>
+            <Field ItemNo="00753" Min="0" Max="1" Name="Handicap" Usage="O" Datatype="IS" MinLength="1" MaxLength="2" Binding="HL70295"/>
+            <Field ItemNo="01230" Min="0" Max="*" Name="Insured's ID Number" Usage="O" Datatype="CX" MinLength="1" MaxLength="250"/>
+            <Field ItemNo="01854" Min="0" Max="1" Name="Signature Code" Usage="O" Datatype="IS" MinLength="1" MaxLength="1" Binding="HL70535"/>
+            <Field ItemNo="01855" Min="0" Max="1" Name="Signature Code Date" Usage="O" Datatype="DT" MinLength="1" MaxLength="8"/>
+            <Field ItemNo="01899" Min="0" Max="1" Name="Insured's Birth Place" Usage="O" Datatype="ST" MinLength="1" MaxLength="250"/>
+            <Field ItemNo="01852" Min="0" Max="1" Name="VIP Indicator" Usage="O" Datatype="IS" MinLength="1" MaxLength="2" Binding="HL70099"/>
+        </Segment>
+        <Segment ID="SFT_HL7" Name="SFT" Label="SFT_HL7" Description="Software Segment">
+            <Field ItemNo="01834" Min="1" Max="1" Name="Software Vendor Organization" Usage="R" Datatype="XON" MinLength="1" MaxLength="567"/>
+            <Field ItemNo="01835" Min="1" Max="1" Name="Software Certified Version or Release Number" Usage="R" Datatype="ST" MinLength="1" MaxLength="15"/>
+            <Field ItemNo="01836" Min="1" Max="1" Name="Software Product Name" Usage="R" Datatype="ST" MinLength="1" MaxLength="20"/>
+            <Field ItemNo="01837" Min="1" Max="1" Name="Software Binary ID" Usage="R" Datatype="ST" MinLength="1" MaxLength="20"/>
+            <Field ItemNo="01838" Min="0" Max="1" Name="Software Product Information" Usage="O" Datatype="TX" MinLength="1" MaxLength="1024"/>
+            <Field ItemNo="01839" Min="0" Max="1" Name="Software Install Date" Usage="O" Datatype="TS" MinLength="1" MaxLength="26"/>
+        </Segment>
+        <Segment ID="PD1_HL7" Name="PD1" Label="PD1_HL7" Description="Patient Additional Demographic">
+            <Field ItemNo="00755" Min="0" Max="*" Name="Living Dependency" Usage="O" Datatype="IS" MinLength="1" MaxLength="2" Binding="HL70223" BindingStrength="U"/>
+            <Field ItemNo="00742" Min="0" Max="1" Name="Living Arrangement" Usage="O" Datatype="IS" MinLength="1" MaxLength="2" Binding="HL70220" BindingStrength="U"/>
+            <Field ItemNo="00756" Min="0" Max="*" Name="Patient Primary Facility" Usage="O" Datatype="XON" MinLength="1" MaxLength="250"/>
+            <Field ItemNo="00757" Min="0" Max="*" Name="Patient Primary Care Provider Name &amp; ID No." Usage="B" Datatype="XCN" MinLength="1" MaxLength="250"/>
+            <Field ItemNo="00745" Min="0" Max="1" Name="Student Indicator" Usage="O" Datatype="IS" MinLength="1" MaxLength="2" Binding="HL70231" BindingStrength="U"/>
+            <Field ItemNo="00753" Min="0" Max="1" Name="Handicap" Usage="O" Datatype="IS" MinLength="1" MaxLength="2" Binding="HL70295" BindingStrength="U"/>
+            <Field ItemNo="00759" Min="0" Max="1" Name="Living Will Code" Usage="O" Datatype="IS" MinLength="1" MaxLength="2" Binding="HL70315" BindingStrength="U"/>
+            <Field ItemNo="00760" Min="0" Max="1" Name="Organ Donor Code" Usage="O" Datatype="IS" MinLength="1" MaxLength="2" Binding="HL70316" BindingStrength="U"/>
+            <Field ItemNo="00761" Min="0" Max="1" Name="Separate Bill" Usage="O" Datatype="ID" MinLength="1" MaxLength="1" Binding="HL70136" BindingStrength="U"/>
+            <Field ItemNo="00762" Min="0" Max="*" Name="Duplicate Patient" Usage="O" Datatype="CX" MinLength="1" MaxLength="250"/>
+            <Field ItemNo="00743" Min="0" Max="1" Name="Publicity Code" Usage="O" Datatype="CE" MinLength="1" MaxLength="250" Binding="HL70215" BindingStrength="U" BindingLocation="1:4"/>
+            <Field ItemNo="00744" Min="0" Max="1" Name="Protection Indicator" Usage="O" Datatype="ID" MinLength="1" MaxLength="1" Binding="HL70136" BindingStrength="U"/>
+            <Field ItemNo="01566" Min="0" Max="1" Name="Protection Indicator Effective Date" Usage="O" Datatype="DT" MinLength="1" MaxLength="8"/>
+            <Field ItemNo="01567" Min="0" Max="*" Name="Place of Worship" Usage="O" Datatype="XON" MinLength="1" MaxLength="250"/>
+            <Field ItemNo="01568" Min="0" Max="*" Name="Advance Directive Code" Usage="O" Datatype="CE" MinLength="1" MaxLength="250" Binding="HL70435" BindingStrength="U" BindingLocation="1:4"/>
+            <Field ItemNo="01569" Min="0" Max="1" Name="Immunization Registry Status" Usage="O" Datatype="IS" MinLength="1" MaxLength="1" Binding="HL70441" BindingStrength="U"/>
+            <Field ItemNo="01570" Min="0" Max="1" Name="Immunization Registry Status Effective Date" Usage="O" Datatype="DT" MinLength="1" MaxLength="8"/>
+            <Field ItemNo="01571" Min="0" Max="1" Name="Publicity Code Effective Date" Usage="O" Datatype="DT" MinLength="1" MaxLength="8"/>
+            <Field ItemNo="01572" Min="0" Max="1" Name="Military Branch" Usage="O" Datatype="IS" MinLength="1" MaxLength="5" Binding="HL70140" BindingStrength="U"/>
+            <Field ItemNo="00486" Min="0" Max="1" Name="Military Rank/Grade" Usage="O" Datatype="IS" MinLength="1" MaxLength="2" Binding="HL70141" BindingStrength="U"/>
+            <Field ItemNo="01573" Min="0" Max="1" Name="Military Status" Usage="O" Datatype="IS" MinLength="1" MaxLength="3" Binding="HL70142" BindingStrength="U"/>
+        </Segment>
+        <Segment ID="ROL_HL7" Name="ROL" Label="ROL_HL7" Description="Role">
+            <Field ItemNo="01206" Min="0" Max="1" Name="Role Instance ID" Usage="C" Datatype="EI" MinLength="1" MaxLength="60"/>
+            <Field ItemNo="00816" Min="1" Max="1" Name="Action Code" Usage="R" Datatype="ID" MinLength="1" MaxLength="2" Binding="HL70287"/>
+            <Field ItemNo="01197" Min="1" Max="1" Name="Role-ROL" Usage="R" Datatype="CE" MinLength="1" MaxLength="250" Binding="HL70443" BindingLocation="1:4"/>
+            <Field ItemNo="01198" Min="1" Max="*" Name="Role Person" Usage="R" Datatype="XCN" MinLength="1" MaxLength="250"/>
+            <Field ItemNo="01199" Min="0" Max="1" Name="Role Begin Date/Time" Usage="O" Datatype="TS" MinLength="1" MaxLength="26"/>
+            <Field ItemNo="01200" Min="0" Max="1" Name="Role End Date/Time" Usage="O" Datatype="TS" MinLength="1" MaxLength="26"/>
+            <Field ItemNo="01201" Min="0" Max="1" Name="Role Duration" Usage="O" Datatype="CE" MinLength="1" MaxLength="250"/>
+            <Field ItemNo="01205" Min="0" Max="1" Name="Role Action Reason" Usage="O" Datatype="CE" MinLength="1" MaxLength="250"/>
+            <Field ItemNo="01510" Min="0" Max="*" Name="Provider Type" Usage="O" Datatype="CE" MinLength="1" MaxLength="250"/>
+            <Field ItemNo="01461" Min="0" Max="1" Name="Organization Unit Type" Usage="O" Datatype="CE" MinLength="1" MaxLength="250" Binding="HL70001" BindingStrength="U" BindingLocation="1:4"/>
+            <Field ItemNo="00679" Min="0" Max="*" Name="Office/Home Address/Birthplace" Usage="O" Datatype="XAD" MinLength="1" MaxLength="250"/>
+            <Field ItemNo="00678" Min="0" Max="*" Name="Phone" Usage="O" Datatype="XTN" MinLength="1" MaxLength="250"/>
+        </Segment>
+        <Segment ID="NK1_HL7" Name="NK1" Label="NK1_HL7" Description="Next of Kin / Associated Parties">
+            <Field ItemNo="00190" Min="1" Max="1" Name="Set ID - NK1" Usage="R" Datatype="SI" MinLength="1" MaxLength="4"/>
+            <Field ItemNo="00191" Min="0" Max="*" Name="Name" Usage="O" Datatype="XPN" MinLength="1" MaxLength="250"/>
+            <Field ItemNo="00192" Min="0" Max="1" Name="Relationship" Usage="O" Datatype="CE" MinLength="1" MaxLength="250" Binding="HL70063" BindingStrength="U" BindingLocation="1:4"/>
+            <Field ItemNo="00193" Min="0" Max="*" Name="Address" Usage="O" Datatype="XAD" MinLength="1" MaxLength="250"/>
+            <Field ItemNo="00194" Min="0" Max="*" Name="Phone Number" Usage="O" Datatype="XTN" MinLength="1" MaxLength="250"/>
+            <Field ItemNo="00195" Min="0" Max="*" Name="Business Phone Number" Usage="O" Datatype="XTN" MinLength="1" MaxLength="250"/>
+            <Field ItemNo="00196" Min="0" Max="1" Name="Contact Role" Usage="O" Datatype="CE" MinLength="1" MaxLength="250" Binding="HL70131" BindingStrength="U" BindingLocation="1:4"/>
+            <Field ItemNo="00197" Min="0" Max="1" Name="Start Date" Usage="O" Datatype="DT" MinLength="1" MaxLength="8"/>
+            <Field ItemNo="00198" Min="0" Max="1" Name="End Date" Usage="O" Datatype="DT" MinLength="1" MaxLength="8"/>
+            <Field ItemNo="00199" Min="0" Max="1" Name="Next of Kin / Associated Parties Job Title" Usage="O" Datatype="ST" MinLength="1" MaxLength="60"/>
+            <Field ItemNo="00200" Min="0" Max="1" Name="Next of Kin / Associated Parties Job Code/Class" Usage="O" Datatype="JCC" MinLength="1" MaxLength="20" Binding="HL70327" BindingStrength="U" BindingLocation="1"/>
+            <Field ItemNo="00201" Min="0" Max="1" Name="Next of Kin / Associated Parties Employee Number" Usage="O" Datatype="CX" MinLength="1" MaxLength="250"/>
+            <Field ItemNo="00202" Min="0" Max="*" Name="Organization Name - NK1" Usage="O" Datatype="XON" MinLength="1" MaxLength="250"/>
+            <Field ItemNo="00119" Min="0" Max="1" Name="Marital Status" Usage="O" Datatype="CE" MinLength="1" MaxLength="250" Binding="HL70002" BindingStrength="U" BindingLocation="1:4"/>
+            <Field ItemNo="00111" Min="0" Max="1" Name="Administrative Sex" Usage="O" Datatype="IS" MinLength="1" MaxLength="1" Binding="HL70001" BindingStrength="U"/>
+            <Field ItemNo="00110" Min="0" Max="1" Name="Date/Time of Birth" Usage="O" Datatype="TS" MinLength="1" MaxLength="26"/>
+            <Field ItemNo="00755" Min="0" Max="*" Name="Living Dependency" Usage="O" Datatype="IS" MinLength="1" MaxLength="2" Binding="HL70223" BindingStrength="U"/>
+            <Field ItemNo="00145" Min="0" Max="*" Name="Ambulatory Status" Usage="O" Datatype="IS" MinLength="1" MaxLength="2" Binding="HL70009" BindingStrength="U"/>
+            <Field ItemNo="00129" Min="0" Max="*" Name="Citizenship" Usage="O" Datatype="CE" MinLength="1" MaxLength="250" Binding="HL70171" BindingStrength="U" BindingLocation="1:4"/>
+            <Field ItemNo="00118" Min="0" Max="1" Name="Primary Language" Usage="O" Datatype="CE" MinLength="1" MaxLength="250" Binding="HL70296" BindingStrength="U" BindingLocation="1:4"/>
+            <Field ItemNo="00742" Min="0" Max="1" Name="Living Arrangement" Usage="O" Datatype="IS" MinLength="1" MaxLength="2" Binding="HL70220" BindingStrength="U"/>
+            <Field ItemNo="00743" Min="0" Max="1" Name="Publicity Code" Usage="O" Datatype="CE" MinLength="1" MaxLength="250" Binding="HL70215" BindingStrength="U" BindingLocation="1:4"/>
+            <Field ItemNo="00744" Min="0" Max="1" Name="Protection Indicator" Usage="O" Datatype="ID" MinLength="1" MaxLength="1" Binding="HL70136" BindingStrength="U"/>
+            <Field ItemNo="00745" Min="0" Max="1" Name="Student Indicator" Usage="O" Datatype="IS" MinLength="1" MaxLength="2" Binding="HL70231" BindingStrength="U"/>
+            <Field ItemNo="00120" Min="0" Max="1" Name="Religion" Usage="O" Datatype="CE" MinLength="1" MaxLength="250" Binding="HL70006" BindingStrength="U" BindingLocation="1:4"/>
+            <Field ItemNo="00109" Min="0" Max="*" Name="Mother's Maiden Name" Usage="O" Datatype="XPN" MinLength="1" MaxLength="250"/>
+            <Field ItemNo="00739" Min="0" Max="1" Name="Nationality" Usage="O" Datatype="CE" MinLength="1" MaxLength="250" Binding="HL70212" BindingStrength="U" BindingLocation="1:4"/>
+            <Field ItemNo="00125" Min="0" Max="*" Name="Ethnic Group" Usage="O" Datatype="CE" MinLength="1" MaxLength="250" Binding="HL70189" BindingStrength="U" BindingLocation="1:4"/>
+            <Field ItemNo="00747" Min="0" Max="*" Name="Contact Reason" Usage="O" Datatype="CE" MinLength="1" MaxLength="250" Binding="HL70222" BindingStrength="U" BindingLocation="1:4"/>
+            <Field ItemNo="00748" Min="0" Max="*" Name="Contact Person's Name" Usage="O" Datatype="XPN" MinLength="1" MaxLength="250"/>
+            <Field ItemNo="00749" Min="0" Max="*" Name="Contact Person's Telephone Number" Usage="O" Datatype="XTN" MinLength="1" MaxLength="250"/>
+            <Field ItemNo="00750" Min="0" Max="*" Name="Contact Person's Address" Usage="O" Datatype="XAD" MinLength="1" MaxLength="250"/>
+            <Field ItemNo="00751" Min="0" Max="*" Name="Next of Kin/Associated Party's Identifiers" Usage="O" Datatype="CX" MinLength="1" MaxLength="250"/>
+            <Field ItemNo="00752" Min="0" Max="1" Name="Job Status" Usage="O" Datatype="IS" MinLength="1" MaxLength="2" Binding="HL70311" BindingStrength="U"/>
+            <Field ItemNo="00113" Min="0" Max="*" Name="Race" Usage="O" Datatype="CE" MinLength="1" MaxLength="250" Binding="HL70005" BindingStrength="U" BindingLocation="1:4"/>
+            <Field ItemNo="00753" Min="0" Max="1" Name="Handicap" Usage="O" Datatype="IS" MinLength="1" MaxLength="2" Binding="HL70295" BindingStrength="U"/>
+            <Field ItemNo="00754" Min="0" Max="1" Name="Contact Person Social Security Number" Usage="O" Datatype="ST" MinLength="1" MaxLength="16"/>
+            <Field ItemNo="01905" Min="0" Max="1" Name="Next of Kin Birth Place" Usage="O" Datatype="ST" MinLength="1" MaxLength="250"/>
+            <Field ItemNo="00146" Min="0" Max="1" Name="VIP Indicator" Usage="O" Datatype="IS" MinLength="1" MaxLength="2" Binding="HL70099" BindingStrength="U"/>
+        </Segment>
+        <Segment ID="DB1_HL7" Name="DB1" Label="DB1_HL7" Description="Disability">
+            <Field ItemNo="01283" Min="1" Max="1" Name="Set ID - DB1" Usage="R" Datatype="SI" MinLength="1" MaxLength="4"/>
+            <Field ItemNo="01284" Min="0" Max="1" Name="Disabled Person Code" Usage="O" Datatype="IS" MinLength="1" MaxLength="2" Binding="HL70334" BindingStrength="U"/>
+            <Field ItemNo="01285" Min="0" Max="*" Name="Disabled Person Identifier" Usage="O" Datatype="CX" MinLength="1" MaxLength="250"/>
+            <Field ItemNo="01286" Min="0" Max="1" Name="Disabled Indicator" Usage="O" Datatype="ID" MinLength="1" MaxLength="1" Binding="HL70136" BindingStrength="U"/>
+            <Field ItemNo="01287" Min="0" Max="1" Name="Disability Start Date" Usage="O" Datatype="DT" MinLength="1" MaxLength="8"/>
+            <Field ItemNo="01288" Min="0" Max="1" Name="Disability End Date" Usage="O" Datatype="DT" MinLength="1" MaxLength="8"/>
+            <Field ItemNo="01289" Min="0" Max="1" Name="Disability Return to Work Date" Usage="O" Datatype="DT" MinLength="1" MaxLength="8"/>
+            <Field ItemNo="01290" Min="0" Max="1" Name="Disability Unable to Work Date" Usage="O" Datatype="DT" MinLength="1" MaxLength="8"/>
+        </Segment>
+        <Segment ID="AL1_HL7" Name="AL1" Label="AL1_HL7" Description="Patient Allergy Information">
+            <Field ItemNo="00203" Min="1" Max="1" Name="Set ID - AL1" Usage="R" Datatype="SI" MinLength="1" MaxLength="4"/>
+            <Field ItemNo="00204" Min="0" Max="1" Name="Allergen Type Code" Usage="O" Datatype="CE" MinLength="1" MaxLength="250" Binding="HL70127" BindingStrength="U" BindingLocation="1:4"/>
+            <Field ItemNo="00205" Min="1" Max="1" Name="Allergen Code/Mnemonic/Description" Usage="R" Datatype="CE" MinLength="1" MaxLength="250"/>
+            <Field ItemNo="00206" Min="0" Max="1" Name="Allergy Severity Code" Usage="O" Datatype="CE" MinLength="1" MaxLength="250" Binding="HL70128" BindingStrength="U" BindingLocation="1:4"/>
+            <Field ItemNo="00207" Min="0" Max="*" Name="Allergy Reaction Code" Usage="O" Datatype="ST" MinLength="1" MaxLength="15"/>
+            <Field ItemNo="00208" Min="0" Max="1" Name="Identification Date" Usage="B" Datatype="DT" MinLength="1" MaxLength="8"/>
+        </Segment>
+        <Segment ID="DRG_HL7" Name="DRG" Label="DRG_HL7" Description="Diagnosis Related Group">
+            <Field ItemNo="00382" Min="0" Max="1" Name="Diagnostic Related Group" Usage="O" Datatype="CE" MinLength="1" MaxLength="250" Binding="HL70055" BindingStrength="U" BindingLocation="1:4"/>
+            <Field ItemNo="00769" Min="0" Max="1" Name="DRG Assigned Date/Time" Usage="O" Datatype="TS" MinLength="1" MaxLength="26"/>
+            <Field ItemNo="00383" Min="0" Max="1" Name="DRG Approval Indicator" Usage="O" Datatype="ID" MinLength="1" MaxLength="1" Binding="HL70136" BindingStrength="U"/>
+            <Field ItemNo="00384" Min="0" Max="1" Name="DRG Grouper Review Code" Usage="O" Datatype="IS" MinLength="1" MaxLength="2" Binding="HL70056" BindingStrength="U"/>
+            <Field ItemNo="00385" Min="0" Max="1" Name="Outlier Type" Usage="O" Datatype="CE" MinLength="1" MaxLength="250" Binding="HL70083" BindingStrength="U" BindingLocation="1:4"/>
+            <Field ItemNo="00386" Min="0" Max="1" Name="Outlier Days" Usage="O" Datatype="NM" MinLength="1" MaxLength="3"/>
+            <Field ItemNo="00387" Min="0" Max="1" Name="Outlier Cost" Usage="O" Datatype="CP" MinLength="1" MaxLength="12"/>
+            <Field ItemNo="00770" Min="0" Max="1" Name="DRG Payor" Usage="O" Datatype="IS" MinLength="1" MaxLength="1" Binding="HL70229" BindingStrength="U"/>
+            <Field ItemNo="00771" Min="0" Max="1" Name="Outlier Reimbursement" Usage="O" Datatype="CP" MinLength="1" MaxLength="9"/>
+            <Field ItemNo="00767" Min="0" Max="1" Name="Confidential Indicator" Usage="O" Datatype="ID" MinLength="1" MaxLength="1" Binding="HL70136" BindingStrength="U"/>
+            <Field ItemNo="01500" Min="0" Max="1" Name="DRG Transfer Type" Usage="O" Datatype="IS" MinLength="1" MaxLength="21" Binding="HL70415" BindingStrength="U"/>
+        </Segment>
+        <Segment ID="GT1_HL7" Name="GT1" Label="GT1_HL7" Description="Guarantor">
+            <Field ItemNo="00405" Min="1" Max="1" Name="Set ID - GT1" Usage="R" Datatype="SI" MinLength="1" MaxLength="4"/>
+            <Field ItemNo="00406" Min="0" Max="*" Name="Guarantor Number" Usage="O" Datatype="CX" MinLength="1" MaxLength="250"/>
+            <Field ItemNo="00407" Min="1" Max="*" Name="Guarantor Name" Usage="R" Datatype="XPN" MinLength="1" MaxLength="250"/>
+            <Field ItemNo="00408" Min="0" Max="*" Name="Guarantor Spouse Name" Usage="O" Datatype="XPN" MinLength="1" MaxLength="250"/>
+            <Field ItemNo="00409" Min="0" Max="*" Name="Guarantor Address" Usage="O" Datatype="XAD" MinLength="1" MaxLength="250"/>
+            <Field ItemNo="00410" Min="0" Max="*" Name="Guarantor Ph Num - Home" Usage="O" Datatype="XTN" MinLength="1" MaxLength="250"/>
+            <Field ItemNo="00411" Min="0" Max="*" Name="Guarantor Ph Num - Business" Usage="O" Datatype="XTN" MinLength="1" MaxLength="250"/>
+            <Field ItemNo="00412" Min="0" Max="1" Name="Guarantor Date/Time Of Birth" Usage="O" Datatype="TS" MinLength="1" MaxLength="26"/>
+            <Field ItemNo="00413" Min="0" Max="1" Name="Guarantor Administrative Sex" Usage="O" Datatype="IS" MinLength="1" MaxLength="1" Binding="HL70001" BindingStrength="U"/>
+            <Field ItemNo="00414" Min="0" Max="1" Name="Guarantor Type" Usage="O" Datatype="IS" MinLength="1" MaxLength="2" Binding="HL70068" BindingStrength="U"/>
+            <Field ItemNo="00415" Min="0" Max="1" Name="Guarantor Relationship" Usage="O" Datatype="CE" MinLength="1" MaxLength="250" Binding="HL70063" BindingStrength="U" BindingLocation="1:4"/>
+            <Field ItemNo="00416" Min="0" Max="1" Name="Guarantor SSN" Usage="O" Datatype="ST" MinLength="1" MaxLength="11"/>
+            <Field ItemNo="00417" Min="0" Max="1" Name="Guarantor Date - Begin" Usage="O" Datatype="DT" MinLength="1" MaxLength="8"/>
+            <Field ItemNo="00418" Min="0" Max="1" Name="Guarantor Date - End" Usage="O" Datatype="DT" MinLength="1" MaxLength="8"/>
+            <Field ItemNo="00419" Min="0" Max="1" Name="Guarantor Priority" Usage="O" Datatype="NM" MinLength="1" MaxLength="2"/>
+            <Field ItemNo="00420" Min="0" Max="*" Name="Guarantor Employer Name" Usage="O" Datatype="XPN" MinLength="1" MaxLength="250"/>
+            <Field ItemNo="00421" Min="0" Max="*" Name="Guarantor Employer Address" Usage="O" Datatype="XAD" MinLength="1" MaxLength="250"/>
+            <Field ItemNo="00422" Min="0" Max="*" Name="Guarantor Employer Phone Number" Usage="O" Datatype="XTN" MinLength="1" MaxLength="250"/>
+            <Field ItemNo="00423" Min="0" Max="*" Name="Guarantor Employee ID Number" Usage="O" Datatype="CX" MinLength="1" MaxLength="250"/>
+            <Field ItemNo="00424" Min="0" Max="1" Name="Guarantor Employment Status" Usage="O" Datatype="IS" MinLength="1" MaxLength="2" Binding="HL70066" BindingStrength="U"/>
+            <Field ItemNo="00425" Min="0" Max="*" Name="Guarantor Organization Name" Usage="O" Datatype="XON" MinLength="1" MaxLength="250"/>
+            <Field ItemNo="00773" Min="0" Max="1" Name="Guarantor Billing Hold Flag" Usage="O" Datatype="ID" MinLength="1" MaxLength="1" Binding="HL70136" BindingStrength="U"/>
+            <Field ItemNo="00774" Min="0" Max="1" Name="Guarantor Credit Rating Code" Usage="O" Datatype="CE" MinLength="1" MaxLength="250" Binding="HL70341" BindingStrength="U" BindingLocation="1:4"/>
+            <Field ItemNo="00775" Min="0" Max="1" Name="Guarantor Death Date And Time" Usage="O" Datatype="TS" MinLength="1" MaxLength="26"/>
+            <Field ItemNo="00776" Min="0" Max="1" Name="Guarantor Death Flag" Usage="O" Datatype="ID" MinLength="1" MaxLength="1" Binding="HL70136" BindingStrength="U"/>
+            <Field ItemNo="00777" Min="0" Max="1" Name="Guarantor Charge Adjustment Code" Usage="O" Datatype="CE" MinLength="1" MaxLength="250" Binding="HL70218" BindingStrength="U" BindingLocation="1:4"/>
+            <Field ItemNo="00778" Min="0" Max="1" Name="Guarantor Household Annual Income" Usage="O" Datatype="CP" MinLength="1" MaxLength="10"/>
+            <Field ItemNo="00779" Min="0" Max="1" Name="Guarantor Household Size" Usage="O" Datatype="NM" MinLength="1" MaxLength="3"/>
+            <Field ItemNo="00780" Min="0" Max="*" Name="Guarantor Employer ID Number" Usage="O" Datatype="CX" MinLength="1" MaxLength="250"/>
+            <Field ItemNo="00781" Min="0" Max="1" Name="Guarantor Marital Status Code" Usage="O" Datatype="CE" MinLength="1" MaxLength="250" Binding="HL70002" BindingStrength="U" BindingLocation="1:4"/>
+            <Field ItemNo="00782" Min="0" Max="1" Name="Guarantor Hire Effective Date" Usage="O" Datatype="DT" MinLength="1" MaxLength="8"/>
+            <Field ItemNo="00783" Min="0" Max="1" Name="Employment Stop Date" Usage="O" Datatype="DT" MinLength="1" MaxLength="8"/>
+            <Field ItemNo="00755" Min="0" Max="1" Name="Living Dependency" Usage="O" Datatype="IS" MinLength="1" MaxLength="2" Binding="HL70223" BindingStrength="U"/>
+            <Field ItemNo="00145" Min="0" Max="*" Name="Ambulatory Status" Usage="O" Datatype="IS" MinLength="1" MaxLength="2" Binding="HL70009" BindingStrength="U"/>
+            <Field ItemNo="00129" Min="0" Max="*" Name="Citizenship" Usage="O" Datatype="CE" MinLength="1" MaxLength="250" Binding="HL70171" BindingStrength="U" BindingLocation="1:4"/>
+            <Field ItemNo="00118" Min="0" Max="1" Name="Primary Language" Usage="O" Datatype="CE" MinLength="1" MaxLength="250" Binding="HL70296" BindingStrength="U" BindingLocation="1:4"/>
+            <Field ItemNo="00742" Min="0" Max="1" Name="Living Arrangement" Usage="O" Datatype="IS" MinLength="1" MaxLength="2" Binding="HL70220" BindingStrength="U"/>
+            <Field ItemNo="00743" Min="0" Max="1" Name="Publicity Code" Usage="O" Datatype="CE" MinLength="1" MaxLength="250" Binding="HL70215" BindingStrength="U" BindingLocation="1:4"/>
+            <Field ItemNo="00744" Min="0" Max="1" Name="Protection Indicator" Usage="O" Datatype="ID" MinLength="1" MaxLength="1" Binding="HL70136" BindingStrength="U"/>
+            <Field ItemNo="00745" Min="0" Max="1" Name="Student Indicator" Usage="O" Datatype="IS" MinLength="1" MaxLength="2" Binding="HL70231" BindingStrength="U"/>
+            <Field ItemNo="00120" Min="0" Max="1" Name="Religion" Usage="O" Datatype="CE" MinLength="1" MaxLength="250" Binding="HL70006" BindingStrength="U" BindingLocation="1:4"/>
+            <Field ItemNo="00109" Min="0" Max="*" Name="Mother's Maiden Name" Usage="O" Datatype="XPN" MinLength="1" MaxLength="250"/>
+            <Field ItemNo="00739" Min="0" Max="1" Name="Nationality" Usage="O" Datatype="CE" MinLength="1" MaxLength="250" Binding="HL70212" BindingStrength="U" BindingLocation="1:4"/>
+            <Field ItemNo="00125" Min="0" Max="*" Name="Ethnic Group" Usage="O" Datatype="CE" MinLength="1" MaxLength="250" Binding="HL70189" BindingStrength="U" BindingLocation="1:4"/>
+            <Field ItemNo="00748" Min="0" Max="*" Name="Contact Person's Name" Usage="O" Datatype="XPN" MinLength="1" MaxLength="250"/>
+            <Field ItemNo="00749" Min="0" Max="*" Name="Contact Person's Telephone Number" Usage="O" Datatype="XTN" MinLength="1" MaxLength="250"/>
+            <Field ItemNo="00747" Min="0" Max="1" Name="Contact Reason" Usage="O" Datatype="CE" MinLength="1" MaxLength="250" Binding="HL70222" BindingStrength="U" BindingLocation="1:4"/>
+            <Field ItemNo="00784" Min="0" Max="1" Name="Contact Relationship" Usage="O" Datatype="IS" MinLength="1" MaxLength="3" Binding="HL70063" BindingStrength="U"/>
+            <Field ItemNo="00785" Min="0" Max="1" Name="Job Title" Usage="O" Datatype="ST" MinLength="1" MaxLength="20"/>
+            <Field ItemNo="00786" Min="0" Max="1" Name="Job Code/Class" Usage="O" Datatype="JCC" MinLength="1" MaxLength="20"/>
+            <Field ItemNo="01299" Min="0" Max="*" Name="Guarantor Employer's Organization Name" Usage="O" Datatype="XON" MinLength="1" MaxLength="250"/>
+            <Field ItemNo="00753" Min="0" Max="1" Name="Handicap" Usage="O" Datatype="IS" MinLength="1" MaxLength="2" Binding="HL70295" BindingStrength="U"/>
+            <Field ItemNo="00752" Min="0" Max="1" Name="Job Status" Usage="O" Datatype="IS" MinLength="1" MaxLength="2" Binding="HL70311" BindingStrength="U"/>
+            <Field ItemNo="01231" Min="0" Max="1" Name="Guarantor Financial Class" Usage="O" Datatype="FC" MinLength="1" MaxLength="50"/>
+            <Field ItemNo="01291" Min="0" Max="*" Name="Guarantor Race" Usage="O" Datatype="CE" MinLength="1" MaxLength="250" Binding="HL70005" BindingStrength="U" BindingLocation="1:4"/>
+            <Field ItemNo="01851" Min="0" Max="1" Name="Guarantor Birth Place" Usage="O" Datatype="ST" MinLength="1" MaxLength="250"/>
+            <Field ItemNo="00146" Min="0" Max="1" Name="VIP Indicator" Usage="O" Datatype="IS" MinLength="1" MaxLength="2" Binding="HL70099" BindingStrength="U"/>
+        </Segment>
+        <Segment ID="IN2_HL7" Name="IN2" Label="IN2_HL7" Description="Insurance Additional Information">
+            <Field ItemNo="00472" Min="0" Max="*" Name="Insured's Employee ID" Usage="O" Datatype="CX" MinLength="1" MaxLength="250"/>
+            <Field ItemNo="00473" Min="0" Max="1" Name="Insured's Social Security Number" Usage="O" Datatype="ST" MinLength="1" MaxLength="11"/>
+            <Field ItemNo="00474" Min="0" Max="*" Name="Insured's Employer's Name and ID" Usage="O" Datatype="XCN" MinLength="1" MaxLength="250"/>
+            <Field ItemNo="00475" Min="0" Max="1" Name="Employer Information Data" Usage="O" Datatype="IS" MinLength="1" MaxLength="1" Binding="HL70139" BindingStrength="U"/>
+            <Field ItemNo="00476" Min="0" Max="*" Name="Mail Claim Party" Usage="O" Datatype="IS" MinLength="1" MaxLength="1" Binding="HL70137" BindingStrength="U"/>
+            <Field ItemNo="00477" Min="0" Max="1" Name="Medicare Health Ins Card Number" Usage="O" Datatype="ST" MinLength="1" MaxLength="15"/>
+            <Field ItemNo="00478" Min="0" Max="*" Name="Medicaid Case Name" Usage="O" Datatype="XPN" MinLength="1" MaxLength="250"/>
+            <Field ItemNo="00479" Min="0" Max="1" Name="Medicaid Case Number" Usage="O" Datatype="ST" MinLength="1" MaxLength="15"/>
+            <Field ItemNo="00480" Min="0" Max="*" Name="Military Sponsor Name" Usage="O" Datatype="XPN" MinLength="1" MaxLength="250"/>
+            <Field ItemNo="00481" Min="0" Max="1" Name="Military ID Number" Usage="O" Datatype="ST" MinLength="1" MaxLength="20"/>
+            <Field ItemNo="00482" Min="0" Max="1" Name="Dependent Of Military Recipient" Usage="O" Datatype="CE" MinLength="1" MaxLength="250" Binding="HL70342" BindingStrength="U" BindingLocation="1:4"/>
+            <Field ItemNo="00483" Min="0" Max="1" Name="Military Organization" Usage="O" Datatype="ST" MinLength="1" MaxLength="25"/>
+            <Field ItemNo="00484" Min="0" Max="1" Name="Military Station" Usage="O" Datatype="ST" MinLength="1" MaxLength="25"/>
+            <Field ItemNo="00485" Min="0" Max="1" Name="Military Service" Usage="O" Datatype="IS" MinLength="1" MaxLength="14" Binding="HL70140" BindingStrength="U"/>
+            <Field ItemNo="00486" Min="0" Max="1" Name="Military Rank/Grade" Usage="O" Datatype="IS" MinLength="1" MaxLength="2" Binding="HL70141" BindingStrength="U"/>
+            <Field ItemNo="00487" Min="0" Max="1" Name="Military Status" Usage="O" Datatype="IS" MinLength="1" MaxLength="3" Binding="HL70142" BindingStrength="U"/>
+            <Field ItemNo="00488" Min="0" Max="1" Name="Military Retire Date" Usage="O" Datatype="DT" MinLength="1" MaxLength="8"/>
+            <Field ItemNo="00489" Min="0" Max="1" Name="Military Non-Avail Cert On File" Usage="O" Datatype="ID" MinLength="1" MaxLength="1" Binding="HL70136" BindingStrength="U"/>
+            <Field ItemNo="00490" Min="0" Max="1" Name="Baby Coverage" Usage="O" Datatype="ID" MinLength="1" MaxLength="1" Binding="HL70136" BindingStrength="U"/>
+            <Field ItemNo="00491" Min="0" Max="1" Name="Combine Baby Bill" Usage="O" Datatype="ID" MinLength="1" MaxLength="1" Binding="HL70136" BindingStrength="U"/>
+            <Field ItemNo="00492" Min="0" Max="1" Name="Blood Deductible" Usage="O" Datatype="ST" MinLength="1" MaxLength="1"/>
+            <Field ItemNo="00493" Min="0" Max="*" Name="Special Coverage Approval Name" Usage="O" Datatype="XPN" MinLength="1" MaxLength="250"/>
+            <Field ItemNo="00494" Min="0" Max="1" Name="Special Coverage Approval Title" Usage="O" Datatype="ST" MinLength="1" MaxLength="30"/>
+            <Field ItemNo="00495" Min="0" Max="*" Name="Non-Covered Insurance Code" Usage="O" Datatype="IS" MinLength="1" MaxLength="8" Binding="HL70143" BindingStrength="U"/>
+            <Field ItemNo="00496" Min="0" Max="*" Name="Payor ID" Usage="O" Datatype="CX" MinLength="1" MaxLength="250"/>
+            <Field ItemNo="00497" Min="0" Max="*" Name="Payor Subscriber ID" Usage="O" Datatype="CX" MinLength="1" MaxLength="250"/>
+            <Field ItemNo="00498" Min="0" Max="1" Name="Eligibility Source" Usage="O" Datatype="IS" MinLength="1" MaxLength="1" Binding="HL70144" BindingStrength="U"/>
+            <Field ItemNo="00499" Min="0" Max="*" Name="Room Coverage Type/Amount" Usage="O" Datatype="RMC" MinLength="1" MaxLength="82"/>
+            <Field ItemNo="00500" Min="0" Max="*" Name="Policy Type/Amount" Usage="O" Datatype="PTA" MinLength="1" MaxLength="56"/>
+            <Field ItemNo="00501" Min="0" Max="1" Name="Daily Deductible" Usage="O" Datatype="DDI" MinLength="1" MaxLength="25"/>
+            <Field ItemNo="00755" Min="0" Max="1" Name="Living Dependency" Usage="O" Datatype="IS" MinLength="1" MaxLength="2" Binding="HL70223" BindingStrength="U"/>
+            <Field ItemNo="00145" Min="0" Max="*" Name="Ambulatory Status" Usage="O" Datatype="IS" MinLength="1" MaxLength="2" Binding="HL70009" BindingStrength="U"/>
+            <Field ItemNo="00129" Min="0" Max="*" Name="Citizenship" Usage="O" Datatype="CE" MinLength="1" MaxLength="250" Binding="HL70171" BindingStrength="U" BindingLocation="1:4"/>
+            <Field ItemNo="00118" Min="0" Max="1" Name="Primary Language" Usage="O" Datatype="CE" MinLength="1" MaxLength="250" Binding="HL70296" BindingStrength="U" BindingLocation="1:4"/>
+            <Field ItemNo="00742" Min="0" Max="1" Name="Living Arrangement" Usage="O" Datatype="IS" MinLength="1" MaxLength="2" Binding="HL70220" BindingStrength="U"/>
+            <Field ItemNo="00743" Min="0" Max="1" Name="Publicity Code" Usage="O" Datatype="CE" MinLength="1" MaxLength="250" Binding="HL70215" BindingStrength="U" BindingLocation="1:4"/>
+            <Field ItemNo="00744" Min="0" Max="1" Name="Protection Indicator" Usage="O" Datatype="ID" MinLength="1" MaxLength="1" Binding="HL70136" BindingStrength="U"/>
+            <Field ItemNo="00745" Min="0" Max="1" Name="Student Indicator" Usage="O" Datatype="IS" MinLength="1" MaxLength="2" Binding="HL70231" BindingStrength="U"/>
+            <Field ItemNo="00120" Min="0" Max="1" Name="Religion" Usage="O" Datatype="CE" MinLength="1" MaxLength="250" Binding="HL70006" BindingStrength="U" BindingLocation="1:4"/>
+            <Field ItemNo="00109" Min="0" Max="*" Name="Mother's Maiden Name" Usage="O" Datatype="XPN" MinLength="1" MaxLength="250"/>
+            <Field ItemNo="00739" Min="0" Max="1" Name="Nationality" Usage="O" Datatype="CE" MinLength="1" MaxLength="250" Binding="HL70212" BindingStrength="U" BindingLocation="1:4"/>
+            <Field ItemNo="00125" Min="0" Max="*" Name="Ethnic Group" Usage="O" Datatype="CE" MinLength="1" MaxLength="250" Binding="HL70189" BindingStrength="U" BindingLocation="1:4"/>
+            <Field ItemNo="00119" Min="0" Max="*" Name="Marital Status" Usage="O" Datatype="CE" MinLength="1" MaxLength="250" Binding="HL70002" BindingStrength="U" BindingLocation="1:4"/>
+            <Field ItemNo="00787" Min="0" Max="1" Name="Insured's Employment Start Date" Usage="O" Datatype="DT" MinLength="1" MaxLength="8"/>
+            <Field ItemNo="00783" Min="0" Max="1" Name="Employment Stop Date" Usage="O" Datatype="DT" MinLength="1" MaxLength="8"/>
+            <Field ItemNo="00785" Min="0" Max="1" Name="Job Title" Usage="O" Datatype="ST" MinLength="1" MaxLength="20"/>
+            <Field ItemNo="00786" Min="0" Max="1" Name="Job Code/Class" Usage="O" Datatype="JCC" MinLength="1" MaxLength="20"/>
+            <Field ItemNo="00752" Min="0" Max="1" Name="Job Status" Usage="O" Datatype="IS" MinLength="1" MaxLength="2" Binding="HL70311" BindingStrength="U"/>
+            <Field ItemNo="00789" Min="0" Max="*" Name="Employer Contact Person Name" Usage="O" Datatype="XPN" MinLength="1" MaxLength="250"/>
+            <Field ItemNo="00790" Min="0" Max="*" Name="Employer Contact Person Phone Number" Usage="O" Datatype="XTN" MinLength="1" MaxLength="250"/>
+            <Field ItemNo="00791" Min="0" Max="1" Name="Employer Contact Reason" Usage="O" Datatype="IS" MinLength="1" MaxLength="2" Binding="HL70222" BindingStrength="U"/>
+            <Field ItemNo="00792" Min="0" Max="*" Name="Insured's Contact Person's Name" Usage="O" Datatype="XPN" MinLength="1" MaxLength="250"/>
+            <Field ItemNo="00793" Min="0" Max="*" Name="Insured's Contact Person Phone Number" Usage="O" Datatype="XTN" MinLength="1" MaxLength="250"/>
+            <Field ItemNo="00794" Min="0" Max="*" Name="Insured's Contact Person Reason" Usage="O" Datatype="IS" MinLength="1" MaxLength="2" Binding="HL70222" BindingStrength="U"/>
+            <Field ItemNo="00795" Min="0" Max="1" Name="Relationship to the Patient Start Date" Usage="O" Datatype="DT" MinLength="1" MaxLength="8"/>
+            <Field ItemNo="00796" Min="0" Max="*" Name="Relationship to the Patient Stop Date" Usage="O" Datatype="DT" MinLength="1" MaxLength="8"/>
+            <Field ItemNo="00797" Min="0" Max="1" Name="Insurance Co. Contact Reason" Usage="O" Datatype="IS" MinLength="1" MaxLength="2" Binding="HL70232" BindingStrength="U"/>
+            <Field ItemNo="00798" Min="0" Max="1" Name="Insurance Co Contact Phone Number" Usage="O" Datatype="XTN" MinLength="1" MaxLength="250"/>
+            <Field ItemNo="00799" Min="0" Max="1" Name="Policy Scope" Usage="O" Datatype="IS" MinLength="1" MaxLength="2" Binding="HL70312" BindingStrength="U"/>
+            <Field ItemNo="00800" Min="0" Max="1" Name="Policy Source" Usage="O" Datatype="IS" MinLength="1" MaxLength="2" Binding="HL70313" BindingStrength="U"/>
+            <Field ItemNo="00801" Min="0" Max="1" Name="Patient Member Number" Usage="O" Datatype="CX" MinLength="1" MaxLength="250"/>
+            <Field ItemNo="00802" Min="0" Max="1" Name="Guarantor's Relationship to Insured" Usage="O" Datatype="CE" MinLength="1" MaxLength="250" Binding="HL70063" BindingStrength="U" BindingLocation="1:4"/>
+            <Field ItemNo="00803" Min="0" Max="*" Name="Insured's Phone Number - Home" Usage="O" Datatype="XTN" MinLength="1" MaxLength="250"/>
+            <Field ItemNo="00804" Min="0" Max="*" Name="Insured's Employer Phone Number" Usage="O" Datatype="XTN" MinLength="1" MaxLength="250"/>
+            <Field ItemNo="00805" Min="0" Max="1" Name="Military Handicapped Program" Usage="O" Datatype="CE" MinLength="1" MaxLength="250" Binding="HL70343" BindingStrength="U" BindingLocation="1:4"/>
+            <Field ItemNo="00806" Min="0" Max="1" Name="Suspend Flag" Usage="O" Datatype="ID" MinLength="1" MaxLength="1" Binding="HL70136" BindingStrength="U"/>
+            <Field ItemNo="00807" Min="0" Max="1" Name="Copay Limit Flag" Usage="O" Datatype="ID" MinLength="1" MaxLength="1" Binding="HL70136" BindingStrength="U"/>
+            <Field ItemNo="00808" Min="0" Max="1" Name="Stoploss Limit Flag" Usage="O" Datatype="ID" MinLength="1" MaxLength="1" Binding="HL70136" BindingStrength="U"/>
+            <Field ItemNo="00809" Min="0" Max="*" Name="Insured Organization Name and ID" Usage="O" Datatype="XON" MinLength="1" MaxLength="250"/>
+            <Field ItemNo="00810" Min="0" Max="*" Name="Insured Employer Organization Name and ID" Usage="O" Datatype="XON" MinLength="1" MaxLength="250"/>
+            <Field ItemNo="00113" Min="0" Max="*" Name="Race" Usage="O" Datatype="CE" MinLength="1" MaxLength="250" Binding="HL70005" BindingStrength="U" BindingLocation="1:4"/>
+            <Field ItemNo="00811" Min="0" Max="1" Name="CMS Patient's Relationship to Insured" Usage="O" Datatype="CE" MinLength="1" MaxLength="250" Binding="HL70344" BindingStrength="U" BindingLocation="1:4"/>
+        </Segment>
+        <Segment ID="IN3_HL7" Name="IN3" Label="IN3_HL7" Description="Insurance Additional Information, Certification">
+            <Field ItemNo="00502" Min="1" Max="1" Name="Set ID - IN3" Usage="R" Datatype="SI" MinLength="1" MaxLength="4"/>
+            <Field ItemNo="00503" Min="0" Max="1" Name="Certification Number" Usage="O" Datatype="CX" MinLength="1" MaxLength="250"/>
+            <Field ItemNo="00504" Min="0" Max="*" Name="Certified By" Usage="O" Datatype="XCN" MinLength="1" MaxLength="250"/>
+            <Field ItemNo="00505" Min="0" Max="1" Name="Certification Required" Usage="O" Datatype="ID" MinLength="1" MaxLength="1" Binding="HL70136" BindingStrength="U"/>
+            <Field ItemNo="00506" Min="0" Max="1" Name="Penalty" Usage="O" Datatype="MOP" MinLength="1" MaxLength="23"/>
+            <Field ItemNo="00507" Min="0" Max="1" Name="Certification Date/Time" Usage="O" Datatype="TS" MinLength="1" MaxLength="26"/>
+            <Field ItemNo="00508" Min="0" Max="1" Name="Certification Modify Date/Time" Usage="O" Datatype="TS" MinLength="1" MaxLength="26"/>
+            <Field ItemNo="00509" Min="0" Max="*" Name="Operator" Usage="O" Datatype="XCN" MinLength="1" MaxLength="250"/>
+            <Field ItemNo="00510" Min="0" Max="1" Name="Certification Begin Date" Usage="O" Datatype="DT" MinLength="1" MaxLength="8"/>
+            <Field ItemNo="00511" Min="0" Max="1" Name="Certification End Date" Usage="O" Datatype="DT" MinLength="1" MaxLength="8"/>
+            <Field ItemNo="00512" Min="0" Max="1" Name="Days" Usage="O" Datatype="DTN" MinLength="1" MaxLength="6"/>
+            <Field ItemNo="00513" Min="0" Max="1" Name="Non-Concur Code/Description" Usage="O" Datatype="CE" MinLength="1" MaxLength="250" Binding="HL70233" BindingStrength="U" BindingLocation="1:4"/>
+            <Field ItemNo="00514" Min="0" Max="1" Name="Non-Concur Effective Date/Time" Usage="O" Datatype="TS" MinLength="1" MaxLength="26"/>
+            <Field ItemNo="00515" Min="0" Max="*" Name="Physician Reviewer" Usage="O" Datatype="XCN" MinLength="1" MaxLength="250" Binding="HL70010" BindingStrength="U" BindingLocation="1"/>
+            <Field ItemNo="00516" Min="0" Max="1" Name="Certification Contact" Usage="O" Datatype="ST" MinLength="1" MaxLength="48"/>
+            <Field ItemNo="00517" Min="0" Max="*" Name="Certification Contact Phone Number" Usage="O" Datatype="XTN" MinLength="1" MaxLength="250"/>
+            <Field ItemNo="00518" Min="0" Max="1" Name="Appeal Reason" Usage="O" Datatype="CE" MinLength="1" MaxLength="250" Binding="HL70345" BindingStrength="U" BindingLocation="1:4"/>
+            <Field ItemNo="00519" Min="0" Max="1" Name="Certification Agency" Usage="O" Datatype="CE" MinLength="1" MaxLength="250" Binding="HL70346" BindingStrength="U" BindingLocation="1:4"/>
+            <Field ItemNo="00520" Min="0" Max="*" Name="Certification Agency Phone Number" Usage="O" Datatype="XTN" MinLength="1" MaxLength="250"/>
+            <Field ItemNo="00521" Min="0" Max="*" Name="Pre-Certification Requirement" Usage="O" Datatype="ICD" MinLength="1" MaxLength="40"/>
+            <Field ItemNo="00522" Min="0" Max="1" Name="Case Manager" Usage="O" Datatype="ST" MinLength="1" MaxLength="48"/>
+            <Field ItemNo="00523" Min="0" Max="1" Name="Second Opinion Date" Usage="O" Datatype="DT" MinLength="1" MaxLength="8"/>
+            <Field ItemNo="00524" Min="0" Max="1" Name="Second Opinion Status" Usage="O" Datatype="IS" MinLength="1" MaxLength="1" Binding="HL70151" BindingStrength="U"/>
+            <Field ItemNo="00525" Min="0" Max="*" Name="Second Opinion Documentation Received" Usage="O" Datatype="IS" MinLength="1" MaxLength="1" Binding="HL70152" BindingStrength="U"/>
+            <Field ItemNo="00526" Min="0" Max="*" Name="Second Opinion Physician" Usage="O" Datatype="XCN" MinLength="1" MaxLength="250" Binding="HL70010" BindingStrength="U" BindingLocation="1"/>
+        </Segment>
+        <Segment ID="ACC_HL7" Name="ACC" Label="ACC_HL7" Description="Accident">
+            <Field ItemNo="00527" Min="0" Max="1" Name="Accident Date/Time" Usage="O" Datatype="TS" MinLength="1" MaxLength="26"/>
+            <Field ItemNo="00528" Min="0" Max="1" Name="Accident Code" Usage="O" Datatype="CE" MinLength="1" MaxLength="250" Binding="HL70050" BindingStrength="U" BindingLocation="1:4"/>
+            <Field ItemNo="00529" Min="0" Max="1" Name="Accident Location" Usage="O" Datatype="ST" MinLength="1" MaxLength="25"/>
+            <Field ItemNo="00812" Min="0" Max="1" Name="Auto Accident State" Usage="B" Datatype="CE" MinLength="1" MaxLength="250" Binding="HL70347" BindingLocation="1:4"/>
+            <Field ItemNo="00813" Min="0" Max="1" Name="Accident Job Related Indicator" Usage="O" Datatype="ID" MinLength="1" MaxLength="1" Binding="HL70136" BindingStrength="U"/>
+            <Field ItemNo="00814" Min="0" Max="1" Name="Accident Death Indicator" Usage="O" Datatype="ID" MinLength="1" MaxLength="12" Binding="HL70136" BindingStrength="U"/>
+            <Field ItemNo="00224" Min="0" Max="1" Name="Entered By" Usage="O" Datatype="XCN" MinLength="1" MaxLength="250"/>
+            <Field ItemNo="01503" Min="0" Max="1" Name="Accident Description" Usage="O" Datatype="ST" MinLength="1" MaxLength="25"/>
+            <Field ItemNo="01504" Min="0" Max="1" Name="Brought In By" Usage="O" Datatype="ST" MinLength="1" MaxLength="80"/>
+            <Field ItemNo="01505" Min="0" Max="1" Name="Police Notified Indicator" Usage="O" Datatype="ID" MinLength="1" MaxLength="1" Binding="HL70136" BindingStrength="U"/>
+            <Field ItemNo="01853" Min="0" Max="1" Name="Accident Address" Usage="O" Datatype="XAD" MinLength="1" MaxLength="250"/>
+        </Segment>
+        <Segment ID="UB1_HL7" Name="UB1" Label="UB1_HL7" Description="UB82">
+            <Field ItemNo="00530" Min="0" Max="1" Name="Set ID - UB1" Usage="O" Datatype="SI" MinLength="1" MaxLength="4"/>
+            <Field ItemNo="00531" Min="0" Max="1" Name="Blood Deductible (43)" Usage="B" Datatype="NM" MinLength="1" MaxLength="1"/>
+            <Field ItemNo="00532" Min="0" Max="1" Name="Blood Furnished-Pints Of (40)" Usage="O" Datatype="NM" MinLength="1" MaxLength="2"/>
+            <Field ItemNo="00533" Min="0" Max="1" Name="Blood Replaced-Pints (41)" Usage="O" Datatype="NM" MinLength="1" MaxLength="2"/>
+            <Field ItemNo="00534" Min="0" Max="1" Name="Blood Not Replaced-Pints(42)" Usage="O" Datatype="NM" MinLength="1" MaxLength="2"/>
+            <Field ItemNo="00535" Min="0" Max="1" Name="Co-Insurance Days (25)" Usage="O" Datatype="NM" MinLength="1" MaxLength="2"/>
+            <Field ItemNo="00536" Min="0" Max="5" Name="Condition Code (35-39)" Usage="O" Datatype="IS" MinLength="1" MaxLength="14" Binding="HL70043" BindingStrength="U"/>
+            <Field ItemNo="00537" Min="0" Max="1" Name="Covered Days - (23)" Usage="O" Datatype="NM" MinLength="1" MaxLength="3"/>
+            <Field ItemNo="00538" Min="0" Max="1" Name="Non Covered Days - (24)" Usage="O" Datatype="NM" MinLength="1" MaxLength="3"/>
+            <Field ItemNo="00539" Min="0" Max="8" Name="Value Amount &amp; Code (46-49)" Usage="O" Datatype="UVC" MinLength="1" MaxLength="41"/>
+            <Field ItemNo="00540" Min="0" Max="1" Name="Number Of Grace Days (90)" Usage="O" Datatype="NM" MinLength="1" MaxLength="2"/>
+            <Field ItemNo="00541" Min="0" Max="1" Name="Special Program Indicator (44)" Usage="O" Datatype="CE" MinLength="1" MaxLength="250" Binding="HL70348" BindingStrength="U" BindingLocation="1:4"/>
+            <Field ItemNo="00542" Min="0" Max="1" Name="PSRO/UR Approval Indicator (87)" Usage="O" Datatype="CE" MinLength="1" MaxLength="250" Binding="HL70349" BindingStrength="U" BindingLocation="1:4"/>
+            <Field ItemNo="00543" Min="0" Max="1" Name="PSRO/UR Approved Stay-Fm (88)" Usage="O" Datatype="DT" MinLength="1" MaxLength="8"/>
+            <Field ItemNo="00544" Min="0" Max="1" Name="PSRO/UR Approved Stay-To (89)" Usage="O" Datatype="DT" MinLength="1" MaxLength="8"/>
+            <Field ItemNo="00545" Min="0" Max="5" Name="Occurrence (28-32)" Usage="O" Datatype="OCD" MinLength="1" MaxLength="259"/>
+            <Field ItemNo="00546" Min="0" Max="1" Name="Occurrence Span (33)" Usage="O" Datatype="CE" MinLength="1" MaxLength="250" Binding="HL70351" BindingStrength="U" BindingLocation="1:4"/>
+            <Field ItemNo="00547" Min="0" Max="1" Name="Occur Span Start Date(33)" Usage="O" Datatype="DT" MinLength="1" MaxLength="8"/>
+            <Field ItemNo="00548" Min="0" Max="1" Name="Occur Span End Date (33)" Usage="O" Datatype="DT" MinLength="1" MaxLength="8"/>
+            <Field ItemNo="00549" Min="0" Max="1" Name="UB-82 Locator 2" Usage="B" Datatype="ST" MinLength="1" MaxLength="30"/>
+            <Field ItemNo="00550" Min="0" Max="1" Name="UB-82 Locator 9" Usage="B" Datatype="ST" MinLength="1" MaxLength="7"/>
+            <Field ItemNo="00551" Min="0" Max="1" Name="UB-82 Locator 27" Usage="B" Datatype="ST" MinLength="1" MaxLength="8"/>
+            <Field ItemNo="00552" Min="0" Max="1" Name="UB-82 Locator 45" Usage="B" Datatype="ST" MinLength="1" MaxLength="17"/>
+        </Segment>
+        <Segment ID="UB2_HL7" Name="UB2" Label="UB2_HL7" Description="UB92 Data">
+            <Field ItemNo="00553" Min="0" Max="1" Name="Set ID - UB2" Usage="O" Datatype="SI" MinLength="1" MaxLength="4"/>
+            <Field ItemNo="00554" Min="0" Max="1" Name="Co-Insurance Days (9)" Usage="O" Datatype="ST" MinLength="1" MaxLength="3"/>
+            <Field ItemNo="00555" Min="0" Max="7" Name="Condition Code (24-30)" Usage="O" Datatype="IS" MinLength="1" MaxLength="2" Binding="HL70043" BindingStrength="U"/>
+            <Field ItemNo="00556" Min="0" Max="1" Name="Covered Days (7)" Usage="O" Datatype="ST" MinLength="1" MaxLength="3"/>
+            <Field ItemNo="00557" Min="0" Max="1" Name="Non-Covered Days (8)" Usage="O" Datatype="ST" MinLength="1" MaxLength="4"/>
+            <Field ItemNo="00558" Min="0" Max="12" Name="Value Amount &amp; Code" Usage="O" Datatype="UVC" MinLength="1" MaxLength="41"/>
+            <Field ItemNo="00559" Min="0" Max="8" Name="Occurrence Code &amp; Date (32-35)" Usage="O" Datatype="OCD" MinLength="1" MaxLength="259"/>
+            <Field ItemNo="00560" Min="0" Max="2" Name="Occurrence Span Code/Dates (36)" Usage="O" Datatype="OSP" MinLength="1" MaxLength="268"/>
+            <Field ItemNo="00561" Min="0" Max="2" Name="UB92 Locator 2 (State)" Usage="O" Datatype="ST" MinLength="1" MaxLength="29"/>
+            <Field ItemNo="00562" Min="0" Max="2" Name="UB92 Locator 11 (State)" Usage="O" Datatype="ST" MinLength="1" MaxLength="12"/>
+            <Field ItemNo="00563" Min="0" Max="1" Name="UB92 Locator 31 (National)" Usage="O" Datatype="ST" MinLength="1" MaxLength="5"/>
+            <Field ItemNo="00564" Min="0" Max="3" Name="Document Control Number" Usage="O" Datatype="ST" MinLength="1" MaxLength="23"/>
+            <Field ItemNo="00565" Min="0" Max="23" Name="UB92 Locator 49 (National)" Usage="O" Datatype="ST" MinLength="1" MaxLength="4"/>
+            <Field ItemNo="00566" Min="0" Max="5" Name="UB92 Locator 56 (State)" Usage="O" Datatype="ST" MinLength="1" MaxLength="14"/>
+            <Field ItemNo="00567" Min="0" Max="1" Name="UB92 Locator 57 (National)" Usage="O" Datatype="ST" MinLength="1" MaxLength="27"/>
+            <Field ItemNo="00568" Min="0" Max="2" Name="UB92 Locator 78 (State)" Usage="O" Datatype="ST" MinLength="1" MaxLength="2"/>
+            <Field ItemNo="00815" Min="0" Max="1" Name="Special Visit Count" Usage="O" Datatype="NM" MinLength="1" MaxLength="3"/>
+        </Segment>
+        <Segment ID="PDA_HL7" Name="PDA" Label="PDA_HL7" Description="Patient Death and Autopsy">
+            <Field ItemNo="01574" Min="0" Max="*" Name="Death Cause Code" Usage="O" Datatype="CE" MinLength="1" MaxLength="250"/>
+            <Field ItemNo="01575" Min="0" Max="1" Name="Death Location" Usage="O" Datatype="PL" MinLength="1" MaxLength="80"/>
+            <Field ItemNo="01576" Min="0" Max="1" Name="Death Certified Indicator" Usage="O" Datatype="ID" MinLength="1" MaxLength="1" Binding="HL70136" BindingStrength="U"/>
+            <Field ItemNo="01577" Min="0" Max="1" Name="Death Certificate Signed Date/Time" Usage="O" Datatype="TS" MinLength="1" MaxLength="26"/>
+            <Field ItemNo="01578" Min="0" Max="1" Name="Death Certified By" Usage="O" Datatype="XCN" MinLength="1" MaxLength="250"/>
+            <Field ItemNo="01579" Min="0" Max="1" Name="Autopsy Indicator" Usage="O" Datatype="ID" MinLength="1" MaxLength="1" Binding="HL70136" BindingStrength="U"/>
+            <Field ItemNo="01580" Min="0" Max="1" Name="Autopsy Start and End Date/Time" Usage="O" Datatype="DR" MinLength="1" MaxLength="53"/>
+            <Field ItemNo="01581" Min="0" Max="1" Name="Autopsy Performed By" Usage="O" Datatype="XCN" MinLength="1" MaxLength="250"/>
+            <Field ItemNo="01582" Min="0" Max="1" Name="Coroner Indicator" Usage="O" Datatype="ID" MinLength="1" MaxLength="1" Binding="HL70136" BindingStrength="U"/>
+        </Segment>
+    </Segments>
+    <Datatypes>
+        <Datatype ID="CE_SS" Name="CE" Label="CE_SS" Description="Coded Element">
+            <Component Name="Identifier" Usage="RE" Datatype="ST_SS" MinLength="1" MaxLength="20"/>
+            <Component Name="Text" Usage="RE" Datatype="ST_SS" MinLength="1" MaxLength="199"/>
+            <Component Name="Name of Coding System" Usage="C" Datatype="ID_SS" MinLength="1" MaxLength="20" Binding="HL70396" BindingStrength="R"/>
+            <Component Name="Alternate Identifier" Usage="O" Datatype="ST" MinLength="1" MaxLength="20"/>
+            <Component Name="Alternate Text" Usage="O" Datatype="ST" MinLength="1" MaxLength="199"/>
+            <Component Name="Name of Alternate Coding System" Usage="C" Datatype="ID_SS" MinLength="1" MaxLength="20" Binding="HL70396" BindingStrength="R" Hide="true"/>
+        </Datatype>
+        <Datatype ID="CE_SS_DG1" Name="CE" Label="CE_SS_DG1" Description="Coded Element">
+            <Component Name="Identifier" Usage="R" Datatype="ST_SS" MinLength="1" MaxLength="20"/>
+            <Component Name="Text" Usage="RE" Datatype="ST_SS" MinLength="1" MaxLength="199"/>
+            <Component Name="Name of Coding System" Usage="R" Datatype="ID_SS" MinLength="1" MaxLength="20" Binding="HL70396" BindingStrength="R"/>
+            <Component Name="Alternate Identifier" Usage="X" Datatype="ST" MinLength="1" MaxLength="20"/>
+            <Component Name="Alternate Text" Usage="X" Datatype="ST" MinLength="1" MaxLength="199"/>
+            <Component Name="Name of Alternate Coding System" Usage="X" Datatype="ID" MinLength="1" MaxLength="20" Binding="HL70396"/>
+        </Datatype>
+        <Datatype ID="CWE_SS_OBX" Name="CWE" Label="CWE_SS_OBX" Description="Coded with Exceptions">
+            <Component Name="Identifier" Usage="R" Datatype="ST_SS" MinLength="1" MaxLength="20"/>
+            <Component Name="Text" Usage="RE" Datatype="ST_SS" MinLength="1" MaxLength="199"/>
+            <Component Name="Name of Coding System" Usage="R" Datatype="ID_SS" MinLength="1" MaxLength="20" Binding="HL70396" BindingStrength="R"/>
+            <Component Name="Alternate Identifier" Usage="RE" Datatype="ST_SS" MinLength="1" MaxLength="20"/>
+            <Component Name="Alternate Text" Usage="RE" Datatype="ST_SS" MinLength="1" MaxLength="199"/>
+            <Component Name="Name of Alternate Coding System" Usage="C" Datatype="ID_SS" MinLength="1" MaxLength="20" Binding="HL70396" BindingStrength="R"/>
+            <Component Name="Coding System Version ID" Usage="O" Datatype="ST" MinLength="1" MaxLength="10"/>
+            <Component Name="Alternate Coding System Version ID" Usage="O" Datatype="ST" MinLength="1" MaxLength="10"/>
+            <Component Name="Original Text" Usage="RE" Datatype="ST_SS" MinLength="1" MaxLength="199"/>
+        </Datatype>
+        <Datatype ID="CX_SS" Name="CX" Label="CX_SS" Description="Extended Composite ID with Check Digit">
+            <Component Name="ID Number" Usage="R" Datatype="ST_SS" MinLength="1" MaxLength="15"/>
+            <Component Name="Check Digit" Usage="O" Datatype="ST" MinLength="1" MaxLength="1"/>
+            <Component Name="Check Digit Scheme" Usage="O" Datatype="ID" MinLength="1" MaxLength="20" Binding="HL70061" BindingStrength="U"/>
+            <Component Name="Assigning Authority" Usage="R" Datatype="HD_SS" MinLength="1" MaxLength="227" Binding="HL70363" BindingStrength="R" BindingLocation="1"/>
+            <Component Name="Identifier Type Code" Usage="O" Datatype="ID" MinLength="1" MaxLength="5" Binding="HL70203" BindingStrength="U"/>
+            <Component Name="Assigning Facility" Usage="O" Datatype="HD" MinLength="1" MaxLength="227"/>
+            <Component Name="Effective Date" Usage="O" Datatype="DT" MinLength="1" MaxLength="8"/>
+            <Component Name="Expiration Date" Usage="O" Datatype="DT" MinLength="1" MaxLength="8"/>
+            <Component Name="Assigning Jurisdiction" Usage="O" Datatype="CWE" MinLength="1" MaxLength="705"/>
+            <Component Name="Assigning Agency or Department" Usage="O" Datatype="CWE" MinLength="1" MaxLength="705"/>
+        </Datatype>
+        <Datatype ID="DTM_SS" Name="DTM" Label="DTM_SS" Description="Date/Time"/>
+        <Datatype ID="EI_SS" Name="EI" Label="EI_SS" Description="Entity Identifier">
+            <Component Name="Entity Identifier" Usage="RE" Datatype="ST_SS" MinLength="1" MaxLength="199"/>
+            <Component Name="Namespace ID" Usage="R" Datatype="IS_SS" MinLength="1" MaxLength="20"/>
+            <Component Name="Universal ID" Usage="R" Datatype="ST_SS" MinLength="1" MaxLength="199"/>
+            <Component Name="Universal ID Type" Usage="R" Datatype="ID_SS" MinLength="1" MaxLength="6" Binding="PHVS_UniversalIDType_SyndromicSurveillance" BindingStrength="R"/>
+        </Datatype>
+        <Datatype ID="HD_SS" Name="HD" Label="HD_SS" Description="Hierarchic Designator">
+            <Component Name="Namespace ID" Usage="RE" Datatype="IS_SS" MinLength="1" MaxLength="20" Binding="HL70300" BindingStrength="R"/>
+            <Component Name="Universal ID" Usage="R" Datatype="ST_SS" MinLength="1" MaxLength="199"/>
+            <Component Name="Universal ID Type" Usage="R" Datatype="ID_SS" MinLength="1" MaxLength="6" Binding="PHVS_UniversalIDType_SyndromicSurveillance" BindingStrength="R"/>
+        </Datatype>
+        <Datatype ID="ID_SS" Name="ID" Label="ID_SS" Description="CODED VALUE FOR HL7 DEFINED TABLES"/>
+        <Datatype ID="IS_SS" Name="IS" Label="IS_SS" Description=" CODED VALUE FOR USER-DEFINED TABLES"/>
+        <Datatype ID="MSG_SS" Name="MSG" Label="MSG_SS" Description="Message Type">
+            <Component Name="Message Code" Usage="R" Datatype="ID_SS" MinLength="1" MaxLength="3" Binding="PHVS_MessageType_SyndromicSurveillance" BindingStrength="R"/>
+            <Component Name="Trigger Event" Usage="R" Datatype="ID_SS" MinLength="1" MaxLength="3" Binding="PHVS_EventType_SyndromicSurveillance" BindingStrength="R"/>
+            <Component Name="Message Structure" Usage="R" Datatype="ID_SS" MinLength="1" MaxLength="7" Binding="PHVS_MessageStructure_SyndromicSurveillance" BindingStrength="R"/>
+        </Datatype>
+        <Datatype ID="NM_SS" Name="NM" Label="NM_SS" Description="Numeric"/>
+        <Datatype ID="PT_SS" Name="PT" Label="PT_SS" Description="Processing Type">
+            <Component Name="Processing ID" Usage="R" Datatype="ID_SS" MinLength="1" MaxLength="3" Binding="HL70103" BindingStrength="R"/>
+            <Component Name="Processing Mode" Usage="O" Datatype="ID" MinLength="1" MaxLength="3" Binding="HL70207" BindingStrength="U"/>
+        </Datatype>
+        <Datatype ID="SAD_SS" Name="SAD" Label="SAD_SS" Description="Street Address">
+            <Component Name="Street or Mailing Address" Usage="O" Datatype="ST" MinLength="1" MaxLength="120"/>
+            <Component Name="Street Name" Usage="O" Datatype="ST" MinLength="1" MaxLength="50"/>
+            <Component Name="Dwelling Number" Usage="O" Datatype="ST" MinLength="1" MaxLength="12"/>
+        </Datatype>
+        <Datatype ID="SI_SS" Name="SI" Label="SI_SS" Description="Sequence ID"/>
+        <Datatype ID="ST_SS" Name="ST" Label="ST_SS" Description="String Data"/>
+        <Datatype ID="TS_SS" Name="TS" Label="TS_SS" Description="Time Stamp">
+            <Component Name="Time" Usage="R" Datatype="DTM_SS" MinLength="1" MaxLength="24"/>
+            <Component Name="Degree of Precision" Usage="X" Datatype="ID" MinLength="1" MaxLength="1" Binding="HL70529"/>
+        </Datatype>
+        <Datatype ID="TX_SS" Name="TX" Label="TX_SS" Description="Text Data"/>
+        <Datatype ID="VID_SS" Name="VID" Label="VID" Description="Version Identifier">
+            <Component Name="Version ID" Usage="R" Datatype="ID_SS" MinLength="1" MaxLength="5" Binding="HL70104" BindingStrength="R"/>
+            <Component Name="Internationalization Code" Usage="O" Datatype="CE" MinLength="1" MaxLength="483"/>
+            <Component Name="International Version ID" Usage="O" Datatype="CE" MinLength="1" MaxLength="483"/>
+        </Datatype>
+        <Datatype ID="XAD_SS" Name="XAD" Label="XAD_SS" Description="Extended Address">
+            <Component Name="Street Address" Usage="O" Datatype="SAD" MinLength="1" MaxLength="50"/>
+            <Component Name="Other Designation" Usage="O" Datatype="ST" MinLength="1" MaxLength="50"/>
+            <Component Name="City" Usage="RE" Datatype="ST_SS" MinLength="1" MaxLength="50"/>
+            <Component Name="State or Province" Usage="RE" Datatype="ID_SS" MinLength="1" MaxLength="50" Binding="PHVS_State_FIPS_5-2" BindingStrength="R"/>
+            <Component Name="Zip or Postal Code" Usage="RE" Datatype="ST_SS" MinLength="1" MaxLength="12"/>
+            <Component Name="Country" Usage="RE" Datatype="ID_SS" MinLength="1" MaxLength="3" Binding="PHVS_Country_ISO_3166-1" BindingStrength="R"/>
+            <Component Name="Address Type" Usage="O" Datatype="ID" MinLength="1" MaxLength="3"/>
+            <Component Name="Other Geographic Designation" Usage="O" Datatype="ST" MinLength="1" MaxLength="50"/>
+            <Component Name="County/Parish Code" Usage="RE" Datatype="IS_SS" MinLength="1" MaxLength="20" Binding="PHVS_County_FIPS_6-4" BindingStrength="R"/>
+            <Component Name="Census Tract" Usage="O" Datatype="IS" MinLength="1" MaxLength="20"/>
+            <Component Name="Address Representation Code" Usage="O" Datatype="ID" MinLength="1" MaxLength="1"/>
+            <Component Name="Address Validity Range" Usage="X" Datatype="DR_DTM" MinLength="0" MaxLength="0"/>
+            <Component Name="Effective Date" Usage="O" Datatype="TS" MinLength="1" MaxLength="26"/>
+            <Component Name="Expiration Date" Usage="O" Datatype="TS" MinLength="1" MaxLength="26"/>
+        </Datatype>
+        <Datatype ID="XAD_SS_OBX" Name="XAD" Label="XAD_SS_OBX" Description="Extended Address">
+            <Component Name="Street Address" Usage="C" Datatype="SAD_SS" MinLength="1" MaxLength="50"/>
+            <Component Name="Other Designation" Usage="O" Datatype="ST" MinLength="1" MaxLength="120"/>
+            <Component Name="City" Usage="RE" Datatype="ST_SS" MinLength="1" MaxLength="50"/>
+            <Component Name="State or Province" Usage="RE" Datatype="IS_SS" MinLength="1" MaxLength="50" Binding="PHVS_State_FIPS_5-2" BindingStrength="R"/>
+            <Component Name="Zip or Postal Code" Usage="RE" Datatype="ST_SS" MinLength="1" MaxLength="12"/>
+            <Component Name="Country" Usage="RE" Datatype="ID_SS" MinLength="1" MaxLength="3" Binding="PHVS_Country_ISO_3166-1" BindingStrength="R"/>
+            <Component Name="Address Type" Usage="O" Datatype="ID" MinLength="1" MaxLength="3" Binding="HL70190" BindingStrength="U"/>
+            <Component Name="Other Geographic Designation" Usage="O" Datatype="ST" MinLength="1" MaxLength="50"/>
+            <Component Name="County/Parish Code" Usage="RE" Datatype="IS_SS" MinLength="1" MaxLength="20"/>
+            <Component Name="Census Tract" Usage="X" Datatype="IS" MinLength="0" MaxLength="20"/>
+            <Component Name="Address Representation Code" Usage="X" Datatype="ID" MinLength="0" MaxLength="1"/>
+            <Component Name="Address Validity Range" Usage="X" Datatype="DR_DTM" MinLength="0" MaxLength="53"/>
+            <Component Name="Effective Date" Usage="X" Datatype="TS" MinLength="1" MaxLength="26"/>
+            <Component Name="Expiration Date" Usage="X" Datatype="TS" MinLength="1" MaxLength="26"/>
+        </Datatype>
+        <Datatype ID="XPN_SS" Name="XPN" Label="XPN_SS" Description="Extended Person Name">
+            <Component Name="Family Name" Usage="X" Datatype="FN" MinLength="1" MaxLength="194"/>
+            <Component Name="Given Name" Usage="X" Datatype="ST" MinLength="1" MaxLength="30"/>
+            <Component Name="Second and Further Given Names or Initials Thereof" Usage="X" Datatype="ST" MinLength="1" MaxLength="30"/>
+            <Component Name="Suffix (e.g., JR or III)" Usage="X" Datatype="ST" MinLength="1" MaxLength="20"/>
+            <Component Name="Prefix (e.g., DR)" Usage="X" Datatype="ST" MinLength="1" MaxLength="20"/>
+            <Component Name="Degree (e.g., MD)" Usage="X" Datatype="IS" MinLength="1" MaxLength="6" Binding="HL70360"/>
+            <Component Name="Name Type Code" Usage="R" Datatype="ID_SS" MinLength="1" MaxLength="1" Binding="HL70200" BindingStrength="R"/>
+            <Component Name="Name Representation Code" Usage="X" Datatype="ID" MinLength="1" MaxLength="1" Binding="HL70465"/>
+            <Component Name="Name Context" Usage="X" Datatype="CE" MinLength="1" MaxLength="483" Binding="HL70448" BindingLocation="1:4"/>
+            <Component Name="Name Validity Range" Usage="X" Datatype="DR_DTM" MinLength="1" MaxLength="53"/>
+            <Component Name="Name Assembly Order" Usage="X" Datatype="ID" MinLength="1" MaxLength="1" Binding="HL70444"/>
+            <Component Name="Effective Date" Usage="X" Datatype="TS" MinLength="1" MaxLength="26"/>
+            <Component Name="Expiration Date" Usage="X" Datatype="TS" MinLength="1" MaxLength="26"/>
+            <Component Name="Professional Suffix" Usage="X" Datatype="ST" MinLength="1" MaxLength="199"/>
+        </Datatype>
+        <Datatype ID="AUI" Name="AUI" Label="AUI" Description="Authorization Information">
+            <Component Name="Authorization Number" Usage="O" Datatype="ST" MinLength="1" MaxLength="30"/>
+            <Component Name="Date" Usage="O" Datatype="DT" MinLength="1" MaxLength="8"/>
+            <Component Name="Source" Usage="O" Datatype="ST" MinLength="1" MaxLength="199"/>
+        </Datatype>
+        <Datatype ID="CE" Name="CE" Label="CE" Description="Coded Element">
+            <Component Name="Identifier" Usage="O" Datatype="ST" MinLength="1" MaxLength="20"/>
+            <Component Name="Text" Usage="O" Datatype="ST" MinLength="1" MaxLength="199"/>
+            <Component Name="Name of Coding System" Usage="O" Datatype="ID" MinLength="1" MaxLength="20" Binding="HL70396"/>
+            <Component Name="Alternate Identifier" Usage="O" Datatype="ST" MinLength="1" MaxLength="20"/>
+            <Component Name="Alternate Text" Usage="O" Datatype="ST" MinLength="1" MaxLength="199"/>
+            <Component Name="Name of Alternate Coding System" Usage="O" Datatype="ID" MinLength="1" MaxLength="20" Binding="HL70396"/>
+        </Datatype>
+        <Datatype ID="CNE" Name="CNE" Label="CNE" Description="Coded with No Exceptions">
+            <Component Name="Identifier" Usage="R" Datatype="ST" MinLength="1" MaxLength="20"/>
+            <Component Name="Text" Usage="O" Datatype="ST" MinLength="1" MaxLength="199"/>
+            <Component Name="Name of Coding System" Usage="O" Datatype="ID" MinLength="1" MaxLength="20" Binding="HL70396" BindingStrength="U"/>
+            <Component Name="Alternate Identifier" Usage="O" Datatype="ST" MinLength="1" MaxLength="20"/>
+            <Component Name="Alternate Text" Usage="O" Datatype="ST" MinLength="1" MaxLength="199"/>
+            <Component Name="Name of Alternate Coding System" Usage="O" Datatype="ID" MinLength="1" MaxLength="20" Binding="HL70396" BindingStrength="U"/>
+            <Component Name="Coding System Version ID" Usage="C" Datatype="ST" MinLength="1" MaxLength="10"/>
+            <Component Name="Alternate Coding System Version ID" Usage="O" Datatype="ST" MinLength="1" MaxLength="10"/>
+            <Component Name="Original Text" Usage="O" Datatype="ST" MinLength="1" MaxLength="199"/>
+        </Datatype>
+        <Datatype ID="CP" Name="CP" Label="CP" Description="Composite Price">
+            <Component Name="Price" Usage="R" Datatype="MO" MinLength="1" MaxLength="20"/>
+            <Component Name="Price Type" Usage="O" Datatype="ID" MinLength="1" MaxLength="2" Binding="HL70205" BindingStrength="U"/>
+            <Component Name="From Value" Usage="O" Datatype="NM" MinLength="1" MaxLength="16"/>
+            <Component Name="To Value" Usage="O" Datatype="NM" MinLength="1" MaxLength="16"/>
+            <Component Name="Range Units" Usage="O" Datatype="CE" MinLength="1" MaxLength="483"/>
+            <Component Name="Range Type" Usage="O" Datatype="ID" MinLength="1" MaxLength="1" Binding="HL70298" BindingStrength="U"/>
+        </Datatype>
+        <Datatype ID="CWE" Name="CWE" Label="CWE" Description="Coded With Exceptions">
+            <Component Name="Identifier" Usage="O" Datatype="ST" MinLength="1" MaxLength="20"/>
+            <Component Name="Text" Usage="O" Datatype="ST" MinLength="1" MaxLength="199"/>
+            <Component Name="Name of Coding System" Usage="O" Datatype="ID" MinLength="1" MaxLength="20" Binding="HL70396"/>
+            <Component Name="Alternate Identifier" Usage="O" Datatype="ST" MinLength="1" MaxLength="20"/>
+            <Component Name="Alternate Text" Usage="O" Datatype="ST" MinLength="1" MaxLength="199"/>
+            <Component Name="Name of Alternate Coding System" Usage="O" Datatype="ID" MinLength="1" MaxLength="20" Binding="HL70396"/>
+            <Component Name="Coding System Version ID" Usage="C" Datatype="ST" MinLength="1" MaxLength="10"/>
+            <Component Name="Alternate Coding System Version ID" Usage="O" Datatype="ST" MinLength="1" MaxLength="10"/>
+            <Component Name="Original Text" Usage="O" Datatype="ST" MinLength="1" MaxLength="199"/>
+        </Datatype>
+        <Datatype ID="CX" Name="CX" Label="CX" Description="Extended Composite Id With Check Digit">
+            <Component Name="ID Number" Usage="R" Datatype="ST" MinLength="1" MaxLength="15"/>
+            <Component Name="Check Digit" Usage="O" Datatype="ST" MinLength="1" MaxLength="1"/>
+            <Component Name="Check Digit Scheme" Usage="O" Datatype="ID" MinLength="1" MaxLength="3" Binding="HL70061"/>
+            <Component Name="Assigning Authority" Usage="O" Datatype="HD" MinLength="1" MaxLength="227" Binding="HL70363" BindingLocation="1"/>
+            <Component Name="Identifier Type Code" Usage="O" Datatype="ID" MinLength="1" MaxLength="5" Binding="HL70203"/>
+            <Component Name="Assigning Facility" Usage="O" Datatype="HD" MinLength="1" MaxLength="227"/>
+            <Component Name="Effective Date" Usage="O" Datatype="DT" MinLength="1" MaxLength="8"/>
+            <Component Name="Expiration Date" Usage="O" Datatype="DT" MinLength="1" MaxLength="8"/>
+            <Component Name="Assigning Jurisdiction" Usage="O" Datatype="CWE" MinLength="1" MaxLength="705"/>
+            <Component Name="Assigning Agency or Department" Usage="O" Datatype="CWE" MinLength="1" MaxLength="705"/>
+        </Datatype>
+        <Datatype ID="DDI" Name="DDI" Label="DDI" Description="Daily Deductible Information">
+            <Component Name="Delay Days" Usage="O" Datatype="NM" MinLength="1" MaxLength="3"/>
+            <Component Name="Monetary Amount" Usage="R" Datatype="MO" MinLength="1" MaxLength="16"/>
+            <Component Name="Number of Days" Usage="O" Datatype="NM" MinLength="1" MaxLength="4"/>
+        </Datatype>
+        <Datatype ID="DLD" Name="DLD" Label="DLD" Description="Discharge Location and Date">
+            <Component Name="Discharge Location" Usage="R" Datatype="IS" MinLength="1" MaxLength="20" Binding="HL70113" BindingStrength="R"/>
+            <Component Name="Effective Date" Usage="O" Datatype="TS" MinLength="1" MaxLength="26"/>
+        </Datatype>
+        <Datatype ID="DLN" Name="DLN" Label="DLN" Description="Driver's License Number">
+            <Component Name="License Number" Usage="R" Datatype="ST" MinLength="1" MaxLength="20"/>
+            <Component Name="Issuing State, Province, Country" Usage="O" Datatype="IS" MinLength="1" MaxLength="20" Binding="HL70333" BindingStrength="U"/>
+            <Component Name="Expiration Date" Usage="O" Datatype="DT" MinLength="1" MaxLength="24"/>
+        </Datatype>
+        <Datatype ID="DR" Name="DR" Label="DR" Description="Date/Time Range">
+            <Component Name="Range Start Date/Time" Usage="O" Datatype="TS" MinLength="1" MaxLength="26"/>
+            <Component Name="Range End Date/Time" Usage="O" Datatype="TS" MinLength="1" MaxLength="26"/>
+        </Datatype>
+        <Datatype ID="DT" Name="DT" Label="DT" Description="Date"/>
+        <Datatype ID="DTM" Name="DTM" Label="DTM" Description="Date/time"/>
+        <Datatype ID="DTN" Name="DTN" Label="DTN" Description="Day Type and Number">
+            <Component Name="Day Type" Usage="R" Datatype="IS" MinLength="1" MaxLength="2" Binding="HL70149" BindingStrength="R"/>
+            <Component Name="Number of Days" Usage="R" Datatype="NM" MinLength="1" MaxLength="3"/>
+        </Datatype>
+        <Datatype ID="EI" Name="EI" Label="EI" Description="Entity Identifier">
+            <Component Name="Entity Identifier" Usage="O" Datatype="ST" MinLength="1" MaxLength="199"/>
+            <Component Name="Namespace ID" Usage="O" Datatype="IS" MinLength="1" MaxLength="20" Binding="HL70363"/>
+            <Component Name="Universal ID" Usage="C" Datatype="ST" MinLength="1" MaxLength="199"/>
+            <Component Name="Universal ID Type" Usage="C" Datatype="ID" MinLength="1" MaxLength="6" Binding="HL70301"/>
+        </Datatype>
+        <Datatype ID="FC" Name="FC" Label="FC" Description="Financial Class">
+            <Component Name="Financial Class Code" Usage="R" Datatype="IS" MinLength="1" MaxLength="20" Binding="HL70064" BindingStrength="R"/>
+            <Component Name="Effective Date" Usage="O" Datatype="TS" MinLength="1" MaxLength="26"/>
+        </Datatype>
+        <Datatype ID="FN" Name="FN" Label="FN" Description="Family Name">
+            <Component Name="Surname" Usage="R" Datatype="ST" MinLength="1" MaxLength="50"/>
+            <Component Name="Own Surname Prefix" Usage="O" Datatype="ST" MinLength="1" MaxLength="20"/>
+            <Component Name="Own Surname" Usage="O" Datatype="ST" MinLength="1" MaxLength="50"/>
+            <Component Name="Surname Prefix From Partner/Spouse" Usage="O" Datatype="ST" MinLength="1" MaxLength="20"/>
+            <Component Name="Surname From Partner/Spouse" Usage="O" Datatype="ST" MinLength="1" MaxLength="50"/>
+        </Datatype>
+        <Datatype ID="HD" Name="HD" Label="HD" Description="Hierarchic Designator">
+            <Component Name="Namespace ID" Usage="O" Datatype="IS" MinLength="1" MaxLength="20" Binding="HL70300"/>
+            <Component Name="Universal ID" Usage="C" Datatype="ST" MinLength="1" MaxLength="199"/>
+            <Component Name="Universal ID Type" Usage="C" Datatype="ID" MinLength="1" MaxLength="6" Binding="HL70301"/>
+        </Datatype>
+        <Datatype ID="ICD" Name="ICD" Label="ICD" Description="Insurance Certification Definition">
+            <Component Name="Certification Patient Type" Usage="O" Datatype="IS" MinLength="1" MaxLength="11" Binding="HL70150" BindingStrength="U"/>
+            <Component Name="Certification Required" Usage="R" Datatype="ID" MinLength="1" MaxLength="1" Binding="HL70136" BindingStrength="R"/>
+            <Component Name="Date/Time Certification Required" Usage="O" Datatype="TS" MinLength="1" MaxLength="26"/>
+        </Datatype>
+        <Datatype ID="ID" Name="ID" Label="ID" Description="CODED VALUE FOR HL7 DEFINED TABLES"/>
+        <Datatype ID="IS" Name="IS" Label="IS" Description=" CODED VALUE FOR USER-DEFINED TABLES"/>
+        <Datatype ID="JCC" Name="JCC" Label="JCC" Description="Job Code/Class">
+            <Component Name="Job Code" Usage="O" Datatype="IS" MinLength="1" MaxLength="20" Binding="HL70327" BindingStrength="U"/>
+            <Component Name="Job Class" Usage="O" Datatype="IS" MinLength="1" MaxLength="20" Binding="HL70328" BindingStrength="U"/>
+            <Component Name="Job Description Text" Usage="O" Datatype="TX" MinLength="1" MaxLength="250"/>
+        </Datatype>
+        <Datatype ID="MO" Name="MO" Label="MO" Description="Money">
+            <Component Name="Quantity" Usage="O" Datatype="NM" MinLength="1" MaxLength="16"/>
+            <Component Name="Denomination" Usage="O" Datatype="ID" MinLength="1" MaxLength="3"/>
+        </Datatype>
+        <Datatype ID="MOP" Name="MOP" Label="MOP" Description="Money or Percentage">
+            <Component Name="Money or Percentage Indicator" Usage="R" Datatype="ID" MinLength="1" MaxLength="2" Binding="HL70148" BindingStrength="R"/>
+            <Component Name="Money or Percentage Quantity" Usage="R" Datatype="NM" MinLength="1" MaxLength="16"/>
+            <Component Name="Currency Denomination" Usage="O" Datatype="ID" MinLength="1" MaxLength="3"/>
+        </Datatype>
+        <Datatype ID="NM" Name="NM" Label="NM" Description="Numeric"/>
+        <Datatype ID="OCD" Name="OCD" Label="OCD" Description="Occurrence Code and Date">
+            <Component Name="Occurrence Code" Usage="R" Datatype="CNE" MinLength="1" MaxLength="705" Binding="HL70350" BindingStrength="R" BindingLocation="1"/>
+            <Component Name="Occurrence Date" Usage="R" Datatype="DT" MinLength="1" MaxLength="8"/>
+        </Datatype>
+        <Datatype ID="OSP" Name="OSP" Label="OSP" Description="Occurrence Span Code and Date">
+            <Component Name="Occurrence Span Code" Usage="R" Datatype="CNE" MinLength="1" MaxLength="705" Binding="HL70351" BindingStrength="R" BindingLocation="1"/>
+            <Component Name="Occurrence Span Start Date" Usage="C" Datatype="DT" MinLength="1" MaxLength="8"/>
+            <Component Name="Occurrence Span Stop Date" Usage="C" Datatype="DT" MinLength="1" MaxLength="8"/>
+        </Datatype>
+        <Datatype ID="PL" Name="PL" Label="PL" Description="Person Location">
+            <Component Name="Point of Care" Usage="O" Datatype="IS" MinLength="1" MaxLength="20" Binding="HL70302" BindingStrength="U"/>
+            <Component Name="Room" Usage="O" Datatype="IS" MinLength="1" MaxLength="20" Binding="HL70303" BindingStrength="U"/>
+            <Component Name="Bed" Usage="O" Datatype="IS" MinLength="1" MaxLength="20" Binding="HL70304" BindingStrength="U"/>
+            <Component Name="Facility" Usage="O" Datatype="HD" MinLength="1" MaxLength="227"/>
+            <Component Name="Location Status" Usage="O" Datatype="IS" MinLength="1" MaxLength="20" Binding="HL70306" BindingStrength="U"/>
+            <Component Name="Person Location Type" Usage="C" Datatype="IS" MinLength="1" MaxLength="20" Binding="HL70305" BindingStrength="R"/>
+            <Component Name="Building" Usage="O" Datatype="IS" MinLength="1" MaxLength="20" Binding="HL70307" BindingStrength="U"/>
+            <Component Name="Floor" Usage="O" Datatype="IS" MinLength="1" MaxLength="20" Binding="HL70308" BindingStrength="U"/>
+            <Component Name="Location Description" Usage="O" Datatype="ST" MinLength="1" MaxLength="199"/>
+            <Component Name="Comprehensive Location Identifier" Usage="O" Datatype="EI" MinLength="1" MaxLength="427"/>
+            <Component Name="Assigning Authority for Location" Usage="O" Datatype="HD" MinLength="1" MaxLength="227"/>
+        </Datatype>
+        <Datatype ID="PTA" Name="PTA" Label="PTA" Description="Policy Type and Amount">
+            <Component Name="Policy Type" Usage="R" Datatype="IS" MinLength="1" MaxLength="5" Binding="HL70147" BindingStrength="R"/>
+            <Component Name="Amount Class" Usage="O" Datatype="IS" MinLength="1" MaxLength="9" Binding="HL70193" BindingStrength="U"/>
+            <Component Name="Money or Percentage Quantity" Usage="B" Datatype="NM" MinLength="1" MaxLength="16"/>
+            <Component Name="Money or Percentage" Usage="R" Datatype="MOP" MinLength="1" MaxLength="23"/>
+        </Datatype>
+        <Datatype ID="RMC" Name="RMC" Label="RMC" Description="Room Coverage">
+            <Component Name="Room Type" Usage="R" Datatype="IS" MinLength="1" MaxLength="20" Binding="HL70145" BindingStrength="R"/>
+            <Component Name="Amount Type" Usage="O" Datatype="IS" MinLength="1" MaxLength="20" Binding="HL70146" BindingStrength="U"/>
+            <Component Name="Coverage Amount" Usage="B" Datatype="NM" MinLength="1" MaxLength="16"/>
+            <Component Name="Money or Percentage" Usage="R" Datatype="MOP" MinLength="1" MaxLength="23"/>
+        </Datatype>
+        <Datatype ID="SAD" Name="SAD" Label="SAD" Description="Street Address">
+            <Component Name="Street or Mailing Address" Usage="O" Datatype="ST" MinLength="1" MaxLength="120"/>
+            <Component Name="Street Name" Usage="O" Datatype="ST" MinLength="1" MaxLength="50"/>
+            <Component Name="Dwelling Number" Usage="O" Datatype="ST" MinLength="1" MaxLength="12"/>
+        </Datatype>
+        <Datatype ID="SI" Name="SI" Label="SI" Description="Sequence ID"/>
+        <Datatype ID="ST" Name="ST" Label="ST" Description="String Data"/>
+        <Datatype ID="TS" Name="TS" Label="TS" Description="Time Stamp">
+            <Component Name="Time" Usage="R" Datatype="DTM" MinLength="1" MaxLength="24"/>
+            <Component Name="Degree of Precision" Usage="B" Datatype="ID" MinLength="1" MaxLength="1" Binding="HL70529"/>
+        </Datatype>
+        <Datatype ID="TX" Name="TX" Label="TX" Description="Text Data"/>
+        <Datatype ID="UVC" Name="UVC" Label="UVC" Description="UB Value Code and Amount">
+            <Component Name="Value Code" Usage="R" Datatype="CNE" MinLength="1" MaxLength="20" Binding="HL70153" BindingStrength="R" BindingLocation="1"/>
+            <Component Name="Value Amount" Usage="O" Datatype="MO" MinLength="1" MaxLength="20"/>
+        </Datatype>
+        <Datatype ID="varies" Name="varies" Label="varies" Description="varies"/>
+        <Datatype ID="XAD" Name="XAD" Label="XAD" Description="Extended Address">
+            <Component Name="Street Address" Usage="O" Datatype="SAD" MinLength="1" MaxLength="184"/>
+            <Component Name="Other Designation" Usage="O" Datatype="ST" MinLength="1" MaxLength="120"/>
+            <Component Name="City" Usage="O" Datatype="ST" MinLength="1" MaxLength="50"/>
+            <Component Name="State or Province" Usage="O" Datatype="ST" MinLength="1" MaxLength="50"/>
+            <Component Name="Zip or Postal Code" Usage="O" Datatype="ST" MinLength="1" MaxLength="12"/>
+            <Component Name="Country" Usage="O" Datatype="ID" MinLength="1" MaxLength="3" Binding="HL70399"/>
+            <Component Name="Address Type" Usage="O" Datatype="ID" MinLength="1" MaxLength="3" Binding="HL70190"/>
+            <Component Name="Other Geographic Designation" Usage="O" Datatype="ST" MinLength="1" MaxLength="50"/>
+            <Component Name="County/Parish Code" Usage="O" Datatype="IS" MinLength="1" MaxLength="20" Binding="HL70289"/>
+            <Component Name="Census Tract" Usage="O" Datatype="IS" MinLength="1" MaxLength="20" Binding="HL70288"/>
+            <Component Name="Address Representation Code" Usage="O" Datatype="ID" MinLength="1" MaxLength="1" Binding="HL70465"/>
+            <Component Name="Address Validity Range" Usage="B" Datatype="DR_DTM" MinLength="1" MaxLength="53"/>
+            <Component Name="Effective Date" Usage="O" Datatype="TS" MinLength="1" MaxLength="26"/>
+            <Component Name="Expiration Date" Usage="O" Datatype="TS" MinLength="1" MaxLength="26"/>
+        </Datatype>
+        <Datatype ID="XCN" Name="XCN" Label="XCN" Description="Extended Composite Id Number And Name For Persons">
+            <Component Name="ID Number" Usage="O" Datatype="ST" MinLength="1" MaxLength="15"/>
+            <Component Name="Family Name" Usage="O" Datatype="FN" MinLength="1" MaxLength="194"/>
+            <Component Name="Given Name" Usage="O" Datatype="ST" MinLength="1" MaxLength="30"/>
+            <Component Name="Second and Further Given Names or Initials Thereof" Usage="O" Datatype="ST" MinLength="1" MaxLength="30"/>
+            <Component Name="Suffix (e.g., JR or III)" Usage="O" Datatype="ST" MinLength="1" MaxLength="20"/>
+            <Component Name="Prefix (e.g., DR)" Usage="O" Datatype="ST" MinLength="1" MaxLength="20"/>
+            <Component Name="Degree (e.g., MD)" Usage="B" Datatype="IS" MinLength="1" MaxLength="5" Binding="HL70360"/>
+            <Component Name="Source Table" Usage="C" Datatype="IS" MinLength="1" MaxLength="4" Binding="HL70297"/>
+            <Component Name="Assigning Authority" Usage="O" Datatype="HD" MinLength="1" MaxLength="227" Binding="HL70363" BindingLocation="1"/>
+            <Component Name="Name Type Code" Usage="O" Datatype="ID" MinLength="1" MaxLength="1" Binding="HL70200"/>
+            <Component Name="Identifier Check Digit" Usage="O" Datatype="ST" MinLength="1" MaxLength="1"/>
+            <Component Name="Check Digit Scheme" Usage="C" Datatype="ID" MinLength="1" MaxLength="3" Binding="HL70061"/>
+            <Component Name="Identifier Type Code" Usage="O" Datatype="ID" MinLength="1" MaxLength="5" Binding="HL70203"/>
+            <Component Name="Assigning Facility" Usage="O" Datatype="HD" MinLength="1" MaxLength="227"/>
+            <Component Name="Name Representation Code" Usage="O" Datatype="ID" MinLength="1" MaxLength="1" Binding="HL70465"/>
+            <Component Name="Name Context" Usage="O" Datatype="CE" MinLength="1" MaxLength="483" Binding="HL70448" BindingLocation="1:4"/>
+            <Component Name="Name Validity Range" Usage="B" Datatype="DR_DTM" MinLength="1" MaxLength="53"/>
+            <Component Name="Name Assembly Order" Usage="O" Datatype="ID" MinLength="1" MaxLength="1" Binding="HL70444"/>
+            <Component Name="Effective Date" Usage="O" Datatype="TS" MinLength="1" MaxLength="26"/>
+            <Component Name="Expiration Date" Usage="O" Datatype="TS" MinLength="1" MaxLength="26"/>
+            <Component Name="Professional Suffix" Usage="O" Datatype="ST" MinLength="1" MaxLength="199"/>
+            <Component Name="Assigning Jurisdiction" Usage="O" Datatype="CWE" MinLength="1" MaxLength="705"/>
+            <Component Name="Assigning Agency or Department" Usage="O" Datatype="CWE" MinLength="1" MaxLength="705"/>
+        </Datatype>
+        <Datatype ID="XON" Name="XON" Label="XON" Description="Extended Composite Name and Identification Number for Organizations">
+            <Component Name="Organization Name" Usage="O" Datatype="ST" MinLength="1" MaxLength="50"/>
+            <Component Name="Organization Name Type Code" Usage="O" Datatype="IS" MinLength="1" MaxLength="20" Binding="HL70204" BindingStrength="U"/>
+            <Component Name="ID Number" Usage="B" Datatype="NM" MinLength="1" MaxLength="4"/>
+            <Component Name="Check Digit" Usage="O" Datatype="NM" MinLength="1" MaxLength="1"/>
+            <Component Name="Check Digit Scheme" Usage="O" Datatype="ID" MinLength="1" MaxLength="3" Binding="HL70061" BindingStrength="U"/>
+            <Component Name="Assigning Authority" Usage="O" Datatype="HD" MinLength="1" MaxLength="227" Binding="HL70363" BindingStrength="U" BindingLocation="1"/>
+            <Component Name="Identifier Type Code" Usage="O" Datatype="ID" MinLength="1" MaxLength="5" Binding="HL70203" BindingStrength="U"/>
+            <Component Name="Assigning Facility" Usage="O" Datatype="HD" MinLength="1" MaxLength="227"/>
+            <Component Name="Name Representation Code" Usage="O" Datatype="ID" MinLength="1" MaxLength="1" Binding="HL70465" BindingStrength="U"/>
+            <Component Name="Organization Identifier" Usage="O" Datatype="ST" MinLength="1" MaxLength="20"/>
+        </Datatype>
+        <Datatype ID="XPN" Name="XPN" Label="XPN" Description="Extended Person Name">
+            <Component Name="Family Name" Usage="X" Datatype="FN" MinLength="1" MaxLength="194"/>
+            <Component Name="Given Name" Usage="X" Datatype="ST" MinLength="1" MaxLength="30"/>
+            <Component Name="Second and Further Given Names or Initials Thereof" Usage="X" Datatype="ST" MinLength="1" MaxLength="30"/>
+            <Component Name="Suffix (e.g., JR or III)" Usage="X" Datatype="ST" MinLength="1" MaxLength="20"/>
+            <Component Name="Prefix (e.g., DR)" Usage="X" Datatype="ST" MinLength="1" MaxLength="20"/>
+            <Component Name="Degree (e.g., MD)" Usage="X" Datatype="IS" MinLength="1" MaxLength="6" Binding="HL70360"/>
+            <Component Name="Name Type Code" Usage="C" Datatype="ID" MinLength="1" MaxLength="1" Binding="HL70200" BindingStrength="R"/>
+            <Component Name="Name Representation Code" Usage="X" Datatype="ID" MinLength="1" MaxLength="1" Binding="HL70465"/>
+            <Component Name="Name Context" Usage="X" Datatype="CE" MinLength="1" MaxLength="483" Binding="HL70448" BindingLocation="1:4"/>
+            <Component Name="Name Validity Range" Usage="X" Datatype="DR_DTM" MinLength="1" MaxLength="53"/>
+            <Component Name="Name Assembly Order" Usage="X" Datatype="ID" MinLength="1" MaxLength="1" Binding="HL70444"/>
+            <Component Name="Effective Date" Usage="X" Datatype="TS" MinLength="1" MaxLength="26"/>
+            <Component Name="Expiration Date" Usage="X" Datatype="TS" MinLength="1" MaxLength="26"/>
+            <Component Name="Professional Suffix" Usage="X" Datatype="ST" MinLength="1" MaxLength="199"/>
+        </Datatype>
+        <Datatype ID="XTN" Name="XTN" Label="XTN" Description="Extended Telecommunication Number">
+            <Component Name="Telephone Number" Usage="B" Datatype="ST" MinLength="1" MaxLength="199"/>
+            <Component Name="Telecommunication Use Code" Usage="O" Datatype="ID" MinLength="1" MaxLength="3" Binding="HL70201" BindingStrength="U"/>
+            <Component Name="Telecommunication Equipment Type" Usage="O" Datatype="ID" MinLength="1" MaxLength="8" Binding="HL70202" BindingStrength="U"/>
+            <Component Name="Email Address" Usage="O" Datatype="ST" MinLength="1" MaxLength="199"/>
+            <Component Name="Country Code" Usage="O" Datatype="NM" MinLength="1" MaxLength="3"/>
+            <Component Name="Area/City Code" Usage="O" Datatype="NM" MinLength="1" MaxLength="5"/>
+            <Component Name="Local Number" Usage="O" Datatype="NM" MinLength="1" MaxLength="9"/>
+            <Component Name="Extension" Usage="O" Datatype="NM" MinLength="1" MaxLength="5"/>
+            <Component Name="Any Text" Usage="O" Datatype="ST" MinLength="1" MaxLength="199"/>
+            <Component Name="Extension Prefix" Usage="O" Datatype="ST" MinLength="1" MaxLength="4"/>
+            <Component Name="Speed Dial Code" Usage="O" Datatype="ST" MinLength="1" MaxLength="6"/>
+            <Component Name="Unformatted Telephone number" Usage="C" Datatype="ST" MinLength="1" MaxLength="199"/>
+        </Datatype>
+        <Datatype ID="DR_DTM" Name="DR" Label="DR_DTM" Description="Date/time Range">
+            <Component Name="Range Start Date/Time" Usage="O" Datatype="DTM" MinLength="1" MaxLength="26"/>
+            <Component Name="Range End Date/Time" Usage="O" Datatype="DTM" MinLength="1" MaxLength="26"/>
+        </Datatype>
+    </Datatypes>
+</ConformanceProfile>
