@@ -575,10 +575,12 @@
 					<Description>If OBX 3.1 (Observation Identifier) is valued with 21612-7 AGE-REPORTED (LOINC), then OBX-6.1 (Unit Identifier) SHALL be valued to a member of the set: PHVS_AgeUnit_SyndromicSurveillance</Description>
 					<Assertion>
 						<IMPLY>
+						
 							<AND>
 								<Presence Path="3[1].1[1]"/>
 								<PlainText Path="3[1].1[1]" Text="21612-7" IgnoreCase="false"/>
 							</AND>
+							
 							<ValueSet Path="6[1]" ValueSetID="PHVS_AgeUnit_SyndromicSurveillance" BindingStrength="R" BindingLocation="1"/>
 						</IMPLY>
 					</Assertion>
