@@ -1,0 +1,26 @@
+<assembly xmlns="http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.1.2"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.1.2 http://maven.apache.org/xsd/assembly-1.1.2.xsd">
+  <id>TestData-${version}</id>
+  <formats>
+    <format>zip</format>
+  </formats>
+  <includeBaseDirectory>false</includeBaseDirectory>  
+  <fileSets>
+    <fileSet>
+    	<directory>src/main/resources/TESTCASES/</directory>
+    	<outputDirectory>/</outputDirectory>
+	   <includes>
+	      <include>**/*TestPackage.pdf</include>
+	    </includes>
+	   	<excludes>
+	   		<!-- exclude LOI_8 for the moment -->
+			<exclude>**/LOI_8_Diabetic_Profile/**</exclude>
+			<!-- exclude LOI_5  PH for the moment -->
+			<exclude>**/LOI_5_Reflex_Hepatitis/LOI_5.2*/**</exclude>
+			<!-- exclude LOI_3.1_1.1 Lipid_Panel_FP for the moment -->
+			<exclude>**/LOI_3_Lipid_Panel/LOI_3.1_1.1*/**</exclude>
+	    </excludes>
+    </fileSet>
+  </fileSets>
+</assembly>
