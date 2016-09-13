@@ -1,0 +1,239 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>gov.nist.healthcare.mu.loi-r1</groupId>
+	<artifactId>loi-resource-bundle</artifactId>
+	<packaging>jar</packaging>
+	<version>0.1.0-SNAPSHOT</version>
+	<distributionManagement>
+		<repository>
+			<id>releases</id>
+			<url>http://vm-070.nist.gov:8081/nexus/content/repositories/releases</url>
+		</repository>
+		<snapshotRepository>
+			<id>snapshots</id>
+			<name>Internal Snapshots</name>
+			<url>http://vm-070.nist.gov:8081/nexus/content/repositories/snapshots</url>
+		</snapshotRepository>
+	</distributionManagement>
+	<scm>
+		<connection>scm:svn:https://svn.code.sf.net/p/mu-nist/code/trunk/resource-bundle/loi</connection>
+		<developerConnection>scm:svn:https://svn.code.sf.net/p/mu-nist/code/trunk/resource-bundle/loi</developerConnection>
+	</scm>
+	<build>
+		<!-- we want to filter the maven.properties files to be able to have access to the project version -->
+		<resources>
+			<resource>
+				<!-- enable filtering for maven.properties -->
+				<directory>src/main/resources</directory>
+				<filtering>true</filtering>
+				<includes>
+					<include>maven.properties</include>
+					<include>About/MetaData.json</include>
+				</includes>
+			</resource>
+			<resource>
+				<!-- disable filtering for all other resources -->
+				<directory>src/main/resources</directory>
+				<filtering>false</filtering>
+				<excludes>
+					<exclude>maven.properties</exclude>
+					<exclude>About/MetaData.json</exclude>
+				</excludes>
+			</resource>
+		</resources>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<artifactId>maven-assembly-plugin</artifactId>
+					<version>2.4</version>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<configuration>
+						<source>1.6</source>
+						<target>1.6</target>
+					</configuration>
+				</plugin>
+				<plugin>
+					<groupId>org.eclipse.m2e</groupId>
+					<artifactId>lifecycle-mapping</artifactId>
+					<version>1.0.0</version>
+					<configuration>
+						<lifecycleMappingMetadata>
+							<pluginExecutions>
+								<pluginExecution>
+									<pluginExecutionFilter>
+										<groupId>org.apache.maven.plugins</groupId>
+										<artifactId>maven-dependency-plugin</artifactId>
+										<versionRange>[2.0,)</versionRange>
+										<goals>
+											<goal>unpack</goal>
+										</goals>
+									</pluginExecutionFilter>
+									<action>
+										<execute />
+									</action>
+								</pluginExecution>
+							</pluginExecutions>
+						</lifecycleMappingMetadata>
+					</configuration>
+				</plugin>
+				<plugin>
+					<groupId>org.codehaus.mojo</groupId>
+					<artifactId>exec-maven-plugin</artifactId>
+					<version>1.2.1</version>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-jar-plugin</artifactId>
+					<version>2.4</version>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-dependency-plugin</artifactId>
+					<version>2.7</version>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>2.18.1</version>
+				<configuration>
+					<skipTests>${skipTests}</skipTests>
+				</configuration>
+			</plugin>
+			<!-- maven-dependency-plugin : unpack the xslt folder to include in the jar -->
+			<plugin>
+				<!-- copy the xslt folder -->
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-dependency-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>unpack</id>
+						<phase>generate-resources</phase>
+						<goals>
+							<goal>unpack</goal>
+						</goals>
+						<configuration>
+							<artifactItems>
+								<artifactItem>
+									<groupId>gov.nist.healthcare.mu</groupId>
+									<artifactId>resource-bundle-generator</artifactId>
+									<type>jar</type>
+									<outputDirectory>src/main/resources/Global</outputDirectory>
+									<includes>xslt/*</includes>
+									<includes>schema/*</includes>
+								</artifactItem>
+							</artifactItems>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			<!-- exec plugin used to build artifacts -->
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>exec-maven-plugin</artifactId>
+				<executions>
+					<execution>
+						<goals>
+							<goal>exec</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<executable>java</executable>
+					<arguments>
+						<argument>-Xms512m</argument>
+						<argument>-Xmx512m</argument>
+						<argument>-classpath</argument>
+						<classpath />
+						<argument>gov.nist.healthcare.mu.loi.LOIGenerator</argument>
+					</arguments>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<configuration>
+					<includes>
+						<include>About</include>
+						<include>About/**</include>
+						<include>Contextbased</include>
+						<include>Contextbased/**</include>
+						<include>Contextfree</include>
+						<include>Contextfree/**</include>
+						<include>Documentation</include>
+						<include>Documentation/**</include>
+						<include>Global</include>
+						<include>Global/**</include>
+					</includes>
+					<excludes>
+						<exclude>Contextbased/**/*JurorDocument_pdf.html</exclude>
+						<exclude>Contextbased/**/*JurorData.xml</exclude>
+						<exclude>Contextbased/**/*MessageContent.xml</exclude>
+						<exclude>Contextbased/**/*TestPackage.xml</exclude>
+						<exclude>Contextbased/**/*TestStory.xml</exclude>
+						<exclude>Contextbased/**/*Constraints.json</exclude>
+						<exclude>Contextbased/**/*OldConstraints.xml</exclude>
+						<exclude>Contextbased/**/*TestDataSpecification_pdf.html</exclude>
+						<exclude>Contextbased/ORL</exclude>
+						<exclude>Contextbased/ORL/**</exclude>
+						<!-- exclude Diabetic_Profile-->
+						<exclude>**/9-Diabetic Profile</exclude>
+						<exclude>**/9-Diabetic Profile/**</exclude>
+						
+					</excludes>
+					<!-- 					<excludes> --><!-- 						exclude the java code -->
+					<!-- 						<exclude>gov/**</exclude> --><!-- 						<exclude>gov</exclude> --><!-- 						exclude log4j configuration file -->
+					<!-- 						<exclude>log4j.properties</exclude> --><!-- 						exclude html files -->
+					<!-- 						<exclude>**/*DataSheet.html</exclude> --><!-- 						<exclude>**/*Message.html</exclude> --><!-- 						<exclude>**/*TestPackage.html</exclude> --><!-- 						<exclude>**/*DataSheet.html</exclude> --><!-- 						exclude TestPackage.xml -->
+					<!-- 						<exclude>**/*TestPackage.xml</exclude> --><!-- 						exclude old spreadsheets -->
+					<!-- 						<exclude>Documentation/Test_Case_Spreadsheet/old</exclude> --><!-- 						<exclude>Documentation/Test_Case_Spreadsheet/old/**</exclude> --><!-- 						exclude profile generation artifacts -->
+					<!-- 						<exclude>ProfileLibraries</exclude> --><!-- 						<exclude>ProfileLibraries/**</exclude> --><!-- 						exclude LOI implementation choice Excel file -->
+					<!-- 						<exclude>Documentation/Users_Guide/LOI_implementation_decisions.xlsx</exclude> --><!-- 						exclude Known issue Excel file -->
+					<!-- 						<exclude>Documentation/ChangeLog/KnownIssues.xlsx</exclude> --><!-- 						EXCLUSION OF TEST CASES -->
+					<!-- 						exclude LOI_8 for the moment -->
+					<!-- 						<exclude>TESTCASES/LOI/**/LOI_8_Diabetic_Profile</exclude> --><!-- 						<exclude>TESTCASES/LOI/**/LOI_8_Diabetic_Profile/**</exclude> --><!-- 						exclude LOI_5.2 (PH) for the moment -->
+					<!-- 						<exclude>TESTCASES/LOI/**/LOI_5_Reflex_Hepatitis/LOI_5.2-**</exclude> --><!-- 						<exclude>TESTCASES/LOI/**/LOI_5_Reflex_Hepatitis/LOI_5.2-**/**</exclude> --><!-- 						exclude LOI_3.1_1.1 (FI) for the moment -->
+					<!-- 						<exclude>TESTCASES/LOI/**/LOI_3_Lipid_Panel/LOI_3.1_1.1-**</exclude> --><!-- 						<exclude>TESTCASES/LOI/**/LOI_3_Lipid_Panel/LOI_3.1_1.1-**/**</exclude> --><!-- 					</excludes> --></configuration>
+			</plugin>
+			<!--			<plugin><groupId>org.apache.maven.plugins</groupId><artifactId>maven-release-plugin</artifactId><version>2.5.1</version><configuration><preparationGoals>assembly:single</preparationGoals></configuration></plugin>--></plugins>
+	</build>
+	<dependencies>
+		<!-- used for resource-bundle generation -->
+		<dependency>
+			<groupId>gov.nist.healthcare.mu</groupId>
+			<artifactId>resource-bundle-generator</artifactId>
+			<version>0.0.3-SNAPSHOT</version>
+			<optional>true</optional>
+		</dependency>
+		<dependency>
+			<groupId>gov.nist</groupId>
+			<artifactId>hl7-v2-validation</artifactId>
+			<version>1.1.5</version>
+			<optional>true</optional>
+		</dependency>
+		<!-- junit -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.12</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>gov.nist.healthcare.mu.loi-r1</groupId>
+			<artifactId>loi-message-validation</artifactId>
+			<version>0.1.0-SNAPSHOT</version>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<skipTests>true</skipTests>
+		<maven.build.timestamp.format>yyyyMMddHHmm</maven.build.timestamp.format>
+    	<ts>${maven.build.timestamp}</ts>
+	</properties>
+</project>
