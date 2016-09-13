@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseMetaData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="LOI_7.0_1.1-GU_PRU" date="09/07/2016" name="GHP initial order - PRU">
+		<Description>Ms Hettie Nguyen is a 17 year old asian female patient accompanied by her mother who presents to her pediatrician, Dr Ellen Yu for weakness, wt loss, and fatigue.    Dr Yu orders a Complete Metabolic Profile (CMP), a Comprehencive Blood Count ( CBC) and a TSH test from Century Hospital's clinical laboratory as part of her basic work up for her patient.  The laboratory tests are ordered through Dr Yu's EHR and the patient is instructed to visit the laboratory's patient service center the next day after fasting overnight.
+</Description>
+		<PreCondition>No Pre Condition</PreCondition>
+		<PostCondition>No Post Condition</PostCondition>
+		<TestObjectives>Demonstrate cability support the PRU Profiile to create unique identifiers in OBR-2 and ORC-2 (Placer Order Number) that do not require additional information such as OBR-4 (Universal Service Identifier) to identify the order.
+Demonstrate the capability to support an individual as Guardian/Associated Party in the Next Of Kin Segment (NK1).
+Demonstrate the capability to support Timing_Qty Group and Timing/Quantity Segment (TQ1).
+Demonstrate the capability to correctly populate TQ1 for future order.
+Maximally populated PID Segment - Demonstrate the capability of the EHR to support all supported data elements including repeating elements in the PID segment  (PID-29 and PID-30 are exceptions.  There are currently no test stories that support these elements).
+Maximally populated NK1 Segment - Demonstrate the capability of the EHR to support all supported data elements including repeating elements in the NK1 segment  (NK1-11 and NK1-13 are exceptions, NK1-13 is maximally populated in Test case LOI_5, NK1-11 is not tested) - tested to upper limit of cardinality.
+Maximally populated TQ1 Segment - Demonstrate the capability of the EHR to support all supported data elements including repeating elements in the TQ1 segment.
+</TestObjectives>
+	</TestCaseMetaData>

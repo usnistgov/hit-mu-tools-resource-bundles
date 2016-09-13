@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseMetaData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="LOI-EHR Test Plan" date="09/07/2016" name="EHR Test Plan">
+		<Description>
+		The EHR system creates and delivers an electronic lab order message to the LIS.. 
+		</Description>
+		<PreCondition>
+	Patient information is pre-loaded in the EHR-S.  NIST provided test order codes - LOINC, local or both - will be used in the order messages.
+		</PreCondition>
+		<PostCondition>
+		Where applicable in the test cases below, the test message information received by the EHR-S has been incorporated with the patient's record.
+		</PostCondition>
+		<TestObjectives>
+Demonstrate the capability of generating the specified LOI message or, where appropriate, importing and incorporating a LOI message.	
+		
+		</TestObjectives>
+		<Notes>
+	The test data for MSH.21 demonstrates the use of profile components; the system-under-test may alternatively use the post or pre-coordinated profile identifier(s).
+		</Notes>
+		<Comments>
+This is the EHR test plan. Where applicable, it involves display and incorporation verification at different levels (see juror document for details).
+		</Comments>
+	</TestCaseMetaData>

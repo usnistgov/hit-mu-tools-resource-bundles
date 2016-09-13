@@ -1,0 +1,711 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ConformanceContext UUID="LOI_3.0_1.1-NG">
+    <MetaData Name="Conformance context for LOI_3.0_1.1-NG" OrgName="NIST" Version="2016-09-12" Date="2016-09-12"/>
+    <Predicates>
+        <Datatype/>
+        <Segment/>
+        <Group/>
+    </Predicates>
+    <Constraints>
+        <Message>
+            <ByID ID="OML_O21:LOI_NG">
+                <Constraint ID="LOI_3.0_1.1-NG::1">
+                    <Description>Location 'MSH[1].3[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="1[1].3[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LOI_3.0_1.1-NG::2">
+                    <Description>Location 'MSH[1].5[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="1[1].5[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LOI_3.0_1.1-NG::3">
+                    <Description>Location 'MSH[1].6[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="1[1].6[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LOI_3.0_1.1-NG::4">
+                    <Description>Location 'MSH[1].7[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="1[1].7[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LOI_3.0_1.1-NG::5">
+                    <Description>Location 'MSH[1].10[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="1[1].10[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LOI_3.0_1.1-NG::6">
+                    <Description>Location 'MSH[1].11[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="1[1].11[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LOI_3.0_1.1-NG::7">
+                    <Description>Location 'MSH[1].15[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="1[1].15[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LOI_3.0_1.1-NG::8">
+                    <Description>Location 'MSH[1].16[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="1[1].16[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LOI_3.0_1.1-NG::9">
+                    <Description>Location 'PATIENT[1].PID[1].3[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].1[1].3[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LOI_3.0_1.1-NG::10">
+                    <Description>Location 'PATIENT[1].PID[1].3[1].4[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].1[1].3[1].4[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LOI_3.0_1.1-NG::11">
+                    <Description>Location 'PATIENT[1].PID[1].3[1].5[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].1[1].3[1].5[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LOI_3.0_1.1-NG::12">
+                    <Description>Location 'PATIENT[1].PID[1].5[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].1[1].5[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LOI_3.0_1.1-NG::13">
+                    <Description>Location 'PATIENT[1].PID[1].5[1].1[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].1[1].5[1].1[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LOI_3.0_1.1-NG::14">
+                    <Description>Location 'PATIENT[1].PID[1].5[1].2[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].1[1].5[1].2[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LOI_3.0_1.1-NG::15">
+                    <Description>Location 'PATIENT[1].PID[1].5[1].3[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].1[1].5[1].3[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LOI_3.0_1.1-NG::16">
+                    <Description>Location 'PATIENT[1].PID[1].5[1].4[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].1[1].5[1].4[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LOI_3.0_1.1-NG::17">
+                    <Description>Location 'PATIENT[1].PID[1].5[1].7[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].1[1].5[1].7[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LOI_3.0_1.1-NG::18">
+                    <Description>Location 'PATIENT[1].PID[1].7[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].1[1].7[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LOI_3.0_1.1-NG::19">
+                    <Description>Location 'PATIENT[1].PID[1].8[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].1[1].8[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LOI_3.0_1.1-NG::20">
+                    <Description>Location 'PATIENT[1].PID[1].10[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].1[1].10[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LOI_3.0_1.1-NG::21">
+                    <Description>Location 'PATIENT[1].PID[1].10[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].1[1].10[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LOI_3.0_1.1-NG::22">
+                    <Description>Location 'PATIENT[1].PID[1].10[1].2[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].1[1].10[1].2[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LOI_3.0_1.1-NG::23">
+                    <Description>Location 'PATIENT[1].PID[1].10[1].3[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].1[1].10[1].3[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LOI_3.0_1.1-NG::24">
+                    <Description>Location 'PATIENT[1].PID[1].11[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].1[1].11[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LOI_3.0_1.1-NG::25">
+                    <Description>Location 'PATIENT[1].PID[1].11[1].1[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].1[1].11[1].1[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LOI_3.0_1.1-NG::26">
+                    <Description>Location 'PATIENT[1].PID[1].11[1].2[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].1[1].11[1].2[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LOI_3.0_1.1-NG::27">
+                    <Description>Location 'PATIENT[1].PID[1].11[1].3[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].1[1].11[1].3[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LOI_3.0_1.1-NG::28">
+                    <Description>Location 'PATIENT[1].PID[1].11[1].4[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].1[1].11[1].4[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LOI_3.0_1.1-NG::29">
+                    <Description>Location 'PATIENT[1].PID[1].11[1].5[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].1[1].11[1].5[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LOI_3.0_1.1-NG::30">
+                    <Description>Location 'PATIENT[1].PID[1].11[1].7[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].1[1].11[1].7[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LOI_3.0_1.1-NG::31">
+                    <Description>Location 'ORDER[1].ORC[1].1[1]' is expected to be present and valued 'NW'</Description>
+                    <Assertion>
+                        <AND>
+                            <Presence Path="5[1].1[1].1[1]"/>
+                            <PlainText Path="5[1].1[1].1[1]" Text="NW" IgnoreCase="false"/>
+                        </AND>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LOI_3.0_1.1-NG::32">
+                    <Description>Location 'ORDER[1].ORC[1].2[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="5[1].1[1].2[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LOI_3.0_1.1-NG::33">
+                    <Description>Location 'ORDER[1].ORC[1].4[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="5[1].1[1].4[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LOI_3.0_1.1-NG::34">
+                    <Description>Location 'ORDER[1].ORC[1].4[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="5[1].1[1].4[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LOI_3.0_1.1-NG::35">
+                    <Description>Location 'ORDER[1].ORC[1].9[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="5[1].1[1].9[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LOI_3.0_1.1-NG::36">
+                    <Description>Location 'ORDER[1].ORC[1].12[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="5[1].1[1].12[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LOI_3.0_1.1-NG::37">
+                    <Description>Location 'ORDER[1].ORC[1].12[1].2[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="5[1].1[1].12[1].2[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LOI_3.0_1.1-NG::38">
+                    <Description>Location 'ORDER[1].ORC[1].12[1].3[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="5[1].1[1].12[1].3[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LOI_3.0_1.1-NG::39">
+                    <Description>Location 'ORDER[1].ORC[1].12[1].10[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="5[1].1[1].12[1].10[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LOI_3.0_1.1-NG::40">
+                    <Description>Location 'ORDER[1].ORC[1].12[1].13[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="5[1].1[1].12[1].13[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LOI_3.0_1.1-NG::41">
+                    <Description>Location 'ORDER[1].ORC[1].20[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="5[1].1[1].20[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LOI_3.0_1.1-NG::42">
+                    <Description>Location 'ORDER[1].ORC[1].20[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="5[1].1[1].20[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LOI_3.0_1.1-NG::43">
+                    <Description>Location 'ORDER[1].ORC[1].20[1].2[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="5[1].1[1].20[1].2[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LOI_3.0_1.1-NG::44">
+                    <Description>Location 'ORDER[1].ORC[1].20[1].3[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="5[1].1[1].20[1].3[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LOI_3.0_1.1-NG::45">
+                    <Description>Location 'ORDER[1].OBSERVATION_REQUEST[1].OBR[1].2[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="5[1].3[1].1[1].2[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LOI_3.0_1.1-NG::46">
+                    <Description>Location 'ORDER[1].OBSERVATION_REQUEST[1].OBR[1].4[1].1[1]' is expected to be present and valued '400.1'</Description>
+                    <Assertion>
+                        <AND>
+                            <Presence Path="5[1].3[1].1[1].4[1].1[1]"/>
+                            <PlainText Path="5[1].3[1].1[1].4[1].1[1]" Text="400.1" IgnoreCase="false"/>
+                        </AND>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LOI_3.0_1.1-NG::47">
+                    <Description>Location 'ORDER[1].OBSERVATION_REQUEST[1].OBR[1].4[1].2[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="5[1].3[1].1[1].4[1].2[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LOI_3.0_1.1-NG::48">
+                    <Description>Location 'ORDER[1].OBSERVATION_REQUEST[1].OBR[1].4[1].3[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="5[1].3[1].1[1].4[1].3[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LOI_3.0_1.1-NG::49">
+                    <Description>Location 'ORDER[1].OBSERVATION_REQUEST[1].OBR[1].4[1].4[1]' is expected to be present and valued '57698-3'</Description>
+                    <Assertion>
+                        <AND>
+                            <Presence Path="5[1].3[1].1[1].4[1].4[1]"/>
+                            <PlainText Path="5[1].3[1].1[1].4[1].4[1]" Text="57698-3" IgnoreCase="false"/>
+                        </AND>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LOI_3.0_1.1-NG::50">
+                    <Description>Location 'ORDER[1].OBSERVATION_REQUEST[1].OBR[1].4[1].5[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="5[1].3[1].1[1].4[1].5[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LOI_3.0_1.1-NG::51">
+                    <Description>Location 'ORDER[1].OBSERVATION_REQUEST[1].OBR[1].4[1].6[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="5[1].3[1].1[1].4[1].6[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LOI_3.0_1.1-NG::52">
+                    <Description>Location 'ORDER[1].OBSERVATION_REQUEST[1].OBR[1].4[1].7[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="5[1].3[1].1[1].4[1].7[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LOI_3.0_1.1-NG::53">
+                    <Description>Location 'ORDER[1].OBSERVATION_REQUEST[1].OBR[1].4[1].9[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="5[1].3[1].1[1].4[1].9[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LOI_3.0_1.1-NG::54">
+                    <Description>Location 'ORDER[1].OBSERVATION_REQUEST[1].OBR[1].7[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="5[1].3[1].1[1].7[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LOI_3.0_1.1-NG::55">
+                    <Description>Location 'ORDER[1].OBSERVATION_REQUEST[1].OBR[1].7[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="5[1].3[1].1[1].7[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LOI_3.0_1.1-NG::56">
+                    <Description>Location 'ORDER[1].OBSERVATION_REQUEST[1].OBR[1].16[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="5[1].3[1].1[1].16[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LOI_3.0_1.1-NG::57">
+                    <Description>Location 'ORDER[1].OBSERVATION_REQUEST[1].OBR[1].16[1].2[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="5[1].3[1].1[1].16[1].2[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LOI_3.0_1.1-NG::58">
+                    <Description>Location 'ORDER[1].OBSERVATION_REQUEST[1].OBR[1].16[1].3[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="5[1].3[1].1[1].16[1].3[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LOI_3.0_1.1-NG::59">
+                    <Description>Location 'ORDER[1].OBSERVATION_REQUEST[1].OBR[1].16[1].10[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="5[1].3[1].1[1].16[1].10[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LOI_3.0_1.1-NG::60">
+                    <Description>Location 'ORDER[1].OBSERVATION_REQUEST[1].OBR[1].16[1].13[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="5[1].3[1].1[1].16[1].13[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LOI_3.0_1.1-NG::61">
+                    <Description>Location 'ORDER[1].OBSERVATION_REQUEST[1].OBR[1].28[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="5[1].3[1].1[1].28[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LOI_3.0_1.1-NG::62">
+                    <Description>Location 'ORDER[1].OBSERVATION_REQUEST[1].OBR[1].28[1].2[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="5[1].3[1].1[1].28[1].2[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LOI_3.0_1.1-NG::63">
+                    <Description>Location 'ORDER[1].OBSERVATION_REQUEST[1].OBR[1].28[1].3[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="5[1].3[1].1[1].28[1].3[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LOI_3.0_1.1-NG::64">
+                    <Description>Location 'ORDER[1].OBSERVATION_REQUEST[1].OBR[1].28[1].10[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="5[1].3[1].1[1].28[1].10[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LOI_3.0_1.1-NG::65">
+                    <Description>Location 'ORDER[1].OBSERVATION_REQUEST[1].OBR[1].28[1].13[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="5[1].3[1].1[1].28[1].13[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LOI_3.0_1.1-NG::66">
+                    <Description>Location 'ORDER[1].OBSERVATION_REQUEST[1].PRT[1].1[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="5[1].3[1].4[1].1[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LOI_3.0_1.1-NG::67">
+                    <Description>Location 'ORDER[1].OBSERVATION_REQUEST[1].PRT[1].4[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="5[1].3[1].4[1].4[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LOI_3.0_1.1-NG::68">
+                    <Description>Location 'ORDER[1].OBSERVATION_REQUEST[1].PRT[1].4[1].2[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="5[1].3[1].4[1].4[1].2[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LOI_3.0_1.1-NG::69">
+                    <Description>Location 'ORDER[1].OBSERVATION_REQUEST[1].PRT[1].4[1].3[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="5[1].3[1].4[1].4[1].3[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LOI_3.0_1.1-NG::70">
+                    <Description>Location 'ORDER[1].OBSERVATION_REQUEST[1].PRT[1].4[1].9[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="5[1].3[1].4[1].4[1].9[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LOI_3.0_1.1-NG::71">
+                    <Description>Location 'ORDER[1].OBSERVATION_REQUEST[1].PRT[1].5[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="5[1].3[1].4[1].5[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LOI_3.0_1.1-NG::72">
+                    <Description>Location 'ORDER[1].OBSERVATION_REQUEST[1].PRT[1].5[1].2[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="5[1].3[1].4[1].5[1].2[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LOI_3.0_1.1-NG::73">
+                    <Description>Location 'ORDER[1].OBSERVATION_REQUEST[1].PRT[1].5[1].3[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="5[1].3[1].4[1].5[1].3[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LOI_3.0_1.1-NG::74">
+                    <Description>Location 'ORDER[1].OBSERVATION_REQUEST[1].PRT[1].5[1].10[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="5[1].3[1].4[1].5[1].10[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LOI_3.0_1.1-NG::75">
+                    <Description>Location 'ORDER[1].OBSERVATION_REQUEST[1].PRT[1].5[1].13[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="5[1].3[1].4[1].5[1].13[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LOI_3.0_1.1-NG::76">
+                    <Description>Location 'ORDER[1].OBSERVATION_REQUEST[1].PRT[1].15[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="5[1].3[1].4[1].15[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LOI_3.0_1.1-NG::77">
+                    <Description>Location 'ORDER[1].OBSERVATION_REQUEST[1].PRT[1].15[1].3[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="5[1].3[1].4[1].15[1].3[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LOI_3.0_1.1-NG::78">
+                    <Description>Location 'ORDER[1].OBSERVATION_REQUEST[1].PRT[1].15[1].6[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="5[1].3[1].4[1].15[1].6[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LOI_3.0_1.1-NG::79">
+                    <Description>Location 'ORDER[1].OBSERVATION_REQUEST[1].PRT[1].15[1].7[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="5[1].3[1].4[1].15[1].7[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LOI_3.0_1.1-NG::80">
+                    <Description>Location 'ORDER[1].OBSERVATION_REQUEST[1].DG1[1].3[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="5[1].3[1].6[1].3[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LOI_3.0_1.1-NG::81">
+                    <Description>Location 'ORDER[1].OBSERVATION_REQUEST[1].DG1[1].3[1].2[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="5[1].3[1].6[1].3[1].2[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LOI_3.0_1.1-NG::82">
+                    <Description>Location 'ORDER[1].OBSERVATION_REQUEST[1].DG1[1].3[1].3[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="5[1].3[1].6[1].3[1].3[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LOI_3.0_1.1-NG::83">
+                    <Description>Location 'ORDER[1].OBSERVATION_REQUEST[1].DG1[1].3[1].9[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="5[1].3[1].6[1].3[1].9[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LOI_3.0_1.1-NG::84">
+                    <Description>Location 'ORDER[1].OBSERVATION_REQUEST[1].DG1[1].6[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="5[1].3[1].6[1].6[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LOI_3.0_1.1-NG::85">
+                    <Description>Location 'ORDER[1].OBSERVATION_REQUEST[1].DG1[1].15[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="5[1].3[1].6[1].15[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LOI_3.0_1.1-NG::86">
+                    <Description>Location 'ORDER[1].OBSERVATION_REQUEST[1].DG1[2].3[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="5[1].3[1].6[2].3[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LOI_3.0_1.1-NG::87">
+                    <Description>Location 'ORDER[1].OBSERVATION_REQUEST[1].DG1[2].3[1].2[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="5[1].3[1].6[2].3[1].2[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LOI_3.0_1.1-NG::88">
+                    <Description>Location 'ORDER[1].OBSERVATION_REQUEST[1].DG1[2].3[1].3[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="5[1].3[1].6[2].3[1].3[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LOI_3.0_1.1-NG::89">
+                    <Description>Location 'ORDER[1].OBSERVATION_REQUEST[1].DG1[2].3[1].9[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="5[1].3[1].6[2].3[1].9[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LOI_3.0_1.1-NG::90">
+                    <Description>Location 'ORDER[1].OBSERVATION_REQUEST[1].DG1[2].6[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="5[1].3[1].6[2].6[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LOI_3.0_1.1-NG::91">
+                    <Description>Location 'ORDER[1].OBSERVATION_REQUEST[1].DG1[2].15[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="5[1].3[1].6[2].15[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LOI_3.0_1.1-NG::92">
+                    <Description>Location 'ORDER[1].OBSERVATION_REQUEST[1].OBSERVATION[1].OBX[1].2[1]' is expected to be present and valued 'CWE'</Description>
+                    <Assertion>
+                        <AND>
+                            <Presence Path="5[1].3[1].7[1].1[1].2[1]"/>
+                            <PlainText Path="5[1].3[1].7[1].1[1].2[1]" Text="CWE" IgnoreCase="false"/>
+                        </AND>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LOI_3.0_1.1-NG::93">
+                    <Description>Location 'ORDER[1].OBSERVATION_REQUEST[1].OBSERVATION[1].OBX[1].3[1].1[1]' is expected to be present and valued '49541-6'</Description>
+                    <Assertion>
+                        <AND>
+                            <Presence Path="5[1].3[1].7[1].1[1].3[1].1[1]"/>
+                            <PlainText Path="5[1].3[1].7[1].1[1].3[1].1[1]" Text="49541-6" IgnoreCase="false"/>
+                        </AND>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LOI_3.0_1.1-NG::94">
+                    <Description>Location 'ORDER[1].OBSERVATION_REQUEST[1].OBSERVATION[1].OBX[1].3[1].2[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="5[1].3[1].7[1].1[1].3[1].2[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LOI_3.0_1.1-NG::95">
+                    <Description>Location 'ORDER[1].OBSERVATION_REQUEST[1].OBSERVATION[1].OBX[1].3[1].3[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="5[1].3[1].7[1].1[1].3[1].3[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LOI_3.0_1.1-NG::96">
+                    <Description>Location 'ORDER[1].OBSERVATION_REQUEST[1].OBSERVATION[1].OBX[1].3[1].4[1]' is expected to be present and valued '1902'</Description>
+                    <Assertion>
+                        <AND>
+                            <Presence Path="5[1].3[1].7[1].1[1].3[1].4[1]"/>
+                            <PlainText Path="5[1].3[1].7[1].1[1].3[1].4[1]" Text="1902" IgnoreCase="false"/>
+                        </AND>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LOI_3.0_1.1-NG::97">
+                    <Description>Location 'ORDER[1].OBSERVATION_REQUEST[1].OBSERVATION[1].OBX[1].3[1].5[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="5[1].3[1].7[1].1[1].3[1].5[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LOI_3.0_1.1-NG::98">
+                    <Description>Location 'ORDER[1].OBSERVATION_REQUEST[1].OBSERVATION[1].OBX[1].3[1].6[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="5[1].3[1].7[1].1[1].3[1].6[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LOI_3.0_1.1-NG::99">
+                    <Description>Location 'ORDER[1].OBSERVATION_REQUEST[1].OBSERVATION[1].OBX[1].5[1].1[1]' is expected to be present and valued 'Y'</Description>
+                    <Assertion>
+                        <AND>
+                            <Presence Path="5[1].3[1].7[1].1[1].5[1].1[1]"/>
+                            <PlainText Path="5[1].3[1].7[1].1[1].5[1].1[1]" Text="Y" IgnoreCase="false"/>
+                        </AND>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LOI_3.0_1.1-NG::100">
+                    <Description>Location 'ORDER[1].OBSERVATION_REQUEST[1].OBSERVATION[1].OBX[1].5[1].2[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="5[1].3[1].7[1].1[1].5[1].2[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LOI_3.0_1.1-NG::101">
+                    <Description>Location 'ORDER[1].OBSERVATION_REQUEST[1].OBSERVATION[1].OBX[1].5[1].3[1]' is expected to be present and valued 'HL70136'</Description>
+                    <Assertion>
+                        <AND>
+                            <Presence Path="5[1].3[1].7[1].1[1].5[1].3[1]"/>
+                            <PlainText Path="5[1].3[1].7[1].1[1].5[1].3[1]" Text="HL70136" IgnoreCase="false"/>
+                        </AND>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LOI_3.0_1.1-NG::102">
+                    <Description>Location 'ORDER[1].OBSERVATION_REQUEST[1].OBSERVATION[1].OBX[1].11[1]' is expected to be present and valued 'O'</Description>
+                    <Assertion>
+                        <AND>
+                            <Presence Path="5[1].3[1].7[1].1[1].11[1]"/>
+                            <PlainText Path="5[1].3[1].7[1].1[1].11[1]" Text="O" IgnoreCase="false"/>
+                        </AND>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LOI_3.0_1.1-NG::103">
+                    <Description>Location 'ORDER[1].OBSERVATION_REQUEST[1].OBSERVATION[1].OBX[1].14[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="5[1].3[1].7[1].1[1].14[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LOI_3.0_1.1-NG::104">
+                    <Description>Location 'ORDER[1].OBSERVATION_REQUEST[1].OBSERVATION[1].OBX[1].29[1]' is expected to be present and valued 'SCI'</Description>
+                    <Assertion>
+                        <AND>
+                            <Presence Path="5[1].3[1].7[1].1[1].29[1]"/>
+                            <PlainText Path="5[1].3[1].7[1].1[1].29[1]" Text="SCI" IgnoreCase="false"/>
+                        </AND>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LOI_3.0_1.1-NG::105">
+                    <Description>Location 'ORDER[1].OBSERVATION_REQUEST[1].SPECIMEN[1].SPM[1].2[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="5[1].3[1].8[1].1[1].2[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LOI_3.0_1.1-NG::106">
+                    <Description>Location 'ORDER[1].OBSERVATION_REQUEST[1].SPECIMEN[1].SPM[1].2[1].1[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="5[1].3[1].8[1].1[1].2[1].1[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LOI_3.0_1.1-NG::107">
+                    <Description>Location 'ORDER[1].OBSERVATION_REQUEST[1].SPECIMEN[1].SPM[1].4[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="5[1].3[1].8[1].1[1].4[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LOI_3.0_1.1-NG::108">
+                    <Description>Location 'ORDER[1].OBSERVATION_REQUEST[1].SPECIMEN[1].SPM[1].4[1].2[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="5[1].3[1].8[1].1[1].4[1].2[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LOI_3.0_1.1-NG::109">
+                    <Description>Location 'ORDER[1].OBSERVATION_REQUEST[1].SPECIMEN[1].SPM[1].4[1].3[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="5[1].3[1].8[1].1[1].4[1].3[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LOI_3.0_1.1-NG::110">
+                    <Description>Location 'ORDER[1].OBSERVATION_REQUEST[1].SPECIMEN[1].SPM[1].4[1].9[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="5[1].3[1].8[1].1[1].4[1].9[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LOI_3.0_1.1-NG::111">
+                    <Description>Location 'ORDER[1].OBSERVATION_REQUEST[1].SPECIMEN[1].SPM[1].17[1].1[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="5[1].3[1].8[1].1[1].17[1].1[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+            </ByID>
+        </Message>
+    </Constraints>
+</ConformanceContext>

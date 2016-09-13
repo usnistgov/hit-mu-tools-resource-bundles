@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseMetaData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="ACK_0.0_2.1-GU" date="09/07/2016" name="ORL Commit Accept">
+		<Description>The EHR-S transmits an accept acknowledgement message to Century Hospital's LIS which indicates the Application Acknowledgement message has been successfully received..</Description>
+		<PreCondition>The ORL message has been received by the EHR-S</PreCondition>
+		<PostCondition>No Post Condition.</PostCondition>
+		<TestObjectives>
+		
+Minimally populated message.
+Demonstrate capability to support creating a positive accept acknowledgment Message in response to successful receipt of the ORL message:
+Minimally populated MSH Segment - Demonstrate the capability to support the minimally required data elements in the MSH segment.
+Minimally populated MSA Segment - Demonstrate the capability to support the minimally required data elements in the MSA segment.
+		
+		</TestObjectives>
+		<Notes>No Notes.</Notes>
+		<Comments>This is the initial "smoke testing" to reveal simple failures of the acknowledgment message severe enough to preclude further testing.</Comments>
+	</TestCaseMetaData>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseMetaData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="PT and INR" date="09/07/2016" name="PT and INR">
+		<Description>
+	The EHR-S creates and delivers a simple electronic lab order message to the LIS. The LIS receives the messages and creates and sends a system level and application level acknowledgement messages back to the EHR-S. The EHR-S receives the acknowledgement messages and sends a system level acknowledgement message back to the LIS in response to the application level acknowledgement message.
+		</Description>
+		<PreCondition>
+	Patient information is pre-loaded in the EHR-S.
+		</PreCondition>
+
+		<TestObjectives>
+Demonstrate capability to support minimally populated messages (single occurrences of all required ("R") elements).
+		</TestObjectives>
+
+		<Comments>
+		The initial test plan is a "smoke test" to reveal simple failures severe enough to preclude further testing.
+		</Comments>
+	</TestCaseMetaData>

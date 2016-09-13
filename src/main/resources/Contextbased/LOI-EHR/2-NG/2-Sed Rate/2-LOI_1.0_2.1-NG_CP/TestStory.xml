@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseMetaData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="LOI_1.0_2.1-GU_CP" date="09/07/2016" name="Sed_Cancel_OP">
+		<Description>
+		Mr. William A. Jones is a 51 year old white male who presented with pain, swelling, and redness in several joints including his elbows, wrists, knees, and hips on March 31, 2011 at 2:05 PM PST. In order to screen for rheumatoid diseases, Dr. Nicholas Radon ordered an erythrocyte sedimentation rate (ESR or Sed Rate) blood test using the GoodHealth Clinic's EHR system, specifying that the laboratory's patient service center was to draw the blood specimen from the patient who was scheduled to arrive at 3:00 PM PST. Dr Radon also requests that the results be CC'd to Dr Pafford M. Hamlin Sr, a specialist to which he is referring Mr Jones as well as Dr. Daniel Davison who is Mr Jones' regular doctor.
+
+After further consultation with the patient,  Dr Radon decides to cancel this test and continue to monitor the patient for further signs and symptoms.   The cancellation request is ordered through Dr Radon's EHR and the patient is instructed that there is no need to have a blood sample taken at this time.  Upon receiving a Laboratory Order Cancellation Request,  the laboratory staff determine they are able to cancel the order and a  Confirmation for Order Cancel Notification Message is sent by the Laboratory's Information System  </Description>
+		<PreCondition>
+
+		
+'LOI_1.0_1.1-GU' (Sed_Rate_Initial) has been ordered.
+</PreCondition>
+		<PostCondition>No Post Condition.</PostCondition>
+		<TestObjectives>Demonstrate the capability to create a Cancel order OML message when the order is cancelled by the Ordering Provider
+</TestObjectives>
+		<Notes>No Notes</Notes>
+		<Comments>
+This test case is evaluating the proper use of the OML^O21^OML_O21: Laboratory Order Message - Cancel Order</Comments>
+	</TestCaseMetaData>
