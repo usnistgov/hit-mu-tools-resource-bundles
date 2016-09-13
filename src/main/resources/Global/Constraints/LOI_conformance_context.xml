@@ -1,0 +1,4115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ConformanceContext xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" UUID="LOI_default" xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/Jungyubw/NIST_healthcare_hl7_v2_profile_schema/master/Schema/NIST%20Validation%20Schema/ConformanceContext.xsd">
+	<MetaData Name="LOI conformance context" OrgName="NIST" Version="1.0" Date="07262016"/>
+	<Predicates>
+		<Datatype>
+			<!-- <ByID ID="CWE_GEN">
+				<Predicate Target="1[1]" TrueUsage="R" FalseUsage="O">
+					<Description>If CWE.2 is not valued.</Description>
+					<Condition>
+						<NOT>
+							<Presence Path="2[1]"/>
+						</NOT>
+					</Condition>
+				</Predicate>
+				<Predicate Target="2[1]" TrueUsage="R" FalseUsage="RE">
+					<Description>If CWE.1 is not valued.</Description>
+					<Condition>
+						<NOT>
+							<Presence Path="1[1]"/>
+						</NOT>
+					</Condition>
+				</Predicate>
+				<Predicate Target="3[1]" TrueUsage="R" FalseUsage="X">
+					<Description>If CWE.1 is valued.</Description>
+					<Condition>
+						<Presence Path="1[1]"/>
+					</Condition>
+				</Predicate>
+			</ByID> -->
+			<ByID ID="CWE_CR">
+				<!-- CWE_CR.6 -->
+				<Predicate Target="6[1]" TrueUsage="R" FalseUsage="X" ID="[CWE_CR]6[1]">
+					<Description>If CWE_CR.4 (Alternate Identifier) is valued.</Description>
+					<Condition>
+						<Presence Path="4[1]"/>
+					</Condition>
+				</Predicate>
+				<!-- CWE_CR.7 -->
+				<Predicate Target="7[1]" TrueUsage="RE" FalseUsage="O" ID="[CWE_CR]7[1]">
+					<Description>If CWE_CR.3 (Name of Coding System) is not an HL7 defined table or user defined.</Description>
+					<Condition>
+						<FORALL>
+							<NOT>
+								<PlainText Path="3[1]" Text="L" IgnoreCase="false"/>
+							</NOT>
+							<NOT>
+								<Format Path="3[1]" Regex="99[A-Za-z0-9]{3}"/>
+							</NOT>
+							<NOT>
+								<Format Path="3[1]" Regex="HL7[0-9]{4}"/>
+							</NOT>
+						</FORALL>
+					</Condition>
+				</Predicate>
+			</ByID>
+			<ByID ID="CWE_CR1">
+				<!-- CWE_CR1.6 -->
+				<Predicate Target="6[1]" TrueUsage="R" FalseUsage="X" ID="[CWE_CR1]6[1]">
+					<Description>If CWE_CR1.4 (Alternate Identifier) is valued.</Description>
+					<Condition>
+						<Presence Path="4[1]"/>
+					</Condition>
+				</Predicate>
+				<!-- CWE_CR1.7 -->
+				<Predicate Target="7[1]" TrueUsage="RE" FalseUsage="O" ID="[CWE_CR1]7[1]">
+					<!-- If CWE_CR1.3 is NOT L, 99zzz or HL7nnnn, then must be RE. -->
+					<Description>If CWE_CR1.3 (Name of Coding System) is not an HL7 defined table or user defined.</Description>
+					<Condition>
+						<FORALL>
+							<NOT>
+								<PlainText Path="3[1]" Text="L" IgnoreCase="false"/>
+							</NOT>
+							<NOT>
+								<Format Path="3[1]" Regex="99[A-Za-z0-9]{3}"/>
+							</NOT>
+							<NOT>
+								<Format Path="3[1]" Regex="HL7[0-9]{4}"/>
+							</NOT>
+						</FORALL>
+					</Condition>
+				</Predicate>
+			</ByID>
+			<ByID ID="CWE_CRE">
+				<!-- CWE_CRE.2 -->
+				<Predicate Target="2[1]" TrueUsage="RE" FalseUsage="X" ID="[CWE_CRE]2[1]">
+					<Description>If CWE_CRE.1 (Identifier) is valued.</Description>
+					<Condition>
+						<Presence Path="1[1]"/>
+					</Condition>
+				</Predicate>
+				<!-- CWE_CRE.3 -->
+				<Predicate Target="3[1]" TrueUsage="R" FalseUsage="X" ID="[CWE_CRE]3[1]">
+					<Description>If CWE_CRE.1 (Identifier) is valued.</Description>
+					<Condition>
+						<Presence Path="1[1]"/>
+					</Condition>
+				</Predicate>
+				<!-- CWE_CRE.4 -->
+				<Predicate Target="4[1]" TrueUsage="RE" FalseUsage="X" ID="[CWE_CRE]4[1]">
+					<Description>If CWE_CRE.1 (Identifier) is valued.</Description>
+					<Condition>
+						<Presence Path="1[1]"/>
+					</Condition>
+				</Predicate>
+				<!-- CWE_CRE.5 -->
+				<Predicate Target="5[1]" TrueUsage="RE" FalseUsage="X" ID="[CWE_CRE]5[1]">
+					<Description>If CWE_CRE.4 (Alternate Identifier) is valued.</Description>
+					<Condition>
+						<Presence Path="4[1]"/>
+					</Condition>
+				</Predicate>
+				<!-- CWE_CRE.6 -->
+				<Predicate Target="6[1]" TrueUsage="R" FalseUsage="X" ID="[CWE_CRE]6[1]">
+					<Description>If CWE_CRE.4 (Alternate Identifier) is valued.</Description>
+					<Condition>
+						<Presence Path="4[1]"/>
+					</Condition>
+				</Predicate>
+				<!-- CWE_CRE.7 -->
+				<Predicate Target="7[1]" TrueUsage="RE" FalseUsage="O" ID="[CWE_CRE]7[1]">
+					<Description>If CWE_CRE.3 (Name of Coding System) is not an HL7 defined table or user defined</Description>
+					<Condition>
+						<FORALL>
+							<NOT>
+								<PlainText Path="3[1]" Text="L" IgnoreCase="false"/>
+							</NOT>
+							<NOT>
+								<Format Path="3[1]" Regex="99[A-Za-z0-9]{3}"/>
+							</NOT>
+							<NOT>
+								<Format Path="3[1]" Regex="HL7[0-9]{4}"/>
+							</NOT>
+						</FORALL>
+					</Condition>
+				</Predicate>
+				<!-- CWE_CRE.9 -->
+				<Predicate Target="9[1]" TrueUsage="R" FalseUsage="RE" ID="[CWE_CRE]9[1]">
+					<Description>If CWE_CRE.1 (Identifier) and CWE.4_CRE (alternate identifier) are not valued.</Description>
+					<Condition>
+						<AND>
+							<NOT>
+								<Presence Path="1[1]"/>
+							</NOT>
+							<NOT>
+								<Presence Path="4[1]"/>
+							</NOT>
+						</AND>
+					</Condition>
+				</Predicate>
+			</ByID>
+			<ByID ID="CWE_CRE1">
+				<!-- CWE_CRE1.2 -->
+				<Predicate Target="2[1]" TrueUsage="RE" FalseUsage="X" ID="[CWE_CRE1]2[1]">
+					<Description>If CWE_CRE1.1 (Identifier) is valued.</Description>
+					<Condition>
+						<Presence Path="1[1]"/>
+					</Condition>
+				</Predicate>
+				<!-- CWE_CRE1.3 -->
+				<Predicate Target="3[1]" TrueUsage="R" FalseUsage="X" ID="[CWE_CRE1]3[1]">
+					<Description>If CWE_CRE1.1 (Identifier) is valued.</Description>
+					<Condition>
+						<Presence Path="1[1]"/>
+					</Condition>
+				</Predicate>
+				<!-- CWE_CRE1.5 -->
+				<Predicate Target="5[1]" TrueUsage="RE" FalseUsage="X" ID="[CWE_CRE1]5[1]">
+					<Description>If CWE_CRE1.4 (Alternate Identifier) is valued.</Description>
+					<Condition>
+						<Presence Path="4[1]"/>
+					</Condition>
+				</Predicate>
+				<!-- CWE_CRE1.6 -->
+				<Predicate Target="6[1]" TrueUsage="R" FalseUsage="X" ID="[CWE_CRE1]6[1]">
+					<Description>If CWE_CRE1.4 (Alternate Identifier) is valued.</Description>
+					<Condition>
+						<Presence Path="4[1]"/>
+					</Condition>
+				</Predicate>
+				<!-- CWE_CRE1.7 -->
+				<Predicate Target="7[1]" TrueUsage="RE" FalseUsage="O" ID="[CWE_CRE1]7[1]">
+					<Description>If CWE_CRE1.3 (Name of Coding System) is not an HL7 defined table or user defined.</Description>
+					<Condition>
+						<FORALL>
+							<NOT>
+								<PlainText Path="3[1]" Text="L" IgnoreCase="false"/>
+							</NOT>
+							<NOT>
+								<Format Path="3[1]" Regex="99[A-Za-z0-9]{3}"/>
+							</NOT>
+							<NOT>
+								<Format Path="3[1]" Regex="HL7[0-9]{4}"/>
+							</NOT>
+						</FORALL>
+					</Condition>
+				</Predicate>
+				<!--CWE_CRE1.9 -->
+				<Predicate Target="9[1]" TrueUsage="R" FalseUsage="RE" ID="[CWE_CRE1]9[1]">
+					<Description>If CWE_CRE1.1 (Identifier) and CWE.4_CRE (alternate identifier) are not valued.</Description>
+					<Condition>
+						<AND>
+							<NOT>
+								<Presence Path="1[1]"/>
+							</NOT>
+							<NOT>
+								<Presence Path="4[1]"/>
+							</NOT>
+						</AND>
+					</Condition>
+				</Predicate>
+			</ByID>
+			<!-- EI_NG -->
+			<ByID ID="EI_NG">
+				<!-- EI_NG.2 -->
+				<Predicate Target="2[1]" TrueUsage="R" FalseUsage="O" ID="[EI_NG]2[1]">
+					<Description>If EI_NG.3 (Universal ID) is not valued.</Description>
+					<Condition>
+						<NOT>
+							<Presence Path="3[1]"/>
+						</NOT>
+					</Condition>
+				</Predicate>
+				<!-- EI_NG.3 -->
+				<Predicate Target="3[1]" TrueUsage="R" FalseUsage="O" ID="[EI_NG]3[1]">
+					<Description>If EI_NG.2 (Namespace ID) is not valued.</Description>
+					<Condition>
+						<NOT>
+							<Presence Path="2[1]"/>
+						</NOT>
+					</Condition>
+				</Predicate>
+				<!-- EI_NG.4 -->
+				<Predicate Target="4[1]" TrueUsage="R" FalseUsage="X" ID="[EI_NG]4[1]">
+					<Description>If EI_NG.3 (Universal ID) is valued.</Description>
+					<Condition>
+						<Presence Path="3[1]"/>
+					</Condition>
+				</Predicate>
+			</ByID>
+			<!-- EIP_GU -->
+			<ByID ID="EIP_GU">
+				<!-- EIP_GU.2 -->
+				<Predicate Target="2[1]" TrueUsage="R" FalseUsage="RE" ID="[EIP_GU]2[1]">
+					<Description>If EIP_GU.1 is not valued.</Description>
+					<Condition>
+						<NOT>
+							<Presence Path="1[1]"/>
+						</NOT>
+					</Condition>
+				</Predicate>
+			</ByID>
+			<!-- EIP_NG -->
+			<ByID ID="EIP_NG">
+				<!-- EIP_NG.2 -->
+				<Predicate Target="2[1]" TrueUsage="R" FalseUsage="RE" ID="[EIP_NG]2[1]">
+					<Description>If EIP_NG.1 is not valued.</Description>
+					<Condition>
+						<NOT>
+							<Presence Path="1[1]"/>
+						</NOT>
+					</Condition>
+				</Predicate>
+			</ByID>
+			<!-- HD_NG -->
+			<ByID ID="HD_NG">
+				<!-- HD_NG.1 -->
+				<Predicate Target="1[1]" TrueUsage="R" FalseUsage="O" ID="[HD_NG]1[1]">
+					<Description>If HD_NG.2 (Universal ID) is not valued.</Description>
+					<Condition>
+						<NOT>
+							<Presence Path="2[1]"/>
+						</NOT>
+					</Condition>
+				</Predicate>
+				<!-- HD_NG.2 -->
+				<Predicate Target="2[1]" TrueUsage="R" FalseUsage="O" ID="[HD_NG]2[1]">
+					<Description>If HD_NG.1 (Namespace ID) is not valued.</Description>
+					<Condition>
+						<NOT>
+							<Presence Path="1[1]"/>
+						</NOT>
+					</Condition>
+				</Predicate>
+				<!-- HD_NG.3 -->
+				<Predicate Target="3[1]" TrueUsage="R" FalseUsage="X" ID="[HD_NG]3[1]">
+					<Description>If HD_NG.2 (Universal ID) is valued.</Description>
+					<Condition>
+						<Presence Path="2[1]"/>
+					</Condition>
+				</Predicate>
+			</ByID>
+			<!-- SN -->
+			<ByID ID="SN_LOI">
+				<!-- SN_LOI3 -->
+				<Predicate Target="3[1]" TrueUsage="RE" FalseUsage="O" ID="[SN_LOI]3[1]">
+					<Description>If SN.2 (Num1) and SN.4 (Num2) are valued.</Description>
+					<Condition>
+						<AND>
+							<Presence Path="2[1]"/>
+							<Presence Path="4[1]"/>
+						</AND>
+					</Condition>
+				</Predicate>
+			</ByID>
+			<!-- XCN_GU -->
+			<ByID ID="XCN_GU_ORC">
+				<!-- XCN_GU.2 -->
+				<Predicate Target="2[1]" TrueUsage="R" FalseUsage="RE" ID="[XCN_GU_ORC]2[1]">
+					<Description>If XCN_GU.1 (ID Number) is not valued.</Description>
+					<Condition>
+						<NOT>
+							<Presence Path="1[1]"/>
+						</NOT>
+					</Condition>
+				</Predicate>
+				<!-- XCN_GU.8 -->
+				<!-- <Predicate Target="8[1]" TrueUsage="O" FalseUsage="O">
+					<Description>No description provided</Description>
+					<Condition>
+						<Presence Path="8[1]"/>
+					</Condition>
+				</Predicate> -->
+				<!-- XCN_GU.9 -->
+				<Predicate Target="9[1]" TrueUsage="R" FalseUsage="X" ID="[XCN_GU_ORC]9[1]">
+					<Description>If XCN_GU.1 (ID Number) is valued.</Description>
+					<Condition>
+						<Presence Path="1[1]"/>
+					</Condition>
+				</Predicate>
+				<!-- XCN_GU.12 -->
+				<Predicate Target="12[1]" TrueUsage="O" FalseUsage="X" ID="[XCN_GU_ORC]12[1]">
+					<Description>If XCN_GU.11 is valued.</Description>
+					<Condition>
+						<Presence Path="11[1]"/>
+					</Condition>
+				</Predicate>
+				<!-- XCN_GU.13 -->
+				<Predicate Target="13[1]" TrueUsage="R" FalseUsage="X" ID="[XCN_GU_ORC]13[1]">
+					<Description>If XCN_GU.1 (ID Number) is valued.</Description>
+					<Condition>
+						<Presence Path="1[1]"/>
+					</Condition>
+				</Predicate>
+			</ByID>
+			<ByID ID="XCN_GU_OBR_16">
+				<!-- XCN_GU.2 -->
+				<Predicate Target="2[1]" TrueUsage="R" FalseUsage="RE" ID="[XCN_GU_OBR_16]2[1]">
+					<Description>If XCN_GU.1 (ID Number) is not valued.</Description>
+					<Condition>
+						<NOT>
+							<Presence Path="1[1]"/>
+						</NOT>
+					</Condition>
+				</Predicate>
+				<!-- XCN_GU.8 -->
+				<!-- <Predicate Target="8[1]" TrueUsage="O" FalseUsage="O">
+					<Description>No description provided</Description>
+					<Condition>
+						<Presence Path="8[1]"/>
+					</Condition>
+				</Predicate> -->
+				<!-- XCN_GU.9 -->
+				<Predicate Target="9[1]" TrueUsage="R" FalseUsage="X" ID="[XCN_GU_OBR_16]9[1]">
+					<Description>If XCN_GU.1 (ID Number) is valued.</Description>
+					<Condition>
+						<Presence Path="1[1]"/>
+					</Condition>
+				</Predicate>
+				<!-- XCN_GU.12 -->
+				<Predicate Target="12[1]" TrueUsage="O" FalseUsage="X" ID="[XCN_GU_OBR_16]12[1]">
+					<Description>If XCN_GU.11 is valued.</Description>
+					<Condition>
+						<Presence Path="11[1]"/>
+					</Condition>
+				</Predicate>
+				<!-- XCN_GU.13 -->
+				<Predicate Target="13[1]" TrueUsage="R" FalseUsage="X" ID="[XCN_GU_OBR_16]13[1]">
+					<Description>If XCN_GU.1 (ID Number) is valued.</Description>
+					<Condition>
+						<Presence Path="1[1]"/>
+					</Condition>
+				</Predicate>
+			</ByID>
+			<ByID ID="XCN_GU_OBR_28">
+				<!-- XCN_GU.2 -->
+				<Predicate Target="2[1]" TrueUsage="R" FalseUsage="RE" ID="[XCN_GU_OBR_28]2[1]">
+					<Description>If XCN_GU.1 (ID Number) is not valued.</Description>
+					<Condition>
+						<NOT>
+							<Presence Path="1[1]"/>
+						</NOT>
+					</Condition>
+				</Predicate>
+				<!-- XCN_GU.8 -->
+				<!-- <Predicate Target="8[1]" TrueUsage="O" FalseUsage="O">
+					<Description>No description provided</Description>
+					<Condition>
+						<Presence Path="8[1]"/>
+					</Condition>
+				</Predicate> -->
+				<!-- XCN_GU.9 -->
+				<Predicate Target="9[1]" TrueUsage="R" FalseUsage="X" ID="[XCN_GU_OBR_28]9[1]">
+					<Description>If XCN_GU.1 (ID Number) is valued.</Description>
+					<Condition>
+						<Presence Path="1[1]"/>
+					</Condition>
+				</Predicate>
+				<!-- XCN_GU.12 -->
+				<Predicate Target="12[1]" TrueUsage="O" FalseUsage="X" ID="[XCN_GU_OBR_28]12[1]">
+					<Description>If XCN_GU.11 is valued.</Description>
+					<Condition>
+						<Presence Path="11[1]"/>
+					</Condition>
+				</Predicate>
+				<!-- XCN_GU.13 -->
+				<Predicate Target="13[1]" TrueUsage="R" FalseUsage="X" ID="[XCN_GU_OBR_28]13[1]">
+					<Description>If XCN_GU.1 (ID Number) is valued.</Description>
+					<Condition>
+						<Presence Path="1[1]"/>
+					</Condition>
+				</Predicate>
+			</ByID>
+			<ByID ID="XCN_GU_OBX">
+				<!-- XCN_GU.2 -->
+				<Predicate Target="2[1]" TrueUsage="R" FalseUsage="RE" ID="[XCN_GU_OBX]2[1]">
+					<Description>If XCN_GU.1 (ID Number) is not valued.</Description>
+					<Condition>
+						<NOT>
+							<Presence Path="1[1]"/>
+						</NOT>
+					</Condition>
+				</Predicate>
+				<!-- XCN_GU.8 -->
+				<!-- <Predicate Target="8[1]" TrueUsage="O" FalseUsage="O">
+					<Description>No description provided</Description>
+					<Condition>
+						<Presence Path="8[1]"/>
+					</Condition>
+				</Predicate> -->
+				<!-- XCN_GU.9 -->
+				<Predicate Target="9[1]" TrueUsage="R" FalseUsage="X" ID="[XCN_GU_OBX]9[1]">
+					<Description>If XCN_GU.1 (ID Number) is valued.</Description>
+					<Condition>
+						<Presence Path="1[1]"/>
+					</Condition>
+				</Predicate>
+				<!-- XCN_GU.12 -->
+				<Predicate Target="12[1]" TrueUsage="O" FalseUsage="X" ID="[XCN_GU_OBX]12[1]">
+					<Description>If XCN_GU.11 is valued.</Description>
+					<Condition>
+						<Presence Path="11[1]"/>
+					</Condition>
+				</Predicate>
+				<!-- XCN_GU.13 -->
+				<Predicate Target="13[1]" TrueUsage="R" FalseUsage="X" ID="[XCN_GU_OBX]13[1]">
+					<Description>If XCN_GU.1 (ID Number) is valued.</Description>
+					<Condition>
+						<Presence Path="1[1]"/>
+					</Condition>
+				</Predicate>
+			</ByID>
+			<ByID ID="XCN_GU_PRT">
+				<!-- XCN_GU.2 -->
+				<Predicate Target="2[1]" TrueUsage="R" FalseUsage="RE" ID="[XCN_GU_PRT]2[1]">
+					<Description>If XCN_GU.1 (ID Number) is not valued.</Description>
+					<Condition>
+						<NOT>
+							<Presence Path="1[1]"/>
+						</NOT>
+					</Condition>
+				</Predicate>
+				<!-- XCN_GU.8 -->
+				<!-- <Predicate Target="8[1]" TrueUsage="O" FalseUsage="O">
+					<Description>No description provided</Description>
+					<Condition>
+						<Presence Path="8[1]"/>
+					</Condition>
+				</Predicate> -->
+				<!-- XCN_GU.9 -->
+				<Predicate Target="9[1]" TrueUsage="R" FalseUsage="X" ID="[XCN_GU_PRT]9[1]">
+					<Description>If XCN_GU.1 (ID Number) is valued.</Description>
+					<Condition>
+						<Presence Path="1[1]"/>
+					</Condition>
+				</Predicate>
+				<!-- XCN_GU.12 -->
+				<Predicate Target="12[1]" TrueUsage="O" FalseUsage="X" ID="[XCN_GU_PRT]12[1]">
+					<Description>If XCN_GU.11 is valued.</Description>
+					<Condition>
+						<Presence Path="11[1]"/>
+					</Condition>
+				</Predicate>
+				<!-- XCN_GU.13 -->
+				<Predicate Target="13[1]" TrueUsage="R" FalseUsage="X" ID="[XCN_GU_PRT]13[1]">
+					<Description>If XCN_GU.1 (ID Number) is valued.</Description>
+					<Condition>
+						<Presence Path="1[1]"/>
+					</Condition>
+				</Predicate>
+			</ByID>
+			<!-- XCN_NG -->
+			<ByID ID="XCN_NG_ORC">
+				<!-- XCN_NG.8 -->
+				<!-- <Predicate Target="8[1]" TrueUsage="O" FalseUsage="O">
+					<Description>No description provided</Description>
+					<Condition>
+						<Presence Path="8[1]"/>
+					</Condition>
+				</Predicate> -->
+				<!-- XCN_NG.9 -->
+				<Predicate Target="9[1]" TrueUsage="R" FalseUsage="X" ID="[XCN_NG_ORC]9[1]">
+					<Description>If XCN_NG.1 (ID Number) is valued</Description>
+					<Condition>
+						<Presence Path="1[1]"/>
+					</Condition>
+				</Predicate>
+				<!-- XCN_NG.12 -->
+				<Predicate Target="12[1]" TrueUsage="O" FalseUsage="X" ID="[XCN_NG_ORC]12[1]">
+					<Description>If XCN_NG.11 is valued.</Description>
+					<Condition>
+						<Presence Path="11[1]"/>
+					</Condition>
+				</Predicate>
+				<!-- XCN_NG.13 -->
+				<Predicate Target="13[1]" TrueUsage="R" FalseUsage="X" ID="[XCN_NG_ORC]13[1]">
+					<Description>If XCN_NG.1 (ID Number) is valued.</Description>
+					<Condition>
+						<Presence Path="1[1]"/>
+					</Condition>
+				</Predicate>
+			</ByID>
+			<ByID ID="XCN_NG_OBR_16">
+				<!-- XCN_NG.8 -->
+				<!-- <Predicate Target="8[1]" TrueUsage="O" FalseUsage="O">
+					<Description>No description provided</Description>
+					<Condition>
+						<Presence Path="8[1]"/>
+					</Condition>
+				</Predicate> -->
+				<!-- XCN_NG.9 -->
+				<Predicate Target="9[1]" TrueUsage="R" FalseUsage="X" ID="[XCN_NG_OBR_16]9[1]">
+					<Description>If XCN_NG.1 (ID Number) is valued</Description>
+					<Condition>
+						<Presence Path="1[1]"/>
+					</Condition>
+				</Predicate>
+				<!-- XCN_NG.12 -->
+				<Predicate Target="12[1]" TrueUsage="O" FalseUsage="X" ID="[XCN_NG_OBR_16]12[1]">
+					<Description>If XCN_NG.11 is valued.</Description>
+					<Condition>
+						<Presence Path="11[1]"/>
+					</Condition>
+				</Predicate>
+				<!-- XCN_NG.13 -->
+				<Predicate Target="13[1]" TrueUsage="R" FalseUsage="X" ID="[XCN_NG_OBR_16]13[1]">
+					<Description>If XCN_NG.1 (ID Number) is valued.</Description>
+					<Condition>
+						<Presence Path="1[1]"/>
+					</Condition>
+				</Predicate>
+			</ByID>
+			<ByID ID="XCN_NG_OBR_28">
+				<!-- XCN_NG.8 -->
+				<!-- <Predicate Target="8[1]" TrueUsage="O" FalseUsage="O">
+					<Description>No description provided</Description>
+					<Condition>
+						<Presence Path="8[1]"/>
+					</Condition>
+				</Predicate> -->
+				<!-- XCN_NG.9 -->
+				<Predicate Target="9[1]" TrueUsage="R" FalseUsage="X" ID="[XCN_NG_OBR_28]9[1]">
+					<Description>If XCN_NG.1 (ID Number) is valued</Description>
+					<Condition>
+						<Presence Path="1[1]"/>
+					</Condition>
+				</Predicate>
+				<!-- XCN_NG.12 -->
+				<Predicate Target="12[1]" TrueUsage="O" FalseUsage="X" ID="[XCN_NG_OBR_28]12[1]">
+					<Description>If XCN_NG.11 is valued.</Description>
+					<Condition>
+						<Presence Path="11[1]"/>
+					</Condition>
+				</Predicate>
+				<!-- XCN_NG.13 -->
+				<Predicate Target="13[1]" TrueUsage="R" FalseUsage="X" ID="[XCN_NG_OBR_28]13[1]">
+					<Description>If XCN_NG.1 (ID Number) is valued.</Description>
+					<Condition>
+						<Presence Path="1[1]"/>
+					</Condition>
+				</Predicate>
+			</ByID>
+			<ByID ID="XCN_NG_OBX">
+				<!-- XCN_NG.8 -->
+				<!-- <Predicate Target="8[1]" TrueUsage="O" FalseUsage="O">
+					<Description>No description provided</Description>
+					<Condition>
+						<Presence Path="8[1]"/>
+					</Condition>
+				</Predicate> -->
+				<!-- XCN_NG.9 -->
+				<Predicate Target="9[1]" TrueUsage="R" FalseUsage="X" ID="[XCN_NG_OBX]9[1]">
+					<Description>If XCN_NG.1 (ID Number) is valued</Description>
+					<Condition>
+						<Presence Path="1[1]"/>
+					</Condition>
+				</Predicate>
+				<!-- XCN_NG.12 -->
+				<Predicate Target="12[1]" TrueUsage="O" FalseUsage="X" ID="[XCN_NG_OBX]12[1]">
+					<Description>If XCN_NG.11 is valued.</Description>
+					<Condition>
+						<Presence Path="11[1]"/>
+					</Condition>
+				</Predicate>
+				<!-- XCN_NG.13 -->
+				<Predicate Target="13[1]" TrueUsage="R" FalseUsage="X" ID="[XCN_NG_OBX]13[1]">
+					<Description>If XCN_NG.1 (ID Number) is valued.</Description>
+					<Condition>
+						<Presence Path="1[1]"/>
+					</Condition>
+				</Predicate>
+			</ByID>
+			<ByID ID="XCN_NG_PRT">
+				<!-- XCN_NG.8 -->
+				<!-- <Predicate Target="8[1]" TrueUsage="O" FalseUsage="O">
+					<Description>No description provided</Description>
+					<Condition>
+						<Presence Path="8[1]"/>
+					</Condition>
+				</Predicate> -->
+				<!-- XCN_NG.9 -->
+				<Predicate Target="9[1]" TrueUsage="R" FalseUsage="X" ID="[XCN_NG_PRT]9[1]">
+					<Description>If XCN_NG.1 (ID Number) is valued</Description>
+					<Condition>
+						<Presence Path="1[1]"/>
+					</Condition>
+				</Predicate>
+				<!-- XCN_NG.12 -->
+				<Predicate Target="12[1]" TrueUsage="O" FalseUsage="X" ID="[XCN_NG_PRT]12[1]">
+					<Description>If XCN_NG.11 is valued.</Description>
+					<Condition>
+						<Presence Path="11[1]"/>
+					</Condition>
+				</Predicate>
+				<!-- XCN_NG.13 -->
+				<Predicate Target="13[1]" TrueUsage="R" FalseUsage="X" ID="[XCN_NG_PRT]13[1]">
+					<Description>If XCN_NG.1 (ID Number) is valued.</Description>
+					<Condition>
+						<Presence Path="1[1]"/>
+					</Condition>
+				</Predicate>
+			</ByID>
+			<!-- XON_GU -->
+			<ByID ID="XON_GU_ORC">
+				<!-- XON_GU.5 -->
+				<Predicate Target="5[1]" TrueUsage="O" FalseUsage="X" ID="[XON_GU_ORC]5[1]">
+					<Description>If XON_GU.4 (Check Digit) is valued.</Description>
+					<Condition>
+						<Presence Path="4[1]"/>
+					</Condition>
+				</Predicate>
+				<!-- XON_GU.6 -->
+				<Predicate Target="6[1]" TrueUsage="R" FalseUsage="X" ID="[XON_GU_ORC]6[1]">
+					<Description>If XON_GU.10 (Organization Identifier) is valued.</Description>
+					<Condition>
+						<Presence Path="10[1]"/>
+					</Condition>
+				</Predicate>
+				<!-- XON_GU.7 -->
+				<Predicate Target="7[1]" TrueUsage="R" FalseUsage="X" ID="[XON_GU_ORC]7[1]">
+					<Description>If XON_GU.10 (Organization Identifier) is valued.</Description>
+					<Condition>
+						<Presence Path="10[1]"/>
+					</Condition>
+				</Predicate>
+				<!-- XON_GU.10 -->
+				<Predicate Target="10[1]" TrueUsage="R" FalseUsage="RE" ID="[XON_GU_ORC]10[1]">
+					<Description>If XON_GU.1 (Organization Name) is not valued.</Description>
+					<Condition>
+						<NOT>
+							<Presence Path="1[1]"/>
+						</NOT>
+					</Condition>
+				</Predicate>
+			</ByID>
+			<ByID ID="XON_GU_OBX">
+				<!-- XON_GU.5 -->
+				<Predicate Target="5[1]" TrueUsage="O" FalseUsage="X" ID="[XON_GU_OBX]5[1]">
+					<Description>If XON_GU.4 (Check Digit) is valued.</Description>
+					<Condition>
+						<Presence Path="4[1]"/>
+					</Condition>
+				</Predicate>
+				<!-- XON_GU.6 -->
+				<Predicate Target="6[1]" TrueUsage="R" FalseUsage="X" ID="[XON_GU_OBX]6[1]">
+					<Description>If XON_GU.10 (Organization Identifier) is valued.</Description>
+					<Condition>
+						<Presence Path="10[1]"/>
+					</Condition>
+				</Predicate>
+				<!-- XON_GU.7 -->
+				<Predicate Target="7[1]" TrueUsage="R" FalseUsage="X" ID="[XON_GU_OBX]7[1]">
+					<Description>If XON_GU.10 (Organization Identifier) is valued.</Description>
+					<Condition>
+						<Presence Path="10[1]"/>
+					</Condition>
+				</Predicate>
+				<!-- XON_GU.10 -->
+				<Predicate Target="10[1]" TrueUsage="R" FalseUsage="RE" ID="[XON_GU_OBX]10[1]">
+					<Description>If XON_GU.1 (Organization Name) is not valued.</Description>
+					<Condition>
+						<NOT>
+							<Presence Path="1[1]"/>
+						</NOT>
+					</Condition>
+				</Predicate>
+			</ByID>
+			<ByID ID="XON_GU_NK1">
+				<!-- XON_GU.5 -->
+				<Predicate Target="5[1]" TrueUsage="O" FalseUsage="X" ID="[XON_GU_NK1]5[1]">
+					<Description>If XON_GU.4 (Check Digit) is valued.</Description>
+					<Condition>
+						<Presence Path="4[1]"/>
+					</Condition>
+				</Predicate>
+				<!-- XON_GU.6 -->
+				<Predicate Target="6[1]" TrueUsage="R" FalseUsage="X" ID="[XON_GU_NK1]6[1]">
+					<Description>If XON_GU.10 (Organization Identifier) is valued.</Description>
+					<Condition>
+						<Presence Path="10[1]"/>
+					</Condition>
+				</Predicate>
+				<!-- XON_GU.7 -->
+				<Predicate Target="7[1]" TrueUsage="R" FalseUsage="X" ID="[XON_GU_NK1]7[1]">
+					<Description>If XON_GU.10 (Organization Identifier) is valued.</Description>
+					<Condition>
+						<Presence Path="10[1]"/>
+					</Condition>
+				</Predicate>
+				<!-- XON_GU.10 -->
+				<Predicate Target="10[1]" TrueUsage="R" FalseUsage="RE" ID="[XON_GU_NK1]10[1]">
+					<Description>If XON_GU.1 (Organization Name) is not valued.</Description>
+					<Condition>
+						<NOT>
+							<Presence Path="1[1]"/>
+						</NOT>
+					</Condition>
+				</Predicate>
+			</ByID>
+			<ByID ID="XON_GU_IN1">
+				<!-- XON_GU.5 -->
+				<Predicate Target="5[1]" TrueUsage="O" FalseUsage="X" ID="[XON_GU_IN1]5[1]">
+					<Description>If XON_GU.4 (Check Digit) is valued.</Description>
+					<Condition>
+						<Presence Path="4[1]"/>
+					</Condition>
+				</Predicate>
+				<!-- XON_GU.6 -->
+				<Predicate Target="6[1]" TrueUsage="R" FalseUsage="X" ID="[XON_GU_IN1]6[1]">
+					<Description>If XON_GU.10 (Organization Identifier) is valued.</Description>
+					<Condition>
+						<Presence Path="10[1]"/>
+					</Condition>
+				</Predicate>
+				<!-- XON_GU.7 -->
+				<Predicate Target="7[1]" TrueUsage="R" FalseUsage="X" ID="[XON_GU_IN1]7[1]">
+					<Description>If XON_GU.10 (Organization Identifier) is valued.</Description>
+					<Condition>
+						<Presence Path="10[1]"/>
+					</Condition>
+				</Predicate>
+				<!-- XON_GU.10 -->
+				<Predicate Target="10[1]" TrueUsage="R" FalseUsage="RE" ID="[XON_GU_IN1]10[1]">
+					<Description>If XON_GU.1 (Organization Name) is not valued.</Description>
+					<Condition>
+						<NOT>
+							<Presence Path="1[1]"/>
+						</NOT>
+					</Condition>
+				</Predicate>
+			</ByID>
+			<ByID ID="XON_GU_GT1">
+				<!-- XON_GU.5 -->
+				<Predicate Target="5[1]" TrueUsage="O" FalseUsage="X" ID="[XON_GU_GT1]5[1]">
+					<Description>If XON_GU.4 (Check Digit) is valued.</Description>
+					<Condition>
+						<Presence Path="4[1]"/>
+					</Condition>
+				</Predicate>
+				<!-- XON_GU.6 -->
+				<Predicate Target="6[1]" TrueUsage="R" FalseUsage="X" ID="[XON_GU_GT1]6[1]">
+					<Description>If XON_GU.10 (Organization Identifier) is valued.</Description>
+					<Condition>
+						<Presence Path="10[1]"/>
+					</Condition>
+				</Predicate>
+				<!-- XON_GU.7 -->
+				<Predicate Target="7[1]" TrueUsage="R" FalseUsage="X" ID="[XON_GU_GT1]7[1]">
+					<Description>If XON_GU.10 (Organization Identifier) is valued.</Description>
+					<Condition>
+						<Presence Path="10[1]"/>
+					</Condition>
+				</Predicate>
+				<!-- XON_GU.10 -->
+				<Predicate Target="10[1]" TrueUsage="R" FalseUsage="RE" ID="[XON_GU_GT1]10[1]">
+					<Description>If XON_GU.1 (Organization Name) is not valued.</Description>
+					<Condition>
+						<NOT>
+							<Presence Path="1[1]"/>
+						</NOT>
+					</Condition>
+				</Predicate>
+			</ByID>
+			<!-- XON_NG -->
+			<ByID ID="XON_NG_ORC">
+				<!-- XON_NG.5 -->
+				<Predicate Target="5[1]" TrueUsage="O" FalseUsage="X" ID="[XON_NG_ORC]5[1]">
+					<Description>If XON_NG.4 is valued</Description>
+					<Condition>
+						<Presence Path="4[1]"/>
+					</Condition>
+				</Predicate>
+				<!-- XON_NG.6 -->
+				<Predicate Target="6[1]" TrueUsage="R" FalseUsage="X" ID="[XON_NG_ORC]6[1]">
+					<Description>If XON_NG.10 (Organization Identifier) is valued.</Description>
+					<Condition>
+						<Presence Path="10[1]"/>
+					</Condition>
+				</Predicate>
+				<!--XON_NG.7 -->
+				<Predicate Target="7[1]" TrueUsage="R" FalseUsage="X" ID="[XON_NG_ORC]7[1]">
+					<Description>If XON_NG.10 (Organization Identifier) is valued.</Description>
+					<Condition>
+						<Presence Path="10[1]"/>
+					</Condition>
+				</Predicate>
+				<!-- XON_NG.10 -->
+				<Predicate Target="10[1]" TrueUsage="R" FalseUsage="RE" ID="[XON_NG_ORC]10[1]">
+					<Description>If XON_NG.1 (Organization Name) is not valued.</Description>
+					<Condition>
+						<NOT>
+							<Presence Path="1[1]"/>
+						</NOT>
+					</Condition>
+				</Predicate>
+			</ByID>
+			<ByID ID="XON_NG_OBX">
+				<!-- XON_NG.5 -->
+				<Predicate Target="5[1]" TrueUsage="O" FalseUsage="X" ID="[XON_NG_OBX]5[1]">
+					<Description>If XON_NG.4 is valued</Description>
+					<Condition>
+						<Presence Path="4[1]"/>
+					</Condition>
+				</Predicate>
+				<!-- XON_NG.6 -->
+				<Predicate Target="6[1]" TrueUsage="R" FalseUsage="X" ID="[XON_NG_OBX]6[1]">
+					<Description>If XON_NG.10 (Organization Identifier) is valued.</Description>
+					<Condition>
+						<Presence Path="10[1]"/>
+					</Condition>
+				</Predicate>
+				<!--XON_NG.7 -->
+				<Predicate Target="7[1]" TrueUsage="R" FalseUsage="X" ID="[XON_NG_OBX]7[1]">
+					<Description>If XON_NG.10 (Organization Identifier) is valued.</Description>
+					<Condition>
+						<Presence Path="10[1]"/>
+					</Condition>
+				</Predicate>
+				<!-- XON_NG.10 -->
+				<Predicate Target="10[1]" TrueUsage="R" FalseUsage="RE" ID="[XON_NG_OBX]10[1]">
+					<Description>If XON_NG.1 (Organization Name) is not valued.</Description>
+					<Condition>
+						<NOT>
+							<Presence Path="1[1]"/>
+						</NOT>
+					</Condition>
+				</Predicate>
+			</ByID>
+			<ByID ID="XON_NG_NK1">
+				<!-- XON_NG.5 -->
+				<Predicate Target="5[1]" TrueUsage="O" FalseUsage="X" ID="[XON_NG_NK1]5[1]">
+					<Description>If XON_NG.4 is valued</Description>
+					<Condition>
+						<Presence Path="4[1]"/>
+					</Condition>
+				</Predicate>
+				<!-- XON_NG.6 -->
+				<Predicate Target="6[1]" TrueUsage="R" FalseUsage="X" ID="[XON_NG_NK1]6[1]">
+					<Description>If XON_NG.10 (Organization Identifier) is valued.</Description>
+					<Condition>
+						<Presence Path="10[1]"/>
+					</Condition>
+				</Predicate>
+				<!--XON_NG.7 -->
+				<Predicate Target="7[1]" TrueUsage="R" FalseUsage="X" ID="[XON_NG_NK1]7[1]">
+					<Description>If XON_NG.10 (Organization Identifier) is valued.</Description>
+					<Condition>
+						<Presence Path="10[1]"/>
+					</Condition>
+				</Predicate>
+				<!-- XON_NG.10 -->
+				<Predicate Target="10[1]" TrueUsage="R" FalseUsage="RE" ID="[XON_NG_NK1]10[1]">
+					<Description>If XON_NG.1 (Organization Name) is not valued.</Description>
+					<Condition>
+						<NOT>
+							<Presence Path="1[1]"/>
+						</NOT>
+					</Condition>
+				</Predicate>
+			</ByID>
+			<ByID ID="XON_NG_IN1">
+				<!-- XON_NG.5 -->
+				<Predicate Target="5[1]" TrueUsage="O" FalseUsage="X" ID="[XON_NG_IN1]5[1]">
+					<Description>If XON_NG.4 is valued</Description>
+					<Condition>
+						<Presence Path="4[1]"/>
+					</Condition>
+				</Predicate>
+				<!-- XON_NG.6 -->
+				<Predicate Target="6[1]" TrueUsage="R" FalseUsage="X" ID="[XON_NG_IN1]6[1]">
+					<Description>If XON_NG.10 (Organization Identifier) is valued.</Description>
+					<Condition>
+						<Presence Path="10[1]"/>
+					</Condition>
+				</Predicate>
+				<!--XON_NG.7 -->
+				<Predicate Target="7[1]" TrueUsage="R" FalseUsage="X" ID="[XON_NG_IN1]7[1]">
+					<Description>If XON_NG.10 (Organization Identifier) is valued.</Description>
+					<Condition>
+						<Presence Path="10[1]"/>
+					</Condition>
+				</Predicate>
+				<!-- XON_NG.10 -->
+				<Predicate Target="10[1]" TrueUsage="R" FalseUsage="RE" ID="[XON_NG_IN1]10[1]">
+					<Description>If XON_NG.1 (Organization Name) is not valued.</Description>
+					<Condition>
+						<NOT>
+							<Presence Path="1[1]"/>
+						</NOT>
+					</Condition>
+				</Predicate>
+			</ByID>
+			<ByID ID="XON_NG_GT1">
+				<!-- XON_NG.5 -->
+				<Predicate Target="5[1]" TrueUsage="O" FalseUsage="X" ID="[XON_NG_GT1]5[1]">
+					<Description>If XON_NG.4 is valued</Description>
+					<Condition>
+						<Presence Path="4[1]"/>
+					</Condition>
+				</Predicate>
+				<!-- XON_NG.6 -->
+				<Predicate Target="6[1]" TrueUsage="R" FalseUsage="X" ID="[XON_NG_GT1]6[1]">
+					<Description>If XON_NG.10 (Organization Identifier) is valued.</Description>
+					<Condition>
+						<Presence Path="10[1]"/>
+					</Condition>
+				</Predicate>
+				<!--XON_NG.7 -->
+				<Predicate Target="7[1]" TrueUsage="R" FalseUsage="X" ID="[XON_NG_GT1]7[1]">
+					<Description>If XON_NG.10 (Organization Identifier) is valued.</Description>
+					<Condition>
+						<Presence Path="10[1]"/>
+					</Condition>
+				</Predicate>
+				<!-- XON_NG.10 -->
+				<Predicate Target="10[1]" TrueUsage="R" FalseUsage="RE" ID="[XON_NG_GT1]10[1]">
+					<Description>If XON_NG.1 (Organization Name) is not valued.</Description>
+					<Condition>
+						<NOT>
+							<Presence Path="1[1]"/>
+						</NOT>
+					</Condition>
+				</Predicate>
+			</ByID>
+			<!-- XPN -->
+			<ByID ID="XPN_LOI_PID_5">
+				<!-- XPN_LOI.3 -->
+				<Predicate Target="3[1]" TrueUsage="RE" FalseUsage="X" ID="[XPN_LOI_PID_5]3[1]">
+					<Description>If XPN-1 (Family Name) or XPN-2 (Given Name) is valued.</Description>
+					<Condition>
+						<OR>
+							<Presence Path="1[1]"/>
+							<Presence Path="2[1]"/>
+						</OR>
+					</Condition>
+				</Predicate>
+				<!-- XPN_LOI.4 -->
+				<Predicate Target="4[1]" TrueUsage="RE" FalseUsage="X" ID="[XPN_LOI_PID_5]4[1]">
+					<Description>If XPN-1 (Family Name) or XPN-2 (Given Name) is valued.</Description>
+					<Condition>
+						<OR>
+							<Presence Path="1[1]"/>
+							<Presence Path="2[1]"/>
+						</OR>
+					</Condition>
+				</Predicate>
+			</ByID>
+			<ByID ID="XPN_LOI_PID_6">
+				<!-- XPN_LOI.3 -->
+				<Predicate Target="3[1]" TrueUsage="RE" FalseUsage="X" ID="[XPN_LOI_PID_6]3[1]">
+					<Description>If XPN-1 (Family Name) or XPN-2 (Given Name) is valued.</Description>
+					<Condition>
+						<OR>
+							<Presence Path="1[1]"/>
+							<Presence Path="2[1]"/>
+						</OR>
+					</Condition>
+				</Predicate>
+				<!-- XPN_LOI.4 -->
+				<Predicate Target="4[1]" TrueUsage="RE" FalseUsage="X" ID="[XPN_LOI_PID_6]4[1]">
+					<Description>If XPN-1 (Family Name) or XPN-2 (Given Name) is valued.</Description>
+					<Condition>
+						<OR>
+							<Presence Path="1[1]"/>
+							<Presence Path="2[1]"/>
+						</OR>
+					</Condition>
+				</Predicate>
+			</ByID>
+			<ByID ID="XPN_LOI_OBX">
+				<!-- XPN_LOI.3 -->
+				<Predicate Target="3[1]" TrueUsage="RE" FalseUsage="X" ID="[XPN_LOI_OBX]3[1]">
+					<Description>If XPN-1 (Family Name) or XPN-2 (Given Name) is valued.</Description>
+					<Condition>
+						<OR>
+							<Presence Path="1[1]"/>
+							<Presence Path="2[1]"/>
+						</OR>
+					</Condition>
+				</Predicate>
+				<!-- XPN_LOI.4 -->
+				<Predicate Target="4[1]" TrueUsage="RE" FalseUsage="X" ID="[XPN_LOI_OBX]4[1]">
+					<Description>If XPN-1 (Family Name) or XPN-2 (Given Name) is valued.</Description>
+					<Condition>
+						<OR>
+							<Presence Path="1[1]"/>
+							<Presence Path="2[1]"/>
+						</OR>
+					</Condition>
+				</Predicate>
+			</ByID>
+			<!-- XPN_1 -->
+			<ByID ID="XPN_1_NK1_2">
+				<!-- XPN_1.2 -->
+				<Predicate Target="2[1]" TrueUsage="R" FalseUsage="X" ID="[XPN_1_NK1_2]2[1]">
+					<Description>If XPN_1.1 (Family Name) is not valued ' "" '.</Description>
+					<Condition>
+						<NOT>
+							<PlainText Path="1[1].1[1]" Text="&quot;&quot;" IgnoreCase="true"/>
+						</NOT>
+					</Condition>
+				</Predicate>
+				<!-- XPN_1.7 -->
+				<Predicate Target="7[1]" TrueUsage="R" FalseUsage="X" ID="[XPN_1_NK1_2]7[1]">
+					<Description>If XPN_1.1 (Family Name) is not valued ' "" '.</Description>
+					<Condition>
+						<NOT>
+							<PlainText Path="1[1].1[1]" Text="&quot;&quot;" IgnoreCase="true"/>
+						</NOT>
+					</Condition>
+				</Predicate>
+			</ByID>
+			<ByID ID="XPN_1_NK1_30">
+				<!-- XPN_1.2 -->
+				<Predicate Target="2[1]" TrueUsage="R" FalseUsage="X" ID="[XPN_1_NK1_30]2[1]">
+					<Description>If XPN_1.1 (Family Name) is not valued ' "" '.</Description>
+					<Condition>
+						<NOT>
+							<PlainText Path="1[1].1[1]" Text="&quot;&quot;" IgnoreCase="true"/>
+						</NOT>
+					</Condition>
+				</Predicate>
+				<!-- XPN_1.7 -->
+				<Predicate Target="7[1]" TrueUsage="R" FalseUsage="X" ID="[XPN_1_NK1_30]7[1]">
+					<Description>If XPN_1.1 (Family Name) is not valued ' "" '.</Description>
+					<Condition>
+						<NOT>
+							<PlainText Path="1[1].1[1]" Text="&quot;&quot;" IgnoreCase="true"/>
+						</NOT>
+					</Condition>
+				</Predicate>
+			</ByID>
+			<ByID ID="XPN_1_IN1">
+				<!-- XPN_1.2 -->
+				<Predicate Target="2[1]" TrueUsage="R" FalseUsage="X" ID="[XPN_1_IN1]2[1]">
+					<Description>If XPN_1.1 (Family Name) is not valued ' "" '.</Description>
+					<Condition>
+						<NOT>
+							<PlainText Path="1[1].1[1]" Text="&quot;&quot;" IgnoreCase="true"/>
+						</NOT>
+					</Condition>
+				</Predicate>
+				<!-- XPN_1.7 -->
+				<Predicate Target="7[1]" TrueUsage="R" FalseUsage="X" ID="[XPN_1_IN1]7[1]">
+					<Description>If XPN_1.1 (Family Name) is not valued ' "" '.</Description>
+					<Condition>
+						<NOT>
+							<PlainText Path="1[1].1[1]" Text="&quot;&quot;" IgnoreCase="true"/>
+						</NOT>
+					</Condition>
+				</Predicate>
+			</ByID>
+			<ByID ID="XPN_1_GT1">
+				<!-- XPN_1.2 -->
+				<Predicate Target="2[1]" TrueUsage="R" FalseUsage="X" ID="[XPN_1_GT1]2[1]">
+					<Description>If XPN_1.1 (Family Name) is not valued ' "" '.</Description>
+					<Condition>
+						<NOT>
+							<PlainText Path="1[1].1[1]" Text="&quot;&quot;" IgnoreCase="true"/>
+						</NOT>
+					</Condition>
+				</Predicate>
+				<!-- XPN_1.7 -->
+				<Predicate Target="7[1]" TrueUsage="R" FalseUsage="X" ID="[XPN_1_GT1]7[1]">
+					<Description>If XPN_1.1 (Family Name) is not valued ' "" '.</Description>
+					<Condition>
+						<NOT>
+							<PlainText Path="1[1].1[1]" Text="&quot;&quot;" IgnoreCase="true"/>
+						</NOT>
+					</Condition>
+				</Predicate>
+			</ByID>
+			<!-- XTN -->
+			<ByID ID="XTN_LOI">
+				<!-- XTN_LOI.4 -->
+				<Predicate Target="4[1]" TrueUsage="R" FalseUsage="X" ID="[XTN_LOI]4[1]">
+					<Description>If XTN-3 (Telecommunication Equipment Type) is valued 'X.400' or 'Internet'.</Description>
+					<Condition>
+						<OR>
+							<PlainText Path="3[1]" Text="X.400" IgnoreCase="true"/>
+							<PlainText Path="3[1]" Text="Internet" IgnoreCase="true"/>
+						</OR>
+					</Condition>
+				</Predicate>
+				<!-- XTN_LOI.6 -->
+				<Predicate Target="6[1]" TrueUsage="R" FalseUsage="X" ID="[XTN_LOI]6[1]">
+					<Description>If XTN-3 (Telecommunication Equipment Type) is valued 'PH', 'CP', 'SAT', 'FX', or 'TDD'.</Description>
+					<Condition>
+						<StringList Path="3[1]" CSV="PH,CP,SAT,TDD,FX"/>
+					</Condition>
+				</Predicate>
+				<!-- XTN_LOI.7 -->
+				<Predicate Target="7[1]" TrueUsage="R" FalseUsage="X" ID="[XTN_LOI]7[1]">
+					<Description>If XTN-3 (Telecommunication Equipment Type) is valued 'PH', 'CP', 'SAT', 'FX', or 'TDD'.</Description>
+					<Condition>
+						<StringList Path="3[1]" CSV="PH,CP,SAT,TDD,FX"/>
+					</Condition>
+				</Predicate>
+				<!-- XTN_LOI.8 -->
+				<Predicate Target="8[1]" TrueUsage="RE" FalseUsage="X" ID="[XTN_LOI]8[1]">
+					<Description>If XTN-3 (Telecommunication Equipment Type) is valued 'PH', 'CP', 'SAT', 'FX', or 'TDD'.</Description>
+					<Condition>
+						<StringList Path="3[1]" CSV="PH,CP,SAT,TDD,FX"/>
+					</Condition>
+				</Predicate>
+				<!-- XTN_LOI.12 -->
+				<Predicate Target="12[1]" TrueUsage="O" FalseUsage="X" ID="[XTN_LOI]12[1]">
+					<Description>If XTN-3 (Telecommunication Equipment Type) is valued 'PH', 'CP', 'SAT', 'FX', or 'TDD'.</Description>
+					<Condition>
+						<StringList Path="3[1]" CSV="PH,CP,SAT,TDD,FX"/>
+					</Condition>
+				</Predicate>
+			</ByID>
+		</Datatype>
+		<Segment>
+			<ByID ID="ERR_LOI">
+				<Predicate Target="5[1]" TrueUsage="RE" FalseUsage="O" ID="[ERR_LOI]5[1]">
+					<Description>If ERR-3.1 (Identifier) is valued '999'</Description>
+					<Condition>
+						<AND>
+							<Presence Path="3[1].1[1]"/>
+							<PlainText Path="3[1].1[1]" Text="999" IgnoreCase="false"/>
+						</AND>
+					</Condition>
+				</Predicate>
+			</ByID>
+			<ByID ID="PID_LOI_GU">
+				<!-- PID-29 -->
+				<Predicate Target="29[1]" TrueUsage="RE" FalseUsage="O" ID="[PID_LOI_GU]29[1]">
+					<Description>If PID-30 (Patient Death Indicator) is valued 'Y'.</Description>
+					<Condition>
+						<PlainText Path="30[1]" Text="Y" IgnoreCase="false"/>
+					</Condition>
+				</Predicate>
+			</ByID>
+			<ByID ID="PID_LOI_NG">
+				<!-- PID-29 -->
+				<Predicate Target="29[1]" TrueUsage="RE" FalseUsage="O" ID="[PID_LOI_NG]29[1]">
+					<Description>If PID-30 (Patient Death Indicator) is valued 'Y'.</Description>
+					<Condition>
+						<PlainText Path="30[1]" Text="Y" IgnoreCase="false"/>
+					</Condition>
+				</Predicate>
+			</ByID>
+			<ByID ID="PID_LOI_GU_PH">
+				<!-- PID-29 -->
+				<Predicate Target="29[1]" TrueUsage="RE" FalseUsage="O" ID="[PID_LOI_GU_PH]29[1]">
+					<Description>If PID-30 (Patient Death Indicator) is valued 'Y'.</Description>
+					<Condition>
+						<PlainText Path="30[1]" Text="Y" IgnoreCase="false"/>
+					</Condition>
+				</Predicate>
+			</ByID>
+			<ByID ID="PID_LOI_NG_PH">
+				<!-- PID-29 -->
+				<Predicate Target="29[1]" TrueUsage="RE" FalseUsage="O" ID="[PID_LOI_NG_PH]29[1]">
+					<Description>If PID-30 (Patient Death Indicator) is valued 'Y'.</Description>
+					<Condition>
+						<PlainText Path="30[1]" Text="Y" IgnoreCase="false"/>
+					</Condition>
+				</Predicate>
+			</ByID>
+			<ByID ID="NK1_LOI_GU">
+				<!-- NK1-2 -->
+				<Predicate Target="2[1]" TrueUsage="R" FalseUsage="X" ID="[NK1_LOI_GU]2[1]">
+					<Description>If NK1-13 (Organization Name - NK1) is not valued.</Description>
+					<Condition>
+						<NOT>
+							<Presence Path="13[1]"/>
+						</NOT>
+					</Condition>
+				</Predicate>
+				<!-- NK1-11-->
+				<Predicate Target="11[1]" TrueUsage="R" FalseUsage="O" ID="[NK1_LOI_GU]11[1]">
+					<Description>If NK1-7.1 (Contact Role.Identifier) is 'E' (employer).</Description>
+					<Condition>
+						<AND>
+							<Presence Path="7[1].1[1]"/>
+							<PlainText Path="7[1].1[1]" Text="E" IgnoreCase="false"/>
+						</AND>
+					</Condition>
+				</Predicate>
+				<!--NK1-13-->
+				<Predicate Target="13[1]" TrueUsage="R" FalseUsage="X" ID="[NK1_LOI_GU]13[1]">
+					<Description>If NK1-2 (Name) is not valued.</Description>
+					<Condition>
+						<NOT>
+							<Presence Path="2[1]"/>
+						</NOT>
+					</Condition>
+				</Predicate>
+			</ByID>
+			<ByID ID="NK1_LOI_NG">
+				<!-- NK1-2 -->
+				<Predicate Target="2[1]" TrueUsage="R" FalseUsage="X" ID="[NK1_LOI_NG]2[1]">
+					<Description>If NK1-13 (Organization Name - NK1) is not valued.</Description>
+					<Condition>
+						<NOT>
+							<Presence Path="13[1]"/>
+						</NOT>
+					</Condition>
+				</Predicate>
+				<!-- NK1-11-->
+				<Predicate Target="11[1]" TrueUsage="R" FalseUsage="O" ID="[NK1_LOI_NG]11[1]">
+					<Description>If NK1-7.1 (Contact Role.Identifier) is 'E' (employer).</Description>
+					<Condition>
+						<AND>
+							<Presence Path="7[1].1[1]"/>
+							<PlainText Path="7[1].1[1]" Text="E" IgnoreCase="false"/>
+						</AND>
+					</Condition>
+				</Predicate>
+				<!--NK1-13-->
+				<Predicate Target="13[1]" TrueUsage="R" FalseUsage="X" ID="[NK1_LOI_NG]13[1]">
+					<Description>If NK1-2 (Name) is not valued.</Description>
+					<Condition>
+						<NOT>
+							<Presence Path="2[1]"/>
+						</NOT>
+					</Condition>
+				</Predicate>
+			</ByID>
+			<ByID ID="NK1_LOI_GU_PH">
+				<!-- NK1-2 -->
+				<Predicate Target="2[1]" TrueUsage="R" FalseUsage="X" ID="[NK1_LOI_GU_PH]2[1]">
+					<Description>If NK1-13 (Organization Name - NK1) is not valued.</Description>
+					<Condition>
+						<NOT>
+							<Presence Path="13[1]"/>
+						</NOT>
+					</Condition>
+				</Predicate>
+				<!-- NK1-11-->
+				<Predicate Target="11[1]" TrueUsage="R" FalseUsage="O" ID="[NK1_LOI_GU_PH]11[1]">
+					<Description>If NK1-7.1 (Contact Role.Identifier) is 'E' (employer).</Description>
+					<Condition>
+						<AND>
+							<Presence Path="7[1].1[1]"/>
+							<PlainText Path="7[1].1[1]" Text="E" IgnoreCase="false"/>
+						</AND>
+					</Condition>
+				</Predicate>
+				<!--NK1-13-->
+				<Predicate Target="13[1]" TrueUsage="R" FalseUsage="X" ID="[NK1_LOI_GU_PH]13[1]">
+					<Description>If NK1-2 (Name) is not valued.</Description>
+					<Condition>
+						<NOT>
+							<Presence Path="2[1]"/>
+						</NOT>
+					</Condition>
+				</Predicate>
+				<!-- NK1-30 -->
+				<Predicate Target="30[1]" TrueUsage="RE" FalseUsage="X" ID="[NK1_LOI_GU_PH]30[1]">
+					<Description>If NK1-13 (Organization Name - NK1) is valued.</Description>
+					<Condition>
+						<Presence Path="13[1]"/>
+					</Condition>
+				</Predicate>
+				<!-- NK1-32 -->
+				<Predicate Target="30[1]" TrueUsage="RE" FalseUsage="X" ID="[NK1_LOI_GU_PH]30[1]">
+					<Description>If NK1-13 (Organization Name - NK1) is valued.</Description>
+					<Condition>
+						<Presence Path="13[1]"/>
+					</Condition>
+				</Predicate>
+			</ByID>
+			<ByID ID="NK1_LOI_NG_PH">
+				<!-- NK1-2 -->
+				<Predicate Target="2[1]" TrueUsage="R" FalseUsage="X" ID="[NK1_LOI_NG_PH]2[1]">
+					<Description>If NK1-13 (Organization Name - NK1) is not valued.</Description>
+					<Condition>
+						<NOT>
+							<Presence Path="13[1]"/>
+						</NOT>
+					</Condition>
+				</Predicate>
+				<!-- NK1-11-->
+				<Predicate Target="11[1]" TrueUsage="R" FalseUsage="O" ID="[NK1_LOI_NG_PH]11[1]">
+					<Description>If NK1-7.1 (Contact Role.Identifier) is 'E' (employer).</Description>
+					<Condition>
+						<AND>
+							<Presence Path="7[1].1[1]"/>
+							<PlainText Path="7[1].1[1]" Text="E" IgnoreCase="false"/>
+						</AND>
+					</Condition>
+				</Predicate>
+				<!--NK1-13-->
+				<Predicate Target="13[1]" TrueUsage="R" FalseUsage="X" ID="[NK1_LOI_NG_PH]13[1]">
+					<Description>If NK1-2 (Name) is not valued.</Description>
+					<Condition>
+						<NOT>
+							<Presence Path="2[1]"/>
+						</NOT>
+					</Condition>
+				</Predicate>
+				<!-- NK1-30 -->
+				<Predicate Target="30[1]" TrueUsage="RE" FalseUsage="X" ID="[NK1_LOI_NG_PH]30[1]">
+					<Description>If NK1-13 (Organization Name - NK1) is valued.</Description>
+					<Condition>
+						<Presence Path="13[1]"/>
+					</Condition>
+				</Predicate>
+				<!-- NK1-32 -->
+				<Predicate Target="30[1]" TrueUsage="RE" FalseUsage="X" ID="[NK1_LOI_NG_PH]30[1]">
+					<Description>If NK1-13 (Organization Name - NK1) is valued.</Description>
+					<Condition>
+						<Presence Path="13[1]"/>
+					</Condition>
+				</Predicate>
+			</ByID>
+			<ByID ID="PV1_LOI">
+				<!--PV1-22-->
+				<Predicate Target="22[1]" TrueUsage="RE" FalseUsage="O" ID="[PV1_LOI]22[1]">
+					<Description>If PV1-20.1 (Financial Class.class code) is not valued 'T' (Third Party).</Description>
+					<Condition>
+						<AND>
+							<Presence Path="20[1].1[1]"/>
+							<NOT>
+								<PlainText Path="20[1].1[1]" Text="T" IgnoreCase="false"/>
+							</NOT>
+						</AND>
+					</Condition>
+				</Predicate>
+			</ByID>
+			<ByID ID="IN1_LOI_GU">
+				<!--IN1-11-->
+				<Predicate Target="11[1]" TrueUsage="R" FalseUsage="O" ID="[IN1_LOI_GU]11[1]">
+					<Description>If IN1-31 (Type of Agreement Code) is valued 'W' (Workman's Comp).</Description>
+					<Condition>
+						<PlainText Path="31[1]" Text="W" IgnoreCase="false"/>
+					</Condition>
+				</Predicate>
+			</ByID>
+			<ByID ID="IN1_LOI_NG">
+				<!--IN1-11-->
+				<Predicate Target="11[1]" TrueUsage="R" FalseUsage="O" ID="[IN1_LOI_NG]11[1]">
+					<Description>If IN1-31 (Type of Agreement Code) is valued 'W' (Workman's Comp).</Description>
+					<Condition>
+						<PlainText Path="31[1]" Text="W" IgnoreCase="false"/>
+					</Condition>
+				</Predicate>
+			</ByID>
+			<ByID ID="ORC_LOI_GU">
+				<!-- ORC-26 usage is C(X/X)-->
+				<!--				<Predicate Target="26[1]" TrueUsage="X" FalseUsage="X">
+					<Description>No description</Description>
+					<Condition>
+					</Condition>
+				</Predicate>-->
+			</ByID>
+			<ByID ID="ORC_LOI_NG">
+				<!-- ORC-26 usage is C(X/X)-->
+				<!--				<Predicate Target="26[1]" TrueUsage="X" FalseUsage="X">
+					<Description>No description</Description>
+					<Condition>
+					</Condition>
+				</Predicate>-->
+			</ByID>
+			<ByID ID="ORC_LOI_GU_PH">
+				<!-- ORC-26 usage is C(X/X)-->
+				<!--				<Predicate Target="26[1]" TrueUsage="X" FalseUsage="X">
+					<Description>No description</Description>
+					<Condition>
+					</Condition>
+				</Predicate>-->
+			</ByID>
+			<ByID ID="ORC_LOI_NG_PH">
+				<!-- ORC-26 usage is C(X/X)-->
+				<!--				<Predicate Target="26[1]" TrueUsage="X" FalseUsage="X">
+					<Description>No description</Description>
+					<Condition>
+					</Condition>
+				</Predicate>-->
+			</ByID>
+			<ByID ID="OBR_LOI_GU">
+				<!-- OBR-8 -->
+				<Predicate Target="8[1]" TrueUsage="RE" FalseUsage="X" ID="[OBR_LOI_GU]8[1]">
+					<Description>If OBR-7 (Observation Date/Time) is valued</Description>
+					<Condition>
+						<Presence Path="7[1]"/>
+					</Condition>
+				</Predicate>
+			</ByID>
+			<ByID ID="OBR_LOI_NG">
+				<!-- OBR-8 -->
+				<Predicate Target="8[1]" TrueUsage="RE" FalseUsage="X" ID="[OBR_LOI_NG]8[1]">
+					<Description>If OBR-7 (Observation Date/Time) is valued</Description>
+					<Condition>
+						<Presence Path="7[1]"/>
+					</Condition>
+				</Predicate>
+			</ByID>
+			<ByID ID="PRT_LOI_GU">
+				<!--PRT-14-->
+				<Predicate Target="14[1]" TrueUsage="R" FalseUsage="RE" ID="[PRT_LOI_GU]14[1]">
+					<Description>If PRT-15 is not valued.</Description>
+					<Condition>
+						<NOT>
+							<Presence Path="15[1]"/>
+						</NOT>
+					</Condition>
+				</Predicate>
+			</ByID>
+			<ByID ID="PRT_LOI_NG">
+				<!--PRT-14-->
+				<Predicate Target="14[1]" TrueUsage="R" FalseUsage="RE" ID="[PRT_LOI_NG]14[1]">
+					<Description>If PRT-15 is not valued.</Description>
+					<Condition>
+						<NOT>
+							<Presence Path="15[1]"/>
+						</NOT>
+					</Condition>
+				</Predicate>
+			</ByID>
+			<!--DG1-20 C(X/X)-->
+			<!--DG1-21 C(X/X)-->
+			<ByID ID="OBX_LOI_GU">
+				<!--OBX-2-->
+				<Predicate Target="2[1]" TrueUsage="R" FalseUsage="X" ID="[OBX_LOI_GU]2[1]">
+					<Description>If OBX-5 (Observation Value) is valued.</Description>
+					<Condition>
+						<Presence Path="5[1]"/>
+					</Condition>
+				</Predicate>
+				<!--OBX-4 predicate-->
+				<!--				<Predicate Target="4[1]" TrueUsage="R" FalseUsage="O">
+					<Description>If there are multiple OBX segments associated with the same OBR or SPM segment that have the same OBX-3 (Observation Identifier) values for (OBX-3.1 (Identifier) and OBX-3.3 (Name of Coding System)) or (OBX-3.4 (Alternate Identifier) and OBX-3.6 (Name of Alternate Coding System)).</Description>
+					<Condition>
+					</Condition>
+				</Predicate>-->
+				<!--OBX-14-->
+				<Predicate Target="14[1]" TrueUsage="R" FalseUsage="O" ID="[OBX_LOI_GU]14[1]">
+					<Description>If OBX-5 is valued.</Description>
+					<Condition>
+						<Presence Path="5[1]"/>
+					</Condition>
+				</Predicate>
+			</ByID>
+			<ByID ID="OBX_LOI_NG">
+				<!--OBX-2-->
+				<Predicate Target="2[1]" TrueUsage="R" FalseUsage="X" ID="[OBX_LOI_NG]2[1]">
+					<Description>If OBX-5 (Observation Value) is valued.</Description>
+					<Condition>
+						<Presence Path="5[1]"/>
+					</Condition>
+				</Predicate>
+				<!--OBX-4 predicate-->
+				<!--				<Predicate Target="4[1]" TrueUsage="R" FalseUsage="O">
+					<Description>If there are multiple OBX segments associated with the same OBR or SPM segment that have the same OBX-3 (Observation Identifier) values for (OBX-3.1 (Identifier) and OBX-3.3 (Name of Coding System)) or (OBX-3.4 (Alternate Identifier) and OBX-3.6 (Name of Alternate Coding System)).</Description>
+					<Condition>
+					</Condition>
+				</Predicate>-->
+				<!--OBX-14-->
+				<Predicate Target="14[1]" TrueUsage="R" FalseUsage="O" ID="[OBX_LOI_NG]14[1]">
+					<Description>If OBX-5 is valued.</Description>
+					<Condition>
+						<Presence Path="5[1]"/>
+					</Condition>
+				</Predicate>
+			</ByID>
+			<ByID ID="SPM_LOI_GU_PH">
+				<!--SPM-5 PH -->
+				<Predicate Target="5[1]" TrueUsage="RE" FalseUsage="X" ID="[SPM_LOI_GU_PH]5[1]">
+					<Description>If SPM-4.3 (Specimen Type.Name of Coding System) or SPM-4.6 (Specimen Type.Name of Alternate Coding System) is valued 'SCT'</Description>
+					<Condition>
+						<OR>
+							<PlainText Path="4[1].3[1]" Text="SCT" IgnoreCase="false"/>
+							<PlainText Path="4[1].6[1]" Text="SCT" IgnoreCase="false"/>
+						</OR>
+					</Condition>
+				</Predicate>
+				<!--SPM-9 PH -->
+				<Predicate Target="9[1]" TrueUsage="RE" FalseUsage="X" ID="[SPM_LOI_GU_PH]9[1]">
+					<Description>If SPM-8.3 (Name of Coding System ) or SPM-8.6 (Alternate Coding System ID) is valued 'SCT'</Description>
+					<Condition>
+						<OR>
+							<PlainText Path="8[1].3[1]" Text="SCT" IgnoreCase="false"/>
+							<PlainText Path="8[1].6[1]" Text="SCT" IgnoreCase="false"/>
+						</OR>
+					</Condition>
+				</Predicate>
+			</ByID>
+			<ByID ID="SPM_LOI_NG_PH">
+				<!--SPM-5 PH -->
+				<Predicate Target="5[1]" TrueUsage="RE" FalseUsage="X" ID="[SPM_LOI_NG_PH]5[1]">
+					<Description>If SPM-4.3 (Specimen Type.Name of Coding System) or SPM-4.6 (Specimen Type.Name of Alternate Coding System) is valued 'SCT'</Description>
+					<Condition>
+						<OR>
+							<PlainText Path="4[1].3[1]" Text="SCT" IgnoreCase="false"/>
+							<PlainText Path="4[1].6[1]" Text="SCT" IgnoreCase="false"/>
+						</OR>
+					</Condition>
+				</Predicate>
+				<!--SPM-9 PH -->
+				<Predicate Target="9[1]" TrueUsage="RE" FalseUsage="X" ID="[SPM_LOI_NG_PH]9[1]">
+					<Description>If SPM-8.3 (Name of Coding System ) or SPM-8.6 (Alternate Coding System ID) is valued 'SCT'</Description>
+					<Condition>
+						<OR>
+							<PlainText Path="8[1].3[1]" Text="SCT" IgnoreCase="false"/>
+							<PlainText Path="8[1].6[1]" Text="SCT" IgnoreCase="false"/>
+						</OR>
+					</Condition>
+				</Predicate>
+			</ByID>
+		</Segment>
+		<Group>
+			<ByID ID="PATIENT_LOI">
+				<!-- PID-11 -->
+				<!-- Note: PV1 is X in Cancel message, so this predicate is useless for Cancel.-->
+				<Predicate Target="1[1].11[*]" TrueUsage="R" FalseUsage="RE" ID="[PATIENT_LOI]1[1].11[*]">
+					<Description>If PV1-20.1 (Financial Class.Financial Class Code) is valued 'T' (third party).</Description>
+					<Condition>
+						<AND>
+							<Presence Path="5[1].1[1].20[1].1[1]"/>
+							<PlainText Path="5[1].1[1].20[1].1[1]" Text="T" IgnoreCase="true"/>
+						</AND>
+					</Condition>
+				</Predicate>
+			</ByID>
+			<!-- TODO :  predicate for ERR "If ORC-1 (Order Control) is valued 'UC' or 'UA'" is not implementable (needs clarification) -->
+			<!--			<ByName Name="ORL_O22">
+			
+			</ByName>-->
+			<ByID ID="OBSERVATION_REQUEST_LOI">
+				<!-- PRT -->
+				<Predicate Target="4[*]" TrueUsage="R" FalseUsage="O" ID="[OBSERVATION_REQUEST_LOI]4[*]">
+					<Description>If OBR-28 (Result Copies To) is valued.</Description>
+					<Condition>
+						<Presence Path="1[1].28[*]"/>
+					</Condition>
+				</Predicate>
+				<!-- SPECIMEN -->
+				<Predicate Target="8[*]" TrueUsage="RE" FalseUsage="O" ID="[OBSERVATION_REQUEST_LOI]8[*]">
+					<Description>If OBR-7 (Observation Date/Time) in the same Observation Request group is valued.</Description>
+					<Condition>
+						<Presence Path="1[1].7[1]"/>
+					</Condition>
+				</Predicate>
+			</ByID>
+			<ByID ID="ORDER_LOI_CANCEL">
+				<!-- CTD -->
+				<Predicate Target="3[1].4[*]" TrueUsage="X" FalseUsage="O" ID="[ORDER_LOI_CANCEL]3[1].4[*]">
+					<Description>If ORC-1 (Order Control Code) is valued 'CA' or 'OC'.</Description>
+					<Condition>
+						<AND>
+							<Presence Path="1[1].1[1]"/>
+							<StringList Path="1[1].1[1]" CSV="CA,OC"/>
+						</AND>
+					</Condition>
+				</Predicate>
+				<!-- DG1 -->
+				<Predicate Target="3[1].5[*]" TrueUsage="X" FalseUsage="O" ID="[ORDER_LOI_CANCEL]3[1].5[*]">
+					<Description>If ORC-2 (Order Control Code) is valued 'CA' or 'OC'.</Description>
+					<Condition>
+						<AND>
+							<Presence Path="1[1].2[1]"/>
+							<StringList Path="1[1].2[1]" CSV="CA,OC"/>
+						</AND>
+					</Condition>
+				</Predicate>
+				<!-- OBSERVATION -->
+				<Predicate Target="3[1].6[*]" TrueUsage="X" FalseUsage="O" ID="[ORDER_LOI_CANCEL]3[1].6[*]">
+					<Description>If ORC-2 (Order Control Code) is valued 'CA' or 'OC'.</Description>
+					<Condition>
+						<AND>
+							<Presence Path="1[1].2[1]"/>
+							<StringList Path="1[1].2[1]" CSV="CA,OC"/>
+						</AND>
+					</Condition>
+				</Predicate>
+				<!-- SPECIMEN -->
+				<Predicate Target="3[1].7[*]" TrueUsage="X" FalseUsage="O" ID="[ORDER_LOI_CANCEL]3[1].7[*]">
+					<Description>If ORC-2 (Order Control Code) is valued 'CA' or 'OC'.</Description>
+					<Condition>
+						<AND>
+							<Presence Path="1[1].2[1]"/>
+							<StringList Path="1[1].2[1]" CSV="CA,OC"/>
+						</AND>
+					</Condition>
+				</Predicate>
+				<!-- PRIOR_RESULT -->
+				<Predicate Target="3[1].8[*]" TrueUsage="X" FalseUsage="O" ID="[ORDER_LOI_CANCEL]3[1].8[*]">
+					<Description>If ORC-2 (Order Control Code) is valued 'CA' or 'OC'.</Description>
+					<Condition>
+						<AND>
+							<Presence Path="1[1].2[1]"/>
+							<StringList Path="1[1].2[1]" CSV="CA,OC"/>
+						</AND>
+					</Condition>
+				</Predicate>
+				<!-- FT1 -->
+				<Predicate Target="4[*]" TrueUsage="X" FalseUsage="O" ID="[ORDER_LOI_CANCEL]4[*]">
+					<Description>If ORC-2 (Order Control Code) is valued 'CA' or 'OC'.</Description>
+					<Condition>
+						<AND>
+							<Presence Path="1[1].2[1]"/>
+							<StringList Path="1[1].2[1]" CSV="CA,OC"/>
+						</AND>
+					</Condition>
+				</Predicate>
+				<!-- BLG -->
+				<Predicate Target="6[*]" TrueUsage="X" FalseUsage="O" ID="[ORDER_LOI_CANCEL]6[*]">
+					<Description>If ORC-2 (Order Control Code) is valued 'CA' or 'OC'.</Description>
+					<Condition>
+						<AND>
+							<Presence Path="1[1].2[1]"/>
+							<StringList Path="1[1].2[1]" CSV="CA,OC"/>
+						</AND>
+					</Condition>
+				</Predicate>
+			</ByID>
+		</Group>
+		<Message>
+			<ByName Name="ACK">
+				<Predicate Target="4[1]" TrueUsage="R" FalseUsage="O" ID="[ACK]4[1]">
+					<Description>If MSA-1 (Message Acknowledgement) is not valued 'AA' or 'CA'.</Description>
+					<Condition>
+						<NOT>
+							<OR>
+								<PlainText Path="3[1].1[1]" Text="AA" IgnoreCase="false"/>
+								<PlainText Path="3[1].1[1]" Text="CA" IgnoreCase="false"/>
+							</OR>
+						</NOT>
+					</Condition>
+				</Predicate>
+			</ByName>
+			<ByID ID="OML_O21:LOI_GU_FI">
+				<!-- INSURANCE -->
+				<Predicate Target="5[1]" TrueUsage="R" FalseUsage="O" ID="[OML_O21:LOI_GU_FI]5[1]">
+					<Description>If PV1-20.1 (Financial Class.Financial Class Code) is valued 'T' (third party).</Description>
+					<Condition>
+						<AND>
+							<Presence Path="4[1].5[1].1[1].20[1].1[1]"/>
+							<PlainText Path="4[1].5[1].1[1].20[1].1[1]" Text="T" IgnoreCase="true"/>
+						</AND>
+					</Condition>
+				</Predicate>
+			</ByID>
+			<ByID ID="OML_O21:LOI_NG_FI">
+				<!-- INSURANCE -->
+				<Predicate Target="5[1]" TrueUsage="R" FalseUsage="O" ID="[OML_O21:LOI_NG_FI]5[1]">
+					<Description>If PV1-20.1 (Financial Class.Financial Class Code) is valued 'T' (third party).</Description>
+					<Condition>
+						<AND>
+							<Presence Path="4[1].5[1].1[1].20[1].1[1]"/>
+							<PlainText Path="4[1].5[1].1[1].20[1].1[1]" Text="T" IgnoreCase="true"/>
+						</AND>
+					</Condition>
+				</Predicate>
+			</ByID>
+			<ByID ID="OML_O21:LOI_GU_C">
+				<!-- NK1 -->
+				<!-- not implementable because, per definition, there could be several ORC segments in the message -->
+				<!-- <Predicate Target="4[1].4[*]" TrueUsage="X" FalseUsage="O">
+				<Description>If ORC.2 (Order Control Code) is valued 'CA' or 'OC'.</Description>
+				<Condition>
+				</Condition>
+			</Predicate> -->
+				<!-- VISIT -->
+				<!-- not implementable because, per definition, there could be several ORC segments in the message -->
+				<!-- <Predicate Target="4[1].5[*]" TrueUsage="X" FalseUsage="O">
+				<Description>If ORC.2 (Order Control Code) is valued 'CA' or 'OC'.</Description>
+				<Condition>
+				</Condition>
+			</Predicate> -->
+				<!-- INSURANCE -->
+				<!-- not implementable because, per definition, there could be several ORC segments in the message -->
+				<!-- <Predicate Target="4[1].6[*]" TrueUsage="X" FalseUsage="O">
+				<Description>If ORC.2 (Order Control Code) is valued 'CA' or 'OC'.</Description>
+				<Condition>
+				</Condition>
+			</Predicate> -->
+				<!-- GT1 -->
+				<!-- not implementable because, per definition, there could be several ORC segments in the message -->
+				<!-- <Predicate Target="4[1].7[*]" TrueUsage="X" FalseUsage="O">
+				<Description>If ORC.2 (Order Control Code) is valued 'CA' or 'OC'.</Description>
+				<Condition>
+				</Condition>
+			</Predicate> -->
+				<!-- AL1 -->
+				<!-- not implementable because, per definition, there could be several ORC segments in the message -->
+				<!-- <Predicate Target="4[1].8[*]" TrueUsage="X" FalseUsage="O">
+				<Description>If ORC.2 (Order Control Code) is valued 'CA' or 'OC'.</Description>
+				<Condition>
+				</Condition>
+			</Predicate> -->
+			</ByID>
+			<ByID ID="OML_O21:LOI_GU_PRN_C">
+				<!-- NK1 -->
+				<!-- not implementable because, per definition, there could be several ORC segments in the message -->
+				<!-- <Predicate Target="4[1].4[*]" TrueUsage="X" FalseUsage="O">
+				<Description>If ORC.2 (Order Control Code) is valued 'CA' or 'OC'.</Description>
+				<Condition>
+				</Condition>
+			</Predicate> -->
+				<!-- VISIT -->
+				<!-- not implementable because, per definition, there could be several ORC segments in the message -->
+				<!-- <Predicate Target="4[1].5[*]" TrueUsage="X" FalseUsage="O">
+				<Description>If ORC.2 (Order Control Code) is valued 'CA' or 'OC'.</Description>
+				<Condition>
+				</Condition>
+			</Predicate> -->
+				<!-- INSURANCE -->
+				<!-- not implementable because, per definition, there could be several ORC segments in the message -->
+				<!-- <Predicate Target="4[1].6[*]" TrueUsage="X" FalseUsage="O">
+				<Description>If ORC.2 (Order Control Code) is valued 'CA' or 'OC'.</Description>
+				<Condition>
+				</Condition>
+			</Predicate> -->
+				<!-- GT1 -->
+				<!-- not implementable because, per definition, there could be several ORC segments in the message -->
+				<!-- <Predicate Target="4[1].7[*]" TrueUsage="X" FalseUsage="O">
+				<Description>If ORC.2 (Order Control Code) is valued 'CA' or 'OC'.</Description>
+				<Condition>
+				</Condition>
+			</Predicate> -->
+				<!-- AL1 -->
+				<!-- not implementable because, per definition, there could be several ORC segments in the message -->
+				<!-- <Predicate Target="4[1].8[*]" TrueUsage="X" FalseUsage="O">
+				<Description>If ORC.2 (Order Control Code) is valued 'CA' or 'OC'.</Description>
+				<Condition>
+				</Condition>
+			</Predicate> -->
+			</ByID>
+			<ByID ID="OML_O21:LOI_GU_PRU_C">
+				<!-- NK1 -->
+				<!-- not implementable because, per definition, there could be several ORC segments in the message -->
+				<!-- <Predicate Target="4[1].4[*]" TrueUsage="X" FalseUsage="O">
+				<Description>If ORC.2 (Order Control Code) is valued 'CA' or 'OC'.</Description>
+				<Condition>
+				</Condition>
+			</Predicate> -->
+				<!-- VISIT -->
+				<!-- not implementable because, per definition, there could be several ORC segments in the message -->
+				<!-- <Predicate Target="4[1].5[*]" TrueUsage="X" FalseUsage="O">
+				<Description>If ORC.2 (Order Control Code) is valued 'CA' or 'OC'.</Description>
+				<Condition>
+				</Condition>
+			</Predicate> -->
+				<!-- INSURANCE -->
+				<!-- not implementable because, per definition, there could be several ORC segments in the message -->
+				<!-- <Predicate Target="4[1].6[*]" TrueUsage="X" FalseUsage="O">
+				<Description>If ORC.2 (Order Control Code) is valued 'CA' or 'OC'.</Description>
+				<Condition>
+				</Condition>
+			</Predicate> -->
+				<!-- GT1 -->
+				<!-- not implementable because, per definition, there could be several ORC segments in the message -->
+				<!-- <Predicate Target="4[1].7[*]" TrueUsage="X" FalseUsage="O">
+				<Description>If ORC.2 (Order Control Code) is valued 'CA' or 'OC'.</Description>
+				<Condition>
+				</Condition>
+			</Predicate> -->
+				<!-- AL1 -->
+				<!-- not implementable because, per definition, there could be several ORC segments in the message -->
+				<!-- <Predicate Target="4[1].8[*]" TrueUsage="X" FalseUsage="O">
+				<Description>If ORC.2 (Order Control Code) is valued 'CA' or 'OC'.</Description>
+				<Condition>
+				</Condition>
+			</Predicate> -->
+			</ByID>
+			<ByID ID="OML_O21:LOI_NG_C">
+				<!-- NK1 -->
+				<!-- not implementable because, per definition, there could be several ORC segments in the message -->
+				<!-- <Predicate Target="4[1].4[*]" TrueUsage="X" FalseUsage="O">
+				<Description>If ORC.2 (Order Control Code) is valued 'CA' or 'OC'.</Description>
+				<Condition>
+				</Condition>
+			</Predicate> -->
+				<!-- VISIT -->
+				<!-- not implementable because, per definition, there could be several ORC segments in the message -->
+				<!-- <Predicate Target="4[1].5[*]" TrueUsage="X" FalseUsage="O">
+				<Description>If ORC.2 (Order Control Code) is valued 'CA' or 'OC'.</Description>
+				<Condition>
+				</Condition>
+			</Predicate> -->
+				<!-- INSURANCE -->
+				<!-- not implementable because, per definition, there could be several ORC segments in the message -->
+				<!-- <Predicate Target="4[1].6[*]" TrueUsage="X" FalseUsage="O">
+				<Description>If ORC.2 (Order Control Code) is valued 'CA' or 'OC'.</Description>
+				<Condition>
+				</Condition>
+			</Predicate> -->
+				<!-- GT1 -->
+				<!-- not implementable because, per definition, there could be several ORC segments in the message -->
+				<!-- <Predicate Target="4[1].7[*]" TrueUsage="X" FalseUsage="O">
+				<Description>If ORC.2 (Order Control Code) is valued 'CA' or 'OC'.</Description>
+				<Condition>
+				</Condition>
+			</Predicate> -->
+				<!-- AL1 -->
+				<!-- not implementable because, per definition, there could be several ORC segments in the message -->
+				<!-- <Predicate Target="4[1].8[*]" TrueUsage="X" FalseUsage="O">
+				<Description>If ORC.2 (Order Control Code) is valued 'CA' or 'OC'.</Description>
+				<Condition>
+				</Condition>
+			</Predicate> -->
+			</ByID>
+			<ByID ID="OML_O21:LOI_NG_PRU_C">
+				<!-- NK1 -->
+				<!-- not implementable because, per definition, there could be several ORC segments in the message -->
+				<!-- <Predicate Target="4[1].4[*]" TrueUsage="X" FalseUsage="O">
+				<Description>If ORC.2 (Order Control Code) is valued 'CA' or 'OC'.</Description>
+				<Condition>
+				</Condition>
+			</Predicate> -->
+				<!-- VISIT -->
+				<!-- not implementable because, per definition, there could be several ORC segments in the message -->
+				<!-- <Predicate Target="4[1].5[*]" TrueUsage="X" FalseUsage="O">
+				<Description>If ORC.2 (Order Control Code) is valued 'CA' or 'OC'.</Description>
+				<Condition>
+				</Condition>
+			</Predicate> -->
+				<!-- INSURANCE -->
+				<!-- not implementable because, per definition, there could be several ORC segments in the message -->
+				<!-- <Predicate Target="4[1].6[*]" TrueUsage="X" FalseUsage="O">
+				<Description>If ORC.2 (Order Control Code) is valued 'CA' or 'OC'.</Description>
+				<Condition>
+				</Condition>
+			</Predicate> -->
+				<!-- GT1 -->
+				<!-- not implementable because, per definition, there could be several ORC segments in the message -->
+				<!-- <Predicate Target="4[1].7[*]" TrueUsage="X" FalseUsage="O">
+				<Description>If ORC.2 (Order Control Code) is valued 'CA' or 'OC'.</Description>
+				<Condition>
+				</Condition>
+			</Predicate> -->
+				<!-- AL1 -->
+				<!-- not implementable because, per definition, there could be several ORC segments in the message -->
+				<!-- <Predicate Target="4[1].8[*]" TrueUsage="X" FalseUsage="O">
+				<Description>If ORC.2 (Order Control Code) is valued 'CA' or 'OC'.</Description>
+				<Condition>
+				</Condition>
+			</Predicate> -->
+			</ByID>
+			<ByID ID="OML_O21:LOI_NG_PRN_C">
+				<!-- NK1 -->
+				<!-- not implementable because, per definition, there could be several ORC segments in the message -->
+				<!-- <Predicate Target="4[1].4[*]" TrueUsage="X" FalseUsage="O">
+				<Description>If ORC.2 (Order Control Code) is valued 'CA' or 'OC'.</Description>
+				<Condition>
+				</Condition>
+			</Predicate> -->
+				<!-- VISIT -->
+				<!-- not implementable because, per definition, there could be several ORC segments in the message -->
+				<!-- <Predicate Target="4[1].5[*]" TrueUsage="X" FalseUsage="O">
+				<Description>If ORC.2 (Order Control Code) is valued 'CA' or 'OC'.</Description>
+				<Condition>
+				</Condition>
+			</Predicate> -->
+				<!-- INSURANCE -->
+				<!-- not implementable because, per definition, there could be several ORC segments in the message -->
+				<!-- <Predicate Target="4[1].6[*]" TrueUsage="X" FalseUsage="O">
+				<Description>If ORC.2 (Order Control Code) is valued 'CA' or 'OC'.</Description>
+				<Condition>
+				</Condition>
+			</Predicate> -->
+				<!-- GT1 -->
+				<!-- not implementable because, per definition, there could be several ORC segments in the message -->
+				<!-- <Predicate Target="4[1].7[*]" TrueUsage="X" FalseUsage="O">
+				<Description>If ORC.2 (Order Control Code) is valued 'CA' or 'OC'.</Description>
+				<Condition>
+				</Condition>
+			</Predicate> -->
+				<!-- AL1 -->
+				<!-- not implementable because, per definition, there could be several ORC segments in the message -->
+				<!-- <Predicate Target="4[1].8[*]" TrueUsage="X" FalseUsage="O">
+				<Description>If ORC.2 (Order Control Code) is valued 'CA' or 'OC'.</Description>
+				<Condition>
+				</Condition>
+			</Predicate> -->
+			</ByID>
+		</Message>
+	</Predicates>
+	<Constraints>
+		<!-- 
+	 ** NIST Derived conformance statements **
+	 NIST-xxx : TS_0 SHALL be precise to the year.
+ 	 NIST-xxx : TS_1 SHALL be precise to the second.
+	 NIST-xxx : TS_2 SHALL be precise to the year.
+	 NIST-xxx : TS_3 SHALL be precise to the year.
+	 NIST-xxx : TS_4 SHALL be precise to the day OR be valued '0000'.
+	 NIST-xxx : TS_5 SHALL be precise to the day.
+	 NIST-xxx : TS_7 SHALL be precise to the day.
+	 
+  	 NIST-xxx : XAD-5 (Zip or Postal Code) SHALL be a valid USPS postal code.​
+
+	 
+	NIST-xxx : If OBR-4.3(Name of Coding System) is valued 'LN', OBR-4.1 (Identifier) SHALL be a valid LOINC code identifier format.
+	NIST-xxx : If OBR-4.6 (Name of Alternate Coding System) is valued 'LN', OBR-4.4 (Alternate Identifier) SHALL be a valid LOINC code identifier format.
+	
+	NIST-xxx : If OBX-3.3 (Name of Coding System) is valued 'LN', OBX-3.1 (Identifier) SHALL be a valid LOINC code identifier format.
+	NIST-xxx : If OBX-3.6 (Name of Alternate coding System) is valued 'LN', OBX-3.4 (Alternate Identifier) SHALL be a valid LOINC code identifier format.
+	
+	
+	[LOI_ORL_Acknowledgement_Component] NIST-xxx : MSH-1 (Field Separator) SHALL contain the constant value '|'.
+	[LOI_ORL_Acknowledgement_Component] NIST-xxx : MSH-2 (Encoding Characters) SHALL contain the constant value '^~\&amp;' or the constant value  '^~\&amp;#'.
+	
+	[LOI_Acknowledgement_Component] NIST-xxx : MSH-12.1 (Version ID) SHALL contain the constant value '2.5.1'.
+
+	-->
+		<!-- 
+	** Implemented **
+	LOI-1: EI_GU.3 (Universal ID) SHALL be valued with an ISO-compliant OID.
+	LOI-2: EI_GU.4 (Universal ID Type) SHALL contain the value 'ISO' drawn from code system HL70301.
+	LOI-3: HD_GU.2 (Universal ID) SHALL be valued with an ISO-compliant OID.
+	LOI-4: HD_GU.3 (Universal ID Type) SHALL contain the value 'ISO' drawn from code system HL70301.
+	LOI-6: XPN_1-7 (Name Type Code) SHALL NOT be valued 'U'.
+
+	** NOT Implemented **
+	
+	-->
+		<!--
+	** Implemented **
+	[LOI_Common_Component] LOI-5: MSH-12.1 (Version ID.Version Identifier) SHALL be valued with '2.5.1' drawn from the code system HL70104.
+	[LOI_Common_Component] LOI-7: MSH-1 (Field Separator) SHALL contain the constant value '|'.
+	[LOI_Common_Component] LOI-8: MSH-2 (Encoding Characters) SHALL contain the constant value '^~\&' or the constant value '^~\&#'.	
+	[LOI_Common_Component] LOI-9: MSH-9.1 (Message Type.Message Code) SHALL contain the constant value 'OML' drawn from code system HL70076.
+	[LOI_Common_Component] LOI-10: MSH-9.2 (Message Type.Trigger Event) SHALL contain the constant value 'O21' drawn from code system HL70003.
+	[LOI_Common_Component] LOI-11: MSH-9.3 (Message Type.Message Structure) SHALL contain the constant value 'OML_O21' drawn from code system HL70354.
+	
+	[LOI_ORL_Acknowledgement_Component] LOI-69: MSH-9.1 (Message Code) SHALL contain the value 'ORL' drawn from code system HL70076.
+	[LOI_ORL_Acknowledgement_Component] LOI-70: MSH-9.2 (Trigger Event) SHALL contain the value 'O22' drawn from code system HL70003.
+	[LOI_ORL_Acknowledgement_Component] LOI-71: MSH-9.3 (Message Structure) SHALL contain the value 'ORL_O22' drawn from code system HL70354.
+	[LOI_ORL_Acknowledgement_Component] LOI-72: MSH-12.1 (Version ID) SHALL contain the constant value '2.5.1' drawn from code system HL70104.
+	[LOI_ORL_Acknowledgement_Component] LOI-74: MSH-16 (Application Acknowledgement Type) SHALL contain the constant value 'NE' drawn from code system HL70155.
+
+	[LOI_Acknowledgement_Component] LOI-18: MSH-1 (Field Separator) SHALL contain the constant value '|'.
+	[LOI_Acknowledgement_Component] LOI-19: MSH-2 (Encoding Characters) SHALL contain the constant value '^~\&' or the constant value '^~\&#'.
+	[LOI_Acknowledgement_Component] LOI-20: MSH-9 (Message Type) SHALL contain the value 'ACK'ACK' drawn from the code system HL70076.
+	[LOI_Acknowledgement_Component] LOI-65: MSH-9.2 (Message Type.Trigger Event) SHALL contain the value 'O21' drawn from the code system HL70003.
+	[LOI_Acknowledgement_Component] LOI-66: MSH-9.3 (Message Type.Message Structure) SHALL contain the value 'ACK' drawn from the code system HL70354.
+	[LOI_Acknowledgement_Component] LOI-67: MSH-15 (Accept Acknowledgement Type) SHALL contain the constant value 'NE' drawn from the code system HL70155.
+	[LOI_Acknowledgement_Component] LOI-68: MSH-16 (Application Acknowledgement Type) SHALL contain the constant value 'NE' drawn from the code system HL70155.
+	
+	LOI-35: PID-1 (Set ID - PID) SHALL be valued with the constant value '1'.
+	
+	LOI-36: If PV1-20.1 (Financial Class.Financial Class Code) is 'T' (Third Party) or 'P' (Patient) then PID-11 (Patient Address) SHALL include an address with type 'H'.
+	LOI-37: If PV1-20.1 (Financial Class.Financial Class Code) is valued 'T' (Third Party) or 'P' (Patient), PID-5.7 (Name Type Code) SHALL be valued 'L'.
+
+	LOI-38: NK1-1 (Set ID – NK1) SHALL be valued sequentially with the starting value '1'.
+	
+	LOI-39: PV1-1 (Set ID – PV1) SHALL be valued with the constant value '1'.
+
+	LOI-78: IN1-1 (Set ID – IN1) SHALL be valued with the constant value '1'.
+	
+	LOI-40: GT1-1 (Set ID – GT1) SHALL be valued with the constant value '1'.
+	LOI-41: If GT1-3 (Guarantor Name) is ' "" ' then GT1-21 (Guarantor Organizational Name) SHALL be valued with any other string except ' "" '.
+	LOI-42: If GT1-21 (Guarantor Organization Name) is valued ' "" ' then GT1-3 (Guarantor Name) SHALL be valued with any other string except ' "" '.
+
+	LOI-44: The value of ORC-2 (Placer Order Number) SHALL be identical to the value of OBR-2 (Placer Order Number) within the same Order Group.
+	LOI-45: ORC-3 (Filler Order Number) SHALL be identical to the value of OBR-3 (Filler Order Number) within the same Order Group.
+	LOI-46: The value of ORC-12 (Ordering Provider) SHALL be identical to the value of OBR-16 (Ordering Provider) within the same Order Group.
+	LOI-51: The value of OBR-1 (Set ID – OBR) SHALL start at '1' and be incremented sequentially across the Order groups.
+	
+	LOI-49: The value of TQ1-1 (Set ID – TQ1) SHALL be valued '1'.
+
+	LOI-59: The value of DG1-1 (Set ID – DG1) SHALL be valued sequentially starting the value '1' within a given OBSERVATION_REQUEST segment group.
+	LOI-60: Only one instance of DG1-15 (Diagnosis Priority) in the Observation_Request_group SHALL contain the value '1'.
+
+	LOI-55: NTE-1 (Set ID – NTE) SHALL be sequentially numbered starting with the value '1' within a given segment group.
+
+	LOI-56: PRT-2 (Action Code) SHALL be valued with 'AD' drawn from code system HL70287.
+	LOI-57: For each value in OBR-28 (Result Copies To) a corresponding PRT (Participant Information) SHALL be present with PRT-4.1 (Participation Identifier) valued 'RCT'.
+	LOI-58: For each PRT (Participant Information) where PRT-4.1 (Participation.Identifier) is valued 'RCT' there must be a corresponding value in OBR-28 (Result Copies To) equal to PRT-5 (Participation Person).
+
+	LOI-62: The value of OBX-1 (Set ID – OBX) SHALL be valued sequentially starting the value '1' within a given segment group.
+	LOI-63: If there are multiple OBX segments associated with the same OBR segment that have the same OBX-3 (Observation Identifier) values for (OBX-3.1 (Observation Identifier.Identifier) and OBX-3.3 (Observation Identifier.Name of Coding System) or (OBX-3.4 (Observation Identifier.Alternate Identifier) and OBX-3.6 (Observation Identifier.Name of Alternate Coding System)), a combination of (OBX-3.1 and OBX3.3) or (OBX-3.4 and OBX-3.6) and OBX-4 (Observation Sub-ID) SHALL create a unique identification under a single OBR.
+
+	[LOI_GU_PRN_Profile] LOI-14: An occurrence of MSH-21 (Message Profile Identifier) SHALL be valued with '2.16.840.1.113883.9.86' (LOI_GU_PRN_Profile) or three occurrences SHALL be valued with '2.16.840.1.113883.9.66' (LOI_Common_Component), '2.16.840.1.113883.9.78' (LOI_GU_Component) and '2.16.840.1.113883.9.81' (LAB_PRN_Component) in any order.
+	[LOI_NG_PRU_Profile] LOI-15: An occurrence of MSH-21 (Message Profile Identifier) SHALL be valued with '2.16.840.1.113883.9.87' (LOI_NG_PRU_Profile) or three occurrences SHALL be valued with '2.16.840.1.113883.9.66' (LOI_Common_Component), '2.16.840.1.113883.9.79' (LOI_NG_Component) and '2.16.840.1.113883.9.82' (LAB_PRU_Component) in any order.
+	[LOI_NG_PRN_Profile] LOI-16: An occurrence of MSH-21 (Message Profile Identifier) SHALL be valued with '2.16.840.1.113883.9.88' (LOI_NG_PRN_Profile) or three occurrences SHALL be valued with '2.16.840.1.113883.9.66' (LOI_Common_Component), '2.16.840.1.113883.9.79' (LOI_NG_Component) and '2.16.840.1.113883.9.81' (LAB_PRN_Component) in any order.
+	[LOI_GU_PRU_Profile] LOI-17: An occurrence of MSH-21 (Message Profile Identifier) SHALL be valued with '2.16.840.1.113883.9.85' (LOI_GU_PRU_Profile) or three occurrences SHALL be valued with '2.16.840.1.113883.9.66' (LOI_Common_Component), '2.16.840.1.113883.9.78' (LOI_GU_Component) and '2.16.840.1.113883.9.82' (LAB_PRU_Component) in any order.
+
+	[LOI_PH_Component] LOI-28: An occurrence of MSH-21 (Message Profile Identifier) SHALL be valued with '2.16.840.1.113883.9.94'.
+	[LAB_FI_Component] LOI-29: An occurrence of MSH-21 (Message Profile Identifier) SHALL be valued with '2.16.840.1.113883.9.80'.
+
+	[LOI_GU_Response_Profile] LOI-81: An occurrence of MSH-21 (Message Profile Identifier) SHALL be valued with '2.16.840.1.113883.9.92' (LOI_GU_Response_Profile) or two occurrences SHALL be valued with '2.16.840.1.113883.9.89' (LOI_Acknowledgement_Component) and '2.16.840.1.113883.9.90' (LOI_GU_Acknowledgement_Component) in any order.
+	[LOI_NG_ Response_Profile] LOI-82: An occurrence of MSH-21 (Message Profile Identifier) SHALL be valued with '2.16.840.1.113883.9.93' (LOI_NG_Response_Profile) or two occurrences SHALL be valued with '2.16.840.1.113883.9.89' (LOI_Acknowledgement_Component) and '2.16.840.1.113883.9.91' (LOI_NG_Acknowledgement_Component) in any order.
+
+	[LOI_GU_ORL_Response_Profile_Component] LOI-75: MSH-21 (Message Profile Identifier) SHALL be valued with '2.16.840.1.113883.9.195.2.3' (LOI_GU_ORL_Response_Profile_Component) or two occurrences SHALL be valued with '2.16.840.1.113883.9.195.2.2' (LOI_ORL_Acknowledgement_Component) and '2.16.840.1.113883.9.90' (LOI_GU_Acknowledgement_Component) in any order, when acknowledging OML GU Profiles where MSH-21 contains '2.16.840.1.113883.9.85' (LOI_GU_PRU_Profile), or '2.16.840.1.113883.9.86' (LOI_GU_PRN_Profile), or '2.16.840.1.113883.9.78' (LOI_GU_Component).
+	[LOI_NG_ORL_Response_Profile_Component] LOI-76: MSH-21 (Message Profile Identifier) SHALL be valued with '2.16.840.1.113883.9.195.2.4' (LOI_NG_ORL_ Response_Profile) or two occurrences SHALL be valued with '2.16.840.1.113883.9.195.2.2' (LOI_ORL_Acknowledgement_Component) and '2.16.840.1.113883.9.91' (LOI_NG_Acknowledgement_Component) in any order, when acknowledging OML NG Profiles where MSH-21 contains '2.16.840.1.113883.9.87' (LOI_NG_PRU_Profile), or '2.16.840.1.113883.9.88' (LOI_NG_PRN_Profile), or '2.16.840.1.113883.9.79' (LOI_NG_Component).
+
+	LOI-47: The value of ORC-2 (Placer Order Number) SHALL NOT be valued identical to another instance of ORC-2 (Placer Order Number) within the same message excluding the Prior Result group(s).
+
+	LOI-79-b: If any of OBR-7 (Observation Date/Time), OBR-8 (Observation End Date/Time), SPM-17.1 (Range Start Date/Time) or SPM-17.2 (Range End Date/Time) contain a time zone offset then all SHALL contain a time zone offset.
+	LOI-50: If present, OBR-8 (Observation End Date/Time) SHALL be equal to or later than OBR-7 (Observation Date/Time).
+	LOI-64: The value of SPM-1 (Set ID – SPM) SHALL start at '1' and be incremented sequentially within the Order Group.
+
+	
+	** NOT Implemented **
+	out of scope
+		[LAB_NB_Component] LOI-30: An occurrence of MSH-21 (Message Profile Identifier) SHALL be valued with '2.16.840.1.113883.9.24'.
+		[LAB_TO_Component] LOI-31: An occurrence of MSH-21 (Message Profile Identifier) SHALL be valued with '2.16.840.1.113883.9.22'.
+		[LAB_XO_Component] LOI-32: An occurrence of MSH-21 (Message Profile Identifier) SHALL be valued with '2.16.840.1.113883.9.23'.
+		[LOI_PR_Component] LOI-33: An occurrence of MSH-21 (Message Profile Identifier) SHALL be valued with '2.16.840.1.113883.9.95'.
+		[LOI_RC_Component] LOI-34: An occurrence of MSH-21 (Message Profile Identifier) SHALL be valued with '2.16.840.1.113883.9.96'.
+		[LAB_FRU_Component] LOI-79-a: An occurrence of MSH-21 (Message Profile Identifier) SHALL be valued with '2.16.840.1.113883.9.83'.
+		[LAB_FRN_Component] LOI-80: An occurrence of MSH-21 (Message Profile Identifier) SHALL be valued with '2.16.840.1.113883.9.84'.
+		[LAB_FRU_Component] LOI-48: If valued, ORC-3 (Filler Order Number) SHALL NOT be valued identical to another instance of ORC-3 (Filler Order Number) within the same message excluding the Prior Result group(s).
+	end out of scope
+	
+		LOI-61: The value of OBX-5 (Observation Value) SHALL NOT be truncated.
+-->
+		<Datatype>
+			<!-- EI_GU-->
+			<ByID ID="EI_GU">
+				<Constraint ID="LOI-1" Target="3[1]">
+					<Description>EI_GU.3 (Universal ID) SHALL be valued with an ISO-compliant OID.</Description>
+					<Assertion>
+						<Format Path="3[1]" Regex="[0-2](\.(0|[1-9][0-9]*))*"/>
+					</Assertion>
+				</Constraint>
+				<Constraint ID="LOI-2" Target="4[1]">
+					<Description>EI_GU.4 (Universal ID Type) SHALL contain the value 'ISO' drawn from code system HL70301.</Description>
+					<Assertion>
+						<PlainText Path="4[1]" Text="ISO" IgnoreCase="false"/>
+					</Assertion>
+				</Constraint>
+			</ByID>
+			<!-- HD_GU-->
+			<ByID ID="HD_GU">
+				<Constraint ID="LOI-3" Target="2[1]">
+					<Description>HD_GU.2 (Universal ID) SHALL be valued with an ISO-compliant OID.</Description>
+					<Assertion>
+						<Format Path="2[1]" Regex="[0-2](\.(0|[1-9][0-9]*))*"/>
+					</Assertion>
+				</Constraint>
+				<Constraint ID="LOI-4" Target="3[1]">
+					<Description>HD_GU.3 (Universal ID Type) SHALL contain the value 'ISO' drawn from code system HL70301.</Description>
+					<Assertion>
+						<PlainText Path="3[1]" Text="ISO" IgnoreCase="false"/>
+					</Assertion>
+				</Constraint>
+			</ByID>
+			<!-- XPN_1-->
+			<ByID ID="XPN_1_NK1_2">
+				<Constraint ID="LOI-6" Target="7[1]">
+					<Description>XPN_1-7 (Name Type Code) SHALL NOT be valued 'U'.</Description>
+					<Assertion>
+						<NOT>
+							<PlainText Path="7[1]" Text="U" IgnoreCase="false"/>
+						</NOT>
+					</Assertion>
+				</Constraint>
+			</ByID>
+			<ByID ID="XPN_1_NK1_30">
+				<Constraint ID="LOI-6" Target="7[1]">
+					<Description>XPN_1-7 (Name Type Code) SHALL NOT be valued 'U'.</Description>
+					<Assertion>
+						<NOT>
+							<PlainText Path="7[1]" Text="U" IgnoreCase="false"/>
+						</NOT>
+					</Assertion>
+				</Constraint>
+			</ByID>
+			<ByID ID="XPN_1_IN1">
+				<Constraint ID="LOI-6" Target="7[1]">
+					<Description>XPN_1-7 (Name Type Code) SHALL NOT be valued 'U'.</Description>
+					<Assertion>
+						<NOT>
+							<PlainText Path="7[1]" Text="U" IgnoreCase="false"/>
+						</NOT>
+					</Assertion>
+				</Constraint>
+			</ByID>
+			<ByID ID="XPN_1_GT1">
+				<Constraint ID="LOI-6" Target="7[1]">
+					<Description>XPN_1-7 (Name Type Code) SHALL NOT be valued 'U'.</Description>
+					<Assertion>
+						<NOT>
+							<PlainText Path="7[1]" Text="U" IgnoreCase="false"/>
+						</NOT>
+					</Assertion>
+				</Constraint>
+			</ByID>
+			<!-- TS_0 -->
+			<ByID ID="TS_0">
+				<Constraint ID="NIST-xxx" Target="1[1]">
+					<Description>TS_0 SHALL be precise to the year.</Description>
+					<Assertion>
+						<Format Regex="\d{4}.*" Path="1[1]"/>
+					</Assertion>
+				</Constraint>
+			</ByID>
+			<!-- TS_1 -->
+			<ByID ID="TS_1">
+				<Constraint ID="NIST-xxx" Target="1[1]">
+					<Description>TS_1 SHALL be precise to the second.</Description>
+					<Assertion>
+						<Format Regex="\d{14}.*" Path="1[1]"/>
+					</Assertion>
+				</Constraint>
+			</ByID>
+			<!-- TS_2 -->
+			<ByID ID="TS_2">
+				<Constraint ID="NIST-xxx" Target="1[1]">
+					<Description>TS_2 SHALL be precise to the year.</Description>
+					<Assertion>
+						<Format Regex="\d{4}.*" Path="1[1]"/>
+					</Assertion>
+				</Constraint>
+			</ByID>
+			<!-- TS_3 -->
+			<ByID ID="TS_3">
+				<Constraint ID="NIST-xxx" Target="1[1]">
+					<Description>TS_3 SHALL be precise to the year.</Description>
+					<Assertion>
+						<Format Regex="\d{4}.*" Path="1[1]"/>
+					</Assertion>
+				</Constraint>
+			</ByID>
+			<!-- TS_4 -->
+			<ByID ID="TS_4">
+				<Constraint ID="NIST-xxx" Target="1[1]">
+					<Description>TS_4 SHALL be precise to the day OR be valued '0000'.</Description>
+					<Assertion>
+						<OR>
+							<PlainText Path="1[1]" Text="0000" IgnoreCase="false"/>
+							<AND>
+								<NOT>
+									<Format Regex="0{4}.*" Path="1[1]"/>
+								</NOT>
+								<Format Regex="\d{8}.*" Path="1[1]"/>
+							</AND>
+						</OR>
+					</Assertion>
+				</Constraint>
+			</ByID>
+			<!-- TS_5 -->
+			<ByID ID="TS_5">
+				<Constraint ID="NIST-xxx" Target="1[1]">
+					<Description>TS_5 SHALL be precise to the day.</Description>
+					<Assertion>
+						<Format Regex="\d{8}.*" Path="1[1]"/>
+					</Assertion>
+				</Constraint>
+			</ByID>
+			<!-- TS_6 -->
+			<!-- TS_7 -->
+			<ByID ID="TS_7">
+				<Constraint ID="NIST-xxx" Target="1[1]">
+					<Description>TS_7 SHALL be precise to the day.</Description>
+					<Assertion>
+						<Format Regex="\d{8}.*" Path="1[1]"/>
+					</Assertion>
+				</Constraint>
+			</ByID>
+			<!-- XAD -->
+			<ByID ID="XAD_LOI_PID">
+				<Constraint ID="NIST-xxx" Target="5[1]">
+					<Description>XAD-5 (Zip or Postal Code) SHALL be a valid USPS postal code.​</Description>
+					<Assertion>
+						<OR>
+							<Format Regex="\d{5}" Path="5[1]"/>
+							<Format Regex="\d{5}-\d{4}" Path="5[1]"/>
+						</OR>
+					</Assertion>
+				</Constraint>
+			</ByID>
+			<ByID ID="XAD_LOI_NK1_4">
+				<Constraint ID="NIST-xxx" Target="5[1]">
+					<Description>XAD-5 (Zip or Postal Code) SHALL be a valid USPS postal code.​</Description>
+					<Assertion>
+						<OR>
+							<Format Regex="\d{5}" Path="5[1]"/>
+							<Format Regex="\d{5}-\d{4}" Path="5[1]"/>
+						</OR>
+					</Assertion>
+				</Constraint>
+			</ByID>
+			<ByID ID="XAD_LOI_NK1_32">
+				<Constraint ID="NIST-xxx" Target="5[1]">
+					<Description>XAD-5 (Zip or Postal Code) SHALL be a valid USPS postal code.​</Description>
+					<Assertion>
+						<OR>
+							<Format Regex="\d{5}" Path="5[1]"/>
+							<Format Regex="\d{5}-\d{4}" Path="5[1]"/>
+						</OR>
+					</Assertion>
+				</Constraint>
+			</ByID>
+			<ByID ID="XAD_LOI_IN1_5">
+				<Constraint ID="NIST-xxx" Target="5[1]">
+					<Description>XAD-5 (Zip or Postal Code) SHALL be a valid USPS postal code.​</Description>
+					<Assertion>
+						<OR>
+							<Format Regex="\d{5}" Path="5[1]"/>
+							<Format Regex="\d{5}-\d{4}" Path="5[1]"/>
+						</OR>
+					</Assertion>
+				</Constraint>
+			</ByID>
+			<ByID ID="XAD_LOI_IN1_19">
+				<Constraint ID="NIST-xxx" Target="5[1]">
+					<Description>XAD-5 (Zip or Postal Code) SHALL be a valid USPS postal code.​</Description>
+					<Assertion>
+						<OR>
+							<Format Regex="\d{5}" Path="5[1]"/>
+							<Format Regex="\d{5}-\d{4}" Path="5[1]"/>
+						</OR>
+					</Assertion>
+				</Constraint>
+			</ByID>
+			<ByID ID="XAD_LOI_GT1">
+				<Constraint ID="NIST-xxx" Target="5[1]">
+					<Description>XAD-5 (Zip or Postal Code) SHALL be a valid USPS postal code.​</Description>
+					<Assertion>
+						<OR>
+							<Format Regex="\d{5}" Path="5[1]"/>
+							<Format Regex="\d{5}-\d{4}" Path="5[1]"/>
+						</OR>
+					</Assertion>
+				</Constraint>
+			</ByID>
+			<ByID ID="XAD_LOI_ORC">
+				<Constraint ID="NIST-xxx" Target="5[1]">
+					<Description>XAD-5 (Zip or Postal Code) SHALL be a valid USPS postal code.​</Description>
+					<Assertion>
+						<OR>
+							<Format Regex="\d{5}" Path="5[1]"/>
+							<Format Regex="\d{5}-\d{4}" Path="5[1]"/>
+						</OR>
+					</Assertion>
+				</Constraint>
+			</ByID>
+			<ByID ID="XAD_LOI_PRT">
+				<Constraint ID="NIST-xxx" Target="5[1]">
+					<Description>XAD-5 (Zip or Postal Code) SHALL be a valid USPS postal code.​</Description>
+					<Assertion>
+						<OR>
+							<Format Regex="\d{5}" Path="5[1]"/>
+							<Format Regex="\d{5}-\d{4}" Path="5[1]"/>
+						</OR>
+					</Assertion>
+				</Constraint>
+			</ByID>
+			<ByID ID="XAD_LOI_OBX">
+				<Constraint ID="NIST-xxx" Target="5[1]">
+					<Description>XAD-5 (Zip or Postal Code) SHALL be a valid USPS postal code.​</Description>
+					<Assertion>
+						<OR>
+							<Format Regex="\d{5}" Path="5[1]"/>
+							<Format Regex="\d{5}-\d{4}" Path="5[1]"/>
+						</OR>
+					</Assertion>
+				</Constraint>
+			</ByID>
+		</Datatype>
+		<Segment>
+			<ByID ID="MSH_LOI_GU">
+				<!-- LOI_Common_Component -->
+				<Constraint ID="LOI-5" Target="12[1].1[1]">
+					<Description>MSH-12.1 (Version ID.Version Identifier) SHALL be valued with '2.5.1' drawn from the code system HL70104.</Description>
+					<Assertion>
+						<AND>
+							<Presence Path="12[1].1[1]"/>
+							<PlainText Path="12[1].1[1]" Text="2.5.1" IgnoreCase="false"/>
+						</AND>
+					</Assertion>
+				</Constraint>
+				<Constraint ID="LOI-7" Target="1[1]">
+					<Description>MSH-1 (Field Separator) SHALL contain the constant value '|'.</Description>
+					<Assertion>
+						<AND>
+							<Presence Path="1[1]"/>
+							<PlainText Path="1[1]" Text="|" IgnoreCase="false"/>
+						</AND>
+					</Assertion>
+				</Constraint>
+				<Constraint ID="LOI-8" Target="2[1]">
+					<Description>MSH-2 (Encoding Characters) SHALL contain the constant value '^~\&amp;' or the constant value  '^~\&amp;#'.</Description>
+					<Assertion>
+						<OR>
+							<AND>
+								<Presence Path="2[1]"/>
+								<PlainText Path="2[1]" Text="^~\&amp;" IgnoreCase="false"/>
+							</AND>
+							<AND>
+								<Presence Path="2[1]"/>
+								<PlainText Path="2[1]" Text="^~\&amp;#" IgnoreCase="false"/>
+							</AND>
+						</OR>
+					</Assertion>
+				</Constraint>
+				<Constraint ID="LOI-9" Target="9[1].1[1]">
+					<Description>MSH-9.1 (Message Type.Message Code) SHALL contain the constant value 'OML' drawn from code system HL70076.</Description>
+					<Assertion>
+						<AND>
+							<Presence Path="9[1].1[1]"/>
+							<PlainText Path="9[1].1[1]" Text="OML" IgnoreCase="false"/>
+						</AND>
+					</Assertion>
+				</Constraint>
+				<Constraint ID="LOI-10" Target="9[1].2[1]">
+					<Description>MSH-9.2 (Message Type.Trigger Event) SHALL contain the constant value 'O21' drawn from code system HL70003.</Description>
+					<Assertion>
+						<AND>
+							<Presence Path="9[1].2[1]"/>
+							<PlainText Path="9[1].2[1]" Text="O21" IgnoreCase="false"/>
+						</AND>
+					</Assertion>
+				</Constraint>
+				<Constraint ID="LOI-11" Target="9[1].3[1]">
+					<Description>MSH-9.3 (Message Type.Message Structure) SHALL contain the constant value 'OML_O21' drawn from code system HL70354.</Description>
+					<Assertion>
+						<AND>
+							<Presence Path="9[1].3[1]"/>
+							<PlainText Path="9[1].3[1]" Text="OML_O21" IgnoreCase="false"/>
+						</AND>
+					</Assertion>
+				</Constraint>
+			</ByID>
+			<ByID ID="MSH_LOI_NG">
+				<!-- LOI_Common_Component -->
+				<Constraint ID="LOI-5" Target="12[1].1[1]">
+					<Description>MSH-12.1 (Version ID.Version Identifier) SHALL be valued with '2.5.1' drawn from the code system HL70104.</Description>
+					<Assertion>
+						<AND>
+							<Presence Path="12[1].1[1]"/>
+							<PlainText Path="12[1].1[1]" Text="2.5.1" IgnoreCase="false"/>
+						</AND>
+					</Assertion>
+				</Constraint>
+				<Constraint ID="LOI-7" Target="1[1]">
+					<Description>MSH-1 (Field Separator) SHALL contain the constant value '|'.</Description>
+					<Assertion>
+						<AND>
+							<Presence Path="1[1]"/>
+							<PlainText Path="1[1]" Text="|" IgnoreCase="false"/>
+						</AND>
+					</Assertion>
+				</Constraint>
+				<Constraint ID="LOI-8" Target="2[1]">
+					<Description>MSH-2 (Encoding Characters) SHALL contain the constant value '^~\&amp;' or the constant value  '^~\&amp;#'.</Description>
+					<Assertion>
+						<OR>
+							<AND>
+								<Presence Path="2[1]"/>
+								<PlainText Path="2[1]" Text="^~\&amp;" IgnoreCase="false"/>
+							</AND>
+							<AND>
+								<Presence Path="2[1]"/>
+								<PlainText Path="2[1]" Text="^~\&amp;#" IgnoreCase="false"/>
+							</AND>
+						</OR>
+					</Assertion>
+				</Constraint>
+				<Constraint ID="LOI-9" Target="9[1].1[1]">
+					<Description>MSH-9.1 (Message Type.Message Code) SHALL contain the constant value 'OML' drawn from code system HL70076.</Description>
+					<Assertion>
+						<AND>
+							<Presence Path="9[1].1[1]"/>
+							<PlainText Path="9[1].1[1]" Text="OML" IgnoreCase="false"/>
+						</AND>
+					</Assertion>
+				</Constraint>
+				<Constraint ID="LOI-10" Target="9[1].2[1]">
+					<Description>MSH-9.2 (Message Type.Trigger Event) SHALL contain the constant value 'O21' drawn from code system HL70003.</Description>
+					<Assertion>
+						<AND>
+							<Presence Path="9[1].2[1]"/>
+							<PlainText Path="9[1].2[1]" Text="O21" IgnoreCase="false"/>
+						</AND>
+					</Assertion>
+				</Constraint>
+				<Constraint ID="LOI-11" Target="9[1].3[1]">
+					<Description>MSH-9.3 (Message Type.Message Structure) SHALL contain the constant value 'OML_O21' drawn from code system HL70354.</Description>
+					<Assertion>
+						<AND>
+							<Presence Path="9[1].3[1]"/>
+							<PlainText Path="9[1].3[1]" Text="OML_O21" IgnoreCase="false"/>
+						</AND>
+					</Assertion>
+				</Constraint>
+			</ByID>
+			<ByID ID="MSH_ORL_GU">
+				<!-- LOI_ORL_Acknowledgement_Component -->
+				<!-- [TODO] missing from IG -->
+				<Constraint ID="NIST-xxx" Target="1[1]">
+					<Description>MSH-1 (Field Separator) SHALL contain the constant value '|'.</Description>
+					<Assertion>
+						<AND>
+							<Presence Path="1[1]"/>
+							<PlainText Path="1[1]" Text="|" IgnoreCase="false"/>
+						</AND>
+					</Assertion>
+				</Constraint>
+				<!-- [TODO] missing from IG -->
+				<Constraint ID="NIST-xxx" Target="2[1]">
+					<Description>MSH-2 (Encoding Characters) SHALL contain the constant value '^~\&amp;' or the constant value  '^~\&amp;#'.</Description>
+					<Assertion>
+						<OR>
+							<AND>
+								<Presence Path="2[1]"/>
+								<PlainText Path="2[1]" Text="^~\&amp;" IgnoreCase="false"/>
+							</AND>
+							<AND>
+								<Presence Path="2[1]"/>
+								<PlainText Path="2[1]" Text="^~\&amp;#" IgnoreCase="false"/>
+							</AND>
+						</OR>
+					</Assertion>
+				</Constraint>
+				<Constraint ID="LOI-69" Target="9[1].1[1]">
+					<Description>MSH-9.1 (Message Code) SHALL contain the value 'ORL' drawn from code system HL70076.</Description>
+					<Assertion>
+						<AND>
+							<Presence Path="9[1].1[1]"/>
+							<PlainText Path="9[1].1[1]" Text="ORL" IgnoreCase="false"/>
+						</AND>
+					</Assertion>
+				</Constraint>
+				<Constraint ID="LOI-70" Target="9[1].2[1]">
+					<Description>MSH-9.2 (Trigger Event) SHALL contain the value 'O22' drawn from code system HL70003.</Description>
+					<Assertion>
+						<AND>
+							<Presence Path="9[1].2[1]"/>
+							<PlainText Path="9[1].2[1]" Text="O22" IgnoreCase="false"/>
+						</AND>
+					</Assertion>
+				</Constraint>
+				<Constraint ID="LOI-71" Target="9[1].3[1]">
+					<Description>MSH-9.3 (Message Structure) SHALL contain the value 'ORL_O22' drawn from code system HL70354.</Description>
+					<Assertion>
+						<AND>
+							<Presence Path="9[1].3[1]"/>
+							<PlainText Path="9[1].3[1]" Text="ORL_O22" IgnoreCase="false"/>
+						</AND>
+					</Assertion>
+				</Constraint>
+				<Constraint ID="LOI-72" Target="12[1].1[1]">
+					<Description>MSH-12.1 (Version ID) SHALL contain the constant value '2.5.1' drawn from code system HL70104.</Description>
+					<Assertion>
+						<AND>
+							<Presence Path="12[1].1[1]"/>
+							<PlainText Path="12[1].1[1]" Text="2.5.1" IgnoreCase="false"/>
+						</AND>
+					</Assertion>
+				</Constraint>
+				<Constraint ID="LOI-74" Target="16[1]">
+					<Description>MSH-16 (Application Acknowledgement Type) SHALL contain the constant value 'NE' drawn from code system HL70155.</Description>
+					<Assertion>
+						<AND>
+							<Presence Path="16[1]"/>
+							<PlainText Path="16[1]" Text="NE" IgnoreCase="false"/>
+						</AND>
+					</Assertion>
+				</Constraint>
+			</ByID>
+			<ByID ID="MSH_ORL_NG">
+				<!-- LOI_ORL_Acknowledgement_Component -->
+				<!-- [TODO] missing from IG -->
+				<Constraint ID="NIST-xxx" Target="1[1]">
+					<Description>MSH-1 (Field Separator) SHALL contain the constant value '|'.</Description>
+					<Assertion>
+						<AND>
+							<Presence Path="1[1]"/>
+							<PlainText Path="1[1]" Text="|" IgnoreCase="false"/>
+						</AND>
+					</Assertion>
+				</Constraint>
+				<!-- [TODO] missing from IG -->
+				<Constraint ID="NIST-xxx" Target="2[1]">
+					<Description>MSH-2 (Encoding Characters) SHALL contain the constant value '^~\&amp;' or the constant value  '^~\&amp;#'.</Description>
+					<Assertion>
+						<OR>
+							<AND>
+								<Presence Path="2[1]"/>
+								<PlainText Path="2[1]" Text="^~\&amp;" IgnoreCase="false"/>
+							</AND>
+							<AND>
+								<Presence Path="2[1]"/>
+								<PlainText Path="2[1]" Text="^~\&amp;#" IgnoreCase="false"/>
+							</AND>
+						</OR>
+					</Assertion>
+				</Constraint>
+				<Constraint ID="LOI-69" Target="9[1].1[1]">
+					<Description>MSH-9.1 (Message Code) SHALL contain the value 'ORL' drawn from code system HL70076.</Description>
+					<Assertion>
+						<AND>
+							<Presence Path="9[1].1[1]"/>
+							<PlainText Path="9[1].1[1]" Text="ORL" IgnoreCase="false"/>
+						</AND>
+					</Assertion>
+				</Constraint>
+				<Constraint ID="LOI-70" Target="9[1].2[1]">
+					<Description>MSH-9.2 (Trigger Event) SHALL contain the value 'O22' drawn from code system HL70003.</Description>
+					<Assertion>
+						<AND>
+							<Presence Path="9[1].2[1]"/>
+							<PlainText Path="9[1].2[1]" Text="O22" IgnoreCase="false"/>
+						</AND>
+					</Assertion>
+				</Constraint>
+				<Constraint ID="LOI-71" Target="9[1].3[1]">
+					<Description>MSH-9.3 (Message Structure) SHALL contain the value 'ORL_O22' drawn from code system HL70354.</Description>
+					<Assertion>
+						<AND>
+							<Presence Path="9[1].3[1]"/>
+							<PlainText Path="9[1].3[1]" Text="ORL_O22" IgnoreCase="false"/>
+						</AND>
+					</Assertion>
+				</Constraint>
+				<Constraint ID="LOI-72" Target="12[1].1[1]">
+					<Description>MSH-12.1 (Version ID) SHALL contain the constant value '2.5.1' drawn from code system HL70104.</Description>
+					<Assertion>
+						<AND>
+							<Presence Path="12[1].1[1]"/>
+							<PlainText Path="12[1].1[1]" Text="2.5.1" IgnoreCase="false"/>
+						</AND>
+					</Assertion>
+				</Constraint>
+				<Constraint ID="LOI-74" Target="16[1]">
+					<Description>MSH-16 (Application Acknowledgement Type) SHALL contain the constant value 'NE' drawn from code system HL70155.</Description>
+					<Assertion>
+						<AND>
+							<Presence Path="16[1]"/>
+							<PlainText Path="16[1]" Text="NE" IgnoreCase="false"/>
+						</AND>
+					</Assertion>
+				</Constraint>
+			</ByID>
+			<ByID ID="MSH_ACK_GU">
+				<!-- LOI_Acknowledgement_Component -->
+				<Constraint ID="LOI-18" Target="1[1]">
+					<Description>MSH-1 (Field Separator) SHALL contain the constant value '|'.</Description>
+					<Assertion>
+						<AND>
+							<Presence Path="1[1]"/>
+							<PlainText Path="1[1]" Text="|" IgnoreCase="false"/>
+						</AND>
+					</Assertion>
+				</Constraint>
+				<Constraint ID="LOI-19" Target="2[1]">
+					<Description>MSH-2 (Encoding Characters) SHALL contain the constant value '^~\&amp;' or the constant value  '^~\&amp;#'.</Description>
+					<Assertion>
+						<OR>
+							<AND>
+								<Presence Path="2[1]"/>
+								<PlainText Path="2[1]" Text="^~\&amp;" IgnoreCase="false"/>
+							</AND>
+							<AND>
+								<Presence Path="2[1]"/>
+								<PlainText Path="2[1]" Text="^~\&amp;#" IgnoreCase="false"/>
+							</AND>
+						</OR>
+					</Assertion>
+				</Constraint>
+				<Constraint ID="LOI-20" Target="9[1].1[1]">
+					<!-- [TODO] fix text typo -->
+					<Description>MSH-9 (Message Type) SHALL contain the value 'ACK'ACK' drawn from the code system HL70076.</Description>
+					<Assertion>
+						<AND>
+							<Presence Path="9[1].1[1]"/>
+							<PlainText Path="9[1].1[1]" Text="ACK" IgnoreCase="false"/>
+						</AND>
+					</Assertion>
+				</Constraint>
+				<Constraint ID="LOI-65" Target="9[1].2[1]">
+					<Description>MSH-9.2 (Message Type.Trigger Event) SHALL contain the value 'O21' drawn from the code system HL70003.</Description>
+					<Assertion>
+						<AND>
+							<Presence Path="9[1].2[1]"/>
+							<PlainText Path="9[1].2[1]" Text="O21" IgnoreCase="false"/>
+						</AND>
+					</Assertion>
+				</Constraint>
+				<Constraint ID="LOI-66" Target="9[1].3[1]">
+					<Description>MSH-9.3 (Message Type.Message Structure) SHALL contain the value 'ACK' drawn from the code system HL70354.</Description>
+					<Assertion>
+						<AND>
+							<Presence Path="9[1].3[1]"/>
+							<PlainText Path="9[1].3[1]" Text="ACK" IgnoreCase="false"/>
+						</AND>
+					</Assertion>
+				</Constraint>
+				<!-- [TODO] missing from IG -->
+				<Constraint ID="NIST-xxx" Target="12[1].1[1]">
+					<Description>MSH-12.1 (Version ID) SHALL contain the constant value '2.5.1'.</Description>
+					<Assertion>
+						<AND>
+							<Presence Path="12[1].1[1]"/>
+							<PlainText Path="12[1].1[1]" Text="2.5.1" IgnoreCase="false"/>
+						</AND>
+					</Assertion>
+				</Constraint>
+				<Constraint ID="LOI-67" Target="15[1]">
+					<Description>MSH-15 (Accept Acknowledgement Type) SHALL contain the constant value 'NE' drawn from the code system HL70155.</Description>
+					<Assertion>
+						<AND>
+							<Presence Path="15[1]"/>
+							<PlainText Path="15[1]" Text="NE" IgnoreCase="false"/>
+						</AND>
+					</Assertion>
+				</Constraint>
+				<Constraint ID="LOI-68" Target="16[1]">
+					<Description>MSH-16 (Application Acknowledgement Type) SHALL contain the constant value 'NE' drawn from the code system HL70155.</Description>
+					<Assertion>
+						<AND>
+							<Presence Path="16[1]"/>
+							<PlainText Path="16[1]" Text="NE" IgnoreCase="false"/>
+						</AND>
+					</Assertion>
+				</Constraint>
+			</ByID>
+			<ByID ID="MSH_ACK_NG">
+				<!-- LOI_Acknowledgement_Component -->
+				<Constraint ID="LOI-18" Target="1[1]">
+					<Description>MSH-1 (Field Separator) SHALL contain the constant value '|'.</Description>
+					<Assertion>
+						<AND>
+							<Presence Path="1[1]"/>
+							<PlainText Path="1[1]" Text="|" IgnoreCase="false"/>
+						</AND>
+					</Assertion>
+				</Constraint>
+				<Constraint ID="LOI-19" Target="2[1]">
+					<Description>MSH-2 (Encoding Characters) SHALL contain the constant value '^~\&amp;' or the constant value  '^~\&amp;#'.</Description>
+					<Assertion>
+						<OR>
+							<AND>
+								<Presence Path="2[1]"/>
+								<PlainText Path="2[1]" Text="^~\&amp;" IgnoreCase="false"/>
+							</AND>
+							<AND>
+								<Presence Path="2[1]"/>
+								<PlainText Path="2[1]" Text="^~\&amp;#" IgnoreCase="false"/>
+							</AND>
+						</OR>
+					</Assertion>
+				</Constraint>
+				<Constraint ID="LOI-20" Target="9[1].1[1]">
+					<!-- [TODO] fix text typo -->
+					<Description>MSH-9 (Message Type) SHALL contain the value 'ACK'ACK' drawn from the code system HL70076.</Description>
+					<Assertion>
+						<AND>
+							<Presence Path="9[1].1[1]"/>
+							<PlainText Path="9[1].1[1]" Text="ACK" IgnoreCase="false"/>
+						</AND>
+					</Assertion>
+				</Constraint>
+				<Constraint ID="LOI-65" Target="9[1].2[1]">
+					<Description>MSH-9.2 (Message Type.Trigger Event) SHALL contain the value 'O21' drawn from the code system HL70003.</Description>
+					<Assertion>
+						<AND>
+							<Presence Path="9[1].2[1]"/>
+							<PlainText Path="9[1].2[1]" Text="O21" IgnoreCase="false"/>
+						</AND>
+					</Assertion>
+				</Constraint>
+				<Constraint ID="LOI-66" Target="9[1].3[1]">
+					<Description>MSH-9.3 (Message Type.Message Structure) SHALL contain the value 'ACK' drawn from the code system HL70354.</Description>
+					<Assertion>
+						<AND>
+							<Presence Path="9[1].3[1]"/>
+							<PlainText Path="9[1].3[1]" Text="ACK" IgnoreCase="false"/>
+						</AND>
+					</Assertion>
+				</Constraint>
+				<!-- [TODO] missing from IG -->
+				<Constraint ID="NIST-xxx" Target="12[1].1[1]">
+					<Description>MSH-12.1 (Version ID) SHALL contain the constant value '2.5.1'.</Description>
+					<Assertion>
+						<AND>
+							<Presence Path="12[1].1[1]"/>
+							<PlainText Path="12[1].1[1]" Text="2.5.1" IgnoreCase="false"/>
+						</AND>
+					</Assertion>
+				</Constraint>
+				<Constraint ID="LOI-67" Target="15[1]">
+					<Description>MSH-15 (Accept Acknowledgement Type) SHALL contain the constant value 'NE' drawn from the code system HL70155.</Description>
+					<Assertion>
+						<AND>
+							<Presence Path="15[1]"/>
+							<PlainText Path="15[1]" Text="NE" IgnoreCase="false"/>
+						</AND>
+					</Assertion>
+				</Constraint>
+				<Constraint ID="LOI-68" Target="16[1]">
+					<Description>MSH-16 (Application Acknowledgement Type) SHALL contain the constant value 'NE' drawn from the code system HL70155.</Description>
+					<Assertion>
+						<AND>
+							<Presence Path="16[1]"/>
+							<PlainText Path="16[1]" Text="NE" IgnoreCase="false"/>
+						</AND>
+					</Assertion>
+				</Constraint>
+			</ByID>
+			<ByID ID="PID_LOI_GU">
+				<!-- LOI_Common_Component -->
+				<!-- [TODO] missing in IG : LOI_ORL_Acknowledgement_Component - do we want to add ? -->
+				<Constraint ID="LOI-35" Target="1[1]">
+					<Description>PID-1 (Set ID - PID) SHALL be valued with the constant value '1'.</Description>
+					<Assertion>
+						<AND>
+							<Presence Path="1[1]"/>
+							<PlainText Path="1[1]" Text="1" IgnoreCase="false"/>
+						</AND>
+					</Assertion>
+				</Constraint>
+			</ByID>
+			<ByID ID="PID_LOI_NG">
+				<!-- LOI_Common_Component -->
+				<!-- [TODO] missing in IG : LOI_ORL_Acknowledgement_Component - do we want to add ? -->
+				<Constraint ID="LOI-35" Target="1[1]">
+					<Description>PID-1 (Set ID - PID) SHALL be valued with the constant value '1'.</Description>
+					<Assertion>
+						<AND>
+							<Presence Path="1[1]"/>
+							<PlainText Path="1[1]" Text="1" IgnoreCase="false"/>
+						</AND>
+					</Assertion>
+				</Constraint>
+			</ByID>
+			<ByID ID="PID_LOI_GU_PH">
+				<!-- LOI_Common_Component -->
+				<!-- [TODO] missing in IG : LOI_ORL_Acknowledgement_Component - do we want to add ? -->
+				<Constraint ID="LOI-35" Target="1[1]">
+					<Description>PID-1 (Set ID - PID) SHALL be valued with the constant value '1'.</Description>
+					<Assertion>
+						<AND>
+							<Presence Path="1[1]"/>
+							<PlainText Path="1[1]" Text="1" IgnoreCase="false"/>
+						</AND>
+					</Assertion>
+				</Constraint>
+			</ByID>
+			<ByID ID="PID_LOI_NG_PH">
+				<!-- LOI_Common_Component -->
+				<!-- [TODO] missing in IG : LOI_ORL_Acknowledgement_Component - do we want to add ? -->
+				<Constraint ID="LOI-35" Target="1[1]">
+					<Description>PID-1 (Set ID - PID) SHALL be valued with the constant value '1'.</Description>
+					<Assertion>
+						<AND>
+							<Presence Path="1[1]"/>
+							<PlainText Path="1[1]" Text="1" IgnoreCase="false"/>
+						</AND>
+					</Assertion>
+				</Constraint>
+			</ByID>
+			<ByID ID="NK1_LOI_GU">
+				<!-- LOI_Common_Component -->
+				<Constraint ID="LOI-38" Target="1[1]">
+					<Description>NK1-1 (Set ID - NK1) SHALL be valued sequentially with the starting value '1'.</Description>
+					<Assertion>
+						<SetID Path="1[1]"/>
+					</Assertion>
+				</Constraint>
+			</ByID>
+			<ByID ID="NK1_LOI_NG">
+				<!-- LOI_Common_Component -->
+				<Constraint ID="LOI-38" Target="1[1]">
+					<Description>NK1-1 (Set ID - NK1) SHALL be valued sequentially with the starting value '1'.</Description>
+					<Assertion>
+						<SetID Path="1[1]"/>
+					</Assertion>
+				</Constraint>
+			</ByID>
+			<ByID ID="NK1_LOI_GU_PH">
+				<!-- LOI_Common_Component -->
+				<Constraint ID="LOI-38" Target="1[1]">
+					<Description>NK1-1 (Set ID - NK1) SHALL be valued sequentially with the starting value '1'.</Description>
+					<Assertion>
+						<SetID Path="1[1]"/>
+					</Assertion>
+				</Constraint>
+			</ByID>
+			<ByID ID="NK1_LOI_NG_PH">
+				<!-- LOI_Common_Component -->
+				<Constraint ID="LOI-38" Target="1[1]">
+					<Description>NK1-1 (Set ID - NK1) SHALL be valued sequentially with the starting value '1'.</Description>
+					<Assertion>
+						<SetID Path="1[1]"/>
+					</Assertion>
+				</Constraint>
+			</ByID>
+			<ByID ID="PV1_LOI">
+				<!-- LOI_Common_Component -->
+				<Constraint ID="LOI-39" Target="1[1]">
+					<Description>PV1-1 (Set ID - PV1) SHALL be valued with the constant value '1'.</Description>
+					<Assertion>
+						<AND>
+							<Presence Path="1[1]"/>
+							<PlainText Path="1[1]" Text="1" IgnoreCase="false"/>
+						</AND>
+					</Assertion>
+				</Constraint>
+			</ByID>
+			<ByID ID="IN1_LOI_GU">
+				<!-- LOI_Common_Component -->
+				<Constraint ID="LOI-78" Target="1[1]">
+					<Description>IN1-1 (Set ID – IN1) SHALL be valued with the constant value '1'.</Description>
+					<Assertion>
+						<AND>
+							<Presence Path="1[1]"/>
+							<PlainText Path="1[1]" Text="1" IgnoreCase="false"/>
+						</AND>
+					</Assertion>
+				</Constraint>
+			</ByID>
+			<ByID ID="IN1_LOI_NG">
+				<!-- LOI_Common_Component -->
+				<Constraint ID="LOI-78" Target="1[1]">
+					<Description>IN1-1 (Set ID – IN1) SHALL be valued with the constant value '1'.</Description>
+					<Assertion>
+						<AND>
+							<Presence Path="1[1]"/>
+							<PlainText Path="1[1]" Text="1" IgnoreCase="false"/>
+						</AND>
+					</Assertion>
+				</Constraint>
+			</ByID>
+			<ByID ID="GT1_LOI_GU">
+				<Constraint ID="LOI-40" Target="1[1]">
+					<Description>GT1-1 (Set ID - GT1) SHALL be valued with the constant value '1'.</Description>
+					<Assertion>
+						<AND>
+							<Presence Path="1[1]"/>
+							<PlainText Path="1[1]" Text="1" IgnoreCase="false"/>
+						</AND>
+					</Assertion>
+				</Constraint>
+				<Constraint ID="LOI-41" Target="3[1]">
+					<Description>If GT1-3 (Guarantor Name) is ' "" ' then GT1-21 (Guarantor Organizational Name) SHALL be valued.</Description>
+					<Assertion>
+						<IMPLY>
+							<FORALL>
+								<Presence Path="3[1].1[1].1[1]"/>
+								<PlainText Path="3[1].1[1].1[1]" Text="&quot;&quot;" IgnoreCase="false"/>
+								<NOT>
+									<Presence Path="3[1].2[1]"/>
+								</NOT>
+								<NOT>
+									<Presence Path="3[1].3[1]"/>
+								</NOT>
+								<NOT>
+									<Presence Path="3[1].4[1]"/>
+								</NOT>
+								<NOT>
+									<Presence Path="3[1].5[1]"/>
+								</NOT>
+								<NOT>
+									<Presence Path="3[1].6[1]"/>
+								</NOT>
+								<NOT>
+									<Presence Path="3[1].7[1]"/>
+								</NOT>
+								<NOT>
+									<Presence Path="3[1].8[1]"/>
+								</NOT>
+								<NOT>
+									<Presence Path="3[1].9[1]"/>
+								</NOT>
+								<NOT>
+									<Presence Path="3[1].10[1]"/>
+								</NOT>
+								<NOT>
+									<Presence Path="3[1].11[1]"/>
+								</NOT>
+								<NOT>
+									<Presence Path="3[1].12[1]"/>
+								</NOT>
+								<NOT>
+									<Presence Path="3[1].13[1]"/>
+								</NOT>
+								<NOT>
+									<Presence Path="3[1].14[1]"/>
+								</NOT>
+							</FORALL>
+							<Presence Path="21[1]"/>
+						</IMPLY>
+					</Assertion>
+				</Constraint>
+				<Constraint ID="LOI-42" Target="21[1]">
+					<Description>If GT1-21 (Guarantor Organization Name) is valued ' "" ' then GT1-3 (Guarantor Name) SHALL be valued</Description>
+					<Assertion>
+						<IMPLY>
+							<FORALL>
+								<Presence Path="21[1].1[1]"/>
+								<PlainText Path="21[1].1[1]" Text="&quot;&quot;" IgnoreCase="false"/>
+								<NOT>
+									<Presence Path="21[1].2[1]"/>
+								</NOT>
+								<NOT>
+									<Presence Path="21[1].3[1]"/>
+								</NOT>
+								<NOT>
+									<Presence Path="21[1].4[1]"/>
+								</NOT>
+								<NOT>
+									<Presence Path="21[1].5[1]"/>
+								</NOT>
+								<NOT>
+									<Presence Path="21[1].6[1]"/>
+								</NOT>
+								<NOT>
+									<Presence Path="21[1].7[1]"/>
+								</NOT>
+								<NOT>
+									<Presence Path="21[1].8[1]"/>
+								</NOT>
+								<NOT>
+									<Presence Path="21[1].9[1]"/>
+								</NOT>
+								<NOT>
+									<Presence Path="21[1].10[1]"/>
+								</NOT>
+							</FORALL>
+							<Presence Path="3[1]"/>
+						</IMPLY>
+					</Assertion>
+				</Constraint>
+			</ByID>
+			<ByID ID="GT1_LOI_NG">
+				<Constraint ID="LOI-40" Target="1[1]">
+					<Description>GT1-1 (Set ID - GT1) SHALL be valued with the constant value '1'.</Description>
+					<Assertion>
+						<AND>
+							<Presence Path="1[1]"/>
+							<PlainText Path="1[1]" Text="1" IgnoreCase="false"/>
+						</AND>
+					</Assertion>
+				</Constraint>
+				<Constraint ID="LOI-41" Target="3[1]">
+					<Description>If GT1-3 (Guarantor Name) is ' "" ' then GT1-21 (Guarantor Organizational Name) SHALL be valued.</Description>
+					<Assertion>
+						<IMPLY>
+							<FORALL>
+								<Presence Path="3[1].1[1].1[1]"/>
+								<PlainText Path="3[1].1[1].1[1]" Text="&quot;&quot;" IgnoreCase="false"/>
+								<NOT>
+									<Presence Path="3[1].2[1]"/>
+								</NOT>
+								<NOT>
+									<Presence Path="3[1].3[1]"/>
+								</NOT>
+								<NOT>
+									<Presence Path="3[1].4[1]"/>
+								</NOT>
+								<NOT>
+									<Presence Path="3[1].5[1]"/>
+								</NOT>
+								<NOT>
+									<Presence Path="3[1].6[1]"/>
+								</NOT>
+								<NOT>
+									<Presence Path="3[1].7[1]"/>
+								</NOT>
+								<NOT>
+									<Presence Path="3[1].8[1]"/>
+								</NOT>
+								<NOT>
+									<Presence Path="3[1].9[1]"/>
+								</NOT>
+								<NOT>
+									<Presence Path="3[1].10[1]"/>
+								</NOT>
+								<NOT>
+									<Presence Path="3[1].11[1]"/>
+								</NOT>
+								<NOT>
+									<Presence Path="3[1].12[1]"/>
+								</NOT>
+								<NOT>
+									<Presence Path="3[1].13[1]"/>
+								</NOT>
+								<NOT>
+									<Presence Path="3[1].14[1]"/>
+								</NOT>
+							</FORALL>
+							<Presence Path="21[1]"/>
+						</IMPLY>
+					</Assertion>
+				</Constraint>
+				<Constraint ID="LOI-42" Target="21[1]">
+					<Description>If GT1-21 (Guarantor Organization Name) is valued ' "" ' then GT1-3 (Guarantor Name) SHALL be valued</Description>
+					<Assertion>
+						<IMPLY>
+							<FORALL>
+								<Presence Path="21[1].1[1]"/>
+								<PlainText Path="21[1].1[1]" Text="&quot;&quot;" IgnoreCase="false"/>
+								<NOT>
+									<Presence Path="21[1].2[1]"/>
+								</NOT>
+								<NOT>
+									<Presence Path="21[1].3[1]"/>
+								</NOT>
+								<NOT>
+									<Presence Path="21[1].4[1]"/>
+								</NOT>
+								<NOT>
+									<Presence Path="21[1].5[1]"/>
+								</NOT>
+								<NOT>
+									<Presence Path="21[1].6[1]"/>
+								</NOT>
+								<NOT>
+									<Presence Path="21[1].7[1]"/>
+								</NOT>
+								<NOT>
+									<Presence Path="21[1].8[1]"/>
+								</NOT>
+								<NOT>
+									<Presence Path="21[1].9[1]"/>
+								</NOT>
+								<NOT>
+									<Presence Path="21[1].10[1]"/>
+								</NOT>
+							</FORALL>
+							<Presence Path="3[1]"/>
+						</IMPLY>
+					</Assertion>
+				</Constraint>
+			</ByID>
+			<ByID ID="DG1_LOI">
+				<!-- New and append order only -->
+				<Constraint ID="LOI-59" Target="1[1]">
+					<Description>The value of DG1-1 (Set ID - DG1) SHALL be valued sequentially starting the value '1' within a given OBSERVATION_REQUEST segment group.</Description>
+					<Assertion>
+						<SetID Path="1[1]"/>
+					</Assertion>
+				</Constraint>
+				<Constraint ID="NIST-xxx" Target="3[1]">
+					<Description>Either DG1-3.3 (Diagnosis Code - DG1.Name of Coding System) or DG1-3.6 (Diagnosis Code - DG1.Name of Alternate Coding System) SHALL be valued 'I9C' or 'I10C'.</Description>
+					<Assertion>
+						<OR>
+							<AND>
+								<Presence Path="3[1]"/>
+								<StringList Path="3[1]" CSV="I9C,I10C"/>
+							</AND>
+							<AND>
+								<Presence Path="6[1]"/>
+								<StringList Path="6[1]" CSV="I9C,I10C"/>
+							</AND>
+						</OR>
+					</Assertion>
+				</Constraint>
+			</ByID>
+			<ByID ID="TQ1_LOI">
+				<Constraint ID="LOI-49" Target="1[1]">
+					<Description>The value of TQ1-1 (Set ID - TQ1) SHALL be valued '1'.</Description>
+					<Assertion>
+						<AND>
+							<Presence Path="1[1]"/>
+							<PlainText Path="1[1]" Text="1" IgnoreCase="false"/>
+						</AND>
+					</Assertion>
+				</Constraint>
+			</ByID>
+			<ByID ID="OBR_LOI_GU">
+				<Constraint ID="LOI-50" Target="8[1]">
+					<Description>If present, OBR-8 (Observation End Date/Time) SHALL be equal to or later than OBR-7 (Observation Date/Time).</Description>
+					<Assertion>
+						<Plugin QualifiedClassName="gov.nist.healthcare.mu.loi.custom.LOI_50"/>
+					</Assertion>
+				</Constraint>
+				<!-- OBR-11 is optional -->
+				<!-- <Constraint ID="LOI-52" Target="11[1]">
+					<Description>If valued, OBR-11 (Specimen Action Code) SHALL be a value of 'A', 'G', 'L', or 'O'</Description>
+					<Assertion>
+						<IMPLY>
+							<Presence Path="11[1]"/>
+							<StringList Path="11[1]" CSV="A,G,L,O"/>
+						</IMPLY>
+					</Assertion>
+				</Constraint> -->
+				<Constraint ID="NIST-xxx" Target="4[1].1[1]">
+					<Description>If OBR-4.3(Name of Coding System) is valued 'LN', OBR-4.1 (Identifier) SHALL be a valid LOINC code identifier format.</Description>
+					<Assertion>
+						<Plugin QualifiedClassName="gov.nist.healthcare.mu.loi.custom.OBR_4a"/>
+					</Assertion>
+				</Constraint>
+				<Constraint ID="NIST-xxx" Target="4[1].4[1]">
+					<Description>If OBR-4.6 (Name of Alternate Coding System) is valued 'LN', OBR-4.4 (Alternate Identifier) SHALL be a valid LOINC code identifier format.</Description>
+					<Assertion>
+						<Plugin QualifiedClassName="gov.nist.healthcare.mu.loi.custom.OBR_4b"/>
+					</Assertion>
+				</Constraint>
+			</ByID>
+			<ByID ID="OBR_LOI_NG">
+				<Constraint ID="LOI-50" Target="8[1]">
+					<Description>If present, OBR-8 (Observation End Date/Time) SHALL be equal to or later than OBR-7 (Observation Date/Time).</Description>
+					<Assertion>
+						<Plugin QualifiedClassName="gov.nist.healthcare.mu.loi.custom.LOI_50"/>
+					</Assertion>
+				</Constraint>
+				<!-- OBR-11 is optional -->
+				<!-- <Constraint ID="LOI-52" Target="11[1]">
+					<Description>If valued, OBR-11 (Specimen Action Code) SHALL be a value of 'A', 'G', 'L', or 'O'</Description>
+					<Assertion>
+						<IMPLY>
+							<Presence Path="11[1]"/>
+							<StringList Path="11[1]" CSV="A,G,L,O"/>
+						</IMPLY>
+					</Assertion>
+				</Constraint> -->
+				<Constraint ID="NIST-xxx" Target="4[1].1[1]">
+					<Description>If OBR-4.3(Name of Coding System) is valued 'LN', OBR-4.1 (Identifier) SHALL be a valid LOINC code identifier format.</Description>
+					<Assertion>
+						<Plugin QualifiedClassName="gov.nist.healthcare.mu.loi.custom.OBR_4a"/>
+					</Assertion>
+				</Constraint>
+				<Constraint ID="NIST-xxx" Target="4[1].4[1]">
+					<Description>If OBR-4.6 (Name of Alternate Coding System) is valued 'LN', OBR-4.4 (Alternate Identifier) SHALL be a valid LOINC code identifier format.</Description>
+					<Assertion>
+						<Plugin QualifiedClassName="gov.nist.healthcare.mu.loi.custom.OBR_4b"/>
+					</Assertion>
+				</Constraint>
+			</ByID>
+			<ByID ID="NTE_LOI">
+				<Constraint ID="LOI-55" Target="1[1]">
+					<Description>NTE-1 (Set ID - NTE) SHALL be sequentially numbered starting with the value '1' within a given segment group.</Description>
+					<Assertion>
+						<SetID Path="1[1]"/>
+					</Assertion>
+				</Constraint>
+			</ByID>
+			<ByID ID="PRT_LOI_GU">
+				<Constraint ID="LOI-56" Target="2[1]">
+					<Description>PRT-2 (Action Code) SHALL be valued with 'AD' drawn from code system HL70287.</Description>
+					<Assertion>
+						<AND>
+							<Presence Path="2[1]"/>
+							<PlainText Path="2[1]" Text="AD" IgnoreCase="false"/>
+						</AND>
+					</Assertion>
+				</Constraint>
+			</ByID>
+			<ByID ID="PRT_LOI_NG">
+				<Constraint ID="LOI-56" Target="2[1]">
+					<Description>PRT-2 (Action Code) SHALL be valued with 'AD' drawn from code system HL70287.</Description>
+					<Assertion>
+						<AND>
+							<Presence Path="2[1]"/>
+							<PlainText Path="2[1]" Text="AD" IgnoreCase="false"/>
+						</AND>
+					</Assertion>
+				</Constraint>
+			</ByID>
+			<ByID ID="OBX_LOI_GU">
+				<!-- OBX-3 -->
+				<Constraint ID="NIST-xxx" Target="3[1].1[1]">
+					<Description>If OBX-3.3 (Name of Coding System) is valued 'LN', OBX-3.1 (Identifier) SHALL be a valid LOINC code identifier format.</Description>
+					<Assertion>
+						<Plugin QualifiedClassName="gov.nist.healthcare.mu.loi.custom.OBX_3a"/>
+					</Assertion>
+				</Constraint>
+				<Constraint ID="NIST-xxx" Target="3[1].4[1]">
+					<Description>If OBX-3.6 (Name of Alternate coding System) is valued 'LN', OBX-3.4 (Alternate Identifier) SHALL be a valid LOINC code identifier format.</Description>
+					<Assertion>
+						<Plugin QualifiedClassName="gov.nist.healthcare.mu.loi.custom.OBX_3b"/>
+					</Assertion>
+				</Constraint>
+			</ByID>
+			<ByID ID="OBX_LOI_NG">
+				<!-- OBX-3 -->
+				<Constraint ID="NIST-xxx" Target="3[1].1[1]">
+					<Description>If OBX-3.3 (Name of Coding System) is valued 'LN', OBX-3.1 (Identifier) SHALL be a valid LOINC code identifier format.</Description>
+					<Assertion>
+						<Plugin QualifiedClassName="gov.nist.healthcare.mu.loi.custom.OBX_3a"/>
+					</Assertion>
+				</Constraint>
+				<Constraint ID="NIST-xxx" Target="3[1].4[1]">
+					<Description>If OBX-3.6 (Name of Alternate coding System) is valued 'LN', OBX-3.4 (Alternate Identifier) SHALL be a valid LOINC code identifier format.</Description>
+					<Assertion>
+						<Plugin QualifiedClassName="gov.nist.healthcare.mu.loi.custom.OBX_3b"/>
+					</Assertion>
+				</Constraint>
+			</ByID>
+			<ByID ID="SPM_LOI_GU">
+				<Constraint ID="NIST-xxx" Target="4[1].1[1]">
+					<Description>If SPM-4.3 (Name of Coding system) is valued 'SCT', SPM-4.1 (Identifier) SHALL be a valid SNOMED CT code identifier format.</Description>
+					<Assertion>
+						<Plugin QualifiedClassName="gov.nist.healthcare.mu.loi.custom.SPM_4a"/>
+					</Assertion>
+				</Constraint>
+				<Constraint ID="NIST-xxx" Target="4[1].4[1]">
+					<Description>: If SPM-4.6 (Name of Alternate Coding System) is valued 'SCT', SPM-4.4 (Alternate Identifier) SHALL be a valid SNOMED CT code identifier format.</Description>
+					<Assertion>
+						<Plugin QualifiedClassName="gov.nist.healthcare.mu.loi.custom.SPM_4b"/>
+					</Assertion>
+				</Constraint>
+				<Constraint ID="NIST-xxx" Target="4[1]">
+					<Description>When present, either SPM-4.3 (Specimen Type.Name of Coding System) or SPM-4.6 (Specimen Type.Name of Alternate Coding System) SHALL be valued 'SCT' or 'HL70487'. </Description>
+					<Assertion>
+						<EXIST>
+							<!-- SPM-4.3 and SPM-4.6 are not present -->
+							<AND>
+								<NOT>
+									<Presence Path="4[1].3[1]"/>
+								</NOT>
+								<NOT>
+									<Presence Path="4[1].6[1]"/>
+								</NOT>
+							</AND>
+							<!-- SMP-4.3 is present and valued SCT or HL70487 -->
+							<AND>
+								<Presence Path="4[1].3[1]"/>
+								<StringList Path="4[1].3[1]" CSV="SCT,HL70487"/>
+							</AND>
+							<!-- SMP-4.6 is present and valued SCT or HL70487 -->
+							<AND>
+								<Presence Path="4[1].6[1]"/>
+								<StringList Path="4[1].6[1]" CSV="SCT,HL70487"/>
+							</AND>
+						</EXIST>
+					</Assertion>
+				</Constraint>
+			</ByID>
+			<ByID ID="SPM_LOI_NG">
+				<Constraint ID="NIST-xxx" Target="4[1].1[1]">
+					<Description>If SPM-4.3 (Name of Coding system) is valued 'SCT', SPM-4.1 (Identifier) SHALL be a valid SNOMED CT code identifier format.</Description>
+					<Assertion>
+						<Plugin QualifiedClassName="gov.nist.healthcare.mu.loi.custom.SPM_4a"/>
+					</Assertion>
+				</Constraint>
+				<Constraint ID="NIST-xxx" Target="4[1].4[1]">
+					<Description>: If SPM-4.6 (Name of Alternate Coding System) is valued 'SCT', SPM-4.4 (Alternate Identifier) SHALL be a valid SNOMED CT code identifier format.</Description>
+					<Assertion>
+						<Plugin QualifiedClassName="gov.nist.healthcare.mu.loi.custom.SPM_4b"/>
+					</Assertion>
+				</Constraint>
+				<Constraint ID="NIST-xxx" Target="4[1]">
+					<Description>When present, either SPM-4.3 (Specimen Type.Name of Coding System) or SPM-4.6 (Specimen Type.Name of Alternate Coding System) SHALL be valued 'SCT' or 'HL70487'. </Description>
+					<Assertion>
+						<EXIST>
+							<!-- SPM-4.3 and SPM-4.6 are not present -->
+							<AND>
+								<NOT>
+									<Presence Path="4[1].3[1]"/>
+								</NOT>
+								<NOT>
+									<Presence Path="4[1].6[1]"/>
+								</NOT>
+							</AND>
+							<!-- SMP-4.3 is present and valued SCT or HL70487 -->
+							<AND>
+								<Presence Path="4[1].3[1]"/>
+								<StringList Path="4[1].3[1]" CSV="SCT,HL70487"/>
+							</AND>
+							<!-- SMP-4.6 is present and valued SCT or HL70487 -->
+							<AND>
+								<Presence Path="4[1].6[1]"/>
+								<StringList Path="4[1].6[1]" CSV="SCT,HL70487"/>
+							</AND>
+						</EXIST>
+					</Assertion>
+				</Constraint>
+			</ByID>
+			<ByID ID="SPM_LOI_GU_PH">
+				<Constraint ID="NIST-xxx" Target="4[1].1[1]">
+					<Description>If SPM-4.3 (Name of Coding system) is valued 'SCT', SPM-4.1 (Identifier) SHALL be a valid SNOMED CT code identifier format.</Description>
+					<Assertion>
+						<Plugin QualifiedClassName="gov.nist.healthcare.mu.loi.custom.SPM_4a"/>
+					</Assertion>
+				</Constraint>
+				<Constraint ID="NIST-xxx" Target="4[1].4[1]">
+					<Description>: If SPM-4.6 (Name of Alternate Coding System) is valued 'SCT', SPM-4.4 (Alternate Identifier) SHALL be a valid SNOMED CT code identifier format.</Description>
+					<Assertion>
+						<Plugin QualifiedClassName="gov.nist.healthcare.mu.loi.custom.SPM_4b"/>
+					</Assertion>
+				</Constraint>
+				<Constraint ID="NIST-xxx" Target="4[1]">
+					<Description>When present, either SPM-4.3 (Specimen Type.Name of Coding System) or SPM-4.6 (Specimen Type.Name of Alternate Coding System) SHALL be valued 'SCT' or 'HL70487'. </Description>
+					<Assertion>
+						<OR>
+							<AND>
+								<Presence Path="3[1]"/>
+								<StringList Path="3[1]" CSV="SCT,HL70487"/>
+							</AND>
+							<AND>
+								<Presence Path="6[1]"/>
+								<StringList Path="6[1]" CSV="SCT,HL70487"/>
+							</AND>
+						</OR>
+					</Assertion>
+				</Constraint>
+				<Constraint ID="NIST-xxx" Target="5[1].1[1]">
+					<Description>If SPM-5.3 (Name of Coding system) is valued 'SCT', SPM-5.1 (Identifier) SHALL be a valid SNOMED CT code identifier format.</Description>
+					<Assertion>
+						<Plugin QualifiedClassName="gov.nist.healthcare.mu.loi.custom.SPM_5a"/>
+					</Assertion>
+				</Constraint>
+				<Constraint ID="NIST-xxx" Target="5[1].4[1]">
+					<Description>: If SPM-5.6 (Name of Alternate Coding System) is valued 'SCT', SPM-5.4 (Alternate Identifier) SHALL be a valid SNOMED CT code identifier format.</Description>
+					<Assertion>
+						<Plugin QualifiedClassName="gov.nist.healthcare.mu.loi.custom.SPM_5b"/>
+					</Assertion>
+				</Constraint>
+			</ByID>
+			<ByID ID="SPM_LOI_NG_PH">
+				<Constraint ID="NIST-xxx" Target="4[1].1[1]">
+					<Description>If SPM-4.3 (Name of Coding system) is valued 'SCT', SPM-4.1 (Identifier) SHALL be a valid SNOMED CT code identifier format.</Description>
+					<Assertion>
+						<Plugin QualifiedClassName="gov.nist.healthcare.mu.loi.custom.SPM_4a"/>
+					</Assertion>
+				</Constraint>
+				<Constraint ID="NIST-xxx" Target="4[1].4[1]">
+					<Description>: If SPM-4.6 (Name of Alternate Coding System) is valued 'SCT', SPM-4.4 (Alternate Identifier) SHALL be a valid SNOMED CT code identifier format.</Description>
+					<Assertion>
+						<Plugin QualifiedClassName="gov.nist.healthcare.mu.loi.custom.SPM_4b"/>
+					</Assertion>
+				</Constraint>
+				<Constraint ID="NIST-xxx" Target="4[1]">
+					<Description>When present, either SPM-4.3 (Specimen Type.Name of Coding System) or SPM-4.6 (Specimen Type.Name of Alternate Coding System) SHALL be valued 'SCT' or 'HL70487'. </Description>
+					<Assertion>
+						<OR>
+							<AND>
+								<Presence Path="3[1]"/>
+								<StringList Path="3[1]" CSV="SCT,HL70487"/>
+							</AND>
+							<AND>
+								<Presence Path="6[1]"/>
+								<StringList Path="6[1]" CSV="SCT,HL70487"/>
+							</AND>
+						</OR>
+					</Assertion>
+				</Constraint>
+				<Constraint ID="NIST-xxx" Target="5[1].1[1]">
+					<Description>If SPM-5.3 (Name of Coding system) is valued 'SCT', SPM-5.1 (Identifier) SHALL be a valid SNOMED CT code identifier format.</Description>
+					<Assertion>
+						<Plugin QualifiedClassName="gov.nist.healthcare.mu.loi.custom.SPM_5a"/>
+					</Assertion>
+				</Constraint>
+				<Constraint ID="NIST-xxx" Target="5[1].4[1]">
+					<Description>: If SPM-5.6 (Name of Alternate Coding System) is valued 'SCT', SPM-5.4 (Alternate Identifier) SHALL be a valid SNOMED CT code identifier format.</Description>
+					<Assertion>
+						<Plugin QualifiedClassName="gov.nist.healthcare.mu.loi.custom.SPM_5b"/>
+					</Assertion>
+				</Constraint>
+			</ByID>
+		</Segment>
+		<Group>
+			<!-- New and append order and Cancel messages -->
+			<ByID ID="PATIENT_LOI">
+				<!-- LOI_Common_Component -->
+				<!-- [TODO] missing in IG : LOI_ORL_Acknowledgement_Component -->
+				<!-- Note: PV1 is X in Cancel message, so this conformance statement is useless for Cancel -->
+				<Constraint ID="LOI-36" Target="1[1].11[1]">
+					<Description>If PV1-20.1 (Financial Class.Financial Class Code) is 'T' (Third Party) or 'P' (Patient) then PID-11 (Patient Address) SHALL include an address with type 'H'.</Description>
+					<Assertion>
+						<IMPLY>
+							<!-- make sure to check for presence -->
+							<AND>
+								<Presence Path="5[1].1[1].20[1].1[1]"/>
+								<StringList Path="5[1].1[1].20[1].1[1]" CSV="T,P"/>
+							</AND>
+							<!-- PID-11 can repeat -->
+							<!-- [TODO] check if this is working. check with a PID-11.7 present, but NOT valued 'H' -->
+							<AND>
+								<Presence Path="1[1].11[*].7[1]"/>
+								<PlainText Path="1[1].11[*].7[1]" Text="H" IgnoreCase="false"/>
+							</AND>
+						</IMPLY>
+					</Assertion>
+				</Constraint>
+				<!-- Note: PV1 is X in Cancel message, so this conformance statement is useless for Cancel -->
+				<Constraint ID="LOI-37" Target="1[1].5[1].7[1]">
+					<Description>If PV1-20.1 (Financial Class.Financial Class Code) is valued 'T' (Third Party) or 'P' (Patient), PID-5.7 (Name Type Code) SHALL be valued 'L'.</Description>
+					<Assertion>
+						<IMPLY>
+							<!-- make sure to check for presence -->
+							<AND>
+								<Presence Path="5[1].1[1].20[1].1[1]"/>
+								<StringList Path="5[1].1[1].20[1].1[1]" CSV="T,P"/>
+							</AND>
+							<!-- PID.5 does not repeat -->
+							<AND>
+								<Presence Path="1[1].5[1].7[1]"/>
+								<PlainText Path="1[1].5[1].7[1]" Text="L" IgnoreCase="false"/>
+							</AND>
+						</IMPLY>
+					</Assertion>
+				</Constraint>
+			</ByID>
+			<!-- New and append order and Cancel messages -->
+			<ByID ID="ORDER_LOI">
+				<Constraint ID="LOI-44" Target="1[1].2[1]">
+					<Description>The value of ORC-2 (Placer Order Number) SHALL be identical to the value of OBR-2 (Placer Order Number) within the same Order Group.</Description>
+					<Assertion>
+						<FORALL>
+							<PathValue Path1="1[1].2[1].1[1]" Operator="EQ" Path2="3[1].1[1].2[1].1[1]"/>
+							<PathValue Path1="1[1].2[1].2[1]" Operator="EQ" Path2="3[1].1[1].2[1].2[1]"/>
+							<PathValue Path1="1[1].2[1].3[1]" Operator="EQ" Path2="3[1].1[1].2[1].3[1]"/>
+							<PathValue Path1="1[1].2[1].4[1]" Operator="EQ" Path2="3[1].1[1].2[1].4[1]"/>
+						</FORALL>
+					</Assertion>
+				</Constraint>
+				<Constraint ID="LOI-45" Target="1[1].3[1]">
+					<Description>If valued, ORC-3 (Filler Order Number) SHALL be identical to the value of OBR-3 (Filler Order Number) within the same Order Group.</Description>
+					<Assertion>
+						<FORALL>
+							<PathValue Path1="1[1].3[1].1[1]" Operator="EQ" Path2="3[1].1[1].3[1].1[1]"/>
+							<PathValue Path1="1[1].3[1].2[1]" Operator="EQ" Path2="3[1].1[1].3[1].2[1]"/>
+							<PathValue Path1="1[1].3[1].3[1]" Operator="EQ" Path2="3[1].1[1].3[1].3[1]"/>
+							<PathValue Path1="1[1].3[1].4[1]" Operator="EQ" Path2="3[1].1[1].3[1].4[1]"/>
+						</FORALL>
+					</Assertion>
+				</Constraint>
+				<Constraint ID="LOI-46" Target="1[1].12[1]">
+					<Description>The value of ORC-12 (Ordering Provider) SHALL be identical to the value of OBR-16 (Ordering Provider) within the same Order Group.</Description>
+					<Assertion>
+						<FORALL>
+							<PathValue Path1="1[1].12[1].1[1]" Operator="EQ" Path2="3[1].1[1].16[1].1[1]"/>
+							<PathValue Path1="1[1].12[1].2[1].1[1]" Operator="EQ" Path2="3[1].1[1].16[1].2[1].1[1]"/>
+							<PathValue Path1="1[1].12[1].3[1]" Operator="EQ" Path2="3[1].1[1].16[1].3[1]"/>
+							<PathValue Path1="1[1].12[1].9[1].1[1]" Operator="EQ" Path2="3[1].1[1].16[1].9[1].1[1]"/>
+							<PathValue Path1="1[1].12[1].9[1].2[1]" Operator="EQ" Path2="3[1].1[1].16[1].9[1].2[1]"/>
+							<PathValue Path1="1[1].12[1].9[1].3[1]" Operator="EQ" Path2="3[1].1[1].16[1].9[1].3[1]"/>
+							<PathValue Path1="1[1].12[1].10[1]" Operator="EQ" Path2="3[1].1[1].16[1].10[1]"/>
+							<PathValue Path1="1[1].12[1].13[1]" Operator="EQ" Path2="3[1].1[1].16[1].13[1]"/>
+						</FORALL>
+					</Assertion>
+				</Constraint>
+				<Constraint ID="LOI-51" Target="3[1].1[1].1[1]">
+					<Description>The value of OBR-1 (Set ID - OBR) SHALL start at '1' and be incremented sequentially across the Order groups.</Description>
+					<Assertion>
+						<SetID Path="3[1].1[1].1[1]"/>
+					</Assertion>
+				</Constraint>
+			</ByID>
+			<ByID ID="ORDER_LOI_CANCEL">
+				<Constraint ID="LOI-44" Target="1[1].2[1]">
+					<Description>The value of ORC-2 (Placer Order Number) SHALL be identical to the value of OBR-2 (Placer Order Number) within the same Order Group.</Description>
+					<Assertion>
+						<FORALL>
+							<PathValue Path1="1[1].2[1].1[1]" Operator="EQ" Path2="3[1].1[1].2[1].1[1]"/>
+							<PathValue Path1="1[1].2[1].2[1]" Operator="EQ" Path2="3[1].1[1].2[1].2[1]"/>
+							<PathValue Path1="1[1].2[1].3[1]" Operator="EQ" Path2="3[1].1[1].2[1].3[1]"/>
+							<PathValue Path1="1[1].2[1].4[1]" Operator="EQ" Path2="3[1].1[1].2[1].4[1]"/>
+						</FORALL>
+					</Assertion>
+				</Constraint>
+				<Constraint ID="LOI-45" Target="1[1].3[1]">
+					<Description>If valued, ORC-3 (Filler Order Number) SHALL be identical to the value of OBR-3 (Filler Order Number) within the same Order Group.</Description>
+					<Assertion>
+						<FORALL>
+							<PathValue Path1="1[1].3[1].1[1]" Operator="EQ" Path2="3[1].1[1].3[1].1[1]"/>
+							<PathValue Path1="1[1].3[1].2[1]" Operator="EQ" Path2="3[1].1[1].3[1].2[1]"/>
+							<PathValue Path1="1[1].3[1].3[1]" Operator="EQ" Path2="3[1].1[1].3[1].3[1]"/>
+							<PathValue Path1="1[1].3[1].4[1]" Operator="EQ" Path2="3[1].1[1].3[1].4[1]"/>
+						</FORALL>
+					</Assertion>
+				</Constraint>
+				<Constraint ID="LOI-46" Target="1[1].12[1]">
+					<Description>The value of ORC-12 (Ordering Provider) SHALL be identical to the value of OBR-16 (Ordering Provider) within the same Order Group.</Description>
+					<Assertion>
+						<FORALL>
+							<PathValue Path1="1[1].12[1].1[1]" Operator="EQ" Path2="3[1].1[1].16[1].1[1]"/>
+							<PathValue Path1="1[1].12[1].2[1].1[1]" Operator="EQ" Path2="3[1].1[1].16[1].2[1].1[1]"/>
+							<PathValue Path1="1[1].12[1].3[1]" Operator="EQ" Path2="3[1].1[1].16[1].3[1]"/>
+							<PathValue Path1="1[1].12[1].9[1].1[1]" Operator="EQ" Path2="3[1].1[1].16[1].9[1].1[1]"/>
+							<PathValue Path1="1[1].12[1].9[1].2[1]" Operator="EQ" Path2="3[1].1[1].16[1].9[1].2[1]"/>
+							<PathValue Path1="1[1].12[1].9[1].3[1]" Operator="EQ" Path2="3[1].1[1].16[1].9[1].3[1]"/>
+							<PathValue Path1="1[1].12[1].10[1]" Operator="EQ" Path2="3[1].1[1].16[1].10[1]"/>
+							<PathValue Path1="1[1].12[1].13[1]" Operator="EQ" Path2="3[1].1[1].16[1].13[1]"/>
+						</FORALL>
+					</Assertion>
+				</Constraint>
+				<Constraint ID="LOI-51" Target="3[1].1[1].1[1]">
+					<Description>The value of OBR-1 (Set ID - OBR) SHALL start at '1' and be incremented sequentially across the Order groups.</Description>
+					<Assertion>
+						<SetID Path="3[1].1[1].1[1]"/>
+					</Assertion>
+				</Constraint>
+			</ByID>
+			<!-- New and append order only because :
+				 #1: OBSERVATION (OBX segment) C(X/O) in cancel message  -->
+			<ByID ID="OBSERVATION_LOI">
+				<Constraint ID="LOI-62" Target="1[1]">
+					<Description>The value of OBX-1 (Set ID - OBX) SHALL be valued sequentially starting the value '1' within a given segment group.</Description>
+					<Assertion>
+						<SetID Path="1[1].1[1]"/>
+					</Assertion>
+				</Constraint>
+			</ByID>
+			<!-- New and append order only because :
+				#1 : There is no PRT in cancel message
+				#2 : OBSERVATION (OBX segment) C(X/O) in cancel message 
+				#3 : DG1 is C(X/O) in cancel message -->
+			<ByID ID="OBSERVATION_REQUEST_LOI">
+				<Constraint ID="LOI-57" Target="1[1].28[1]">
+					<Description>For each value in OBR-28 (Result Copies To) a corresponding PRT (Participant Information) SHALL be present with PRT-4.1 (Participation Identifier) valued 'RCT'.</Description>
+					<Assertion>
+						<Plugin QualifiedClassName="gov.nist.healthcare.mu.loi.custom.LOI_57"/>
+					</Assertion>
+				</Constraint>
+				<Constraint ID="LOI-58" Target="1[1].28[1]">
+					<Description>For each PRT (Participant Information) where PRT-4.1 (Participation.Identifier) is valued 'RCT' there must be a corresponding value in OBR-28 (Result Copies To) equal to PRT-5 (Participation Person).</Description>
+					<Assertion>
+						<Plugin QualifiedClassName="gov.nist.healthcare.mu.loi.custom.LOI_58"/>
+					</Assertion>
+				</Constraint>
+				<Constraint ID="LOI-63" Target="7[1].1[1]">
+					<Description>If there are multiple OBX segments associated with the same OBR or SPM segment that have the same OBX-3 (Observation Identifier) values for (OBX-3.1 (Identifier) and OBX-3.3 (Name of Coding System) or (OBX-3.4 (Alternate Identifier) and OBX-3.6 (Name of Alternate Coding System)), a combination of (OBX-3.1 and OBX3.3) or (OBX-3.4 and OBX-3.6) and OBX-4 (Observation Sub-ID) SHALL create a unique identification under a single OBR.</Description>
+					<Assertion>
+						<Plugin QualifiedClassName="gov.nist.healthcare.mu.loi.custom.LOI_63"/>
+					</Assertion>
+				</Constraint>
+				<Constraint ID="LOI-60" Target="6[1]">
+					<Description>Only one instance of DG1-15 (Diagnosis Priority) in the message SHALL contain the value '1'.</Description>
+					<Assertion>
+						<Plugin QualifiedClassName="gov.nist.healthcare.mu.loi.custom.LOI_60"/>
+					</Assertion>
+				</Constraint>
+				<Constraint ID="LOI-79-b" Target="1[1]">
+					<Description>If any of OBR-7 (Observation Date/Time), OBR-8 (Observation End Date/Time), SPM-17.1 (Range Start Date/Time) or SPM-17.2 (Range End Date/Time) contain a time zone offset then all SHALL contain a time zone offset.</Description>
+					<Assertion>
+						<OR>
+							<FORALL>
+								<!-- OBR-7 is not present OR it contains TZ offset -->
+								<OR>
+									<NOT>
+										<Presence Path="1[1].7[1].1[1]"/>
+									</NOT>
+									<Format Path="1[1].7[1].1[1]" Regex=".*(-|\+).*"/>
+								</OR>
+								<!-- OBR-8 is not present OR it contains TZ offset -->
+								<OR>
+									<NOT>
+										<Presence Path="1[1].8[1].1[1]"/>
+									</NOT>
+									<Format Path="1[1].8[1].1[1]" Regex=".*(-|\+).*"/>
+								</OR>
+								<!-- SPM-17.1 is not present OR it contains TZ offset -->
+								<OR>
+									<NOT>
+										<Presence Path="8[1].17[1].1[1].1[1]"/>
+									</NOT>
+									<Format Path="8[1].17[1].1[1].1[1]" Regex=".*(-|\+).*"/>
+								</OR>
+								<!-- SPM-17.2 is not present OR it contains TZ offset -->
+								<OR>
+									<NOT>
+										<Presence Path="8[1].17[1].2[1].1[1]"/>
+									</NOT>
+									<Format Path="8[1].17[1].2[1].1[1]" Regex=".*(-|\+).*"/>
+								</OR>
+							</FORALL>
+							<FORALL>
+								<!-- OBR-7 is not present OR it does not contains TZ offset -->
+								<OR>
+									<NOT>
+										<Presence Path="1[1].7[1].1[1]"/>
+									</NOT>
+									<Format Path="1[1].7[1].1[1]" Regex="[^-+]*"/>
+								</OR>
+								<!-- OBR-8 is not present OR it does not contains TZ offset -->
+								<OR>
+									<NOT>
+										<Presence Path="1[1].8[1].1[1]"/>
+									</NOT>
+									<Format Path="1[1].8[1].1[1]" Regex="[^-+]*"/>
+								</OR>
+								<!-- SPM-17.1 is not present OR it does not contains TZ offset -->
+								<OR>
+									<NOT>
+										<Presence Path="8[1].17[1].1[1].1[1]"/>
+									</NOT>
+									<Format Path="8[1].17[1].1[1].1[1]" Regex="[^-+]*"/>
+								</OR>
+								<!-- SPM-17.2 is not present OR it does not contains TZ offset -->
+								<OR>
+									<NOT>
+										<Presence Path="8[1].17[1].2[1].1[1]"/>
+									</NOT>
+									<Format Path="8[1].17[1].2[1].1[1]" Regex="[^-+]*"/>
+								</OR>
+							</FORALL>
+						</OR>
+					</Assertion>
+				</Constraint>
+			</ByID>
+			<ByID ID="OBSERVATION_REQUEST_LOI_CANCEL">
+				<Constraint ID="LOI-79-b" Target="1[1]">
+					<Description>If any of OBR-7 (Observation Date/Time), OBR-8 (Observation End Date/Time), SPM-17.1 (Range Start Date/Time) or SPM-17.2 (Range End Date/Time) contain a time zone offset then all SHALL contain a time zone offset.</Description>
+					<Assertion>
+						<OR>
+							<FORALL>
+								<!-- OBR-7 is not present OR it contains TZ offset -->
+								<OR>
+									<NOT>
+										<Presence Path="1[1].7[1].1[1]"/>
+									</NOT>
+									<Format Path="1[1].7[1].1[1]" Regex=".*(-|\+).*"/>
+								</OR>
+								<!-- OBR-8 is not present OR it contains TZ offset -->
+								<OR>
+									<NOT>
+										<Presence Path="1[1].8[1].1[1]"/>
+									</NOT>
+									<Format Path="1[1].8[1].1[1]" Regex=".*(-|\+).*"/>
+								</OR>
+								<!-- SPM-17.1 is not present OR it contains TZ offset -->
+								<OR>
+									<NOT>
+										<Presence Path="8[1].17[1].1[1].1[1]"/>
+									</NOT>
+									<Format Path="8[1].17[1].1[1].1[1]" Regex=".*(-|\+).*"/>
+								</OR>
+								<!-- SPM-17.2 is not present OR it contains TZ offset -->
+								<OR>
+									<NOT>
+										<Presence Path="8[1].17[1].2[1].1[1]"/>
+									</NOT>
+									<Format Path="8[1].17[1].2[1].1[1]" Regex=".*(-|\+).*"/>
+								</OR>
+							</FORALL>
+							<FORALL>
+								<!-- OBR-7 is not present OR it does not contains TZ offset -->
+								<OR>
+									<NOT>
+										<Presence Path="1[1].7[1].1[1]"/>
+									</NOT>
+									<Format Path="1[1].7[1].1[1]" Regex="[^-+]*"/>
+								</OR>
+								<!-- OBR-8 is not present OR it does not contains TZ offset -->
+								<OR>
+									<NOT>
+										<Presence Path="1[1].8[1].1[1]"/>
+									</NOT>
+									<Format Path="1[1].8[1].1[1]" Regex="[^-+]*"/>
+								</OR>
+								<!-- SPM-17.1 is not present OR it does not contains TZ offset -->
+								<OR>
+									<NOT>
+										<Presence Path="7[1].17[1].1[1].1[1]"/>
+									</NOT>
+									<Format Path="7[1].17[1].1[1].1[1]" Regex="[^-+]*"/>
+								</OR>
+								<!-- SPM-17.2 is not present OR it does not contains TZ offset -->
+								<OR>
+									<NOT>
+										<Presence Path="7[1].17[1].2[1].1[1]"/>
+									</NOT>
+									<Format Path="7[1].17[1].2[1].1[1]" Regex="[^-+]*"/>
+								</OR>
+							</FORALL>
+						</OR>
+					</Assertion>
+				</Constraint>
+			</ByID>
+			<!-- New and append order only because :
+				 #1: SPECIMEN (SPM segment) is C(X/O) in cancel message -->
+			<ByID ID="SPECIMEN_LOI">
+				<Constraint ID="LOI-64" Target="1[1]">
+					<Description>The value of SPM-1 (Set ID - SPM) SHALL start at '1' and be incremented sequentially within the Order Group.</Description>
+					<Assertion>
+						<SetID Path="1[1].1[1]"/>
+					</Assertion>
+				</Constraint>
+			</ByID>
+		</Group>
+		<Message>
+			<!-- New and append order profiles -->
+			<!-- [TODO] check that -->
+			<ByID ID="OML_O21:LOI_GU">
+				<Constraint ID="NIST-XXX" Target="1[1].21[1]">
+					<Description>NIST custom plugin to check for GU profile component.</Description>
+					<Assertion>
+						<Plugin QualifiedClassName="gov.nist.healthcare.mu.loi.custom.LOI_GU"/>
+					</Assertion>
+				</Constraint>
+			</ByID>
+			<ByID ID="OML_O21:LOI_GU_PRU">
+				<Constraint ID="LOI-17" Target="1[1].21[1]">
+					<Description>An occurrence of MSH-21 (Message Profile Identifier) SHALL be valued with '2.16.840.1.113883.9.85' (LOI_GU_PRU_Profile) or three occurrences SHALL be valued with '2.16.840.1.113883.9.66' (LOI_Common_Component), '2.16.840.1.113883.9.78' (LOI_GU_Component) and '2.16.840.1.113883.9.82' (LAB_PRU_Component) in any order.</Description>
+					<Assertion>
+						<OR>
+							<PlainText Path="1[1].21[*].3[1]" Text="2.16.840.1.113883.9.85" IgnoreCase="false" AtLeastOnce="true"/>
+							<FORALL>
+								<PlainText Path="1[1].21[*].3[1]" Text="2.16.840.1.113883.9.66" IgnoreCase="false" AtLeastOnce="true"/>
+								<PlainText Path="1[1].21[*].3[1]" Text="2.16.840.1.113883.9.78" IgnoreCase="false" AtLeastOnce="true"/>
+								<PlainText Path="1[1].21[*].3[1]" Text="2.16.840.1.113883.9.82" IgnoreCase="false" AtLeastOnce="true"/>
+							</FORALL>
+						</OR>
+					</Assertion>
+				</Constraint>
+				<Constraint ID="LOI-47" Target="5[1].1[1].2[1]">
+					<Description>The value of ORC-2 (Placer Order Number) SHALL NOT be valued identical to another instance of ORC-2 (Placer Order Number) within the same message excluding the Prior Result group(s).</Description>
+					<Assertion>
+						<Plugin QualifiedClassName="gov.nist.healthcare.mu.loi.custom.LOI_47"/>
+					</Assertion>
+				</Constraint>
+				<Constraint ID="LOI-53" Target="5[1].3[1].1[1].2[1]">
+					<Description>The value of OBR-2 (Placer Order Number) SHALL NOT be valued identical to another instance of OBR-2 (Placer Order Number) in the message.</Description>
+					<Assertion>
+						<Plugin QualifiedClassName="gov.nist.healthcare.mu.loi.custom.LOI_53"/>
+					</Assertion>
+				</Constraint>
+			</ByID>
+			<ByID ID="OML_O21:LOI_GU_PRN">
+				<Constraint ID="LOI-14" Target="1[1].21[1]">
+					<Description>An occurrence of MSH-21 (Message Profile Identifier) SHALL be valued with '2.16.840.1.113883.9.86' (LOI_GU_PRN_Profile) or three occurrences SHALL be valued with '2.16.840.1.113883.9.66' (LOI_Common_Component), '2.16.840.1.113883.9.78' (LOI_GU_Component) and '2.16.840.1.113883.9.81' (LAB_PRN_Component) in any order.</Description>
+					<Assertion>
+						<Plugin QualifiedClassName="gov.nist.healthcare.mu.loi.custom.LOI_14"/>
+					</Assertion>
+				</Constraint>
+			</ByID>
+			<ByID ID="OML_O21:LOI_GU_FI">
+				<Constraint ID="NIST-XXX" Target="1[1].21[1]">
+					<Description>NIST custom plugin to check for GU profile component.</Description>
+					<Assertion>
+						<Plugin QualifiedClassName="gov.nist.healthcare.mu.loi.custom.LOI_GU"/>
+					</Assertion>
+				</Constraint>
+				<Constraint ID="LOI-29" Target="1[1].21[1]">
+					<Description>An occurrence of MSH-21 (Message Profile Identifier) SHALL be valued with '2.16.840.1.113883.9.80'.</Description>
+					<Assertion>
+						<PlainText Path="1[1].21[*].3[1]" Text="2.16.840.1.113883.9.80" IgnoreCase="false" AtLeastOnce="true"/>
+					</Assertion>
+				</Constraint>
+			</ByID>
+			<ByID ID="OML_O21:LOI_GU_PRN_FI">
+				<Constraint ID="LOI-29" Target="1[1].21[1]">
+					<Description>An occurrence of MSH-21 (Message Profile Identifier) SHALL be valued with '2.16.840.1.113883.9.80'.</Description>
+					<Assertion>
+						<Plugin QualifiedClassName="gov.nist.healthcare.mu.loi.custom.LOI_29"/>
+					</Assertion>
+				</Constraint>
+				<Constraint ID="LOI-14" Target="1[1].21[1]">
+					<Description>An occurrence of MSH-21 (Message Profile Identifier) SHALL be valued with '2.16.840.1.113883.9.86' (LOI_GU_PRN_Profile) or three occurrences SHALL be valued with '2.16.840.1.113883.9.66' (LOI_Common_Component), '2.16.840.1.113883.9.78' (LOI_GU_Component) and '2.16.840.1.113883.9.81' (LAB_PRN_Component) in any order.</Description>
+					<Assertion>
+						<Plugin QualifiedClassName="gov.nist.healthcare.mu.loi.custom.LOI_14"/>
+					</Assertion>
+				</Constraint>
+			</ByID>
+			<ByID ID="OML_O21:LOI_GU_PRU_FI">
+				<Constraint ID="LOI-29" Target="1[1].21[1]">
+					<Description>An occurrence of MSH-21 (Message Profile Identifier) SHALL be valued with '2.16.840.1.113883.9.80'.</Description>
+					<Assertion>
+						<Plugin QualifiedClassName="gov.nist.healthcare.mu.loi.custom.LOI_29"/>
+					</Assertion>
+				</Constraint>
+				<Constraint ID="LOI-17" Target="1[1].21[1]">
+					<Description>An occurrence of MSH-21 (Message Profile Identifier) SHALL be valued with '2.16.840.1.113883.9.85' (LOI_GU_PRU_Profile) or three occurrences SHALL be valued with '2.16.840.1.113883.9.66' (LOI_Common_Component), '2.16.840.1.113883.9.78' (LOI_GU_Component) and '2.16.840.1.113883.9.82' (LAB_PRU_Component) in any order.</Description>
+					<Assertion>
+						<OR>
+							<PlainText Path="1[1].21[*].3[1]" Text="2.16.840.1.113883.9.85" IgnoreCase="false" AtLeastOnce="true"/>
+							<FORALL>
+								<PlainText Path="1[1].21[*].3[1]" Text="2.16.840.1.113883.9.66" IgnoreCase="false" AtLeastOnce="true"/>
+								<PlainText Path="1[1].21[*].3[1]" Text="2.16.840.1.113883.9.78" IgnoreCase="false" AtLeastOnce="true"/>
+								<PlainText Path="1[1].21[*].3[1]" Text="2.16.840.1.113883.9.82" IgnoreCase="false" AtLeastOnce="true"/>
+							</FORALL>
+						</OR>
+						<!--						<Plugin QualifiedClassName="gov.nist.healthcare.mu.loi.custom.LOI_17"/>
+-->
+					</Assertion>
+				</Constraint>
+				<Constraint ID="LOI-47" Target="5[1].1[1].2[1]">
+					<Description>The value of ORC-2 (Placer Order Number) SHALL NOT be valued identical to another instance of ORC-2 (Placer Order Number) within the same message excluding the Prior Result group(s).</Description>
+					<Assertion>
+						<Plugin QualifiedClassName="gov.nist.healthcare.mu.loi.custom.LOI_47"/>
+					</Assertion>
+				</Constraint>
+			</ByID>
+			<ByID ID="OML_O21:LOI_GU_PH">
+				<Constraint ID="NIST-XXX" Target="1[1].21[1]">
+					<Description>NIST custom plugin to check for GU profile component.</Description>
+					<Assertion>
+						<Plugin QualifiedClassName="gov.nist.healthcare.mu.loi.custom.LOI_GU"/>
+					</Assertion>
+				</Constraint>
+				<Constraint ID="LOI-28" Target="1[1].21[1]">
+					<Description>An occurrence of MSH-21 (Message Profile Identifier) SHALL be valued with '2.16.840.1.113883.9.94'.</Description>
+					<Assertion>
+						<Plugin QualifiedClassName="gov.nist.healthcare.mu.loi.custom.LOI_28"/>
+					</Assertion>
+				</Constraint>
+			</ByID>
+			<ByID ID="OML_O21:LOI_GU_PRN_PH">
+				<Constraint ID="LOI-14" Target="1[1].21[1]">
+					<Description>An occurrence of MSH-21 (Message Profile Identifier) SHALL be valued with '2.16.840.1.113883.9.86' (LOI_GU_PRN_Profile) or three occurrences SHALL be valued with '2.16.840.1.113883.9.66' (LOI_Common_Component), '2.16.840.1.113883.9.78' (LOI_GU_Component) and '2.16.840.1.113883.9.81' (LAB_PRN_Component) in any order.</Description>
+					<Assertion>
+						<Plugin QualifiedClassName="gov.nist.healthcare.mu.loi.custom.LOI_14"/>
+					</Assertion>
+				</Constraint>
+				<Constraint ID="LOI-28" Target="1[1].21[1]">
+					<Description>An occurrence of MSH-21 (Message Profile Identifier) SHALL be valued with '2.16.840.1.113883.9.94'.</Description>
+					<Assertion>
+						<Plugin QualifiedClassName="gov.nist.healthcare.mu.loi.custom.LOI_28"/>
+					</Assertion>
+				</Constraint>
+			</ByID>
+			<ByID ID="OML_O21:LOI_GU_PRU_PH">
+				<Constraint ID="LOI-28" Target="1[1].21[1]">
+					<Description>An occurrence of MSH-21 (Message Profile Identifier) SHALL be valued with '2.16.840.1.113883.9.94'.</Description>
+					<Assertion>
+						<Plugin QualifiedClassName="gov.nist.healthcare.mu.loi.custom.LOI_28"/>
+					</Assertion>
+				</Constraint>
+				<Constraint ID="LOI-17" Target="1[1].21[1]">
+					<Description>An occurrence of MSH-21 (Message Profile Identifier) SHALL be valued with '2.16.840.1.113883.9.85' (LOI_GU_PRU_Profile) or three occurrences SHALL be valued with '2.16.840.1.113883.9.66' (LOI_Common_Component), '2.16.840.1.113883.9.78' (LOI_GU_Component) and '2.16.840.1.113883.9.82' (LAB_PRU_Component) in any order.</Description>
+					<Assertion>
+						<OR>
+							<PlainText Path="1[1].21[*].3[1]" Text="2.16.840.1.113883.9.85" IgnoreCase="false" AtLeastOnce="true"/>
+							<FORALL>
+								<PlainText Path="1[1].21[*].3[1]" Text="2.16.840.1.113883.9.66" IgnoreCase="false" AtLeastOnce="true"/>
+								<PlainText Path="1[1].21[*].3[1]" Text="2.16.840.1.113883.9.78" IgnoreCase="false" AtLeastOnce="true"/>
+								<PlainText Path="1[1].21[*].3[1]" Text="2.16.840.1.113883.9.82" IgnoreCase="false" AtLeastOnce="true"/>
+							</FORALL>
+						</OR>
+						<!--						<Plugin QualifiedClassName="gov.nist.healthcare.mu.loi.custom.LOI_17"/>
+-->
+					</Assertion>
+				</Constraint>
+				<Constraint ID="LOI-47" Target="5[1].1[1].2[1]">
+					<Description>The value of ORC-2 (Placer Order Number) SHALL NOT be valued identical to another instance of ORC-2 (Placer Order Number) within the same message excluding the Prior Result group(s).</Description>
+					<Assertion>
+						<Plugin QualifiedClassName="gov.nist.healthcare.mu.loi.custom.LOI_47"/>
+					</Assertion>
+				</Constraint>
+			</ByID>
+			<ByID ID="OML_O21:LOI_NG">
+				<Constraint ID="NIST-XXX" Target="1[1].21[1]">
+					<Description>NIST custom plugin to check for NG profile component.</Description>
+					<Assertion>
+						<Plugin QualifiedClassName="gov.nist.healthcare.mu.loi.custom.LOI_NG"/>
+					</Assertion>
+				</Constraint>
+			</ByID>
+			<ByID ID="OML_O21:LOI_NG_PRU">
+				<Constraint ID="LOI-15" Target="1[1].21[1]">
+					<Description>An occurrence of MSH-21 (Message Profile Identifier) SHALL be valued with '2.16.840.1.113883.9.87' (LOI_NG_PRU_Profile) or three occurrences SHALL be valued with '2.16.840.1.113883.9.66' (LOI_Common_Component), '2.16.840.1.113883.9.79' (LOI_NG_Component) and '2.16.840.1.113883.9.82' (LAB_PRU_Component) in any order.</Description>
+					<Assertion>
+						<Plugin QualifiedClassName="gov.nist.healthcare.mu.loi.custom.LOI_15"/>
+					</Assertion>
+				</Constraint>
+				<Constraint ID="LOI-47" Target="5[1].1[1].2[1]">
+					<Description>The value of ORC-2 (Placer Order Number) SHALL NOT be valued identical to another instance of ORC-2 (Placer Order Number) within the same message excluding the Prior Result group(s).</Description>
+					<Assertion>
+						<Plugin QualifiedClassName="gov.nist.healthcare.mu.loi.custom.LOI_47"/>
+					</Assertion>
+				</Constraint>
+			</ByID>
+			<ByID ID="OML_O21:LOI_NG_PRN">
+				<Constraint ID="LOI-16" Target="1[1].21[1]">
+					<Description>An occurrence of MSH-21 (Message Profile Identifier) SHALL be valued with '2.16.840.1.113883.9.88' (LOI_NG_PRN_Profile) or three occurrences SHALL be valued with '2.16.840.1.113883.9.66' (LOI_Common_Component), '2.16.840.1.113883.9.79' (LOI_NG_Component) and '2.16.840.1.113883.9.81' (LAB_PRN_Component) in any order.</Description>
+					<Assertion>
+						<Plugin QualifiedClassName="gov.nist.healthcare.mu.loi.custom.LOI_16"/>
+					</Assertion>
+				</Constraint>
+			</ByID>
+			<ByID ID="OML_O21:LOI_NG_PH">
+				<Constraint ID="NIST-XXX" Target="1[1].21[1]">
+					<Description>NIST custom plugin to check for NG profile component.</Description>
+					<Assertion>
+						<Plugin QualifiedClassName="gov.nist.healthcare.mu.loi.custom.LOI_NG"/>
+					</Assertion>
+				</Constraint>
+				<Constraint ID="LOI-28" Target="1[1].21[1]">
+					<Description>An occurrence of MSH-21 (Message Profile Identifier) SHALL be valued with '2.16.840.1.113883.9.94'.</Description>
+					<Assertion>
+						<Plugin QualifiedClassName="gov.nist.healthcare.mu.loi.custom.LOI_28"/>
+					</Assertion>
+				</Constraint>
+			</ByID>
+			<ByID ID="OML_O21:LOI_NG_PRU_PH">
+				<Constraint ID="LOI-28" Target="1[1].21[1]">
+					<Description>An occurrence of MSH-21 (Message Profile Identifier) SHALL be valued with '2.16.840.1.113883.9.94'.</Description>
+					<Assertion>
+						<Plugin QualifiedClassName="gov.nist.healthcare.mu.loi.custom.LOI_28"/>
+					</Assertion>
+				</Constraint>
+				<Constraint ID="LOI-15" Target="1[1].21[1]">
+					<Description>An occurrence of MSH-21 (Message Profile Identifier) SHALL be valued with '2.16.840.1.113883.9.87' (LOI_NG_PRU_Profile) or three occurrences SHALL be valued with '2.16.840.1.113883.9.66' (LOI_Common_Component), '2.16.840.1.113883.9.79' (LOI_NG_Component) and '2.16.840.1.113883.9.82' (LAB_PRU_Component) in any order.</Description>
+					<Assertion>
+						<Plugin QualifiedClassName="gov.nist.healthcare.mu.loi.custom.LOI_15"/>
+					</Assertion>
+				</Constraint>
+				<Constraint ID="LOI-47" Target="5[1].1[1].2[1]">
+					<Description>The value of ORC-2 (Placer Order Number) SHALL NOT be valued identical to another instance of ORC-2 (Placer Order Number) within the same message excluding the Prior Result group(s).</Description>
+					<Assertion>
+						<Plugin QualifiedClassName="gov.nist.healthcare.mu.loi.custom.LOI_47"/>
+					</Assertion>
+				</Constraint>
+			</ByID>
+			<ByID ID="OML_O21:LOI_NG_PRN_PH">
+				<Constraint ID="LOI-28" Target="1[1].21[1]">
+					<Description>An occurrence of MSH-21 (Message Profile Identifier) SHALL be valued with '2.16.840.1.113883.9.94'.</Description>
+					<Assertion>
+						<Plugin QualifiedClassName="gov.nist.healthcare.mu.loi.custom.LOI_28"/>
+					</Assertion>
+				</Constraint>
+				<Constraint ID="LOI-16" Target="1[1].21[1]">
+					<Description>An occurrence of MSH-21 (Message Profile Identifier) SHALL be valued with '2.16.840.1.113883.9.88' (LOI_NG_PRN_Profile) or three occurrences SHALL be valued with '2.16.840.1.113883.9.66' (LOI_Common_Component), '2.16.840.1.113883.9.79' (LOI_NG_Component) and '2.16.840.1.113883.9.81' (LAB_PRN_Component) in any order.</Description>
+					<Assertion>
+						<Plugin QualifiedClassName="gov.nist.healthcare.mu.loi.custom.LOI_16"/>
+					</Assertion>
+				</Constraint>
+			</ByID>
+			<ByID ID="OML_O21:LOI_NG_FI">
+				<Constraint ID="NIST-XXX" Target="1[1].21[1]">
+					<Description>NIST custom plugin to check for NG profile component.</Description>
+					<Assertion>
+						<Plugin QualifiedClassName="gov.nist.healthcare.mu.loi.custom.LOI_NG"/>
+					</Assertion>
+				</Constraint>
+				<Constraint ID="LOI-29" Target="1[1].21[1]">
+					<Description>An occurrence of MSH-21 (Message Profile Identifier) SHALL be valued with '2.16.840.1.113883.9.80'.</Description>
+					<Assertion>
+						<Plugin QualifiedClassName="gov.nist.healthcare.mu.loi.custom.LOI_29"/>
+					</Assertion>
+				</Constraint>
+			</ByID>
+			<ByID ID="OML_O21:LOI_NG_PRU_FI">
+				<Constraint ID="LOI-29" Target="1[1].21[1]">
+					<Description>An occurrence of MSH-21 (Message Profile Identifier) SHALL be valued with '2.16.840.1.113883.9.80'.</Description>
+					<Assertion>
+						<Plugin QualifiedClassName="gov.nist.healthcare.mu.loi.custom.LOI_29"/>
+					</Assertion>
+				</Constraint>
+				<Constraint ID="LOI-15" Target="1[1].21[1]">
+					<Description>An occurrence of MSH-21 (Message Profile Identifier) SHALL be valued with '2.16.840.1.113883.9.87' (LOI_NG_PRU_Profile) or three occurrences SHALL be valued with '2.16.840.1.113883.9.66' (LOI_Common_Component), '2.16.840.1.113883.9.79' (LOI_NG_Component) and '2.16.840.1.113883.9.82' (LAB_PRU_Component) in any order.</Description>
+					<Assertion>
+						<Plugin QualifiedClassName="gov.nist.healthcare.mu.loi.custom.LOI_15"/>
+					</Assertion>
+				</Constraint>
+				<Constraint ID="LOI-47" Target="5[1].1[1].2[1]">
+					<Description>The value of ORC-2 (Placer Order Number) SHALL NOT be valued identical to another instance of ORC-2 (Placer Order Number) within the same message excluding the Prior Result group(s).</Description>
+					<Assertion>
+						<Plugin QualifiedClassName="gov.nist.healthcare.mu.loi.custom.LOI_47"/>
+					</Assertion>
+				</Constraint>
+			</ByID>
+			<ByID ID="OML_O21:LOI_NG_PRN_FI">
+				<Constraint ID="LOI-29" Target="1[1].21[1]">
+					<Description>An occurrence of MSH-21 (Message Profile Identifier) SHALL be valued with '2.16.840.1.113883.9.80'.</Description>
+					<Assertion>
+						<Plugin QualifiedClassName="gov.nist.healthcare.mu.loi.custom.LOI_29"/>
+					</Assertion>
+				</Constraint>
+				<Constraint ID="LOI-16" Target="1[1].21[1]">
+					<Description>An occurrence of MSH-21 (Message Profile Identifier) SHALL be valued with '2.16.840.1.113883.9.88' (LOI_NG_PRN_Profile) or three occurrences SHALL be valued with '2.16.840.1.113883.9.66' (LOI_Common_Component), '2.16.840.1.113883.9.79' (LOI_NG_Component) and '2.16.840.1.113883.9.81' (LAB_PRN_Component) in any order.</Description>
+					<Assertion>
+						<Plugin QualifiedClassName="gov.nist.healthcare.mu.loi.custom.LOI_16"/>
+					</Assertion>
+				</Constraint>
+			</ByID>
+			<!-- Cancel profiles-->
+			<ByID ID="OML_O21:LOI_GU_C">
+				<Constraint ID="NIST-XXX" Target="1[1].21[1]">
+					<Description>NIST custom plugin to check for GU profile component.</Description>
+					<Assertion>
+						<Plugin QualifiedClassName="gov.nist.healthcare.mu.loi.custom.LOI_GU"/>
+					</Assertion>
+				</Constraint>
+			</ByID>
+			<ByID ID="OML_O21:LOI_GU_PRU_C">
+				<Constraint ID="LOI-17" Target="1[1].21[1]">
+					<Description>An occurrence of MSH-21 (Message Profile Identifier) SHALL be valued with '2.16.840.1.113883.9.85' (LOI_GU_PRU_Profile) or three occurrences SHALL be valued with '2.16.840.1.113883.9.66' (LOI_Common_Component), '2.16.840.1.113883.9.78' (LOI_GU_Component) and '2.16.840.1.113883.9.82' (LAB_PRU_Component) in any order.</Description>
+					<Assertion>
+						<OR>
+							<PlainText Path="1[1].21[*].3[1]" Text="2.16.840.1.113883.9.85" IgnoreCase="false" AtLeastOnce="true"/>
+							<FORALL>
+								<PlainText Path="1[1].21[*].3[1]" Text="2.16.840.1.113883.9.66" IgnoreCase="false" AtLeastOnce="true"/>
+								<PlainText Path="1[1].21[*].3[1]" Text="2.16.840.1.113883.9.78" IgnoreCase="false" AtLeastOnce="true"/>
+								<PlainText Path="1[1].21[*].3[1]" Text="2.16.840.1.113883.9.82" IgnoreCase="false" AtLeastOnce="true"/>
+							</FORALL>
+						</OR>
+						<!--						<Plugin QualifiedClassName="gov.nist.healthcare.mu.loi.custom.LOI_17"/>
+-->
+					</Assertion>
+				</Constraint>
+				<Constraint ID="LOI-47" Target="5[1].1[1].2[1]">
+					<Description>The value of ORC-2 (Placer Order Number) SHALL NOT be valued identical to another instance of ORC-2 (Placer Order Number) within the same message excluding the Prior Result group(s).</Description>
+					<Assertion>
+						<Plugin QualifiedClassName="gov.nist.healthcare.mu.loi.custom.LOI_47"/>
+					</Assertion>
+				</Constraint>
+				<Constraint ID="LOI-53">
+					<Description>The value of OBR-2 (Placer Order Number) SHALL NOT be valued identical to another instance of OBR-2 (Placer Order Number) in the message.</Description>
+					<Assertion>
+						<Plugin QualifiedClassName="gov.nist.healthcare.mu.loi.custom.LOI_53"/>
+					</Assertion>
+				</Constraint>
+			</ByID>
+			<ByID ID="OML_O21:LOI_GU_PRN_C">
+				<Constraint ID="LOI-14" Target="1[1].21[1]">
+					<Description>An occurrence of MSH-21 (Message Profile Identifier) SHALL be valued with '2.16.840.1.113883.9.86' (LOI_GU_PRN_Profile) or three occurrences SHALL be valued with '2.16.840.1.113883.9.66' (LOI_Common_Component), '2.16.840.1.113883.9.78' (LOI_GU_Component) and '2.16.840.1.113883.9.81' (LAB_PRN_Component) in any order.</Description>
+					<Assertion>
+						<Plugin QualifiedClassName="gov.nist.healthcare.mu.loi.custom.LOI_14"/>
+					</Assertion>
+				</Constraint>
+			</ByID>
+			<ByID ID="OML_O21:LOI_NG_C">
+				<Constraint ID="NIST-XXX" Target="1[1].21[1]">
+					<Description>NIST custom plugin to check for NG profile component.</Description>
+					<Assertion>
+						<Plugin QualifiedClassName="gov.nist.healthcare.mu.loi.custom.LOI_NG"/>
+					</Assertion>
+				</Constraint>
+			</ByID>
+			<ByID ID="OML_O21:LOI_NG_PRU_C">
+				<Constraint ID="LOI-15" Target="1[1].21[1]">
+					<Description>An occurrence of MSH-21 (Message Profile Identifier) SHALL be valued with '2.16.840.1.113883.9.87' (LOI_NG_PRU_Profile) or three occurrences SHALL be valued with '2.16.840.1.113883.9.66' (LOI_Common_Component), '2.16.840.1.113883.9.79' (LOI_NG_Component) and '2.16.840.1.113883.9.82' (LAB_PRU_Component) in any order.</Description>
+					<Assertion>
+						<Plugin QualifiedClassName="gov.nist.healthcare.mu.loi.custom.LOI_15"/>
+					</Assertion>
+				</Constraint>
+				<Constraint ID="LOI-47" Target="5[1].1[1].2[1]">
+					<Description>The value of ORC-2 (Placer Order Number) SHALL NOT be valued identical to another instance of ORC-2 (Placer Order Number) within the same message excluding the Prior Result group(s).</Description>
+					<Assertion>
+						<Plugin QualifiedClassName="gov.nist.healthcare.mu.loi.custom.LOI_47"/>
+					</Assertion>
+				</Constraint>
+			</ByID>
+			<ByID ID="OML_O21:LOI_NG_PRN_C">
+				<Constraint ID="LOI-16" Target="1[1].21[1]">
+					<Description>An occurrence of MSH-21 (Message Profile Identifier) SHALL be valued with '2.16.840.1.113883.9.88' (LOI_NG_PRN_Profile) or three occurrences SHALL be valued with '2.16.840.1.113883.9.66' (LOI_Common_Component), '2.16.840.1.113883.9.79' (LOI_NG_Component) and '2.16.840.1.113883.9.81' (LAB_PRN_Component) in any order.</Description>
+					<Assertion>
+						<Plugin QualifiedClassName="gov.nist.healthcare.mu.loi.custom.LOI_16"/>
+					</Assertion>
+				</Constraint>
+			</ByID>
+			<!-- ORL profiles -->
+			<ByID ID="ORL_O22:LOI_GU">
+				<Constraint ID="LOI-75" Target="1[1].21[1]">
+					<Description>MSH-21 (Message Profile Identifier) SHALL be valued with '2.16.840.1.113883.9.195.2.3' (LOI_GU_ORL_Response_Profile_Component) or two occurrences SHALL be valued with '2.16.840.1.113883.9.195.2.2' (LOI_ORL_Acknowledgement_Component) and '2.16.840.1.113883.9.90' (LOI_GU_Acknowledgement_Component) in any order, when acknowledging OML GU Profiles where MSH-21 contains '2.16.840.1.113883.9.85' (LOI_GU_PRU_Profile), or '2.16.840.1.113883.9.86' (LOI_GU_PRN_Profile), or '2.16.840.1.113883.9.78' (LOI_GU_Component).</Description>
+					<Assertion>
+						<Plugin QualifiedClassName="gov.nist.healthcare.mu.loi.custom.LOI_75"/>
+					</Assertion>
+				</Constraint>
+			</ByID>
+			<ByID ID="ORL_O22:LOI_NG">
+				<Constraint ID="LOI-76" Target="1[1].21[1]">
+					<Description>MSH-21 (Message Profile Identifier) SHALL be valued with '2.16.840.1.113883.9.195.2.4' (LOI_NG_ORL_ Response_Profile) or two occurrences SHALL be valued with '2.16.840.1.113883.9.195.2.2' (LOI_ORL_Acknowledgement_Component) and '2.16.840.1.113883.9.91' (LOI_NG_Acknowledgement_Component) in any order, when acknowledging OML NG Profiles where MSH-21 contains '2.16.840.1.113883.9.87' (LOI_NG_PRU_Profile), or '2.16.840.1.113883.9.88' (LOI_NG_PRN_Profile), or '2.16.840.1.113883.9.79' (LOI_NG_Component).</Description>
+					<Assertion>
+						<Plugin QualifiedClassName="gov.nist.healthcare.mu.loi.custom.LOI_76"/>
+					</Assertion>
+				</Constraint>
+			</ByID>
+			<!-- ACK profiles -->
+			<ByID ID="ACK:LOI_GU">
+				<Constraint ID="LOI-81" Target="1[1].21[1]">
+					<Description>An occurrence of MSH-21 (Message Profile Identifier) SHALL be valued with '2.16.840.1.113883.9.92' (LOI_GU_Response_Profile) or two occurrences SHALL be valued with '2.16.840.1.113883.9.89' (LOI_Acknowledgement_Component) and '2.16.840.1.113883.9.90' (LOI_GU_Acknowledgement_Component) in any order.</Description>
+					<Assertion>
+						<OR>
+							<PlainText Path="1[1].21[*].3[1]" Text="2.16.840.1.113883.9.92" IgnoreCase="false" AtLeastOnce="true"/>
+							<AND>
+								<PlainText Path="1[1].21[*].3[1]" Text="2.16.840.1.113883.9.89" IgnoreCase="false" AtLeastOnce="true"/>
+								<PlainText Path="1[1].21[*].3[1]" Text="2.16.840.1.113883.9.90" IgnoreCase="false" AtLeastOnce="true"/>
+							</AND>
+						</OR>
+					</Assertion>
+				</Constraint>
+			</ByID>
+			<ByID ID="ACK:LOI_NG">
+				<Constraint ID="LOI-82" Target="1[1].21[1]">
+					<Description>An occurrence of MSH-21 (Message Profile Identifier) SHALL be valued with '2.16.840.1.113883.9.93' (LOI_NG_Response_Profile) or two occurrences SHALL be valued with '2.16.840.1.113883.9.89' (LOI_Acknowledgement_Component) and '2.16.840.1.113883.9.91' (LOI_NG_Acknowledgement_Component) in any order.</Description>
+					<Assertion>
+						<OR>
+							<PlainText Path="1[1].21[*].3[1]" Text="2.16.840.1.113883.9.93" IgnoreCase="false" AtLeastOnce="true"/>
+							<AND>
+								<PlainText Path="1[1].21[*].3[1]" Text="2.16.840.1.113883.9.89" IgnoreCase="false" AtLeastOnce="true"/>
+								<PlainText Path="1[1].21[*].3[1]" Text="2.16.840.1.113883.9.91" IgnoreCase="false" AtLeastOnce="true"/>
+							</AND>
+						</OR>
+					</Assertion>
+				</Constraint>
+			</ByID>
+		</Message>
+	</Constraints>
+</ConformanceContext>
