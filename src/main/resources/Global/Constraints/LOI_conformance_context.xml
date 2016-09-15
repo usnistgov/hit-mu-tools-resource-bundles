@@ -1932,14 +1932,16 @@
 	 NIST-xxx : TS_5 SHALL be precise to the day.
 	 NIST-xxx : TS_7 SHALL be precise to the day.
 	 
-  	 NIST-xxx : If XAD-6 (Country Code) is valued 'USA' or not valued, then XAD-5 (Zip or Postal Code) SHALL be a valid USPS postal code.​​
-
+  	 NIST-xxx : If XAD-6 (Country Code) is valued 'USA' or not valued, then XAD-5 (Zip or Postal Code) SHALL be a valid USPS postal code.
+  	 
 	 
 	NIST-xxx : If OBR-4.3(Name of Coding System) is valued 'LN', OBR-4.1 (Identifier) SHALL be a valid LOINC code identifier format.
 	NIST-xxx : If OBR-4.6 (Name of Alternate Coding System) is valued 'LN', OBR-4.4 (Alternate Identifier) SHALL be a valid LOINC code identifier format.
 	
 	NIST-xxx : If OBX-3.3 (Name of Coding System) is valued 'LN', OBX-3.1 (Identifier) SHALL be a valid LOINC code identifier format.
 	NIST-xxx : If OBX-3.6 (Name of Alternate coding System) is valued 'LN', OBX-3.4 (Alternate Identifier) SHALL be a valid LOINC code identifier format.
+	
+	NIST-xxx : When present, either SPM-4.3 (Specimen Type.Name of Coding System) or SPM-4.6 (Specimen Type.Name of Alternate Coding System) SHALL be valued 'SCT', 'HL70487', 'L' or '99zzz' for a local code system.
 	
 	
 	[LOI_ORL_Acknowledgement_Component] NIST-xxx : MSH-1 (Field Separator) SHALL contain the constant value '|'.
@@ -2198,7 +2200,7 @@
 			<!-- XAD -->
 			<ByID ID="XAD_LOI_PID">
 				<Constraint ID="NIST-xxx" Target="5[1]">
-					<Description>If XAD-6 (Country Code) is valued 'USA' or not valued, then XAD-5 (Zip or Postal Code) SHALL be a valid USPS postal code.​</Description>
+					<Description>If XAD-6 (Country Code) is valued 'USA' or not valued, then XAD-5 (Zip or Postal Code) SHALL be a valid USPS postal code.</Description>
 					<Assertion>
 						<IMPLY>
 							<OR>
@@ -2217,7 +2219,7 @@
 			</ByID>
 			<ByID ID="XAD_LOI_NK1_4">
 				<Constraint ID="NIST-xxx" Target="5[1]">
-					<Description>If XAD-6 (Country Code) is valued 'USA' or not valued, then XAD-5 (Zip or Postal Code) SHALL be a valid USPS postal code.​</Description>
+					<Description>If XAD-6 (Country Code) is valued 'USA' or not valued, then XAD-5 (Zip or Postal Code) SHALL be a valid USPS postal code.</Description>
 					<Assertion>
 						<IMPLY>
 							<OR>
@@ -2236,7 +2238,7 @@
 			</ByID>
 			<ByID ID="XAD_LOI_NK1_32">
 				<Constraint ID="NIST-xxx" Target="5[1]">
-					<Description>If XAD-6 (Country Code) is valued 'USA' or not valued, then XAD-5 (Zip or Postal Code) SHALL be a valid USPS postal code.​</Description>
+					<Description>If XAD-6 (Country Code) is valued 'USA' or not valued, then XAD-5 (Zip or Postal Code) SHALL be a valid USPS postal code.</Description>
 					<Assertion>
 						<IMPLY>
 							<OR>
@@ -2255,7 +2257,7 @@
 			</ByID>
 			<ByID ID="XAD_LOI_IN1_5">
 				<Constraint ID="NIST-xxx" Target="5[1]">
-					<Description>If XAD-6 (Country Code) is valued 'USA' or not valued, then XAD-5 (Zip or Postal Code) SHALL be a valid USPS postal code.​</Description>
+					<Description>If XAD-6 (Country Code) is valued 'USA' or not valued, then XAD-5 (Zip or Postal Code) SHALL be a valid USPS postal code.</Description>
 					<Assertion>
 						<IMPLY>
 							<OR>
@@ -2274,7 +2276,7 @@
 			</ByID>
 			<ByID ID="XAD_LOI_IN1_19">
 				<Constraint ID="NIST-xxx" Target="5[1]">
-					<Description>If XAD-6 (Country Code) is valued 'USA' or not valued, then XAD-5 (Zip or Postal Code) SHALL be a valid USPS postal code.​</Description>
+					<Description>If XAD-6 (Country Code) is valued 'USA' or not valued, then XAD-5 (Zip or Postal Code) SHALL be a valid USPS postal code.</Description>
 					<Assertion>
 						<IMPLY>
 							<OR>
@@ -2293,7 +2295,7 @@
 			</ByID>
 			<ByID ID="XAD_LOI_GT1">
 				<Constraint ID="NIST-xxx" Target="5[1]">
-					<Description>If XAD-6 (Country Code) is valued 'USA' or not valued, then XAD-5 (Zip or Postal Code) SHALL be a valid USPS postal code.​</Description>
+					<Description>If XAD-6 (Country Code) is valued 'USA' or not valued, then XAD-5 (Zip or Postal Code) SHALL be a valid USPS postal code.</Description>
 					<Assertion>
 						<IMPLY>
 							<OR>
@@ -2312,7 +2314,7 @@
 			</ByID>
 			<ByID ID="XAD_LOI_ORC">
 				<Constraint ID="NIST-xxx" Target="5[1]">
-					<Description>If XAD-6 (Country Code) is valued 'USA' or not valued, then XAD-5 (Zip or Postal Code) SHALL be a valid USPS postal code.​</Description>
+					<Description>If XAD-6 (Country Code) is valued 'USA' or not valued, then XAD-5 (Zip or Postal Code) SHALL be a valid USPS postal code.</Description>
 					<Assertion>
 						<IMPLY>
 							<OR>
@@ -2331,7 +2333,7 @@
 			</ByID>
 			<ByID ID="XAD_LOI_PRT">
 				<Constraint ID="NIST-xxx" Target="5[1]">
-					<Description>If XAD-6 (Country Code) is valued 'USA' or not valued, then XAD-5 (Zip or Postal Code) SHALL be a valid USPS postal code.​</Description>
+					<Description>If XAD-6 (Country Code) is valued 'USA' or not valued, then XAD-5 (Zip or Postal Code) SHALL be a valid USPS postal code.</Description>
 					<Assertion>
 						<IMPLY>
 							<OR>
@@ -2350,7 +2352,7 @@
 			</ByID>
 			<ByID ID="XAD_LOI_OBX">
 				<Constraint ID="NIST-xxx" Target="5[1]">
-					<Description>If XAD-6 (Country Code) is valued 'USA' or not valued, then XAD-5 (Zip or Postal Code) SHALL be a valid USPS postal code.​</Description>
+					<Description>If XAD-6 (Country Code) is valued 'USA' or not valued, then XAD-5 (Zip or Postal Code) SHALL be a valid USPS postal code.</Description>
 					<Assertion>
 						<IMPLY>
 							<OR>
@@ -3304,7 +3306,7 @@
 					</Assertion>
 				</Constraint>
 				<Constraint ID="NIST-xxx" Target="4[1]">
-					<Description>When present, either SPM-4.3 (Specimen Type.Name of Coding System) or SPM-4.6 (Specimen Type.Name of Alternate Coding System) SHALL be valued 'SCT', 'HL70487', 'L' or '​99zzz' for a local code system​.</Description>
+					<Description>When present, either SPM-4.3 (Specimen Type.Name of Coding System) or SPM-4.6 (Specimen Type.Name of Alternate Coding System) SHALL be valued 'SCT', 'HL70487', 'L' or '99zzz' for a local code system.</Description>
 					<Assertion>
 						<EXIST>
 							<!-- SPM-4.3 and SPM-4.6 are not present -->
@@ -3319,14 +3321,18 @@
 							<!-- SMP-4.3 is present and valued SCT or HL70487 -->
 							<FORALL>
 								<Presence Path="4[1].3[1]"/>
-								<StringList Path="4[1].3[1]" CSV="SCT,HL70487,L"/>
-								<Format Regex="99[A-Za-z0-9]{3}" Path="4[1].3[1]"/>
+								<OR>
+									<StringList Path="4[1].3[1]" CSV="SCT,HL70487,L"/>
+									<Format Regex="99[A-Za-z0-9]{3}" Path="4[1].3[1]"/>
+								</OR>
 							</FORALL>
 							<!-- SMP-4.6 is present and valued SCT or HL70487 -->
 							<FORALL>
 								<Presence Path="4[1].6[1]"/>
-								<StringList Path="4[1].6[1]" CSV="SCT,HL70487,L"/>
-								<Format Regex="99[A-Za-z0-9]{3}" Path="4[1].6[1]"/>
+								<OR>
+									<StringList Path="4[1].6[1]" CSV="SCT,HL70487,L"/>
+									<Format Regex="99[A-Za-z0-9]{3}" Path="4[1].6[1]"/>
+								</OR>
 							</FORALL>
 						</EXIST>
 					</Assertion>
@@ -3346,7 +3352,7 @@
 					</Assertion>
 				</Constraint>
 				<Constraint ID="NIST-xxx" Target="4[1]">
-					<Description>When present, either SPM-4.3 (Specimen Type.Name of Coding System) or SPM-4.6 (Specimen Type.Name of Alternate Coding System) SHALL be valued 'SCT', 'HL70487', 'L' or '​99zzz' for a local code system​.</Description>
+					<Description>When present, either SPM-4.3 (Specimen Type.Name of Coding System) or SPM-4.6 (Specimen Type.Name of Alternate Coding System) SHALL be valued 'SCT', 'HL70487', 'L' or '99zzz' for a local code system.</Description>
 					<Assertion>
 						<EXIST>
 							<!-- SPM-4.3 and SPM-4.6 are not present -->
@@ -3361,14 +3367,18 @@
 							<!-- SMP-4.3 is present and valued SCT or HL70487 -->
 							<FORALL>
 								<Presence Path="4[1].3[1]"/>
-								<StringList Path="4[1].3[1]" CSV="SCT,HL70487,L"/>
-								<Format Regex="99[A-Za-z0-9]{3}" Path="4[1].3[1]"/>
+								<OR>
+									<StringList Path="4[1].3[1]" CSV="SCT,HL70487,L"/>
+									<Format Regex="99[A-Za-z0-9]{3}" Path="4[1].3[1]"/>
+								</OR>
 							</FORALL>
 							<!-- SMP-4.6 is present and valued SCT or HL70487 -->
 							<FORALL>
 								<Presence Path="4[1].6[1]"/>
-								<StringList Path="4[1].6[1]" CSV="SCT,HL70487,L"/>
-								<Format Regex="99[A-Za-z0-9]{3}" Path="4[1].6[1]"/>
+								<OR>
+									<StringList Path="4[1].6[1]" CSV="SCT,HL70487,L"/>
+									<Format Regex="99[A-Za-z0-9]{3}" Path="4[1].6[1]"/>
+								</OR>
 							</FORALL>
 						</EXIST>
 					</Assertion>
