@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ConformanceContext xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" UUID="LOI_default" xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/Jungyubw/NIST_healthcare_hl7_v2_profile_schema/master/Schema/NIST%20Validation%20Schema/ConformanceContext.xsd">
-	<MetaData Name="LOI conformance context" OrgName="NIST" Version="1.0" Date="07262016"/>
+	<MetaData Name="LOI conformance context" OrgName="NIST" Version="1.0" Date="09232016"/>
 	<Predicates>
 		<Datatype>
 			<!-- <ByID ID="CWE_GEN">
@@ -1924,30 +1924,39 @@
 	<Constraints>
 		<!-- 
 	 ** NIST Derived conformance statements **
-	 NIST-xxx : TS_0 SHALL be precise to the year.
- 	 NIST-xxx : TS_1 SHALL be precise to the second.
-	 NIST-xxx : TS_2 SHALL be precise to the year.
-	 NIST-xxx : TS_3 SHALL be precise to the year.
-	 NIST-xxx : TS_4 SHALL be precise to the day OR be valued '0000'.
-	 NIST-xxx : TS_5 SHALL be precise to the day.
-	 NIST-xxx : TS_7 SHALL be precise to the day.
+	 NIST-01 : TS_0 SHALL be precise to the year.
+ 	 NIST-02 : TS_1 SHALL be precise to the second.
+	 NIST-03 : TS_2 SHALL be precise to the year.
+	 NIST-04 : TS_3 SHALL be precise to the year.
+	 NIST-05 : TS_4 SHALL be precise to the day OR be valued '0000'.
+	 NIST-06 : TS_5 SHALL be precise to the day.
+	 NIST-07 : TS_7 SHALL be precise to the day.
 	 
-  	 NIST-xxx : If XAD-6 (Country Code) is valued 'USA' or not valued, then XAD-5 (Zip or Postal Code) SHALL be a valid USPS postal code.
+  	 NIST-08 : If XAD-6 (Country Code) is valued 'USA' or not valued, then XAD-5 (Zip or Postal Code) SHALL be a valid USPS postal code.
   	 
+	 NIST-09 : Either DG1-3.3 (Diagnosis Code - DG1.Name of Coding System) or DG1-3.6 (Diagnosis Code - DG1.Name of Alternate Coding System) SHALL be valued 'I9C' or 'I10C'.</Description>
+
+
 	 
-	NIST-xxx : If OBR-4.3(Name of Coding System) is valued 'LN', OBR-4.1 (Identifier) SHALL be a valid LOINC code identifier format.
-	NIST-xxx : If OBR-4.6 (Name of Alternate Coding System) is valued 'LN', OBR-4.4 (Alternate Identifier) SHALL be a valid LOINC code identifier format.
+	NIST-10 : If OBR-4.3(Name of Coding System) is valued 'LN', OBR-4.1 (Identifier) SHALL be a valid LOINC code identifier format.
+	NIST-11 : If OBR-4.6 (Name of Alternate Coding System) is valued 'LN', OBR-4.4 (Alternate Identifier) SHALL be a valid LOINC code identifier format.
 	
-	NIST-xxx : If OBX-3.3 (Name of Coding System) is valued 'LN', OBX-3.1 (Identifier) SHALL be a valid LOINC code identifier format.
-	NIST-xxx : If OBX-3.6 (Name of Alternate coding System) is valued 'LN', OBX-3.4 (Alternate Identifier) SHALL be a valid LOINC code identifier format.
+	NIST-12 : If OBX-3.3 (Name of Coding System) is valued 'LN', OBX-3.1 (Identifier) SHALL be a valid LOINC code identifier format.
+	NIST-13 : If OBX-3.6 (Name of Alternate coding System) is valued 'LN', OBX-3.4 (Alternate Identifier) SHALL be a valid LOINC code identifier format.
 	
-	NIST-xxx : When present, either SPM-4.3 (Specimen Type.Name of Coding System) or SPM-4.6 (Specimen Type.Name of Alternate Coding System) SHALL be valued 'SCT', 'HL70487', 'L' or '99zzz' for a local code system.
+	NIST-14 : If SPM-4.3 (Name of Coding system) is valued 'SCT', SPM-4.1 (Identifier) SHALL be a valid SNOMED CT code identifier format.</Description>
+	NIST-15 : If SPM-4.6 (Name of Alternate Coding System) is valued 'SCT', SPM-4.4 (Alternate Identifier) SHALL be a valid SNOMED CT code identifier format.</Description>
+	NIST-16 : When present, either SPM-4.3 (Specimen Type.Name of Coding System) or SPM-4.6 (Specimen Type.Name of Alternate Coding System) SHALL be valued 'SCT', 'HL70487', 'L' or '99zzz' for a local code system.
+	
+	NIST-17 : If SPM-5.3 (Name of Coding system) is valued 'SCT', SPM-5.1 (Identifier) SHALL be a valid SNOMED CT code identifier format.</Description>
+	NIST-18 : If SPM-5.6 (Name of Alternate Coding System) is valued 'SCT', SPM-5.4 (Alternate Identifier) SHALL be a valid SNOMED CT code identifier format.</Description>
+
 	
 	
-	[LOI_ORL_Acknowledgement_Component] NIST-xxx : MSH-1 (Field Separator) SHALL contain the constant value '|'.
-	[LOI_ORL_Acknowledgement_Component] NIST-xxx : MSH-2 (Encoding Characters) SHALL contain the constant value '^~\&amp;' or the constant value  '^~\&amp;#'.
+	[LOI_ORL_Acknowledgement_Component] NIST-09 : MSH-1 (Field Separator) SHALL contain the constant value '|'.
+	[LOI_ORL_Acknowledgement_Component] NIST-10 : MSH-2 (Encoding Characters) SHALL contain the constant value '^~\&amp;' or the constant value  '^~\&amp;#'.
 	
-	[LOI_Acknowledgement_Component] NIST-xxx : MSH-12.1 (Version ID) SHALL contain the constant value '2.5.1'.
+	[LOI_Acknowledgement_Component] NIST-11 : MSH-12.1 (Version ID) SHALL contain the constant value '2.5.1'.
 
 	-->
 		<!-- 
@@ -2127,7 +2136,7 @@
 			</ByID>
 			<!-- TS_0 -->
 			<ByID ID="TS_0">
-				<Constraint ID="NIST-xxx" Target="1[1]">
+				<Constraint ID="NIST-01" Target="1[1]">
 					<Description>TS_0 SHALL be precise to the year.</Description>
 					<Assertion>
 						<Format Regex="\d{4}.*" Path="1[1]"/>
@@ -2136,7 +2145,7 @@
 			</ByID>
 			<!-- TS_1 -->
 			<ByID ID="TS_1">
-				<Constraint ID="NIST-xxx" Target="1[1]">
+				<Constraint ID="NIST-02" Target="1[1]">
 					<Description>TS_1 SHALL be precise to the second.</Description>
 					<Assertion>
 						<Format Regex="\d{14}.*" Path="1[1]"/>
@@ -2145,7 +2154,7 @@
 			</ByID>
 			<!-- TS_2 -->
 			<ByID ID="TS_2">
-				<Constraint ID="NIST-xxx" Target="1[1]">
+				<Constraint ID="NIST-03" Target="1[1]">
 					<Description>TS_2 SHALL be precise to the year.</Description>
 					<Assertion>
 						<Format Regex="\d{4}.*" Path="1[1]"/>
@@ -2154,7 +2163,7 @@
 			</ByID>
 			<!-- TS_3 -->
 			<ByID ID="TS_3">
-				<Constraint ID="NIST-xxx" Target="1[1]">
+				<Constraint ID="NIST-04" Target="1[1]">
 					<Description>TS_3 SHALL be precise to the year.</Description>
 					<Assertion>
 						<Format Regex="\d{4}.*" Path="1[1]"/>
@@ -2163,7 +2172,7 @@
 			</ByID>
 			<!-- TS_4 -->
 			<ByID ID="TS_4">
-				<Constraint ID="NIST-xxx" Target="1[1]">
+				<Constraint ID="NIST-05" Target="1[1]">
 					<Description>TS_4 SHALL be precise to the day OR be valued '0000'.</Description>
 					<Assertion>
 						<OR>
@@ -2180,7 +2189,7 @@
 			</ByID>
 			<!-- TS_5 -->
 			<ByID ID="TS_5">
-				<Constraint ID="NIST-xxx" Target="1[1]">
+				<Constraint ID="NIST-06" Target="1[1]">
 					<Description>TS_5 SHALL be precise to the day.</Description>
 					<Assertion>
 						<Format Regex="\d{8}.*" Path="1[1]"/>
@@ -2190,7 +2199,7 @@
 			<!-- TS_6 -->
 			<!-- TS_7 -->
 			<ByID ID="TS_7">
-				<Constraint ID="NIST-xxx" Target="1[1]">
+				<Constraint ID="NIST-07" Target="1[1]">
 					<Description>TS_7 SHALL be precise to the day.</Description>
 					<Assertion>
 						<Format Regex="\d{8}.*" Path="1[1]"/>
@@ -2199,7 +2208,7 @@
 			</ByID>
 			<!-- XAD -->
 			<ByID ID="XAD_LOI_PID">
-				<Constraint ID="NIST-xxx" Target="5[1]">
+				<Constraint ID="NIST-08" Target="5[1]">
 					<Description>If XAD-6 (Country Code) is valued 'USA' or not valued, then XAD-5 (Zip or Postal Code) SHALL be a valid USPS postal code.</Description>
 					<Assertion>
 						<IMPLY>
@@ -2218,7 +2227,7 @@
 				</Constraint>
 			</ByID>
 			<ByID ID="XAD_LOI_NK1_4">
-				<Constraint ID="NIST-xxx" Target="5[1]">
+				<Constraint ID="NIST-08" Target="5[1]">
 					<Description>If XAD-6 (Country Code) is valued 'USA' or not valued, then XAD-5 (Zip or Postal Code) SHALL be a valid USPS postal code.</Description>
 					<Assertion>
 						<IMPLY>
@@ -2237,7 +2246,7 @@
 				</Constraint>
 			</ByID>
 			<ByID ID="XAD_LOI_NK1_32">
-				<Constraint ID="NIST-xxx" Target="5[1]">
+				<Constraint ID="NIST-08" Target="5[1]">
 					<Description>If XAD-6 (Country Code) is valued 'USA' or not valued, then XAD-5 (Zip or Postal Code) SHALL be a valid USPS postal code.</Description>
 					<Assertion>
 						<IMPLY>
@@ -2256,7 +2265,7 @@
 				</Constraint>
 			</ByID>
 			<ByID ID="XAD_LOI_IN1_5">
-				<Constraint ID="NIST-xxx" Target="5[1]">
+				<Constraint ID="NIST-08" Target="5[1]">
 					<Description>If XAD-6 (Country Code) is valued 'USA' or not valued, then XAD-5 (Zip or Postal Code) SHALL be a valid USPS postal code.</Description>
 					<Assertion>
 						<IMPLY>
@@ -2275,7 +2284,7 @@
 				</Constraint>
 			</ByID>
 			<ByID ID="XAD_LOI_IN1_19">
-				<Constraint ID="NIST-xxx" Target="5[1]">
+				<Constraint ID="NIST-08" Target="5[1]">
 					<Description>If XAD-6 (Country Code) is valued 'USA' or not valued, then XAD-5 (Zip or Postal Code) SHALL be a valid USPS postal code.</Description>
 					<Assertion>
 						<IMPLY>
@@ -2294,7 +2303,7 @@
 				</Constraint>
 			</ByID>
 			<ByID ID="XAD_LOI_GT1">
-				<Constraint ID="NIST-xxx" Target="5[1]">
+				<Constraint ID="NIST-08" Target="5[1]">
 					<Description>If XAD-6 (Country Code) is valued 'USA' or not valued, then XAD-5 (Zip or Postal Code) SHALL be a valid USPS postal code.</Description>
 					<Assertion>
 						<IMPLY>
@@ -2313,7 +2322,7 @@
 				</Constraint>
 			</ByID>
 			<ByID ID="XAD_LOI_ORC">
-				<Constraint ID="NIST-xxx" Target="5[1]">
+				<Constraint ID="NIST-08" Target="5[1]">
 					<Description>If XAD-6 (Country Code) is valued 'USA' or not valued, then XAD-5 (Zip or Postal Code) SHALL be a valid USPS postal code.</Description>
 					<Assertion>
 						<IMPLY>
@@ -2332,7 +2341,7 @@
 				</Constraint>
 			</ByID>
 			<ByID ID="XAD_LOI_PRT">
-				<Constraint ID="NIST-xxx" Target="5[1]">
+				<Constraint ID="NIST-08" Target="5[1]">
 					<Description>If XAD-6 (Country Code) is valued 'USA' or not valued, then XAD-5 (Zip or Postal Code) SHALL be a valid USPS postal code.</Description>
 					<Assertion>
 						<IMPLY>
@@ -2351,7 +2360,7 @@
 				</Constraint>
 			</ByID>
 			<ByID ID="XAD_LOI_OBX">
-				<Constraint ID="NIST-xxx" Target="5[1]">
+				<Constraint ID="NIST-08" Target="5[1]">
 					<Description>If XAD-6 (Country Code) is valued 'USA' or not valued, then XAD-5 (Zip or Postal Code) SHALL be a valid USPS postal code.</Description>
 					<Assertion>
 						<IMPLY>
@@ -2500,7 +2509,7 @@
 			<ByID ID="MSH_ORL_GU">
 				<!-- LOI_ORL_Acknowledgement_Component -->
 				<!-- [TODO] missing from IG -->
-				<Constraint ID="NIST-xxx" Target="1[1]">
+				<Constraint ID="NIST-09" Target="1[1]">
 					<Description>MSH-1 (Field Separator) SHALL contain the constant value '|'.</Description>
 					<Assertion>
 						<AND>
@@ -2510,7 +2519,7 @@
 					</Assertion>
 				</Constraint>
 				<!-- [TODO] missing from IG -->
-				<Constraint ID="NIST-xxx" Target="2[1]">
+				<Constraint ID="NIST-10" Target="2[1]">
 					<Description>MSH-2 (Encoding Characters) SHALL contain the constant value '^~\&amp;' or the constant value  '^~\&amp;#'.</Description>
 					<Assertion>
 						<OR>
@@ -2574,7 +2583,7 @@
 			<ByID ID="MSH_ORL_NG">
 				<!-- LOI_ORL_Acknowledgement_Component -->
 				<!-- [TODO] missing from IG -->
-				<Constraint ID="NIST-xxx" Target="1[1]">
+				<Constraint ID="NIST-09" Target="1[1]">
 					<Description>MSH-1 (Field Separator) SHALL contain the constant value '|'.</Description>
 					<Assertion>
 						<AND>
@@ -2584,7 +2593,7 @@
 					</Assertion>
 				</Constraint>
 				<!-- [TODO] missing from IG -->
-				<Constraint ID="NIST-xxx" Target="2[1]">
+				<Constraint ID="NIST-10" Target="2[1]">
 					<Description>MSH-2 (Encoding Characters) SHALL contain the constant value '^~\&amp;' or the constant value  '^~\&amp;#'.</Description>
 					<Assertion>
 						<OR>
@@ -2700,7 +2709,7 @@
 					</Assertion>
 				</Constraint>
 				<!-- [TODO] missing from IG -->
-				<Constraint ID="NIST-xxx" Target="12[1].1[1]">
+				<Constraint ID="NIST-11" Target="12[1].1[1]">
 					<Description>MSH-12.1 (Version ID) SHALL contain the constant value '2.5.1'.</Description>
 					<Assertion>
 						<AND>
@@ -2783,7 +2792,7 @@
 					</Assertion>
 				</Constraint>
 				<!-- [TODO] missing from IG -->
-				<Constraint ID="NIST-xxx" Target="12[1].1[1]">
+				<Constraint ID="NIST-11" Target="12[1].1[1]">
 					<Description>MSH-12.1 (Version ID) SHALL contain the constant value '2.5.1'.</Description>
 					<Assertion>
 						<AND>
@@ -3145,7 +3154,7 @@
 						<SetID Path="1[1]"/>
 					</Assertion>
 				</Constraint>
-				<Constraint ID="NIST-xxx" Target="3[1]">
+				<Constraint ID="NIST-09" Target="3[1]">
 					<Description>Either DG1-3.3 (Diagnosis Code - DG1.Name of Coding System) or DG1-3.6 (Diagnosis Code - DG1.Name of Alternate Coding System) SHALL be valued 'I9C' or 'I10C'.</Description>
 					<Assertion>
 						<OR>
@@ -3189,13 +3198,13 @@
 						</IMPLY>
 					</Assertion>
 				</Constraint> -->
-				<Constraint ID="NIST-xxx" Target="4[1].1[1]">
+				<Constraint ID="NIST-10" Target="4[1].1[1]">
 					<Description>If OBR-4.3(Name of Coding System) is valued 'LN', OBR-4.1 (Identifier) SHALL be a valid LOINC code identifier format.</Description>
 					<Assertion>
 						<Plugin QualifiedClassName="gov.nist.healthcare.mu.loi.custom.OBR_4a"/>
 					</Assertion>
 				</Constraint>
-				<Constraint ID="NIST-xxx" Target="4[1].4[1]">
+				<Constraint ID="NIST-11" Target="4[1].4[1]">
 					<Description>If OBR-4.6 (Name of Alternate Coding System) is valued 'LN', OBR-4.4 (Alternate Identifier) SHALL be a valid LOINC code identifier format.</Description>
 					<Assertion>
 						<Plugin QualifiedClassName="gov.nist.healthcare.mu.loi.custom.OBR_4b"/>
@@ -3219,13 +3228,13 @@
 						</IMPLY>
 					</Assertion>
 				</Constraint> -->
-				<Constraint ID="NIST-xxx" Target="4[1].1[1]">
+				<Constraint ID="NIST-10" Target="4[1].1[1]">
 					<Description>If OBR-4.3(Name of Coding System) is valued 'LN', OBR-4.1 (Identifier) SHALL be a valid LOINC code identifier format.</Description>
 					<Assertion>
 						<Plugin QualifiedClassName="gov.nist.healthcare.mu.loi.custom.OBR_4a"/>
 					</Assertion>
 				</Constraint>
-				<Constraint ID="NIST-xxx" Target="4[1].4[1]">
+				<Constraint ID="NIST-11" Target="4[1].4[1]">
 					<Description>If OBR-4.6 (Name of Alternate Coding System) is valued 'LN', OBR-4.4 (Alternate Identifier) SHALL be a valid LOINC code identifier format.</Description>
 					<Assertion>
 						<Plugin QualifiedClassName="gov.nist.healthcare.mu.loi.custom.OBR_4b"/>
@@ -3264,13 +3273,13 @@
 			</ByID>
 			<ByID ID="OBX_LOI_GU">
 				<!-- OBX-3 -->
-				<Constraint ID="NIST-xxx" Target="3[1].1[1]">
+				<Constraint ID="NIST-12" Target="3[1].1[1]">
 					<Description>If OBX-3.3 (Name of Coding System) is valued 'LN', OBX-3.1 (Identifier) SHALL be a valid LOINC code identifier format.</Description>
 					<Assertion>
 						<Plugin QualifiedClassName="gov.nist.healthcare.mu.loi.custom.OBX_3a"/>
 					</Assertion>
 				</Constraint>
-				<Constraint ID="NIST-xxx" Target="3[1].4[1]">
+				<Constraint ID="NIST-13" Target="3[1].4[1]">
 					<Description>If OBX-3.6 (Name of Alternate coding System) is valued 'LN', OBX-3.4 (Alternate Identifier) SHALL be a valid LOINC code identifier format.</Description>
 					<Assertion>
 						<Plugin QualifiedClassName="gov.nist.healthcare.mu.loi.custom.OBX_3b"/>
@@ -3279,13 +3288,13 @@
 			</ByID>
 			<ByID ID="OBX_LOI_NG">
 				<!-- OBX-3 -->
-				<Constraint ID="NIST-xxx" Target="3[1].1[1]">
+				<Constraint ID="NIST-12" Target="3[1].1[1]">
 					<Description>If OBX-3.3 (Name of Coding System) is valued 'LN', OBX-3.1 (Identifier) SHALL be a valid LOINC code identifier format.</Description>
 					<Assertion>
 						<Plugin QualifiedClassName="gov.nist.healthcare.mu.loi.custom.OBX_3a"/>
 					</Assertion>
 				</Constraint>
-				<Constraint ID="NIST-xxx" Target="3[1].4[1]">
+				<Constraint ID="NIST-13" Target="3[1].4[1]">
 					<Description>If OBX-3.6 (Name of Alternate coding System) is valued 'LN', OBX-3.4 (Alternate Identifier) SHALL be a valid LOINC code identifier format.</Description>
 					<Assertion>
 						<Plugin QualifiedClassName="gov.nist.healthcare.mu.loi.custom.OBX_3b"/>
@@ -3293,19 +3302,19 @@
 				</Constraint>
 			</ByID>
 			<ByID ID="SPM_LOI_GU">
-				<Constraint ID="NIST-xxx" Target="4[1].1[1]">
+				<Constraint ID="NIST-14" Target="4[1].1[1]">
 					<Description>If SPM-4.3 (Name of Coding system) is valued 'SCT', SPM-4.1 (Identifier) SHALL be a valid SNOMED CT code identifier format.</Description>
 					<Assertion>
 						<Plugin QualifiedClassName="gov.nist.healthcare.mu.loi.custom.SPM_4a"/>
 					</Assertion>
 				</Constraint>
-				<Constraint ID="NIST-xxx" Target="4[1].4[1]">
+				<Constraint ID="NIST-15" Target="4[1].4[1]">
 					<Description>If SPM-4.6 (Name of Alternate Coding System) is valued 'SCT', SPM-4.4 (Alternate Identifier) SHALL be a valid SNOMED CT code identifier format.</Description>
 					<Assertion>
 						<Plugin QualifiedClassName="gov.nist.healthcare.mu.loi.custom.SPM_4b"/>
 					</Assertion>
 				</Constraint>
-				<Constraint ID="NIST-xxx" Target="4[1]">
+				<Constraint ID="NIST-16" Target="4[1]">
 					<Description>When present, either SPM-4.3 (Specimen Type.Name of Coding System) or SPM-4.6 (Specimen Type.Name of Alternate Coding System) SHALL be valued 'SCT', 'HL70487', 'L' or '99zzz' for a local code system.</Description>
 					<Assertion>
 						<EXIST>
@@ -3339,19 +3348,19 @@
 				</Constraint>
 			</ByID>
 			<ByID ID="SPM_LOI_NG">
-				<Constraint ID="NIST-xxx" Target="4[1].1[1]">
+				<Constraint ID="NIST-14" Target="4[1].1[1]">
 					<Description>If SPM-4.3 (Name of Coding system) is valued 'SCT', SPM-4.1 (Identifier) SHALL be a valid SNOMED CT code identifier format.</Description>
 					<Assertion>
 						<Plugin QualifiedClassName="gov.nist.healthcare.mu.loi.custom.SPM_4a"/>
 					</Assertion>
 				</Constraint>
-				<Constraint ID="NIST-xxx" Target="4[1].4[1]">
+				<Constraint ID="NIST-15" Target="4[1].4[1]">
 					<Description>If SPM-4.6 (Name of Alternate Coding System) is valued 'SCT', SPM-4.4 (Alternate Identifier) SHALL be a valid SNOMED CT code identifier format.</Description>
 					<Assertion>
 						<Plugin QualifiedClassName="gov.nist.healthcare.mu.loi.custom.SPM_4b"/>
 					</Assertion>
 				</Constraint>
-				<Constraint ID="NIST-xxx" Target="4[1]">
+				<Constraint ID="NIST-16" Target="4[1]">
 					<Description>When present, either SPM-4.3 (Specimen Type.Name of Coding System) or SPM-4.6 (Specimen Type.Name of Alternate Coding System) SHALL be valued 'SCT', 'HL70487', 'L' or '99zzz' for a local code system.</Description>
 					<Assertion>
 						<EXIST>
@@ -3385,19 +3394,19 @@
 				</Constraint>
 			</ByID>
 			<ByID ID="SPM_LOI_GU_PH">
-				<Constraint ID="NIST-xxx" Target="4[1].1[1]">
+				<Constraint ID="NIST-14" Target="4[1].1[1]">
 					<Description>If SPM-4.3 (Name of Coding system) is valued 'SCT', SPM-4.1 (Identifier) SHALL be a valid SNOMED CT code identifier format.</Description>
 					<Assertion>
 						<Plugin QualifiedClassName="gov.nist.healthcare.mu.loi.custom.SPM_4a"/>
 					</Assertion>
 				</Constraint>
-				<Constraint ID="NIST-xxx" Target="4[1].4[1]">
+				<Constraint ID="NIST-15" Target="4[1].4[1]">
 					<Description>: If SPM-4.6 (Name of Alternate Coding System) is valued 'SCT', SPM-4.4 (Alternate Identifier) SHALL be a valid SNOMED CT code identifier format.</Description>
 					<Assertion>
 						<Plugin QualifiedClassName="gov.nist.healthcare.mu.loi.custom.SPM_4b"/>
 					</Assertion>
 				</Constraint>
-				<Constraint ID="NIST-xxx" Target="4[1]">
+				<Constraint ID="NIST-16" Target="4[1]">
 					<Description>When present, either SPM-4.3 (Specimen Type.Name of Coding System) or SPM-4.6 (Specimen Type.Name of Alternate Coding System) SHALL be valued 'SCT' or 'HL70487'. </Description>
 					<Assertion>
 						<OR>
@@ -3412,33 +3421,33 @@
 						</OR>
 					</Assertion>
 				</Constraint>
-				<Constraint ID="NIST-xxx" Target="5[1].1[1]">
+				<Constraint ID="NIST-17" Target="5[1].1[1]">
 					<Description>If SPM-5.3 (Name of Coding system) is valued 'SCT', SPM-5.1 (Identifier) SHALL be a valid SNOMED CT code identifier format.</Description>
 					<Assertion>
 						<Plugin QualifiedClassName="gov.nist.healthcare.mu.loi.custom.SPM_5a"/>
 					</Assertion>
 				</Constraint>
-				<Constraint ID="NIST-xxx" Target="5[1].4[1]">
-					<Description>: If SPM-5.6 (Name of Alternate Coding System) is valued 'SCT', SPM-5.4 (Alternate Identifier) SHALL be a valid SNOMED CT code identifier format.</Description>
+				<Constraint ID="NIST-18" Target="5[1].4[1]">
+					<Description>If SPM-5.6 (Name of Alternate Coding System) is valued 'SCT', SPM-5.4 (Alternate Identifier) SHALL be a valid SNOMED CT code identifier format.</Description>
 					<Assertion>
 						<Plugin QualifiedClassName="gov.nist.healthcare.mu.loi.custom.SPM_5b"/>
 					</Assertion>
 				</Constraint>
 			</ByID>
 			<ByID ID="SPM_LOI_NG_PH">
-				<Constraint ID="NIST-xxx" Target="4[1].1[1]">
+				<Constraint ID="NIST-14" Target="4[1].1[1]">
 					<Description>If SPM-4.3 (Name of Coding system) is valued 'SCT', SPM-4.1 (Identifier) SHALL be a valid SNOMED CT code identifier format.</Description>
 					<Assertion>
 						<Plugin QualifiedClassName="gov.nist.healthcare.mu.loi.custom.SPM_4a"/>
 					</Assertion>
 				</Constraint>
-				<Constraint ID="NIST-xxx" Target="4[1].4[1]">
+				<Constraint ID="NIST-15" Target="4[1].4[1]">
 					<Description>: If SPM-4.6 (Name of Alternate Coding System) is valued 'SCT', SPM-4.4 (Alternate Identifier) SHALL be a valid SNOMED CT code identifier format.</Description>
 					<Assertion>
 						<Plugin QualifiedClassName="gov.nist.healthcare.mu.loi.custom.SPM_4b"/>
 					</Assertion>
 				</Constraint>
-				<Constraint ID="NIST-xxx" Target="4[1]">
+				<Constraint ID="NIST-16" Target="4[1]">
 					<Description>When present, either SPM-4.3 (Specimen Type.Name of Coding System) or SPM-4.6 (Specimen Type.Name of Alternate Coding System) SHALL be valued 'SCT' or 'HL70487'. </Description>
 					<Assertion>
 						<OR>
@@ -3453,14 +3462,14 @@
 						</OR>
 					</Assertion>
 				</Constraint>
-				<Constraint ID="NIST-xxx" Target="5[1].1[1]">
+				<Constraint ID="NIST-17" Target="5[1].1[1]">
 					<Description>If SPM-5.3 (Name of Coding system) is valued 'SCT', SPM-5.1 (Identifier) SHALL be a valid SNOMED CT code identifier format.</Description>
 					<Assertion>
 						<Plugin QualifiedClassName="gov.nist.healthcare.mu.loi.custom.SPM_5a"/>
 					</Assertion>
 				</Constraint>
-				<Constraint ID="NIST-xxx" Target="5[1].4[1]">
-					<Description>: If SPM-5.6 (Name of Alternate Coding System) is valued 'SCT', SPM-5.4 (Alternate Identifier) SHALL be a valid SNOMED CT code identifier format.</Description>
+				<Constraint ID="NIST-18" Target="5[1].4[1]">
+					<Description>If SPM-5.6 (Name of Alternate Coding System) is valued 'SCT', SPM-5.4 (Alternate Identifier) SHALL be a valid SNOMED CT code identifier format.</Description>
 					<Assertion>
 						<Plugin QualifiedClassName="gov.nist.healthcare.mu.loi.custom.SPM_5b"/>
 					</Assertion>
