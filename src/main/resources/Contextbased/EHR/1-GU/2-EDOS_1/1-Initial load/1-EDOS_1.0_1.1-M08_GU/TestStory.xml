@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseMetaData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="EDOS_1.0_1.1-M08_GU" date="11/11/2015" name="MO8_New" version="version2">
+		<Description>
+The initial Laboratory Test Compendium built by Century Hospital Clinical Laboratory is a subset of their Directory of Services.  It is based upon the most commonly ordered lab tests by Dr. Radon.
+This compendium is delivered electronically to Dr. Nicholas Radon's practice EHR, as agreed to between Laboratory and Dr. Radon's Office and EHR-S Vendor.   The EHR-S will integrate the eDOS into its test directory and use it to allow Dr. Radon to place orders electronically to Century Hospital's Clinical Laboratory.   
+The initial laboratory test compendium is composed of five messages.
+Century Hospital's LIS transmit the first message which provides information about each resultable observation.</Description>
+		<PreCondition>No Pre-Condition.</PreCondition>
+		<PostCondition>eDOS M08 data elements are incorporated appropriately into the EHR-S.</PostCondition>
+		<TestObjectives>Demonstrate capability to support a M08 initial load message for numeric, calculated, qualitative and narrative tests.
+Demonstrate capability to support all supported data elements, including repeating fields in the MSH segment.
+Demonstrate capability to support all supported data elements, including repeating fields in the MF1 segment. 
+Demonstrate capability to support all supported data elements, including repeating fields in the OM1 - not each OM1 segment will be maximally populated or include repeating fields (OM1-52 is covered in EDOS_2.2).
+Demonstrate capability to support all supported data elements, including repeating fields in the OMC segment.
+Demonstrate capability to support repeating segments for OMC.
+Demonstrate capability to support all supported data elements, including repeating fields in the OM2 segment.
+Demonstrate capability to support all supported data elements, including repeating fields in the OM3 segment.
+Demonstrate capability to support all supported data elements, including repeating fields in the OM4 segment.
+Demonstrate capability to support repeating segments for OM4.</TestObjectives>
+		<Comments>Initial upload of individual observations for a new compendium.
+Since this is a replace message, all data in this message will replace information from a previous eDOS M08 message.
+Demonstrate capability to support sending ask at order entry requirements.
+Demonstrate capability to define the specimen requirements.</Comments>
+	</TestCaseMetaData>

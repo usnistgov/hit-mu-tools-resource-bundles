@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<TestStep id="EDOS_2.4_3.1-M04_NG" name="EDOS_2.4_3.1-M04-NG - M04_Update_combo">
+    <Message>
+        <Segment name="MSH">
+            <Element location="MSH.1[1]" dataElement="Field Separator" data="|" categorization="IG Fixed Data"/>
+            <Element location="MSH.2[1]" dataElement="Encoding Characters" data="^~\&amp;#" categorization="IG Fixed Data"/>
+            <Element location="MSH.3[1]" dataElement="Sending Application" data="" categorization=""/>
+            <Element location="MSH.3[1].1" dataElement="Namespace ID" data="NIST Test Lab APP" categorization="Configurable Data"/>
+            <Element location="MSH.3[1].2" dataElement="Universal ID" data="" categorization=""/>
+            <Element location="MSH.3[1].3" dataElement="Universal ID Type" data="" categorization=""/>
+            <Element location="MSH.4[1]" dataElement="Sending Facility" data="" categorization=""/>
+            <Element location="MSH.4[1].1" dataElement="Namespace ID" data="NIST Lab Facility" categorization="Configurable Data"/>
+            <Element location="MSH.4[1].2" dataElement="Universal ID" data="" categorization=""/>
+            <Element location="MSH.4[1].3" dataElement="Universal ID Type" data="" categorization=""/>
+            <Element location="MSH.6[1]" dataElement="Receiving Facility" data="" categorization=""/>
+            <Element location="MSH.6[1].1" dataElement="Namespace ID" data="NIST EHR Facility" categorization="Configurable Data"/>
+            <Element location="MSH.6[1].2" dataElement="Universal ID" data="" categorization=""/>
+            <Element location="MSH.6[1].3" dataElement="Universal ID Type" data="" categorization=""/>
+            <Element location="MSH.7[1]" dataElement="Date/Time Of Message" data="" categorization=""/>
+            <Element location="MSH.7[1].1" dataElement="Time" data="20130421113601-0700" categorization="System Generated"/>
+            <Element location="MSH.9[1]" dataElement="Message Type" data="" categorization=""/>
+            <Element location="MSH.9[1].1" dataElement="Message Code" data="MFN" categorization="IG Fixed Data"/>
+            <Element location="MSH.9[1].2" dataElement="Trigger Event" data="M04" categorization="IG Fixed Data"/>
+            <Element location="MSH.9[1].3" dataElement="Message Structure" data="MFN_M04" categorization="IG Fixed Data"/>
+            <Element location="MSH.10[1]" dataElement="Message Control ID" data="EDOS_2.4_3.1-M04-NG" categorization="System Generated"/>
+            <Element location="MSH.11[1]" dataElement="Processing ID" data="" categorization=""/>
+            <Element location="MSH.11[1].1" dataElement="Processing ID" data="D" categorization="Changeable Data"/>
+            <Element location="MSH.12[1]" dataElement="VersionID" data="" categorization=""/>
+            <Element location="MSH.12[1].1" dataElement="Version ID" data="2.5.1" categorization="IG Fixed Data"/>
+            <Element location="MSH.21[1]" dataElement="Message Profile Identifier" data="" categorization=""/>
+            <Element location="MSH.21[1].1" dataElement="Entity Identifier" data="EDOS_Common_Component" categorization="Test Case Fixed Data"/>
+            <Element location="MSH.21[1].2" dataElement="Namespace ID" data="EDOS Base Profile" categorization="Changeable Data"/>
+            <Element location="MSH.21[1].3" dataElement="Universal ID" data="2.16.840.1.113883.9.67" categorization="Test Case Fixed Data"/>
+            <Element location="MSH.21[1].4" dataElement="Universal ID Type" data="ISO" categorization="IG Fixed Data"/>
+            <Element location="MSH.21[2]" dataElement="Message Profile Identifier" data="" categorization=""/>
+            <Element location="MSH.21[2].1" dataElement="Entity Identifier" data="EDOS_NG_Component" categorization="Test Case Fixed Data"/>
+            <Element location="MSH.21[2].2" dataElement="Namespace ID" data="EDOS NG Profile" categorization="Changeable Data"/>
+            <Element location="MSH.21[2].3" dataElement="Universal ID" data="2.16.840.1.113883.9.69" categorization="Test Case Fixed Data"/>
+            <Element location="MSH.21[2].4" dataElement="Universal ID Type" data="ISO" categorization="IG Fixed Data"/>
+        </Segment>
+        <Segment name="MFI">
+            <Element location="MFI.1[1]" dataElement="Master File Identifier" data="" categorization=""/>
+            <Element location="MFI.1[1].1" dataElement="Identifier" data="CDM" categorization="IG Fixed Data"/>
+            <Element location="MFI.1[1].2" dataElement="Text" data="Charge description master file" categorization="Changeable Data"/>
+            <Element location="MFI.1[1].3" dataElement="Name of Coding System" data="HL70175" categorization="IG Fixed Data"/>
+            <Element location="MFI.1[1].7" dataElement="Coding System Version ID" data="2.5.1" categorization="Test Case Fixed Data"/>
+            <Element location="MFI.1[1].8" dataElement="Alternate Coding System Version ID" data="" categorization=""/>
+            <Element location="MFI.3[1]" dataElement="File-Level Event Code" data="UPD" categorization="Test Case Fixed Data"/>
+            <Element location="MFI.6[1]" dataElement="Response Level Code" data="NE" categorization="IG Fixed Data"/>
+        </Segment>
+        <Segment name="MFE">
+            <Element location="MFE.1[1]" dataElement="Record-Level Event Code" data="MDC" categorization="Test Case Fixed Data"/>
+            <Element location="MFE.2[1]" dataElement="MFN Control ID" data="" categorization=""/>
+            <Element location="MFE.3[1]" dataElement="Effective Date/Time" data="" categorization=""/>
+            <Element location="MFE.3[1].1" dataElement="Time" data="20131219145310" categorization="System Generated"/>
+            <Element location="MFE.4[1]" dataElement="Primary Key Value - MFE" data="" categorization=""/>
+            <Element location="MFE.4[1].1" dataElement="Identifier" data="1300" categorization="Changeable Data"/>
+            <Element location="MFE.4[1].2" dataElement="Text" data="Arbovirus IgG and IgM Panel (DNG, WNV)  in Serum" categorization="Changeable Data"/>
+            <Element location="MFE.4[1].3" dataElement="Name of Coding System" data="99USL" categorization="Changeable Data"/>
+            <Element location="MFE.4[1].7" dataElement="Coding System Version ID" data="20130421" categorization="Changeable Data"/>
+            <Element location="MFE.5[1]" dataElement="Primary Key Value Type" data="CWE" categorization="IG Fixed Data"/>
+        </Segment>
+        <Segment name="CDM">
+            <Element location="CDM.1[1]" dataElement="Primary Key Value - CDM" data="" categorization=""/>
+            <Element location="CDM.1[1].1" dataElement="Identifier" data="1300" categorization="Test Case Fixed Data"/>
+            <Element location="CDM.1[1].2" dataElement="Text" data="Arbovirus IgG and IgM Panel (DNG, WNV)  in Serum" categorization="Changeable Data"/>
+            <Element location="CDM.1[1].3" dataElement="Name of Coding System" data="99USL" categorization="Changeable Data"/>
+            <Element location="CDM.1[1].7" dataElement="Coding System Version ID" data="20130421" categorization="Changeable Data"/>
+            <Element location="CDM.3[1]" dataElement="Charge Description Short" data="N/A" categorization="IG Fixed Data"/>
+            <Element location="CDM.7[1]" dataElement="Procedure Code" data="" categorization=""/>
+            <Element location="CDM.7[1].1" dataElement="Identifier" data="86788" categorization="Changeable Data"/>
+            <Element location="CDM.7[1].2" dataElement="Text" data="West Nile virus antibody, IgM" categorization="Changeable Data"/>
+            <Element location="CDM.7[1].3" dataElement="Name of Coding System" data="C4" categorization="IG Fixed Data"/>
+            <Element location="CDM.7[1].7" dataElement="Coding System Version ID" data="19.2" categorization="Changeable Data"/>
+            <Element location="CDM.7[2]" dataElement="Procedure Code" data="" categorization=""/>
+            <Element location="CDM.7[2].1" dataElement="Identifier" data="86789" categorization="Changeable Data"/>
+            <Element location="CDM.7[2].2" dataElement="Text" data="West Nile virus antibody, IgG" categorization="Changeable Data"/>
+            <Element location="CDM.7[2].3" dataElement="Name of Coding System" data="C4" categorization="IG Fixed Data"/>
+            <Element location="CDM.7[2].7" dataElement="Coding System Version ID" data="19.2" categorization="Changeable Data"/>
+            <Element location="CDM.7[3]" dataElement="Procedure Code" data="" categorization=""/>
+            <Element location="CDM.7[3].1" dataElement="Identifier" data="86790" categorization="Changeable Data"/>
+            <Element location="CDM.7[3].2" dataElement="Text" data="DengueFever antibody, IgG and IgM" categorization="Changeable Data"/>
+            <Element location="CDM.7[3].3" dataElement="Name of Coding System" data="C4" categorization="IG Fixed Data"/>
+            <Element location="CDM.7[3].7" dataElement="Coding System Version ID" data="19.2" categorization="Changeable Data"/>
+            <Element location="CDM.7[4]" dataElement="Procedure Code" data="" categorization=""/>
+            <Element location="CDM.7[4].1" dataElement="Identifier" data="86790" categorization="Changeable Data"/>
+            <Element location="CDM.7[4].2" dataElement="Text" data="DengueFever antibody, IgG and IgM" categorization="Changeable Data"/>
+            <Element location="CDM.7[4].3" dataElement="Name of Coding System" data="C4" categorization="IG Fixed Data"/>
+            <Element location="CDM.7[4].7" dataElement="Coding System Version ID" data="19.2" categorization="Changeable Data"/>
+            <Element location="CDM.7[5]" dataElement="Procedure Code" data="" categorization=""/>
+            <Element location="CDM.7[5].1" dataElement="Identifier" data="" categorization=""/>
+            <Element location="CDM.7[5].2" dataElement="Text" data="" categorization=""/>
+            <Element location="CDM.7[5].3" dataElement="Name of Coding System" data="" categorization=""/>
+            <Element location="CDM.7[5].7" dataElement="Coding System Version ID" data="" categorization=""/>
+            <Element location="CDM.7[6]" dataElement="Procedure Code" data="" categorization=""/>
+            <Element location="CDM.7[6].1" dataElement="Identifier" data="" categorization=""/>
+            <Element location="CDM.7[6].2" dataElement="Text" data="" categorization=""/>
+            <Element location="CDM.7[6].3" dataElement="Name of Coding System" data="" categorization=""/>
+            <Element location="CDM.7[6].7" dataElement="Coding System Version ID" data="" categorization=""/>
+        </Segment>
+        <Segment name="MFE">
+            <Element location="MFE.1[1]" dataElement="Record-Level Event Code" data="MAD" categorization="Test Case Fixed Data"/>
+            <Element location="MFE.2[1]" dataElement="MFN Control ID" data="" categorization=""/>
+            <Element location="MFE.3[1]" dataElement="Effective Date/Time" data="" categorization=""/>
+            <Element location="MFE.3[1].1" dataElement="Time" data="20131219145310" categorization="System Generated"/>
+            <Element location="MFE.4[1]" dataElement="Primary Key Value - MFE" data="" categorization=""/>
+            <Element location="MFE.4[1].1" dataElement="Identifier" data="400" categorization="Changeable Data"/>
+            <Element location="MFE.4[1].2" dataElement="Text" data="Lipid Panel" categorization="Changeable Data"/>
+            <Element location="MFE.4[1].3" dataElement="Name of Coding System" data="99USL" categorization="Changeable Data"/>
+            <Element location="MFE.4[1].7" dataElement="Coding System Version ID" data="20130421" categorization="Changeable Data"/>
+            <Element location="MFE.5[1]" dataElement="Primary Key Value Type" data="CWE" categorization="IG Fixed Data"/>
+        </Segment>
+        <Segment name="CDM">
+            <Element location="CDM.1[1]" dataElement="Primary Key Value - CDM" data="" categorization=""/>
+            <Element location="CDM.1[1].1" dataElement="Identifier" data="400" categorization="Test Case Fixed Data"/>
+            <Element location="CDM.1[1].2" dataElement="Text" data="Lipid Panel" categorization="Changeable Data"/>
+            <Element location="CDM.1[1].3" dataElement="Name of Coding System" data="99USL" categorization="Changeable Data"/>
+            <Element location="CDM.1[1].7" dataElement="Coding System Version ID" data="20130421" categorization="Changeable Data"/>
+            <Element location="CDM.3[1]" dataElement="Charge Description Short" data="N/A" categorization="IG Fixed Data"/>
+            <Element location="CDM.7[1]" dataElement="Procedure Code" data="" categorization=""/>
+            <Element location="CDM.7[1].1" dataElement="Identifier" data="80061" categorization="Changeable Data"/>
+            <Element location="CDM.7[1].2" dataElement="Text" data="Lipid panel This panel must include the following: Cholesterol, serum, total (82465) Lipoprotein, direct measurement, high density cholesterol (HDL cholesterol) (83718) Triglycerides (84478)" categorization="Changeable Data"/>
+            <Element location="CDM.7[1].3" dataElement="Name of Coding System" data="C4" categorization="IG Fixed Data"/>
+            <Element location="CDM.7[1].7" dataElement="Coding System Version ID" data="19.2" categorization="Changeable Data"/>
+            <Element location="CDM.7[2]" dataElement="Procedure Code" data="" categorization=""/>
+            <Element location="CDM.7[2].1" dataElement="Identifier" data="" categorization=""/>
+            <Element location="CDM.7[2].2" dataElement="Text" data="" categorization=""/>
+            <Element location="CDM.7[2].3" dataElement="Name of Coding System" data="" categorization=""/>
+            <Element location="CDM.7[2].7" dataElement="Coding System Version ID" data="" categorization=""/>
+            <Element location="CDM.7[3]" dataElement="Procedure Code" data="" categorization=""/>
+            <Element location="CDM.7[3].1" dataElement="Identifier" data="" categorization=""/>
+            <Element location="CDM.7[3].2" dataElement="Text" data="" categorization=""/>
+            <Element location="CDM.7[3].3" dataElement="Name of Coding System" data="" categorization=""/>
+            <Element location="CDM.7[3].7" dataElement="Coding System Version ID" data="" categorization=""/>
+            <Element location="CDM.7[4]" dataElement="Procedure Code" data="" categorization=""/>
+            <Element location="CDM.7[4].1" dataElement="Identifier" data="" categorization=""/>
+            <Element location="CDM.7[4].2" dataElement="Text" data="" categorization=""/>
+            <Element location="CDM.7[4].3" dataElement="Name of Coding System" data="" categorization=""/>
+            <Element location="CDM.7[4].7" dataElement="Coding System Version ID" data="" categorization=""/>
+            <Element location="CDM.7[5]" dataElement="Procedure Code" data="" categorization=""/>
+            <Element location="CDM.7[5].1" dataElement="Identifier" data="" categorization=""/>
+            <Element location="CDM.7[5].2" dataElement="Text" data="" categorization=""/>
+            <Element location="CDM.7[5].3" dataElement="Name of Coding System" data="" categorization=""/>
+            <Element location="CDM.7[5].7" dataElement="Coding System Version ID" data="" categorization=""/>
+            <Element location="CDM.7[6]" dataElement="Procedure Code" data="" categorization=""/>
+            <Element location="CDM.7[6].1" dataElement="Identifier" data="" categorization=""/>
+            <Element location="CDM.7[6].2" dataElement="Text" data="" categorization=""/>
+            <Element location="CDM.7[6].3" dataElement="Name of Coding System" data="" categorization=""/>
+            <Element location="CDM.7[6].7" dataElement="Coding System Version ID" data="" categorization=""/>
+        </Segment>
+        <Segment name="MFE">
+            <Element location="MFE.1[1]" dataElement="Record-Level Event Code" data="MAD" categorization="Test Case Fixed Data"/>
+            <Element location="MFE.2[1]" dataElement="MFN Control ID" data="" categorization=""/>
+            <Element location="MFE.3[1]" dataElement="Effective Date/Time" data="" categorization=""/>
+            <Element location="MFE.3[1].1" dataElement="Time" data="20131219145310" categorization="System Generated"/>
+            <Element location="MFE.4[1]" dataElement="Primary Key Value - MFE" data="" categorization=""/>
+            <Element location="MFE.4[1].1" dataElement="Identifier" data="410" categorization="Changeable Data"/>
+            <Element location="MFE.4[1].2" dataElement="Text" data="Low density lipoprotein cholesterol, serum (LDL) - measured" categorization="Changeable Data"/>
+            <Element location="MFE.4[1].3" dataElement="Name of Coding System" data="99USL" categorization="Changeable Data"/>
+            <Element location="MFE.4[1].7" dataElement="Coding System Version ID" data="20130421" categorization="Changeable Data"/>
+            <Element location="MFE.5[1]" dataElement="Primary Key Value Type" data="CWE" categorization="IG Fixed Data"/>
+        </Segment>
+        <Segment name="CDM">
+            <Element location="CDM.1[1]" dataElement="Primary Key Value - CDM" data="" categorization=""/>
+            <Element location="CDM.1[1].1" dataElement="Identifier" data="410" categorization="Test Case Fixed Data"/>
+            <Element location="CDM.1[1].2" dataElement="Text" data="Low density lipoprotein cholesterol, serum (LDL) - measured" categorization="Changeable Data"/>
+            <Element location="CDM.1[1].3" dataElement="Name of Coding System" data="99USL" categorization="Changeable Data"/>
+            <Element location="CDM.1[1].7" dataElement="Coding System Version ID" data="20130421" categorization="Changeable Data"/>
+            <Element location="CDM.3[1]" dataElement="Charge Description Short" data="N/A" categorization="IG Fixed Data"/>
+            <Element location="CDM.7[1]" dataElement="Procedure Code" data="" categorization=""/>
+            <Element location="CDM.7[1].1" dataElement="Identifier" data="87721" categorization="Changeable Data"/>
+            <Element location="CDM.7[1].2" dataElement="Text" data="lipoprotein, direct measurement; low density cholesterol (ldl cholesterol)" categorization="Changeable Data"/>
+            <Element location="CDM.7[1].3" dataElement="Name of Coding System" data="C4" categorization="IG Fixed Data"/>
+            <Element location="CDM.7[1].7" dataElement="Coding System Version ID" data="19.2" categorization="Changeable Data"/>
+            <Element location="CDM.7[2]" dataElement="Procedure Code" data="" categorization=""/>
+            <Element location="CDM.7[2].1" dataElement="Identifier" data="" categorization=""/>
+            <Element location="CDM.7[2].2" dataElement="Text" data="" categorization=""/>
+            <Element location="CDM.7[2].3" dataElement="Name of Coding System" data="" categorization=""/>
+            <Element location="CDM.7[2].7" dataElement="Coding System Version ID" data="" categorization=""/>
+            <Element location="CDM.7[3]" dataElement="Procedure Code" data="" categorization=""/>
+            <Element location="CDM.7[3].1" dataElement="Identifier" data="" categorization=""/>
+            <Element location="CDM.7[3].2" dataElement="Text" data="" categorization=""/>
+            <Element location="CDM.7[3].3" dataElement="Name of Coding System" data="" categorization=""/>
+            <Element location="CDM.7[3].7" dataElement="Coding System Version ID" data="" categorization=""/>
+            <Element location="CDM.7[4]" dataElement="Procedure Code" data="" categorization=""/>
+            <Element location="CDM.7[4].1" dataElement="Identifier" data="" categorization=""/>
+            <Element location="CDM.7[4].2" dataElement="Text" data="" categorization=""/>
+            <Element location="CDM.7[4].3" dataElement="Name of Coding System" data="" categorization=""/>
+            <Element location="CDM.7[4].7" dataElement="Coding System Version ID" data="" categorization=""/>
+            <Element location="CDM.7[5]" dataElement="Procedure Code" data="" categorization=""/>
+            <Element location="CDM.7[5].1" dataElement="Identifier" data="" categorization=""/>
+            <Element location="CDM.7[5].2" dataElement="Text" data="" categorization=""/>
+            <Element location="CDM.7[5].3" dataElement="Name of Coding System" data="" categorization=""/>
+            <Element location="CDM.7[5].7" dataElement="Coding System Version ID" data="" categorization=""/>
+            <Element location="CDM.7[6]" dataElement="Procedure Code" data="" categorization=""/>
+            <Element location="CDM.7[6].1" dataElement="Identifier" data="" categorization=""/>
+            <Element location="CDM.7[6].2" dataElement="Text" data="" categorization=""/>
+            <Element location="CDM.7[6].3" dataElement="Name of Coding System" data="" categorization=""/>
+            <Element location="CDM.7[6].7" dataElement="Coding System Version ID" data="" categorization=""/>
+        </Segment>
+        <Segment name="MFE">
+            <Element location="MFE.1[1]" dataElement="Record-Level Event Code" data="MUP" categorization="Test Case Fixed Data"/>
+            <Element location="MFE.2[1]" dataElement="MFN Control ID" data="" categorization=""/>
+            <Element location="MFE.3[1]" dataElement="Effective Date/Time" data="" categorization=""/>
+            <Element location="MFE.3[1].1" dataElement="Time" data="20131219145310" categorization="System Generated"/>
+            <Element location="MFE.4[1]" dataElement="Primary Key Value - MFE" data="" categorization=""/>
+            <Element location="MFE.4[1].1" dataElement="Identifier" data="600" categorization="Changeable Data"/>
+            <Element location="MFE.4[1].2" dataElement="Text" data="Prostate Biopsy Pathology Report" categorization="Changeable Data"/>
+            <Element location="MFE.4[1].3" dataElement="Name of Coding System" data="99USL" categorization="Changeable Data"/>
+            <Element location="MFE.4[1].7" dataElement="Coding System Version ID" data="20130421" categorization="Changeable Data"/>
+            <Element location="MFE.5[1]" dataElement="Primary Key Value Type" data="CWE" categorization="IG Fixed Data"/>
+        </Segment>
+        <Segment name="CDM">
+            <Element location="CDM.1[1]" dataElement="Primary Key Value - CDM" data="" categorization=""/>
+            <Element location="CDM.1[1].1" dataElement="Identifier" data="600" categorization="Test Case Fixed Data"/>
+            <Element location="CDM.1[1].2" dataElement="Text" data="Prostate Biopsy Pathology Report" categorization="Changeable Data"/>
+            <Element location="CDM.1[1].3" dataElement="Name of Coding System" data="99USL" categorization="Changeable Data"/>
+            <Element location="CDM.1[1].7" dataElement="Coding System Version ID" data="20130421" categorization="Changeable Data"/>
+            <Element location="CDM.3[1]" dataElement="Charge Description Short" data="N/A" categorization="IG Fixed Data"/>
+            <Element location="CDM.7[1]" dataElement="Procedure Code" data="" categorization=""/>
+            <Element location="CDM.7[1].1" dataElement="Identifier" data="G0416" categorization="Changeable Data"/>
+            <Element location="CDM.7[1].2" dataElement="Text" data="Surgical pathology, gross and micro exam for prostate needle saturation biopsy sampling 1-20 specimens" categorization="Changeable Data"/>
+            <Element location="CDM.7[1].3" dataElement="Name of Coding System" data="C4" categorization="IG Fixed Data"/>
+            <Element location="CDM.7[1].7" dataElement="Coding System Version ID" data="19.2" categorization="Changeable Data"/>
+            <Element location="CDM.7[2]" dataElement="Procedure Code" data="" categorization=""/>
+            <Element location="CDM.7[2].1" dataElement="Identifier" data="" categorization=""/>
+            <Element location="CDM.7[2].2" dataElement="Text" data="" categorization=""/>
+            <Element location="CDM.7[2].3" dataElement="Name of Coding System" data="" categorization=""/>
+            <Element location="CDM.7[2].7" dataElement="Coding System Version ID" data="" categorization=""/>
+            <Element location="CDM.7[3]" dataElement="Procedure Code" data="" categorization=""/>
+            <Element location="CDM.7[3].1" dataElement="Identifier" data="" categorization=""/>
+            <Element location="CDM.7[3].2" dataElement="Text" data="" categorization=""/>
+            <Element location="CDM.7[3].3" dataElement="Name of Coding System" data="" categorization=""/>
+            <Element location="CDM.7[3].7" dataElement="Coding System Version ID" data="" categorization=""/>
+            <Element location="CDM.7[4]" dataElement="Procedure Code" data="" categorization=""/>
+            <Element location="CDM.7[4].1" dataElement="Identifier" data="" categorization=""/>
+            <Element location="CDM.7[4].2" dataElement="Text" data="" categorization=""/>
+            <Element location="CDM.7[4].3" dataElement="Name of Coding System" data="" categorization=""/>
+            <Element location="CDM.7[4].7" dataElement="Coding System Version ID" data="" categorization=""/>
+            <Element location="CDM.7[5]" dataElement="Procedure Code" data="" categorization=""/>
+            <Element location="CDM.7[5].1" dataElement="Identifier" data="" categorization=""/>
+            <Element location="CDM.7[5].2" dataElement="Text" data="" categorization=""/>
+            <Element location="CDM.7[5].3" dataElement="Name of Coding System" data="" categorization=""/>
+            <Element location="CDM.7[5].7" dataElement="Coding System Version ID" data="" categorization=""/>
+            <Element location="CDM.7[6]" dataElement="Procedure Code" data="" categorization=""/>
+            <Element location="CDM.7[6].1" dataElement="Identifier" data="" categorization=""/>
+            <Element location="CDM.7[6].2" dataElement="Text" data="" categorization=""/>
+            <Element location="CDM.7[6].3" dataElement="Name of Coding System" data="" categorization=""/>
+            <Element location="CDM.7[6].7" dataElement="Coding System Version ID" data="" categorization=""/>
+        </Segment>
+        <Segment name="MFE">
+            <Element location="MFE.1[1]" dataElement="Record-Level Event Code" data="MDC" categorization="Test Case Fixed Data"/>
+            <Element location="MFE.2[1]" dataElement="MFN Control ID" data="" categorization=""/>
+            <Element location="MFE.3[1]" dataElement="Effective Date/Time" data="" categorization=""/>
+            <Element location="MFE.3[1].1" dataElement="Time" data="20131219145310" categorization="System Generated"/>
+            <Element location="MFE.4[1]" dataElement="Primary Key Value - MFE" data="" categorization=""/>
+            <Element location="MFE.4[1].1" dataElement="Identifier" data="1305" categorization="Changeable Data"/>
+            <Element location="MFE.4[1].2" dataElement="Text" data="SLE IgG Titer Serum" categorization="Changeable Data"/>
+            <Element location="MFE.4[1].3" dataElement="Name of Coding System" data="99USL" categorization="Changeable Data"/>
+            <Element location="MFE.4[1].7" dataElement="Coding System Version ID" data="20130421" categorization="Changeable Data"/>
+            <Element location="MFE.5[1]" dataElement="Primary Key Value Type" data="CWE" categorization="IG Fixed Data"/>
+        </Segment>
+        <Segment name="CDM">
+            <Element location="CDM.1[1]" dataElement="Primary Key Value - CDM" data="" categorization=""/>
+            <Element location="CDM.1[1].1" dataElement="Identifier" data="1305" categorization="Changeable Data"/>
+            <Element location="CDM.1[1].2" dataElement="Text" data="SLE IgG Titer Serum" categorization="Changeable Data"/>
+            <Element location="CDM.1[1].3" dataElement="Name of Coding System" data="99USL" categorization="Changeable Data"/>
+            <Element location="CDM.1[1].7" dataElement="Coding System Version ID" data="20130421" categorization="Changeable Data"/>
+            <Element location="CDM.3[1]" dataElement="Charge Description Short" data="N/A" categorization="IG Fixed Data"/>
+            <Element location="CDM.7[1]" dataElement="Procedure Code" data="" categorization=""/>
+            <Element location="CDM.7[1].1" dataElement="Identifier" data="86653" categorization="Changeable Data"/>
+            <Element location="CDM.7[1].2" dataElement="Text" data="St. Louis encephalitis antibody, IgG and IgM" categorization="Changeable Data"/>
+            <Element location="CDM.7[1].3" dataElement="Name of Coding System" data="C4" categorization="IG Fixed Data"/>
+            <Element location="CDM.7[1].7" dataElement="Coding System Version ID" data="19.2" categorization="Changeable Data"/>
+            <Element location="CDM.7[2]" dataElement="Procedure Code" data="" categorization=""/>
+            <Element location="CDM.7[2].1" dataElement="Identifier" data="" categorization=""/>
+            <Element location="CDM.7[2].2" dataElement="Text" data="" categorization=""/>
+            <Element location="CDM.7[2].3" dataElement="Name of Coding System" data="" categorization=""/>
+            <Element location="CDM.7[2].7" dataElement="Coding System Version ID" data="" categorization=""/>
+            <Element location="CDM.7[3]" dataElement="Procedure Code" data="" categorization=""/>
+            <Element location="CDM.7[3].1" dataElement="Identifier" data="" categorization=""/>
+            <Element location="CDM.7[3].2" dataElement="Text" data="" categorization=""/>
+            <Element location="CDM.7[3].3" dataElement="Name of Coding System" data="" categorization=""/>
+            <Element location="CDM.7[3].7" dataElement="Coding System Version ID" data="" categorization=""/>
+            <Element location="CDM.7[4]" dataElement="Procedure Code" data="" categorization=""/>
+            <Element location="CDM.7[4].1" dataElement="Identifier" data="" categorization=""/>
+            <Element location="CDM.7[4].2" dataElement="Text" data="" categorization=""/>
+            <Element location="CDM.7[4].3" dataElement="Name of Coding System" data="" categorization=""/>
+            <Element location="CDM.7[4].7" dataElement="Coding System Version ID" data="" categorization=""/>
+            <Element location="CDM.7[5]" dataElement="Procedure Code" data="" categorization=""/>
+            <Element location="CDM.7[5].1" dataElement="Identifier" data="" categorization=""/>
+            <Element location="CDM.7[5].2" dataElement="Text" data="" categorization=""/>
+            <Element location="CDM.7[5].3" dataElement="Name of Coding System" data="" categorization=""/>
+            <Element location="CDM.7[5].7" dataElement="Coding System Version ID" data="" categorization=""/>
+            <Element location="CDM.7[6]" dataElement="Procedure Code" data="" categorization=""/>
+            <Element location="CDM.7[6].1" dataElement="Identifier" data="" categorization=""/>
+            <Element location="CDM.7[6].2" dataElement="Text" data="" categorization=""/>
+            <Element location="CDM.7[6].3" dataElement="Name of Coding System" data="" categorization=""/>
+            <Element location="CDM.7[6].7" dataElement="Coding System Version ID" data="" categorization=""/>
+        </Segment>
+    </Message>
+</TestStep>

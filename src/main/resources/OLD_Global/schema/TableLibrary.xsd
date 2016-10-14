@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2014 rel. 2 sp1 (http://www.altova.com) by Caroline Rosin (NIST) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.nist.gov/healthcare/data" targetNamespace="http://www.nist.gov/healthcare/data" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="TableLibrary">
+		<xs:complexType>
+			<xs:sequence minOccurs="0" maxOccurs="unbounded">
+				<xs:element name="TableDefinition">
+					<xs:complexType>
+						<xs:sequence minOccurs="0">
+							<xs:element name="Comment" minOccurs="0" type="xs:string"/>
+							<xs:element name="TableElement" minOccurs="0" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:attribute name="Code" type="xs:string" use="required"/>
+									<xs:attribute name="DisplayName" type="xs:string" use="required"/>
+									<xs:attribute name="Source" type="SourceType" use="optional"/>
+									<xs:attribute name="Codesys" type="xs:string" use="optional"/>
+									<xs:attribute name="RefTable" type="xs:string" use="optional"/>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+						<xs:attribute name="Id" type="xs:string" use="required"/>
+						<xs:attribute name="Name" type="xs:string" use="required"/>
+						<xs:attribute name="Type" type="TableType" use="required"/>
+						<xs:attribute name="Version" type="xs:string" use="required"/>
+						<xs:attribute name="Codesys" type="xs:string" use="optional"/>
+						<xs:attribute name="Oid" type="xs:string"/>
+						<xs:attribute name="AlternateId" type="xs:string" use="optional"/>
+						<xs:attribute name="Mode" type="TableMode" use="optional"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+			<xs:attribute name="Name" type="xs:string" use="required"/>
+			<xs:attribute name="OrganizationName" type="xs:string"/>
+			<xs:attribute name="TableLibraryVersion" type="xs:string"/>
+			<xs:attribute name="Status" type="StatusType"/>
+			<xs:attribute name="TableLibraryIdentifier" type="xs:string" use="required"/>
+			<xs:attribute name="Description" type="xs:string"/>
+			<xs:attribute name="DateCreated" type="xs:date"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:simpleType name="TableType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="HL7"/>
+			<xs:enumeration value="User"/>
+			<xs:enumeration value="Local"/>
+			<xs:enumeration value="External"/>
+			<xs:enumeration value="Imported"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SourceType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="HL7"/>
+			<xs:enumeration value="Local"/>
+			<xs:enumeration value="Redefined"/>
+			<xs:enumeration value="SDO"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="StatusType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Active"/>
+			<xs:enumeration value="Draft"/>
+			<xs:enumeration value="Superceded"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="TableMode">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Simple"/>
+			<xs:enumeration value="Complex"/>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>

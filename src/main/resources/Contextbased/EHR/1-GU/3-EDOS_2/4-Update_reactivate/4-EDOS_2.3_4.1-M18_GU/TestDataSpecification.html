@@ -1,0 +1,153 @@
+<style xmlns="http://www.w3.org/1999/xhtml" xmlns:util="http://hl7.nist.gov/data-specs/util" type="text/css">
+		@media screen {		
+		.test-data-specs-main maskByMediaType {display:table;}			
+				
+		.test-data-specs-main table tbody tr th {font-size:95%}			
+		.test-data-specs-main table tbody tr td {font-size:100%;}			
+		.test-data-specs-main table tbody tr th {text-align:left;background:#C6DEFF}			
+		.test-data-specs-main table thead tr th {text-align:center;}			
+		.test-data-specs-main {text-align:center;}			
+		.test-data-specs-main table { width:98%;border: 1px groove;table-layout: fixed; margin:0 auto;border-collapse: collapse;}			
+		.test-data-specs-main table  tr { border: 3px groove; }			
+		.test-data-specs-main table  th { border: 2px groove;}			
+		.test-data-specs-main table  td { border: 2px groove; }			
+		.test-data-specs-main table thead {border: 1px groove;background:#446BEC;text-align:left;}			
+		.test-data-specs-main table tbody tr td {text-align:left}				
+			
+		/* Don't display empty rows */
+		.test-data-specs-main .tds_noData {display:none;}
+	
+		}	
+			
+			@media print {
+		.test-data-specs-main 
+		.test-data-specs-main tds_maskByMediaType {display:table;}			
+		.test-data-specs-main fieldset table tbody tr th {font-size:90%}			
+		.test-data-specs-main fieldset table tbody tr td {font-size:90%;}			
+		.test-data-specs-main fieldset table tbody tr th {text-align:left;background:#C6DEFF}			
+		.test-data-specs-main fieldset table thead tr th {text-align:center;background:#4682B4}			
+		.test-data-specs-main fieldset {text-align:center;page-break-inside: avoid;}			
+		.test-data-specs-main fieldset table { width:98%;border: 1px groove;table-layout: fixed; margin:0 auto;page-break-inside: avoid;border-collapse: collapse;}			
+		.test-data-specs-main fieldset table[id=vendor-labResults] thead tr {font-size:80%}			
+		.test-data-specs-main fieldset table[id=vendor-labResults] tbody tr {font-size:75%}			
+		.test-data-specs-main fieldset table  tr { border: 3px groove; }			
+		.test-data-specs-main fieldset table  th { border: 2px groove;}			
+		.test-data-specs-main fieldset table  td { border: 2px groove; }			
+		.test-data-specs-main fieldset table thead {border: 1px groove;background:#446BEC;text-align:left;}			
+		.test-data-specs-main fieldset table tbody tr td {text-align:left;}			
+		
+		.test-data-specs-main .tds_noData {display:none;}
+				
+		.test-data-specs-main .tds_title {text-align:left;margin-bottom:1%}			
+		.test-data-specs-main h3 {text-align:center;}			
+		.test-data-specs-main h2 {text-align:center;}			
+		.test-data-specs-main h1 {text-align:center;}	
+		.test-data-specs-main .tds_pgBrk {page-break-after:always;}
+		}
+		</style><div xmlns="http://www.w3.org/1999/xhtml" class="test-data-specs-main">
+   <tabset>
+      <tab heading="Master File Identification">
+         <table>
+            <tbody>
+               <tr>
+                  <th>Element</th>
+                  <th>Data</th>
+               </tr>
+               <tr>
+                  <td>Identifier</td>
+                  <td>MACP</td>
+               </tr>
+               <tr>
+                  <td>Event code</td>
+                  <td>UPD</td>
+               </tr>
+            </tbody>
+         </table>
+      </tab>
+      <tab heading="Payer Information[*]" vertical="false">
+         <div class="panel panel-info">
+            <div class="panel-body">
+               <fieldset>
+                  <accordion>
+                     <accordion-group class="panel-info" type="pills" style="margin-top:0;border: 1px ridge  #C6DEFF;" is-open="PayerInfo1" vertical="true">
+                        <accordion-heading><span class="clearfix"><span class="accordion-heading pull-left"><i class="pull-left fa" ng-class="{'fa-caret-down': PayerInfo1, 'fa-caret-right': !PayerInfo1}"></i>Payer Information - Erythrocyte sedimentation rate</span></span></accordion-heading>
+                        <div class="panel panel-info">
+                           <div class="panel-body">
+                              <fieldset>
+                                 <legend>Record information</legend>
+                                 <table>
+                                    <tbody>
+                                       <tr>
+                                          <th>Element</th>
+                                          <th>Data</th>
+                                       </tr>
+                                       <tr>
+                                          <td>Event code</td>
+                                          <td>MAC</td>
+                                       </tr>
+                                       <tr>
+                                          <td>Effective date and time</td>
+                                          <td>20131219145310</td>
+                                       </tr>
+                                       <tr>
+                                          <td>Test/Panel Name</td>
+                                          <td>Erythrocyte sedimentation rate</td>
+                                       </tr>
+                                       <tr>
+                                          <td>Test/Panel identifier (code system)</td>
+                                          <td>500 (99USL)</td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </fieldset>
+                              <fieldset>
+                                 <legend>Payer &amp; coverage details</legend>
+                                 <fieldset>
+                                    <legend>Payer</legend>
+                                    <table>
+                                       <tbody>
+                                          <tr>
+                                             <th>Element</th>
+                                             <th>Data</th>
+                                          </tr>
+                                          <tr>
+                                             <td>Health Plan</td>
+                                             <td>Healthplan2</td>
+                                          </tr>
+                                          <tr>
+                                             <td>Insurance Company</td>
+                                             <td>SMCA2</td>
+                                          </tr>
+                                       </tbody>
+                                    </table>
+                                 </fieldset>
+                                 <fieldset>
+                                    <legend>Coverage Policy</legend>
+                                    <table>
+                                       <tbody>
+                                          <tr>
+                                             <td>Low price range</td>
+                                             <td>USD 25</td>
+                                          </tr>
+                                          <tr>
+                                             <td>High price range</td>
+                                             <td>USD 30</td>
+                                          </tr>
+                                          <tr>
+                                             <td>Reason for universal service cost range</td>
+                                             <td>Some reason</td>
+                                          </tr>
+                                       </tbody>
+                                    </table>
+                                 </fieldset>
+                              </fieldset>
+                           </div>
+                        </div>
+                     </accordion-group>
+                  </accordion>
+               </fieldset>
+            </div>
+         </div>
+      </tab>
+   </tabset>
+</div>

@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- V2_IG_LTCF_R2_DSTU_R1_2013NOV -->
+<PredicateDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<!-- CE_EDOS -->
+	<!-- <Predicate Context="CE_EDOS.2" PredicateTrueUsage="R" PredicateFalseUsage="RE">
+		<EnglishDescription>If CE.1 (Identifier) is not valued.</EnglishDescription>
+		<Condition>
+			<NOT>
+				<Valued location="./1"/>
+			</NOT>
+		</Condition>
+	</Predicate>
+	<Predicate Context="CE_EDOS.3" PredicateTrueUsage="R" PredicateFalseUsage="X">
+		<EnglishDescription>If CE.1 (Identifier) is valued.</EnglishDescription>
+		<Condition>
+			<Valued location="./1"/>
+		</Condition>
+	</Predicate>
+	<Predicate Context="CE_EDOS.4" PredicateTrueUsage="RE" PredicateFalseUsage="X">
+		<EnglishDescription>If CE.1 (Identifier) or CE.2  (Text) is valued.</EnglishDescription>
+		<Condition>
+			<OR>
+				<Valued location="./1"/>
+				<Valued location="./2"/>
+			</OR>
+		</Condition>
+	</Predicate>
+	<Predicate Context="CE_EDOS.5" PredicateTrueUsage="RE" PredicateFalseUsage="X">
+		<EnglishDescription>If CE.1 (Identifier) or CE.2  (Text) is valued.</EnglishDescription>
+		<Condition>
+			<OR>
+				<Valued location="./1"/>
+				<Valued location="./2"/>
+			</OR>
+		</Condition>
+	</Predicate>
+	<Predicate Context="CE_EDOS.6" PredicateTrueUsage="R" PredicateFalseUsage="X">
+		<EnglishDescription>If CE.4 (Alternate Identifier) is valued.</EnglishDescription>
+		<Condition>
+			<Valued location="./4"/>
+		</Condition>
+	</Predicate> -->
+	<!-- CNE_EDOS -->
+	<!--<Predicate Context="CNE_EDOS.7" PredicateTrueUsage="RE" PredicateFalseUsage="X">
+		<EnglishDescription>If CNE.3 (Name Of Coding System) is valued.</EnglishDescription>
+		<Condition>
+			<Valued location="./3"/>
+		</Condition>
+	</Predicate> -->
+	<!-- CWE_EDOS -->
+	<Predicate Context="CWE_EDOS.1" PredicateTrueUsage="R" PredicateFalseUsage="O">
+		<EnglishDescription>If CWE.2 is not valued.</EnglishDescription>
+		<Condition>
+			<NOT>
+				<Valued location="./2"/>
+			</NOT>
+		</Condition>
+	</Predicate>
+	<Predicate Context="CWE_EDOS.2" PredicateTrueUsage="R" PredicateFalseUsage="RE">
+		<EnglishDescription>If CWE.1 is not valued.</EnglishDescription>
+		<Condition>
+			<NOT>
+				<Valued location="./1"/>
+			</NOT>
+		</Condition>
+	</Predicate>
+	<Predicate Context="CWE_EDOS.3" PredicateTrueUsage="R" PredicateFalseUsage="X">
+		<EnglishDescription>If CWE.1 is valued.</EnglishDescription>
+		<Condition>
+			<Valued location="./1"/>
+		</Condition>
+	</Predicate>
+	<Predicate Context="CWE_EDOS.7" PredicateTrueUsage="RE" PredicateFalseUsage="X">
+		<EnglishDescription>If CWE.3 (Name Of Coding System) is valued.</EnglishDescription>
+		<Condition>
+			<Valued location="./3"/>
+		</Condition>
+	</Predicate>
+	<Predicate Context="CWE_EDOS.8" PredicateTrueUsage="RE" PredicateFalseUsage="X">
+		<EnglishDescription>If CWE.6 (Name Of Alternate Coding System) is valued.</EnglishDescription>
+		<Condition>
+			<Valued location="./6"/>
+		</Condition>
+	</Predicate>
+	<!-- CWE_CR -->
+	<!-- <Predicate Context="CWE_CR.6" PredicateTrueUsage="R" PredicateFalseUsage="X">
+		<EnglishDescription>If CWE_CR.4 (Alternate Identifier) is valued. </EnglishDescription>
+		<Condition>
+			<Valued location="./4"/>
+		</Condition>
+	</Predicate>
+	<Predicate Context="CWE_CR.7" PredicateTrueUsage="RE" PredicateFalseUsage="X">
+		<EnglishDescription>If CWE_CR.3 (Name Of Coding System) is valued.</EnglishDescription>
+		<Condition>
+			<Valued location="./3"/>
+		</Condition>
+	</Predicate>
+	<Predicate Context="CWE_CR.8" PredicateTrueUsage="RE" PredicateFalseUsage="X">
+		<EnglishDescription>If CWE_CR.6 (Name Of Alternate Coding System) is valued.</EnglishDescription>
+		<Condition>
+			<Valued location="./6"/>
+		</Condition>
+	</Predicate> -->
+	<!-- CWE_CRE -->
+	<Predicate Context="CWE_CRE.2" PredicateTrueUsage="RE" PredicateFalseUsage="X">
+		<EnglishDescription>If CWE_CRE.1 (Identifier) is valued.</EnglishDescription>
+		<Condition>
+			<Valued location="./1"/>
+		</Condition>
+	</Predicate>
+	<Predicate Context="CWE_CRE.3" PredicateTrueUsage="R" PredicateFalseUsage="X">
+		<EnglishDescription>If CWE_CRE.1 (Identifier) is valued.</EnglishDescription>
+		<Condition>
+			<Valued location="./1"/>
+		</Condition>
+	</Predicate>
+	<Predicate Context="CWE_CRE.4" PredicateTrueUsage="RE" PredicateFalseUsage="X">
+		<EnglishDescription>If CWE_CRE.1 (Identifier) is valued.</EnglishDescription>
+		<Condition>
+			<Valued location="./1"/>
+		</Condition>
+	</Predicate>
+	<Predicate Context="CWE_CRE.5" PredicateTrueUsage="RE" PredicateFalseUsage="X">
+		<EnglishDescription>If CWE_CRE.4 (Alternate Identifier) is valued.</EnglishDescription>
+		<Condition>
+			<Valued location="./4"/>
+		</Condition>
+	</Predicate>
+	<Predicate Context="CWE_CRE.6" PredicateTrueUsage="R" PredicateFalseUsage="X">
+		<EnglishDescription>If CWE_CRE.4 (Alternate Identifier) is valued.</EnglishDescription>
+		<Condition>
+			<Valued location="./4"/>
+		</Condition>
+	</Predicate>
+	<Predicate Context="CWE_CRE.7" PredicateTrueUsage="RE" PredicateFalseUsage="X">
+		<EnglishDescription>If CWE_CRE.3 (Name Of Coding System) is valued.</EnglishDescription>
+		<Condition>
+			<Valued location="./3"/>
+		</Condition>
+	</Predicate>
+	<Predicate Context="CWE_CRE.8" PredicateTrueUsage="RE" PredicateFalseUsage="X">
+		<EnglishDescription>If CWE_CRE.6 (Name Of Alternate Coding System) is valued.</EnglishDescription>
+		<Condition>
+			<Valued location="./6"/>
+		</Condition>
+	</Predicate>
+	<Predicate Context="CWE_CRE.9" PredicateTrueUsage="R" PredicateFalseUsage="RE">
+		<EnglishDescription>If CWE_CRE.1 (Identifier) and CWE.4_CRE (alternate identifier) are not valued.</EnglishDescription>
+		<Condition>
+			<AND>
+				<NOT>
+					<Valued location="./1"/>
+				</NOT>
+				<NOT>
+					<Valued location="./4"/>
+				</NOT>
+			</AND>
+		</Condition>
+	</Predicate>
+	<!-- CWE_RC -->
+	<!-- usage is likely to change to RE -->
+	<Predicate Context="CWE_RC.7" PredicateTrueUsage="RE" PredicateFalseUsage="X">
+		<EnglishDescription>If CWE_RC.3 (Name Of Coding System) is valued.</EnglishDescription>
+		<Condition>
+			<Valued location="./3"/>
+		</Condition>
+	</Predicate>
+	<!-- CWE_RC1 -->
+	<Predicate Context="CWE_RC1.6" PredicateTrueUsage="R" PredicateFalseUsage="X">
+		<EnglishDescription>If CWE_RC1.4 (Alternate Identifier) or CWE_RC1.5 (Alternate Text) is valued.</EnglishDescription>
+		<Condition>
+			<OR>
+				<Valued location="./4"/>
+				<Valued location="./5"/>
+			</OR>
+		</Condition>
+	</Predicate>
+	<!-- usage is likely to change to RE -->
+	<Predicate Context="CWE_RC1.7" PredicateTrueUsage="RE" PredicateFalseUsage="X">
+		<EnglishDescription>If CWE_RC1.3 (Name Of Coding System) is valued.</EnglishDescription>
+		<Condition>
+			<Valued location="./3"/>
+		</Condition>
+	</Predicate>
+	<Predicate Context="CWE_RC1.8" PredicateTrueUsage="RE" PredicateFalseUsage="X">
+		<EnglishDescription>If 1.6 (Name Of Coding System) is valued.</EnglishDescription>
+		<Condition>
+			<Valued location="./6"/>
+		</Condition>
+	</Predicate>
+	<!-- EI_NG -->
+	<Predicate Context="EI_NG.2" PredicateTrueUsage="R" PredicateFalseUsage="O">
+		<EnglishDescription>If EI_NG.3 (Universal ID) is not valued.</EnglishDescription>
+		<Condition>
+			<NOT>
+				<Valued location="./3"/>
+			</NOT>
+		</Condition>
+	</Predicate>
+	<Predicate Context="EI_NG.3" PredicateTrueUsage="R" PredicateFalseUsage="O">
+		<EnglishDescription>If EI_NG.2 (Namespace ID) is not valued.</EnglishDescription>
+		<Condition>
+			<NOT>
+				<Valued location="./2"/>
+			</NOT>
+		</Condition>
+	</Predicate>
+	<Predicate Context="EI_NG.4" PredicateTrueUsage="R" PredicateFalseUsage="X">
+		<EnglishDescription>If EI_NG.3 (Universal ID) is valued.</EnglishDescription>
+		<Condition>
+			<Valued location="./3"/>
+		</Condition>
+	</Predicate>
+	<!-- HD_NG -->
+	<Predicate Context="HD_NG.1" PredicateTrueUsage="R" PredicateFalseUsage="O">
+		<EnglishDescription>If HD_NG.2 (Universal ID) is not valued.</EnglishDescription>
+		<Condition>
+			<NOT>
+				<Valued location="./2"/>
+			</NOT>
+		</Condition>
+	</Predicate>
+	<Predicate Context="HD_NG.2" PredicateTrueUsage="R" PredicateFalseUsage="O">
+		<EnglishDescription>If HD_NG.1 (Namespace ID) is not valued.</EnglishDescription>
+		<Condition>
+			<NOT>
+				<Valued location="./1"/>
+			</NOT>
+		</Condition>
+	</Predicate>
+	<Predicate Context="HD_NG.3" PredicateTrueUsage="R" PredicateFalseUsage="X">
+		<EnglishDescription>If HD_NG.2 (Universal ID) is valued.</EnglishDescription>
+		<Condition>
+			<Valued location="./2"/>
+		</Condition>
+	</Predicate>
+</PredicateDocument>

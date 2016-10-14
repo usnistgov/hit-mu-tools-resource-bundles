@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!-- V2_IG_LTCF_R2_DSTU_R1_2013NOV -->
+<HL7v2xConformanceProfile HL7Version="2.5.1" ProfileType="HL7">
+	<MetaData Name="" OrgName="NIST" Version="V2_IG_LTCF_R2_DSTU_R1_2013NOV" Status="" Topics="confsig--2.5.1-profile-accNE_accAL-Deferred"/>
+	<Encodings>
+		<Encoding>ER7</Encoding>
+	</Encodings>
+	<DynamicDef AccAck="NE" AppAck="AL" MsgAckMode="Deferred"/>
+	<HL7v2xStaticDef MsgType="MFN" EventType="M10" MsgStructID="MFN_M10" EventDesc="MFN/MFK - Test /observation batteries master file" Role="Sender">
+		<MetaData Name="" OrgName="" Version="" Status="" Topics="confsig--2.5.1-static-MFN-M10-null-MFN_M10---Sender"/>
+		<Segment Name="MSH" flavor="EDOS_GU" LongName="Message Header" Usage="R" Min="1" Max="1"/>
+		<Segment Name="SFT" flavor="HL7" LongName="Software Segment" Usage="O" Min="0" Max="*"/>
+		<Segment Name="MFI" flavor="EDOS" LongName="Master File Identification" Usage="R" Min="1" Max="1"/>
+		<SegGroup Name="MF_BATTERY" LongName="MF_BATTERY" Usage="R" Min="1" Max="*">
+			<Segment Name="MFE" flavor="EDOS" LongName="Master File Entry" Usage="R" Min="1" Max="1"/>
+			<Segment Name="OM1" flavor="EDOS" LongName="General Segment" Usage="R" Min="1" Max="1"/>
+			<!-- TODO : check cardinality for that group -->
+			<SegGroup Name="BATTERY_DETAIL" LongName="BATTERY_DETAIL" Usage="R" Min="1" Max="1">
+				<Segment Name="OM5" flavor="EDOS" LongName="Observation Batteries (Sets)" Usage="R" Min="1" Max="1"/>
+				<Segment Name="OM4" flavor="EDOS" LongName="Observations that Require Specimens" Usage="RE" Min="0" Max="*"/>
+			</SegGroup>
+		</SegGroup>
+	</HL7v2xStaticDef>
+</HL7v2xConformanceProfile>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- V2_IG_LTCF_R2_DSTU_R1_2013NOV -->
+<ConformanceStatementDocument IGVersion="V2_IG_LTCF_R2_DSTU_v17_CJ edits" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="CS.xsd">   
+	<!-- CE_EDOS -->
+	<!-- <ConformanceStatement Profile="Base" id="eDOS-1" Context="CE_EDOS.2">
+		<EnglishDescription>CE.2 (Text) SHALL be valued if CE.1 (Identifier) is not valued.</EnglishDescription>
+		<Assertion>
+			<OR>
+				<Valued location="../1"/>
+				<Valued location="."/>
+			</OR>
+		</Assertion>		
+	</ConformanceStatement>	
+	<ConformanceStatement  Profile="Base" id="eDOS-2" Context="CE_EDOS.3">
+		<EnglishDescription>CE.3 (Name of Coding System) SHALL be valued if CE.1 (Identifier) is valued.</EnglishDescription>
+		<Assertion>
+			<OR>
+				<NOT>
+					<Valued location="../1"/>
+				</NOT>
+				<Valued location="."/>
+			</OR>
+		</Assertion>		
+	</ConformanceStatement>	
+	<ConformanceStatement  Profile="Base" id="eDOS-3" Context="CE_EDOS.4">
+		<EnglishDescription>CE.4 (Alternate Identifier) SHALL NOT be valued if both CE.1 (Identifier) and CE.2 (Text) are not valued.</EnglishDescription>
+		<Assertion>
+			<OR>
+				<OR>
+					<Valued location="../1"/>
+					<Valued location="../2"/>
+				</OR>
+				<NOT>
+					<Valued location="."/>
+				</NOT>
+			</OR>
+		</Assertion>		
+	</ConformanceStatement>
+	<ConformanceStatement  Profile="Base" id="eDOS-4" Context="CE_EDOS.5">
+		<EnglishDescription>CE.5 (Alternate Text) SHALL NOT be valued if both CE.1 (Identifier) and CE.2 (Text) are not valued.</EnglishDescription>
+		<Assertion>
+			<OR>
+				<OR>
+					<Valued location="../1"/>
+					<Valued location="../2"/>
+				</OR>
+				<NOT>
+					<Valued location="."/>
+				</NOT>
+			</OR>
+		</Assertion>		
+	</ConformanceStatement>
+	<ConformanceStatement  Profile="Base" id="eDOS-5" Context="CE_EDOS.6">
+		<EnglishDescription>CE.6 (Name of Alternate Coding System) SHALL be valued if CE.4 (Alternate Identifier) is valued.</EnglishDescription>
+		<Assertion>
+			<OR>
+				<NOT>
+					<Valued location="../4"/>
+				</NOT>
+				<Valued location="."/>
+			</OR>
+		</Assertion>
+	</ConformanceStatement> -->
+	<!-- EI_GU -->
+	<ConformanceStatement  Profile="Base" id="eDOS-1" Context="EI_GU.3">
+		<EnglishDescription>EI_GU.3 (Universal ID) SHALL be valued with an ISO-compliant OID.</EnglishDescription>
+		<Assertion>
+			<Regex location="." regex="[0-2](\.(0|[1-9][0-9]*))*"/>
+		</Assertion>		
+	</ConformanceStatement>
+	<ConformanceStatement  Profile="Base" id="eDOS-2" Context="EI_GU.4">
+		<EnglishDescription>EI_GU.4 (Universal ID Type) SHALL contain the value 'ISO'.</EnglishDescription>
+		<Assertion>
+			<PlainText location="." value="ISO"/>
+		</Assertion>	
+	</ConformanceStatement>
+	<!-- HD_GU -->
+	<ConformanceStatement  Profile="Base" id="eDOS-3" Context="HD_GU.2">
+		<EnglishDescription>HD_GU.2 (Universal ID) SHALL be valued with an ISO-compliant OID.</EnglishDescription>
+		<Assertion>
+			<Regex location="." regex="[0-2](\.(0|[1-9][0-9]*))*"/>
+		</Assertion>		
+	</ConformanceStatement>
+	<ConformanceStatement  Profile="Base" id="eDOS-4" Context="HD_GU.3">
+		<EnglishDescription>HD_GU.3 (Universal ID Type) SHALL contain the value 'ISO'.</EnglishDescription>
+		<Assertion>
+			<PlainText location="." value="ISO"/>
+		</Assertion>		
+	</ConformanceStatement>
+</ConformanceStatementDocument>

@@ -1,0 +1,556 @@
+<style xmlns="http://www.w3.org/1999/xhtml" xmlns:util="http://hl7.nist.gov/data-specs/util" type="text/css">
+		@media screen {		
+		.test-data-specs-main maskByMediaType {display:table;}			
+				
+		.test-data-specs-main table tbody tr th {font-size:95%}			
+		.test-data-specs-main table tbody tr td {font-size:100%;}			
+		.test-data-specs-main table tbody tr th {text-align:left;background:#C6DEFF}			
+		.test-data-specs-main table thead tr th {text-align:center;}			
+		.test-data-specs-main {text-align:center;}			
+		.test-data-specs-main table { width:98%;border: 1px groove;table-layout: fixed; margin:0 auto;border-collapse: collapse;}			
+		.test-data-specs-main table  tr { border: 3px groove; }			
+		.test-data-specs-main table  th { border: 2px groove;}			
+		.test-data-specs-main table  td { border: 2px groove; }			
+		.test-data-specs-main table thead {border: 1px groove;background:#446BEC;text-align:left;}			
+		.test-data-specs-main table tbody tr td {text-align:left}				
+			
+		/* Don't display empty rows */
+		.test-data-specs-main .tds_noData {display:none;}
+	
+		}	
+			
+			@media print {
+		.test-data-specs-main 
+		.test-data-specs-main tds_maskByMediaType {display:table;}			
+		.test-data-specs-main fieldset table tbody tr th {font-size:90%}			
+		.test-data-specs-main fieldset table tbody tr td {font-size:90%;}			
+		.test-data-specs-main fieldset table tbody tr th {text-align:left;background:#C6DEFF}			
+		.test-data-specs-main fieldset table thead tr th {text-align:center;background:#4682B4}			
+		.test-data-specs-main fieldset {text-align:center;page-break-inside: avoid;}			
+		.test-data-specs-main fieldset table { width:98%;border: 1px groove;table-layout: fixed; margin:0 auto;page-break-inside: avoid;border-collapse: collapse;}			
+		.test-data-specs-main fieldset table[id=vendor-labResults] thead tr {font-size:80%}			
+		.test-data-specs-main fieldset table[id=vendor-labResults] tbody tr {font-size:75%}			
+		.test-data-specs-main fieldset table  tr { border: 3px groove; }			
+		.test-data-specs-main fieldset table  th { border: 2px groove;}			
+		.test-data-specs-main fieldset table  td { border: 2px groove; }			
+		.test-data-specs-main fieldset table thead {border: 1px groove;background:#446BEC;text-align:left;}			
+		.test-data-specs-main fieldset table tbody tr td {text-align:left;}			
+		
+		.test-data-specs-main .tds_noData {display:none;}
+				
+		.test-data-specs-main .tds_title {text-align:left;margin-bottom:1%}			
+		.test-data-specs-main h3 {text-align:center;}			
+		.test-data-specs-main h2 {text-align:center;}			
+		.test-data-specs-main h1 {text-align:center;}	
+		.test-data-specs-main .tds_pgBrk {page-break-after:always;}
+		}
+		</style><div xmlns="http://www.w3.org/1999/xhtml" class="test-data-specs-main">
+   <tabset>
+      <tab heading="Master File Identification">
+         <table>
+            <tbody>
+               <tr>
+                  <th>Element</th>
+                  <th>Data</th>
+               </tr>
+               <tr>
+                  <td>Identifier</td>
+                  <td>OMC</td>
+               </tr>
+               <tr>
+                  <td>Event code</td>
+                  <td>UPD</td>
+               </tr>
+            </tbody>
+         </table>
+      </tab>
+      <tab heading="Panel/Test battery Information[*]" vertical="false">
+         <div class="panel panel-info">
+            <div class="panel-body">
+               <fieldset>
+                  <accordion>
+                     <accordion-group class="panel-info" type="pills" style="margin-top:0;border: 1px ridge  #C6DEFF;" is-open="PanelDetails1" vertical="true">
+                        <accordion-heading><span class="clearfix"><span class="accordion-heading pull-left"><i class="pull-left fa" ng-class="{'fa-caret-down': PanelDetails1, 'fa-caret-right': !PanelDetails1}"></i>Panel/Test battery Information - CMP</span></span></accordion-heading>
+                        <div class="panel panel-info">
+                           <div class="panel-body">
+                              <fieldset>
+                                 <legend>Record information</legend>
+                                 <table>
+                                    <tbody>
+                                       <tr>
+                                          <th>Element</th>
+                                          <th>Data</th>
+                                       </tr>
+                                       <tr>
+                                          <td>Event code</td>
+                                          <td>MAD</td>
+                                       </tr>
+                                       <tr>
+                                          <td>Effective date and time</td>
+                                          <td>20131219145310</td>
+                                       </tr>
+                                       <tr>
+                                          <td>Test/Panel Name</td>
+                                          <td>CMP</td>
+                                       </tr>
+                                       <tr>
+                                          <td>Test/Panel identifier (code system)</td>
+                                          <td>100 (99USL)</td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </fieldset>
+                              <fieldset>
+                                 <legend>General information</legend>
+                                 <table>
+                                    <tbody>
+                                       <tr>
+                                          <th>Element</th>
+                                          <th>Data</th>
+                                       </tr>
+                                       <tr>
+                                          <td>Specimen required ?</td>
+                                          <td>Y</td>
+                                       </tr>
+                                       <tr class="tds_noData">
+                                          <td>Producer</td>
+                                          <td class="tds_noData"></td>
+                                       </tr>
+                                       <tr>
+                                          <td>Test/Panel other name</td>
+                                          <td>Comprehensive metabolic 2000 panel - Serum or Plasma</td>
+                                       </tr>
+                                       <tr>
+                                          <td>Test/Panel other identifier  (code system)</td>
+                                          <td>24323-8 (LN)</td>
+                                       </tr>
+                                       <tr class="tds_noData">
+                                          <td>Preferred Report Name</td>
+                                          <td class="tds_noData"></td>
+                                       </tr>
+                                       <tr>
+                                          <td>Preferred Short  Name</td>
+                                          <td>CMP</td>
+                                       </tr>
+                                       <tr class="tds_noData">
+                                          <td>Preferred Long   Name</td>
+                                          <td class="tds_noData"></td>
+                                       </tr>
+                                       <tr>
+                                          <td>Is the test/panel orderable ?</td>
+                                          <td>Y</td>
+                                       </tr>
+                                       <tr>
+                                          <td>Nature</td>
+                                          <td>P</td>
+                                       </tr>
+                                       <tr>
+                                          <td>Interpretation</td>
+                                          <td>Test used to measure blood sugar, electrolytes and fluid balance, kidney and liver function.</td>
+                                       </tr>
+                                       <tr>
+                                          <td>Patient preparation</td>
+                                          <td>Patient fasting required for 12 hours.</td>
+                                       </tr>
+                                       <tr>
+                                          <td>Factors that may affect the test</td>
+                                          <td>Insufficient specimen, Gross hemolysis, Improper labeling..</td>
+                                       </tr>
+                                       <tr>
+                                          <td>Schedule</td>
+                                          <td>Daily</td>
+                                       </tr>
+                                       <tr>
+                                          <td>Is the test exclusive ?</td>
+                                          <td>N</td>
+                                       </tr>
+                                       <tr>
+                                          <td>Diagnostic Service Sector</td>
+                                          <td>LAB</td>
+                                       </tr>
+                                       <tr>
+                                          <td>Test alias</td>
+                                          <td>CMP</td>
+                                       </tr>
+                                       <tr class="tds_noData">
+                                          <td>Code for results</td>
+                                          <td class="tds_noData"></td>
+                                       </tr>
+                                       <tr>
+                                          <td>Expected turn around time</td>
+                                          <td>1 day</td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </fieldset>
+                              <fieldset>
+                                 <legend>Panel/Test battery Details</legend>
+                                 <fieldset>
+                                    <table>
+                                       <tbody>
+                                          <tr>
+                                             <th>Element</th>
+                                             <th>Data</th>
+                                          </tr>
+                                          <tr>
+                                             <td>Test included in panel/test battery</td>
+                                             <td>Serum Glucose</td>
+                                          </tr>
+                                          <tr>
+                                             <td>Test included in panel/test battery (code &amp; code system)</td>
+                                             <td>104 (99USL)</td>
+                                          </tr>
+                                          <tr>
+                                             <td>Test included in panel/test battery</td>
+                                             <td>Blood Urea Nitrogen (BUN)</td>
+                                          </tr>
+                                          <tr>
+                                             <td>Test included in panel/test battery (code &amp; code system)</td>
+                                             <td>106 (99USL)</td>
+                                          </tr>
+                                          <tr>
+                                             <td>Test included in panel/test battery</td>
+                                             <td>Creatinine</td>
+                                          </tr>
+                                          <tr>
+                                             <td>Test included in panel/test battery (code &amp; code system)</td>
+                                             <td>102 (99USL)</td>
+                                          </tr>
+                                          <tr>
+                                             <td>Test included in panel/test battery</td>
+                                             <td>BUN/Creatinine Ratio</td>
+                                          </tr>
+                                          <tr>
+                                             <td>Test included in panel/test battery (code &amp; code system)</td>
+                                             <td>108 (99USL)</td>
+                                          </tr>
+                                          <tr>
+                                             <td>Test included in panel/test battery</td>
+                                             <td>GFR, calculated</td>
+                                          </tr>
+                                          <tr>
+                                             <td>Test included in panel/test battery (code &amp; code system)</td>
+                                             <td>110 (99USL)</td>
+                                          </tr>
+                                          <tr>
+                                             <td>Test included in panel/test battery</td>
+                                             <td>Calcium</td>
+                                          </tr>
+                                          <tr>
+                                             <td>Test included in panel/test battery (code &amp; code system)</td>
+                                             <td>112 (99USL)</td>
+                                          </tr>
+                                          <tr>
+                                             <td>Test included in panel/test battery</td>
+                                             <td>Total protein, serum</td>
+                                          </tr>
+                                          <tr>
+                                             <td>Test included in panel/test battery (code &amp; code system)</td>
+                                             <td>114 (99USL)</td>
+                                          </tr>
+                                          <tr>
+                                             <td>Test included in panel/test battery</td>
+                                             <td>Albumin</td>
+                                          </tr>
+                                          <tr>
+                                             <td>Test included in panel/test battery (code &amp; code system)</td>
+                                             <td>116 (99USL)</td>
+                                          </tr>
+                                          <tr>
+                                             <td>Test included in panel/test battery</td>
+                                             <td>Globulin</td>
+                                          </tr>
+                                          <tr>
+                                             <td>Test included in panel/test battery (code &amp; code system)</td>
+                                             <td>118 (99USL)</td>
+                                          </tr>
+                                          <tr>
+                                             <td>Test included in panel/test battery</td>
+                                             <td>Albumin/globulin ratio</td>
+                                          </tr>
+                                          <tr>
+                                             <td>Test included in panel/test battery (code &amp; code system)</td>
+                                             <td>120 (99USL)</td>
+                                          </tr>
+                                          <tr>
+                                             <td>Test included in panel/test battery</td>
+                                             <td>Total bilirubin, serum</td>
+                                          </tr>
+                                          <tr>
+                                             <td>Test included in panel/test battery (code &amp; code system)</td>
+                                             <td>122 (99USL)</td>
+                                          </tr>
+                                          <tr>
+                                             <td>Test included in panel/test battery</td>
+                                             <td>Alkaline phosphatase (ALP)</td>
+                                          </tr>
+                                          <tr>
+                                             <td>Test included in panel/test battery (code &amp; code system)</td>
+                                             <td>124 (99USL)</td>
+                                          </tr>
+                                          <tr>
+                                             <td>Test included in panel/test battery</td>
+                                             <td>Alanine aminotransferase (ALT)</td>
+                                          </tr>
+                                          <tr>
+                                             <td>Test included in panel/test battery (code &amp; code system)</td>
+                                             <td>126 (99USL)</td>
+                                          </tr>
+                                          <tr>
+                                             <td>Test included in panel/test battery</td>
+                                             <td>Aspartate aminotransferase (ASP)</td>
+                                          </tr>
+                                          <tr>
+                                             <td>Test included in panel/test battery (code &amp; code system)</td>
+                                             <td>128 (99USL)</td>
+                                          </tr>
+                                          <tr>
+                                             <td>Test included in panel/test battery</td>
+                                             <td>Sodium, serum</td>
+                                          </tr>
+                                          <tr>
+                                             <td>Test included in panel/test battery (code &amp; code system)</td>
+                                             <td>130 (99USL)</td>
+                                          </tr>
+                                          <tr>
+                                             <td>Test included in panel/test battery</td>
+                                             <td>Potassium, serum</td>
+                                          </tr>
+                                          <tr>
+                                             <td>Test included in panel/test battery (code &amp; code system)</td>
+                                             <td>132 (99USL)</td>
+                                          </tr>
+                                          <tr>
+                                             <td>Test included in panel/test battery</td>
+                                             <td>Chloride, serum</td>
+                                          </tr>
+                                          <tr>
+                                             <td>Test included in panel/test battery (code &amp; code system)</td>
+                                             <td>134 (99USL)</td>
+                                          </tr>
+                                          <tr>
+                                             <td>Test included in panel/test battery</td>
+                                             <td>Carbon dioxide, serum</td>
+                                          </tr>
+                                          <tr>
+                                             <td>Test included in panel/test battery (code &amp; code system)</td>
+                                             <td>136 (99USL)</td>
+                                          </tr>
+                                          <tr>
+                                             <td>Test included in panel/test battery</td>
+                                             <td>Anion gap</td>
+                                          </tr>
+                                          <tr>
+                                             <td>Test included in panel/test battery (code &amp; code system)</td>
+                                             <td>138 (99USL)</td>
+                                          </tr>
+                                       </tbody>
+                                    </table>
+                                 </fieldset>
+                                 <fieldset>
+                                    <legend>Specimen information details</legend>
+                                    <table>
+                                       <tbody>
+                                          <tr>
+                                             <th>Element</th>
+                                             <th>Data</th>
+                                          </tr>
+                                          <tr>
+                                             <td>Sequence ID</td>
+                                             <td>1.1</td>
+                                          </tr>
+                                          <tr>
+                                             <td>Container description</td>
+                                             <td>Gold Serum Separator tube</td>
+                                          </tr>
+                                          <tr>
+                                             <td>Container description</td>
+                                             <td>Red, No Additive tube</td>
+                                          </tr>
+                                          <tr>
+                                             <td>Container volume</td>
+                                             <td>5.0</td>
+                                          </tr>
+                                          <tr>
+                                             <td>Container volume</td>
+                                             <td>5.0</td>
+                                          </tr>
+                                          <tr>
+                                             <td>Container units</td>
+                                             <td>milliliter</td>
+                                          </tr>
+                                          <tr>
+                                             <td>Container units (code &amp; code system)</td>
+                                             <td>mL (UCUM)</td>
+                                          </tr>
+                                          <tr>
+                                             <td>Container units</td>
+                                             <td>milliliter</td>
+                                          </tr>
+                                          <tr>
+                                             <td>Container units (code &amp; code system)</td>
+                                             <td>mL (UCUM)</td>
+                                          </tr>
+                                          <tr class="tds_noData">
+                                             <td>Specimen</td>
+                                             <td class="tds_noData"></td>
+                                          </tr>
+                                          <tr>
+                                             <td>Specimen (code &amp; code system)</td>
+                                             <td>119364003 (SCT)</td>
+                                          </tr>
+                                          <tr class="tds_noData">
+                                             <td>Additive</td>
+                                             <td class="tds_noData"></td>
+                                          </tr>
+                                          <tr>
+                                             <td>Normal collection volume</td>
+                                             <td>1</td>
+                                          </tr>
+                                          <tr>
+                                             <td>Normal collection volume unit</td>
+                                             <td>milliliter</td>
+                                          </tr>
+                                          <tr>
+                                             <td>Normal collection volume unit (code &amp; code system)</td>
+                                             <td>mL (UCUM)</td>
+                                          </tr>
+                                          <tr>
+                                             <td>Normal collection volume</td>
+                                             <td>0.5</td>
+                                          </tr>
+                                          <tr>
+                                             <td>Normal collection volume unit</td>
+                                             <td>milliliter</td>
+                                          </tr>
+                                          <tr>
+                                             <td>Normal collection volume unit (code &amp; code system)</td>
+                                             <td>mL (UCUM)</td>
+                                          </tr>
+                                          <tr>
+                                             <td>Specimen Requirements</td>
+                                             <td>Protect from light. Allow serum tube to clot completely at room temperature. Separate serum or plasma from cells ASAP or within
+                                                30 minutes of collection.
+                                             </td>
+                                          </tr>
+                                          <tr>
+                                             <td>Specimen Handling Code</td>
+                                             <td>Refrigerated temperature</td>
+                                          </tr>
+                                          <tr>
+                                             <td>Specimen Handling Code (code &amp; code system)</td>
+                                             <td>REF (HL70376)</td>
+                                          </tr>
+                                          <tr class="tds_noData">
+                                             <td>Specimen Preference</td>
+                                             <td class="tds_noData"></td>
+                                          </tr>
+                                          <tr class="tds_noData">
+                                             <td>Preferred Specimen Sequence ID</td>
+                                             <td class="tds_noData"></td>
+                                          </tr>
+                                       </tbody>
+                                    </table>
+                                 </fieldset>
+                                 <fieldset>
+                                    <legend>Specimen information details</legend>
+                                    <table>
+                                       <tbody>
+                                          <tr>
+                                             <th>Element</th>
+                                             <th>Data</th>
+                                          </tr>
+                                          <tr>
+                                             <td>Sequence ID</td>
+                                             <td>1.2</td>
+                                          </tr>
+                                          <tr>
+                                             <td>Container description</td>
+                                             <td>Green Lithium Heparin tube</td>
+                                          </tr>
+                                          <tr>
+                                             <td>Container volume</td>
+                                             <td>3.0</td>
+                                          </tr>
+                                          <tr>
+                                             <td>Container units</td>
+                                             <td>milliliter</td>
+                                          </tr>
+                                          <tr>
+                                             <td>Container units (code &amp; code system)</td>
+                                             <td>mL (UCUM)</td>
+                                          </tr>
+                                          <tr class="tds_noData">
+                                             <td>Specimen</td>
+                                             <td class="tds_noData"></td>
+                                          </tr>
+                                          <tr>
+                                             <td>Specimen (code &amp; code system)</td>
+                                             <td>119361006 (SCT)</td>
+                                          </tr>
+                                          <tr class="tds_noData">
+                                             <td>Additive</td>
+                                             <td class="tds_noData"></td>
+                                          </tr>
+                                          <tr>
+                                             <td>Specimen (code &amp; code system)</td>
+                                             <td>HEPL (HL70371)</td>
+                                          </tr>
+                                          <tr>
+                                             <td>Normal collection volume</td>
+                                             <td>2</td>
+                                          </tr>
+                                          <tr>
+                                             <td>Normal collection volume unit</td>
+                                             <td>milliliter</td>
+                                          </tr>
+                                          <tr>
+                                             <td>Normal collection volume unit (code &amp; code system)</td>
+                                             <td>mL (UCUM)</td>
+                                          </tr>
+                                          <tr>
+                                             <td>Normal collection volume</td>
+                                             <td>0.7</td>
+                                          </tr>
+                                          <tr>
+                                             <td>Normal collection volume unit</td>
+                                             <td>milliliter</td>
+                                          </tr>
+                                          <tr>
+                                             <td>Normal collection volume unit (code &amp; code system)</td>
+                                             <td>mL (UCUM)</td>
+                                          </tr>
+                                          <tr>
+                                             <td>Specimen Requirements</td>
+                                             <td>Centrifuge at 1100-2000 g for a minimum of 10 minutes.</td>
+                                          </tr>
+                                          <tr>
+                                             <td>Specimen Handling Code</td>
+                                             <td>Refrigerated temperature</td>
+                                          </tr>
+                                          <tr>
+                                             <td>Specimen Handling Code (code &amp; code system)</td>
+                                             <td>REF (HL70376)</td>
+                                          </tr>
+                                          <tr class="tds_noData">
+                                             <td>Specimen Preference</td>
+                                             <td class="tds_noData"></td>
+                                          </tr>
+                                          <tr class="tds_noData">
+                                             <td>Preferred Specimen Sequence ID</td>
+                                             <td class="tds_noData"></td>
+                                          </tr>
+                                       </tbody>
+                                    </table>
+                                 </fieldset>
+                              </fieldset>
+                           </div>
+                        </div>
+                     </accordion-group>
+                  </accordion>
+               </fieldset>
+            </div>
+         </div>
+      </tab>
+   </tabset>
+</div>

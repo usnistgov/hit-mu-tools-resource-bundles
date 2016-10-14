@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="UTF-8"?><html>
+   <head>
+      <title>NIST HL7V2 Lab Validation Suite - Message Content</title>
+      <style type="text/css">
+         @media screen {
+         maskByMediaType {display:table;}
+         fieldset table tbody tr th {font-size:95%}
+         fieldset table tbody tr td {font-size:95%;}
+         fieldset table tbody tr th {text-align:left;background:#C6DEFF}
+         fieldset table thead tr th {text-align:center;}
+         fieldset table thead tr th:first-child {width:15%;}
+         fieldset table thead tr th:nth-child(2) {width:30%;}
+         fieldset table thead tr th:nth-child(3) {width:30%;}
+         fieldset table thead tr th:last-child {width:20%;}
+         					fieldset {text-align:center;}
+         					fieldset table { width:98%;border: 1px groove;table-layout: fixed; margin:0 auto;border-collapse: collapse;}
+         fieldset table  tr { border: 3px groove; }
+         fieldset table  th { border: 2px groove;}
+         fieldset table  td { border: 2px groove; }
+         fieldset table thead {border: 1px groove;background:#446BEC;text-align:left;}
+         fieldset table tbody tr td {text-align:left}
+         .embSpace {padding-left:15px;}
+         .embSubSpace {padding-left:25px;}
+         .childField {background:#B8B8B8;}
+         .hidden {display:none;}
+         }
+         @media print {
+         maskByMediaType {display:table;}
+         fieldset table tbody tr th {font-size:70%}
+         fieldset table tbody tr td {font-size:70%;}
+         fieldset table tbody tr th {text-align:left;background:#C6DEFF}
+         fieldset table thead tr th {text-align:center;font-size:70%;}
+         fieldset legend {text-align:center;font-size:70%;}
+         fieldset table thead tr th:first-child {width:15%;}
+         fieldset table thead tr th:nth-child(2) {width:30%;}
+         fieldset table thead tr th:nth-child(3) {width:30%;}
+         fieldset table thead tr th:last-child {width:20%;}
+         					fieldset {text-align:center;page-break-inside: avoid;}
+         					fieldset table { width:98%;border: 1px groove;table-layout: fixed; margin:0 auto;border-collapse: collapse;page-break-inside:
+         avoid;}
+         fieldset table  tr { border: 3px groove; }
+         fieldset table  th { border: 2px groove;}
+         fieldset table  td { border: 2px groove; }
+         fieldset table thead {border: 1px groove;background:#446BEC;text-align:left;}
+         fieldset table tbody tr td {text-align:left}
+         .embSpace {padding-left:10px;}
+         .embSubSpace {padding-left:20px;}
+         .childField {background:#B8B8B8;}
+         .hidden {display:none;}
+         }
+         @page {
+         counter-increment: page;
+         					@bottom-center {
+         content: "Page " counter(page);
+         }
+         }
+         @page :left {
+         margin-left: 5%;
+         margin-right: 5%;
+         }
+         @page :right {
+         margin-left: 5%;
+         margin-right: 5%;
+         }
+         
+      </style>
+   </head>
+   <body>
+      <fieldset>
+         <legend>Test Case Information</legend>
+         <table>
+            <thead>
+               <tr>
+                  <th colspan="2">MFK_0.0_3.1-MFK_M04_GU - Smoke_M04_SysAck</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <th> Test Case ID</th>
+                  <td>MFK_0.0_3.1-MFK_M04_GU</td>
+               </tr>
+            </tbody>
+         </table>
+      </fieldset>
+      <br></br>
+      <fieldset>
+         <legend>MSH</legend>
+         <table>
+            <thead>
+               <tr>
+                  <th>Location</th>
+                  <th>Data Element</th>
+                  <th>Data</th>
+                  <th>Categorization</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <th>MSH.1</th>
+                  <th>Field Separator</th>
+                  <td>|</td>
+                  <td>IG Fixed Data</td>
+               </tr>
+               <tr>
+                  <th>MSH.2</th>
+                  <th>Encoding Characters</th>
+                  <td>^~\&amp;#</td>
+                  <td>IG Fixed Data</td>
+               </tr>
+               <tr class="hidden">
+                  <th>MSH.3</th>
+                  <th>Sending Application</th>
+                  <th></th>
+                  <th></th>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">MSH.3.1</td>
+                  <td class="embSpace">Namespace ID</td>
+                  <td class="childField"></td>
+                  <td class="childField"></td>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">MSH.3.2</td>
+                  <td class="embSpace">Universal ID</td>
+                  <td class="childField"></td>
+                  <td class="childField"></td>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">MSH.3.3</td>
+                  <td class="embSpace">Universal ID Type</td>
+                  <td class="childField"></td>
+                  <td class="childField"></td>
+               </tr>
+               <tr>
+                  <th>MSH.4</th>
+                  <th>Sending Facility</th>
+                  <th></th>
+                  <th></th>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">MSH.4.1</td>
+                  <td class="embSpace">Namespace ID</td>
+                  <td class="childField"></td>
+                  <td class="childField"></td>
+               </tr>
+               <tr>
+                  <td class="embSpace">MSH.4.2</td>
+                  <td class="embSpace">Universal ID</td>
+                  <td>2.16.840.1.113883.3.72.5.23</td>
+                  <td>Configurable Data</td>
+               </tr>
+               <tr>
+                  <td class="embSpace">MSH.4.3</td>
+                  <td class="embSpace">Universal ID Type</td>
+                  <td>ISO</td>
+                  <td>IG Fixed Data</td>
+               </tr>
+               <tr class="hidden">
+                  <th>MSH.6</th>
+                  <th>Receiving Facility</th>
+                  <th></th>
+                  <th></th>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">MSH.6.1</td>
+                  <td class="embSpace">Namespace ID</td>
+                  <td class="childField"></td>
+                  <td class="childField"></td>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">MSH.6.2</td>
+                  <td class="embSpace">Universal ID</td>
+                  <td class="childField"></td>
+                  <td class="childField"></td>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">MSH.6.3</td>
+                  <td class="embSpace">Universal ID Type</td>
+                  <td class="childField"></td>
+                  <td class="childField"></td>
+               </tr>
+               <tr>
+                  <th>MSH.7</th>
+                  <th>Date/Time Of Message</th>
+                  <th></th>
+                  <th></th>
+               </tr>
+               <tr>
+                  <td class="embSpace">MSH.7.1</td>
+                  <td class="embSpace">Time</td>
+                  <td>20130219180035-0800</td>
+                  <td>System Generated</td>
+               </tr>
+               <tr>
+                  <th>MSH.9</th>
+                  <th>Message Type</th>
+                  <th></th>
+                  <th></th>
+               </tr>
+               <tr>
+                  <td class="embSpace">MSH.9.1</td>
+                  <td class="embSpace">Message Code</td>
+                  <td>MFK</td>
+                  <td>IG Fixed Data</td>
+               </tr>
+               <tr>
+                  <td class="embSpace">MSH.9.2</td>
+                  <td class="embSpace">Trigger Event</td>
+                  <td>M04</td>
+                  <td>IG Fixed Data</td>
+               </tr>
+               <tr>
+                  <td class="embSpace">MSH.9.3</td>
+                  <td class="embSpace">Message Structure</td>
+                  <td>MFK_M01</td>
+                  <td>IG Fixed Data</td>
+               </tr>
+               <tr>
+                  <th>MSH.10</th>
+                  <th>Message Control ID</th>
+                  <td>MFK_0.0_3.1-MFK_M04_GU</td>
+                  <td>System Generated</td>
+               </tr>
+               <tr>
+                  <th>MSH.11</th>
+                  <th>Processing ID</th>
+                  <th></th>
+                  <th></th>
+               </tr>
+               <tr>
+                  <td class="embSpace">MSH.11.1</td>
+                  <td class="embSpace">Processing ID</td>
+                  <td>D</td>
+                  <td>Changeable Data</td>
+               </tr>
+               <tr>
+                  <th>MSH.12</th>
+                  <th>VersionID</th>
+                  <th></th>
+                  <th></th>
+               </tr>
+               <tr>
+                  <td class="embSpace">MSH.12.1</td>
+                  <td class="embSpace">Version ID</td>
+                  <td>2.5.1</td>
+                  <td>IG Fixed Data</td>
+               </tr>
+               <tr>
+                  <th>MSH.21</th>
+                  <th>Message Profile Identifier</th>
+                  <th></th>
+                  <th></th>
+               </tr>
+               <tr>
+                  <td class="embSpace">MSH.21.1</td>
+                  <td class="embSpace">Entity Identifier</td>
+                  <td>EDOS_GU_RESPONSE_PROFILE</td>
+                  <td>Test Case Fixed Data</td>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">MSH.21.2</td>
+                  <td class="embSpace">Namespace ID</td>
+                  <td class="childField"></td>
+                  <td class="childField"></td>
+               </tr>
+               <tr>
+                  <td class="embSpace">MSH.21.3</td>
+                  <td class="embSpace">Universal ID</td>
+                  <td>2.16.840.1.113883.9.75</td>
+                  <td>Test Case Fixed Data</td>
+               </tr>
+               <tr>
+                  <td class="embSpace">MSH.21.4</td>
+                  <td class="embSpace">Universal ID Type</td>
+                  <td>ISO</td>
+                  <td>IG Fixed Data</td>
+               </tr>
+               <tr class="hidden">
+                  <th>MSH.21[2]</th>
+                  <th>Message Profile Identifier</th>
+                  <th></th>
+                  <th></th>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">MSH.21[2].1</td>
+                  <td class="embSpace">Entity Identifier</td>
+                  <td class="childField"></td>
+                  <td class="childField"></td>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">MSH.21[2].2</td>
+                  <td class="embSpace">Namespace ID</td>
+                  <td class="childField"></td>
+                  <td class="childField"></td>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">MSH.21[2].3</td>
+                  <td class="embSpace">Universal ID</td>
+                  <td class="childField"></td>
+                  <td class="childField"></td>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">MSH.21[2].4</td>
+                  <td class="embSpace">Universal ID Type</td>
+                  <td class="childField"></td>
+                  <td class="childField"></td>
+               </tr>
+            </tbody>
+         </table>
+      </fieldset>
+      <fieldset>
+         <legend>MSA</legend>
+         <table>
+            <thead>
+               <tr>
+                  <th>Location</th>
+                  <th>Data Element</th>
+                  <th>Data</th>
+                  <th>Categorization</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <th>MSA.1</th>
+                  <th>Acknowledgement Code</th>
+                  <td>CA</td>
+                  <td>Test Case Fixed Data</td>
+               </tr>
+               <tr>
+                  <th>MSA.2</th>
+                  <th>Message Control ID</th>
+                  <td>EDOS_0.0_3.1-M04_GU</td>
+                  <td>Test Case Fixed Data</td>
+               </tr>
+            </tbody>
+         </table>
+      </fieldset>
+      <fieldset>
+         <legend>MFI</legend>
+         <table>
+            <thead>
+               <tr>
+                  <th>Location</th>
+                  <th>Data Element</th>
+                  <th>Data</th>
+                  <th>Categorization</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <th>MFI.1</th>
+                  <th>Master File Identifier</th>
+                  <th></th>
+                  <th></th>
+               </tr>
+               <tr>
+                  <td class="embSpace">MFI.1.1</td>
+                  <td class="embSpace">Identifier</td>
+                  <td>CDM</td>
+                  <td>IG Fixed Data</td>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">MFI.1.2</td>
+                  <td class="embSpace">Text</td>
+                  <td class="childField"></td>
+                  <td class="childField"></td>
+               </tr>
+               <tr>
+                  <td class="embSpace">MFI.1.3</td>
+                  <td class="embSpace">Name of Coding System</td>
+                  <td>HL70175</td>
+                  <td>IG Fixed Data</td>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">MFI.1.7</td>
+                  <td class="embSpace">Coding System Version ID</td>
+                  <td class="childField"></td>
+                  <td class="childField"></td>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">MFI.1.8</td>
+                  <td class="embSpace">Alternate Coding System Version ID</td>
+                  <td class="childField"></td>
+                  <td class="childField"></td>
+               </tr>
+               <tr>
+                  <th>MFI.3</th>
+                  <th>File-Level Event Code</th>
+                  <td>REP</td>
+                  <td>Test Case Fixed Data</td>
+               </tr>
+               <tr>
+                  <th>MFI.6</th>
+                  <th>Response Level Code</th>
+                  <td>NE</td>
+                  <td>IG Fixed Data</td>
+               </tr>
+            </tbody>
+         </table>
+      </fieldset>
+   </body>
+</html>

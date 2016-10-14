@@ -1,0 +1,1212 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<event-profiles id="EDOS_2.3_GU">
+    <test-message instance="EDOS_2.3_3.1-M04_GU">
+        <segment id="MSH" test-profile="3.70" display-group="MSH" display-group-instance="1"/>
+        <segment id="MFI" test-profile="12.0" display-group="MFI" display-group-instance="1"/>
+        <segment id="MFE" test-profile="500.6" display-group="Charge description information " display-group-instance="1"/>
+        <segment id="CDM" test-profile="500.0" display-group="Charge description information " display-group-instance="1"/>
+    </test-message>
+    <test-message instance="EDOS_2.3_1.1-M08_GU">
+        <segment id="MSH" test-profile="1.70" display-group="MSH" display-group-instance="1"/>
+        <segment id="MFI" test-profile="6.0" display-group="MFI" display-group-instance="1"/>
+        <segment id="MFE" test-profile="500.6" display-group="Test Information" display-group-instance="1"/>
+        <segment id="OM1" test-profile="500.0" display-group="Test Information" display-group-instance="1"/>
+        <segment id="OM4" test-profile="511.0" display-group="Test Information" display-group-instance="1"/>
+        <segment id="OM4" test-profile="512.0" display-group="Test Information" display-group-instance="1"/>
+    </test-message>
+    <test-message instance="EDOS_2.3_2.1-M10_GU">
+        <segment id="MSH" test-profile="2.70" display-group="MSH" display-group-instance="1"/>
+        <segment id="MFI" test-profile="13.0" display-group="MFI" display-group-instance="1"/>
+        <segment id="MFE" test-profile="800.6" display-group="Battery Information" display-group-instance="1"/>
+        <segment id="OM1" test-profile="800.3" display-group="Battery Information" display-group-instance="1"/>
+        <segment id="OM5" test-profile="800.1" display-group="Battery Information" display-group-instance="1"/>
+        <segment id="OM4" test-profile="211.0" display-group="Battery Information" display-group-instance="1"/>
+        <segment id="OM4" test-profile="112.0" display-group="Battery Information" display-group-instance="1"/>
+        <segment id="OM4" test-profile="413.0" display-group="Battery Information" display-group-instance="1"/>
+    </test-message>
+    <test-profile-package>
+        <test-profiles segment="MFI">
+            <test-profile id="12.0" segment="MFI">
+                <element location="MFI.1" displayName="Master File Identifier" relation="parent" group="MFI.1"/>
+                <element location="MFI.1.1" displayName="Identifier" relation="child" group="MFI.1" category="IG Fixed Data" data="CDM"/>
+                <element location="MFI.1.2" displayName="Text" relation="child" group="MFI.1" category="Changeable Data" data="Charge description master file"/>
+                <element location="MFI.1.3" displayName="Name of Coding System" relation="child" group="MFI.1" category="IG Fixed Data" data="HL70175"/>
+                <element location="MFI.1.7" displayName="Coding System Version ID" relation="child" group="MFI.1" category="Test Case Fixed Data" data="2.5.1"/>
+                <element location="MFI.1.8" displayName="Alternate Coding System Version ID" relation="child" group="MFI.1"/>
+                <element location="MFI.3" displayName="File-Level Event Code" relation="parent" group="MFI.3" category="Test Case Fixed Data" data="UPD"/>
+                <element location="MFI.6" displayName="Response Level Code" relation="parent" group="MFI.6" category="IG Fixed Data" data="NE"/>
+            </test-profile>
+            <test-profile id="6.0" segment="MFI">
+                <element location="MFI.1" displayName="Master File Identifier" relation="parent" group="MFI.1"/>
+                <element location="MFI.1.1" displayName="Identifier" relation="child" group="MFI.1" category="IG Fixed Data" data="OMA"/>
+                <element location="MFI.1.2" displayName="Text" relation="child" group="MFI.1" category="Changeable Data" data="Numerical observation master file"/>
+                <element location="MFI.1.3" displayName="Name of Coding System" relation="child" group="MFI.1" category="IG Fixed Data" data="HL70175"/>
+                <element location="MFI.1.7" displayName="Coding System Version ID" relation="child" group="MFI.1" category="Test Case Fixed Data" data="2.5.1"/>
+                <element location="MFI.1.8" displayName="Alternate Coding System Version ID" relation="child" group="MFI.1"/>
+                <element location="MFI.3" displayName="File-Level Event Code" relation="parent" group="MFI.3" category="Test Case Fixed Data" data="UPD"/>
+                <element location="MFI.6" displayName="Response Level Code" relation="parent" group="MFI.6" category="IG Fixed Data" data="NE"/>
+            </test-profile>
+            <test-profile id="13.0" segment="MFI">
+                <element location="MFI.1" displayName="Master File Identifier" relation="parent" group="MFI.1"/>
+                <element location="MFI.1.1" displayName="Identifier" relation="child" group="MFI.1" category="IG Fixed Data" data="OMC"/>
+                <element location="MFI.1.2" displayName="Text" relation="child" group="MFI.1" category="Changeable Data" data="Observation batteries master file"/>
+                <element location="MFI.1.3" displayName="Name of Coding System" relation="child" group="MFI.1" category="IG Fixed Data" data="HL70175"/>
+                <element location="MFI.1.7" displayName="Coding System Version ID" relation="child" group="MFI.1" category="Test Case Fixed Data" data="2.5.1"/>
+                <element location="MFI.1.8" displayName="Alternate Coding System Version ID" relation="child" group="MFI.1"/>
+                <element location="MFI.3" displayName="File-Level Event Code" relation="parent" group="MFI.3" category="Test Case Fixed Data" data="UPD"/>
+                <element location="MFI.6" displayName="Response Level Code" relation="parent" group="MFI.6" category="IG Fixed Data" data="NE"/>
+            </test-profile>
+        </test-profiles>
+        <test-profiles segment="OM1">
+            <test-profile id="500.0" segment="OM1">
+                <element location="OM1.1" displayName="Sequence Number - Test/Observation Master File" relation="parent" group="OM1.1" category="IG Fixed Data" data="1"/>
+                <element location="OM1.2" displayName="Producer's Service/Test/Observation ID" relation="parent" group="OM1.2"/>
+                <element location="OM1.2.1" displayName="Identifier" relation="child" group="OM1.2" category="Changeable Data" data="500"/>
+                <element location="OM1.2.2" displayName="Text" relation="child" group="OM1.2" category="Changeable Data" data="Erythrocyte sedimentation rate"/>
+                <element location="OM1.2.3" displayName="Name of Coding System" relation="child" group="OM1.2" category="Changeable Data" data="99USI"/>
+                <element location="OM1.2.7" displayName="Coding System Version ID" relation="child" group="OM1.2" category="Changeable Data" data="20130421"/>
+                <element location="OM1.4" displayName="Specimen Required" relation="parent" group="OM1.4" category="Changeable Data" data="Y"/>
+                <element location="OM1.5" displayName="Producer ID" relation="parent" group="OM1.5"/>
+                <element location="OM1.5.1" displayName="Identifier" relation="child" group="OM1.5" category="Changeable Data" data="05D0669071"/>
+                <element location="OM1.5.2" displayName="Text" relation="child" group="OM1.5" category="Changeable Data" data="Century Hospital Clinical Laboratory"/>
+                <element location="OM1.5.3" displayName="Name of Coding System" relation="child" group="OM1.5" category="Changeable Data" data="99USI"/>
+                <element location="OM1.5.7" displayName="Coding System Version ID" relation="child" group="OM1.5" category="Changeable Data" data="2013"/>
+                <element location="OM1.5.8" displayName="Alternate Coding System Version ID" relation="child" group="OM1.5"/>
+                <element location="OM1.7" displayName="Other Service/Test/Observation IDs for the Observation" relation="parent" group="OM1.7"/>
+                <element location="OM1.7.1" displayName="Identifier" relation="child" group="OM1.7" category="Test Case Fixed Data" data="30341-2"/>
+                <element location="OM1.7.2" displayName="Text" relation="child" group="OM1.7" category="Changeable Data" data="Erythrocyte sedimentation rate"/>
+                <element location="OM1.7.3" displayName="Name of Coding System" relation="child" group="OM1.7" category="Test Case Fixed Data" data="LN"/>
+                <element location="OM1.7.7" displayName="Coding System Version ID" relation="child" group="OM1.7" category="Changeable Data" data="2.42"/>
+                <element location="OM1.9" displayName="Preferred Report Name for the Observation" relation="parent" group="OM1.9" category="Changeable Data" data="Erythrocyte sedimentation rate"/>
+                <element location="OM1.10" displayName="Preferred Short Name on Mnemonic for Observation" relation="parent" group="OM1.10"/>
+                <element location="OM1.11" displayName="Preferred Long Name for the Observation" relation="parent" group="OM1.11"/>
+                <element location="OM1.12" displayName="Orderability" relation="parent" group="OM1.12" category="Test Case Fixed Data" data="Y"/>
+                <element location="OM1.18" displayName="Nature of Service/Test/Observation" relation="parent" group="OM1.18" category="IG Fixed Data" data="A"/>
+                <element location="OM1.27[1]" displayName="Outside Site(s) Where Observation may be Performed" relation="parent" group="OM1.27[1]"/>
+                <element location="OM1.27[1].1" displayName="Identifier" relation="child" group="OM1.27[1]"/>
+                <element location="OM1.27[1].2" displayName="Text" relation="child" group="OM1.27[1]"/>
+                <element location="OM1.27[1].3" displayName="Name of Coding System" relation="child" group="OM1.27[1]"/>
+                <element location="OM1.27[1].7" displayName="Coding System Version ID" relation="child" group="OM1.27[1]"/>
+                <element location="OM1.27[1].8" displayName="Alternate Coding System Version ID" relation="child" group="OM1.27[1]"/>
+                <element location="OM1.27[2]" displayName="Outside Site(s) Where Observation may be Performed" relation="parent" group="OM1.27[2]"/>
+                <element location="OM1.27[2].1" displayName="Identifier" relation="child" group="OM1.27[2]"/>
+                <element location="OM1.27[2].2" displayName="Text" relation="child" group="OM1.27[2]"/>
+                <element location="OM1.27[2].3" displayName="Name of Coding System" relation="child" group="OM1.27[2]"/>
+                <element location="OM1.27[2].7" displayName="Coding System Version ID" relation="child" group="OM1.27[2]"/>
+                <element location="OM1.27[2].8" displayName="Alternate Coding System Version ID" relation="child" group="OM1.27[2]"/>
+                <element location="OM1.28[1]" displayName="Address of Outside Site(s)" relation="parent" group="OM1.28[1]"/>
+                <element location="OM1.28[1].1" displayName="Street Address" relation="child" group="OM1.28[1]"/>
+                <element location="OM1.28[1].1.1" displayName="Street or Mailing Address" relation="child" group="OM1.28[1]"/>
+                <element location="OM1.28[1].3" displayName="City" relation="child" group="OM1.28[1]"/>
+                <element location="OM1.28[1].4" displayName="State or Province" relation="child" group="OM1.28[1]"/>
+                <element location="OM1.28[1].5" displayName="Zip or Postal Code" relation="child" group="OM1.28[1]"/>
+                <element location="OM1.28[1].6" displayName="Country Code" relation="child" group="OM1.28[1]"/>
+                <element location="OM1.28[1].7" displayName="Address Type" relation="child" group="OM1.28[1]"/>
+                <element location="OM1.28[2]" displayName="Address of Outside Site(s)" relation="parent" group="OM1.28[2]"/>
+                <element location="OM1.28[2].1" displayName="Street Address" relation="child" group="OM1.28[2]"/>
+                <element location="OM1.28[2].1.1" displayName="Street or Mailing Address" relation="child" group="OM1.28[2]"/>
+                <element location="OM1.28[2].3" displayName="City" relation="child" group="OM1.28[2]"/>
+                <element location="OM1.28[2].4" displayName="State or Province" relation="child" group="OM1.28[2]"/>
+                <element location="OM1.28[2].5" displayName="Zip or Postal Code" relation="child" group="OM1.28[2]"/>
+                <element location="OM1.28[2].6" displayName="Country Code" relation="child" group="OM1.28[2]"/>
+                <element location="OM1.28[2].7" displayName="Address Type" relation="child" group="OM1.28[2]"/>
+                <element location="OM1.31[1]" displayName="Observations Required to Interpret the Observation" relation="parent" group="OM1.31[1]"/>
+                <element location="OM1.31[1].1" displayName="Identifier" relation="child" group="OM1.31[1]"/>
+                <element location="OM1.31[1].2" displayName="Text" relation="child" group="OM1.31[1]"/>
+                <element location="OM1.31[1].3" displayName="Name of Coding System" relation="child" group="OM1.31[1]"/>
+                <element location="OM1.31[1].7" displayName="Coding System Version ID" relation="child" group="OM1.31[1]"/>
+                <element location="OM1.31[1].8" displayName="Alternate Coding System Version ID" relation="child" group="OM1.31[1]"/>
+                <element location="OM1.31[2]" displayName="Observations Required to Interpret the Observation" relation="parent" group="OM1.31[2]"/>
+                <element location="OM1.31[2].1" displayName="Identifier" relation="child" group="OM1.31[2]"/>
+                <element location="OM1.31[2].2" displayName="Text" relation="child" group="OM1.31[2]"/>
+                <element location="OM1.31[2].3" displayName="Name of Coding System" relation="child" group="OM1.31[2]"/>
+                <element location="OM1.31[2].7" displayName="Coding System Version ID" relation="child" group="OM1.31[2]"/>
+                <element location="OM1.31[2].8" displayName="Alternate Coding System Version ID" relation="child" group="OM1.31[2]"/>
+                <element location="OM1.32[1]" displayName="Interpretation of Observations" relation="parent" group="OM1.32[1]" category="Changeable Data" data="The erythrocyte sedimentation rate is a nonspecific measure of inflammatory disease."/>
+                <element location="OM1.33[1]" displayName="Contraindications to Observations" relation="parent" group="OM1.33[1]"/>
+                <element location="OM1.33[1].1" displayName="Identifier" relation="child" group="OM1.33[1]"/>
+                <element location="OM1.33[1].2" displayName="Text" relation="child" group="OM1.33[1]"/>
+                <element location="OM1.33[1].3" displayName="Name of Coding System" relation="child" group="OM1.33[1]"/>
+                <element location="OM1.33[1].7" displayName="Coding System Version ID" relation="child" group="OM1.33[1]"/>
+                <element location="OM1.33[1].8" displayName="Alternate Coding System Version ID" relation="child" group="OM1.33[1]"/>
+                <element location="OM1.33[2]" displayName="Contraindications to Observations" relation="parent" group="OM1.33[2]"/>
+                <element location="OM1.33[2].1" displayName="Identifier" relation="child" group="OM1.33[2]"/>
+                <element location="OM1.33[2].2" displayName="Text" relation="child" group="OM1.33[2]"/>
+                <element location="OM1.33[2].3" displayName="Name of Coding System" relation="child" group="OM1.33[2]"/>
+                <element location="OM1.33[2].7" displayName="Coding System Version ID" relation="child" group="OM1.33[2]"/>
+                <element location="OM1.33[2].8" displayName="Alternate Coding System Version ID" relation="child" group="OM1.33[2]"/>
+                <element location="OM1.34[1]" displayName="Reflex Tests/Observations" relation="parent" group="OM1.34[1]"/>
+                <element location="OM1.34[1].1" displayName="Identifier" relation="child" group="OM1.34[1]"/>
+                <element location="OM1.34[1].2" displayName="Text" relation="child" group="OM1.34[1]"/>
+                <element location="OM1.34[1].3" displayName="Name of Coding System" relation="child" group="OM1.34[1]"/>
+                <element location="OM1.34[1].4" displayName="Alternate Identifier" relation="child" group="OM1.34[1]"/>
+                <element location="OM1.34[1].5" displayName="Alternate Text" relation="child" group="OM1.34[1]"/>
+                <element location="OM1.34[1].6" displayName="Name of Alternate Coding System" relation="child" group="OM1.34[1]"/>
+                <element location="OM1.34[1].7" displayName="Coding System Version ID" relation="child" group="OM1.34[1]"/>
+                <element location="OM1.34[1].8" displayName="Alternate Coding System Version ID" relation="child" group="OM1.34[1]"/>
+                <element location="OM1.34[2]" displayName="Reflex Tests/Observations" relation="parent" group="OM1.34[2]"/>
+                <element location="OM1.34[2].1" displayName="Identifier" relation="child" group="OM1.34[2]"/>
+                <element location="OM1.34[2].2" displayName="Text" relation="child" group="OM1.34[2]"/>
+                <element location="OM1.34[2].3" displayName="Name of Coding System" relation="child" group="OM1.34[2]"/>
+                <element location="OM1.34[2].4" displayName="Alternate Identifier" relation="child" group="OM1.34[2]"/>
+                <element location="OM1.34[2].5" displayName="Alternate Text" relation="child" group="OM1.34[2]"/>
+                <element location="OM1.34[2].6" displayName="Name of Alternate Coding System" relation="child" group="OM1.34[2]"/>
+                <element location="OM1.34[2].7" displayName="Coding System Version ID" relation="child" group="OM1.34[2]"/>
+                <element location="OM1.34[2].8" displayName="Alternate Coding System Version ID" relation="child" group="OM1.34[2]"/>
+                <element location="OM1.35[1]" displayName="Rules that Trigger Reflex Testing" relation="parent" group="OM1.35[1]"/>
+                <element location="OM1.35[2]" displayName="Rules that Trigger Reflex Testing" relation="parent" group="OM1.35[2]"/>
+                <element location="OM1.37[1]" displayName="Patient Preparation" relation="parent" group="OM1.37[1]"/>
+                <element location="OM1.37[2]" displayName="Patient Preparation" relation="parent" group="OM1.37[2]"/>
+                <element location="OM1.39" displayName="Factors that may Affect the Observation" relation="parent" group="OM1.39" category="Changeable Data" data="Insufficient blood, Clotting, Hemolysis, Blood specimen received &gt; 12 hours of collection."/>
+                <element location="OM1.40[1]" displayName="Service/Test/Observation Performance Schedule" relation="parent" group="OM1.40[1]" category="Changeable Data" data="Daily"/>
+                <element location="OM1.40[2]" displayName="Service/Test/Observation Performance Schedule" relation="parent" group="OM1.40[2]"/>
+                <element location="OM1.48" displayName="Exclusive Test" relation="parent" group="OM1.48" category="Changeable Data" data="N"/>
+                <element location="OM1.49" displayName="Diagnostic Service Sector ID" relation="parent" group="OM1.49" category="Changeable Data" data="LAB"/>
+                <element location="OM1.51[1]" displayName="Other Names" relation="parent" group="OM1.51[1]" category="Changeable Data" data="Westergren"/>
+                <element location="OM1.51[2]" displayName="Other Names" relation="parent" group="OM1.51[2]" category="Changeable Data" data="Sed Rate"/>
+                <element location="OM1.52[1]" displayName="Replacement Producer's Service/Test/Observation ID" relation="parent" group="OM1.52[1]"/>
+                <element location="OM1.52[1].1" displayName="Identifier" relation="child" group="OM1.52[1]"/>
+                <element location="OM1.52[1].2" displayName="Text" relation="child" group="OM1.52[1]"/>
+                <element location="OM1.52[1].3" displayName="Name of Coding System" relation="child" group="OM1.52[1]"/>
+                <element location="OM1.52[1].4" displayName="Alternate Identifier" relation="child" group="OM1.52[1]"/>
+                <element location="OM1.52[1].5" displayName="Alternate Text" relation="child" group="OM1.52[1]"/>
+                <element location="OM1.52[1].6" displayName="Name of Alternate Coding System" relation="child" group="OM1.52[1]"/>
+                <element location="OM1.52[1].7" displayName="Coding System Version ID" relation="child" group="OM1.52[1]"/>
+                <element location="OM1.52[1].8" displayName="Alternate Coding System Version ID" relation="child" group="OM1.52[1]"/>
+                <element location="OM1.52[2]" displayName="Replacement Producer's Service/Test/Observation ID" relation="parent" group="OM1.52[2]"/>
+                <element location="OM1.52[2].1" displayName="Identifier" relation="child" group="OM1.52[2]"/>
+                <element location="OM1.52[2].2" displayName="Text" relation="child" group="OM1.52[2]"/>
+                <element location="OM1.52[2].3" displayName="Name of Coding System" relation="child" group="OM1.52[2]"/>
+                <element location="OM1.52[2].4" displayName="Alternate Identifier" relation="child" group="OM1.52[2]"/>
+                <element location="OM1.52[2].5" displayName="Alternate Text" relation="child" group="OM1.52[2]"/>
+                <element location="OM1.52[2].6" displayName="Name of Alternate Coding System" relation="child" group="OM1.52[2]"/>
+                <element location="OM1.52[2].7" displayName="Coding System Version ID" relation="child" group="OM1.52[2]"/>
+                <element location="OM1.52[2].8" displayName="Alternate Coding System Version ID" relation="child" group="OM1.52[2]"/>
+                <element location="OM1.52[3]" displayName="Replacement Producer's Service/Test/Observation ID" relation="parent" group="OM1.52[3]"/>
+                <element location="OM1.52[3].1" displayName="Identifier" relation="child" group="OM1.52[3]"/>
+                <element location="OM1.52[3].2" displayName="Text" relation="child" group="OM1.52[3]"/>
+                <element location="OM1.52[3].3" displayName="Name of Coding System" relation="child" group="OM1.52[3]"/>
+                <element location="OM1.52[3].4" displayName="Alternate Identifier" relation="child" group="OM1.52[3]"/>
+                <element location="OM1.52[3].5" displayName="Alternate Text" relation="child" group="OM1.52[3]"/>
+                <element location="OM1.52[3].6" displayName="Name of Alternate Coding System" relation="child" group="OM1.52[3]"/>
+                <element location="OM1.52[3].7" displayName="Coding System Version ID" relation="child" group="OM1.52[3]"/>
+                <element location="OM1.52[3].8" displayName="Alternate Coding System Version ID" relation="child" group="OM1.52[3]"/>
+                <element location="OM1.52[4]" displayName="Replacement Producer's Service/Test/Observation ID" relation="parent" group="OM1.52[4]"/>
+                <element location="OM1.52[4].1" displayName="Identifier" relation="child" group="OM1.52[4]"/>
+                <element location="OM1.52[4].2" displayName="Text" relation="child" group="OM1.52[4]"/>
+                <element location="OM1.52[4].3" displayName="Name of Coding System" relation="child" group="OM1.52[4]"/>
+                <element location="OM1.52[4].4" displayName="Alternate Identifier" relation="child" group="OM1.52[4]"/>
+                <element location="OM1.52[4].5" displayName="Alternate Text" relation="child" group="OM1.52[4]"/>
+                <element location="OM1.52[4].6" displayName="Name of Alternate Coding System" relation="child" group="OM1.52[4]"/>
+                <element location="OM1.52[4].7" displayName="Coding System Version ID" relation="child" group="OM1.52[4]"/>
+                <element location="OM1.52[4].8" displayName="Alternate Coding System Version ID" relation="child" group="OM1.52[4]"/>
+                <element location="OM1.53[1]" displayName="Prior Results Instructions" relation="parent" group="OM1.53[1]"/>
+                <element location="OM1.53[2]" displayName="Prior Results Instructions" relation="parent" group="OM1.53[2]"/>
+                <element location="OM1.54[1]" displayName="Special Instructions" relation="parent" group="OM1.54[1]" category="Changeable Data" data="None"/>
+                <element location="OM1.54[2]" displayName="Special Instructions" relation="parent" group="OM1.54[2]" category="Changeable Data" data="None"/>
+                <element location="OM1.55[1]" displayName="Test Relationship Category" relation="parent" group="OM1.55[1]"/>
+                <element location="OM1.55[1].1" displayName="Identifier" relation="child" group="OM1.55[1]" category="Changeable Data" data="CP"/>
+                <element location="OM1.55[1].2" displayName="Text" relation="child" group="OM1.55[1]" category="Changeable Data" data="Clinical Pathology"/>
+                <element location="OM1.55[1].3" displayName="Name of Coding System" relation="child" group="OM1.55[1]" category="Changeable Data" data="99USI"/>
+                <element location="OM1.55[1].7" displayName="Coding System Version ID" relation="child" group="OM1.55[1]" category="Changeable Data" data="41863"/>
+                <element location="OM1.55[1].8" displayName="Alternate Coding System Version ID" relation="child" group="OM1.55[1]"/>
+                <element location="OM1.56[1]" displayName="Observation Identifier associated with Producer's Service/Test/Observation ID" relation="parent" group="OM1.56[1]"/>
+                <element location="OM1.56[1].1" displayName="Identifier" relation="child" group="OM1.56[1]" category="Changeable Data" data="30341-2"/>
+                <element location="OM1.56[1].2" displayName="Text" relation="child" group="OM1.56[1]" category="Changeable Data" data="Erythrocyte sedimentation rate"/>
+                <element location="OM1.56[1].3" displayName="Name of Coding System" relation="child" group="OM1.56[1]" category="Test Case Fixed Data" data="LN"/>
+                <element location="OM1.56[1].4" displayName="Alternate Identifier" relation="child" group="OM1.56[1]" category="Changeable Data" data="500"/>
+                <element location="OM1.56[1].5" displayName="Alternate Text" relation="child" group="OM1.56[1]" category="Changeable Data" data="Erythrocyte sedimentation rate"/>
+                <element location="OM1.56[1].6" displayName="Name of Alternate Coding System" relation="child" group="OM1.56[1]" category="Changeable Data" data="99USI"/>
+                <element location="OM1.56[1].7" displayName="Coding System Version ID" relation="child" group="OM1.56[1]" category="Changeable Data" data="2.48"/>
+                <element location="OM1.56[1].8" displayName="Alternate Coding System Version ID" relation="child" group="OM1.56[1]" category="Changeable Data" data="20130421"/>
+                <element location="OM1.56[1].9" displayName="Original Text" relation="child" group="OM1.56[1]" category="Changeable Data" data="Erythrocyte sedimentation rate"/>
+                <element location="OM1.57[1]" displayName="Expected Turn-Around Time" relation="parent" group="OM1.57[1]"/>
+                <element location="OM1.57[1].1" displayName="Quantity" relation="child" group="OM1.57[1]" category="Changeable Data" data="1"/>
+                <element location="OM1.57[1].2" displayName="Units" relation="child" group="OM1.57[1]"/>
+                <element location="OM1.57[1].2.1" displayName="Identifier" relation="child" group="OM1.57[1]" category="Changeable Data" data="d"/>
+                <element location="OM1.57[1].2.2" displayName="Text" relation="child" group="OM1.57[1]" category="Changeable Data" data="day"/>
+                <element location="OM1.57[1].2.3" displayName="Name of Coding System" relation="child" group="OM1.57[1]" category="Changeable Data" data="UCUM"/>
+                <element location="OM1.57[1].2.7" displayName="Coding System Version ID" relation="child" group="OM1.57[1]" category="Changeable Data" data="1.8"/>
+                <element location="OM1.57[1].2.8" displayName="Alternate Coding System Version ID" relation="child" group="OM1.57[1]"/>
+            </test-profile>
+            <test-profile id="800.3" segment="OM1">
+                <element location="OM1.1" displayName="Sequence Number - Test/Observation Master File" relation="parent" group="OM1.1" category="IG Fixed Data" data="1"/>
+                <element location="OM1.2" displayName="Producer's Service/Test/Observation ID" relation="parent" group="OM1.2"/>
+                <element location="OM1.2.1" displayName="Identifier" relation="child" group="OM1.2" category="Changeable Data" data="800"/>
+                <element location="OM1.2.2" displayName="Text" relation="child" group="OM1.2" category="Changeable Data" data="GHP Profile"/>
+                <element location="OM1.2.3" displayName="Name of Coding System" relation="child" group="OM1.2" category="Changeable Data" data="99USI"/>
+                <element location="OM1.2.7" displayName="Coding System Version ID" relation="child" group="OM1.2" category="Changeable Data" data="20130421"/>
+                <element location="OM1.4" displayName="Specimen Required" relation="parent" group="OM1.4" category="Changeable Data" data="Y"/>
+                <element location="OM1.5" displayName="Producer ID" relation="parent" group="OM1.5"/>
+                <element location="OM1.5.1" displayName="Identifier" relation="child" group="OM1.5" category="Changeable Data" data="05D0669071"/>
+                <element location="OM1.5.2" displayName="Text" relation="child" group="OM1.5" category="Changeable Data" data="Century Hospital Clinical Laboratory"/>
+                <element location="OM1.5.3" displayName="Name of Coding System" relation="child" group="OM1.5" category="Changeable Data" data="99USI"/>
+                <element location="OM1.5.7" displayName="Coding System Version ID" relation="child" group="OM1.5" category="Changeable Data" data="2013"/>
+                <element location="OM1.5.8" displayName="Alternate Coding System Version ID" relation="child" group="OM1.5"/>
+                <element location="OM1.7" displayName="Other Service/Test/Observation IDs for the Observation" relation="parent" group="OM1.7"/>
+                <element location="OM1.7.1" displayName="Identifier" relation="child" group="OM1.7"/>
+                <element location="OM1.7.2" displayName="Text" relation="child" group="OM1.7"/>
+                <element location="OM1.7.3" displayName="Name of Coding System" relation="child" group="OM1.7"/>
+                <element location="OM1.7.7" displayName="Coding System Version ID" relation="child" group="OM1.7"/>
+                <element location="OM1.9" displayName="Preferred Report Name for the Observation" relation="parent" group="OM1.9" category="Changeable Data" data="General Health Profile"/>
+                <element location="OM1.10" displayName="Preferred Short Name on Mnemonic for Observation" relation="parent" group="OM1.10"/>
+                <element location="OM1.11" displayName="Preferred Long Name for the Observation" relation="parent" group="OM1.11"/>
+                <element location="OM1.12" displayName="Orderability" relation="parent" group="OM1.12" category="Test Case Fixed Data" data="Y"/>
+                <element location="OM1.18" displayName="Nature of Service/Test/Observation" relation="parent" group="OM1.18" category="IG Fixed Data" data="S"/>
+                <element location="OM1.27[1]" displayName="Outside Site(s) Where Observation may be Performed" relation="parent" group="OM1.27[1]"/>
+                <element location="OM1.27[1].1" displayName="Identifier" relation="child" group="OM1.27[1]"/>
+                <element location="OM1.27[1].2" displayName="Text" relation="child" group="OM1.27[1]"/>
+                <element location="OM1.27[1].3" displayName="Name of Coding System" relation="child" group="OM1.27[1]"/>
+                <element location="OM1.27[1].7" displayName="Coding System Version ID" relation="child" group="OM1.27[1]"/>
+                <element location="OM1.27[1].8" displayName="Alternate Coding System Version ID" relation="child" group="OM1.27[1]"/>
+                <element location="OM1.27[2]" displayName="Outside Site(s) Where Observation may be Performed" relation="parent" group="OM1.27[2]"/>
+                <element location="OM1.27[2].1" displayName="Identifier" relation="child" group="OM1.27[2]"/>
+                <element location="OM1.27[2].2" displayName="Text" relation="child" group="OM1.27[2]"/>
+                <element location="OM1.27[2].3" displayName="Name of Coding System" relation="child" group="OM1.27[2]"/>
+                <element location="OM1.27[2].7" displayName="Coding System Version ID" relation="child" group="OM1.27[2]"/>
+                <element location="OM1.27[2].8" displayName="Alternate Coding System Version ID" relation="child" group="OM1.27[2]"/>
+                <element location="OM1.28[1]" displayName="Address of Outside Site(s)" relation="parent" group="OM1.28[1]"/>
+                <element location="OM1.28[1].1" displayName="Street Address" relation="child" group="OM1.28[1]"/>
+                <element location="OM1.28[1].1.1" displayName="Street or Mailing Address" relation="child" group="OM1.28[1]"/>
+                <element location="OM1.28[1].3" displayName="City" relation="child" group="OM1.28[1]"/>
+                <element location="OM1.28[1].4" displayName="State or Province" relation="child" group="OM1.28[1]"/>
+                <element location="OM1.28[1].5" displayName="Zip or Postal Code" relation="child" group="OM1.28[1]"/>
+                <element location="OM1.28[1].6" displayName="Country Code" relation="child" group="OM1.28[1]"/>
+                <element location="OM1.28[1].7" displayName="Address Type" relation="child" group="OM1.28[1]"/>
+                <element location="OM1.28[2]" displayName="Address of Outside Site(s)" relation="parent" group="OM1.28[2]"/>
+                <element location="OM1.28[2].1" displayName="Street Address" relation="child" group="OM1.28[2]"/>
+                <element location="OM1.28[2].1.1" displayName="Street or Mailing Address" relation="child" group="OM1.28[2]"/>
+                <element location="OM1.28[2].3" displayName="City" relation="child" group="OM1.28[2]"/>
+                <element location="OM1.28[2].4" displayName="State or Province" relation="child" group="OM1.28[2]"/>
+                <element location="OM1.28[2].5" displayName="Zip or Postal Code" relation="child" group="OM1.28[2]"/>
+                <element location="OM1.28[2].6" displayName="Country Code" relation="child" group="OM1.28[2]"/>
+                <element location="OM1.28[2].7" displayName="Address Type" relation="child" group="OM1.28[2]"/>
+                <element location="OM1.31[1]" displayName="Observations Required to Interpret the Observation" relation="parent" group="OM1.31[1]"/>
+                <element location="OM1.31[1].1" displayName="Identifier" relation="child" group="OM1.31[1]" category="Changeable Data" data="49541-6"/>
+                <element location="OM1.31[1].2" displayName="Text" relation="child" group="OM1.31[1]" category="Changeable Data" data="Fasting status [Presence] - reported"/>
+                <element location="OM1.31[1].3" displayName="Name of Coding System" relation="child" group="OM1.31[1]" category="Changeable Data" data="LN"/>
+                <element location="OM1.31[1].7" displayName="Coding System Version ID" relation="child" group="OM1.31[1]" category="Changeable Data" data="2.42"/>
+                <element location="OM1.31[1].8" displayName="Alternate Coding System Version ID" relation="child" group="OM1.31[1]"/>
+                <element location="OM1.31[2]" displayName="Observations Required to Interpret the Observation" relation="parent" group="OM1.31[2]"/>
+                <element location="OM1.31[2].1" displayName="Identifier" relation="child" group="OM1.31[2]" category="Changeable Data" data="32624-9"/>
+                <element location="OM1.31[2].2" displayName="Text" relation="child" group="OM1.31[2]" category="Changeable Data" data="Race"/>
+                <element location="OM1.31[2].3" displayName="Name of Coding System" relation="child" group="OM1.31[2]" category="Changeable Data" data="LN"/>
+                <element location="OM1.31[2].7" displayName="Coding System Version ID" relation="child" group="OM1.31[2]" category="Changeable Data" data="2.42"/>
+                <element location="OM1.31[2].8" displayName="Alternate Coding System Version ID" relation="child" group="OM1.31[2]"/>
+                <element location="OM1.32[1]" displayName="Interpretation of Observations" relation="parent" group="OM1.32[1]" category="Changeable Data" data="This blood test is used to determine general health status and to screen for and monitor a variety of disorders. This profile includes a complete metabolic profile, comprehensive CBC, Urinalysis and total Thyrotropin (T4)."/>
+                <element location="OM1.33[1]" displayName="Contraindications to Observations" relation="parent" group="OM1.33[1]"/>
+                <element location="OM1.33[1].1" displayName="Identifier" relation="child" group="OM1.33[1]"/>
+                <element location="OM1.33[1].2" displayName="Text" relation="child" group="OM1.33[1]"/>
+                <element location="OM1.33[1].3" displayName="Name of Coding System" relation="child" group="OM1.33[1]"/>
+                <element location="OM1.33[1].7" displayName="Coding System Version ID" relation="child" group="OM1.33[1]"/>
+                <element location="OM1.33[1].8" displayName="Alternate Coding System Version ID" relation="child" group="OM1.33[1]"/>
+                <element location="OM1.33[2]" displayName="Contraindications to Observations" relation="parent" group="OM1.33[2]"/>
+                <element location="OM1.33[2].1" displayName="Identifier" relation="child" group="OM1.33[2]"/>
+                <element location="OM1.33[2].2" displayName="Text" relation="child" group="OM1.33[2]"/>
+                <element location="OM1.33[2].3" displayName="Name of Coding System" relation="child" group="OM1.33[2]"/>
+                <element location="OM1.33[2].7" displayName="Coding System Version ID" relation="child" group="OM1.33[2]"/>
+                <element location="OM1.33[2].8" displayName="Alternate Coding System Version ID" relation="child" group="OM1.33[2]"/>
+                <element location="OM1.34[1]" displayName="Reflex Tests/Observations" relation="parent" group="OM1.34[1]"/>
+                <element location="OM1.34[1].1" displayName="Identifier" relation="child" group="OM1.34[1]"/>
+                <element location="OM1.34[1].2" displayName="Text" relation="child" group="OM1.34[1]"/>
+                <element location="OM1.34[1].3" displayName="Name of Coding System" relation="child" group="OM1.34[1]"/>
+                <element location="OM1.34[1].4" displayName="Alternate Identifier" relation="child" group="OM1.34[1]"/>
+                <element location="OM1.34[1].5" displayName="Alternate Text" relation="child" group="OM1.34[1]"/>
+                <element location="OM1.34[1].6" displayName="Name of Alternate Coding System" relation="child" group="OM1.34[1]"/>
+                <element location="OM1.34[1].7" displayName="Coding System Version ID" relation="child" group="OM1.34[1]"/>
+                <element location="OM1.34[1].8" displayName="Alternate Coding System Version ID" relation="child" group="OM1.34[1]"/>
+                <element location="OM1.34[2]" displayName="Reflex Tests/Observations" relation="parent" group="OM1.34[2]"/>
+                <element location="OM1.34[2].1" displayName="Identifier" relation="child" group="OM1.34[2]"/>
+                <element location="OM1.34[2].2" displayName="Text" relation="child" group="OM1.34[2]"/>
+                <element location="OM1.34[2].3" displayName="Name of Coding System" relation="child" group="OM1.34[2]"/>
+                <element location="OM1.34[2].4" displayName="Alternate Identifier" relation="child" group="OM1.34[2]"/>
+                <element location="OM1.34[2].5" displayName="Alternate Text" relation="child" group="OM1.34[2]"/>
+                <element location="OM1.34[2].6" displayName="Name of Alternate Coding System" relation="child" group="OM1.34[2]"/>
+                <element location="OM1.34[2].7" displayName="Coding System Version ID" relation="child" group="OM1.34[2]"/>
+                <element location="OM1.34[2].8" displayName="Alternate Coding System Version ID" relation="child" group="OM1.34[2]"/>
+                <element location="OM1.35[1]" displayName="Rules that Trigger Reflex Testing" relation="parent" group="OM1.35[1]"/>
+                <element location="OM1.35[2]" displayName="Rules that Trigger Reflex Testing" relation="parent" group="OM1.35[2]"/>
+                <element location="OM1.37[1]" displayName="Patient Preparation" relation="parent" group="OM1.37[1]" category="Changeable Data" data="Patient fasting required for 12 hours."/>
+                <element location="OM1.37[2]" displayName="Patient Preparation" relation="parent" group="OM1.37[2]"/>
+                <element location="OM1.39" displayName="Factors that may Affect the Observation" relation="parent" group="OM1.39" category="Changeable Data" data="Insufficient specimen, Gross hemolysis, Improper labeling"/>
+                <element location="OM1.40[1]" displayName="Service/Test/Observation Performance Schedule" relation="parent" group="OM1.40[1]" category="Changeable Data" data="Daily"/>
+                <element location="OM1.40[2]" displayName="Service/Test/Observation Performance Schedule" relation="parent" group="OM1.40[2]"/>
+                <element location="OM1.48" displayName="Exclusive Test" relation="parent" group="OM1.48" category="Changeable Data" data="N"/>
+                <element location="OM1.49" displayName="Diagnostic Service Sector ID" relation="parent" group="OM1.49" category="Changeable Data" data="LAB"/>
+                <element location="OM1.51[1]" displayName="Other Names" relation="parent" group="OM1.51[1]"/>
+                <element location="OM1.51[2]" displayName="Other Names" relation="parent" group="OM1.51[2]"/>
+                <element location="OM1.52[1]" displayName="Replacement Producer's Service/Test/Observation ID" relation="parent" group="OM1.52[1]"/>
+                <element location="OM1.52[1].1" displayName="Identifier" relation="child" group="OM1.52[1]"/>
+                <element location="OM1.52[1].2" displayName="Text" relation="child" group="OM1.52[1]"/>
+                <element location="OM1.52[1].3" displayName="Name of Coding System" relation="child" group="OM1.52[1]"/>
+                <element location="OM1.52[1].4" displayName="Alternate Identifier" relation="child" group="OM1.52[1]"/>
+                <element location="OM1.52[1].5" displayName="Alternate Text" relation="child" group="OM1.52[1]"/>
+                <element location="OM1.52[1].6" displayName="Name of Alternate Coding System" relation="child" group="OM1.52[1]"/>
+                <element location="OM1.52[1].7" displayName="Coding System Version ID" relation="child" group="OM1.52[1]"/>
+                <element location="OM1.52[1].8" displayName="Alternate Coding System Version ID" relation="child" group="OM1.52[1]"/>
+                <element location="OM1.52[2]" displayName="Replacement Producer's Service/Test/Observation ID" relation="parent" group="OM1.52[2]"/>
+                <element location="OM1.52[2].1" displayName="Identifier" relation="child" group="OM1.52[2]"/>
+                <element location="OM1.52[2].2" displayName="Text" relation="child" group="OM1.52[2]"/>
+                <element location="OM1.52[2].3" displayName="Name of Coding System" relation="child" group="OM1.52[2]"/>
+                <element location="OM1.52[2].4" displayName="Alternate Identifier" relation="child" group="OM1.52[2]"/>
+                <element location="OM1.52[2].5" displayName="Alternate Text" relation="child" group="OM1.52[2]"/>
+                <element location="OM1.52[2].6" displayName="Name of Alternate Coding System" relation="child" group="OM1.52[2]"/>
+                <element location="OM1.52[2].7" displayName="Coding System Version ID" relation="child" group="OM1.52[2]"/>
+                <element location="OM1.52[2].8" displayName="Alternate Coding System Version ID" relation="child" group="OM1.52[2]"/>
+                <element location="OM1.52[3]" displayName="Replacement Producer's Service/Test/Observation ID" relation="parent" group="OM1.52[3]"/>
+                <element location="OM1.52[3].1" displayName="Identifier" relation="child" group="OM1.52[3]"/>
+                <element location="OM1.52[3].2" displayName="Text" relation="child" group="OM1.52[3]"/>
+                <element location="OM1.52[3].3" displayName="Name of Coding System" relation="child" group="OM1.52[3]"/>
+                <element location="OM1.52[3].4" displayName="Alternate Identifier" relation="child" group="OM1.52[3]"/>
+                <element location="OM1.52[3].5" displayName="Alternate Text" relation="child" group="OM1.52[3]"/>
+                <element location="OM1.52[3].6" displayName="Name of Alternate Coding System" relation="child" group="OM1.52[3]"/>
+                <element location="OM1.52[3].7" displayName="Coding System Version ID" relation="child" group="OM1.52[3]"/>
+                <element location="OM1.52[3].8" displayName="Alternate Coding System Version ID" relation="child" group="OM1.52[3]"/>
+                <element location="OM1.52[4]" displayName="Replacement Producer's Service/Test/Observation ID" relation="parent" group="OM1.52[4]"/>
+                <element location="OM1.52[4].1" displayName="Identifier" relation="child" group="OM1.52[4]"/>
+                <element location="OM1.52[4].2" displayName="Text" relation="child" group="OM1.52[4]"/>
+                <element location="OM1.52[4].3" displayName="Name of Coding System" relation="child" group="OM1.52[4]"/>
+                <element location="OM1.52[4].4" displayName="Alternate Identifier" relation="child" group="OM1.52[4]"/>
+                <element location="OM1.52[4].5" displayName="Alternate Text" relation="child" group="OM1.52[4]"/>
+                <element location="OM1.52[4].6" displayName="Name of Alternate Coding System" relation="child" group="OM1.52[4]"/>
+                <element location="OM1.52[4].7" displayName="Coding System Version ID" relation="child" group="OM1.52[4]"/>
+                <element location="OM1.52[4].8" displayName="Alternate Coding System Version ID" relation="child" group="OM1.52[4]"/>
+                <element location="OM1.53[1]" displayName="Prior Results Instructions" relation="parent" group="OM1.53[1]"/>
+                <element location="OM1.53[2]" displayName="Prior Results Instructions" relation="parent" group="OM1.53[2]"/>
+                <element location="OM1.54[1]" displayName="Special Instructions" relation="parent" group="OM1.54[1]"/>
+                <element location="OM1.54[2]" displayName="Special Instructions" relation="parent" group="OM1.54[2]"/>
+                <element location="OM1.55[1]" displayName="Test Relationship Category" relation="parent" group="OM1.55[1]"/>
+                <element location="OM1.55[1].1" displayName="Identifier" relation="child" group="OM1.55[1]"/>
+                <element location="OM1.55[1].2" displayName="Text" relation="child" group="OM1.55[1]"/>
+                <element location="OM1.55[1].3" displayName="Name of Coding System" relation="child" group="OM1.55[1]"/>
+                <element location="OM1.55[1].7" displayName="Coding System Version ID" relation="child" group="OM1.55[1]"/>
+                <element location="OM1.55[1].8" displayName="Alternate Coding System Version ID" relation="child" group="OM1.55[1]"/>
+                <element location="OM1.56[1]" displayName="Observation Identifier associated with Producer's Service/Test/Observation ID" relation="parent" group="OM1.56[1]"/>
+                <element location="OM1.56[1].1" displayName="Identifier" relation="child" group="OM1.56[1]"/>
+                <element location="OM1.56[1].2" displayName="Text" relation="child" group="OM1.56[1]"/>
+                <element location="OM1.56[1].3" displayName="Name of Coding System" relation="child" group="OM1.56[1]"/>
+                <element location="OM1.56[1].4" displayName="Alternate Identifier" relation="child" group="OM1.56[1]"/>
+                <element location="OM1.56[1].5" displayName="Alternate Text" relation="child" group="OM1.56[1]"/>
+                <element location="OM1.56[1].6" displayName="Name of Alternate Coding System" relation="child" group="OM1.56[1]"/>
+                <element location="OM1.56[1].7" displayName="Coding System Version ID" relation="child" group="OM1.56[1]"/>
+                <element location="OM1.56[1].8" displayName="Alternate Coding System Version ID" relation="child" group="OM1.56[1]"/>
+                <element location="OM1.56[1].9" displayName="Original Text" relation="child" group="OM1.56[1]"/>
+                <element location="OM1.57[1]" displayName="Expected Turn-Around Time" relation="parent" group="OM1.57[1]"/>
+                <element location="OM1.57[1].1" displayName="Quantity" relation="child" group="OM1.57[1]" category="Changeable Data" data="1"/>
+                <element location="OM1.57[1].2" displayName="Units" relation="child" group="OM1.57[1]"/>
+                <element location="OM1.57[1].2.1" displayName="Identifier" relation="child" group="OM1.57[1]" category="Changeable Data" data="d"/>
+                <element location="OM1.57[1].2.2" displayName="Text" relation="child" group="OM1.57[1]" category="Changeable Data" data="day"/>
+                <element location="OM1.57[1].2.3" displayName="Name of Coding System" relation="child" group="OM1.57[1]" category="Changeable Data" data="UCUM"/>
+                <element location="OM1.57[1].2.7" displayName="Coding System Version ID" relation="child" group="OM1.57[1]" category="Changeable Data" data="1.8"/>
+                <element location="OM1.57[1].2.8" displayName="Alternate Coding System Version ID" relation="child" group="OM1.57[1]"/>
+            </test-profile>
+        </test-profiles>
+        <test-profiles segment="MSH">
+            <test-profile id="3.70" segment="MSH">
+                <element location="MSH.1" displayName="Field Separator" relation="parent" group="MSH.1" category="IG Fixed Data" data="|"/>
+                <element location="MSH.2" displayName="Encoding Characters" relation="parent" group="MSH.2" category="IG Fixed Data" data="^~\&amp;#"/>
+                <element location="MSH.3" displayName="Sending Application" relation="parent" group="MSH.3"/>
+                <element location="MSH.3.1" displayName="Namespace ID" relation="child" group="MSH.3" category="Configurable Data" data="NIST Test Lab APP"/>
+                <element location="MSH.3.2" displayName="Universal ID" relation="child" group="MSH.3" category="Configurable Data" data="2.16.840.1.113883.3.72.5.20"/>
+                <element location="MSH.3.3" displayName="Universal ID Type" relation="child" group="MSH.3" category="IG Fixed Data" data="ISO"/>
+                <element location="MSH.4" displayName="Sending Facility" relation="parent" group="MSH.4"/>
+                <element location="MSH.4.1" displayName="Namespace ID" relation="child" group="MSH.4" category="Configurable Data" data="NIST Lab Facility"/>
+                <element location="MSH.4.2" displayName="Universal ID" relation="child" group="MSH.4" category="Configurable Data" data="2.16.840.1.113883.3.72.5.21"/>
+                <element location="MSH.4.3" displayName="Universal ID Type" relation="child" group="MSH.4" category="IG Fixed Data" data="ISO"/>
+                <element location="MSH.6" displayName="Receiving Facility" relation="parent" group="MSH.6"/>
+                <element location="MSH.6.1" displayName="Namespace ID" relation="child" group="MSH.6" category="Configurable Data" data="NIST EHR Facility"/>
+                <element location="MSH.6.2" displayName="Universal ID" relation="child" group="MSH.6" category="Configurable Data" data="2.16.840.1.113883.3.72.5.23"/>
+                <element location="MSH.6.3" displayName="Universal ID Type" relation="child" group="MSH.6" category="IG Fixed Data" data="ISO"/>
+                <element location="MSH.7" displayName="Date/Time Of Message" relation="parent" group="MSH.7"/>
+                <element location="MSH.7.1" displayName="Time" relation="child" group="MSH.7" category="System Generated" data="20130421113601-0700"/>
+                <element location="MSH.9" displayName="Message Type" relation="parent" group="MSH.9"/>
+                <element location="MSH.9.1" displayName="Message Code" relation="child" group="MSH.9" category="IG Fixed Data" data="MFN"/>
+                <element location="MSH.9.2" displayName="Trigger Event" relation="child" group="MSH.9" category="IG Fixed Data" data="M04"/>
+                <element location="MSH.9.3" displayName="Message Structure" relation="child" group="MSH.9" category="IG Fixed Data" data="MFN_M04"/>
+                <element location="MSH.10" displayName="Message Control ID" relation="parent" group="MSH.10" category="System Generated" data="EDOS_2.3_3.1-M04_GU"/>
+                <element location="MSH.11" displayName="Processing ID" relation="parent" group="MSH.11"/>
+                <element location="MSH.11.1" displayName="Processing ID" relation="child" group="MSH.11" category="Changeable Data" data="T"/>
+                <element location="MSH.12" displayName="VersionID" relation="parent" group="MSH.12"/>
+                <element location="MSH.12.1" displayName="Version ID" relation="child" group="MSH.12" category="IG Fixed Data" data="2.5.1"/>
+                <element location="MSH.15" displayName="Accept Acknowledgment Type" relation="parent" group="MSH.15" category="Changeable Data" data="AL"/>
+                <element location="MSH.16" displayName="Application Acknowledgment Type" relation="parent" group="MSH.16" category="Changeable Data" data="NE"/>
+                <element location="MSH.21[1]" displayName="Message Profile Identifier" relation="parent" group="MSH.21[1]"/>
+                <element location="MSH.21[1].1" displayName="Entity Identifier" relation="child" group="MSH.21[1]" category="Test Case Fixed Data" data="EDOS_Common_Component"/>
+                <element location="MSH.21[1].2" displayName="Namespace ID" relation="child" group="MSH.21[1]" category="Changeable Data" data="EDOS Base Profile"/>
+                <element location="MSH.21[1].3" displayName="Universal ID" relation="child" group="MSH.21[1]" category="Test Case Fixed Data" data="2.16.840.1.113883.9.67"/>
+                <element location="MSH.21[1].4" displayName="Universal ID Type" relation="child" group="MSH.21[1]" category="IG Fixed Data" data="ISO"/>
+                <element location="MSH.21[2]" displayName="Message Profile Identifier" relation="parent" group="MSH.21[2]"/>
+                <element location="MSH.21[2].1" displayName="Entity Identifier" relation="child" group="MSH.21[2]" category="Test Case Fixed Data" data="EDOS_GU_Component"/>
+                <element location="MSH.21[2].2" displayName="Namespace ID" relation="child" group="MSH.21[2]" category="Changeable Data" data="EDOS GU Profile"/>
+                <element location="MSH.21[2].3" displayName="Universal ID" relation="child" group="MSH.21[2]" category="Test Case Fixed Data" data="2.16.840.1.113883.9.68"/>
+                <element location="MSH.21[2].4" displayName="Universal ID Type" relation="child" group="MSH.21[2]" category="IG Fixed Data" data="ISO"/>
+            </test-profile>
+            <test-profile id="1.70" segment="MSH">
+                <element location="MSH.1" displayName="Field Separator" relation="parent" group="MSH.1" category="IG Fixed Data" data="|"/>
+                <element location="MSH.2" displayName="Encoding Characters" relation="parent" group="MSH.2" category="IG Fixed Data" data="^~\&amp;#"/>
+                <element location="MSH.3" displayName="Sending Application" relation="parent" group="MSH.3"/>
+                <element location="MSH.3.1" displayName="Namespace ID" relation="child" group="MSH.3" category="Configurable Data" data="NIST Test Lab APP"/>
+                <element location="MSH.3.2" displayName="Universal ID" relation="child" group="MSH.3" category="Configurable Data" data="2.16.840.1.113883.3.72.5.20"/>
+                <element location="MSH.3.3" displayName="Universal ID Type" relation="child" group="MSH.3" category="IG Fixed Data" data="ISO"/>
+                <element location="MSH.4" displayName="Sending Facility" relation="parent" group="MSH.4"/>
+                <element location="MSH.4.1" displayName="Namespace ID" relation="child" group="MSH.4" category="Configurable Data" data="NIST Lab Facility"/>
+                <element location="MSH.4.2" displayName="Universal ID" relation="child" group="MSH.4" category="Configurable Data" data="2.16.840.1.113883.3.72.5.21"/>
+                <element location="MSH.4.3" displayName="Universal ID Type" relation="child" group="MSH.4" category="IG Fixed Data" data="ISO"/>
+                <element location="MSH.6" displayName="Receiving Facility" relation="parent" group="MSH.6"/>
+                <element location="MSH.6.1" displayName="Namespace ID" relation="child" group="MSH.6" category="Configurable Data" data="NIST EHR Facility"/>
+                <element location="MSH.6.2" displayName="Universal ID" relation="child" group="MSH.6" category="Configurable Data" data="2.16.840.1.113883.3.72.5.23"/>
+                <element location="MSH.6.3" displayName="Universal ID Type" relation="child" group="MSH.6" category="IG Fixed Data" data="ISO"/>
+                <element location="MSH.7" displayName="Date/Time Of Message" relation="parent" group="MSH.7"/>
+                <element location="MSH.7.1" displayName="Time" relation="child" group="MSH.7" category="System Generated" data="20130421113601-0700"/>
+                <element location="MSH.9" displayName="Message Type" relation="parent" group="MSH.9"/>
+                <element location="MSH.9.1" displayName="Message Code" relation="child" group="MSH.9" category="IG Fixed Data" data="MFN"/>
+                <element location="MSH.9.2" displayName="Trigger Event" relation="child" group="MSH.9" category="IG Fixed Data" data="M08"/>
+                <element location="MSH.9.3" displayName="Message Structure" relation="child" group="MSH.9" category="IG Fixed Data" data="MFN_M08"/>
+                <element location="MSH.10" displayName="Message Control ID" relation="parent" group="MSH.10" category="System Generated" data="EDOS_2.3_1.1-M08_GU"/>
+                <element location="MSH.11" displayName="Processing ID" relation="parent" group="MSH.11"/>
+                <element location="MSH.11.1" displayName="Processing ID" relation="child" group="MSH.11" category="Changeable Data" data="T"/>
+                <element location="MSH.12" displayName="VersionID" relation="parent" group="MSH.12"/>
+                <element location="MSH.12.1" displayName="Version ID" relation="child" group="MSH.12" category="IG Fixed Data" data="2.5.1"/>
+                <element location="MSH.15" displayName="Accept Acknowledgment Type" relation="parent" group="MSH.15" category="Changeable Data" data="AL"/>
+                <element location="MSH.16" displayName="Application Acknowledgment Type" relation="parent" group="MSH.16" category="Changeable Data" data="NE"/>
+                <element location="MSH.21[1]" displayName="Message Profile Identifier" relation="parent" group="MSH.21[1]"/>
+                <element location="MSH.21[1].1" displayName="Entity Identifier" relation="child" group="MSH.21[1]" category="Test Case Fixed Data" data="EDOS_Common_Component"/>
+                <element location="MSH.21[1].2" displayName="Namespace ID" relation="child" group="MSH.21[1]" category="Changeable Data" data="EDOS Base Profile"/>
+                <element location="MSH.21[1].3" displayName="Universal ID" relation="child" group="MSH.21[1]" category="Test Case Fixed Data" data="2.16.840.1.113883.9.67"/>
+                <element location="MSH.21[1].4" displayName="Universal ID Type" relation="child" group="MSH.21[1]" category="IG Fixed Data" data="ISO"/>
+                <element location="MSH.21[2]" displayName="Message Profile Identifier" relation="parent" group="MSH.21[2]"/>
+                <element location="MSH.21[2].1" displayName="Entity Identifier" relation="child" group="MSH.21[2]" category="Test Case Fixed Data" data="EDOS_GU_Component"/>
+                <element location="MSH.21[2].2" displayName="Namespace ID" relation="child" group="MSH.21[2]" category="Changeable Data" data="EDOS GU Profile"/>
+                <element location="MSH.21[2].3" displayName="Universal ID" relation="child" group="MSH.21[2]" category="Test Case Fixed Data" data="2.16.840.1.113883.9.68"/>
+                <element location="MSH.21[2].4" displayName="Universal ID Type" relation="child" group="MSH.21[2]" category="IG Fixed Data" data="ISO"/>
+            </test-profile>
+            <test-profile id="2.70" segment="MSH">
+                <element location="MSH.1" displayName="Field Separator" relation="parent" group="MSH.1" category="IG Fixed Data" data="|"/>
+                <element location="MSH.2" displayName="Encoding Characters" relation="parent" group="MSH.2" category="IG Fixed Data" data="^~\&amp;#"/>
+                <element location="MSH.3" displayName="Sending Application" relation="parent" group="MSH.3"/>
+                <element location="MSH.3.1" displayName="Namespace ID" relation="child" group="MSH.3" category="Configurable Data" data="NIST Test Lab APP"/>
+                <element location="MSH.3.2" displayName="Universal ID" relation="child" group="MSH.3" category="Configurable Data" data="2.16.840.1.113883.3.72.5.20"/>
+                <element location="MSH.3.3" displayName="Universal ID Type" relation="child" group="MSH.3" category="IG Fixed Data" data="ISO"/>
+                <element location="MSH.4" displayName="Sending Facility" relation="parent" group="MSH.4"/>
+                <element location="MSH.4.1" displayName="Namespace ID" relation="child" group="MSH.4" category="Configurable Data" data="NIST Lab Facility"/>
+                <element location="MSH.4.2" displayName="Universal ID" relation="child" group="MSH.4" category="Configurable Data" data="2.16.840.1.113883.3.72.5.21"/>
+                <element location="MSH.4.3" displayName="Universal ID Type" relation="child" group="MSH.4" category="IG Fixed Data" data="ISO"/>
+                <element location="MSH.6" displayName="Receiving Facility" relation="parent" group="MSH.6"/>
+                <element location="MSH.6.1" displayName="Namespace ID" relation="child" group="MSH.6" category="Configurable Data" data="NIST EHR Facility"/>
+                <element location="MSH.6.2" displayName="Universal ID" relation="child" group="MSH.6" category="Configurable Data" data="2.16.840.1.113883.3.72.5.23"/>
+                <element location="MSH.6.3" displayName="Universal ID Type" relation="child" group="MSH.6" category="IG Fixed Data" data="ISO"/>
+                <element location="MSH.7" displayName="Date/Time Of Message" relation="parent" group="MSH.7"/>
+                <element location="MSH.7.1" displayName="Time" relation="child" group="MSH.7" category="System Generated" data="20130421113601-0700"/>
+                <element location="MSH.9" displayName="Message Type" relation="parent" group="MSH.9"/>
+                <element location="MSH.9.1" displayName="Message Code" relation="child" group="MSH.9" category="IG Fixed Data" data="MFN"/>
+                <element location="MSH.9.2" displayName="Trigger Event" relation="child" group="MSH.9" category="IG Fixed Data" data="M10"/>
+                <element location="MSH.9.3" displayName="Message Structure" relation="child" group="MSH.9" category="IG Fixed Data" data="MFN_M10"/>
+                <element location="MSH.10" displayName="Message Control ID" relation="parent" group="MSH.10" category="System Generated" data="EDOS_2.3_2.1-M10_GU"/>
+                <element location="MSH.11" displayName="Processing ID" relation="parent" group="MSH.11"/>
+                <element location="MSH.11.1" displayName="Processing ID" relation="child" group="MSH.11" category="Changeable Data" data="T"/>
+                <element location="MSH.12" displayName="VersionID" relation="parent" group="MSH.12"/>
+                <element location="MSH.12.1" displayName="Version ID" relation="child" group="MSH.12" category="IG Fixed Data" data="2.5.1"/>
+                <element location="MSH.15" displayName="Accept Acknowledgment Type" relation="parent" group="MSH.15" category="Changeable Data" data="AL"/>
+                <element location="MSH.16" displayName="Application Acknowledgment Type" relation="parent" group="MSH.16" category="Changeable Data" data="NE"/>
+                <element location="MSH.21[1]" displayName="Message Profile Identifier" relation="parent" group="MSH.21[1]"/>
+                <element location="MSH.21[1].1" displayName="Entity Identifier" relation="child" group="MSH.21[1]" category="Test Case Fixed Data" data="EDOS_Common_Component"/>
+                <element location="MSH.21[1].2" displayName="Namespace ID" relation="child" group="MSH.21[1]" category="Changeable Data" data="EDOS Base Profile"/>
+                <element location="MSH.21[1].3" displayName="Universal ID" relation="child" group="MSH.21[1]" category="Test Case Fixed Data" data="2.16.840.1.113883.9.67"/>
+                <element location="MSH.21[1].4" displayName="Universal ID Type" relation="child" group="MSH.21[1]" category="IG Fixed Data" data="ISO"/>
+                <element location="MSH.21[2]" displayName="Message Profile Identifier" relation="parent" group="MSH.21[2]"/>
+                <element location="MSH.21[2].1" displayName="Entity Identifier" relation="child" group="MSH.21[2]" category="Test Case Fixed Data" data="EDOS_GU_Component"/>
+                <element location="MSH.21[2].2" displayName="Namespace ID" relation="child" group="MSH.21[2]" category="Changeable Data" data="EDOS GU Profile"/>
+                <element location="MSH.21[2].3" displayName="Universal ID" relation="child" group="MSH.21[2]" category="Test Case Fixed Data" data="2.16.840.1.113883.9.68"/>
+                <element location="MSH.21[2].4" displayName="Universal ID Type" relation="child" group="MSH.21[2]" category="IG Fixed Data" data="ISO"/>
+            </test-profile>
+        </test-profiles>
+        <test-profiles segment="OM5">
+            <test-profile id="800.1" segment="OM5">
+                <element location="OM5.1" displayName="Sequence Number - Test/Observation Master File" relation="parent" group="OM5.1" category="IG Fixed Data" data="1"/>
+                <element location="OM5.2[1]" displayName="Test/Observations Included Within an Ordered Test Battery" relation="parent" group="OM5.2[1]"/>
+                <element location="OM5.2[1].1" displayName="Identifier" relation="child" group="OM5.2[1]" category="Changeable Data" data="100"/>
+                <element location="OM5.2[1].2" displayName="Text" relation="child" group="OM5.2[1]" category="Changeable Data" data="CMP"/>
+                <element location="OM5.2[1].3" displayName="Name of Coding System" relation="child" group="OM5.2[1]" category="Changeable Data" data="99USI"/>
+                <element location="OM5.2[1].4" displayName="Alternate Identifier" relation="child" group="OM5.2[1]" category="Changeable Data" data="24323-8"/>
+                <element location="OM5.2[1].5" displayName="Alternate Text" relation="child" group="OM5.2[1]" category="Changeable Data" data="Comprehensive metabolic 2000 panel - Serum or Plasma"/>
+                <element location="OM5.2[1].6" displayName="Name of Alternate Coding System" relation="child" group="OM5.2[1]" category="Changeable Data" data="LN"/>
+                <element location="OM5.2[1].7" displayName="Coding System Version ID" relation="child" group="OM5.2[1]"/>
+                <element location="OM5.2[1].8" displayName="Alternate Coding System Version ID" relation="child" group="OM5.2[1]" category="Changeable Data" data="2.42"/>
+                <element location="OM5.2[2]" displayName="Test/Observations Included Within an Ordered Test Battery" relation="parent" group="OM5.2[2]"/>
+                <element location="OM5.2[2].1" displayName="Identifier" relation="child" group="OM5.2[2]" category="Changeable Data" data="200"/>
+                <element location="OM5.2[2].2" displayName="Text" relation="child" group="OM5.2[2]" category="Changeable Data" data="CBC_diff"/>
+                <element location="OM5.2[2].3" displayName="Name of Coding System" relation="child" group="OM5.2[2]" category="Changeable Data" data="99USI"/>
+                <element location="OM5.2[2].4" displayName="Alternate Identifier" relation="child" group="OM5.2[2]" category="Changeable Data" data="57021-8"/>
+                <element location="OM5.2[2].5" displayName="Alternate Text" relation="child" group="OM5.2[2]" category="Changeable Data" data="CBC W Auto Differential panel in Blood"/>
+                <element location="OM5.2[2].6" displayName="Name of Alternate Coding System" relation="child" group="OM5.2[2]" category="Changeable Data" data="LN"/>
+                <element location="OM5.2[2].7" displayName="Coding System Version ID" relation="child" group="OM5.2[2]"/>
+                <element location="OM5.2[2].8" displayName="Alternate Coding System Version ID" relation="child" group="OM5.2[2]" category="Changeable Data" data="2.42"/>
+                <element location="OM5.2[3]" displayName="Test/Observations Included Within an Ordered Test Battery" relation="parent" group="OM5.2[3]"/>
+                <element location="OM5.2[3].1" displayName="Identifier" relation="child" group="OM5.2[3]" category="Changeable Data" data="400"/>
+                <element location="OM5.2[3].2" displayName="Text" relation="child" group="OM5.2[3]" category="Changeable Data" data="TSH"/>
+                <element location="OM5.2[3].3" displayName="Name of Coding System" relation="child" group="OM5.2[3]" category="Changeable Data" data="99USI"/>
+                <element location="OM5.2[3].4" displayName="Alternate Identifier" relation="child" group="OM5.2[3]" category="Changeable Data" data="3016-3"/>
+                <element location="OM5.2[3].5" displayName="Alternate Text" relation="child" group="OM5.2[3]" category="Changeable Data" data="Thyrotropin [Units/volume] in Serum or Plasma"/>
+                <element location="OM5.2[3].6" displayName="Name of Alternate Coding System" relation="child" group="OM5.2[3]" category="Changeable Data" data="LN"/>
+                <element location="OM5.2[3].7" displayName="Coding System Version ID" relation="child" group="OM5.2[3]"/>
+                <element location="OM5.2[3].8" displayName="Alternate Coding System Version ID" relation="child" group="OM5.2[3]" category="Changeable Data" data="2.42"/>
+                <element location="OM5.2[4]" displayName="Test/Observations Included Within an Ordered Test Battery" relation="parent" group="OM5.2[4]"/>
+                <element location="OM5.2[4].1" displayName="Identifier" relation="child" group="OM5.2[4]" category="Changeable Data" data="300"/>
+                <element location="OM5.2[4].2" displayName="Text" relation="child" group="OM5.2[4]" category="Changeable Data" data="Comprehensive Urinalysis"/>
+                <element location="OM5.2[4].3" displayName="Name of Coding System" relation="child" group="OM5.2[4]" category="Changeable Data" data="99USI"/>
+                <element location="OM5.2[4].4" displayName="Alternate Identifier" relation="child" group="OM5.2[4]" category="Changeable Data" data="50564-4"/>
+                <element location="OM5.2[4].5" displayName="Alternate Text" relation="child" group="OM5.2[4]" category="Changeable Data" data="Urinalysis panel - Urine by Auto"/>
+                <element location="OM5.2[4].6" displayName="Name of Alternate Coding System" relation="child" group="OM5.2[4]" category="Changeable Data" data="LN"/>
+                <element location="OM5.2[4].7" displayName="Coding System Version ID" relation="child" group="OM5.2[4]"/>
+                <element location="OM5.2[4].8" displayName="Alternate Coding System Version ID" relation="child" group="OM5.2[4]" category="Changeable Data" data="2.42"/>
+                <element location="OM5.2[5]" displayName="Test/Observations Included Within an Ordered Test Battery" relation="parent" group="OM5.2[5]"/>
+                <element location="OM5.2[5].1" displayName="Identifier" relation="child" group="OM5.2[5]"/>
+                <element location="OM5.2[5].2" displayName="Text" relation="child" group="OM5.2[5]"/>
+                <element location="OM5.2[5].3" displayName="Name of Coding System" relation="child" group="OM5.2[5]"/>
+                <element location="OM5.2[5].4" displayName="Alternate Identifier" relation="child" group="OM5.2[5]"/>
+                <element location="OM5.2[5].5" displayName="Alternate Text" relation="child" group="OM5.2[5]"/>
+                <element location="OM5.2[5].6" displayName="Name of Alternate Coding System" relation="child" group="OM5.2[5]"/>
+                <element location="OM5.2[5].7" displayName="Coding System Version ID" relation="child" group="OM5.2[5]"/>
+                <element location="OM5.2[5].8" displayName="Alternate Coding System Version ID" relation="child" group="OM5.2[5]"/>
+                <element location="OM5.2[6]" displayName="Test/Observations Included Within an Ordered Test Battery" relation="parent" group="OM5.2[6]"/>
+                <element location="OM5.2[6].1" displayName="Identifier" relation="child" group="OM5.2[6]"/>
+                <element location="OM5.2[6].2" displayName="Text" relation="child" group="OM5.2[6]"/>
+                <element location="OM5.2[6].3" displayName="Name of Coding System" relation="child" group="OM5.2[6]"/>
+                <element location="OM5.2[6].4" displayName="Alternate Identifier" relation="child" group="OM5.2[6]"/>
+                <element location="OM5.2[6].5" displayName="Alternate Text" relation="child" group="OM5.2[6]"/>
+                <element location="OM5.2[6].6" displayName="Name of Alternate Coding System" relation="child" group="OM5.2[6]"/>
+                <element location="OM5.2[6].7" displayName="Coding System Version ID" relation="child" group="OM5.2[6]"/>
+                <element location="OM5.2[6].8" displayName="Alternate Coding System Version ID" relation="child" group="OM5.2[6]"/>
+                <element location="OM5.2[7]" displayName="Test/Observations Included Within an Ordered Test Battery" relation="parent" group="OM5.2[7]"/>
+                <element location="OM5.2[7].1" displayName="Identifier" relation="child" group="OM5.2[7]"/>
+                <element location="OM5.2[7].2" displayName="Text" relation="child" group="OM5.2[7]"/>
+                <element location="OM5.2[7].3" displayName="Name of Coding System" relation="child" group="OM5.2[7]"/>
+                <element location="OM5.2[7].4" displayName="Alternate Identifier" relation="child" group="OM5.2[7]"/>
+                <element location="OM5.2[7].5" displayName="Alternate Text" relation="child" group="OM5.2[7]"/>
+                <element location="OM5.2[7].6" displayName="Name of Alternate Coding System" relation="child" group="OM5.2[7]"/>
+                <element location="OM5.2[7].7" displayName="Coding System Version ID" relation="child" group="OM5.2[7]"/>
+                <element location="OM5.2[7].8" displayName="Alternate Coding System Version ID" relation="child" group="OM5.2[7]"/>
+                <element location="OM5.2[8]" displayName="Test/Observations Included Within an Ordered Test Battery" relation="parent" group="OM5.2[8]"/>
+                <element location="OM5.2[8].1" displayName="Identifier" relation="child" group="OM5.2[8]"/>
+                <element location="OM5.2[8].2" displayName="Text" relation="child" group="OM5.2[8]"/>
+                <element location="OM5.2[8].3" displayName="Name of Coding System" relation="child" group="OM5.2[8]"/>
+                <element location="OM5.2[8].4" displayName="Alternate Identifier" relation="child" group="OM5.2[8]"/>
+                <element location="OM5.2[8].5" displayName="Alternate Text" relation="child" group="OM5.2[8]"/>
+                <element location="OM5.2[8].6" displayName="Name of Alternate Coding System" relation="child" group="OM5.2[8]"/>
+                <element location="OM5.2[8].7" displayName="Coding System Version ID" relation="child" group="OM5.2[8]"/>
+                <element location="OM5.2[8].8" displayName="Alternate Coding System Version ID" relation="child" group="OM5.2[8]"/>
+                <element location="OM5.2[9]" displayName="Test/Observations Included Within an Ordered Test Battery" relation="parent" group="OM5.2[9]"/>
+                <element location="OM5.2[9].1" displayName="Identifier" relation="child" group="OM5.2[9]"/>
+                <element location="OM5.2[9].2" displayName="Text" relation="child" group="OM5.2[9]"/>
+                <element location="OM5.2[9].3" displayName="Name of Coding System" relation="child" group="OM5.2[9]"/>
+                <element location="OM5.2[9].4" displayName="Alternate Identifier" relation="child" group="OM5.2[9]"/>
+                <element location="OM5.2[9].5" displayName="Alternate Text" relation="child" group="OM5.2[9]"/>
+                <element location="OM5.2[9].6" displayName="Name of Alternate Coding System" relation="child" group="OM5.2[9]"/>
+                <element location="OM5.2[9].7" displayName="Coding System Version ID" relation="child" group="OM5.2[9]"/>
+                <element location="OM5.2[9].8" displayName="Alternate Coding System Version ID" relation="child" group="OM5.2[9]"/>
+                <element location="OM5.2[10]" displayName="Test/Observations Included Within an Ordered Test Battery" relation="parent" group="OM5.2[10]"/>
+                <element location="OM5.2[10].1" displayName="Identifier" relation="child" group="OM5.2[10]"/>
+                <element location="OM5.2[10].2" displayName="Text" relation="child" group="OM5.2[10]"/>
+                <element location="OM5.2[10].3" displayName="Name of Coding System" relation="child" group="OM5.2[10]"/>
+                <element location="OM5.2[10].4" displayName="Alternate Identifier" relation="child" group="OM5.2[10]"/>
+                <element location="OM5.2[10].5" displayName="Alternate Text" relation="child" group="OM5.2[10]"/>
+                <element location="OM5.2[10].6" displayName="Name of Alternate Coding System" relation="child" group="OM5.2[10]"/>
+                <element location="OM5.2[10].7" displayName="Coding System Version ID" relation="child" group="OM5.2[10]"/>
+                <element location="OM5.2[10].8" displayName="Alternate Coding System Version ID" relation="child" group="OM5.2[10]"/>
+                <element location="OM5.2[11]" displayName="Test/Observations Included Within an Ordered Test Battery" relation="parent" group="OM5.2[11]"/>
+                <element location="OM5.2[11].1" displayName="Identifier" relation="child" group="OM5.2[11]"/>
+                <element location="OM5.2[11].2" displayName="Text" relation="child" group="OM5.2[11]"/>
+                <element location="OM5.2[11].3" displayName="Name of Coding System" relation="child" group="OM5.2[11]"/>
+                <element location="OM5.2[11].4" displayName="Alternate Identifier" relation="child" group="OM5.2[11]"/>
+                <element location="OM5.2[11].5" displayName="Alternate Text" relation="child" group="OM5.2[11]"/>
+                <element location="OM5.2[11].6" displayName="Name of Alternate Coding System" relation="child" group="OM5.2[11]"/>
+                <element location="OM5.2[11].7" displayName="Coding System Version ID" relation="child" group="OM5.2[11]"/>
+                <element location="OM5.2[11].8" displayName="Alternate Coding System Version ID" relation="child" group="OM5.2[11]"/>
+                <element location="OM5.2[12]" displayName="Test/Observations Included Within an Ordered Test Battery" relation="parent" group="OM5.2[12]"/>
+                <element location="OM5.2[12].1" displayName="Identifier" relation="child" group="OM5.2[12]"/>
+                <element location="OM5.2[12].2" displayName="Text" relation="child" group="OM5.2[12]"/>
+                <element location="OM5.2[12].3" displayName="Name of Coding System" relation="child" group="OM5.2[12]"/>
+                <element location="OM5.2[12].4" displayName="Alternate Identifier" relation="child" group="OM5.2[12]"/>
+                <element location="OM5.2[12].5" displayName="Alternate Text" relation="child" group="OM5.2[12]"/>
+                <element location="OM5.2[12].6" displayName="Name of Alternate Coding System" relation="child" group="OM5.2[12]"/>
+                <element location="OM5.2[12].7" displayName="Coding System Version ID" relation="child" group="OM5.2[12]"/>
+                <element location="OM5.2[12].8" displayName="Alternate Coding System Version ID" relation="child" group="OM5.2[12]"/>
+                <element location="OM5.2[13]" displayName="Test/Observations Included Within an Ordered Test Battery" relation="parent" group="OM5.2[13]"/>
+                <element location="OM5.2[13].1" displayName="Identifier" relation="child" group="OM5.2[13]"/>
+                <element location="OM5.2[13].2" displayName="Text" relation="child" group="OM5.2[13]"/>
+                <element location="OM5.2[13].3" displayName="Name of Coding System" relation="child" group="OM5.2[13]"/>
+                <element location="OM5.2[13].4" displayName="Alternate Identifier" relation="child" group="OM5.2[13]"/>
+                <element location="OM5.2[13].5" displayName="Alternate Text" relation="child" group="OM5.2[13]"/>
+                <element location="OM5.2[13].6" displayName="Name of Alternate Coding System" relation="child" group="OM5.2[13]"/>
+                <element location="OM5.2[13].7" displayName="Coding System Version ID" relation="child" group="OM5.2[13]"/>
+                <element location="OM5.2[13].8" displayName="Alternate Coding System Version ID" relation="child" group="OM5.2[13]"/>
+                <element location="OM5.2[14]" displayName="Test/Observations Included Within an Ordered Test Battery" relation="parent" group="OM5.2[14]"/>
+                <element location="OM5.2[14].1" displayName="Identifier" relation="child" group="OM5.2[14]"/>
+                <element location="OM5.2[14].2" displayName="Text" relation="child" group="OM5.2[14]"/>
+                <element location="OM5.2[14].3" displayName="Name of Coding System" relation="child" group="OM5.2[14]"/>
+                <element location="OM5.2[14].4" displayName="Alternate Identifier" relation="child" group="OM5.2[14]"/>
+                <element location="OM5.2[14].5" displayName="Alternate Text" relation="child" group="OM5.2[14]"/>
+                <element location="OM5.2[14].6" displayName="Name of Alternate Coding System" relation="child" group="OM5.2[14]"/>
+                <element location="OM5.2[14].7" displayName="Coding System Version ID" relation="child" group="OM5.2[14]"/>
+                <element location="OM5.2[14].8" displayName="Alternate Coding System Version ID" relation="child" group="OM5.2[14]"/>
+                <element location="OM5.2[15]" displayName="Test/Observations Included Within an Ordered Test Battery" relation="parent" group="OM5.2[15]"/>
+                <element location="OM5.2[15].1" displayName="Identifier" relation="child" group="OM5.2[15]"/>
+                <element location="OM5.2[15].2" displayName="Text" relation="child" group="OM5.2[15]"/>
+                <element location="OM5.2[15].3" displayName="Name of Coding System" relation="child" group="OM5.2[15]"/>
+                <element location="OM5.2[15].4" displayName="Alternate Identifier" relation="child" group="OM5.2[15]"/>
+                <element location="OM5.2[15].5" displayName="Alternate Text" relation="child" group="OM5.2[15]"/>
+                <element location="OM5.2[15].6" displayName="Name of Alternate Coding System" relation="child" group="OM5.2[15]"/>
+                <element location="OM5.2[15].7" displayName="Coding System Version ID" relation="child" group="OM5.2[15]"/>
+                <element location="OM5.2[15].8" displayName="Alternate Coding System Version ID" relation="child" group="OM5.2[15]"/>
+                <element location="OM5.2[16]" displayName="Test/Observations Included Within an Ordered Test Battery" relation="parent" group="OM5.2[16]"/>
+                <element location="OM5.2[16].1" displayName="Identifier" relation="child" group="OM5.2[16]"/>
+                <element location="OM5.2[16].2" displayName="Text" relation="child" group="OM5.2[16]"/>
+                <element location="OM5.2[16].3" displayName="Name of Coding System" relation="child" group="OM5.2[16]"/>
+                <element location="OM5.2[16].4" displayName="Alternate Identifier" relation="child" group="OM5.2[16]"/>
+                <element location="OM5.2[16].5" displayName="Alternate Text" relation="child" group="OM5.2[16]"/>
+                <element location="OM5.2[16].6" displayName="Name of Alternate Coding System" relation="child" group="OM5.2[16]"/>
+                <element location="OM5.2[16].7" displayName="Coding System Version ID" relation="child" group="OM5.2[16]"/>
+                <element location="OM5.2[16].8" displayName="Alternate Coding System Version ID" relation="child" group="OM5.2[16]"/>
+                <element location="OM5.2[17]" displayName="Test/Observations Included Within an Ordered Test Battery" relation="parent" group="OM5.2[17]"/>
+                <element location="OM5.2[17].1" displayName="Identifier" relation="child" group="OM5.2[17]"/>
+                <element location="OM5.2[17].2" displayName="Text" relation="child" group="OM5.2[17]"/>
+                <element location="OM5.2[17].3" displayName="Name of Coding System" relation="child" group="OM5.2[17]"/>
+                <element location="OM5.2[17].4" displayName="Alternate Identifier" relation="child" group="OM5.2[17]"/>
+                <element location="OM5.2[17].5" displayName="Alternate Text" relation="child" group="OM5.2[17]"/>
+                <element location="OM5.2[17].6" displayName="Name of Alternate Coding System" relation="child" group="OM5.2[17]"/>
+                <element location="OM5.2[17].7" displayName="Coding System Version ID" relation="child" group="OM5.2[17]"/>
+                <element location="OM5.2[17].8" displayName="Alternate Coding System Version ID" relation="child" group="OM5.2[17]"/>
+                <element location="OM5.2[18]" displayName="Test/Observations Included Within an Ordered Test Battery" relation="parent" group="OM5.2[18]"/>
+                <element location="OM5.2[18].1" displayName="Identifier" relation="child" group="OM5.2[18]"/>
+                <element location="OM5.2[18].2" displayName="Text" relation="child" group="OM5.2[18]"/>
+                <element location="OM5.2[18].3" displayName="Name of Coding System" relation="child" group="OM5.2[18]"/>
+                <element location="OM5.2[18].4" displayName="Alternate Identifier" relation="child" group="OM5.2[18]"/>
+                <element location="OM5.2[18].5" displayName="Alternate Text" relation="child" group="OM5.2[18]"/>
+                <element location="OM5.2[18].6" displayName="Name of Alternate Coding System" relation="child" group="OM5.2[18]"/>
+                <element location="OM5.2[18].7" displayName="Coding System Version ID" relation="child" group="OM5.2[18]"/>
+                <element location="OM5.2[18].8" displayName="Alternate Coding System Version ID" relation="child" group="OM5.2[18]"/>
+                <element location="OM5.2[19]" displayName="Test/Observations Included Within an Ordered Test Battery" relation="parent" group="OM5.2[19]"/>
+                <element location="OM5.2[19].1" displayName="Identifier" relation="child" group="OM5.2[19]"/>
+                <element location="OM5.2[19].2" displayName="Text" relation="child" group="OM5.2[19]"/>
+                <element location="OM5.2[19].3" displayName="Name of Coding System" relation="child" group="OM5.2[19]"/>
+                <element location="OM5.2[19].7" displayName="Coding System Version ID" relation="child" group="OM5.2[19]"/>
+                <element location="OM5.2[20]" displayName="Test/Observations Included Within an Ordered Test Battery" relation="parent" group="OM5.2[20]"/>
+                <element location="OM5.2[20].1" displayName="Identifier" relation="child" group="OM5.2[20]"/>
+                <element location="OM5.2[20].2" displayName="Text" relation="child" group="OM5.2[20]"/>
+                <element location="OM5.2[20].3" displayName="Name of Coding System" relation="child" group="OM5.2[20]"/>
+                <element location="OM5.2[20].4" displayName="Alternate Identifier" relation="child" group="OM5.2[20]"/>
+                <element location="OM5.2[20].5" displayName="Alternate Text" relation="child" group="OM5.2[20]"/>
+                <element location="OM5.2[20].6" displayName="Name of Alternate Coding System" relation="child" group="OM5.2[20]"/>
+                <element location="OM5.2[20].7" displayName="Coding System Version ID" relation="child" group="OM5.2[20]"/>
+                <element location="OM5.2[20].8" displayName="Alternate Coding System Version ID" relation="child" group="OM5.2[20]"/>
+                <element location="OM5.2[21]" displayName="Test/Observations Included Within an Ordered Test Battery" relation="parent" group="OM5.2[21]"/>
+                <element location="OM5.2[21].1" displayName="Identifier" relation="child" group="OM5.2[21]"/>
+                <element location="OM5.2[21].2" displayName="Text" relation="child" group="OM5.2[21]"/>
+                <element location="OM5.2[21].3" displayName="Name of Coding System" relation="child" group="OM5.2[21]"/>
+                <element location="OM5.2[21].4" displayName="Alternate Identifier" relation="child" group="OM5.2[21]"/>
+                <element location="OM5.2[21].5" displayName="Alternate Text" relation="child" group="OM5.2[21]"/>
+                <element location="OM5.2[21].6" displayName="Name of Alternate Coding System" relation="child" group="OM5.2[21]"/>
+                <element location="OM5.2[21].7" displayName="Coding System Version ID" relation="child" group="OM5.2[21]"/>
+                <element location="OM5.2[21].8" displayName="Alternate Coding System Version ID" relation="child" group="OM5.2[21]"/>
+                <element location="OM5.2[22]" displayName="Test/Observations Included Within an Ordered Test Battery" relation="parent" group="OM5.2[22]"/>
+                <element location="OM5.2[22].1" displayName="Identifier" relation="child" group="OM5.2[22]"/>
+                <element location="OM5.2[22].2" displayName="Text" relation="child" group="OM5.2[22]"/>
+                <element location="OM5.2[22].3" displayName="Name of Coding System" relation="child" group="OM5.2[22]"/>
+                <element location="OM5.2[22].4" displayName="Alternate Identifier" relation="child" group="OM5.2[22]"/>
+                <element location="OM5.2[22].5" displayName="Alternate Text" relation="child" group="OM5.2[22]"/>
+                <element location="OM5.2[22].6" displayName="Name of Alternate Coding System" relation="child" group="OM5.2[22]"/>
+                <element location="OM5.2[22].7" displayName="Coding System Version ID" relation="child" group="OM5.2[22]"/>
+                <element location="OM5.2[22].8" displayName="Alternate Coding System Version ID" relation="child" group="OM5.2[22]"/>
+                <element location="OM5.2[23]" displayName="Test/Observations Included Within an Ordered Test Battery" relation="parent" group="OM5.2[23]"/>
+                <element location="OM5.2[23].1" displayName="Identifier" relation="child" group="OM5.2[23]"/>
+                <element location="OM5.2[23].2" displayName="Text" relation="child" group="OM5.2[23]"/>
+                <element location="OM5.2[23].3" displayName="Name of Coding System" relation="child" group="OM5.2[23]"/>
+                <element location="OM5.2[23].4" displayName="Alternate Identifier" relation="child" group="OM5.2[23]"/>
+                <element location="OM5.2[23].5" displayName="Alternate Text" relation="child" group="OM5.2[23]"/>
+                <element location="OM5.2[23].6" displayName="Name of Alternate Coding System" relation="child" group="OM5.2[23]"/>
+                <element location="OM5.2[23].7" displayName="Coding System Version ID" relation="child" group="OM5.2[23]"/>
+                <element location="OM5.2[23].8" displayName="Alternate Coding System Version ID" relation="child" group="OM5.2[23]"/>
+                <element location="OM5.2[24]" displayName="Test/Observations Included Within an Ordered Test Battery" relation="parent" group="OM5.2[24]"/>
+                <element location="OM5.2[24].1" displayName="Identifier" relation="child" group="OM5.2[24]"/>
+                <element location="OM5.2[24].2" displayName="Text" relation="child" group="OM5.2[24]"/>
+                <element location="OM5.2[24].3" displayName="Name of Coding System" relation="child" group="OM5.2[24]"/>
+                <element location="OM5.2[24].7" displayName="Coding System Version ID" relation="child" group="OM5.2[24]"/>
+                <element location="OM5.2[25]" displayName="Test/Observations Included Within an Ordered Test Battery" relation="parent" group="OM5.2[25]"/>
+                <element location="OM5.2[25].1" displayName="Identifier" relation="child" group="OM5.2[25]"/>
+                <element location="OM5.2[25].2" displayName="Text" relation="child" group="OM5.2[25]"/>
+                <element location="OM5.2[25].3" displayName="Name of Coding System" relation="child" group="OM5.2[25]"/>
+                <element location="OM5.2[25].4" displayName="Alternate Identifier" relation="child" group="OM5.2[25]"/>
+                <element location="OM5.2[25].5" displayName="Alternate Text" relation="child" group="OM5.2[25]"/>
+                <element location="OM5.2[25].6" displayName="Name of Alternate Coding System" relation="child" group="OM5.2[25]"/>
+                <element location="OM5.2[25].7" displayName="Coding System Version ID" relation="child" group="OM5.2[25]"/>
+                <element location="OM5.2[25].8" displayName="Alternate Coding System Version ID" relation="child" group="OM5.2[25]"/>
+                <element location="OM5.2[26]" displayName="Test/Observations Included Within an Ordered Test Battery" relation="parent" group="OM5.2[26]"/>
+                <element location="OM5.2[26].1" displayName="Identifier" relation="child" group="OM5.2[26]"/>
+                <element location="OM5.2[26].2" displayName="Text" relation="child" group="OM5.2[26]"/>
+                <element location="OM5.2[26].3" displayName="Name of Coding System" relation="child" group="OM5.2[26]"/>
+                <element location="OM5.2[26].4" displayName="Alternate Identifier" relation="child" group="OM5.2[26]"/>
+                <element location="OM5.2[26].5" displayName="Alternate Text" relation="child" group="OM5.2[26]"/>
+                <element location="OM5.2[26].6" displayName="Name of Alternate Coding System" relation="child" group="OM5.2[26]"/>
+                <element location="OM5.2[26].7" displayName="Coding System Version ID" relation="child" group="OM5.2[26]"/>
+                <element location="OM5.2[26].8" displayName="Alternate Coding System Version ID" relation="child" group="OM5.2[26]"/>
+                <element location="OM5.2[27]" displayName="Test/Observations Included Within an Ordered Test Battery" relation="parent" group="OM5.2[27]"/>
+                <element location="OM5.2[27].1" displayName="Identifier" relation="child" group="OM5.2[27]"/>
+                <element location="OM5.2[27].2" displayName="Text" relation="child" group="OM5.2[27]"/>
+                <element location="OM5.2[27].3" displayName="Name of Coding System" relation="child" group="OM5.2[27]"/>
+                <element location="OM5.2[27].4" displayName="Alternate Identifier" relation="child" group="OM5.2[27]"/>
+                <element location="OM5.2[27].5" displayName="Alternate Text" relation="child" group="OM5.2[27]"/>
+                <element location="OM5.2[27].6" displayName="Name of Alternate Coding System" relation="child" group="OM5.2[27]"/>
+                <element location="OM5.2[27].7" displayName="Coding System Version ID" relation="child" group="OM5.2[27]"/>
+                <element location="OM5.2[27].8" displayName="Alternate Coding System Version ID" relation="child" group="OM5.2[27]"/>
+                <element location="OM5.2[28]" displayName="Test/Observations Included Within an Ordered Test Battery" relation="parent" group="OM5.2[28]"/>
+                <element location="OM5.2[28].1" displayName="Identifier" relation="child" group="OM5.2[28]"/>
+                <element location="OM5.2[28].2" displayName="Text" relation="child" group="OM5.2[28]"/>
+                <element location="OM5.2[28].3" displayName="Name of Coding System" relation="child" group="OM5.2[28]"/>
+                <element location="OM5.2[28].4" displayName="Alternate Identifier" relation="child" group="OM5.2[28]"/>
+                <element location="OM5.2[28].5" displayName="Alternate Text" relation="child" group="OM5.2[28]"/>
+                <element location="OM5.2[28].6" displayName="Name of Alternate Coding System" relation="child" group="OM5.2[28]"/>
+                <element location="OM5.2[28].7" displayName="Coding System Version ID" relation="child" group="OM5.2[28]"/>
+                <element location="OM5.2[28].8" displayName="Alternate Coding System Version ID" relation="child" group="OM5.2[28]"/>
+                <element location="OM5.2[29]" displayName="Test/Observations Included Within an Ordered Test Battery" relation="parent" group="OM5.2[29]"/>
+                <element location="OM5.2[29].1" displayName="Identifier" relation="child" group="OM5.2[29]"/>
+                <element location="OM5.2[29].2" displayName="Text" relation="child" group="OM5.2[29]"/>
+                <element location="OM5.2[29].3" displayName="Name of Coding System" relation="child" group="OM5.2[29]"/>
+                <element location="OM5.2[29].4" displayName="Alternate Identifier" relation="child" group="OM5.2[29]"/>
+                <element location="OM5.2[29].5" displayName="Alternate Text" relation="child" group="OM5.2[29]"/>
+                <element location="OM5.2[29].6" displayName="Name of Alternate Coding System" relation="child" group="OM5.2[29]"/>
+                <element location="OM5.2[29].7" displayName="Coding System Version ID" relation="child" group="OM5.2[29]"/>
+                <element location="OM5.2[29].8" displayName="Alternate Coding System Version ID" relation="child" group="OM5.2[29]"/>
+                <element location="OM5.2[30]" displayName="Test/Observations Included Within an Ordered Test Battery" relation="parent" group="OM5.2[30]"/>
+                <element location="OM5.2[30].1" displayName="Identifier" relation="child" group="OM5.2[30]"/>
+                <element location="OM5.2[30].2" displayName="Text" relation="child" group="OM5.2[30]"/>
+                <element location="OM5.2[30].3" displayName="Name of Coding System" relation="child" group="OM5.2[30]"/>
+                <element location="OM5.2[30].4" displayName="Alternate Identifier" relation="child" group="OM5.2[30]"/>
+                <element location="OM5.2[30].5" displayName="Alternate Text" relation="child" group="OM5.2[30]"/>
+                <element location="OM5.2[30].6" displayName="Name of Alternate Coding System" relation="child" group="OM5.2[30]"/>
+                <element location="OM5.2[30].7" displayName="Coding System Version ID" relation="child" group="OM5.2[30]"/>
+                <element location="OM5.2[30].8" displayName="Alternate Coding System Version ID" relation="child" group="OM5.2[30]"/>
+                <element location="OM5.2[31]" displayName="Test/Observations Included Within an Ordered Test Battery" relation="parent" group="OM5.2[31]"/>
+                <element location="OM5.2[31].1" displayName="Identifier" relation="child" group="OM5.2[31]"/>
+                <element location="OM5.2[31].2" displayName="Text" relation="child" group="OM5.2[31]"/>
+                <element location="OM5.2[31].3" displayName="Name of Coding System" relation="child" group="OM5.2[31]"/>
+                <element location="OM5.2[31].4" displayName="Alternate Identifier" relation="child" group="OM5.2[31]"/>
+                <element location="OM5.2[31].5" displayName="Alternate Text" relation="child" group="OM5.2[31]"/>
+                <element location="OM5.2[31].6" displayName="Name of Alternate Coding System" relation="child" group="OM5.2[31]"/>
+                <element location="OM5.2[31].7" displayName="Coding System Version ID" relation="child" group="OM5.2[31]"/>
+                <element location="OM5.2[31].8" displayName="Alternate Coding System Version ID" relation="child" group="OM5.2[31]"/>
+                <element location="OM5.2[32]" displayName="Test/Observations Included Within an Ordered Test Battery" relation="parent" group="OM5.2[32]"/>
+                <element location="OM5.2[32].1" displayName="Identifier" relation="child" group="OM5.2[32]"/>
+                <element location="OM5.2[32].2" displayName="Text" relation="child" group="OM5.2[32]"/>
+                <element location="OM5.2[32].3" displayName="Name of Coding System" relation="child" group="OM5.2[32]"/>
+                <element location="OM5.2[32].4" displayName="Alternate Identifier" relation="child" group="OM5.2[32]"/>
+                <element location="OM5.2[32].5" displayName="Alternate Text" relation="child" group="OM5.2[32]"/>
+                <element location="OM5.2[32].6" displayName="Name of Alternate Coding System" relation="child" group="OM5.2[32]"/>
+                <element location="OM5.2[32].7" displayName="Coding System Version ID" relation="child" group="OM5.2[32]"/>
+                <element location="OM5.2[32].8" displayName="Alternate Coding System Version ID" relation="child" group="OM5.2[32]"/>
+            </test-profile>
+        </test-profiles>
+        <test-profiles segment="OM4">
+            <test-profile id="511.0" segment="OM4">
+                <element location="OM4.1" displayName="Sequence Number - Test/Observation Master File" relation="parent" group="OM4.1" category="IG Fixed Data" data="1.1"/>
+                <element location="OM4.3[1]" displayName="Container Description" relation="parent" group="OM4.3[1]" category="Changeable Data" data="Black Top Tube (Vac-Tec)"/>
+                <element location="OM4.3[2]" displayName="Container Description" relation="parent" group="OM4.3[2]"/>
+                <element location="OM4.4[1]" displayName="Container Volume" relation="parent" group="OM4.4[1]" category="Changeable Data" data="3.0"/>
+                <element location="OM4.4[2]" displayName="Container Volume" relation="parent" group="OM4.4[2]"/>
+                <element location="OM4.5[1]" displayName="Container Units" relation="parent" group="OM4.5[1]"/>
+                <element location="OM4.5[1].1" displayName="Identifier" relation="child" group="OM4.5[1]" category="Changeable Data" data="mL"/>
+                <element location="OM4.5[1].2" displayName="Text" relation="child" group="OM4.5[1]" category="Changeable Data" data="milliliters"/>
+                <element location="OM4.5[1].3" displayName="Name of Coding System" relation="child" group="OM4.5[1]" category="Changeable Data" data="UCUM"/>
+                <element location="OM4.5[1].7" displayName="Coding System Version ID" relation="child" group="OM4.5[1]" category="Changeable Data" data="1.8"/>
+                <element location="OM4.5[1].8" displayName="Alternate Coding System Version ID" relation="child" group="OM4.5[1]"/>
+                <element location="OM4.5[2]" displayName="Container Units" relation="parent" group="OM4.5[2]"/>
+                <element location="OM4.5[2].1" displayName="Identifier" relation="child" group="OM4.5[2]"/>
+                <element location="OM4.5[2].2" displayName="Text" relation="child" group="OM4.5[2]"/>
+                <element location="OM4.5[2].3" displayName="Name of Coding System" relation="child" group="OM4.5[2]"/>
+                <element location="OM4.5[2].7" displayName="Coding System Version ID" relation="child" group="OM4.5[2]"/>
+                <element location="OM4.5[2].8" displayName="Alternate Coding System Version ID" relation="child" group="OM4.5[2]"/>
+                <element location="OM4.6" displayName="Specimen" relation="parent" group="OM4.6"/>
+                <element location="OM4.6.1" displayName="Identifier" relation="child" group="OM4.6" category="Test Case Fixed Data" data="119297000"/>
+                <element location="OM4.6.2" displayName="Text" relation="child" group="OM4.6" category="Changeable Data" data="Blood sample"/>
+                <element location="OM4.6.3" displayName="Name of Coding System" relation="child" group="OM4.6" category="Test Case Fixed Data" data="SCT"/>
+                <element location="OM4.6.4" displayName="Alternate Identifier" relation="child" group="OM4.6" category="Changeable Data" data="WBLD"/>
+                <element location="OM4.6.5" displayName="Alternate Text" relation="child" group="OM4.6" category="Changeable Data" data="Whole blood"/>
+                <element location="OM4.6.6" displayName="Name of Alternate Coding System" relation="child" group="OM4.6" category="Changeable Data" data="99USI"/>
+                <element location="OM4.6.7" displayName="Coding System Version ID" relation="child" group="OM4.6" category="Changeable Data" data="20130131"/>
+                <element location="OM4.6.8" displayName="Alternate Coding System Version ID" relation="child" group="OM4.6" category="Changeable Data" data="2014"/>
+                <element location="OM4.6.9" displayName="Original Text" relation="child" group="OM4.6" category="Changeable Data" data="Whole blood"/>
+                <element location="OM4.7" displayName="Additive" relation="parent" group="OM4.7"/>
+                <element location="OM4.7.1" displayName="Identifier" relation="child" group="OM4.7" category="Changeable Data" data="WEST"/>
+                <element location="OM4.7.2" displayName="Text" relation="child" group="OM4.7" category="Changeable Data" data="Buffered Citrate (Westergren Sedimentation Rate)"/>
+                <element location="OM4.7.3" displayName="Name of Coding System" relation="child" group="OM4.7" category="Changeable Data" data="HL70371"/>
+                <element location="OM4.7.7" displayName="Coding System Version ID" relation="child" group="OM4.7" category="Changeable Data" data="2.5.1"/>
+                <element location="OM4.7.8" displayName="Alternate Coding System Version ID" relation="child" group="OM4.7"/>
+                <element location="OM4.10" displayName="Normal Collection Volume" relation="parent" group="OM4.10"/>
+                <element location="OM4.10.1" displayName="Quantity" relation="child" group="OM4.10" category="Changeable Data" data="2.4"/>
+                <element location="OM4.10.2" displayName="Units" relation="child" group="OM4.10"/>
+                <element location="OM4.10.2.1" displayName="Identifier" relation="child" group="OM4.10" category="Changeable Data" data="mL"/>
+                <element location="OM4.10.2.2" displayName="Text" relation="child" group="OM4.10" category="Changeable Data" data="milliliters"/>
+                <element location="OM4.10.2.3" displayName="Name of Coding System" relation="child" group="OM4.10" category="IG Fixed Data" data="UCUM"/>
+                <element location="OM4.10.2.7" displayName="Coding System Version ID" relation="child" group="OM4.10" category="Changeable Data" data="1.8"/>
+                <element location="OM4.10.2.8" displayName="Alternate Coding System Version ID" relation="child" group="OM4.10"/>
+                <element location="OM4.11" displayName="Minimum Collection Volume" relation="parent" group="OM4.11"/>
+                <element location="OM4.11.1" displayName="Quantity" relation="child" group="OM4.11" category="Changeable Data" data="2.4"/>
+                <element location="OM4.11.2" displayName="Units" relation="child" group="OM4.11"/>
+                <element location="OM4.11.2.1" displayName="Identifier" relation="child" group="OM4.11" category="Changeable Data" data="mL"/>
+                <element location="OM4.11.2.2" displayName="Text" relation="child" group="OM4.11" category="Changeable Data" data="milliliters"/>
+                <element location="OM4.11.2.3" displayName="Name of Coding System" relation="child" group="OM4.11" category="IG Fixed Data" data="UCUM"/>
+                <element location="OM4.11.2.7" displayName="Coding System Version ID" relation="child" group="OM4.11" category="Changeable Data" data="1.8"/>
+                <element location="OM4.11.2.8" displayName="Alternate Coding System Version ID" relation="child" group="OM4.11"/>
+                <element location="OM4.12" displayName="Specimen Requirements" relation="parent" group="OM4.12" category="Changeable Data" data="Specimen must be received and tested within 4-6 hrs of Collection"/>
+                <element location="OM4.15[1]" displayName="Specimen Handling Code" relation="parent" group="OM4.15[1]"/>
+                <element location="OM4.15[1].1" displayName="Identifier" relation="child" group="OM4.15[1]" category="Changeable Data" data="CREF"/>
+                <element location="OM4.15[1].2" displayName="Text" relation="child" group="OM4.15[1]" category="Changeable Data" data="Critical refrigerated"/>
+                <element location="OM4.15[1].3" displayName="Name of Coding System" relation="child" group="OM4.15[1]" category="IG Fixed Data" data="HL70376"/>
+                <element location="OM4.15[1].7" displayName="Coding System Version ID" relation="child" group="OM4.15[1]" category="Changeable Data" data="2.5.1"/>
+                <element location="OM4.15[1].8" displayName="Alternate Coding System Version ID" relation="child" group="OM4.15[1]"/>
+                <element location="OM4.15[2]" displayName="Specimen Handling Code" relation="parent" group="OM4.15[2]"/>
+                <element location="OM4.15[2].1" displayName="Identifier" relation="child" group="OM4.15[2]" category="Changeable Data" data="MTLF"/>
+                <element location="OM4.15[2].2" displayName="Text" relation="child" group="OM4.15[2]" category="Changeable Data" data="Metal Free"/>
+                <element location="OM4.15[2].3" displayName="Name of Coding System" relation="child" group="OM4.15[2]" category="IG Fixed Data" data="HL70376"/>
+                <element location="OM4.15[2].7" displayName="Coding System Version ID" relation="child" group="OM4.15[2]" category="Changeable Data" data="2.5.1"/>
+                <element location="OM4.15[2].8" displayName="Alternate Coding System Version ID" relation="child" group="OM4.15[2]"/>
+                <element location="OM4.16" displayName="Specimen Preference" relation="parent" group="OM4.16" category="Test Case Fixed Data" data="P"/>
+                <element location="OM4.17" displayName="Preferred Specimen/Attribute Sequence" relation="parent" group="OM4.17"/>
+            </test-profile>
+            <test-profile id="512.0" segment="OM4">
+                <element location="OM4.1" displayName="Sequence Number - Test/Observation Master File" relation="parent" group="OM4.1" category="IG Fixed Data" data="1.2"/>
+                <element location="OM4.3[1]" displayName="Container Description" relation="parent" group="OM4.3[1]" category="Changeable Data" data="Lavender Top (EDTA) tube"/>
+                <element location="OM4.3[2]" displayName="Container Description" relation="parent" group="OM4.3[2]"/>
+                <element location="OM4.4[1]" displayName="Container Volume" relation="parent" group="OM4.4[1]" category="Changeable Data" data="3.0"/>
+                <element location="OM4.4[2]" displayName="Container Volume" relation="parent" group="OM4.4[2]"/>
+                <element location="OM4.5[1]" displayName="Container Units" relation="parent" group="OM4.5[1]"/>
+                <element location="OM4.5[1].1" displayName="Identifier" relation="child" group="OM4.5[1]" category="Changeable Data" data="mL"/>
+                <element location="OM4.5[1].2" displayName="Text" relation="child" group="OM4.5[1]" category="Changeable Data" data="milliliters"/>
+                <element location="OM4.5[1].3" displayName="Name of Coding System" relation="child" group="OM4.5[1]" category="Changeable Data" data="UCUM"/>
+                <element location="OM4.5[1].7" displayName="Coding System Version ID" relation="child" group="OM4.5[1]" category="Changeable Data" data="1.8"/>
+                <element location="OM4.5[1].8" displayName="Alternate Coding System Version ID" relation="child" group="OM4.5[1]"/>
+                <element location="OM4.5[2]" displayName="Container Units" relation="parent" group="OM4.5[2]"/>
+                <element location="OM4.5[2].1" displayName="Identifier" relation="child" group="OM4.5[2]"/>
+                <element location="OM4.5[2].2" displayName="Text" relation="child" group="OM4.5[2]"/>
+                <element location="OM4.5[2].3" displayName="Name of Coding System" relation="child" group="OM4.5[2]"/>
+                <element location="OM4.5[2].7" displayName="Coding System Version ID" relation="child" group="OM4.5[2]"/>
+                <element location="OM4.5[2].8" displayName="Alternate Coding System Version ID" relation="child" group="OM4.5[2]"/>
+                <element location="OM4.6" displayName="Specimen" relation="parent" group="OM4.6"/>
+                <element location="OM4.6.1" displayName="Identifier" relation="child" group="OM4.6" category="Test Case Fixed Data" data="119297000"/>
+                <element location="OM4.6.2" displayName="Text" relation="child" group="OM4.6" category="Changeable Data" data="Blood sample"/>
+                <element location="OM4.6.3" displayName="Name of Coding System" relation="child" group="OM4.6" category="Test Case Fixed Data" data="SCT"/>
+                <element location="OM4.6.4" displayName="Alternate Identifier" relation="child" group="OM4.6" category="Changeable Data" data="WBLD"/>
+                <element location="OM4.6.5" displayName="Alternate Text" relation="child" group="OM4.6" category="Changeable Data" data="Whole blood"/>
+                <element location="OM4.6.6" displayName="Name of Alternate Coding System" relation="child" group="OM4.6" category="Changeable Data" data="99USI"/>
+                <element location="OM4.6.7" displayName="Coding System Version ID" relation="child" group="OM4.6" category="Changeable Data" data="20130131"/>
+                <element location="OM4.6.8" displayName="Alternate Coding System Version ID" relation="child" group="OM4.6" category="Changeable Data" data="2014"/>
+                <element location="OM4.6.9" displayName="Original Text" relation="child" group="OM4.6" category="Changeable Data" data="Whole blood"/>
+                <element location="OM4.7" displayName="Additive" relation="parent" group="OM4.7"/>
+                <element location="OM4.7.1" displayName="Identifier" relation="child" group="OM4.7" category="Changeable Data" data="EDTK"/>
+                <element location="OM4.7.2" displayName="Text" relation="child" group="OM4.7" category="Changeable Data" data="Potassium/K EDTA"/>
+                <element location="OM4.7.3" displayName="Name of Coding System" relation="child" group="OM4.7" category="Changeable Data" data="HL70371"/>
+                <element location="OM4.7.7" displayName="Coding System Version ID" relation="child" group="OM4.7" category="Changeable Data" data="2.5.1"/>
+                <element location="OM4.7.8" displayName="Alternate Coding System Version ID" relation="child" group="OM4.7"/>
+                <element location="OM4.10" displayName="Normal Collection Volume" relation="parent" group="OM4.10"/>
+                <element location="OM4.10.1" displayName="Quantity" relation="child" group="OM4.10" category="Changeable Data" data="2.4"/>
+                <element location="OM4.10.2" displayName="Units" relation="child" group="OM4.10"/>
+                <element location="OM4.10.2.1" displayName="Identifier" relation="child" group="OM4.10" category="Changeable Data" data="mL"/>
+                <element location="OM4.10.2.2" displayName="Text" relation="child" group="OM4.10" category="Changeable Data" data="milliliters"/>
+                <element location="OM4.10.2.3" displayName="Name of Coding System" relation="child" group="OM4.10" category="IG Fixed Data" data="UCUM"/>
+                <element location="OM4.10.2.7" displayName="Coding System Version ID" relation="child" group="OM4.10" category="Changeable Data" data="1.8"/>
+                <element location="OM4.10.2.8" displayName="Alternate Coding System Version ID" relation="child" group="OM4.10"/>
+                <element location="OM4.11" displayName="Minimum Collection Volume" relation="parent" group="OM4.11"/>
+                <element location="OM4.11.1" displayName="Quantity" relation="child" group="OM4.11" category="Changeable Data" data="2.4"/>
+                <element location="OM4.11.2" displayName="Units" relation="child" group="OM4.11"/>
+                <element location="OM4.11.2.1" displayName="Identifier" relation="child" group="OM4.11" category="Changeable Data" data="mL"/>
+                <element location="OM4.11.2.2" displayName="Text" relation="child" group="OM4.11" category="Changeable Data" data="milliliters"/>
+                <element location="OM4.11.2.3" displayName="Name of Coding System" relation="child" group="OM4.11" category="IG Fixed Data" data="UCUM"/>
+                <element location="OM4.11.2.7" displayName="Coding System Version ID" relation="child" group="OM4.11" category="Changeable Data" data="1.8"/>
+                <element location="OM4.11.2.8" displayName="Alternate Coding System Version ID" relation="child" group="OM4.11"/>
+                <element location="OM4.12" displayName="Specimen Requirements" relation="parent" group="OM4.12" category="Changeable Data" data="Specimen must be received and tested within 4-6 hrs of Collection"/>
+                <element location="OM4.15[1]" displayName="Specimen Handling Code" relation="parent" group="OM4.15[1]"/>
+                <element location="OM4.15[1].1" displayName="Identifier" relation="child" group="OM4.15[1]" category="Changeable Data" data="CREF"/>
+                <element location="OM4.15[1].2" displayName="Text" relation="child" group="OM4.15[1]" category="Changeable Data" data="Critical refrigerated"/>
+                <element location="OM4.15[1].3" displayName="Name of Coding System" relation="child" group="OM4.15[1]" category="IG Fixed Data" data="HL70376"/>
+                <element location="OM4.15[1].7" displayName="Coding System Version ID" relation="child" group="OM4.15[1]" category="Changeable Data" data="2.5.1"/>
+                <element location="OM4.15[1].8" displayName="Alternate Coding System Version ID" relation="child" group="OM4.15[1]"/>
+                <element location="OM4.15[2]" displayName="Specimen Handling Code" relation="parent" group="OM4.15[2]"/>
+                <element location="OM4.15[2].1" displayName="Identifier" relation="child" group="OM4.15[2]" category="Changeable Data" data="MTLF"/>
+                <element location="OM4.15[2].2" displayName="Text" relation="child" group="OM4.15[2]" category="Changeable Data" data="Metal Free"/>
+                <element location="OM4.15[2].3" displayName="Name of Coding System" relation="child" group="OM4.15[2]" category="IG Fixed Data" data="HL70376"/>
+                <element location="OM4.15[2].7" displayName="Coding System Version ID" relation="child" group="OM4.15[2]" category="Changeable Data" data="2.5.1"/>
+                <element location="OM4.15[2].8" displayName="Alternate Coding System Version ID" relation="child" group="OM4.15[2]"/>
+                <element location="OM4.16" displayName="Specimen Preference" relation="parent" group="OM4.16" category="Test Case Fixed Data" data="A"/>
+                <element location="OM4.17" displayName="Preferred Specimen/Attribute Sequence" relation="parent" group="OM4.17" category="Test Case Fixed Data" data="1.1"/>
+            </test-profile>
+            <test-profile id="413.0" segment="OM4">
+                <element location="OM4.1" displayName="Sequence Number - Test/Observation Master File" relation="parent" group="OM4.1" category="IG Fixed Data" data="1.3"/>
+                <element location="OM4.3[1]" displayName="Container Description" relation="parent" group="OM4.3[1]" category="Changeable Data" data="Sterile, plastic, leak proof container"/>
+                <element location="OM4.3[2]" displayName="Container Description" relation="parent" group="OM4.3[2]"/>
+                <element location="OM4.4[1]" displayName="Container Volume" relation="parent" group="OM4.4[1]" category="Changeable Data" data="4"/>
+                <element location="OM4.4[2]" displayName="Container Volume" relation="parent" group="OM4.4[2]"/>
+                <element location="OM4.5[1]" displayName="Container Units" relation="parent" group="OM4.5[1]"/>
+                <element location="OM4.5[1].1" displayName="Identifier" relation="child" group="OM4.5[1]" category="Changeable Data" data="[foz_us]"/>
+                <element location="OM4.5[1].2" displayName="Text" relation="child" group="OM4.5[1]" category="Changeable Data" data="fluid ounce (US)"/>
+                <element location="OM4.5[1].3" displayName="Name of Coding System" relation="child" group="OM4.5[1]" category="Changeable Data" data="UCUM"/>
+                <element location="OM4.5[1].7" displayName="Coding System Version ID" relation="child" group="OM4.5[1]" category="Changeable Data" data="1.8"/>
+                <element location="OM4.5[1].8" displayName="Alternate Coding System Version ID" relation="child" group="OM4.5[1]"/>
+                <element location="OM4.5[2]" displayName="Container Units" relation="parent" group="OM4.5[2]"/>
+                <element location="OM4.5[2].1" displayName="Identifier" relation="child" group="OM4.5[2]"/>
+                <element location="OM4.5[2].2" displayName="Text" relation="child" group="OM4.5[2]"/>
+                <element location="OM4.5[2].3" displayName="Name of Coding System" relation="child" group="OM4.5[2]"/>
+                <element location="OM4.5[2].7" displayName="Coding System Version ID" relation="child" group="OM4.5[2]"/>
+                <element location="OM4.5[2].8" displayName="Alternate Coding System Version ID" relation="child" group="OM4.5[2]"/>
+                <element location="OM4.6" displayName="Specimen" relation="parent" group="OM4.6"/>
+                <element location="OM4.6.1" displayName="Identifier" relation="child" group="OM4.6" category="Test Case Fixed Data" data="122575003"/>
+                <element location="OM4.6.2" displayName="Text" relation="child" group="OM4.6" category="Changeable Data" data="Urine specimen"/>
+                <element location="OM4.6.3" displayName="Name of Coding System" relation="child" group="OM4.6" category="Test Case Fixed Data" data="SCT"/>
+                <element location="OM4.6.4" displayName="Alternate Identifier" relation="child" group="OM4.6" category="Changeable Data" data="UR"/>
+                <element location="OM4.6.5" displayName="Alternate Text" relation="child" group="OM4.6" category="Changeable Data" data="Random urine"/>
+                <element location="OM4.6.6" displayName="Name of Alternate Coding System" relation="child" group="OM4.6" category="Changeable Data" data="99USI"/>
+                <element location="OM4.6.7" displayName="Coding System Version ID" relation="child" group="OM4.6" category="Changeable Data" data="20130131"/>
+                <element location="OM4.6.8" displayName="Alternate Coding System Version ID" relation="child" group="OM4.6" category="Changeable Data" data="2014"/>
+                <element location="OM4.6.9" displayName="Original Text" relation="child" group="OM4.6" category="Changeable Data" data="Random urine"/>
+                <element location="OM4.7" displayName="Additive" relation="parent" group="OM4.7"/>
+                <element location="OM4.7.1" displayName="Identifier" relation="child" group="OM4.7"/>
+                <element location="OM4.7.2" displayName="Text" relation="child" group="OM4.7"/>
+                <element location="OM4.7.3" displayName="Name of Coding System" relation="child" group="OM4.7"/>
+                <element location="OM4.7.7" displayName="Coding System Version ID" relation="child" group="OM4.7"/>
+                <element location="OM4.7.8" displayName="Alternate Coding System Version ID" relation="child" group="OM4.7"/>
+                <element location="OM4.10" displayName="Normal Collection Volume" relation="parent" group="OM4.10"/>
+                <element location="OM4.10.1" displayName="Quantity" relation="child" group="OM4.10" category="Changeable Data" data="20"/>
+                <element location="OM4.10.2" displayName="Units" relation="child" group="OM4.10"/>
+                <element location="OM4.10.2.1" displayName="Identifier" relation="child" group="OM4.10" category="Changeable Data" data="mL"/>
+                <element location="OM4.10.2.2" displayName="Text" relation="child" group="OM4.10" category="Changeable Data" data="milliliter"/>
+                <element location="OM4.10.2.3" displayName="Name of Coding System" relation="child" group="OM4.10" category="IG Fixed Data" data="UCUM"/>
+                <element location="OM4.10.2.7" displayName="Coding System Version ID" relation="child" group="OM4.10" category="Changeable Data" data="1.8"/>
+                <element location="OM4.10.2.8" displayName="Alternate Coding System Version ID" relation="child" group="OM4.10"/>
+                <element location="OM4.11" displayName="Minimum Collection Volume" relation="parent" group="OM4.11"/>
+                <element location="OM4.11.1" displayName="Quantity" relation="child" group="OM4.11" category="Changeable Data" data="4"/>
+                <element location="OM4.11.2" displayName="Units" relation="child" group="OM4.11"/>
+                <element location="OM4.11.2.1" displayName="Identifier" relation="child" group="OM4.11" category="Changeable Data" data="mL"/>
+                <element location="OM4.11.2.2" displayName="Text" relation="child" group="OM4.11" category="Changeable Data" data="milliliter"/>
+                <element location="OM4.11.2.3" displayName="Name of Coding System" relation="child" group="OM4.11" category="IG Fixed Data" data="UCUM"/>
+                <element location="OM4.11.2.7" displayName="Coding System Version ID" relation="child" group="OM4.11" category="Changeable Data" data="1.8"/>
+                <element location="OM4.11.2.8" displayName="Alternate Coding System Version ID" relation="child" group="OM4.11"/>
+                <element location="OM4.12" displayName="Specimen Requirements" relation="parent" group="OM4.12" category="Changeable Data" data="Keep refrigerated"/>
+                <element location="OM4.15[1]" displayName="Specimen Handling Code" relation="parent" group="OM4.15[1]"/>
+                <element location="OM4.15[1].1" displayName="Identifier" relation="child" group="OM4.15[1]" category="Changeable Data" data="REF"/>
+                <element location="OM4.15[1].2" displayName="Text" relation="child" group="OM4.15[1]" category="Changeable Data" data="Refrigerated temperature"/>
+                <element location="OM4.15[1].3" displayName="Name of Coding System" relation="child" group="OM4.15[1]" category="IG Fixed Data" data="HL70376"/>
+                <element location="OM4.15[1].7" displayName="Coding System Version ID" relation="child" group="OM4.15[1]" category="Changeable Data" data="2.5.1"/>
+                <element location="OM4.15[1].8" displayName="Alternate Coding System Version ID" relation="child" group="OM4.15[1]"/>
+                <element location="OM4.15[2]" displayName="Specimen Handling Code" relation="parent" group="OM4.15[2]"/>
+                <element location="OM4.15[2].1" displayName="Identifier" relation="child" group="OM4.15[2]"/>
+                <element location="OM4.15[2].2" displayName="Text" relation="child" group="OM4.15[2]"/>
+                <element location="OM4.15[2].3" displayName="Name of Coding System" relation="child" group="OM4.15[2]"/>
+                <element location="OM4.15[2].7" displayName="Coding System Version ID" relation="child" group="OM4.15[2]"/>
+                <element location="OM4.15[2].8" displayName="Alternate Coding System Version ID" relation="child" group="OM4.15[2]"/>
+                <element location="OM4.16" displayName="Specimen Preference" relation="parent" group="OM4.16" category="Test Case Fixed Data" data="P"/>
+                <element location="OM4.17" displayName="Preferred Specimen/Attribute Sequence" relation="parent" group="OM4.17"/>
+            </test-profile>
+            <test-profile id="211.0" segment="OM4">
+                <element location="OM4.1" displayName="Sequence Number - Test/Observation Master File" relation="parent" group="OM4.1" category="IG Fixed Data" data="1"/>
+                <element location="OM4.3[1]" displayName="Container Description" relation="parent" group="OM4.3[1]" category="Changeable Data" data="Gold Serum Separator tube"/>
+                <element location="OM4.3[2]" displayName="Container Description" relation="parent" group="OM4.3[2]" category="Changeable Data" data="Red, No Additive tube"/>
+                <element location="OM4.4[1]" displayName="Container Volume" relation="parent" group="OM4.4[1]" category="Changeable Data" data="5.0"/>
+                <element location="OM4.4[2]" displayName="Container Volume" relation="parent" group="OM4.4[2]" category="Changeable Data" data="5.0"/>
+                <element location="OM4.5[1]" displayName="Container Units" relation="parent" group="OM4.5[1]"/>
+                <element location="OM4.5[1].1" displayName="Identifier" relation="child" group="OM4.5[1]" category="Changeable Data" data="mL"/>
+                <element location="OM4.5[1].2" displayName="Text" relation="child" group="OM4.5[1]" category="Changeable Data" data="mililiter"/>
+                <element location="OM4.5[1].3" displayName="Name of Coding System" relation="child" group="OM4.5[1]" category="Changeable Data" data="UCUM"/>
+                <element location="OM4.5[1].7" displayName="Coding System Version ID" relation="child" group="OM4.5[1]" category="Changeable Data" data="1.8"/>
+                <element location="OM4.5[1].8" displayName="Alternate Coding System Version ID" relation="child" group="OM4.5[1]"/>
+                <element location="OM4.5[2]" displayName="Container Units" relation="parent" group="OM4.5[2]"/>
+                <element location="OM4.5[2].1" displayName="Identifier" relation="child" group="OM4.5[2]" category="Changeable Data" data="mL"/>
+                <element location="OM4.5[2].2" displayName="Text" relation="child" group="OM4.5[2]" category="Changeable Data" data="mililiter"/>
+                <element location="OM4.5[2].3" displayName="Name of Coding System" relation="child" group="OM4.5[2]" category="Changeable Data" data="UCUM"/>
+                <element location="OM4.5[2].7" displayName="Coding System Version ID" relation="child" group="OM4.5[2]" category="Changeable Data" data="1.8"/>
+                <element location="OM4.5[2].8" displayName="Alternate Coding System Version ID" relation="child" group="OM4.5[2]"/>
+                <element location="OM4.6" displayName="Specimen" relation="parent" group="OM4.6"/>
+                <element location="OM4.6.1" displayName="Identifier" relation="child" group="OM4.6" category="Test Case Fixed Data" data="119364003"/>
+                <element location="OM4.6.2" displayName="Text" relation="child" group="OM4.6" category="Changeable Data" data="Serum specimen"/>
+                <element location="OM4.6.3" displayName="Name of Coding System" relation="child" group="OM4.6" category="Test Case Fixed Data" data="SCT"/>
+                <element location="OM4.6.4" displayName="Alternate Identifier" relation="child" group="OM4.6"/>
+                <element location="OM4.6.5" displayName="Alternate Text" relation="child" group="OM4.6"/>
+                <element location="OM4.6.6" displayName="Name of Alternate Coding System" relation="child" group="OM4.6"/>
+                <element location="OM4.6.7" displayName="Coding System Version ID" relation="child" group="OM4.6" category="Changeable Data" data="20130131"/>
+                <element location="OM4.6.8" displayName="Alternate Coding System Version ID" relation="child" group="OM4.6"/>
+                <element location="OM4.6.9" displayName="Original Text" relation="child" group="OM4.6"/>
+                <element location="OM4.7" displayName="Additive" relation="parent" group="OM4.7"/>
+                <element location="OM4.7.1" displayName="Identifier" relation="child" group="OM4.7"/>
+                <element location="OM4.7.2" displayName="Text" relation="child" group="OM4.7"/>
+                <element location="OM4.7.3" displayName="Name of Coding System" relation="child" group="OM4.7"/>
+                <element location="OM4.7.7" displayName="Coding System Version ID" relation="child" group="OM4.7"/>
+                <element location="OM4.7.8" displayName="Alternate Coding System Version ID" relation="child" group="OM4.7"/>
+                <element location="OM4.10" displayName="Normal Collection Volume" relation="parent" group="OM4.10"/>
+                <element location="OM4.10.1" displayName="Quantity" relation="child" group="OM4.10" category="Changeable Data" data="1"/>
+                <element location="OM4.10.2" displayName="Units" relation="child" group="OM4.10"/>
+                <element location="OM4.10.2.1" displayName="Identifier" relation="child" group="OM4.10" category="Changeable Data" data="mL"/>
+                <element location="OM4.10.2.2" displayName="Text" relation="child" group="OM4.10" category="Changeable Data" data="milliliter"/>
+                <element location="OM4.10.2.3" displayName="Name of Coding System" relation="child" group="OM4.10" category="IG Fixed Data" data="UCUM"/>
+                <element location="OM4.10.2.7" displayName="Coding System Version ID" relation="child" group="OM4.10"/>
+                <element location="OM4.10.2.8" displayName="Alternate Coding System Version ID" relation="child" group="OM4.10"/>
+                <element location="OM4.11" displayName="Minimum Collection Volume" relation="parent" group="OM4.11"/>
+                <element location="OM4.11.1" displayName="Quantity" relation="child" group="OM4.11" category="Changeable Data" data="0.5"/>
+                <element location="OM4.11.2" displayName="Units" relation="child" group="OM4.11"/>
+                <element location="OM4.11.2.1" displayName="Identifier" relation="child" group="OM4.11" category="Changeable Data" data="mL"/>
+                <element location="OM4.11.2.2" displayName="Text" relation="child" group="OM4.11" category="Changeable Data" data="milliliter"/>
+                <element location="OM4.11.2.3" displayName="Name of Coding System" relation="child" group="OM4.11" category="IG Fixed Data" data="UCUM"/>
+                <element location="OM4.11.2.7" displayName="Coding System Version ID" relation="child" group="OM4.11" category="Changeable Data" data="1.8"/>
+                <element location="OM4.11.2.8" displayName="Alternate Coding System Version ID" relation="child" group="OM4.11"/>
+                <element location="OM4.12" displayName="Specimen Requirements" relation="parent" group="OM4.12" category="Changeable Data" data="Protect from light. Allow serum tube to clot completely at room temperature. Separate serum or plasma from cells ASAP or within 30 minutes of collection."/>
+                <element location="OM4.15[1]" displayName="Specimen Handling Code" relation="parent" group="OM4.15[1]"/>
+                <element location="OM4.15[1].1" displayName="Identifier" relation="child" group="OM4.15[1]" category="Changeable Data" data="REF"/>
+                <element location="OM4.15[1].2" displayName="Text" relation="child" group="OM4.15[1]" category="Changeable Data" data="Refrigerated temperature"/>
+                <element location="OM4.15[1].3" displayName="Name of Coding System" relation="child" group="OM4.15[1]" category="IG Fixed Data" data="HL70376"/>
+                <element location="OM4.15[1].7" displayName="Coding System Version ID" relation="child" group="OM4.15[1]" category="Changeable Data" data="2.5.1"/>
+                <element location="OM4.15[1].8" displayName="Alternate Coding System Version ID" relation="child" group="OM4.15[1]"/>
+                <element location="OM4.15[2]" displayName="Specimen Handling Code" relation="parent" group="OM4.15[2]"/>
+                <element location="OM4.15[2].1" displayName="Identifier" relation="child" group="OM4.15[2]"/>
+                <element location="OM4.15[2].2" displayName="Text" relation="child" group="OM4.15[2]"/>
+                <element location="OM4.15[2].3" displayName="Name of Coding System" relation="child" group="OM4.15[2]"/>
+                <element location="OM4.15[2].7" displayName="Coding System Version ID" relation="child" group="OM4.15[2]"/>
+                <element location="OM4.15[2].8" displayName="Alternate Coding System Version ID" relation="child" group="OM4.15[2]"/>
+                <element location="OM4.16" displayName="Specimen Preference" relation="parent" group="OM4.16" category="Test Case Fixed Data" data="P"/>
+                <element location="OM4.17" displayName="Preferred Specimen/Attribute Sequence" relation="parent" group="OM4.17"/>
+            </test-profile>
+            <test-profile id="112.0" segment="OM4">
+                <element location="OM4.1" displayName="Sequence Number - Test/Observation Master File" relation="parent" group="OM4.1" category="IG Fixed Data" data="1.2"/>
+                <element location="OM4.3[1]" displayName="Container Description" relation="parent" group="OM4.3[1]" category="Changeable Data" data="Lavender Top (EDTA) tube"/>
+                <element location="OM4.3[2]" displayName="Container Description" relation="parent" group="OM4.3[2]" category="Changeable Data" data="Pink Top (K2EDTA) tube"/>
+                <element location="OM4.4[1]" displayName="Container Volume" relation="parent" group="OM4.4[1]" category="Changeable Data" data="3.0"/>
+                <element location="OM4.4[2]" displayName="Container Volume" relation="parent" group="OM4.4[2]" category="Changeable Data" data="3.0"/>
+                <element location="OM4.5[1]" displayName="Container Units" relation="parent" group="OM4.5[1]"/>
+                <element location="OM4.5[1].1" displayName="Identifier" relation="child" group="OM4.5[1]" category="Changeable Data" data="mL"/>
+                <element location="OM4.5[1].2" displayName="Text" relation="child" group="OM4.5[1]" category="Changeable Data" data="milliliters"/>
+                <element location="OM4.5[1].3" displayName="Name of Coding System" relation="child" group="OM4.5[1]" category="Changeable Data" data="UCUM"/>
+                <element location="OM4.5[1].7" displayName="Coding System Version ID" relation="child" group="OM4.5[1]" category="Changeable Data" data="1.8"/>
+                <element location="OM4.5[1].8" displayName="Alternate Coding System Version ID" relation="child" group="OM4.5[1]"/>
+                <element location="OM4.5[2]" displayName="Container Units" relation="parent" group="OM4.5[2]"/>
+                <element location="OM4.5[2].1" displayName="Identifier" relation="child" group="OM4.5[2]" category="Changeable Data" data="mL"/>
+                <element location="OM4.5[2].2" displayName="Text" relation="child" group="OM4.5[2]" category="Changeable Data" data="milliliters"/>
+                <element location="OM4.5[2].3" displayName="Name of Coding System" relation="child" group="OM4.5[2]" category="Changeable Data" data="UCUM"/>
+                <element location="OM4.5[2].7" displayName="Coding System Version ID" relation="child" group="OM4.5[2]" category="Changeable Data" data="1.8"/>
+                <element location="OM4.5[2].8" displayName="Alternate Coding System Version ID" relation="child" group="OM4.5[2]"/>
+                <element location="OM4.6" displayName="Specimen" relation="parent" group="OM4.6"/>
+                <element location="OM4.6.1" displayName="Identifier" relation="child" group="OM4.6" category="Test Case Fixed Data" data="119297000"/>
+                <element location="OM4.6.2" displayName="Text" relation="child" group="OM4.6" category="Changeable Data" data="Blood sample"/>
+                <element location="OM4.6.3" displayName="Name of Coding System" relation="child" group="OM4.6" category="Test Case Fixed Data" data="SCT"/>
+                <element location="OM4.6.4" displayName="Alternate Identifier" relation="child" group="OM4.6" category="Changeable Data" data="WBLD"/>
+                <element location="OM4.6.5" displayName="Alternate Text" relation="child" group="OM4.6" category="Changeable Data" data="Whole blood"/>
+                <element location="OM4.6.6" displayName="Name of Alternate Coding System" relation="child" group="OM4.6" category="Changeable Data" data="99USI"/>
+                <element location="OM4.6.7" displayName="Coding System Version ID" relation="child" group="OM4.6" category="Changeable Data" data="20130131"/>
+                <element location="OM4.6.8" displayName="Alternate Coding System Version ID" relation="child" group="OM4.6" category="Changeable Data" data="2014"/>
+                <element location="OM4.6.9" displayName="Original Text" relation="child" group="OM4.6" category="Changeable Data" data="Whole blood"/>
+                <element location="OM4.7" displayName="Additive" relation="parent" group="OM4.7"/>
+                <element location="OM4.7.1" displayName="Identifier" relation="child" group="OM4.7" category="Changeable Data" data="EDTK"/>
+                <element location="OM4.7.2" displayName="Text" relation="child" group="OM4.7" category="Changeable Data" data="Potassium/K EDTA"/>
+                <element location="OM4.7.3" displayName="Name of Coding System" relation="child" group="OM4.7" category="Changeable Data" data="HL70371"/>
+                <element location="OM4.7.7" displayName="Coding System Version ID" relation="child" group="OM4.7" category="Changeable Data" data="2.5.1"/>
+                <element location="OM4.7.8" displayName="Alternate Coding System Version ID" relation="child" group="OM4.7"/>
+                <element location="OM4.10" displayName="Normal Collection Volume" relation="parent" group="OM4.10"/>
+                <element location="OM4.10.1" displayName="Quantity" relation="child" group="OM4.10" category="Changeable Data" data="3"/>
+                <element location="OM4.10.2" displayName="Units" relation="child" group="OM4.10"/>
+                <element location="OM4.10.2.1" displayName="Identifier" relation="child" group="OM4.10" category="Changeable Data" data="mL"/>
+                <element location="OM4.10.2.2" displayName="Text" relation="child" group="OM4.10" category="Changeable Data" data="milliliters"/>
+                <element location="OM4.10.2.3" displayName="Name of Coding System" relation="child" group="OM4.10" category="IG Fixed Data" data="UCUM"/>
+                <element location="OM4.10.2.7" displayName="Coding System Version ID" relation="child" group="OM4.10" category="Changeable Data" data="1.8"/>
+                <element location="OM4.10.2.8" displayName="Alternate Coding System Version ID" relation="child" group="OM4.10"/>
+                <element location="OM4.11" displayName="Minimum Collection Volume" relation="parent" group="OM4.11"/>
+                <element location="OM4.11.1" displayName="Quantity" relation="child" group="OM4.11" category="Changeable Data" data="0.5"/>
+                <element location="OM4.11.2" displayName="Units" relation="child" group="OM4.11"/>
+                <element location="OM4.11.2.1" displayName="Identifier" relation="child" group="OM4.11" category="Changeable Data" data="mL"/>
+                <element location="OM4.11.2.2" displayName="Text" relation="child" group="OM4.11" category="Changeable Data" data="milliliters"/>
+                <element location="OM4.11.2.3" displayName="Name of Coding System" relation="child" group="OM4.11" category="IG Fixed Data" data="UCUM"/>
+                <element location="OM4.11.2.7" displayName="Coding System Version ID" relation="child" group="OM4.11" category="Changeable Data" data="1.8"/>
+                <element location="OM4.11.2.8" displayName="Alternate Coding System Version ID" relation="child" group="OM4.11"/>
+                <element location="OM4.12" displayName="Specimen Requirements" relation="parent" group="OM4.12" category="Changeable Data" data="Refrigeration is required if specimen is not brought immediately to laboratory.  Two blood smear should be prepared if sample is not delivered to the laboratory within 4 hrs.  Sample should be analyzed within 6 hours at room temperature and 24 hrs when stored at 4 degrees C."/>
+                <element location="OM4.15[1]" displayName="Specimen Handling Code" relation="parent" group="OM4.15[1]"/>
+                <element location="OM4.15[1].1" displayName="Identifier" relation="child" group="OM4.15[1]" category="Changeable Data" data="CREF"/>
+                <element location="OM4.15[1].2" displayName="Text" relation="child" group="OM4.15[1]" category="Changeable Data" data="Critical refrigerated"/>
+                <element location="OM4.15[1].3" displayName="Name of Coding System" relation="child" group="OM4.15[1]" category="IG Fixed Data" data="HL70376"/>
+                <element location="OM4.15[1].7" displayName="Coding System Version ID" relation="child" group="OM4.15[1]" category="Changeable Data" data="2.5.1"/>
+                <element location="OM4.15[1].8" displayName="Alternate Coding System Version ID" relation="child" group="OM4.15[1]"/>
+                <element location="OM4.15[2]" displayName="Specimen Handling Code" relation="parent" group="OM4.15[2]"/>
+                <element location="OM4.15[2].1" displayName="Identifier" relation="child" group="OM4.15[2]"/>
+                <element location="OM4.15[2].2" displayName="Text" relation="child" group="OM4.15[2]"/>
+                <element location="OM4.15[2].3" displayName="Name of Coding System" relation="child" group="OM4.15[2]"/>
+                <element location="OM4.15[2].7" displayName="Coding System Version ID" relation="child" group="OM4.15[2]"/>
+                <element location="OM4.15[2].8" displayName="Alternate Coding System Version ID" relation="child" group="OM4.15[2]"/>
+                <element location="OM4.16" displayName="Specimen Preference" relation="parent" group="OM4.16" category="Test Case Fixed Data" data="P"/>
+                <element location="OM4.17" displayName="Preferred Specimen/Attribute Sequence" relation="parent" group="OM4.17"/>
+            </test-profile>
+        </test-profiles>
+        <test-profiles segment="MFE">
+            <test-profile id="500.6" segment="MFE">
+                <element location="MFE.1" displayName="Record-Level Event Code" relation="parent" group="MFE.1" category="Test Case Fixed Data" data="MAC"/>
+                <element location="MFE.2" displayName="MFN Control ID" relation="parent" group="MFE.2"/>
+                <element location="MFE.3" displayName="Effective Date/Time" relation="parent" group="MFE.3"/>
+                <element location="MFE.3.1" displayName="Time" relation="child" group="MFE.3" category="System Generated" data="20131219145310"/>
+                <element location="MFE.4" displayName="Primary Key Value - MFE" relation="parent" group="MFE.4"/>
+                <element location="MFE.4.1" displayName="Identifier" relation="child" group="MFE.4" category="Changeable Data" data="500"/>
+                <element location="MFE.4.2" displayName="Text" relation="child" group="MFE.4" category="Changeable Data" data="Erythrocyte sedimentation rate"/>
+                <element location="MFE.4.3" displayName="Name of Coding System" relation="child" group="MFE.4" category="Changeable Data" data="99USI"/>
+                <element location="MFE.4.7" displayName="Coding System Version ID" relation="child" group="MFE.4" category="Changeable Data" data="20130421"/>
+                <element location="MFE.5" displayName="Primary Key Value Type" relation="parent" group="MFE.5" category="IG Fixed Data" data="CWE"/>
+            </test-profile>
+            <test-profile id="800.6" segment="MFE">
+                <element location="MFE.1" displayName="Record-Level Event Code" relation="parent" group="MFE.1" category="Test Case Fixed Data" data="MAC"/>
+                <element location="MFE.2" displayName="MFN Control ID" relation="parent" group="MFE.2"/>
+                <element location="MFE.3" displayName="Effective Date/Time" relation="parent" group="MFE.3"/>
+                <element location="MFE.3.1" displayName="Time" relation="child" group="MFE.3" category="System Generated" data="20131219145310"/>
+                <element location="MFE.4" displayName="Primary Key Value - MFE" relation="parent" group="MFE.4"/>
+                <element location="MFE.4.1" displayName="Identifier" relation="child" group="MFE.4" category="Changeable Data" data="800"/>
+                <element location="MFE.4.2" displayName="Text" relation="child" group="MFE.4" category="Changeable Data" data="GHP Profile"/>
+                <element location="MFE.4.3" displayName="Name of Coding System" relation="child" group="MFE.4" category="Changeable Data" data="99USI"/>
+                <element location="MFE.4.7" displayName="Coding System Version ID" relation="child" group="MFE.4" category="Changeable Data" data="20130421"/>
+                <element location="MFE.5" displayName="Primary Key Value Type" relation="parent" group="MFE.5" category="IG Fixed Data" data="CWE"/>
+            </test-profile>
+        </test-profiles>
+        <test-profiles segment="CDM">
+            <test-profile id="500.0" segment="CDM">
+                <element location="CDM.1" displayName="Primary Key Value - CDM" relation="parent" group="CDM.1"/>
+                <element location="CDM.1.1" displayName="Identifier" relation="child" group="CDM.1" category="Test Case Fixed Data" data="500"/>
+                <element location="CDM.1.2" displayName="Text" relation="child" group="CDM.1" category="Changeable Data" data="Erythrocyte sedimentation rate"/>
+                <element location="CDM.1.3" displayName="Name of Coding System" relation="child" group="CDM.1" category="Changeable Data" data="99USI"/>
+                <element location="CDM.1.7" displayName="Coding System Version ID" relation="child" group="CDM.1" category="Changeable Data" data="20130421"/>
+                <element location="CDM.3" displayName="Charge Description Short" relation="parent" group="CDM.3" category="Changeable Data" data="Erythrocyte sedimentation rate"/>
+                <element location="CDM.7[1]" displayName="Procedure Code" relation="parent" group="CDM.7[1]"/>
+                <element location="CDM.7[1].1" displayName="Identifier" relation="child" group="CDM.7[1]" category="Changeable Data" data="85652"/>
+                <element location="CDM.7[1].2" displayName="Text" relation="child" group="CDM.7[1]" category="Changeable Data" data="Sedimentation rate, erythrocyte; automated"/>
+                <element location="CDM.7[1].3" displayName="Name of Coding System" relation="child" group="CDM.7[1]" category="IG Fixed Data" data="C4"/>
+                <element location="CDM.7[1].7" displayName="Coding System Version ID" relation="child" group="CDM.7[1]" category="Changeable Data" data="19.2"/>
+                <element location="CDM.7[2]" displayName="Procedure Code" relation="parent" group="CDM.7[2]"/>
+                <element location="CDM.7[2].1" displayName="Identifier" relation="child" group="CDM.7[2]"/>
+                <element location="CDM.7[2].2" displayName="Text" relation="child" group="CDM.7[2]"/>
+                <element location="CDM.7[2].3" displayName="Name of Coding System" relation="child" group="CDM.7[2]"/>
+                <element location="CDM.7[2].7" displayName="Coding System Version ID" relation="child" group="CDM.7[2]"/>
+                <element location="CDM.7[3]" displayName="Procedure Code" relation="parent" group="CDM.7[3]"/>
+                <element location="CDM.7[3].1" displayName="Identifier" relation="child" group="CDM.7[3]"/>
+                <element location="CDM.7[3].2" displayName="Text" relation="child" group="CDM.7[3]"/>
+                <element location="CDM.7[3].3" displayName="Name of Coding System" relation="child" group="CDM.7[3]"/>
+                <element location="CDM.7[3].7" displayName="Coding System Version ID" relation="child" group="CDM.7[3]"/>
+                <element location="CDM.7[4]" displayName="Procedure Code" relation="parent" group="CDM.7[4]"/>
+                <element location="CDM.7[4].1" displayName="Identifier" relation="child" group="CDM.7[4]"/>
+                <element location="CDM.7[4].2" displayName="Text" relation="child" group="CDM.7[4]"/>
+                <element location="CDM.7[4].3" displayName="Name of Coding System" relation="child" group="CDM.7[4]"/>
+                <element location="CDM.7[4].7" displayName="Coding System Version ID" relation="child" group="CDM.7[4]"/>
+                <element location="CDM.7[5]" displayName="Procedure Code" relation="parent" group="CDM.7[5]"/>
+                <element location="CDM.7[5].1" displayName="Identifier" relation="child" group="CDM.7[5]"/>
+                <element location="CDM.7[5].2" displayName="Text" relation="child" group="CDM.7[5]"/>
+                <element location="CDM.7[5].3" displayName="Name of Coding System" relation="child" group="CDM.7[5]"/>
+                <element location="CDM.7[5].7" displayName="Coding System Version ID" relation="child" group="CDM.7[5]"/>
+                <element location="CDM.7[6]" displayName="Procedure Code" relation="parent" group="CDM.7[6]"/>
+                <element location="CDM.7[6].1" displayName="Identifier" relation="child" group="CDM.7[6]"/>
+                <element location="CDM.7[6].2" displayName="Text" relation="child" group="CDM.7[6]"/>
+                <element location="CDM.7[6].3" displayName="Name of Coding System" relation="child" group="CDM.7[6]"/>
+                <element location="CDM.7[6].7" displayName="Coding System Version ID" relation="child" group="CDM.7[6]"/>
+            </test-profile>
+        </test-profiles>
+    </test-profile-package>
+    <message-description>
+        <properties id="EDOS_2.3_3.1-M04_GU" test-type="TO_DO" status="Valid" ack="NA" profile="MFN_M04" test-case-type="M04_Update_reactivate" tag="Update_reactivate" test-case-id="EDOS_2.3_3.1-M04_GU" description="M04_Update_reactivate" type="TO_DO" structure="TO_DO"/>
+        <properties id="EDOS_2.3_1.1-M08_GU" test-type="TO_DO" status="Valid" ack="NA" profile="MFN_M08" test-case-type="M08_Update_reactivate" tag="Update_reactivate" test-case-id="EDOS_2.3_1.1-M08_GU" description="M08_Update_reactivate" type="TO_DO" structure="TO_DO"/>
+        <properties id="EDOS_2.3_2.1-M10_GU" test-type="TO_DO" status="Valid" ack="NA" profile="MFN_M10" test-case-type="M10_Update_reactivate" tag="update_reactivate" test-case-id="EDOS_2.3_2.1-M10_GU" description="M10_Update_reactivate" type="TO_DO" structure="TO_DO"/>
+    </message-description>
+</event-profiles>

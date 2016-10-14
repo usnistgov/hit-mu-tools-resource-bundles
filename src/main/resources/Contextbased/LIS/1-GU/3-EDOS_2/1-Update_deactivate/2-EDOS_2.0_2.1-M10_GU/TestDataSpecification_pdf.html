@@ -1,0 +1,564 @@
+<style xmlns="http://www.w3.org/1999/xhtml" xmlns:util="http://hl7.nist.gov/data-specs/util" type="text/css">
+		@media screen {		
+		.test-data-specs-main maskByMediaType {display:table;}			
+				
+		.test-data-specs-main table tbody tr th {font-size:95%}			
+		.test-data-specs-main table tbody tr td {font-size:100%;}			
+		.test-data-specs-main table tbody tr th {text-align:left;background:#C6DEFF}			
+		.test-data-specs-main table thead tr th {text-align:center;}			
+		.test-data-specs-main {text-align:center;}			
+		.test-data-specs-main table { width:98%;border: 1px groove;table-layout: fixed; margin:0 auto;border-collapse: collapse;}			
+		.test-data-specs-main table  tr { border: 3px groove; }			
+		.test-data-specs-main table  th { border: 2px groove;}			
+		.test-data-specs-main table  td { border: 2px groove; }			
+		.test-data-specs-main table thead {border: 1px groove;background:#446BEC;text-align:left;}			
+		.test-data-specs-main table tbody tr td {text-align:left}				
+			
+		/* Don't display empty rows */
+		.test-data-specs-main .tds_noData {display:none;}
+	
+		}	
+			
+			@media print {
+		.test-data-specs-main 
+		.test-data-specs-main tds_maskByMediaType {display:table;}			
+		.test-data-specs-main fieldset table tbody tr th {font-size:90%}			
+		.test-data-specs-main fieldset table tbody tr td {font-size:90%;}			
+		.test-data-specs-main fieldset table tbody tr th {text-align:left;background:#C6DEFF}			
+		.test-data-specs-main fieldset table thead tr th {text-align:center;background:#4682B4}			
+		.test-data-specs-main fieldset {text-align:center;page-break-inside: avoid;}			
+		.test-data-specs-main fieldset table { width:98%;border: 1px groove;table-layout: fixed; margin:0 auto;page-break-inside: avoid;border-collapse: collapse;}			
+		.test-data-specs-main fieldset table[id=vendor-labResults] thead tr {font-size:80%}			
+		.test-data-specs-main fieldset table[id=vendor-labResults] tbody tr {font-size:75%}			
+		.test-data-specs-main fieldset table  tr { border: 3px groove; }			
+		.test-data-specs-main fieldset table  th { border: 2px groove;}			
+		.test-data-specs-main fieldset table  td { border: 2px groove; }			
+		.test-data-specs-main fieldset table thead {border: 1px groove;background:#446BEC;text-align:left;}			
+		.test-data-specs-main fieldset table tbody tr td {text-align:left;}			
+		
+		.test-data-specs-main .tds_noData {display:none;}
+				
+		.test-data-specs-main .tds_title {text-align:left;margin-bottom:1%}			
+		.test-data-specs-main h3 {text-align:center;}			
+		.test-data-specs-main h2 {text-align:center;}			
+		.test-data-specs-main h1 {text-align:center;}	
+		.test-data-specs-main .tds_pgBrk {page-break-after:always;}
+		}
+		</style><div xmlns="http://www.w3.org/1999/xhtml" class="test-data-specs-main">
+   <tabset>
+      <tab heading="Master File Identification">
+         <table>
+            <tbody>
+               <tr>
+                  <th>Element</th>
+                  <th>Data</th>
+               </tr>
+               <tr>
+                  <td>Identifier</td>
+                  <td>OMC</td>
+               </tr>
+               <tr>
+                  <td>Event code</td>
+                  <td>UPD</td>
+               </tr>
+            </tbody>
+         </table>
+      </tab>
+      <tab heading="Panel/Test battery Information[*]" vertical="false">
+         <div class="panel panel-info">
+            <div class="panel-body">
+               <fieldset>
+                  <accordion>
+                     <accordion-group class="panel-info" type="pills" style="margin-top:0;border: 1px ridge  #C6DEFF;" is-open="PanelDetails1" vertical="true">
+                        <accordion-heading><span class="clearfix"><span class="accordion-heading pull-left"><i class="pull-left fa" ng-class="{'fa-caret-down': PanelDetails1, 'fa-caret-right': !PanelDetails1}"></i>Panel/Test battery Information - GHP</span></span></accordion-heading>
+                        <div class="panel panel-info">
+                           <div class="panel-body">
+                              <fieldset>
+                                 <legend>Record information</legend>
+                                 <table>
+                                    <tbody>
+                                       <tr>
+                                          <th>Element</th>
+                                          <th>Data</th>
+                                       </tr>
+                                       <tr>
+                                          <td>Event code</td>
+                                          <td>MDC</td>
+                                       </tr>
+                                       <tr>
+                                          <td>Effective date and time</td>
+                                          <td>20131219145310</td>
+                                       </tr>
+                                       <tr>
+                                          <td>Test/Panel Name</td>
+                                          <td>GHP</td>
+                                       </tr>
+                                       <tr>
+                                          <td>Test/Panel identifier (code system)</td>
+                                          <td>800 (99USL)</td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </fieldset>
+                              <fieldset>
+                                 <legend>General information</legend>
+                                 <table>
+                                    <tbody>
+                                       <tr>
+                                          <th>Element</th>
+                                          <th>Data</th>
+                                       </tr>
+                                       <tr>
+                                          <td>Specimen required ?</td>
+                                          <td>Y</td>
+                                       </tr>
+                                       <tr class="tds_noData">
+                                          <td>Producer</td>
+                                          <td class="tds_noData"></td>
+                                       </tr>
+                                       <tr>
+                                          <td>Preferred Report Name</td>
+                                          <td>General Health Profile</td>
+                                       </tr>
+                                       <tr class="tds_noData">
+                                          <td>Preferred Short  Name</td>
+                                          <td class="tds_noData"></td>
+                                       </tr>
+                                       <tr class="tds_noData">
+                                          <td>Preferred Long   Name</td>
+                                          <td class="tds_noData"></td>
+                                       </tr>
+                                       <tr>
+                                          <td>Is the test/panel orderable ?</td>
+                                          <td>Y</td>
+                                       </tr>
+                                       <tr>
+                                          <td>Nature</td>
+                                          <td>S</td>
+                                       </tr>
+                                       <tr>
+                                          <td>Interpretation</td>
+                                          <td>This blood test is used to determine general health status and to screen for and monitor a variety of disorders. This profile
+                                             includes a complete metabolic profile, comprehensive CBC, Urinalysis and total Thyrotropin (T4).
+                                          </td>
+                                       </tr>
+                                       <tr>
+                                          <td>Patient preparation</td>
+                                          <td>Patient fasting required for 12 hours.</td>
+                                       </tr>
+                                       <tr>
+                                          <td>Factors that may affect the test</td>
+                                          <td>Insufficient specimen, Gross hemolysis, Improper labeling..</td>
+                                       </tr>
+                                       <tr>
+                                          <td>Schedule</td>
+                                          <td>Daily</td>
+                                       </tr>
+                                       <tr>
+                                          <td>Is the test exclusive ?</td>
+                                          <td>N</td>
+                                       </tr>
+                                       <tr>
+                                          <td>Diagnostic Service Sector</td>
+                                          <td>LAB</td>
+                                       </tr>
+                                       <tr>
+                                          <td>Replacement test</td>
+                                          <td>CMP</td>
+                                       </tr>
+                                       <tr>
+                                          <td>Replacement test (code &amp; code system)</td>
+                                          <td>100 (99USL)</td>
+                                       </tr>
+                                       <tr>
+                                          <td>Replacement test</td>
+                                          <td>Comprehensive Urinalysis</td>
+                                       </tr>
+                                       <tr>
+                                          <td>Replacement test (code &amp; code system)</td>
+                                          <td>300 (99USL)</td>
+                                       </tr>
+                                       <tr>
+                                          <td>Replacement test</td>
+                                          <td>CBC_diff</td>
+                                       </tr>
+                                       <tr>
+                                          <td>Replacement test (code &amp; code system)</td>
+                                          <td>200 (99USL)</td>
+                                       </tr>
+                                       <tr>
+                                          <td>Replacement test</td>
+                                          <td>TSH</td>
+                                       </tr>
+                                       <tr>
+                                          <td>Replacement test (code &amp; code system)</td>
+                                          <td>700 (99USL)</td>
+                                       </tr>
+                                       <tr class="tds_noData">
+                                          <td>Code for results</td>
+                                          <td class="tds_noData"></td>
+                                       </tr>
+                                       <tr>
+                                          <td>Expected turn around time</td>
+                                          <td>1 day</td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </fieldset>
+                              <fieldset>
+                                 <legend>Panel/Test battery Details</legend>
+                                 <fieldset>
+                                    <table>
+                                       <tbody>
+                                          <tr>
+                                             <th>Element</th>
+                                             <th>Data</th>
+                                          </tr>
+                                          <tr>
+                                             <td>Test included in panel/test battery</td>
+                                             <td>CMP</td>
+                                          </tr>
+                                          <tr>
+                                             <td>Test included in panel/test battery (code &amp; code system)</td>
+                                             <td>100 (99USL)</td>
+                                          </tr>
+                                          <tr>
+                                             <td>Test included in panel/test battery</td>
+                                             <td>CBC_diff</td>
+                                          </tr>
+                                          <tr>
+                                             <td>Test included in panel/test battery (code &amp; code system)</td>
+                                             <td>200 (99USL)</td>
+                                          </tr>
+                                          <tr>
+                                             <td>Test included in panel/test battery</td>
+                                             <td>TSH</td>
+                                          </tr>
+                                          <tr>
+                                             <td>Test included in panel/test battery (code &amp; code system)</td>
+                                             <td>700 (99USL)</td>
+                                          </tr>
+                                          <tr>
+                                             <td>Test included in panel/test battery</td>
+                                             <td>Comprehensive Urinalysis</td>
+                                          </tr>
+                                          <tr>
+                                             <td>Test included in panel/test battery (code &amp; code system)</td>
+                                             <td>300 (99USL)</td>
+                                          </tr>
+                                       </tbody>
+                                    </table>
+                                 </fieldset>
+                                 <fieldset>
+                                    <legend>Specimen information details</legend>
+                                    <table>
+                                       <tbody>
+                                          <tr>
+                                             <th>Element</th>
+                                             <th>Data</th>
+                                          </tr>
+                                          <tr>
+                                             <td>Sequence ID</td>
+                                             <td>1</td>
+                                          </tr>
+                                          <tr>
+                                             <td>Container description</td>
+                                             <td>Gold Serum Separator tube</td>
+                                          </tr>
+                                          <tr>
+                                             <td>Container description</td>
+                                             <td>Red, No Additive tube</td>
+                                          </tr>
+                                          <tr>
+                                             <td>Container volume</td>
+                                             <td>5.0</td>
+                                          </tr>
+                                          <tr>
+                                             <td>Container volume</td>
+                                             <td>5.0</td>
+                                          </tr>
+                                          <tr>
+                                             <td>Container units</td>
+                                             <td>milliliter</td>
+                                          </tr>
+                                          <tr>
+                                             <td>Container units (code &amp; code system)</td>
+                                             <td>mL (UCUM)</td>
+                                          </tr>
+                                          <tr>
+                                             <td>Container units</td>
+                                             <td>milliliter</td>
+                                          </tr>
+                                          <tr>
+                                             <td>Container units (code &amp; code system)</td>
+                                             <td>mL (UCUM)</td>
+                                          </tr>
+                                          <tr class="tds_noData">
+                                             <td>Specimen</td>
+                                             <td class="tds_noData"></td>
+                                          </tr>
+                                          <tr>
+                                             <td>Specimen (code &amp; code system)</td>
+                                             <td>119364003 (SCT)</td>
+                                          </tr>
+                                          <tr class="tds_noData">
+                                             <td>Additive</td>
+                                             <td class="tds_noData"></td>
+                                          </tr>
+                                          <tr>
+                                             <td>Normal collection volume</td>
+                                             <td>1</td>
+                                          </tr>
+                                          <tr>
+                                             <td>Normal collection volume unit</td>
+                                             <td>milliliter</td>
+                                          </tr>
+                                          <tr>
+                                             <td>Normal collection volume unit (code &amp; code system)</td>
+                                             <td>mL (UCUM)</td>
+                                          </tr>
+                                          <tr>
+                                             <td>Normal collection volume</td>
+                                             <td>0.5</td>
+                                          </tr>
+                                          <tr>
+                                             <td>Normal collection volume unit</td>
+                                             <td>milliliter</td>
+                                          </tr>
+                                          <tr>
+                                             <td>Normal collection volume unit (code &amp; code system)</td>
+                                             <td>mL (UCUM)</td>
+                                          </tr>
+                                          <tr>
+                                             <td>Specimen Requirements</td>
+                                             <td>Protect from light. Allow serum tube to clot completely at room temperature. Separate serum or plasma from cells ASAP or within
+                                                30 minutes of collection.
+                                             </td>
+                                          </tr>
+                                          <tr>
+                                             <td>Specimen Handling Code</td>
+                                             <td>Refrigerated temperature</td>
+                                          </tr>
+                                          <tr>
+                                             <td>Specimen Handling Code (code &amp; code system)</td>
+                                             <td>REF (HL70376)</td>
+                                          </tr>
+                                          <tr>
+                                             <td>Specimen Preference</td>
+                                             <td>P</td>
+                                          </tr>
+                                          <tr class="tds_noData">
+                                             <td>Preferred Specimen Sequence ID</td>
+                                             <td class="tds_noData"></td>
+                                          </tr>
+                                       </tbody>
+                                    </table>
+                                 </fieldset>
+                                 <fieldset>
+                                    <legend>Specimen information details</legend>
+                                    <table>
+                                       <tbody>
+                                          <tr>
+                                             <th>Element</th>
+                                             <th>Data</th>
+                                          </tr>
+                                          <tr>
+                                             <td>Sequence ID</td>
+                                             <td>1.2</td>
+                                          </tr>
+                                          <tr>
+                                             <td>Container description</td>
+                                             <td>Lavender Top (EDTA) tube</td>
+                                          </tr>
+                                          <tr>
+                                             <td>Container description</td>
+                                             <td>Pink Top (K2EDTA) tube</td>
+                                          </tr>
+                                          <tr>
+                                             <td>Container volume</td>
+                                             <td>3.0</td>
+                                          </tr>
+                                          <tr>
+                                             <td>Container volume</td>
+                                             <td>3.0</td>
+                                          </tr>
+                                          <tr>
+                                             <td>Container units</td>
+                                             <td>milliliters</td>
+                                          </tr>
+                                          <tr>
+                                             <td>Container units (code &amp; code system)</td>
+                                             <td>mL (UCUM)</td>
+                                          </tr>
+                                          <tr>
+                                             <td>Container units</td>
+                                             <td>milliliters</td>
+                                          </tr>
+                                          <tr>
+                                             <td>Container units (code &amp; code system)</td>
+                                             <td>mL (UCUM)</td>
+                                          </tr>
+                                          <tr class="tds_noData">
+                                             <td>Specimen</td>
+                                             <td class="tds_noData"></td>
+                                          </tr>
+                                          <tr>
+                                             <td>Specimen (code &amp; code system)</td>
+                                             <td>119297000 (SCT)</td>
+                                          </tr>
+                                          <tr class="tds_noData">
+                                             <td>Additive</td>
+                                             <td class="tds_noData"></td>
+                                          </tr>
+                                          <tr>
+                                             <td>Specimen (code &amp; code system)</td>
+                                             <td>EDTK (HL70371)</td>
+                                          </tr>
+                                          <tr>
+                                             <td>Normal collection volume</td>
+                                             <td>3</td>
+                                          </tr>
+                                          <tr>
+                                             <td>Normal collection volume unit</td>
+                                             <td>milliliters</td>
+                                          </tr>
+                                          <tr>
+                                             <td>Normal collection volume unit (code &amp; code system)</td>
+                                             <td>mL (UCUM)</td>
+                                          </tr>
+                                          <tr>
+                                             <td>Normal collection volume</td>
+                                             <td>0.5</td>
+                                          </tr>
+                                          <tr>
+                                             <td>Normal collection volume unit</td>
+                                             <td>milliliters</td>
+                                          </tr>
+                                          <tr>
+                                             <td>Normal collection volume unit (code &amp; code system)</td>
+                                             <td>mL (UCUM)</td>
+                                          </tr>
+                                          <tr>
+                                             <td>Specimen Requirements</td>
+                                             <td>Refrigeration is required if specimen is not brought immediately to laboratory.  Two blood smears should be prepared if sample
+                                                is not delivered to the laboratory within 4 hrs.  Sample should be analyzed within 6 hours at room temperature and 24 hrs
+                                                when stored at 4 degrees C.
+                                             </td>
+                                          </tr>
+                                          <tr>
+                                             <td>Specimen Handling Code</td>
+                                             <td>Critical refrigerated</td>
+                                          </tr>
+                                          <tr>
+                                             <td>Specimen Handling Code (code &amp; code system)</td>
+                                             <td>CREF (HL70376)</td>
+                                          </tr>
+                                          <tr>
+                                             <td>Specimen Preference</td>
+                                             <td>P</td>
+                                          </tr>
+                                          <tr class="tds_noData">
+                                             <td>Preferred Specimen Sequence ID</td>
+                                             <td class="tds_noData"></td>
+                                          </tr>
+                                       </tbody>
+                                    </table>
+                                 </fieldset>
+                                 <fieldset>
+                                    <legend>Specimen information details</legend>
+                                    <table>
+                                       <tbody>
+                                          <tr>
+                                             <th>Element</th>
+                                             <th>Data</th>
+                                          </tr>
+                                          <tr>
+                                             <td>Sequence ID</td>
+                                             <td>1.3</td>
+                                          </tr>
+                                          <tr>
+                                             <td>Container description</td>
+                                             <td>Sterile, plastic, leak proof container</td>
+                                          </tr>
+                                          <tr>
+                                             <td>Container volume</td>
+                                             <td>4</td>
+                                          </tr>
+                                          <tr>
+                                             <td>Container units</td>
+                                             <td>fluid ounce (US)</td>
+                                          </tr>
+                                          <tr>
+                                             <td>Container units (code &amp; code system)</td>
+                                             <td>[foz_us] (UCUM)</td>
+                                          </tr>
+                                          <tr class="tds_noData">
+                                             <td>Specimen</td>
+                                             <td class="tds_noData"></td>
+                                          </tr>
+                                          <tr>
+                                             <td>Specimen (code &amp; code system)</td>
+                                             <td>122575003 (SCT)</td>
+                                          </tr>
+                                          <tr class="tds_noData">
+                                             <td>Additive</td>
+                                             <td class="tds_noData"></td>
+                                          </tr>
+                                          <tr>
+                                             <td>Normal collection volume</td>
+                                             <td>20</td>
+                                          </tr>
+                                          <tr>
+                                             <td>Normal collection volume unit</td>
+                                             <td>milliliter</td>
+                                          </tr>
+                                          <tr>
+                                             <td>Normal collection volume unit (code &amp; code system)</td>
+                                             <td>mL (UCUM)</td>
+                                          </tr>
+                                          <tr>
+                                             <td>Normal collection volume</td>
+                                             <td>4</td>
+                                          </tr>
+                                          <tr>
+                                             <td>Normal collection volume unit</td>
+                                             <td>milliliter</td>
+                                          </tr>
+                                          <tr>
+                                             <td>Normal collection volume unit (code &amp; code system)</td>
+                                             <td>mL (UCUM)</td>
+                                          </tr>
+                                          <tr>
+                                             <td>Specimen Requirements</td>
+                                             <td>Keep refrigerated</td>
+                                          </tr>
+                                          <tr>
+                                             <td>Specimen Handling Code</td>
+                                             <td>Refrigerated temperature</td>
+                                          </tr>
+                                          <tr>
+                                             <td>Specimen Handling Code (code &amp; code system)</td>
+                                             <td>REF (HL70376)</td>
+                                          </tr>
+                                          <tr>
+                                             <td>Specimen Preference</td>
+                                             <td>P</td>
+                                          </tr>
+                                          <tr class="tds_noData">
+                                             <td>Preferred Specimen Sequence ID</td>
+                                             <td class="tds_noData"></td>
+                                          </tr>
+                                       </tbody>
+                                    </table>
+                                 </fieldset>
+                              </fieldset>
+                           </div>
+                        </div>
+                     </accordion-group>
+                  </accordion>
+               </fieldset>
+            </div>
+         </div>
+      </tab>
+   </tabset>
+</div>

@@ -1,0 +1,3349 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html>
+   <head>
+      <style type="text/css">
+			@page {
+				margin-top:2cm;
+				margin-bottom:2.5cm;
+				padding-top:25px;
+				padding-bottom:25px;
+				counter-increment: page;
+				border: 1px solid;
+				@bottom-right {
+					content: "Page " counter(page);
+				}
+				@top-center {
+					content: "NIST HL7 V2 eDOS Validation Tool Test Data";
+				}
+				@bottom-center {
+					content: "National Institute of Standards and Technology (NIST)";
+				}
+			}
+
+			@page :left {
+				margin-left: 5%;
+				margin-right: 5%;
+			}
+
+			@page :right {
+				margin-left: 5%;
+				margin-right: 5%;
+			}
+
+			@page :top {
+				margin-top: 7%;
+				margin-bottom: 7%;
+
+			}
+
+        	@media print {
+			
+			fieldset {text-align:center;}
+         	fieldset table {width:98%;border: 1px groove;table-layout: fixed; margin:0 auto;border-collapse:separate;border-spacing:0px;}
+         	
+         	fieldset table tr { page-break-inside: avoid}
+         	fieldset table th { border: 2px groove;}
+         	fieldset table td { border: 2px groove;}
+                  	
+         	
+         	fieldset table thead tr th {text-align:center;background:#4682B4}
+         	fieldset table thead {border: 1px groove;background:#446BEC;text-align:left;}
+         	
+         	
+         	fieldset table tbody tr th {font-size:80%;text-align:left;background:#C6DEFF;}     	
+         	fieldset table tbody tr td {font-size:80%;text-align:left;}
+         	
+         	
+         	.noData {background:#B8B8B8;}
+         	
+         	.childField {background:#B8B8B8;}
+         	
+         	
+         	
+         	.hl7Message {width:100%;font-size:75%;}
+
+
+
+
+         	
+         	
+         	.embSpace {padding-left:15px;}
+         	.embSubSpace {padding-left:25px;}
+         	
+         	
+         	h3 {text-align:center;}
+         	h2 {text-align:center;}
+         	h1 {text-align:center;}
+         	
+         	
+         	.title {text-align:left;margin-bottom:1%}
+         	.pgBrk {page-break-after:always;}
+         	.hidden {display:none;}
+         	
+         	
+         	
+
+
+
+
+         	}
+		</style>
+   </head>
+   <body>
+      <div id="test-pkg-cover-page">
+         <br/>
+         <br/>
+         <br/>
+         <br/>
+         <h1>NIST HL7 V2 Validation Tool Test Data</h1>
+         <h1>Electronic Directory Of Service (eDOS)</h1>
+         <br/>
+         <br/>
+         <br/>
+         <h3>Version 1.0</h3>
+         <br/>
+         <h3>13th March, 2015</h3>
+      </div>
+      <div class="pgBrk"/>
+      <div class="test-case-info">
+         <h1>eDOS Test Case EDOS_0.0_1.1-M08_GU</h1>
+         <br/>
+         <h2>M08_New_Smoke_Test</h2>
+      </div>
+      <div class="pgBrk"/>
+      <h2>Test Story</h2>
+      <br/>
+      <fieldset>
+         <div class="title">Description</div>
+         <table>
+            <thead>
+               <tr>
+                  <th colspan="1" style="height:20px"/>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td>The originator of the eDOS is the Century Hospital Clinical Laboratory located at 2070 Test Park, Los Angeles, CA, 90067, CLIA: 24D9871327 , phone number: (310) 461-3666.&#xD;<br/>The Sender is the  Century Hospital Clinical Laboratory LIS.&#xD;<br/>The Receiver is Dr. Radon's Office EHR.&#xD;<br/>&#xD;
+                     <br/>The initial Laboratory Test Compendium build from Century Hospital Clinical Laboratory consist of a single Prothrombin Time panel ('PT +INR').  This compendium is delivered electronically to Dr. Nicholas Radon's practice EHR, as agreed to between Laboratory and Dr. Radon's Office and EHR Vendor.   The EHR will integrate the eDOS into its test directory and use it to allow Dr. Radon to place orders electronically to Century Hospital's Clinical Laboratory.   The initial laboratory test compendium is composed of three messages.&#xD;<br/>Century Hospital's LIS transmit the first message which provides information about the PT and INR observations.</td>
+               </tr>
+            </tbody>
+         </table>
+      </fieldset>
+      <fieldset>
+         <div class="title">Comments</div>
+         <table>
+            <thead>
+               <tr>
+                  <th colspan="1" style="height:20px"/>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td>This is the initial 'smoke testing' to reveal simple failures severe enough to preclude further testing.  Initial upload of 2 individual observations for a new compendium. &#xD;<br/>Since this is a replace message, all data in this message will replace information from a previous eDOS M08 message.</td>
+               </tr>
+            </tbody>
+         </table>
+      </fieldset>
+      <fieldset>
+         <div class="title">PreCondition</div>
+         <table>
+            <thead>
+               <tr>
+                  <th colspan="1" style="height:20px"/>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td>No Pre-Conditions.</td>
+               </tr>
+            </tbody>
+         </table>
+      </fieldset>
+      <fieldset>
+         <div class="title">PostCondition</div>
+         <table>
+            <thead>
+               <tr>
+                  <th colspan="1" style="height:20px"/>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td>No Post-Conditions.</td>
+               </tr>
+            </tbody>
+         </table>
+      </fieldset>
+      <fieldset>
+         <div class="title">TestObjectives</div>
+         <table>
+            <thead>
+               <tr>
+                  <th colspan="1" style="height:20px"/>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td>
+                     <ul style="padding-left: 20px;">
+                        <li>Demonstrate capability to support a minimal M08 initial load message.&#xD;</li>
+                        <li>Demonstrate capability to support a single occurrence of all required ('R') elements in the MSH segment.&#xD;</li>
+                        <li>Demonstrate capability to support a single occurrence of all required ('R') elements in the MFI segment.&#xD;</li>
+                        <li>Demonstrate capability to support a single occurrence of all required ('R') elements in the MFE segment.&#xD;</li>
+                        <li>Demonstrate capability to support a single occurrence of all required ('R') elements in the OM1 segment.</li>
+                     </ul>
+                  </td>
+               </tr>
+            </tbody>
+         </table>
+      </fieldset>
+      <fieldset>
+         <div class="title">Notes to Testers</div>
+         <table>
+            <thead>
+               <tr>
+                  <th colspan="1" style="height:20px"/>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td>No Notes.</td>
+               </tr>
+            </tbody>
+         </table>
+      </fieldset>
+      <div class="pgBrk"/>
+      <h2>Message Content Data Sheet</h2>
+      <br/>
+      <fieldset>
+         <div class="title">Test Case Information</div>
+         <table>
+            <thead>
+               <tr>
+                  <th colspan="2">EDOS_0.0_1.1-M08_GU - M08_New_Smoke_Test</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <th> Test Case ID</th>
+                  <td>EDOS_0.0_1.1-M08_GU</td>
+               </tr>
+            </tbody>
+         </table>
+      </fieldset>
+      <br/>
+      <fieldset>
+         <div class="title">MSH : </div>
+         <table>
+            <thead>
+               <tr>
+                  <th>Location</th>
+                  <th>Data Element</th>
+                  <th>Data</th>
+                  <th>Categorization</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <th>MSH.1</th>
+                  <th>Field Separator</th>
+                  <td>|</td>
+                  <td>IG Fixed Data</td>
+               </tr>
+               <tr>
+                  <th>MSH.2</th>
+                  <th>Encoding Characters</th>
+                  <td>^~\&amp;</td>
+                  <td>IG Fixed Data</td>
+               </tr>
+               <tr class="hidden">
+                  <th>MSH.3</th>
+                  <th>Sending Application</th>
+                  <th/>
+                  <th/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">MSH.3.1</td>
+                  <td class="embSpace">Namespace ID</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">MSH.3.2</td>
+                  <td class="embSpace">Universal ID</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">MSH.3.3</td>
+                  <td class="embSpace">Universal ID Type</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr>
+                  <th>MSH.4</th>
+                  <th>Sending Facility</th>
+                  <th/>
+                  <th/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">MSH.4.1</td>
+                  <td class="embSpace">Namespace ID</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr>
+                  <td class="embSpace">MSH.4.2</td>
+                  <td class="embSpace">Universal ID</td>
+                  <td>2.16.840.1.113883.3.72.5.21</td>
+                  <td>Configurable Data</td>
+               </tr>
+               <tr>
+                  <td class="embSpace">MSH.4.3</td>
+                  <td class="embSpace">Universal ID Type</td>
+                  <td>ISO</td>
+                  <td>IG Fixed Data</td>
+               </tr>
+               <tr class="hidden">
+                  <th>MSH.6</th>
+                  <th>Receiving Facility</th>
+                  <th/>
+                  <th/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">MSH.6.1</td>
+                  <td class="embSpace">Namespace ID</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">MSH.6.2</td>
+                  <td class="embSpace">Universal ID</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">MSH.6.3</td>
+                  <td class="embSpace">Universal ID Type</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr>
+                  <th>MSH.7</th>
+                  <th>Date/Time Of Message</th>
+                  <th/>
+                  <th/>
+               </tr>
+               <tr>
+                  <td class="embSpace">MSH.7.1</td>
+                  <td class="embSpace">Time</td>
+                  <td>20130421113601-0700</td>
+                  <td>System Generated</td>
+               </tr>
+               <tr>
+                  <th>MSH.9</th>
+                  <th>Message Type</th>
+                  <th/>
+                  <th/>
+               </tr>
+               <tr>
+                  <td class="embSpace">MSH.9.1</td>
+                  <td class="embSpace">Message Code</td>
+                  <td>MFN</td>
+                  <td>IG Fixed Data</td>
+               </tr>
+               <tr>
+                  <td class="embSpace">MSH.9.2</td>
+                  <td class="embSpace">Trigger Event</td>
+                  <td>M08</td>
+                  <td>IG Fixed Data</td>
+               </tr>
+               <tr>
+                  <td class="embSpace">MSH.9.3</td>
+                  <td class="embSpace">Message Structure</td>
+                  <td>MFN_M08</td>
+                  <td>IG Fixed Data</td>
+               </tr>
+               <tr>
+                  <th>MSH.10</th>
+                  <th>Message Control ID</th>
+                  <td>EDOS_0.0_1.1-M08_GU</td>
+                  <td>System Generated</td>
+               </tr>
+               <tr>
+                  <th>MSH.11</th>
+                  <th>Processing ID</th>
+                  <th/>
+                  <th/>
+               </tr>
+               <tr>
+                  <td class="embSpace">MSH.11.1</td>
+                  <td class="embSpace">Processing ID</td>
+                  <td>T</td>
+                  <td>Changeable Data</td>
+               </tr>
+               <tr>
+                  <th>MSH.12</th>
+                  <th>VersionID</th>
+                  <th/>
+                  <th/>
+               </tr>
+               <tr>
+                  <td class="embSpace">MSH.12.1</td>
+                  <td class="embSpace">Version ID</td>
+                  <td>2.5.1</td>
+                  <td>IG Fixed Data</td>
+               </tr>
+               <tr>
+                  <th>MSH.15</th>
+                  <th>Accept Acknowledgment Type</th>
+                  <td>AL</td>
+                  <td>Changeable Data</td>
+               </tr>
+               <tr>
+                  <th>MSH.16</th>
+                  <th>Application Acknowledgment Type</th>
+                  <td>NE</td>
+                  <td>Changeable Data</td>
+               </tr>
+               <tr>
+                  <th>MSH.21[1]</th>
+                  <th>Message Profile Identifier</th>
+                  <th/>
+                  <th/>
+               </tr>
+               <tr>
+                  <td class="embSpace">MSH.21[1].1</td>
+                  <td class="embSpace">Entity Identifier</td>
+                  <td>EDOS_GU_Profile</td>
+                  <td>Test Case Fixed Data</td>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">MSH.21[1].2</td>
+                  <td class="embSpace">Namespace ID</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr>
+                  <td class="embSpace">MSH.21[1].3</td>
+                  <td class="embSpace">Universal ID</td>
+                  <td>2.16.840.1.113883.9.70</td>
+                  <td>Test Case Fixed Data</td>
+               </tr>
+               <tr>
+                  <td class="embSpace">MSH.21[1].4</td>
+                  <td class="embSpace">Universal ID Type</td>
+                  <td>ISO</td>
+                  <td>IG Fixed Data</td>
+               </tr>
+               <tr class="hidden">
+                  <th>MSH.21[2]</th>
+                  <th>Message Profile Identifier</th>
+                  <th/>
+                  <th/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">MSH.21[2].1</td>
+                  <td class="embSpace">Entity Identifier</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">MSH.21[2].2</td>
+                  <td class="embSpace">Namespace ID</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">MSH.21[2].3</td>
+                  <td class="embSpace">Universal ID</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">MSH.21[2].4</td>
+                  <td class="embSpace">Universal ID Type</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+            </tbody>
+         </table>
+      </fieldset>
+      <br/>
+      <fieldset>
+         <div class="title">MFI : </div>
+         <table>
+            <thead>
+               <tr>
+                  <th>Location</th>
+                  <th>Data Element</th>
+                  <th>Data</th>
+                  <th>Categorization</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <th>MFI.1</th>
+                  <th>Master File Identifier</th>
+                  <th/>
+                  <th/>
+               </tr>
+               <tr>
+                  <td class="embSpace">MFI.1.1</td>
+                  <td class="embSpace">Identifier</td>
+                  <td>OMA</td>
+                  <td>IG Fixed Data</td>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">MFI.1.2</td>
+                  <td class="embSpace">Text</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr>
+                  <td class="embSpace">MFI.1.3</td>
+                  <td class="embSpace">Name of Coding System</td>
+                  <td>HL70175</td>
+                  <td>IG Fixed Data</td>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">MFI.1.7</td>
+                  <td class="embSpace">Coding System Version ID</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">MFI.1.8</td>
+                  <td class="embSpace">Alternate Coding System Version ID</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr>
+                  <th>MFI.3</th>
+                  <th>File-Level Event Code</th>
+                  <td>REP</td>
+                  <td>Test Case Fixed Data</td>
+               </tr>
+               <tr>
+                  <th>MFI.6</th>
+                  <th>Response Level Code</th>
+                  <td>NE</td>
+                  <td>IG Fixed Data</td>
+               </tr>
+            </tbody>
+         </table>
+      </fieldset>
+      <br/>
+      <fieldset>
+         <div class="title">MFE : </div>
+         <table>
+            <thead>
+               <tr>
+                  <th>Location</th>
+                  <th>Data Element</th>
+                  <th>Data</th>
+                  <th>Categorization</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <th>MFE.1</th>
+                  <th>Record-Level Event Code</th>
+                  <td>MAD</td>
+                  <td>Test Case Fixed Data</td>
+               </tr>
+               <tr class="hidden">
+                  <th>MFE.2</th>
+                  <th>MFN Control ID</th>
+                  <th/>
+                  <th/>
+               </tr>
+               <tr>
+                  <th>MFE.3</th>
+                  <th>Effective Date/Time</th>
+                  <th/>
+                  <th/>
+               </tr>
+               <tr>
+                  <td class="embSpace">MFE.3.1</td>
+                  <td class="embSpace">Time</td>
+                  <td>20131219145310</td>
+                  <td>System Generated</td>
+               </tr>
+               <tr>
+                  <th>MFE.4</th>
+                  <th>Primary Key Value - MFE</th>
+                  <th/>
+                  <th/>
+               </tr>
+               <tr>
+                  <td class="embSpace">MFE.4.1</td>
+                  <td class="embSpace">Identifier</td>
+                  <td>11</td>
+                  <td>Changeable Data</td>
+               </tr>
+               <tr>
+                  <td class="embSpace">MFE.4.2</td>
+                  <td class="embSpace">Text</td>
+                  <td>Prothrombin Time, PT</td>
+                  <td>Changeable Data</td>
+               </tr>
+               <tr>
+                  <td class="embSpace">MFE.4.3</td>
+                  <td class="embSpace">Name of Coding System</td>
+                  <td>99USI</td>
+                  <td>Changeable Data</td>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">MFE.4.7</td>
+                  <td class="embSpace">Coding System Version ID</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr>
+                  <th>MFE.5</th>
+                  <th>Primary Key Value Type</th>
+                  <td>CWE</td>
+                  <td>IG Fixed Data</td>
+               </tr>
+            </tbody>
+         </table>
+      </fieldset>
+      <br/>
+      <fieldset>
+         <div class="title">OM1 : </div>
+         <table>
+            <thead>
+               <tr>
+                  <th>Location</th>
+                  <th>Data Element</th>
+                  <th>Data</th>
+                  <th>Categorization</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <th>OM1.1</th>
+                  <th>Sequence Number - Test/Observation Master File</th>
+                  <td>1</td>
+                  <td>IG Fixed Data</td>
+               </tr>
+               <tr>
+                  <th>OM1.2</th>
+                  <th>Producer's Service/Test/Observation ID</th>
+                  <th/>
+                  <th/>
+               </tr>
+               <tr>
+                  <td class="embSpace">OM1.2.1</td>
+                  <td class="embSpace">Identifier</td>
+                  <td>11</td>
+                  <td>Changeable Data</td>
+               </tr>
+               <tr>
+                  <td class="embSpace">OM1.2.2</td>
+                  <td class="embSpace">Text</td>
+                  <td>Prothrombin Time, PT</td>
+                  <td>Changeable Data</td>
+               </tr>
+               <tr>
+                  <td class="embSpace">OM1.2.3</td>
+                  <td class="embSpace">Name of Coding System</td>
+                  <td>99USI</td>
+                  <td>Changeable Data</td>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.2.7</td>
+                  <td class="embSpace">Coding System Version ID</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr>
+                  <th>OM1.4</th>
+                  <th>Specimen Required</th>
+                  <td>Y</td>
+                  <td>Changeable Data</td>
+               </tr>
+               <tr>
+                  <th>OM1.5</th>
+                  <th>Producer ID</th>
+                  <th/>
+                  <th/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.5.1</td>
+                  <td class="embSpace">Identifier</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr>
+                  <td class="embSpace">OM1.5.2</td>
+                  <td class="embSpace">Text</td>
+                  <td>Century Hospital Clinical Laboratory</td>
+                  <td>Changeable Data</td>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.5.3</td>
+                  <td class="embSpace">Name of Coding System</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.5.7</td>
+                  <td class="embSpace">Coding System Version ID</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.5.8</td>
+                  <td class="embSpace">Alternate Coding System Version ID</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <th>OM1.7</th>
+                  <th>Other Service/Test/Observation IDs for the Observation</th>
+                  <th/>
+                  <th/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.7.1</td>
+                  <td class="embSpace">Identifier</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.7.2</td>
+                  <td class="embSpace">Text</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.7.3</td>
+                  <td class="embSpace">Name of Coding System</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.7.7</td>
+                  <td class="embSpace">Coding System Version ID</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <th>OM1.9</th>
+                  <th>Preferred Report Name for the Observation</th>
+                  <th/>
+                  <th/>
+               </tr>
+               <tr class="hidden">
+                  <th>OM1.10</th>
+                  <th>Preferred Short Name on Mnemonic for Observation</th>
+                  <th/>
+                  <th/>
+               </tr>
+               <tr>
+                  <th>OM1.11</th>
+                  <th>Preferred Long Name for the Observation</th>
+                  <td>Prothrombin Time</td>
+                  <td>Changeable Data</td>
+               </tr>
+               <tr>
+                  <th>OM1.12</th>
+                  <th>Orderability</th>
+                  <td>N</td>
+                  <td>Test Case Fixed Data</td>
+               </tr>
+               <tr>
+                  <th>OM1.18</th>
+                  <th>Nature of Service/Test/Observation</th>
+                  <td>A</td>
+                  <td>IG Fixed Data</td>
+               </tr>
+               <tr class="hidden">
+                  <th>OM1.27[1]</th>
+                  <th>Outside Site(s) Where Observation may be Performed</th>
+                  <th/>
+                  <th/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.27[1].1</td>
+                  <td class="embSpace">Identifier</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.27[1].2</td>
+                  <td class="embSpace">Text</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.27[1].3</td>
+                  <td class="embSpace">Name of Coding System</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.27[1].7</td>
+                  <td class="embSpace">Coding System Version ID</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.27[1].8</td>
+                  <td class="embSpace">Alternate Coding System Version ID</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <th>OM1.27[2]</th>
+                  <th>Outside Site(s) Where Observation may be Performed</th>
+                  <th/>
+                  <th/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.27[2].1</td>
+                  <td class="embSpace">Identifier</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.27[2].2</td>
+                  <td class="embSpace">Text</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.27[2].3</td>
+                  <td class="embSpace">Name of Coding System</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.27[2].7</td>
+                  <td class="embSpace">Coding System Version ID</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.27[2].8</td>
+                  <td class="embSpace">Alternate Coding System Version ID</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <th>OM1.28[1]</th>
+                  <th>Address of Outside Site(s)</th>
+                  <th/>
+                  <th/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.28[1].1</td>
+                  <td class="embSpace">Street Address</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSubSpace">OM1.28[1].1.1</td>
+                  <td class="embSubSpace">Street or Mailing Address</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.28[1].3</td>
+                  <td class="embSpace">City</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.28[1].4</td>
+                  <td class="embSpace">State or Province</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.28[1].5</td>
+                  <td class="embSpace">Zip or Postal Code</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.28[1].6</td>
+                  <td class="embSpace">Country Code</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.28[1].7</td>
+                  <td class="embSpace">Address Type</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <th>OM1.28[2]</th>
+                  <th>Address of Outside Site(s)</th>
+                  <th/>
+                  <th/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.28[2].1</td>
+                  <td class="embSpace">Street Address</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSubSpace">OM1.28[2].1.1</td>
+                  <td class="embSubSpace">Street or Mailing Address</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.28[2].3</td>
+                  <td class="embSpace">City</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.28[2].4</td>
+                  <td class="embSpace">State or Province</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.28[2].5</td>
+                  <td class="embSpace">Zip or Postal Code</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.28[2].6</td>
+                  <td class="embSpace">Country Code</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.28[2].7</td>
+                  <td class="embSpace">Address Type</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <th>OM1.31[1]</th>
+                  <th>Observations Required to Interpret the Observation</th>
+                  <th/>
+                  <th/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.31[1].1</td>
+                  <td class="embSpace">Identifier</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.31[1].2</td>
+                  <td class="embSpace">Text</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.31[1].3</td>
+                  <td class="embSpace">Name of Coding System</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.31[1].7</td>
+                  <td class="embSpace">Coding System Version ID</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.31[1].8</td>
+                  <td class="embSpace">Alternate Coding System Version ID</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <th>OM1.31[2]</th>
+                  <th>Observations Required to Interpret the Observation</th>
+                  <th/>
+                  <th/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.31[2].1</td>
+                  <td class="embSpace">Identifier</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.31[2].2</td>
+                  <td class="embSpace">Text</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.31[2].3</td>
+                  <td class="embSpace">Name of Coding System</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.31[2].7</td>
+                  <td class="embSpace">Coding System Version ID</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.31[2].8</td>
+                  <td class="embSpace">Alternate Coding System Version ID</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <th>OM1.32[1]</th>
+                  <th>Interpretation of Observations</th>
+                  <th/>
+                  <th/>
+               </tr>
+               <tr class="hidden">
+                  <th>OM1.33[1]</th>
+                  <th>Contraindications to Observations</th>
+                  <th/>
+                  <th/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.33[1].1</td>
+                  <td class="embSpace">Identifier</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.33[1].2</td>
+                  <td class="embSpace">Text</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.33[1].3</td>
+                  <td class="embSpace">Name of Coding System</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.33[1].7</td>
+                  <td class="embSpace">Coding System Version ID</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.33[1].8</td>
+                  <td class="embSpace">Alternate Coding System Version ID</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <th>OM1.33[2]</th>
+                  <th>Contraindications to Observations</th>
+                  <th/>
+                  <th/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.33[2].1</td>
+                  <td class="embSpace">Identifier</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.33[2].2</td>
+                  <td class="embSpace">Text</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.33[2].3</td>
+                  <td class="embSpace">Name of Coding System</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.33[2].7</td>
+                  <td class="embSpace">Coding System Version ID</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.33[2].8</td>
+                  <td class="embSpace">Alternate Coding System Version ID</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <th>OM1.34[1]</th>
+                  <th>Reflex Tests/Observations</th>
+                  <th/>
+                  <th/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.34[1].1</td>
+                  <td class="embSpace">Identifier</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.34[1].2</td>
+                  <td class="embSpace">Text</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.34[1].3</td>
+                  <td class="embSpace">Name of Coding System</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.34[1].4</td>
+                  <td class="embSpace">Alternate Identifier</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.34[1].5</td>
+                  <td class="embSpace">Alternate Text</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.34[1].6</td>
+                  <td class="embSpace">Name of Alternate Coding System</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.34[1].7</td>
+                  <td class="embSpace">Coding System Version ID</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.34[1].8</td>
+                  <td class="embSpace">Alternate Coding System Version ID</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <th>OM1.34[2]</th>
+                  <th>Reflex Tests/Observations</th>
+                  <th/>
+                  <th/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.34[2].1</td>
+                  <td class="embSpace">Identifier</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.34[2].2</td>
+                  <td class="embSpace">Text</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.34[2].3</td>
+                  <td class="embSpace">Name of Coding System</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.34[2].4</td>
+                  <td class="embSpace">Alternate Identifier</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.34[2].5</td>
+                  <td class="embSpace">Alternate Text</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.34[2].6</td>
+                  <td class="embSpace">Name of Alternate Coding System</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.34[2].7</td>
+                  <td class="embSpace">Coding System Version ID</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.34[2].8</td>
+                  <td class="embSpace">Alternate Coding System Version ID</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <th>OM1.35[1]</th>
+                  <th>Rules that Trigger Reflex Testing</th>
+                  <th/>
+                  <th/>
+               </tr>
+               <tr class="hidden">
+                  <th>OM1.35[2]</th>
+                  <th>Rules that Trigger Reflex Testing</th>
+                  <th/>
+                  <th/>
+               </tr>
+               <tr class="hidden">
+                  <th>OM1.37[1]</th>
+                  <th>Patient Preparation</th>
+                  <th/>
+                  <th/>
+               </tr>
+               <tr class="hidden">
+                  <th>OM1.37[2]</th>
+                  <th>Patient Preparation</th>
+                  <th/>
+                  <th/>
+               </tr>
+               <tr class="hidden">
+                  <th>OM1.39</th>
+                  <th>Factors that may Affect the Observation</th>
+                  <th/>
+                  <th/>
+               </tr>
+               <tr class="hidden">
+                  <th>OM1.40[1]</th>
+                  <th>Service/Test/Observation Performance Schedule</th>
+                  <th/>
+                  <th/>
+               </tr>
+               <tr class="hidden">
+                  <th>OM1.40[2]</th>
+                  <th>Service/Test/Observation Performance Schedule</th>
+                  <th/>
+                  <th/>
+               </tr>
+               <tr class="hidden">
+                  <th>OM1.48</th>
+                  <th>Exclusive Test</th>
+                  <th/>
+                  <th/>
+               </tr>
+               <tr class="hidden">
+                  <th>OM1.49</th>
+                  <th>Diagnostic Service Sector ID</th>
+                  <th/>
+                  <th/>
+               </tr>
+               <tr class="hidden">
+                  <th>OM1.51[1]</th>
+                  <th>Other Names</th>
+                  <th/>
+                  <th/>
+               </tr>
+               <tr class="hidden">
+                  <th>OM1.51[2]</th>
+                  <th>Other Names</th>
+                  <th/>
+                  <th/>
+               </tr>
+               <tr class="hidden">
+                  <th>OM1.52[1]</th>
+                  <th>Replacement Producer's Service/Test/Observation ID</th>
+                  <th/>
+                  <th/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.52[1].1</td>
+                  <td class="embSpace">Identifier</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.52[1].2</td>
+                  <td class="embSpace">Text</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.52[1].3</td>
+                  <td class="embSpace">Name of Coding System</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.52[1].4</td>
+                  <td class="embSpace">Alternate Identifier</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.52[1].5</td>
+                  <td class="embSpace">Alternate Text</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.52[1].6</td>
+                  <td class="embSpace">Name of Alternate Coding System</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.52[1].7</td>
+                  <td class="embSpace">Coding System Version ID</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.52[1].8</td>
+                  <td class="embSpace">Alternate Coding System Version ID</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <th>OM1.52[2]</th>
+                  <th>Replacement Producer's Service/Test/Observation ID</th>
+                  <th/>
+                  <th/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.52[2].1</td>
+                  <td class="embSpace">Identifier</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.52[2].2</td>
+                  <td class="embSpace">Text</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.52[2].3</td>
+                  <td class="embSpace">Name of Coding System</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.52[2].4</td>
+                  <td class="embSpace">Alternate Identifier</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.52[2].5</td>
+                  <td class="embSpace">Alternate Text</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.52[2].6</td>
+                  <td class="embSpace">Name of Alternate Coding System</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.52[2].7</td>
+                  <td class="embSpace">Coding System Version ID</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.52[2].8</td>
+                  <td class="embSpace">Alternate Coding System Version ID</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <th>OM1.52[3]</th>
+                  <th>Replacement Producer's Service/Test/Observation ID</th>
+                  <th/>
+                  <th/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.52[3].1</td>
+                  <td class="embSpace">Identifier</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.52[3].2</td>
+                  <td class="embSpace">Text</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.52[3].3</td>
+                  <td class="embSpace">Name of Coding System</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.52[3].4</td>
+                  <td class="embSpace">Alternate Identifier</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.52[3].5</td>
+                  <td class="embSpace">Alternate Text</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.52[3].6</td>
+                  <td class="embSpace">Name of Alternate Coding System</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.52[3].7</td>
+                  <td class="embSpace">Coding System Version ID</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.52[3].8</td>
+                  <td class="embSpace">Alternate Coding System Version ID</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <th>OM1.52[4]</th>
+                  <th>Replacement Producer's Service/Test/Observation ID</th>
+                  <th/>
+                  <th/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.52[4].1</td>
+                  <td class="embSpace">Identifier</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.52[4].2</td>
+                  <td class="embSpace">Text</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.52[4].3</td>
+                  <td class="embSpace">Name of Coding System</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.52[4].4</td>
+                  <td class="embSpace">Alternate Identifier</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.52[4].5</td>
+                  <td class="embSpace">Alternate Text</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.52[4].6</td>
+                  <td class="embSpace">Name of Alternate Coding System</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.52[4].7</td>
+                  <td class="embSpace">Coding System Version ID</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.52[4].8</td>
+                  <td class="embSpace">Alternate Coding System Version ID</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <th>OM1.53[1]</th>
+                  <th>Prior Results Instructions</th>
+                  <th/>
+                  <th/>
+               </tr>
+               <tr class="hidden">
+                  <th>OM1.53[2]</th>
+                  <th>Prior Results Instructions</th>
+                  <th/>
+                  <th/>
+               </tr>
+               <tr class="hidden">
+                  <th>OM1.54[1]</th>
+                  <th>Special Instructions</th>
+                  <th/>
+                  <th/>
+               </tr>
+               <tr class="hidden">
+                  <th>OM1.54[2]</th>
+                  <th>Special Instructions</th>
+                  <th/>
+                  <th/>
+               </tr>
+               <tr class="hidden">
+                  <th>OM1.55[1]</th>
+                  <th>Test Relationship Category</th>
+                  <th/>
+                  <th/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.55[1].1</td>
+                  <td class="embSpace">Identifier</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.55[1].2</td>
+                  <td class="embSpace">Text</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.55[1].3</td>
+                  <td class="embSpace">Name of Coding System</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.55[1].7</td>
+                  <td class="embSpace">Coding System Version ID</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.55[1].8</td>
+                  <td class="embSpace">Alternate Coding System Version ID</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <th>OM1.56[1]</th>
+                  <th>Observation Identifier associated with Producer's Service/Test/Observation ID</th>
+                  <th/>
+                  <th/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.56[1].1</td>
+                  <td class="embSpace">Identifier</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.56[1].2</td>
+                  <td class="embSpace">Text</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.56[1].3</td>
+                  <td class="embSpace">Name of Coding System</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.56[1].4</td>
+                  <td class="embSpace">Alternate Identifier</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.56[1].5</td>
+                  <td class="embSpace">Alternate Text</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.56[1].6</td>
+                  <td class="embSpace">Name of Alternate Coding System</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.56[1].7</td>
+                  <td class="embSpace">Coding System Version ID</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.56[1].8</td>
+                  <td class="embSpace">Alternate Coding System Version ID</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.56[1].9</td>
+                  <td class="embSpace">Original Text</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <th>OM1.57[1]</th>
+                  <th>Expected Turn-Around Time</th>
+                  <th/>
+                  <th/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.57[1].1</td>
+                  <td class="embSpace">Quantity</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.57[1].2</td>
+                  <td class="embSpace">Units</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSubSpace">OM1.57[1].2.1</td>
+                  <td class="embSubSpace">Identifier</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSubSpace">OM1.57[1].2.2</td>
+                  <td class="embSubSpace">Text</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSubSpace">OM1.57[1].2.3</td>
+                  <td class="embSubSpace">Name of Coding System</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSubSpace">OM1.57[1].2.7</td>
+                  <td class="embSubSpace">Coding System Version ID</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSubSpace">OM1.57[1].2.8</td>
+                  <td class="embSubSpace">Alternate Coding System Version ID</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+            </tbody>
+         </table>
+      </fieldset>
+      <br/>
+      <fieldset>
+         <div class="title">MFE : </div>
+         <table>
+            <thead>
+               <tr>
+                  <th>Location</th>
+                  <th>Data Element</th>
+                  <th>Data</th>
+                  <th>Categorization</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <th>MFE.1</th>
+                  <th>Record-Level Event Code</th>
+                  <td>MAD</td>
+                  <td>Test Case Fixed Data</td>
+               </tr>
+               <tr class="hidden">
+                  <th>MFE.2</th>
+                  <th>MFN Control ID</th>
+                  <th/>
+                  <th/>
+               </tr>
+               <tr>
+                  <th>MFE.3</th>
+                  <th>Effective Date/Time</th>
+                  <th/>
+                  <th/>
+               </tr>
+               <tr>
+                  <td class="embSpace">MFE.3.1</td>
+                  <td class="embSpace">Time</td>
+                  <td>20131219145310</td>
+                  <td>System Generated</td>
+               </tr>
+               <tr>
+                  <th>MFE.4</th>
+                  <th>Primary Key Value - MFE</th>
+                  <th/>
+                  <th/>
+               </tr>
+               <tr>
+                  <td class="embSpace">MFE.4.1</td>
+                  <td class="embSpace">Identifier</td>
+                  <td>12</td>
+                  <td>Changeable Data</td>
+               </tr>
+               <tr>
+                  <td class="embSpace">MFE.4.2</td>
+                  <td class="embSpace">Text</td>
+                  <td>INR</td>
+                  <td>Changeable Data</td>
+               </tr>
+               <tr>
+                  <td class="embSpace">MFE.4.3</td>
+                  <td class="embSpace">Name of Coding System</td>
+                  <td>99USI</td>
+                  <td>Changeable Data</td>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">MFE.4.7</td>
+                  <td class="embSpace">Coding System Version ID</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr>
+                  <th>MFE.5</th>
+                  <th>Primary Key Value Type</th>
+                  <td>CWE</td>
+                  <td>IG Fixed Data</td>
+               </tr>
+            </tbody>
+         </table>
+      </fieldset>
+      <br/>
+      <fieldset>
+         <div class="title">OM1 : </div>
+         <table>
+            <thead>
+               <tr>
+                  <th>Location</th>
+                  <th>Data Element</th>
+                  <th>Data</th>
+                  <th>Categorization</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <th>OM1.1</th>
+                  <th>Sequence Number - Test/Observation Master File</th>
+                  <td>2</td>
+                  <td>IG Fixed Data</td>
+               </tr>
+               <tr>
+                  <th>OM1.2</th>
+                  <th>Producer's Service/Test/Observation ID</th>
+                  <th/>
+                  <th/>
+               </tr>
+               <tr>
+                  <td class="embSpace">OM1.2.1</td>
+                  <td class="embSpace">Identifier</td>
+                  <td>12</td>
+                  <td>Changeable Data</td>
+               </tr>
+               <tr>
+                  <td class="embSpace">OM1.2.2</td>
+                  <td class="embSpace">Text</td>
+                  <td>INR</td>
+                  <td>Changeable Data</td>
+               </tr>
+               <tr>
+                  <td class="embSpace">OM1.2.3</td>
+                  <td class="embSpace">Name of Coding System</td>
+                  <td>99USI</td>
+                  <td>Changeable Data</td>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.2.7</td>
+                  <td class="embSpace">Coding System Version ID</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr>
+                  <th>OM1.4</th>
+                  <th>Specimen Required</th>
+                  <td>N</td>
+                  <td>Changeable Data</td>
+               </tr>
+               <tr>
+                  <th>OM1.5</th>
+                  <th>Producer ID</th>
+                  <th/>
+                  <th/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.5.1</td>
+                  <td class="embSpace">Identifier</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr>
+                  <td class="embSpace">OM1.5.2</td>
+                  <td class="embSpace">Text</td>
+                  <td>Century Hospital Clinical Laboratory</td>
+                  <td>Changeable Data</td>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.5.3</td>
+                  <td class="embSpace">Name of Coding System</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.5.7</td>
+                  <td class="embSpace">Coding System Version ID</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.5.8</td>
+                  <td class="embSpace">Alternate Coding System Version ID</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <th>OM1.7</th>
+                  <th>Other Service/Test/Observation IDs for the Observation</th>
+                  <th/>
+                  <th/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.7.1</td>
+                  <td class="embSpace">Identifier</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.7.2</td>
+                  <td class="embSpace">Text</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.7.3</td>
+                  <td class="embSpace">Name of Coding System</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.7.7</td>
+                  <td class="embSpace">Coding System Version ID</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <th>OM1.9</th>
+                  <th>Preferred Report Name for the Observation</th>
+                  <th/>
+                  <th/>
+               </tr>
+               <tr class="hidden">
+                  <th>OM1.10</th>
+                  <th>Preferred Short Name on Mnemonic for Observation</th>
+                  <th/>
+                  <th/>
+               </tr>
+               <tr>
+                  <th>OM1.11</th>
+                  <th>Preferred Long Name for the Observation</th>
+                  <td>International Normalized Ratio</td>
+                  <td>Changeable Data</td>
+               </tr>
+               <tr>
+                  <th>OM1.12</th>
+                  <th>Orderability</th>
+                  <td>N</td>
+                  <td>Test Case Fixed Data</td>
+               </tr>
+               <tr>
+                  <th>OM1.18</th>
+                  <th>Nature of Service/Test/Observation</th>
+                  <td>C</td>
+                  <td>IG Fixed Data</td>
+               </tr>
+               <tr class="hidden">
+                  <th>OM1.27[1]</th>
+                  <th>Outside Site(s) Where Observation may be Performed</th>
+                  <th/>
+                  <th/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.27[1].1</td>
+                  <td class="embSpace">Identifier</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.27[1].2</td>
+                  <td class="embSpace">Text</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.27[1].3</td>
+                  <td class="embSpace">Name of Coding System</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.27[1].7</td>
+                  <td class="embSpace">Coding System Version ID</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.27[1].8</td>
+                  <td class="embSpace">Alternate Coding System Version ID</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <th>OM1.27[2]</th>
+                  <th>Outside Site(s) Where Observation may be Performed</th>
+                  <th/>
+                  <th/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.27[2].1</td>
+                  <td class="embSpace">Identifier</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.27[2].2</td>
+                  <td class="embSpace">Text</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.27[2].3</td>
+                  <td class="embSpace">Name of Coding System</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.27[2].7</td>
+                  <td class="embSpace">Coding System Version ID</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.27[2].8</td>
+                  <td class="embSpace">Alternate Coding System Version ID</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <th>OM1.28[1]</th>
+                  <th>Address of Outside Site(s)</th>
+                  <th/>
+                  <th/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.28[1].1</td>
+                  <td class="embSpace">Street Address</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSubSpace">OM1.28[1].1.1</td>
+                  <td class="embSubSpace">Street or Mailing Address</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.28[1].3</td>
+                  <td class="embSpace">City</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.28[1].4</td>
+                  <td class="embSpace">State or Province</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.28[1].5</td>
+                  <td class="embSpace">Zip or Postal Code</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.28[1].6</td>
+                  <td class="embSpace">Country Code</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.28[1].7</td>
+                  <td class="embSpace">Address Type</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <th>OM1.28[2]</th>
+                  <th>Address of Outside Site(s)</th>
+                  <th/>
+                  <th/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.28[2].1</td>
+                  <td class="embSpace">Street Address</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSubSpace">OM1.28[2].1.1</td>
+                  <td class="embSubSpace">Street or Mailing Address</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.28[2].3</td>
+                  <td class="embSpace">City</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.28[2].4</td>
+                  <td class="embSpace">State or Province</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.28[2].5</td>
+                  <td class="embSpace">Zip or Postal Code</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.28[2].6</td>
+                  <td class="embSpace">Country Code</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.28[2].7</td>
+                  <td class="embSpace">Address Type</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <th>OM1.31[1]</th>
+                  <th>Observations Required to Interpret the Observation</th>
+                  <th/>
+                  <th/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.31[1].1</td>
+                  <td class="embSpace">Identifier</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.31[1].2</td>
+                  <td class="embSpace">Text</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.31[1].3</td>
+                  <td class="embSpace">Name of Coding System</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.31[1].7</td>
+                  <td class="embSpace">Coding System Version ID</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.31[1].8</td>
+                  <td class="embSpace">Alternate Coding System Version ID</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <th>OM1.31[2]</th>
+                  <th>Observations Required to Interpret the Observation</th>
+                  <th/>
+                  <th/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.31[2].1</td>
+                  <td class="embSpace">Identifier</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.31[2].2</td>
+                  <td class="embSpace">Text</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.31[2].3</td>
+                  <td class="embSpace">Name of Coding System</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.31[2].7</td>
+                  <td class="embSpace">Coding System Version ID</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.31[2].8</td>
+                  <td class="embSpace">Alternate Coding System Version ID</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <th>OM1.32[1]</th>
+                  <th>Interpretation of Observations</th>
+                  <th/>
+                  <th/>
+               </tr>
+               <tr class="hidden">
+                  <th>OM1.33[1]</th>
+                  <th>Contraindications to Observations</th>
+                  <th/>
+                  <th/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.33[1].1</td>
+                  <td class="embSpace">Identifier</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.33[1].2</td>
+                  <td class="embSpace">Text</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.33[1].3</td>
+                  <td class="embSpace">Name of Coding System</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.33[1].7</td>
+                  <td class="embSpace">Coding System Version ID</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.33[1].8</td>
+                  <td class="embSpace">Alternate Coding System Version ID</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <th>OM1.33[2]</th>
+                  <th>Contraindications to Observations</th>
+                  <th/>
+                  <th/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.33[2].1</td>
+                  <td class="embSpace">Identifier</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.33[2].2</td>
+                  <td class="embSpace">Text</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.33[2].3</td>
+                  <td class="embSpace">Name of Coding System</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.33[2].7</td>
+                  <td class="embSpace">Coding System Version ID</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.33[2].8</td>
+                  <td class="embSpace">Alternate Coding System Version ID</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <th>OM1.34[1]</th>
+                  <th>Reflex Tests/Observations</th>
+                  <th/>
+                  <th/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.34[1].1</td>
+                  <td class="embSpace">Identifier</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.34[1].2</td>
+                  <td class="embSpace">Text</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.34[1].3</td>
+                  <td class="embSpace">Name of Coding System</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.34[1].4</td>
+                  <td class="embSpace">Alternate Identifier</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.34[1].5</td>
+                  <td class="embSpace">Alternate Text</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.34[1].6</td>
+                  <td class="embSpace">Name of Alternate Coding System</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.34[1].7</td>
+                  <td class="embSpace">Coding System Version ID</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.34[1].8</td>
+                  <td class="embSpace">Alternate Coding System Version ID</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <th>OM1.34[2]</th>
+                  <th>Reflex Tests/Observations</th>
+                  <th/>
+                  <th/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.34[2].1</td>
+                  <td class="embSpace">Identifier</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.34[2].2</td>
+                  <td class="embSpace">Text</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.34[2].3</td>
+                  <td class="embSpace">Name of Coding System</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.34[2].4</td>
+                  <td class="embSpace">Alternate Identifier</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.34[2].5</td>
+                  <td class="embSpace">Alternate Text</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.34[2].6</td>
+                  <td class="embSpace">Name of Alternate Coding System</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.34[2].7</td>
+                  <td class="embSpace">Coding System Version ID</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.34[2].8</td>
+                  <td class="embSpace">Alternate Coding System Version ID</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <th>OM1.35[1]</th>
+                  <th>Rules that Trigger Reflex Testing</th>
+                  <th/>
+                  <th/>
+               </tr>
+               <tr class="hidden">
+                  <th>OM1.35[2]</th>
+                  <th>Rules that Trigger Reflex Testing</th>
+                  <th/>
+                  <th/>
+               </tr>
+               <tr class="hidden">
+                  <th>OM1.37[1]</th>
+                  <th>Patient Preparation</th>
+                  <th/>
+                  <th/>
+               </tr>
+               <tr class="hidden">
+                  <th>OM1.37[2]</th>
+                  <th>Patient Preparation</th>
+                  <th/>
+                  <th/>
+               </tr>
+               <tr class="hidden">
+                  <th>OM1.39</th>
+                  <th>Factors that may Affect the Observation</th>
+                  <th/>
+                  <th/>
+               </tr>
+               <tr class="hidden">
+                  <th>OM1.40[1]</th>
+                  <th>Service/Test/Observation Performance Schedule</th>
+                  <th/>
+                  <th/>
+               </tr>
+               <tr class="hidden">
+                  <th>OM1.40[2]</th>
+                  <th>Service/Test/Observation Performance Schedule</th>
+                  <th/>
+                  <th/>
+               </tr>
+               <tr class="hidden">
+                  <th>OM1.48</th>
+                  <th>Exclusive Test</th>
+                  <th/>
+                  <th/>
+               </tr>
+               <tr class="hidden">
+                  <th>OM1.49</th>
+                  <th>Diagnostic Service Sector ID</th>
+                  <th/>
+                  <th/>
+               </tr>
+               <tr class="hidden">
+                  <th>OM1.51[1]</th>
+                  <th>Other Names</th>
+                  <th/>
+                  <th/>
+               </tr>
+               <tr class="hidden">
+                  <th>OM1.51[2]</th>
+                  <th>Other Names</th>
+                  <th/>
+                  <th/>
+               </tr>
+               <tr class="hidden">
+                  <th>OM1.52[1]</th>
+                  <th>Replacement Producer's Service/Test/Observation ID</th>
+                  <th/>
+                  <th/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.52[1].1</td>
+                  <td class="embSpace">Identifier</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.52[1].2</td>
+                  <td class="embSpace">Text</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.52[1].3</td>
+                  <td class="embSpace">Name of Coding System</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.52[1].4</td>
+                  <td class="embSpace">Alternate Identifier</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.52[1].5</td>
+                  <td class="embSpace">Alternate Text</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.52[1].6</td>
+                  <td class="embSpace">Name of Alternate Coding System</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.52[1].7</td>
+                  <td class="embSpace">Coding System Version ID</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.52[1].8</td>
+                  <td class="embSpace">Alternate Coding System Version ID</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <th>OM1.52[2]</th>
+                  <th>Replacement Producer's Service/Test/Observation ID</th>
+                  <th/>
+                  <th/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.52[2].1</td>
+                  <td class="embSpace">Identifier</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.52[2].2</td>
+                  <td class="embSpace">Text</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.52[2].3</td>
+                  <td class="embSpace">Name of Coding System</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.52[2].4</td>
+                  <td class="embSpace">Alternate Identifier</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.52[2].5</td>
+                  <td class="embSpace">Alternate Text</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.52[2].6</td>
+                  <td class="embSpace">Name of Alternate Coding System</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.52[2].7</td>
+                  <td class="embSpace">Coding System Version ID</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.52[2].8</td>
+                  <td class="embSpace">Alternate Coding System Version ID</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <th>OM1.52[3]</th>
+                  <th>Replacement Producer's Service/Test/Observation ID</th>
+                  <th/>
+                  <th/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.52[3].1</td>
+                  <td class="embSpace">Identifier</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.52[3].2</td>
+                  <td class="embSpace">Text</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.52[3].3</td>
+                  <td class="embSpace">Name of Coding System</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.52[3].4</td>
+                  <td class="embSpace">Alternate Identifier</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.52[3].5</td>
+                  <td class="embSpace">Alternate Text</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.52[3].6</td>
+                  <td class="embSpace">Name of Alternate Coding System</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.52[3].7</td>
+                  <td class="embSpace">Coding System Version ID</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.52[3].8</td>
+                  <td class="embSpace">Alternate Coding System Version ID</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <th>OM1.52[4]</th>
+                  <th>Replacement Producer's Service/Test/Observation ID</th>
+                  <th/>
+                  <th/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.52[4].1</td>
+                  <td class="embSpace">Identifier</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.52[4].2</td>
+                  <td class="embSpace">Text</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.52[4].3</td>
+                  <td class="embSpace">Name of Coding System</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.52[4].4</td>
+                  <td class="embSpace">Alternate Identifier</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.52[4].5</td>
+                  <td class="embSpace">Alternate Text</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.52[4].6</td>
+                  <td class="embSpace">Name of Alternate Coding System</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.52[4].7</td>
+                  <td class="embSpace">Coding System Version ID</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.52[4].8</td>
+                  <td class="embSpace">Alternate Coding System Version ID</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <th>OM1.53[1]</th>
+                  <th>Prior Results Instructions</th>
+                  <th/>
+                  <th/>
+               </tr>
+               <tr class="hidden">
+                  <th>OM1.53[2]</th>
+                  <th>Prior Results Instructions</th>
+                  <th/>
+                  <th/>
+               </tr>
+               <tr class="hidden">
+                  <th>OM1.54[1]</th>
+                  <th>Special Instructions</th>
+                  <th/>
+                  <th/>
+               </tr>
+               <tr class="hidden">
+                  <th>OM1.54[2]</th>
+                  <th>Special Instructions</th>
+                  <th/>
+                  <th/>
+               </tr>
+               <tr class="hidden">
+                  <th>OM1.55[1]</th>
+                  <th>Test Relationship Category</th>
+                  <th/>
+                  <th/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.55[1].1</td>
+                  <td class="embSpace">Identifier</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.55[1].2</td>
+                  <td class="embSpace">Text</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.55[1].3</td>
+                  <td class="embSpace">Name of Coding System</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.55[1].7</td>
+                  <td class="embSpace">Coding System Version ID</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.55[1].8</td>
+                  <td class="embSpace">Alternate Coding System Version ID</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <th>OM1.56[1]</th>
+                  <th>Observation Identifier associated with Producer's Service/Test/Observation ID</th>
+                  <th/>
+                  <th/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.56[1].1</td>
+                  <td class="embSpace">Identifier</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.56[1].2</td>
+                  <td class="embSpace">Text</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.56[1].3</td>
+                  <td class="embSpace">Name of Coding System</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.56[1].4</td>
+                  <td class="embSpace">Alternate Identifier</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.56[1].5</td>
+                  <td class="embSpace">Alternate Text</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.56[1].6</td>
+                  <td class="embSpace">Name of Alternate Coding System</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.56[1].7</td>
+                  <td class="embSpace">Coding System Version ID</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.56[1].8</td>
+                  <td class="embSpace">Alternate Coding System Version ID</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.56[1].9</td>
+                  <td class="embSpace">Original Text</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <th>OM1.57[1]</th>
+                  <th>Expected Turn-Around Time</th>
+                  <th/>
+                  <th/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.57[1].1</td>
+                  <td class="embSpace">Quantity</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSpace">OM1.57[1].2</td>
+                  <td class="embSpace">Units</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSubSpace">OM1.57[1].2.1</td>
+                  <td class="embSubSpace">Identifier</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSubSpace">OM1.57[1].2.2</td>
+                  <td class="embSubSpace">Text</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSubSpace">OM1.57[1].2.3</td>
+                  <td class="embSubSpace">Name of Coding System</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSubSpace">OM1.57[1].2.7</td>
+                  <td class="embSubSpace">Coding System Version ID</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+               <tr class="hidden">
+                  <td class="embSubSpace">OM1.57[1].2.8</td>
+                  <td class="embSubSpace">Alternate Coding System Version ID</td>
+                  <td class="childField"/>
+                  <td class="childField"/>
+               </tr>
+            </tbody>
+         </table>
+      </fieldset>
+      <br/>
+      <div class="pgBrk"/>
+      <h2>Test Data Specification</h2>
+      <br/>
+      
+      
+      
+      <fieldset xmlns:xs="http://www.w3.org/2001/XMLSchema"
+                xmlns:fn="http://www.w3.org/2005/xpath-functions">
+         <div class="title">Master File Identification</div>
+         <table>
+            <thead>
+               <tr>
+                  <th>Element name</th>
+                  <th>Data</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td>File-Level Event Code</td>
+                  <td>Replace current version of this master file with the version contained in this message</td>
+               </tr>
+            </tbody>
+         </table>
+      </fieldset>
+      
+      <fieldset xmlns:xs="http://www.w3.org/2001/XMLSchema"
+                xmlns:fn="http://www.w3.org/2005/xpath-functions">
+         <div class="title">Test information [1]</div>
+         <fieldset>
+            <div class="title">Master File Entry</div>
+            <table>
+               <thead>
+                  <tr>
+                     <th>Element name</th>
+                     <th>Data</th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr>
+                     <td>Record-Level Event Code</td>
+                     <td>Add record to master file</td>
+                  </tr>
+                  <tr>
+                     <td>Effective Date/Time</td>
+                     <td>2013-12-19 2:53:10pm</td>
+                  </tr>
+                  <tr>
+                     <td>Primary Key Value - MFE</td>
+                     <td>Prothrombin Time, PT</td>
+                  </tr>
+               </tbody>
+            </table>
+         </fieldset>
+         <fieldset>
+            <div class="title">General Segment</div>
+            <table>
+               <thead>
+                  <tr>
+                     <th>Element name</th>
+                     <th>Data</th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr>
+                     <td>Specimen Required</td>
+                     <td>Yes</td>
+                  </tr>
+                  <tr>
+                     <td>Producer ID</td>
+                     <td>Century Hospital Clinical Laboratory</td>
+                  </tr>
+                  <tr>
+                     <td>Preferred Long Name for the Observation</td>
+                     <td>Prothrombin Time</td>
+                  </tr>
+                  <tr>
+                     <td>Orderability</td>
+                     <td>No</td>
+                  </tr>
+                  <tr>
+                     <td>Nature of Service/Test/Observation</td>
+                     <td>A</td>
+                  </tr>
+               </tbody>
+            </table>
+         </fieldset>
+      </fieldset>
+      
+      
+      <fieldset xmlns:xs="http://www.w3.org/2001/XMLSchema"
+                xmlns:fn="http://www.w3.org/2005/xpath-functions">
+         <div class="title">Test information [2]</div>
+         <fieldset>
+            <div class="title">Master File Entry</div>
+            <table>
+               <thead>
+                  <tr>
+                     <th>Element name</th>
+                     <th>Data</th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr>
+                     <td>Record-Level Event Code</td>
+                     <td>Add record to master file</td>
+                  </tr>
+                  <tr>
+                     <td>Effective Date/Time</td>
+                     <td>2013-12-19 2:53:10pm</td>
+                  </tr>
+                  <tr>
+                     <td>Primary Key Value - MFE</td>
+                     <td>INR</td>
+                  </tr>
+               </tbody>
+            </table>
+         </fieldset>
+         <fieldset>
+            <div class="title">General Segment</div>
+            <table>
+               <thead>
+                  <tr>
+                     <th>Element name</th>
+                     <th>Data</th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr>
+                     <td>Specimen Required</td>
+                     <td>No</td>
+                  </tr>
+                  <tr>
+                     <td>Producer ID</td>
+                     <td>Century Hospital Clinical Laboratory</td>
+                  </tr>
+                  <tr>
+                     <td>Preferred Long Name for the Observation</td>
+                     <td>International Normalized Ratio</td>
+                  </tr>
+                  <tr>
+                     <td>Orderability</td>
+                     <td>No</td>
+                  </tr>
+                  <tr>
+                     <td>Nature of Service/Test/Observation</td>
+                     <td>C</td>
+                  </tr>
+               </tbody>
+            </table>
+         </fieldset>
+      </fieldset>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <div class="pgBrk"/>
+      <h2>HL7 Message</h2>
+      <br/>
+      <div class="hl7Message">
+         <p>MSH|^~\&amp;||^2.16.840.1.113883.3.72.5.21^ISO|||20130421113601-0700||MFN^M08^MFN_M08|EDOS_0.0_1.1-M08_GU|T|2.5.1|||AL|NE||<br/>|||EDOS_GU_Profile^^2.16.840.1.113883.9.70^ISO<br/>
+         </p>
+         <p>MFI|OMA^^HL70175||REP|||NE<br/>
+         </p>
+         <p>MFE|MAD||20131219145310|11^Prothrombin Time, PT^99USI|CWE<br/>
+         </p>
+         <p>OM1|1|11^Prothrombin Time, PT^99USI||Y|^Century Hospital Clinical Laboratory||||||Prothrombin Time|N||||||A<br/>
+         </p>
+         <p>MFE|MAD||20131219145310|12^INR^99USI|CWE<br/>
+         </p>
+         <p>OM1|2|12^INR^99USI||N|^Century Hospital Clinical Laboratory||||||International Normalized Ratio|N||||||C<br/>
+         </p>
+      </div>
+   </body>
+</html>

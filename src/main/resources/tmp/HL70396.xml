@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValueSetLibrary xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ValueSetLibraryIdentifier="HL70396" Description="HL70396 table library" Name="HL70396 table" OrganizationName="HL7 NIST" Status="Active" ValueSetLibraryVersion="1.0">
+	<NoValidation/>
+	<ValueSetDefinitions Order="1">
+		<ValueSetDefinition BindingIdentifier="HL70396" Name="Coding system" ContentDefinition="Extensional" Description="HL70396 for labs" Extensibility="Open" Oid="TBD" Stability="Dynamic" Version="V1">
+			<ValueElement Value="C4" CodeSystem="HL70396" Usage="R" DisplayName="CPT-4"/>
+			<ValueElement Value="LN" CodeSystem="HL70396" Usage="R" DisplayName="Logical Observation Identifier Names and Codes (LOINC)"/>
+
+			
+			<ValueElement Value="99zzz or L" CodeSystem="HL70396" Usage="P" DisplayName="Local general code (where z is an alphanumeric character)"/>
+			<ValueElement Value="ACR" CodeSystem="HL70396" Usage="P" DisplayName="American College of Radiology finding codes"/>
+			<ValueElement Value="ANS+" CodeSystem="HL70396" Usage="P" DisplayName="HL7 set of units of measure"/>
+			<ValueElement Value="ART" CodeSystem="HL70396" Usage="P" DisplayName="WHO Adverse Reaction Terms"/>
+			<ValueElement Value="AS4" CodeSystem="HL70396" Usage="P" DisplayName="ASTM E1238/ E1467 Universal"/>
+			<ValueElement Value="AS4E" CodeSystem="HL70396" Usage="P" DisplayName="AS4 Neurophysiology Codes"/>
+			<ValueElement Value="ATC" CodeSystem="HL70396" Usage="P" DisplayName="American Type Culture Collection"/>
+			<ValueElement Value="C5" CodeSystem="HL70396" Usage="P" DisplayName="CPT-5"/>
+			<ValueElement Value="CAS" CodeSystem="HL70396" Usage="P" DisplayName="Chemical abstract codes"/>
+			<ValueElement Value="CD2" CodeSystem="HL70396" Usage="P" DisplayName="CDT-2 Codes"/>
+			<ValueElement Value="CDCA" CodeSystem="HL70396" Usage="P" DisplayName="CDC Analyte Codes"/>
+			<ValueElement Value="CDCM" CodeSystem="HL70396" Usage="P" DisplayName="CDC Methods/Instruments Codes"/>
+			<ValueElement Value="CDS" CodeSystem="HL70396" Usage="P" DisplayName="CDC Surveillance"/>
+			<ValueElement Value="CE" CodeSystem="HL70396" Usage="P" DisplayName="CEN ECG diagnostic codes"/>
+			<ValueElement Value="CLP" CodeSystem="HL70396" Usage="P" DisplayName="CLIP"/>
+			<ValueElement Value="CPTM" CodeSystem="HL70396" Usage="P" DisplayName="CPT Modifier Code"/>
+			<ValueElement Value="CST" CodeSystem="HL70396" Usage="P" DisplayName="COSTART"/>
+			<ValueElement Value="CVX" CodeSystem="HL70396" Usage="P" DisplayName="CDC Vaccine Codes"/>
+			<ValueElement Value="DCM" CodeSystem="HL70396" Usage="P" DisplayName="DICOM Controlled Terminology"/>
+			<ValueElement Value="E" CodeSystem="HL70396" Usage="P" DisplayName="EUCLIDES"/>
+			<ValueElement Value="E5" CodeSystem="HL70396" Usage="P" DisplayName="Euclides  quantity codes"/>
+			<ValueElement Value="E6" CodeSystem="HL70396" Usage="P" DisplayName="Euclides Lab method codes"/>
+			<ValueElement Value="E7" CodeSystem="HL70396" Usage="P" DisplayName="Euclides Lab equipment codes"/>
+			<ValueElement Value="ENZC" CodeSystem="HL70396" Usage="P" DisplayName="Enzyme Codes"/>
+			<ValueElement Value="FDDC" CodeSystem="HL70396" Usage="P" DisplayName="First DataBank Drug Codes"/>
+			<ValueElement Value="FDDX" CodeSystem="HL70396" Usage="P" DisplayName="First DataBank Diagnostic Codes"/>
+			<ValueElement Value="FDK" CodeSystem="HL70396" Usage="P" DisplayName="FDA K10"/>
+			<ValueElement Value="HB" CodeSystem="HL70396" Usage="P" DisplayName="HIBCC"/>
+			<ValueElement Value="HCPCS" CodeSystem="HL70396" Usage="P" DisplayName="CMS (formerly HCFA)  Common Procedure Coding System"/>
+			<ValueElement Value="HCPT" CodeSystem="HL70396" Usage="P" DisplayName="Health Care Provider Taxonomy"/>
+			<ValueElement Value="HHC" CodeSystem="HL70396" Usage="P" DisplayName="Home Health Care"/>
+			<ValueElement Value="HI" CodeSystem="HL70396" Usage="P" DisplayName="Health Outcomes"/>
+			<ValueElement Value="HL7nnnn" CodeSystem="HL70396" Usage="P" DisplayName="HL7 Defined Codes where nnnn is the HL7 table number"/>
+			<ValueElement Value="HOT" CodeSystem="HL70396" Usage="P" DisplayName="Japanese Nationwide Medicine Code"/>
+			<ValueElement Value="HPC" CodeSystem="HL70396" Usage="P" DisplayName="CMS (formerly HCFA )Procedure Codes (HCPCS)"/>
+			<ValueElement Value="I10" CodeSystem="HL70396" Usage="P" DisplayName="ICD-10"/>
+			<ValueElement Value="I10P" CodeSystem="HL70396" Usage="P" DisplayName="ICD-10  Procedure Codes"/>
+			<ValueElement Value="I9" CodeSystem="HL70396" Usage="P" DisplayName="ICD9"/>
+			<ValueElement Value="I9C" CodeSystem="HL70396" Usage="P" DisplayName="ICD-9CM"/>
+			<ValueElement Value="IBT" CodeSystem="HL70396" Usage="P" DisplayName="ISBT"/>
+			<ValueElement Value="IBTnnnn" CodeSystem="HL70396" Usage="P" DisplayName="ISBT 128 codes where nnnn  specifies a specific table within ISBT 128."/>
+			<ValueElement Value="IC2" CodeSystem="HL70396" Usage="P" DisplayName="ICHPPC-2"/>
+			<ValueElement Value="ICD10AM" CodeSystem="HL70396" Usage="P" DisplayName="ICD-10 Australian modification"/>
+			<ValueElement Value="ICD10CA" CodeSystem="HL70396" Usage="P" DisplayName="ICD-10 Canada"/>
+			<ValueElement Value="ICDO" CodeSystem="HL70396" Usage="P" DisplayName="International Classification of Diseases for Oncology"/>
+			<ValueElement Value="ICS" CodeSystem="HL70396" Usage="P" DisplayName="ICCS"/>
+			<ValueElement Value="ICSD" CodeSystem="HL70396" Usage="P" DisplayName="International Classification of Sleep Disorders"/>
+			<ValueElement Value="ISO+" CodeSystem="HL70396" Usage="P" DisplayName="ISO 2955.83 (units of measure) with HL7 extensions"/>
+			<ValueElement Value="ISOnnnn" CodeSystem="HL70396" Usage="P" DisplayName="ISO Defined Codes where nnnn is the ISO table number"/>
+			<ValueElement Value="IUPC" CodeSystem="HL70396" Usage="P" DisplayName="IUPAC/IFCC Component Codes"/>
+			<ValueElement Value="IUPP" CodeSystem="HL70396" Usage="P" DisplayName="IUPAC/IFCC Property Codes"/>
+			<ValueElement Value="JC10" CodeSystem="HL70396" Usage="P" DisplayName="JLAC/JSLM, nationwide laboratory code"/>
+			<ValueElement Value="JC8" CodeSystem="HL70396" Usage="P" DisplayName="Japanese Chemistry"/>
+			<ValueElement Value="JJ1017" CodeSystem="HL70396" Usage="P" DisplayName="Japanese Image Examination Cache"/>
+			<ValueElement Value="LB" CodeSystem="HL70396" Usage="P" DisplayName="Local billing code"/>
+			<ValueElement Value="MCD" CodeSystem="HL70396" Usage="P" DisplayName="Medicaid"/>
+			<ValueElement Value="MCR" CodeSystem="HL70396" Usage="P" DisplayName="Medicare"/>
+			<ValueElement Value="MDDX" CodeSystem="HL70396" Usage="P" DisplayName="Medispan Diagnostic Codes"/>
+			<ValueElement Value="MEDC" CodeSystem="HL70396" Usage="P" DisplayName="Medical Economics Drug Codes"/>
+			<ValueElement Value="MEDR" CodeSystem="HL70396" Usage="P" DisplayName="Medical Dictionary for Drug Regulatory Affairs (MEDDRA)"/>
+			<ValueElement Value="MEDX" CodeSystem="HL70396" Usage="P" DisplayName="Medical Economics Diagnostic Codes"/>
+			<ValueElement Value="MGPI" CodeSystem="HL70396" Usage="P" DisplayName="Medispan GPI"/>
+			<ValueElement Value="MVX" CodeSystem="HL70396" Usage="P" DisplayName="CDC Vaccine Manufacturer Codes"/>
+			<ValueElement Value="NDA" CodeSystem="HL70396" Usage="P" DisplayName="NANDA"/>
+			<ValueElement Value="NDC" CodeSystem="HL70396" Usage="P" DisplayName="National drug codes"/>
+			<ValueElement Value="NIC" CodeSystem="HL70396" Usage="P" DisplayName="Nursing Interventions Classification"/>
+			<ValueElement Value="NPI" CodeSystem="HL70396" Usage="P" DisplayName="National Provider Identifier"/>
+			<ValueElement Value="NUBC" CodeSystem="HL70396" Usage="P" DisplayName="National Uniform Billing Committee Code"/>
+			<ValueElement Value="OHA" CodeSystem="HL70396" Usage="P" DisplayName="Omaha System"/>
+			<ValueElement Value="POS" CodeSystem="HL70396" Usage="P" DisplayName="POS Codes"/>
+			<ValueElement Value="RC" CodeSystem="HL70396" Usage="P" DisplayName="Read Classification"/>
+			<ValueElement Value="SDM" CodeSystem="HL70396" Usage="P" DisplayName="SNOMED- DICOM Microglossary"/>
+			<ValueElement Value="SNM" CodeSystem="HL70396" Usage="P" DisplayName="Systemized Nomenclature of Medicine (SNOMED)"/>
+			<ValueElement Value="SNM3" CodeSystem="HL70396" Usage="P" DisplayName="SNOMED International"/>
+			<ValueElement Value="SNT" CodeSystem="HL70396" Usage="P" DisplayName="SNOMED topology codes (anatomic sites)"/>
+			<ValueElement Value="UC" CodeSystem="HL70396" Usage="P" DisplayName="UCDS"/>
+			<ValueElement Value="UMD" CodeSystem="HL70396" Usage="P" DisplayName="MDNS"/>
+			<ValueElement Value="UML" CodeSystem="HL70396" Usage="P" DisplayName="Unified Medical Language"/>
+			<ValueElement Value="UPC" CodeSystem="HL70396" Usage="P" DisplayName="Universal Product Code"/>
+			<ValueElement Value="UPIN" CodeSystem="HL70396" Usage="P" DisplayName="UPIN"/>
+			<ValueElement Value="USPS" CodeSystem="HL70396" Usage="P" DisplayName="United States Postal Service"/>
+			<ValueElement Value="W1" CodeSystem="HL70396" Usage="P" DisplayName="WHO record # drug codes (6 digit)"/>
+			<ValueElement Value="W2" CodeSystem="HL70396" Usage="P" DisplayName="WHO record # drug codes (8 digit)"/>
+			<ValueElement Value="W4" CodeSystem="HL70396" Usage="P" DisplayName="WHO record # code with ASTM extension"/>
+			<ValueElement Value="WC" CodeSystem="HL70396" Usage="P" DisplayName="WHO ATC"/>
+		</ValueSetDefinition>
+	</ValueSetDefinitions>
+</ValueSetLibrary>

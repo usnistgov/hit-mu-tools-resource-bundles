@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!-- V2_IG_LTCF_R2_DSTU_R1_2013NOV -->
+<HL7v2xConformanceProfile HL7Version="2.5.1" ProfileType="HL7">
+	<MetaData Name="" OrgName="NIST" Version="V2_IG_LTCF_R2_DSTU_R1_2013NOV" Status="" Topics="confsig--2.5.1-profile-accNE_accAL-Deferred"/>
+	<Encodings>
+		<Encoding>ER7</Encoding>
+	</Encodings>
+	<DynamicDef AccAck="NE" AppAck="AL" MsgAckMode="Deferred"/>
+	<HL7v2xStaticDef MsgType="MFN" EventType="M04" MsgStructID="MFN_M04" EventDesc="MFN/MFK - Master files charge description" Role="Sender">
+		<MetaData Name="" OrgName="" Version="" Status="" Topics="confsig--2.5.1-static-MFN-M04-null-MFN_M04---Sender"/>
+		<Segment Name="MSH" flavor="EDOS_GU" LongName="Message Header" Usage="R" Min="1" Max="1"/>
+		<Segment Name="SFT" flavor="HL7" LongName="Software Segment" Usage="O" Min="0" Max="*"/>
+		<Segment Name="MFI" flavor="EDOS" LongName="Master File Identification" Usage="R" Min="1" Max="1"/>
+		<Segment Name="NTE" flavor="HL7" LongName="Notes and Comments" Usage="RE" Min="0" Max="*"/>
+		<SegGroup Name="MF_CDM" LongName="MF_CDM" Usage="R" Min="1" Max="*">
+			<Segment Name="MFE" flavor="EDOS" LongName="Master File Entry" Usage="R" Min="1" Max="1"/>
+			<Segment Name="NTE" flavor="HL7" LongName="Notes and Comments" Usage="RE" Min="0" Max="*"/>
+			<Segment Name="CDM" flavor="EDOS" LongName="Charge Description Master" Usage="R" Min="1" Max="1"/>
+			<Segment Name="NTE" flavor="HL7" LongName="Notes and Comments" Usage="RE" Min="0" Max="*"/>
+			<Segment Name="PRC" flavor="HL7" LongName="Pricing" Usage="O" Min="0" Max="*"/>
+		</SegGroup>
+	</HL7v2xStaticDef>
+</HL7v2xConformanceProfile>

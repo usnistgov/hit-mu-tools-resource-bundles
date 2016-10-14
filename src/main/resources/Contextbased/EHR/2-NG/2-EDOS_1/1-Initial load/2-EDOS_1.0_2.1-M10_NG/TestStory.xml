@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseMetaData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="EDOS_1.0_2.1-M10_NG" date="11/11/2015" name="M10_New" version="version2">
+		<Description>
+The initial Laboratory Test Compendium built by Century Hospital Clinical Laboratory is a subset of their Directory of Services.  It is based upon the most commonly ordered lab tests by Dr. Radon.  This compendium is delivered electronically to Dr. Nicholas Radon's practice EHR, as agreed to between Laboratory and Dr. Radon's Office and EHR-S Vendor.   The EHR-S will integrate the eDOS into its test directory and use it to allow Dr. Radon to place orders electronically to Century Hospital's Clinical Laboratory.   
+The initial laboratory test compendium is composed of five messages.  
+After Century Hospital's LIS successfully transmits the first message which provides information about each individual observation, it sends the second message which provides information for each orderable battery or profile.</Description>
+		<PreCondition>EDOS_1.0_1.1-M08_New
+has been completed.</PreCondition>
+		<PostCondition>eDOS M08 and M10 data elements are incorporated appropriately into the EHR-S.</PostCondition>
+		<TestObjectives>Demonstrate capability to support a M10 initial load message for panels and profiles (i.e. panel of panels).
+Demonstrate capability to support all supported data elements, including repeating fields in the OM5 segment.
+Demonstrate capability to support all supported data elements, including repeating fields in the OM4 segment.
+Demonstrate capability to support repeating segments for OM4.</TestObjectives>
+		<Comments>Initial upload of panels and profiles.
+Since this is a replace message, all data in this message will replace information from a previous eDOS M10 message.</Comments>
+	</TestCaseMetaData>

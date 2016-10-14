@@ -1,0 +1,627 @@
+<?xml version="1.0"?>
+<HL7v2xConformanceProfile HL7Version="2.5.1" ProfileType="HL7">
+	<MetaData Name="" OrgName="" Version="" Status="" Topics="confsig--2.5.1-profile-accNE_accAL-Deferred"/>
+	<Encodings>
+		<Encoding>ER7</Encoding>
+	</Encodings>
+	<DynamicDef AccAck="NE" AppAck="AL" MsgAckMode="Deferred"/>
+	<HL7v2xStaticDef MsgType="MFN" EventType="M08" MsgStructID="MFN_M08" EventDesc="MFN/MFK - Test/observation (numeric) master file" Role="Sender">
+		<MetaData Name="" OrgName="" Version="" Status="" Topics="confsig--2.5.1-static-MFN-M08-null-MFN_M08---Sender"/>
+		<Segment Name="MSH" LongName="Message Header" Usage="R" Min="1" Max="1">
+			<Field Name="Field Separator" Usage="R" Min="1" Max="1" Datatype="ST" Length="1"/>
+			<Field Name="Encoding Characters" Usage="R" Min="1" Max="1" Datatype="ST" Length="4"/>
+			<Field Name="Sending Application" Usage="O" Min="0" Max="1" Datatype="HD" Length="227" Table="0361">
+				<Component Name="Namespace ID" Usage="O" Datatype="IS" Length="20" Table="0300"/>
+				<Component Name="Universal ID" Usage="C" Datatype="ST" Length="199"/>
+				<Component Name="Universal ID Type" Usage="C" Datatype="ID" Length="6" Table="0301"/>
+			</Field>
+			<Field Name="Sending Facility" Usage="O" Min="0" Max="1" Datatype="HD" Length="227" Table="0362">
+				<Component Name="Namespace ID" Usage="O" Datatype="IS" Length="20" Table="0300"/>
+				<Component Name="Universal ID" Usage="C" Datatype="ST" Length="199"/>
+				<Component Name="Universal ID Type" Usage="C" Datatype="ID" Length="6" Table="0301"/>
+			</Field>
+			<Field Name="Receiving Application" Usage="O" Min="0" Max="1" Datatype="HD" Length="227" Table="0361">
+				<Component Name="Namespace ID" Usage="O" Datatype="IS" Length="20" Table="0300"/>
+				<Component Name="Universal ID" Usage="C" Datatype="ST" Length="199"/>
+				<Component Name="Universal ID Type" Usage="C" Datatype="ID" Length="6" Table="0301"/>
+			</Field>
+			<Field Name="Receiving Facility" Usage="O" Min="0" Max="1" Datatype="HD" Length="227" Table="0362">
+				<Component Name="Namespace ID" Usage="O" Datatype="IS" Length="20" Table="0300"/>
+				<Component Name="Universal ID" Usage="C" Datatype="ST" Length="199"/>
+				<Component Name="Universal ID Type" Usage="C" Datatype="ID" Length="6" Table="0301"/>
+			</Field>
+			<Field Name="Date/Time Of Message" Usage="R" Min="1" Max="1" Datatype="TS" Length="26">
+				<Component Name="Time" Usage="R" Datatype="DTM" Length="24"/>
+				<Component Name="Degree of Precision" Usage="B" Datatype="ID" Table="0529"/>
+			</Field>
+			<Field Name="Security" Usage="O" Min="0" Max="1" Datatype="ST" Length="40"/>
+			<Field Name="Message Type" Usage="R" Min="1" Max="1" Datatype="MSG" Length="15">
+				<Component Name="Message Code" Usage="R" Datatype="ID" Length="3" Table="0076"/>
+				<Component Name="Trigger Event" Usage="R" Datatype="ID" Length="3" Table="0003"/>
+				<Component Name="Message Structure" Usage="R" Datatype="ID" Length="7" Table="0354"/>
+			</Field>
+			<Field Name="Message Control ID" Usage="R" Min="1" Max="1" Datatype="ST" Length="20"/>
+			<Field Name="Processing ID" Usage="R" Min="1" Max="1" Datatype="PT" Length="3">
+				<Component Name="Processing ID" Usage="O" Datatype="ID" Length="1" Table="0103"/>
+				<Component Name="Processing Mode" Usage="O" Datatype="ID" Length="1" Table="0207"/>
+			</Field>
+			<Field Name="Version ID" Usage="R" Min="1" Max="1" Datatype="VID" Length="973">
+				<Component Name="Version ID" Usage="O" Datatype="ID" Length="5" Table="0104"/>
+				<Component Name="Internationalization Code" Usage="O" Datatype="CE" Length="483" Table="0399">
+					<SubComponent Name="Identifier" Usage="O" Datatype="ST" Length="20"/>
+					<SubComponent Name="Text" Usage="O" Datatype="ST" Length="199"/>
+					<SubComponent Name="Name of Coding System" Usage="O" Datatype="ID" Length="20" Table="0396"/>
+					<SubComponent Name="Alternate Identifier" Usage="O" Datatype="ST" Length="20"/>
+					<SubComponent Name="Alternate Text" Usage="O" Datatype="ST" Length="199"/>
+					<SubComponent Name="Name of Alternate Coding System" Usage="O" Datatype="ID" Length="20" Table="0396"/>
+				</Component>
+				<Component Name="International Version ID" Usage="O" Datatype="CE" Length="483">
+					<SubComponent Name="Identifier" Usage="O" Datatype="ST" Length="20"/>
+					<SubComponent Name="Text" Usage="O" Datatype="ST" Length="199"/>
+					<SubComponent Name="Name of Coding System" Usage="O" Datatype="ID" Length="20" Table="0396"/>
+					<SubComponent Name="Alternate Identifier" Usage="O" Datatype="ST" Length="20"/>
+					<SubComponent Name="Alternate Text" Usage="O" Datatype="ST" Length="199"/>
+					<SubComponent Name="Name of Alternate Coding System" Usage="O" Datatype="ID" Length="20" Table="0396"/>
+				</Component>
+			</Field>
+			<Field Name="Sequence Number" Usage="O" Min="0" Max="1" Datatype="NM" Length="15"/>
+			<Field Name="Continuation Pointer" Usage="O" Min="0" Max="1" Datatype="ST" Length="180"/>
+			<Field Name="Accept Acknowledgment Type" Usage="O" Min="0" Max="1" Datatype="ID" Length="2" Table="0155"/>
+			<Field Name="Application Acknowledgment Type" Usage="O" Min="0" Max="1" Datatype="ID" Length="2" Table="0155"/>
+			<Field Name="Country Code" Usage="O" Min="0" Max="1" Datatype="ID" Length="3" Table="0399"/>
+			<Field Name="Character Set" Usage="O" Min="0" Max="*" Datatype="ID" Length="16" Table="0211"/>
+			<Field Name="Principal Language Of Message" Usage="O" Min="0" Max="1" Datatype="CE" Length="483">
+				<Component Name="Identifier" Usage="O" Datatype="ST" Length="20"/>
+				<Component Name="Text" Usage="O" Datatype="ST" Length="199"/>
+				<Component Name="Name of Coding System" Usage="O" Datatype="ID" Length="20" Table="0396"/>
+				<Component Name="Alternate Identifier" Usage="O" Datatype="ST" Length="20"/>
+				<Component Name="Alternate Text" Usage="O" Datatype="ST" Length="199"/>
+				<Component Name="Name of Alternate Coding System" Usage="O" Datatype="ID" Length="20" Table="0396"/>
+			</Field>
+			<Field Name="Alternate Character Set Handling Scheme" Usage="O" Min="0" Max="1" Datatype="ID" Length="20" Table="0356"/>
+			<Field Name="Message Profile Identifier" Usage="O" Min="0" Max="*" Datatype="EI" Length="427">
+				<Component Name="Entity Identifier" Usage="O" Datatype="ST" Length="199"/>
+				<Component Name="Namespace ID" Usage="O" Datatype="IS" Length="20" Table="0363"/>
+				<Component Name="Universal ID" Usage="C" Datatype="ST" Length="199"/>
+				<Component Name="Universal ID Type" Usage="C" Datatype="ID" Length="6" Table="0301"/>
+			</Field>
+		</Segment>
+		<Segment Name="SFT" LongName="Software Segment" Usage="O" Min="0" Max="*">
+			<Field Name="Software Vendor Organization" Usage="R" Min="1" Max="1" Datatype="XON" Length="567">
+				<Component Name="Organization Name" Usage="O" Datatype="ST" Length="50"/>
+				<Component Name="Organization Name Type Code" Usage="O" Datatype="IS" Length="20" Table="0204"/>
+				<Component Name="ID Number" Usage="B" Datatype="NM"/>
+				<Component Name="Check Digit" Usage="O" Datatype="NM" Length="1"/>
+				<Component Name="Check Digit Scheme" Usage="O" Datatype="ID" Length="3" Table="0061"/>
+				<Component Name="Assigning Authority" Usage="O" Datatype="HD" Length="227" Table="0363">
+					<SubComponent Name="Namespace ID" Usage="O" Datatype="IS" Length="20" Table="0300"/>
+					<SubComponent Name="Universal ID" Usage="C" Datatype="ST" Length="199"/>
+					<SubComponent Name="Universal ID Type" Usage="C" Datatype="ID" Length="6" Table="0301"/>
+				</Component>
+				<Component Name="Identifier Type Code" Usage="O" Datatype="ID" Length="5" Table="0203"/>
+				<Component Name="Assigning Facility" Usage="O" Datatype="HD" Length="227">
+					<SubComponent Name="Namespace ID" Usage="O" Datatype="IS" Length="20" Table="0300"/>
+					<SubComponent Name="Universal ID" Usage="C" Datatype="ST" Length="199"/>
+					<SubComponent Name="Universal ID Type" Usage="C" Datatype="ID" Length="6" Table="0301"/>
+				</Component>
+				<Component Name="Name Representation Code" Usage="O" Datatype="ID" Length="1" Table="0465"/>
+				<Component Name="Organization Identifier" Usage="O" Datatype="ST" Length="20"/>
+			</Field>
+			<Field Name="Software Certified Version or Release Number" Usage="R" Min="1" Max="1" Datatype="ST" Length="15"/>
+			<Field Name="Software Product Name" Usage="R" Min="1" Max="1" Datatype="ST" Length="20"/>
+			<Field Name="Software Binary ID" Usage="R" Min="1" Max="1" Datatype="ST" Length="20"/>
+			<Field Name="Software Product Information" Usage="O" Min="0" Max="1" Datatype="TX" Length="1024"/>
+			<Field Name="Software Install Date" Usage="O" Min="0" Max="1" Datatype="TS" Length="26">
+				<Component Name="Time" Usage="R" Datatype="DTM" Length="24"/>
+				<Component Name="Degree of Precision" Usage="B" Datatype="ID" Table="0529"/>
+			</Field>
+		</Segment>
+		<Segment Name="MFI" LongName="Master File Identification" Usage="R" Min="1" Max="1">
+			<Field Name="Master File Identifier" Usage="R" Min="1" Max="1" Datatype="CWE" Length="483" Table="0175">
+				<Component Name="Identifier" Usage="O" Datatype="ST" Length="20"/>
+				<Component Name="Text" Usage="O" Datatype="ST" Length="199"/>
+				<Component Name="Name of Coding System" Usage="O" Datatype="ID" Length="20" Table="0396"/>
+				<Component Name="Alternate Identifier" Usage="O" Datatype="ST" Length="20"/>
+				<Component Name="Alternate Text" Usage="O" Datatype="ST" Length="199"/>
+				<Component Name="Name of Alternate Coding System" Usage="O" Datatype="ID" Length="20" Table="0396"/>
+				<Component Name="Coding System Version ID" Usage="C" Datatype="ST" Length="10"/>
+				<Component Name="Alternate Coding System Version ID" Usage="O" Datatype="ST" Length="10"/>
+				<Component Name="Original Text" Usage="O" Datatype="ST" Length="199"/>
+			</Field>
+			<Field Name="Master File Application Identifier" Usage="O" Min="0" Max="1" Datatype="HD" Length="227" Table="0361">
+				<Component Name="Namespace ID" Usage="O" Datatype="IS" Length="20" Table="0300"/>
+				<Component Name="Universal ID" Usage="C" Datatype="ST" Length="199"/>
+				<Component Name="Universal ID Type" Usage="C" Datatype="ID" Length="6" Table="0301"/>
+			</Field>
+			<Field Name="File-Level Event Code" Usage="R" Min="1" Max="1" Datatype="ID" Length="3" Table="0178"/>
+			<Field Name="Entered Date/Time" Usage="O" Min="0" Max="1" Datatype="TS" Length="26">
+				<Component Name="Time" Usage="R" Datatype="DTM" Length="24"/>
+				<Component Name="Degree of Precision" Usage="B" Datatype="ID" Table="0529"/>
+			</Field>
+			<Field Name="Effective Date/Time" Usage="O" Min="0" Max="1" Datatype="TS" Length="26">
+				<Component Name="Time" Usage="R" Datatype="DTM" Length="24"/>
+				<Component Name="Degree of Precision" Usage="B" Datatype="ID" Table="0529"/>
+			</Field>
+			<Field Name="Response Level Code" Usage="R" Min="1" Max="1" Datatype="ID" Length="2" Table="0179"/>
+		</Segment>
+		<SegGroup Name="MF_TEST" LongName="MF_TEST" Usage="R" Min="1" Max="*">
+			<Segment Name="MFE" LongName="Master File Entry" Usage="R" Min="1" Max="1">
+				<Field Name="Record-Level Event Code" Usage="R" Min="1" Max="1" Datatype="ID" Length="3" Table="0180"/>
+				<Field Name="MFN Control ID" Usage="C" Min="0" Max="1" Datatype="ST" Length="20"/>
+				<Field Name="Effective Date/Time" Usage="O" Min="0" Max="1" Datatype="TS" Length="26">
+					<Component Name="Time" Usage="R" Datatype="DTM" Length="24"/>
+					<Component Name="Degree of Precision" Usage="B" Datatype="ID" Table="0529"/>
+				</Field>
+				<Field Name="Primary Key Value - MFE" Usage="R" Min="1" Max="*" Datatype="varies" Length="200" Table="9999"/>
+				<Field Name="Primary Key Value Type" Usage="R" Min="1" Max="*" Datatype="ID" Length="3" Table="0355"/>
+			</Segment>
+			<Segment Name="OM1" LongName="General Segment" Usage="R" Min="1" Max="1">
+				<Field Name="Sequence Number - Test/Observation Master File" Usage="R" Min="1" Max="1" Datatype="NM" Length="4"/>
+				<Field Name="Producer's Service/Test/Observation ID" Usage="R" Min="1" Max="1" Datatype="CWE" Length="483" Table="9999">
+					<Component Name="Identifier" Usage="O" Datatype="ST" Length="20"/>
+					<Component Name="Text" Usage="O" Datatype="ST" Length="199"/>
+					<Component Name="Name of Coding System" Usage="O" Datatype="ID" Length="20" Table="0396"/>
+					<Component Name="Alternate Identifier" Usage="O" Datatype="ST" Length="20"/>
+					<Component Name="Alternate Text" Usage="O" Datatype="ST" Length="199"/>
+					<Component Name="Name of Alternate Coding System" Usage="O" Datatype="ID" Length="20" Table="0396"/>
+					<Component Name="Coding System Version ID" Usage="C" Datatype="ST" Length="10"/>
+					<Component Name="Alternate Coding System Version ID" Usage="O" Datatype="ST" Length="10"/>
+					<Component Name="Original Text" Usage="O" Datatype="ST" Length="199"/>
+				</Field>
+				<Field Name="Permitted Data Types" Usage="O" Min="0" Max="*" Datatype="ID" Length="12" Table="0125"/>
+				<Field Name="Specimen Required" Usage="R" Min="1" Max="1" Datatype="ID" Length="1" Table="0136"/>
+				<Field Name="Producer ID" Usage="R" Min="1" Max="1" Datatype="CWE" Length="483" Table="9999">
+					<Component Name="Identifier" Usage="O" Datatype="ST" Length="20"/>
+					<Component Name="Text" Usage="O" Datatype="ST" Length="199"/>
+					<Component Name="Name of Coding System" Usage="O" Datatype="ID" Length="20" Table="0396"/>
+					<Component Name="Alternate Identifier" Usage="O" Datatype="ST" Length="20"/>
+					<Component Name="Alternate Text" Usage="O" Datatype="ST" Length="199"/>
+					<Component Name="Name of Alternate Coding System" Usage="O" Datatype="ID" Length="20" Table="0396"/>
+					<Component Name="Coding System Version ID" Usage="C" Datatype="ST" Length="10"/>
+					<Component Name="Alternate Coding System Version ID" Usage="O" Datatype="ST" Length="10"/>
+					<Component Name="Original Text" Usage="O" Datatype="ST" Length="199"/>
+				</Field>
+				<Field Name="Observation Description" Usage="O" Min="0" Max="1" Datatype="TX" Length="200"/>
+				<Field Name="Other Service/Test/Observation IDs for the Observation" Usage="O" Min="0" Max="1" Datatype="CE" Length="483" Table="9999">
+					<Component Name="Identifier" Usage="O" Datatype="ST" Length="20"/>
+					<Component Name="Text" Usage="O" Datatype="ST" Length="199"/>
+					<Component Name="Name of Coding System" Usage="O" Datatype="ID" Length="20" Table="0396"/>
+					<Component Name="Alternate Identifier" Usage="O" Datatype="ST" Length="20"/>
+					<Component Name="Alternate Text" Usage="O" Datatype="ST" Length="199"/>
+					<Component Name="Name of Alternate Coding System" Usage="O" Datatype="ID" Length="20" Table="0396"/>
+				</Field>
+				<Field Name="Other Names DEPRECATED" Usage="R" Min="1" Max="*" Datatype="ST" Length="200"/>
+				<Field Name="Preferred Report Name for the Observation" Usage="O" Min="0" Max="1" Datatype="ST" Length="30"/>
+				<Field Name="Preferred Short Name or Mnemonic for Observation" Usage="O" Min="0" Max="1" Datatype="ST" Length="8"/>
+				<Field Name="Preferred Long Name for the Observation" Usage="O" Min="0" Max="1" Datatype="ST" Length="200"/>
+				<Field Name="Orderability" Usage="O" Min="0" Max="1" Datatype="ID" Length="1" Table="0136"/>
+				<Field Name="Identity of Instrument Used to Perform this Study" Usage="O" Min="0" Max="*" Datatype="CE" Length="483" Table="9999">
+					<Component Name="Identifier" Usage="O" Datatype="ST" Length="20"/>
+					<Component Name="Text" Usage="O" Datatype="ST" Length="199"/>
+					<Component Name="Name of Coding System" Usage="O" Datatype="ID" Length="20" Table="0396"/>
+					<Component Name="Alternate Identifier" Usage="O" Datatype="ST" Length="20"/>
+					<Component Name="Alternate Text" Usage="O" Datatype="ST" Length="199"/>
+					<Component Name="Name of Alternate Coding System" Usage="O" Datatype="ID" Length="20" Table="0396"/>
+				</Field>
+				<Field Name="Coded Representation of Method" Usage="O" Min="0" Max="*" Datatype="CE" Length="483" Table="9999">
+					<Component Name="Identifier" Usage="O" Datatype="ST" Length="20"/>
+					<Component Name="Text" Usage="O" Datatype="ST" Length="199"/>
+					<Component Name="Name of Coding System" Usage="O" Datatype="ID" Length="20" Table="0396"/>
+					<Component Name="Alternate Identifier" Usage="O" Datatype="ST" Length="20"/>
+					<Component Name="Alternate Text" Usage="O" Datatype="ST" Length="199"/>
+					<Component Name="Name of Alternate Coding System" Usage="O" Datatype="ID" Length="20" Table="0396"/>
+				</Field>
+				<Field Name="Portable Device Indicator" Usage="O" Min="0" Max="1" Datatype="ID" Length="1" Table="0136"/>
+				<Field Name="Observation Producing Department/Section" Usage="O" Min="0" Max="*" Datatype="CE" Length="483" Table="9999">
+					<Component Name="Identifier" Usage="O" Datatype="ST" Length="20"/>
+					<Component Name="Text" Usage="O" Datatype="ST" Length="199"/>
+					<Component Name="Name of Coding System" Usage="O" Datatype="ID" Length="20" Table="0396"/>
+					<Component Name="Alternate Identifier" Usage="O" Datatype="ST" Length="20"/>
+					<Component Name="Alternate Text" Usage="O" Datatype="ST" Length="199"/>
+					<Component Name="Name of Alternate Coding System" Usage="O" Datatype="ID" Length="20" Table="0396"/>
+				</Field>
+				<Field Name="Telephone Number of Section" Usage="O" Min="0" Max="1" Datatype="XTN" Length="651">
+					<Component Name="Telephone Number" Usage="B" Datatype="ST"/>
+					<Component Name="Telecommunication Use Code" Usage="O" Datatype="ID" Length="3" Table="0201"/>
+					<Component Name="Telecommunication Equipment Type" Usage="O" Datatype="ID" Length="8" Table="0202"/>
+					<Component Name="Email Address" Usage="O" Datatype="ST" Length="199"/>
+					<Component Name="Country Code" Usage="O" Datatype="NM" Length="3"/>
+					<Component Name="Area/City Code" Usage="O" Datatype="NM" Length="5"/>
+					<Component Name="Local Number" Usage="O" Datatype="NM" Length="9"/>
+					<Component Name="Extension" Usage="O" Datatype="NM" Length="5"/>
+					<Component Name="Any Text" Usage="O" Datatype="ST" Length="199"/>
+					<Component Name="Extension Prefix" Usage="O" Datatype="ST" Length="4"/>
+					<Component Name="Speed Dial Code" Usage="O" Datatype="ST" Length="6"/>
+					<Component Name="Unformatted Telephone number" Usage="C" Datatype="ST" Length="199"/>
+				</Field>
+				<Field Name="Nature of Service/Test/Observation" Usage="R" Min="1" Max="1" Datatype="IS" Length="1" Table="0174"/>
+				<Field Name="Report Subheader" Usage="O" Min="0" Max="1" Datatype="CE" Length="483" Table="9999">
+					<Component Name="Identifier" Usage="O" Datatype="ST" Length="20"/>
+					<Component Name="Text" Usage="O" Datatype="ST" Length="199"/>
+					<Component Name="Name of Coding System" Usage="O" Datatype="ID" Length="20" Table="0396"/>
+					<Component Name="Alternate Identifier" Usage="O" Datatype="ST" Length="20"/>
+					<Component Name="Alternate Text" Usage="O" Datatype="ST" Length="199"/>
+					<Component Name="Name of Alternate Coding System" Usage="O" Datatype="ID" Length="20" Table="0396"/>
+				</Field>
+				<Field Name="Report Display Order" Usage="O" Min="0" Max="1" Datatype="ST" Length="20"/>
+				<Field Name="Date/Time Stamp for any change in Definition for the Observation" Usage="O" Min="0" Max="1" Datatype="TS" Length="26">
+					<Component Name="Time" Usage="R" Datatype="DTM" Length="24"/>
+					<Component Name="Degree of Precision" Usage="B" Datatype="ID" Table="0529"/>
+				</Field>
+				<Field Name="Effective Date/Time of Change" Usage="O" Min="0" Max="1" Datatype="DTM" Length="24"/>
+				<Field Name="Typical Turn-Around Time" Usage="O" Min="0" Max="1" Datatype="NM" Length="20"/>
+				<Field Name="Processing Time" Usage="O" Min="0" Max="1" Datatype="NM" Length="20"/>
+				<Field Name="Processing Priority" Usage="O" Min="0" Max="*" Datatype="ID" Length="40" Table="0168"/>
+				<Field Name="Reporting Priority" Usage="O" Min="0" Max="1" Datatype="ID" Length="5" Table="0169"/>
+				<Field Name="Outside Site(s) Where Observation may be Performed" Usage="O" Min="0" Max="*" Datatype="CWE" Length="483" Table="9999">
+					<Component Name="Identifier" Usage="O" Datatype="ST" Length="20"/>
+					<Component Name="Text" Usage="O" Datatype="ST" Length="199"/>
+					<Component Name="Name of Coding System" Usage="O" Datatype="ID" Length="20" Table="0396"/>
+					<Component Name="Alternate Identifier" Usage="O" Datatype="ST" Length="20"/>
+					<Component Name="Alternate Text" Usage="O" Datatype="ST" Length="199"/>
+					<Component Name="Name of Alternate Coding System" Usage="O" Datatype="ID" Length="20" Table="0396"/>
+					<Component Name="Coding System Version ID" Usage="C" Datatype="ST" Length="10"/>
+					<Component Name="Alternate Coding System Version ID" Usage="O" Datatype="ST" Length="10"/>
+					<Component Name="Original Text" Usage="O" Datatype="ST" Length="199"/>
+				</Field>
+				<Field Name="Address of Outside Site(s)" Usage="O" Min="0" Max="*" Datatype="XAD" Length="578">
+					<Component Name="Street Address" Usage="O" Datatype="SAD" Length="184">
+						<SubComponent Name="Street or Mailing Address" Usage="O" Datatype="ST" Length="120"/>
+						<SubComponent Name="Street Name" Usage="O" Datatype="ST" Length="50"/>
+						<SubComponent Name="Dwelling Number" Usage="O" Datatype="ST" Length="12"/>
+					</Component>
+					<Component Name="Other Designation" Usage="O" Datatype="ST" Length="120"/>
+					<Component Name="City" Usage="O" Datatype="ST" Length="50"/>
+					<Component Name="State or Province" Usage="O" Datatype="ST" Length="50"/>
+					<Component Name="Zip or Postal Code" Usage="O" Datatype="ST" Length="12"/>
+					<Component Name="Country" Usage="O" Datatype="ID" Length="3" Table="0399"/>
+					<Component Name="Address Type" Usage="O" Datatype="ID" Length="3" Table="0190"/>
+					<Component Name="Other Geographic Designation" Usage="O" Datatype="ST" Length="50"/>
+					<Component Name="County/Parish Code" Usage="O" Datatype="IS" Length="20" Table="0289"/>
+					<Component Name="Census Tract" Usage="O" Datatype="IS" Length="20" Table="0288"/>
+					<Component Name="Address Representation Code" Usage="O" Datatype="ID" Length="1" Table="0465"/>
+					<Component Name="Address Validity Range" Usage="B" Datatype="DR">
+						<SubComponent Name="Range Start Date/Time" Usage="O" Datatype="TS" Length="26"/>
+						<SubComponent Name="Range End Date/Time" Usage="O" Datatype="TS" Length="26"/>
+					</Component>
+					<Component Name="Effective Date" Usage="O" Datatype="TS" Length="26">
+						<SubComponent Name="Time" Usage="R" Datatype="DTM" Length="24"/>
+						<SubComponent Name="Degree of Precision" Usage="B" Datatype="ID" Table="0529"/>
+					</Component>
+					<Component Name="Expiration Date" Usage="O" Datatype="TS" Length="26">
+						<SubComponent Name="Time" Usage="R" Datatype="DTM" Length="24"/>
+						<SubComponent Name="Degree of Precision" Usage="B" Datatype="ID" Table="0529"/>
+					</Component>
+				</Field>
+				<Field Name="Phone Number of Outside Site" Usage="O" Min="0" Max="1" Datatype="XTN" Length="651">
+					<Component Name="Telephone Number" Usage="B" Datatype="ST"/>
+					<Component Name="Telecommunication Use Code" Usage="O" Datatype="ID" Length="3" Table="0201"/>
+					<Component Name="Telecommunication Equipment Type" Usage="O" Datatype="ID" Length="8" Table="0202"/>
+					<Component Name="Email Address" Usage="O" Datatype="ST" Length="199"/>
+					<Component Name="Country Code" Usage="O" Datatype="NM" Length="3"/>
+					<Component Name="Area/City Code" Usage="O" Datatype="NM" Length="5"/>
+					<Component Name="Local Number" Usage="O" Datatype="NM" Length="9"/>
+					<Component Name="Extension" Usage="O" Datatype="NM" Length="5"/>
+					<Component Name="Any Text" Usage="O" Datatype="ST" Length="199"/>
+					<Component Name="Extension Prefix" Usage="O" Datatype="ST" Length="4"/>
+					<Component Name="Speed Dial Code" Usage="O" Datatype="ST" Length="6"/>
+					<Component Name="Unformatted Telephone number" Usage="C" Datatype="ST" Length="199"/>
+				</Field>
+				<Field Name="Confidentiality Code" Usage="O" Min="0" Max="1" Datatype="CWE" Length="705" Table="0177">
+					<Component Name="Identifier" Usage="O" Datatype="ST" Length="20"/>
+					<Component Name="Text" Usage="O" Datatype="ST" Length="199"/>
+					<Component Name="Name of Coding System" Usage="O" Datatype="ID" Length="20" Table="0396"/>
+					<Component Name="Alternate Identifier" Usage="O" Datatype="ST" Length="20"/>
+					<Component Name="Alternate Text" Usage="O" Datatype="ST" Length="199"/>
+					<Component Name="Name of Alternate Coding System" Usage="O" Datatype="ID" Length="20" Table="0396"/>
+					<Component Name="Coding System Version ID" Usage="C" Datatype="ST" Length="10"/>
+					<Component Name="Alternate Coding System Version ID" Usage="O" Datatype="ST" Length="10"/>
+					<Component Name="Original Text" Usage="O" Datatype="ST" Length="199"/>
+				</Field>
+				<Field Name="Observations Required to Interpret the Observation" Usage="O" Min="0" Max="1" Datatype="CWE" Length="483" Table="9999">
+					<Component Name="Identifier" Usage="O" Datatype="ST" Length="20"/>
+					<Component Name="Text" Usage="O" Datatype="ST" Length="199"/>
+					<Component Name="Name of Coding System" Usage="O" Datatype="ID" Length="20" Table="0396"/>
+					<Component Name="Alternate Identifier" Usage="O" Datatype="ST" Length="20"/>
+					<Component Name="Alternate Text" Usage="O" Datatype="ST" Length="199"/>
+					<Component Name="Name of Alternate Coding System" Usage="O" Datatype="ID" Length="20" Table="0396"/>
+					<Component Name="Coding System Version ID" Usage="C" Datatype="ST" Length="10"/>
+					<Component Name="Alternate Coding System Version ID" Usage="O" Datatype="ST" Length="10"/>
+					<Component Name="Original Text" Usage="O" Datatype="ST" Length="199"/>
+				</Field>
+				<Field Name="Interpretation of Observations" Usage="O" Min="0" Max="1" Datatype="TX" Length="65536"/>
+				<Field Name="Contraindications to Observations" Usage="O" Min="0" Max="1" Datatype="CE" Length="483" Table="9999">
+					<Component Name="Identifier" Usage="O" Datatype="ST" Length="20"/>
+					<Component Name="Text" Usage="O" Datatype="ST" Length="199"/>
+					<Component Name="Name of Coding System" Usage="O" Datatype="ID" Length="20" Table="0396"/>
+					<Component Name="Alternate Identifier" Usage="O" Datatype="ST" Length="20"/>
+					<Component Name="Alternate Text" Usage="O" Datatype="ST" Length="199"/>
+					<Component Name="Name of Alternate Coding System" Usage="O" Datatype="ID" Length="20" Table="0396"/>
+				</Field>
+				<Field Name="Reflex Tests/Observations" Usage="O" Min="0" Max="*" Datatype="CE" Length="483" Table="9999">
+					<Component Name="Identifier" Usage="O" Datatype="ST" Length="20"/>
+					<Component Name="Text" Usage="O" Datatype="ST" Length="199"/>
+					<Component Name="Name of Coding System" Usage="O" Datatype="ID" Length="20" Table="0396"/>
+					<Component Name="Alternate Identifier" Usage="O" Datatype="ST" Length="20"/>
+					<Component Name="Alternate Text" Usage="O" Datatype="ST" Length="199"/>
+					<Component Name="Name of Alternate Coding System" Usage="O" Datatype="ID" Length="20" Table="0396"/>
+				</Field>
+				<Field Name="Rules that Trigger Reflex Testing" Usage="O" Min="0" Max="1" Datatype="TX" Length="80"/>
+				<Field Name="Fixed Canned Message" Usage="O" Min="0" Max="1" Datatype="CE" Length="483" Table="9999">
+					<Component Name="Identifier" Usage="O" Datatype="ST" Length="20"/>
+					<Component Name="Text" Usage="O" Datatype="ST" Length="199"/>
+					<Component Name="Name of Coding System" Usage="O" Datatype="ID" Length="20" Table="0396"/>
+					<Component Name="Alternate Identifier" Usage="O" Datatype="ST" Length="20"/>
+					<Component Name="Alternate Text" Usage="O" Datatype="ST" Length="199"/>
+					<Component Name="Name of Alternate Coding System" Usage="O" Datatype="ID" Length="20" Table="0396"/>
+				</Field>
+				<Field Name="Patient Preparation" Usage="O" Min="0" Max="1" Datatype="TX" Length="200"/>
+				<Field Name="Procedure Medication" Usage="O" Min="0" Max="1" Datatype="CE" Length="483" Table="9999">
+					<Component Name="Identifier" Usage="O" Datatype="ST" Length="20"/>
+					<Component Name="Text" Usage="O" Datatype="ST" Length="199"/>
+					<Component Name="Name of Coding System" Usage="O" Datatype="ID" Length="20" Table="0396"/>
+					<Component Name="Alternate Identifier" Usage="O" Datatype="ST" Length="20"/>
+					<Component Name="Alternate Text" Usage="O" Datatype="ST" Length="199"/>
+					<Component Name="Name of Alternate Coding System" Usage="O" Datatype="ID" Length="20" Table="0396"/>
+				</Field>
+				<Field Name="Factors that may Affect the Observation" Usage="O" Min="0" Max="1" Datatype="TX" Length="200"/>
+				<Field Name="Service/Test/Observation Performance Schedule" Usage="O" Min="0" Max="*" Datatype="ST" Length="60"/>
+				<Field Name="Description of Test Methods" Usage="O" Min="0" Max="1" Datatype="TX" Length="65536"/>
+				<Field Name="Kind of Quantity Observed" Usage="O" Min="0" Max="1" Datatype="CE" Length="483" Table="0254">
+					<Component Name="Identifier" Usage="O" Datatype="ST" Length="20"/>
+					<Component Name="Text" Usage="O" Datatype="ST" Length="199"/>
+					<Component Name="Name of Coding System" Usage="O" Datatype="ID" Length="20" Table="0396"/>
+					<Component Name="Alternate Identifier" Usage="O" Datatype="ST" Length="20"/>
+					<Component Name="Alternate Text" Usage="O" Datatype="ST" Length="199"/>
+					<Component Name="Name of Alternate Coding System" Usage="O" Datatype="ID" Length="20" Table="0396"/>
+				</Field>
+				<Field Name="Point Versus Interval" Usage="O" Min="0" Max="1" Datatype="CE" Length="483" Table="0255">
+					<Component Name="Identifier" Usage="O" Datatype="ST" Length="20"/>
+					<Component Name="Text" Usage="O" Datatype="ST" Length="199"/>
+					<Component Name="Name of Coding System" Usage="O" Datatype="ID" Length="20" Table="0396"/>
+					<Component Name="Alternate Identifier" Usage="O" Datatype="ST" Length="20"/>
+					<Component Name="Alternate Text" Usage="O" Datatype="ST" Length="199"/>
+					<Component Name="Name of Alternate Coding System" Usage="O" Datatype="ID" Length="20" Table="0396"/>
+				</Field>
+				<Field Name="Challenge Information" Usage="O" Min="0" Max="1" Datatype="TX" Length="200" Table="0256"/>
+				<Field Name="Relationship Modifier" Usage="O" Min="0" Max="1" Datatype="CE" Length="483" Table="0258">
+					<Component Name="Identifier" Usage="O" Datatype="ST" Length="20"/>
+					<Component Name="Text" Usage="O" Datatype="ST" Length="199"/>
+					<Component Name="Name of Coding System" Usage="O" Datatype="ID" Length="20" Table="0396"/>
+					<Component Name="Alternate Identifier" Usage="O" Datatype="ST" Length="20"/>
+					<Component Name="Alternate Text" Usage="O" Datatype="ST" Length="199"/>
+					<Component Name="Name of Alternate Coding System" Usage="O" Datatype="ID" Length="20" Table="0396"/>
+				</Field>
+				<Field Name="Target Anatomic Site Of Test" Usage="O" Min="0" Max="1" Datatype="CE" Length="483" Table="9999">
+					<Component Name="Identifier" Usage="O" Datatype="ST" Length="20"/>
+					<Component Name="Text" Usage="O" Datatype="ST" Length="199"/>
+					<Component Name="Name of Coding System" Usage="O" Datatype="ID" Length="20" Table="0396"/>
+					<Component Name="Alternate Identifier" Usage="O" Datatype="ST" Length="20"/>
+					<Component Name="Alternate Text" Usage="O" Datatype="ST" Length="199"/>
+					<Component Name="Name of Alternate Coding System" Usage="O" Datatype="ID" Length="20" Table="0396"/>
+				</Field>
+				<Field Name="Modality Of Imaging Measurement" Usage="O" Min="0" Max="1" Datatype="CE" Length="483" Table="0259">
+					<Component Name="Identifier" Usage="O" Datatype="ST" Length="20"/>
+					<Component Name="Text" Usage="O" Datatype="ST" Length="199"/>
+					<Component Name="Name of Coding System" Usage="O" Datatype="ID" Length="20" Table="0396"/>
+					<Component Name="Alternate Identifier" Usage="O" Datatype="ST" Length="20"/>
+					<Component Name="Alternate Text" Usage="O" Datatype="ST" Length="199"/>
+					<Component Name="Name of Alternate Coding System" Usage="O" Datatype="ID" Length="20" Table="0396"/>
+				</Field>
+				<Field Name="Exclusive Test" Usage="O" Min="0" Max="1" Datatype="ID" Length="6" Table="0919"/>
+				<Field Name="Diagnostic Service Sector ID" Usage="O" Min="0" Max="1" Datatype="ID" Length="6" Table="0074"/>
+				<Field Name="Taxonomic Classification Code" Usage="O" Min="0" Max="1" Datatype="CWE" Length="6" Table="0446">
+					<Component Name="Identifier" Usage="O" Datatype="ST" Length="20"/>
+					<Component Name="Text" Usage="O" Datatype="ST" Length="199"/>
+					<Component Name="Name of Coding System" Usage="O" Datatype="ID" Length="20" Table="0396"/>
+					<Component Name="Alternate Identifier" Usage="O" Datatype="ST" Length="20"/>
+					<Component Name="Alternate Text" Usage="O" Datatype="ST" Length="199"/>
+					<Component Name="Name of Alternate Coding System" Usage="O" Datatype="ID" Length="20" Table="0396"/>
+					<Component Name="Coding System Version ID" Usage="C" Datatype="ST" Length="10"/>
+					<Component Name="Alternate Coding System Version ID" Usage="O" Datatype="ST" Length="10"/>
+					<Component Name="Original Text" Usage="O" Datatype="ST" Length="199"/>
+				</Field>
+				<Field Name="Other Names" Usage="O" Min="0" Max="*" Datatype="ST" Length="999"/>
+			</Segment>
+			<Segment Name="OM2" LongName="Numeric Observation" Usage="O" Min="0" Max="1">
+				<Field Name="Sequence Number - Test/Observation Master File" Usage="O" Min="0" Max="1" Datatype="NM" Length="4"/>
+				<Field Name="Units of Measure" Usage="O" Min="0" Max="1" Datatype="CE" Length="483" Table="9999">
+					<Component Name="Identifier" Usage="O" Datatype="ST" Length="20"/>
+					<Component Name="Text" Usage="O" Datatype="ST" Length="199"/>
+					<Component Name="Name of Coding System" Usage="O" Datatype="ID" Length="20" Table="0396"/>
+					<Component Name="Alternate Identifier" Usage="O" Datatype="ST" Length="20"/>
+					<Component Name="Alternate Text" Usage="O" Datatype="ST" Length="199"/>
+					<Component Name="Name of Alternate Coding System" Usage="O" Datatype="ID" Length="20" Table="0396"/>
+				</Field>
+				<Field Name="Range of Decimal Precision" Usage="O" Min="0" Max="*" Datatype="NM" Length="10"/>
+				<Field Name="Corresponding SI Units of Measure" Usage="O" Min="0" Max="1" Datatype="CE" Length="483" Table="9999">
+					<Component Name="Identifier" Usage="O" Datatype="ST" Length="20"/>
+					<Component Name="Text" Usage="O" Datatype="ST" Length="199"/>
+					<Component Name="Name of Coding System" Usage="O" Datatype="ID" Length="20" Table="0396"/>
+					<Component Name="Alternate Identifier" Usage="O" Datatype="ST" Length="20"/>
+					<Component Name="Alternate Text" Usage="O" Datatype="ST" Length="199"/>
+					<Component Name="Name of Alternate Coding System" Usage="O" Datatype="ID" Length="20" Table="0396"/>
+				</Field>
+				<Field Name="SI Conversion Factor" Usage="O" Min="0" Max="1" Datatype="TX" Length="60"/>
+				<Field Name="Reference (Normal) Range - Ordinal and Continuous Observations" Usage="O" Min="0" Max="*" Datatype="RFR" Length="352">
+					<Component Name="Numeric Range" Usage="R" Datatype="NR" Length="33">
+						<SubComponent Name="Low Value" Usage="O" Datatype="NM" Length="16"/>
+						<SubComponent Name="High Value" Usage="O" Datatype="NM" Length="16"/>
+					</Component>
+					<Component Name="Administrative Sex" Usage="O" Datatype="IS" Length="8" Table="0001"/>
+					<Component Name="Age Range" Usage="O" Datatype="NR" Length="33">
+						<SubComponent Name="Low Value" Usage="O" Datatype="NM" Length="16"/>
+						<SubComponent Name="High Value" Usage="O" Datatype="NM" Length="16"/>
+					</Component>
+					<Component Name="Gestational Age Range" Usage="O" Datatype="NR" Length="33">
+						<SubComponent Name="Low Value" Usage="O" Datatype="NM" Length="16"/>
+						<SubComponent Name="High Value" Usage="O" Datatype="NM" Length="16"/>
+					</Component>
+					<Component Name="Species" Usage="O" Datatype="ST" Length="20"/>
+					<Component Name="Race/subspecies" Usage="O" Datatype="ST" Length="20"/>
+					<Component Name="Conditions" Usage="O" Datatype="TX" Length="199"/>
+				</Field>
+				<Field Name="Critical Range for Ordinal and Continuous Observations" Usage="O" Min="0" Max="*" Datatype="RFR" Length="352">
+					<Component Name="Numeric Range" Usage="R" Datatype="NR" Length="33">
+						<SubComponent Name="Low Value" Usage="O" Datatype="NM" Length="16"/>
+						<SubComponent Name="High Value" Usage="O" Datatype="NM" Length="16"/>
+					</Component>
+					<Component Name="Administrative Sex" Usage="O" Datatype="IS" Length="8" Table="0001"/>
+					<Component Name="Age Range" Usage="O" Datatype="NR" Length="33">
+						<SubComponent Name="Low Value" Usage="O" Datatype="NM" Length="16"/>
+						<SubComponent Name="High Value" Usage="O" Datatype="NM" Length="16"/>
+					</Component>
+					<Component Name="Gestational Age Range" Usage="O" Datatype="NR" Length="33">
+						<SubComponent Name="Low Value" Usage="O" Datatype="NM" Length="16"/>
+						<SubComponent Name="High Value" Usage="O" Datatype="NM" Length="16"/>
+					</Component>
+					<Component Name="Species" Usage="O" Datatype="ST" Length="20"/>
+					<Component Name="Race/subspecies" Usage="O" Datatype="ST" Length="20"/>
+					<Component Name="Conditions" Usage="O" Datatype="TX" Length="199"/>
+				</Field>
+				<Field Name="Absolute Range for Ordinal and Continuous Observations" Usage="O" Min="0" Max="1" Datatype="RFR" Length="352">
+					<Component Name="Numeric Range" Usage="R" Datatype="NR" Length="33">
+						<SubComponent Name="Low Value" Usage="O" Datatype="NM" Length="16"/>
+						<SubComponent Name="High Value" Usage="O" Datatype="NM" Length="16"/>
+					</Component>
+					<Component Name="Administrative Sex" Usage="O" Datatype="IS" Length="8" Table="0001"/>
+					<Component Name="Age Range" Usage="O" Datatype="NR" Length="33">
+						<SubComponent Name="Low Value" Usage="O" Datatype="NM" Length="16"/>
+						<SubComponent Name="High Value" Usage="O" Datatype="NM" Length="16"/>
+					</Component>
+					<Component Name="Gestational Age Range" Usage="O" Datatype="NR" Length="33">
+						<SubComponent Name="Low Value" Usage="O" Datatype="NM" Length="16"/>
+						<SubComponent Name="High Value" Usage="O" Datatype="NM" Length="16"/>
+					</Component>
+					<Component Name="Species" Usage="O" Datatype="ST" Length="20"/>
+					<Component Name="Race/subspecies" Usage="O" Datatype="ST" Length="20"/>
+					<Component Name="Conditions" Usage="O" Datatype="TX" Length="199"/>
+				</Field>
+				<Field Name="Delta Check Criteria" Usage="O" Min="0" Max="*" Datatype="DLT" Length="250">
+					<Component Name="Normal Range" Usage="O" Datatype="NR" Length="33">
+						<SubComponent Name="Low Value" Usage="O" Datatype="NM" Length="16"/>
+						<SubComponent Name="High Value" Usage="O" Datatype="NM" Length="16"/>
+					</Component>
+					<Component Name="Numeric Threshold" Usage="O" Datatype="NM" Length="4"/>
+					<Component Name="Change Computation" Usage="O" Datatype="ID" Length="1" Table="0523"/>
+					<Component Name="Days Retained" Usage="O" Datatype="NM" Length="4"/>
+				</Field>
+				<Field Name="Minimum Meaningful Increments" Usage="O" Min="0" Max="1" Datatype="NM" Length="20"/>
+			</Segment>
+			<Segment Name="OM3" LongName="Categorical Service/Test/Observation" Usage="O" Min="0" Max="1">
+				<Field Name="Sequence Number - Test/Observation Master File" Usage="O" Min="0" Max="1" Datatype="NM" Length="4"/>
+				<Field Name="Preferred Coding System" Usage="O" Min="0" Max="1" Datatype="CE" Length="483" Table="9999">
+					<Component Name="Identifier" Usage="O" Datatype="ST" Length="20"/>
+					<Component Name="Text" Usage="O" Datatype="ST" Length="199"/>
+					<Component Name="Name of Coding System" Usage="O" Datatype="ID" Length="20" Table="0396"/>
+					<Component Name="Alternate Identifier" Usage="O" Datatype="ST" Length="20"/>
+					<Component Name="Alternate Text" Usage="O" Datatype="ST" Length="199"/>
+					<Component Name="Name of Alternate Coding System" Usage="O" Datatype="ID" Length="20" Table="0396"/>
+				</Field>
+				<Field Name="Valid Coded &quot;Answers&quot;" Usage="O" Min="0" Max="1" Datatype="CE" Length="483" Table="9999">
+					<Component Name="Identifier" Usage="O" Datatype="ST" Length="20"/>
+					<Component Name="Text" Usage="O" Datatype="ST" Length="199"/>
+					<Component Name="Name of Coding System" Usage="O" Datatype="ID" Length="20" Table="0396"/>
+					<Component Name="Alternate Identifier" Usage="O" Datatype="ST" Length="20"/>
+					<Component Name="Alternate Text" Usage="O" Datatype="ST" Length="199"/>
+					<Component Name="Name of Alternate Coding System" Usage="O" Datatype="ID" Length="20" Table="0396"/>
+				</Field>
+				<Field Name="Normal Text/Codes for Categorical Observations" Usage="O" Min="0" Max="*" Datatype="CE" Length="483" Table="9999">
+					<Component Name="Identifier" Usage="O" Datatype="ST" Length="20"/>
+					<Component Name="Text" Usage="O" Datatype="ST" Length="199"/>
+					<Component Name="Name of Coding System" Usage="O" Datatype="ID" Length="20" Table="0396"/>
+					<Component Name="Alternate Identifier" Usage="O" Datatype="ST" Length="20"/>
+					<Component Name="Alternate Text" Usage="O" Datatype="ST" Length="199"/>
+					<Component Name="Name of Alternate Coding System" Usage="O" Datatype="ID" Length="20" Table="0396"/>
+				</Field>
+				<Field Name="Abnormal Text/Codes for Categorical Observations" Usage="O" Min="0" Max="*" Datatype="CE" Length="483" Table="9999">
+					<Component Name="Identifier" Usage="O" Datatype="ST" Length="20"/>
+					<Component Name="Text" Usage="O" Datatype="ST" Length="199"/>
+					<Component Name="Name of Coding System" Usage="O" Datatype="ID" Length="20" Table="0396"/>
+					<Component Name="Alternate Identifier" Usage="O" Datatype="ST" Length="20"/>
+					<Component Name="Alternate Text" Usage="O" Datatype="ST" Length="199"/>
+					<Component Name="Name of Alternate Coding System" Usage="O" Datatype="ID" Length="20" Table="0396"/>
+				</Field>
+				<Field Name="Critical Text/Codes for Categorical Observations" Usage="O" Min="0" Max="*" Datatype="CE" Length="483" Table="9999">
+					<Component Name="Identifier" Usage="O" Datatype="ST" Length="20"/>
+					<Component Name="Text" Usage="O" Datatype="ST" Length="199"/>
+					<Component Name="Name of Coding System" Usage="O" Datatype="ID" Length="20" Table="0396"/>
+					<Component Name="Alternate Identifier" Usage="O" Datatype="ST" Length="20"/>
+					<Component Name="Alternate Text" Usage="O" Datatype="ST" Length="199"/>
+					<Component Name="Name of Alternate Coding System" Usage="O" Datatype="ID" Length="20" Table="0396"/>
+				</Field>
+				<Field Name="Value Type" Usage="O" Min="0" Max="1" Datatype="ID" Length="2" Table="0125"/>
+			</Segment>
+			<Segment Name="OM4" LongName="Observations that Require Specimens" Usage="O" Min="0" Max="*">
+				<Field Name="Sequence Number - Test/Observation Master File" Usage="O" Min="0" Max="1" Datatype="NM" Length="4"/>
+				<Field Name="Derived Specimen" Usage="O" Min="0" Max="1" Datatype="ID" Length="1" Table="0170"/>
+				<Field Name="Container Description" Usage="O" Min="0" Max="1" Datatype="TX" Length="60"/>
+				<Field Name="Container Volume" Usage="O" Min="0" Max="1" Datatype="NM" Length="20"/>
+				<Field Name="Container Units" Usage="O" Min="0" Max="1" Datatype="CE" Length="483" Table="9999">
+					<Component Name="Identifier" Usage="O" Datatype="ST" Length="20"/>
+					<Component Name="Text" Usage="O" Datatype="ST" Length="199"/>
+					<Component Name="Name of Coding System" Usage="O" Datatype="ID" Length="20" Table="0396"/>
+					<Component Name="Alternate Identifier" Usage="O" Datatype="ST" Length="20"/>
+					<Component Name="Alternate Text" Usage="O" Datatype="ST" Length="199"/>
+					<Component Name="Name of Alternate Coding System" Usage="O" Datatype="ID" Length="20" Table="0396"/>
+				</Field>
+				<Field Name="Specimen" Usage="O" Min="0" Max="1" Datatype="CE" Length="483" Table="9999">
+					<Component Name="Identifier" Usage="O" Datatype="ST" Length="20"/>
+					<Component Name="Text" Usage="O" Datatype="ST" Length="199"/>
+					<Component Name="Name of Coding System" Usage="O" Datatype="ID" Length="20" Table="0396"/>
+					<Component Name="Alternate Identifier" Usage="O" Datatype="ST" Length="20"/>
+					<Component Name="Alternate Text" Usage="O" Datatype="ST" Length="199"/>
+					<Component Name="Name of Alternate Coding System" Usage="O" Datatype="ID" Length="20" Table="0396"/>
+				</Field>
+				<Field Name="Additive" Usage="O" Min="0" Max="1" Datatype="CWE" Length="705" Table="0371">
+					<Component Name="Identifier" Usage="O" Datatype="ST" Length="20"/>
+					<Component Name="Text" Usage="O" Datatype="ST" Length="199"/>
+					<Component Name="Name of Coding System" Usage="O" Datatype="ID" Length="20" Table="0396"/>
+					<Component Name="Alternate Identifier" Usage="O" Datatype="ST" Length="20"/>
+					<Component Name="Alternate Text" Usage="O" Datatype="ST" Length="199"/>
+					<Component Name="Name of Alternate Coding System" Usage="O" Datatype="ID" Length="20" Table="0396"/>
+					<Component Name="Coding System Version ID" Usage="C" Datatype="ST" Length="10"/>
+					<Component Name="Alternate Coding System Version ID" Usage="O" Datatype="ST" Length="10"/>
+					<Component Name="Original Text" Usage="O" Datatype="ST" Length="199"/>
+				</Field>
+				<Field Name="Preparation" Usage="O" Min="0" Max="1" Datatype="TX" Length="10240"/>
+				<Field Name="Special Handling Requirements" Usage="O" Min="0" Max="1" Datatype="TX" Length="10240"/>
+				<Field Name="Normal Collection Volume" Usage="O" Min="0" Max="1" Datatype="CQ" Length="500">
+					<Component Name="Quantity" Usage="O" Datatype="NM" Length="16"/>
+					<Component Name="Units" Usage="O" Datatype="CE" Length="483">
+						<SubComponent Name="Identifier" Usage="O" Datatype="ST" Length="20"/>
+						<SubComponent Name="Text" Usage="O" Datatype="ST" Length="199"/>
+						<SubComponent Name="Name of Coding System" Usage="O" Datatype="ID" Length="20" Table="0396"/>
+						<SubComponent Name="Alternate Identifier" Usage="O" Datatype="ST" Length="20"/>
+						<SubComponent Name="Alternate Text" Usage="O" Datatype="ST" Length="199"/>
+						<SubComponent Name="Name of Alternate Coding System" Usage="O" Datatype="ID" Length="20" Table="0396"/>
+					</Component>
+				</Field>
+				<Field Name="Minimum Collection Volume" Usage="O" Min="0" Max="1" Datatype="CQ" Length="500">
+					<Component Name="Quantity" Usage="O" Datatype="NM" Length="16"/>
+					<Component Name="Units" Usage="O" Datatype="CE" Length="483">
+						<SubComponent Name="Identifier" Usage="O" Datatype="ST" Length="20"/>
+						<SubComponent Name="Text" Usage="O" Datatype="ST" Length="199"/>
+						<SubComponent Name="Name of Coding System" Usage="O" Datatype="ID" Length="20" Table="0396"/>
+						<SubComponent Name="Alternate Identifier" Usage="O" Datatype="ST" Length="20"/>
+						<SubComponent Name="Alternate Text" Usage="O" Datatype="ST" Length="199"/>
+						<SubComponent Name="Name of Alternate Coding System" Usage="O" Datatype="ID" Length="20" Table="0396"/>
+					</Component>
+				</Field>
+				<Field Name="Specimen Requirements" Usage="O" Min="0" Max="1" Datatype="TX" Length="10240"/>
+				<Field Name="Specimen Priorities" Usage="O" Min="0" Max="*" Datatype="ID" Length="1" Table="0027"/>
+				<Field Name="Specimen Retention Time" Usage="O" Min="0" Max="1" Datatype="CQ" Length="500">
+					<Component Name="Quantity" Usage="O" Datatype="NM" Length="16"/>
+					<Component Name="Units" Usage="O" Datatype="CE" Length="483">
+						<SubComponent Name="Identifier" Usage="O" Datatype="ST" Length="20"/>
+						<SubComponent Name="Text" Usage="O" Datatype="ST" Length="199"/>
+						<SubComponent Name="Name of Coding System" Usage="O" Datatype="ID" Length="20" Table="0396"/>
+						<SubComponent Name="Alternate Identifier" Usage="O" Datatype="ST" Length="20"/>
+						<SubComponent Name="Alternate Text" Usage="O" Datatype="ST" Length="199"/>
+						<SubComponent Name="Name of Alternate Coding System" Usage="O" Datatype="ID" Length="20" Table="0396"/>
+					</Component>
+				</Field>
+			</Segment>
+		</SegGroup>
+	</HL7v2xStaticDef>
+</HL7v2xConformanceProfile>

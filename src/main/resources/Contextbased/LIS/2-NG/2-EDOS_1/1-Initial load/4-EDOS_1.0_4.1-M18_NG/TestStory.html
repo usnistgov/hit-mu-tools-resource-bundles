@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html>
+   <head>
+      <style type="text/css">@media screen { 
+                                maskByMediaType {display:table;} 
+                                fieldset table tbody tr th {font-size:90%} 
+                                fieldset table tbody tr td {font-size:90%;} 
+                                fieldset table tbody tr th {text-align:left;background:#C6DEFF} 
+                                fieldset table thead tr th {text-align:center;}
+                                fieldset table thead tr th:first-child {width:15%;} 
+                                fieldset table thead tr th:nth-child(2) {width:35%;} 
+                                fieldset table thead tr th:nth-child(3) {width:35%;}
+                                fieldset table thead tr th:last-child {width:10%;} 
+                                fieldset {text-align:center;}
+                                fieldset table { width:98%;border: 1px groove;table-layout: fixed; margin:0 auto;border-collapse: collapse;} 
+                                fieldset table tr { border: 3px groove; } 
+                                fieldset table th { border: 2px groove;} 
+                                fieldset table td { border: 2px groove; } 
+                                fieldset table thead {border: 1px groove;background:#446BEC;text-align:left;} 
+                                fieldset table tbody tr td {text-align:left} .embSpace {padding-left:15px;} .embSubSpace {padding-left:25px;} .childField {background:#B8B8B8;} } 
+                                fieldset table tbody tr td div ul {padding-left:60px}
+                                @media print { maskByMediaType {display:table;} 
+                                fieldset table tbody tr th {font-size:70%} 
+                                fieldset table tbody tr td {font-size:70%;} 
+                                fieldset table tbody tr th {text-align:left;background:#C6DEFF}
+                                fieldset table thead tr th {text-align:center;font-size:70%;}
+                                fieldset legend {text-align:center;font-size:70%;}
+                                fieldset table thead tr th:first-child {width:15%;}
+                                fieldset table thead tr th:nth-child(2) {width:35%;}
+                                fieldset table thead tr th:nth-child(3) {width:35%;} 
+                                fieldset table thead tr th:last-child {width:10%;} 
+                                fieldset {text-align:center;page-break-inside: avoid;} 
+                                fieldset table { width:98%;border: 1px groove;table-layout: fixed; margin:0 auto;border-collapse: collapse;page-break-inside: avoid;} fieldset table tr { border: 3px groove; } 
+                                fieldset table th { border: 2px groove;}
+                                fieldset table td { border: 2px groove; } 
+                                fieldset table thead {border: 1px groove;background:#446BEC;text-align:left;} 
+                                fieldset table tbody tr td {text-align:left} .embSpace {padding-left:10px;} .embSubSpace {padding-left:20px;} .childField {background:#B8B8B8;} } @page { counter-increment: page; @bottom-center { content: "Page " counter(page); } } @page :left { margin-left: 5%; margin-right: 5%; } @page :right { margin-left: 5%; margin-right: 5%; }
+                                fieldset table tbody tr td div ul {padding-left:60px}
+                    </style>
+   </head>
+   <body>
+      <fieldset>
+         <legend>Description</legend>
+         <table>
+            <thead>
+               <tr>
+                  <th colspan="1" style="height:20px"/>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td>
+                     <br/>The initial Laboratory Test Compendium built by Century Hospital Clinical Laboratory consists of a single Prothrombin Time panel (PT +INR).  This compendium is delivered electronically to Dr. Nicholas Radon's practice EHR, as agreed to between Laboratory and Dr. Radon's Office and EHR-S Vendor.   The EHR-S will integrate the eDOS into its test directory and use it to allow Dr. Radon to place orders electronically to Century Hospital's Clinical Laboratory.   The initial laboratory test compendium is composed of five messages.<br/>After Century Hospital's LIS transmits the first and second messages which provides information about the PT and INR observations and then orderable PT + INR panel,  it sends the third message which provides information about CPT procedure codes for the PT + INR panel.<br/>After Century Hospital's LIS transmits the first three messages with the test, panel and charge information, it sends the fourth message, which provides information about the tests that are covered by several insurance companies.</td>
+               </tr>
+            </tbody>
+         </table>
+      </fieldset>
+      <fieldset>
+         <legend>Comments</legend>
+         <table>
+            <thead>
+               <tr>
+                  <th colspan="1" style="height:20px"/>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td>Initial upload of approved coverage information for orderable tests and panels for a new compendium for multiple insurance companies.  <br/>Since this is a replace message, all data in this message will replace information from a previous eDOS M18 message.</td>
+               </tr>
+            </tbody>
+         </table>
+      </fieldset>
+      <fieldset>
+         <legend>PreCondition</legend>
+         <table>
+            <thead>
+               <tr>
+                  <th colspan="1" style="height:20px"/>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td>EDOS_1.0_1.1-M08_New<br/>and<br/>EDOS_1.0_2.1-M10_New<br/>and<br/>EDOS_1.0_3.1-M04_New<br/>have been uploaded.</td>
+               </tr>
+            </tbody>
+         </table>
+      </fieldset>
+      <fieldset>
+         <legend>PostCondition</legend>
+         <table>
+            <thead>
+               <tr>
+                  <th colspan="1" style="height:20px"/>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td>No Post-Condition.</td>
+               </tr>
+            </tbody>
+         </table>
+      </fieldset>
+      <fieldset>
+         <legend>TestObjectives</legend>
+         <table>
+            <thead>
+               <tr>
+                  <th colspan="1" style="height:20px"/>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td>
+                     <ul style="padding-left: 20px;">
+                        <li>Demonstrate capability to support a M18 approved coverage initial load message for panels and orderable atomic tests.</li>
+                        <li>Demonstrate capability to support all supported data elements, including repeating fields in the PM1 segment.</li>
+                        <li>Demonstrate capability to support repeating PM1 and MCP segment group.</li>
+                     </ul>
+                  </td>
+               </tr>
+            </tbody>
+         </table>
+      </fieldset>
+   </body>
+</html>

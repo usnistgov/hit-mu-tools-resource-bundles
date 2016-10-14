@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="ASCII" standalone="no"?>
+<TestCaseMetaData date="2014-12-11 00:05:22" id="1" name="EDOS_1.0_2.1-M10_GU_M10_New" version="1">
+    <Description>The originator of the eDOS is the Century Hospital Clinical Laboratory located at 2070 Test Park, Los Angeles, CA, 90067, CLIA: 24D9871327, phone number: (310) 461-3666.&#13;
+The Sender is the  Century Hospital Clinical Laboratory LIS.&#13;
+The Receiver is Dr. Radon's Office EHR.&#13;
+&#13;
+The initial Laboratory Test Compendium built by Century Hospital Clinical Laboratory is a subset of their Directory of Services.  It is based upon the most commonly ordered lab tests by Dr. Radon.  This compendium is delivered electronically to Dr. Nicholas Radon's practice EHR, as agreed to between Laboratory and Dr. Radon's Office and EHR Vendor.   The EHR will integrate the eDOS into its test directory and use it to allow Dr. Radon to place orders electronically to Century Hospital's Clinical Laboratory.   The initial laboratory test compendium is composed of three messages.  After Century Hospital's LIS successfully transmits the first message which provides information about each individual observation, it sends the second message which provides information for each orderable battery or profile.&#13;
+</Description>
+    <PreCondition>EDOS_1.0_1.1-M08_New&#13;
+has been completed.</PreCondition>
+    <PostCondition>No Post-Conditions.</PostCondition>
+    <TestObjectives>Demonstrate capability to support a M10 initial load message for panels and profiles (i.e. panel of panels).&#13;
+Demonstrate capability to support all supported data elements, including repeating fields in the OM5 segment.&#13;
+</TestObjectives>
+    <Notes>No Notes.</Notes>
+    <Comments>Initial upload of panels and profiles.&#13;
+Since this is a replace message, all data in this message will replace information from a previous eDOS M10 message.&#13;
+&#13;
+Demonstrate capability to support sending ask at order entry requirements.&#13;
+Demonstrate capability to define the specimen requirements.</Comments>
+</TestCaseMetaData>

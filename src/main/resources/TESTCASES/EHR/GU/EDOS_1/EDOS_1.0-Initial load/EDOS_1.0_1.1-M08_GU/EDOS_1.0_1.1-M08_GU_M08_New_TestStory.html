@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html>
+   <head>
+      <style type="text/css">@media screen { 
+                                maskByMediaType {display:table;} 
+                                fieldset table tbody tr th {font-size:90%} 
+                                fieldset table tbody tr td {font-size:90%;} 
+                                fieldset table tbody tr th {text-align:left;background:#C6DEFF} 
+                                fieldset table thead tr th {text-align:center;}
+                                fieldset table thead tr th:first-child {width:15%;} 
+                                fieldset table thead tr th:nth-child(2) {width:35%;} 
+                                fieldset table thead tr th:nth-child(3) {width:35%;}
+                                fieldset table thead tr th:last-child {width:10%;} 
+                                fieldset {text-align:center;}
+                                fieldset table { width:98%;border: 1px groove;table-layout: fixed; margin:0 auto;border-collapse: collapse;} 
+                                fieldset table tr { border: 3px groove; } 
+                                fieldset table th { border: 2px groove;} 
+                                fieldset table td { border: 2px groove; } 
+                                fieldset table thead {border: 1px groove;background:#446BEC;text-align:left;} 
+                                fieldset table tbody tr td {text-align:left} .embSpace {padding-left:15px;} .embSubSpace {padding-left:25px;} .childField {background:#B8B8B8;} } 
+                                fieldset table tbody tr td div ul {padding-left:60px}
+                                @media print { maskByMediaType {display:table;} 
+                                fieldset table tbody tr th {font-size:70%} 
+                                fieldset table tbody tr td {font-size:70%;} 
+                                fieldset table tbody tr th {text-align:left;background:#C6DEFF}
+                                fieldset table thead tr th {text-align:center;font-size:70%;}
+                                fieldset legend {text-align:center;font-size:70%;}
+                                fieldset table thead tr th:first-child {width:15%;}
+                                fieldset table thead tr th:nth-child(2) {width:35%;}
+                                fieldset table thead tr th:nth-child(3) {width:35%;} 
+                                fieldset table thead tr th:last-child {width:10%;} 
+                                fieldset {text-align:center;page-break-inside: avoid;} 
+                                fieldset table { width:98%;border: 1px groove;table-layout: fixed; margin:0 auto;border-collapse: collapse;page-break-inside: avoid;} fieldset table tr { border: 3px groove; } 
+                                fieldset table th { border: 2px groove;}
+                                fieldset table td { border: 2px groove; } 
+                                fieldset table thead {border: 1px groove;background:#446BEC;text-align:left;} 
+                                fieldset table tbody tr td {text-align:left} .embSpace {padding-left:10px;} .embSubSpace {padding-left:20px;} .childField {background:#B8B8B8;} } @page { counter-increment: page; @bottom-center { content: "Page " counter(page); } } @page :left { margin-left: 5%; margin-right: 5%; } @page :right { margin-left: 5%; margin-right: 5%; }
+                                fieldset table tbody tr td div ul {padding-left:60px}
+                    </style>
+   </head>
+   <body>
+      <fieldset>
+         <legend>Description</legend>
+         <table>
+            <thead>
+               <tr>
+                  <th colspan="1" style="height:20px"/>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td>The originator of the eDOS is the Century Hospital Clinical Laboratory located at 2070 Test Park, Los Angeles, CA, 90067, CLIA: 24D9871327 , phone number: (310) 461-3666.&#xD;<br/>The Sender is the  Century Hospital Clinical Laboratory LIS.&#xD;<br/>The Receiver is Dr. Radon's Office EHR.&#xD;<br/>&#xD;
+                     <br/>The initial Laboratory Test Compendium build from Century Hospital Clinical Laboratory is a subset of their Directory of Services.  It based upon the most commonly ordered lab tests by Dr. Radon.&#xD;<br/>This compendium is delivered electronically to Dr. Nicholas Radon's practice EHR, as agreed to between Laboratory and Dr. Radon's Office and EHR Vendor.   The EHR will integrate the eDOS into its test directory and use it to allow Dr. Radon to place orders electronically to Century Hospital's Clinical Laboratory.   The initial laboratory test compendium is composed of three messages.&#xD;<br/>Century Hospital's LIS transmit the first message which provides information about each resultable observation.</td>
+               </tr>
+            </tbody>
+         </table>
+      </fieldset>
+      <fieldset>
+         <legend>Comments</legend>
+         <table>
+            <thead>
+               <tr>
+                  <th colspan="1" style="height:20px"/>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td>Initial upload of individual observations for a new compendium.&#xD;<br/>Since this is a replace message, all data in this message will replace information from a previous eDOS M08 message.</td>
+               </tr>
+            </tbody>
+         </table>
+      </fieldset>
+      <fieldset>
+         <legend>PreCondition</legend>
+         <table>
+            <thead>
+               <tr>
+                  <th colspan="1" style="height:20px"/>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td>No Pre-Conditions.</td>
+               </tr>
+            </tbody>
+         </table>
+      </fieldset>
+      <fieldset>
+         <legend>PostCondition</legend>
+         <table>
+            <thead>
+               <tr>
+                  <th colspan="1" style="height:20px"/>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td>No Post-Conditions.</td>
+               </tr>
+            </tbody>
+         </table>
+      </fieldset>
+      <fieldset>
+         <legend>TestObjectives</legend>
+         <table>
+            <thead>
+               <tr>
+                  <th colspan="1" style="height:20px"/>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td>
+                     <ul style="padding-left: 20px;">
+                        <li>Demonstrate capability to support a M08 initial load message for numeric, calculated, qualitative and narrative tests.&#xD;</li>
+                        <li>Demonstrate capability to support all supported data elements, including repeating fields in the MSH.&#xD;</li>
+                        <li>Demonstrate capability to support all supported data elements, including repeating fields in the MF1. &#xD;</li>
+                        <li>Demonstrate capability to support all supported data elements, including repeating fields in the OM1 - not each OM1 segment will be maximally populated  or include repeating fields (OM1-52 is covered in EDOS_2.2).&#xD;</li>
+                        <li>Demonstrate capability to support all supported data elements, including repeating fields in the OM3.&#xD;</li>
+                        <li>Demonstrate capability to support all supported data elements, including repeating fields in the OM4.&#xD;</li>
+                        <li>Demonstrate capability to support repeating segments for OM4.&#xD;</li>
+                     </ul>
+                  </td>
+               </tr>
+            </tbody>
+         </table>
+      </fieldset>
+      <fieldset>
+         <legend>Notes to Testers</legend>
+         <table>
+            <thead>
+               <tr>
+                  <th colspan="1" style="height:20px"/>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td>No Notes.</td>
+               </tr>
+            </tbody>
+         </table>
+      </fieldset>
+   </body>
+</html>

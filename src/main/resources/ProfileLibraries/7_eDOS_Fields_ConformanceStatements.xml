@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- V2_IG_LTCF_R2_DSTU_R1_2013NOV -->
+<ConformanceStatementDocument IGVersion="V2_IG_LTCF_R2_DSTU_R1_2013NOV" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="CS.xsd">   
+	<!-- MSH for EDOS_GU & EDOS_NG -->
+	<ConformanceStatement Profile="Base" id="eDOS-6" Context="MSH.1" flavor="EDOS_GU">
+		<EnglishDescription>MSH-1 (Field Separator) SHALL contain the constant value '|'.</EnglishDescription>
+		<Assertion>
+			<PlainText location="." value="|"/>
+		</Assertion>		
+	</ConformanceStatement>	
+	<ConformanceStatement Profile="Base" id="eDOS-6" Context="MSH.1" flavor="EDOS_NG">
+		<EnglishDescription>MSH-1 (Field Separator) SHALL contain the constant value '|'.</EnglishDescription>
+		<Assertion>
+			<PlainText location="." value="|"/>
+		</Assertion>		
+	</ConformanceStatement>	
+	
+	<ConformanceStatement Profile="Base" id="eDOS-7" Context="MSH.2" flavor="EDOS_GU">
+		<EnglishDescription>MSH-2 (Encoding Characters) SHALL contain the constant value '^~\&amp;' or the constant value '^~\&amp;#'.</EnglishDescription>
+		<Assertion>
+			<OR>
+				<PlainText location="." value="^~\&amp;#"/>
+				<PlainText location="." value="^~\&amp;"/>
+			</OR>
+		</Assertion>		
+	</ConformanceStatement>	
+	<ConformanceStatement Profile="Base" id="eDOS-7" Context="MSH.2" flavor="EDOS_NG">
+		<EnglishDescription>MSH-2 (Encoding Characters) SHALL contain the constant value '^~\&amp;' or the constant value '^~\&amp;#'.</EnglishDescription>
+		<Assertion>
+			<OR>
+				<PlainText location="." value="^~\&amp;#"/>
+				<PlainText location="." value="^~\&amp;"/>
+			</OR>
+		</Assertion>		
+	</ConformanceStatement>	
+	
+	<ConformanceStatement Profile="Base" id="eDOS-8" Context="MSH.12.1" flavor="EDOS_GU">
+		<EnglishDescription>MSH-12.1 (Version ID) SHALL contain the constant value '2.5.1'.</EnglishDescription>
+		<Assertion>
+			<PlainText location="." value="2.5.1"/>
+		</Assertion>		
+	</ConformanceStatement>	
+	<ConformanceStatement Profile="Base" id="eDOS-8" Context="MSH.12.1" flavor="EDOS_NG">
+		<EnglishDescription>MSH-12.1 (Version ID) SHALL contain the constant value '2.5.1'.</EnglishDescription>
+		<Assertion>
+			<PlainText location="." value="2.5.1"/>
+		</Assertion>		
+	</ConformanceStatement>	
+	
+	<!-- <ConformanceStatement Profile="Base" id="eDOS-13" Context="MSH.15" flavor="EDOS_GU">
+		<EnglishDescription>MSH-15 (Accept Acknowledgement Type) SHALL contain the constant value 'AL'.</EnglishDescription>
+		<Assertion>
+			<PlainText location="." value="AL"/>
+		</Assertion>		
+	</ConformanceStatement>	
+	<ConformanceStatement Profile="Base" id="eDOS-13" Context="MSH.15" flavor="EDOS_NG">
+		<EnglishDescription>MSH-15 (Accept Acknowledgement Type) SHALL contain the constant value 'AL'.</EnglishDescription>
+		<Assertion>
+			<PlainText location="." value="AL"/>
+		</Assertion>		
+	</ConformanceStatement>	
+	
+	<ConformanceStatement Profile="Base" id="eDOS-14" Context="MSH.16" flavor="EDOS_GU">
+		<EnglishDescription>MSH-16 (Application Acknowledgement Type) SHALL contain the constant value 'NE'.</EnglishDescription>
+		<Assertion>
+			<PlainText location="." value="NE"/>
+		</Assertion>		
+	</ConformanceStatement>	
+	<ConformanceStatement Profile="Base" id="eDOS-14" Context="MSH.16" flavor="EDOS_NG">
+		<EnglishDescription>MSH-16 (Application Acknowledgement Type) SHALL contain the constant value 'NE'.</EnglishDescription>
+		<Assertion>
+			<PlainText location="." value="NE"/>
+		</Assertion>		
+	</ConformanceStatement>	-->
+	<!-- MFI -->
+	<!-- maybe move that different conformance statement file depending on the profile -->
+	<ConformanceStatement Profile="Base" id="eDOS-9" Context="MFI.1" flavor="EDOS">
+		<EnglishDescription>If MSH-9.2 (Message Type^Trigger Event) is valued 'M04' then MFI-1.1 (Identifier) SHALL be valued 'CDM'.</EnglishDescription>
+		<Assertion>
+			<Custom className="gov.nist.healthcare.mu.edos.custom.MFI" id="1" />
+		</Assertion>		
+	</ConformanceStatement>	
+	<ConformanceStatement Profile="Base" id="eDOS-10" Context="MFI.1" flavor="EDOS">
+		<EnglishDescription>If MSH-9.2 (Message Type^Trigger Event) is valued 'M08' then MFI-1.1 (Identifier) SHALL be valued 'OMA'.</EnglishDescription>
+		<Assertion>
+			<Custom className="gov.nist.healthcare.mu.edos.custom.MFI" id="1" />
+		</Assertion>		
+	</ConformanceStatement>	
+	<ConformanceStatement Profile="Base" id="eDOS-11" Context="MFI.1" flavor="EDOS">
+		<EnglishDescription>If MSH-9.2 (Message Type^Trigger Event) is valued 'M10' then MFI-1.1 (Identifier) SHALL be valued 'OMC'.</EnglishDescription>
+		<Assertion>
+			<Custom className="gov.nist.healthcare.mu.edos.custom.MFI" id="1" />
+		</Assertion>		
+	</ConformanceStatement>	
+	<ConformanceStatement Profile="Base" id="eDOS-12" Context="MFI.6" flavor="EDOS">
+		<EnglishDescription>MFI-6 (Response Level Code) SHALL be valued 'NE'.</EnglishDescription>
+		<Assertion>
+			<PlainText location="." value="NE"/>
+		</Assertion>		
+	</ConformanceStatement>	
+	<!-- MFE -->
+	<ConformanceStatement Profile="Base" id="eDOS-13" Context="MFE.5" flavor="EDOS">
+		<EnglishDescription>MFE-5 (Primary Key Value Type) SHALL be valued 'CWE'.</EnglishDescription>
+		<Assertion>
+			<PlainText location="." value="CWE"/>
+		</Assertion>		
+	</ConformanceStatement>	
+	
+	<!-- OM1 -->
+	<ConformanceStatement Profile="Base" id="eDOS-14" Context="OM1.18" flavor="EDOS">
+		<EnglishDescription>If MSH-9.2 (Message Type^Trigger Event) is valued 'M08' then OM1-18 (Nature of Service/Test/Observation) SHALL be valued 'A' or 'C'.</EnglishDescription>
+		<Assertion>
+			<Custom className="gov.nist.healthcare.mu.edos.custom.OM1" id="1" />
+		</Assertion>		
+	</ConformanceStatement>
+	<ConformanceStatement Profile="Base" id="eDOS-15" Context="OM1.18" flavor="EDOS">
+		<EnglishDescription>If MSH-9.2 (Message Type^Trigger Event) is valued 'M10' then OM1-18 (Nature of Service/Test/Observation) SHALL be valued 'F', 'S', or 'P'. </EnglishDescription>
+		<Assertion>
+			<Custom className="gov.nist.healthcare.mu.edos.custom.OM1" id="1" />
+		</Assertion>		
+	</ConformanceStatement>
+	<!-- <ConformanceStatement Profile="Base" id="eDOS-XX" Context="OM1.1" flavor="EDOS">
+		<EnglishDescription>OM1-1 (Sequence Number - Test/Observation Master File) SHALL be valued with the constant value '1'.</EnglishDescription>
+		<Assertion>
+			<PlainText location="." value="1"/>
+		</Assertion>		
+	</ConformanceStatement>-->	
+	<!-- OM2 -->
+	<!-- <ConformanceStatement Profile="Base" id="eDOS-16" Context="OM2.1" flavor="EDOS">
+		<EnglishDescription>OM2-1 (Sequence Number - Test/Observation Master File) SHALL be valued with the constant value '1'.</EnglishDescription>
+		<Assertion>
+			<PlainText location="." value="1"/>
+		</Assertion>		
+	</ConformanceStatement>	-->
+	<!-- OM3 -->
+	<!-- <ConformanceStatement Profile="Base" id="eDOS-17" Context="OM3.1" flavor="EDOS">
+		<EnglishDescription>OM3-1 (Sequence Number - Test/Observation Master File) SHALL be valued with the constant value '1'.</EnglishDescription>
+		<Assertion>
+			<PlainText location="." value="1"/>
+		</Assertion>		
+	</ConformanceStatement>-->	
+	<!-- OM4 -->
+	<!-- <ConformanceStatement Profile="Base" id="eDOS-18" Context="OM4.1" flavor="EDOS">
+		<EnglishDescription>OM4-1 (Sequence Number - Test/Observation Master File) SHALL be valued with the constant value '1'.</EnglishDescription>
+		<Assertion>
+			<PlainText location="." value="1"/>
+		</Assertion>		
+	</ConformanceStatement>	-->
+	
+	<!-- conformance rules from HL7-->
+	<ConformanceStatement Profile="Base" id="HL7-1" Context="OM1.1" flavor="EDOS">
+		<EnglishDescription>OM1-1 : This field contains the first OM1 segment in a message and is described as 1, the second as 2, and so on.</EnglishDescription>
+		<Assertion>
+			<SequenceID location="." location1="../.."/> 
+		</Assertion>		
+	</ConformanceStatement>
+
+
+
+</ConformanceStatementDocument>

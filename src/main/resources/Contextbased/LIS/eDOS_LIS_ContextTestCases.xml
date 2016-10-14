@@ -1,0 +1,1773 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<TestCases xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<TestCaseMetaData id="LIS Test Plan" date="11/18/2015" version="version2">
+		<Comments>This is the LIS test plan.</Comments>
+	</TestCaseMetaData>
+	<TestCaseMetaData id="GU" date="11/18/2015" version="version2">
+		<Comments>This is the Globally Unique Profile Component (GU) test case group - all identifiers in these test cases use OIDs to identify the assigning authority.</Comments>
+	</TestCaseMetaData>
+	<TestCaseMetaData id="NG" date="11/18/2015" version="version2">
+		<Comments>This is the Non-Globally Unique Profile Component (NG) test case group - identifiers in these test cases may use OIDs, other identifiers or just the namespaceID to identify the assigning authority.</Comments>
+	</TestCaseMetaData>
+	<TestCaseMetaData id="EDOS_0.0_GU" date="11/18/2015" name="Smoke Test" version="version3">
+		<Description>The initial Laboratory Test Compendium is delivered electronically from the LIS to the EHR-S.   The EHR-S will integrate the eDOS into its test directory and use it to allow placement of orders electronically.   The initial laboratory test compendium is composed of up to four messages.</Description>
+		<PreCondition>No Pre-Condition.</PreCondition>
+		<PostCondition>No Post-Condition.</PostCondition>
+		<TestObjectives>Demonstrate capability to support minimally populated messages (single occurrences of all required ("R") elements).</TestObjectives>
+		<Comments>This is the initial "smoke testing" to reveal simple failures severe enough to preclude further testing.</Comments>
+	</TestCaseMetaData>
+	<TestCaseMetaData id="EDOS_0.0_1.1-M08_GU" date="11/18/2015" name="M08_New_SmokeTest" version="version3">
+		<Description>
+The initial Laboratory Test Compendium built by Century Hospital Clinical Laboratory consists of a single Prothrombin Time panel (""PT +INR"").  This compendium is delivered electronically to Dr. Nicholas Radon's practice EHR, as agreed to between Laboratory and Dr. Radon's Office and EHR-S Vendor.   The EHR-S will integrate the eDOS into its test directory and use it to allow Dr. Radon to place orders electronically to Century Hospital's Clinical Laboratory.   The initial laboratory test compendium is composed of four messages.
+Century Hospital's LIS transmit the first message which provides information about the PT and INR observations.</Description>
+		<PreCondition>No Pre-Condition.</PreCondition>
+		<PostCondition>No Post-Condition.</PostCondition>
+		<TestObjectives>Demonstrate capability to support a minimal M08 initial load message.
+Demonstrate capability to support a single occurrence of all required ("R") elements in the MSH segment.
+Demonstrate capability to support a single occurrence of all required ("R") elements in the MFI segment.
+Demonstrate capability to support a single occurrence of all required ("R") elements in the MFE segment.
+Demonstrate capability to support a single occurrence of all required ("R") elements in the OM1 segment.</TestObjectives>
+		<Comments>This is the initial "smoke testing" to reveal simple failures severe enough to preclude further testing.  Initial upload of 2 individual observations for a new compendium. 
+Since this is a replace message, all data in this message will replace information from a previous eDOS M08 message.</Comments>
+	</TestCaseMetaData>
+	<TestCaseMetaData id="EDOS_0.0_2.1-M10_GU" date="11/18/2015" name="M10_New_SmokeTest" version="version3">
+		<Description>The initial Laboratory Test Compendium built by Century Hospital Clinical Laboratory consists of a single Prothrombin Time panel (PT +INR).  This compendium is delivered electronically to Dr. Nicholas Radon's practice EHR, as agreed to between Laboratory and Dr. Radon's Office and EHR-S Vendor.   The EHR-S will integrate the eDOS into its test directory and use it to allow Dr. Radon to place orders electronically to Century Hospital's Clinical Laboratory.   The initial laboratory test compendium is composed of four messages.  
+After Century Hospital's LIS transmits the first message which provides information about the PT and INR observations, it sends the second message which provides information about orderable PT + INR panel.
+</Description>
+		<PreCondition>EDOS_0.0_1.1-M08_New_SmokeTest
+has been completed.</PreCondition>
+		<PostCondition>No Post-Condition.</PostCondition>
+		<TestObjectives>Demonstrate capability to support a minimal M10 initial load message.
+Demonstrate capability to support a single occurrence of all required ("R") elements in the MSH segment.
+Demonstrate capability to support a single occurrence of all required ("R") elements in the MFI segment.
+Demonstrate capability to support a single occurrence of all required ("R") elements in the MFE segment.
+Demonstrate capability to support a single occurrence of all required ("R") elements in the OM1 segment.
+Demonstrate capability to support a single occurrence of all required ("R") elements in the OM5 segment.</TestObjectives>
+		<Comments>This is the initial "smoke testing" to reveal simple failures severe enough to preclude further testing.   Initial upload of a single panel.
+Since this is a replace message, all data in this message will replace information from a previous eDOS M10 message.</Comments>
+	</TestCaseMetaData>
+	<TestCaseMetaData id="EDOS_0.0_3.1-M04_GU" date="11/18/2015" name="M04_New_SmokeTest" version="version3">
+		<Description>
+The initial Laboratory Test Compendium built by Century Hospital Clinical Laboratory consists of a single Prothrombin Time panel (PT +INR).  This compendium is delivered electronically to Dr. Nicholas Radon's practice EHR, as agreed to between Laboratory and Dr. Radon's Office and EHR-S Vendor.   The EHR-S will integrate the eDOS into its test directory and use it to allow Dr. Radon to place orders electronically to Century Hospital's Clinical Laboratory.   The initial laboratory test compendium is composed of four messages.
+After Century Hospital's LIS transmits the first and second messages which provides information about the PT and INR observations and then orderable PT + INR panel,  it sends the third message which provides information about CPT procedure codes for the PT + INR panel.</Description>
+		<PreCondition>EDOS_0.0_1.1-M08_New_SmokeTest
+and
+EDOS_0.0_2.1-M10_New_SmokeTest
+have been completed.</PreCondition>
+		<PostCondition>No Post-Condition.</PostCondition>
+		<TestObjectives>Demonstrate capability to support a minimal M04 initial load message.
+Demonstrate capability to support a single occurrence of all required ("R") elements in the MSH segment.
+Demonstrate capability to support a single occurrence of all required ("R") elements in the MFI segment.
+Demonstrate capability to support a single occurrence of all required ("R") elements in the MFE segment.
+Demonstrate capability to support a single occurrence of all required ("R") elements in the CDM segment.</TestObjectives>
+		<Comments>This is the initial "smoke testing" to reveal simple failures severe enough to preclude further testing.  Initial upload of a charge code (CPT code) for a panel for a new compendium. 
+Since this is a replace message, all data in this message will replace information from a previous eDOS M04 message.</Comments>
+	</TestCaseMetaData>
+	<TestCaseMetaData id="EDOS_0.0_4.1-M18_GU" date="11/18/2015" name="M18_New_SmokeTest" version="version3">
+		<Description>
+The initial Laboratory Test Compendium built by Century Hospital Clinical Laboratory consists of a single Prothrombin Time panel (PT +INR).  This compendium is delivered electronically to Dr. Nicholas Radon's practice EHR, as agreed to between Laboratory and Dr. Radon's Office and EHR-S Vendor.   The EHR-S will integrate the eDOS into its test directory and use it to allow Dr. Radon to place orders electronically to Century Hospital's Clinical Laboratory.   The initial laboratory test compendium is composed of four messages.
+After Century Hospital's LIS transmits the first three messages with the test, panel and charge information, it sends the fourth message, which provides information about the tests that are covered by Medicare insurance.</Description>
+		<PreCondition>EDOS_0.0_1.1-M08_New_SmokeTest
+and
+EDOS_0.0_2.1-M10_New_SmokeTest
+and
+EDOS_0.0_3.1-M04_New_SmokeTest
+have been completed.</PreCondition>
+		<PostCondition>No Post-Condition.</PostCondition>
+		<TestObjectives>Demonstrate capability to support a minimal M18 approved coverage message.
+Demonstrate capability to support a single occurrence of all required ("R") elements in the MSH segment.
+Demonstrate capability to support a single occurrence of all required ("R") elements in the MFI segment.
+Demonstrate capability to support a single occurrence of all required ("R") elements in the MFE segment.
+Demonstrate capability to support a single occurrence of all required ("R") elements in the PM1 segment.
+Demonstrate capability to support a single occurrence of all required ("R") elements in the MCP segment.</TestObjectives>
+		<Comments>This is the initial "smoke testing" to reveal simple failures severe enough to preclude further testing.  Initial upload of a list of approved coverage for a panel in a new compendium. 
+Since this is a replace message, all data in this message will replace information from a previous eDOS M18 message.</Comments>
+	</TestCaseMetaData>
+	<TestCaseMetaData id="EDOS_1.0_GU" date="11/18/2015" name="Initial Load" version="version3">
+		<Description>The initial Laboratory Test Compendium is delivered electronically from the LIS to the EHR-S.   The EHR-S will integrate the eDOS into its test directory and use it to allow placement of orders electronically.   The initial laboratory test compendium is composed of up to five messages.</Description>
+		<PreCondition>No Pre-Condition.</PreCondition>
+		<PostCondition>No Post-Condition.</PostCondition>
+		<TestObjectives>Demonstrate capability to support typically and maximally populated messages including repeating elements for all supported test types.</TestObjectives>
+		<Comments>Initial upload for a new compendium.</Comments>
+	</TestCaseMetaData>
+	<TestCaseMetaData id="EDOS_1.0_1.1-M08_GU" date="11/18/2015" name="MO8_New" version="version3">
+		<Description>
+The initial Laboratory Test Compendium built by Century Hospital Clinical Laboratory is a subset of their Directory of Services.  It is based upon the most commonly ordered lab tests by Dr. Radon.
+This compendium is delivered electronically to Dr. Nicholas Radon's practice EHR, as agreed to between Laboratory and Dr. Radon's Office and EHR-S Vendor.   The EHR-S will integrate the eDOS into its test directory and use it to allow Dr. Radon to place orders electronically to Century Hospital's Clinical Laboratory.   
+The initial laboratory test compendium is composed of five messages.
+Century Hospital's LIS transmit the first message which provides information about each resultable observation.</Description>
+		<PreCondition>No Pre-Condition.</PreCondition>
+		<PostCondition>No Post-Condition.</PostCondition>
+		<TestObjectives>Demonstrate capability to support a M08 initial load message for numeric, calculated, qualitative and narrative tests.
+Demonstrate capability to support all supported data elements, including repeating fields in the MSH segment.
+Demonstrate capability to support all supported data elements, including repeating fields in the MF1 segment. 
+Demonstrate capability to support all supported data elements, including repeating fields in the OM1 - not each OM1 segment will be maximally populated or include repeating fields (OM1-52 is covered in EDOS_2.2).
+Demonstrate capability to support all supported data elements, including repeating fields in the OMC segment.
+Demonstrate capability to support repeating segments for OMC.
+Demonstrate capability to support all supported data elements, including repeating fields in the OM2 segment.
+Demonstrate capability to support all supported data elements, including repeating fields in the OM3 segment.
+Demonstrate capability to support all supported data elements, including repeating fields in the OM4 segment.
+Demonstrate capability to support repeating segments for OM4.</TestObjectives>
+		<Comments>Initial upload of individual observations for a new compendium.
+Since this is a replace message, all data in this message will replace information from a previous eDOS M08 message.
+Demonstrate capability to support sending ask at order entry requirements.
+Demonstrate capability to define the specimen requirements.</Comments>
+	</TestCaseMetaData>
+	<TestCaseMetaData id="EDOS_1.0_2.1-M10_GU" date="11/18/2015" name="M10_New" version="version3">
+		<Description>
+The initial Laboratory Test Compendium built by Century Hospital Clinical Laboratory is a subset of their Directory of Services.  It is based upon the most commonly ordered lab tests by Dr. Radon.  This compendium is delivered electronically to Dr. Nicholas Radon's practice EHR, as agreed to between Laboratory and Dr. Radon's Office and EHR-S Vendor.   The EHR-S will integrate the eDOS into its test directory and use it to allow Dr. Radon to place orders electronically to Century Hospital's Clinical Laboratory.   
+The initial laboratory test compendium is composed of five messages.  
+After Century Hospital's LIS successfully transmits the first message which provides information about each individual observation, it sends the second message which provides information for each orderable battery or profile.</Description>
+		<PreCondition>EDOS_1.0_1.1-M08_New
+has been completed.</PreCondition>
+		<PostCondition>No Post-Condition.</PostCondition>
+		<TestObjectives>Demonstrate capability to support a M10 initial load message for panels and profiles (i.e. panel of panels).
+Demonstrate capability to support all supported data elements, including repeating fields in the OM5 segment.
+Demonstrate capability to support all supported data elements, including repeating fields in the OM4 segment.
+Demonstrate capability to support repeating segments for OM4.</TestObjectives>
+		<Comments>Initial upload of panels and profiles.
+Since this is a replace message, all data in this message will replace information from a previous eDOS M10 message.</Comments>
+	</TestCaseMetaData>
+	<TestCaseMetaData id="EDOS_1.0_3.1-M04_GU" date="11/18/2015" name="M04_New" version="version3">
+		<Description>
+The initial Laboratory Test Compendium built by Century Hospital Clinical Laboratory is a subset of their Directory of Services.  It is based upon the most commonly ordered lab tests by Dr. Radon.  This compendium is delivered electronically to Dr. Nicholas Radon's practice EHR, as agreed to between Laboratory and Dr. Radon's Office and EHR-S Vendor.   The EHR-S will integrate the eDOS into its test directory and use it to allow Dr. Radon to place orders electronically to Century Hospital's Clinical Laboratory.   
+The initial laboratory test compendium is composed of five messages.  
+After Century Hospital's LIS successfully transmits the first and second messages which provide information about each individual observation and each orderable battery or profile,  it sends the third message which provides information about CPT procedure codes for each orderable panel and individual observation.</Description>
+		<PreCondition>EDOS_1.0_1.1-M08_New
+and
+EDOS_1.0_2.1-M10_New
+have been uploaded.</PreCondition>
+		<PostCondition>No Post-Condition.</PostCondition>
+		<TestObjectives>Demonstrate capability to support a M04 initial load message for panels and atomic tests.
+Demonstrate capability to support NTE segments, including repeats under one MFI.
+Demonstrate capability to support NTE segments, including repeats under one MFE.
+Demonstrate capability to support all supported data elements, including repeating fields in the CDM segment.
+Demonstrate capability to support NTE segments, including repeats under one CDM.</TestObjectives>
+		<Comments>Initial upload of charge codes (CPT codes) for orderable tests and panels for a new compendium.  
+Since this is a replace message, all data in this message will replace information from a previous eDOS M04 message.
+Demonstrate capability to support multiple instances of procedure code for a single test.</Comments>
+	</TestCaseMetaData>
+	<TestCaseMetaData id="EDOS_1.0_4.1-M18_GU" date="11/18/2015" name="M18_New_Approved" version="version3">
+		<Description>
+The initial Laboratory Test Compendium built by Century Hospital Clinical Laboratory consists of a single Prothrombin Time panel (PT +INR).  This compendium is delivered electronically to Dr. Nicholas Radon's practice EHR, as agreed to between Laboratory and Dr. Radon's Office and EHR-S Vendor.   The EHR-S will integrate the eDOS into its test directory and use it to allow Dr. Radon to place orders electronically to Century Hospital's Clinical Laboratory.   The initial laboratory test compendium is composed of five messages.
+After Century Hospital's LIS transmits the first and second messages which provides information about the PT and INR observations and then orderable PT + INR panel,  it sends the third message which provides information about CPT procedure codes for the PT + INR panel.
+After Century Hospital's LIS transmits the first three messages with the test, panel and charge information, it sends the fourth message, which provides information about the tests that are covered by several insurance companies.</Description>
+		<PreCondition>EDOS_1.0_1.1-M08_New
+and
+EDOS_1.0_2.1-M10_New
+and
+EDOS_1.0_3.1-M04_New
+have been uploaded.</PreCondition>
+		<PostCondition>No Post-Condition.</PostCondition>
+		<TestObjectives>Demonstrate capability to support a M18 approved coverage initial load message for panels and orderable atomic tests.
+Demonstrate capability to support all supported data elements, including repeating fields in the PM1 segment.
+Demonstrate capability to support repeating PM1 and MCP segment group.</TestObjectives>
+		<Comments>Initial upload of approved coverage information for orderable tests and panels for a new compendium for multiple insurance companies.  
+Since this is a replace message, all data in this message will replace information from a previous eDOS M18 message.</Comments>
+	</TestCaseMetaData>
+	<TestCaseMetaData id="EDOS_1.0_5.1-M18_GU" date="11/18/2015" name="M18_New_Limited" version="version3">
+		<Description>
+The initial Laboratory Test Compendium built by Century Hospital Clinical Laboratory consists of a single Prothrombin Time panel (PT +INR).  This compendium is delivered electronically to Dr. Nicholas Radon's practice EHR, as agreed to between Laboratory and Dr. Radon's Office and EHR-S Vendor.   The EHR-S will integrate the eDOS into its test directory and use it to allow Dr. Radon to place orders electronically to Century Hospital's Clinical Laboratory.   The initial laboratory test compendium is composed of five messages.
+After Century Hospital's LIS transmits the first three messages with the test, panel and charge information, and the fourth message, which provides information about the tests that are covered by several insurance companies, it send the last message in the initial upload, which provides information about the tests that are not covered under specific insurance company agreements.</Description>
+		<PreCondition>EDOS_1.0_1.1-M08_New
+and
+EDOS_1.0_2.1-M10_New
+and
+EDOS_1.0_3.1-M04_New
+and
+EDOS_1.0_4.1-M18_New_Approved
+have been uploaded.</PreCondition>
+		<PostCondition>No Post-Condition.</PostCondition>
+		<TestObjectives>Demonstrate capability to support a M18 limited coverage initial load message for panels and orderable atomic tests.
+Demonstrate capability to support all supported data elements, including repeating fields in the PM1 segment.
+Demonstrate capability to support repeating PM1 and MCP segment group.</TestObjectives>
+		<Comments>Initial upload of limited coverage information for orderable tests and panels for a new compendium for multiple insurance companies.  
+Since this is a replace message, all data in this message will replace information from a previous eDOS M18 message.</Comments>
+	</TestCaseMetaData>
+	<TestCaseMetaData id="EDOS_2.0_GU" date="11/18/2015" name="Update Deactivate" version="version3">
+		<Description>Some time after initial Laboratory Test Compendium is delivered electronically from the LIS to the EHR-S, the LIS send up to four eDOS update messages to the EHR-S to deactivate an orderable test.  The EHR-S will integrate these updates into its test directory.</Description>
+		<PreCondition>Initial load of compendium data elements are incorporated appropriately into the EHR-S.</PreCondition>
+		<PostCondition>No Post-Condition.</PostCondition>
+		<TestObjectives>Demonstrate capability to support deactivating a single record in an existing test compendium.</TestObjectives>
+		<Comments>Updates to a single record.</Comments>
+	</TestCaseMetaData>
+	<TestCaseMetaData id="EDOS_2.0_1.1-M08_GU" date="11/18/2015" name="M08_Update_Deactivate" version="version3">
+		<Description>
+The Laboratory Test Compendium from Century Hospital Clinical Laboratory is a subset of their Directory of Services.  It is based upon the most commonly ordered lab tests by Dr. Radon.    This compendium is being used by Dr. Nicholas Radon's practice EHR-S  to place orders electronically to Century Hospital's Clinical Laboratory.  Century Hospital Laboratory had decided to no longer offer the sedimentation rate test and Century Hospital's LIS transmits the appropriate eDOS update messages to Dr. Radon's EHR-S to deprecate this orderable test.</Description>
+		<PreCondition>EDOS_1.0_1.1-M08_New
+and
+EDOS_1.0_2.1-M10_New
+and
+EDOS_1.0_3.1-M04_New
+and
+EDOS_1.0_4.1-M18_New_Approved
+and
+EDOS_1.0_5.1-M18_New_Limited
+have been uploaded.</PreCondition>
+		<PostCondition>No Post-Condition.</PostCondition>
+		<TestObjectives>Demonstrate capability to support a M08 update message - action: deactivate.
+Demonstrate capability to support repeating segments for OM4.
+Demonstrate capability to support the repeating field in OM1-51 (Other Names), OM1-54 (Special Instructions), and OM4-15 (Specimen Handling Code).</TestObjectives>
+		<Comments>Update message to deactivate a no longer offered test (individual observation).</Comments>
+	</TestCaseMetaData>
+	<TestCaseMetaData id="EDOS_2.0_2.1-M10_GU" date="11/18/2015" name="M10_Update_Deactivate" version="version3">
+		<Description>
+The Laboratory Test Compendium from Century Hospital Clinical Laboratory is a subset of their Directory of Services.  It based upon the most commonly ordered lab tests.  This compendium is being used by Dr. Nicholas Radon's practice EHR-S  to place orders electronically to Century Hospital's Clinical Laboratory.   Century Hospital Laboratory no longer offers a particular General Health Profile (GHP).   Century Hospital's LIS transmits the appropriate eDOS update message to deactivate this GHP panel in Dr. Radon's EHR. </Description>
+		<PreCondition>EDOS_1.0_1.1-M08_New
+and
+EDOS_1.0_2.1-M10_New
+and
+EDOS_1.0_3.1-M04_New
+and
+EDOS_1.0_4.1-M18_New_Approved
+and
+EDOS_1.0_5.1-M18_New_Limited
+and
+EDOS_2.0_1.1-M08_Update_Deactivate
+have been completed.</PreCondition>
+		<PostCondition>No Post-Condition.</PostCondition>
+		<TestObjectives>Demonstrate capability to support a M10 update message - action: deactivate.
+Demonstrate capability to support the repeating field in OM1-31 (Observations Required to Interpret the Observation), OM1-52 (Replacement Producer’s Service/Test/Observation ID). OM4-3 (Container Description), OM4-4 (Container Volume), and OM4-5 (Container Units).
+Demonstrate capability to support all supported data elements, including repeating fields in the OM5 segment.
+Demonstrate capability to support repeating segments for OM4.</TestObjectives>
+		<Comments>Update message to deactivate a no longer offered test (panel and/or profile).</Comments>
+	</TestCaseMetaData>
+	<TestCaseMetaData id="EDOS_2.0_3.1-M04_GU" date="11/18/2015" name="M04_Update_Deactivate" version="version3">
+		<Description>
+The Laboratory Test Compendium from Century Hospital Clinical Laboratory is a subset of their Directory of Services.  It is based upon the most commonly ordered lab tests by Dr. Radon.  This compendium is being used by Dr. Nicholas Radon's practice EHR-S  to place orders electronically to Century Hospital's Clinical Laboratory.  Century Hospital Laboratory had decided to no longer offer the sedimentation rate test.  Century Hospital's LIS transmits the appropriate eDOS update messages to Dr. Radon's EHR-S to deprecate this orderable test.</Description>
+		<PreCondition>EDOS_1.0_1.1-M08_New
+and
+EDOS_1.0_2.1-M10_New
+and
+EDOS_1.0_3.1-M04_New
+and
+EDOS_1.0_4.1-M18_New_Approved
+and
+EDOS_1.0_5.1-M18_New_Limited
+and
+EDOS_2.0_1.1-M08_Update_Deactivate
+and
+EDOS_2.0_2.1-M10_Update_Deactivate
+have been completed.</PreCondition>
+		<PostCondition>No Post-Condition.</PostCondition>
+		<TestObjectives>Demonstrate capability to support a M04 update message - action: deactivate.
+
+</TestObjectives>
+		<Comments>Update message to deactivate the charge code (CPT codes) of a no longer offered tests.</Comments>
+	</TestCaseMetaData>
+	<TestCaseMetaData id="EDOS_2.0_4.1-M18_GU" date="11/18/2015" name="M18_Update_Deactivate" version="version3">
+		<Description>
+The Laboratory Test Compendium from Century Hospital Clinical Laboratory is a subset of their Directory of Services.  It is based upon the most commonly ordered lab tests by Dr. Radon.  This compendium is being used by Dr. Nicholas Radon's practice EHR-S  to place orders electronically to Century Hospital's Clinical Laboratory.  Century Hospital Laboratory had decided to no longer offer the sedimentation rate test.  Century Hospital's LIS transmits the appropriate eDOS update message for approved coverage information for this deactivated test to Dr. Radon's EHR.</Description>
+		<PreCondition>EDOS_1.0_1.1-M08_New
+and
+EDOS_1.0_2.1-M10_New
+and
+EDOS_1.0_3.1-M04_New
+and
+EDOS_1.0_4.1-M18_New_Approved
+and
+EDOS_1.0_5.1-M18_New_Limited
+and
+EDOS_2.0_1.1-M08_Update_Deactivate
+and
+EDOS_2.0_2.1-M10_Update_Deactivate
+and
+EDOS_2.0_3.1-M04_Update_Deactivate
+have been completed.</PreCondition>
+		<PostCondition>No Post-Condition.</PostCondition>
+		<TestObjectives>Demonstrate capability to support a M18 approved coverage update message-action: deactivate.</TestObjectives>
+		<Comments>Update message about approved coverage information for a deactivated test.</Comments>
+	</TestCaseMetaData>
+	<TestCaseMetaData id="EDOS_2.1_GU" date="11/18/2015" name="Update Add" version="version3">
+		<Description>Some time after initial Laboratory Test Compendium is delivered electronically from the LIS to the EHR-S, the LIS send up to four eDOS update messages to the EHR-S to add an orderable test.  The EHR-S will integrate these updates into its test directory.</Description>
+		<PreCondition>Initial load of compendium data elements are incorporated appropriately into the EHR-S.</PreCondition>
+		<PostCondition>No Post-Condition.</PostCondition>
+		<TestObjectives>Demonstrate capability to support adding a single record in an existing test compendium.</TestObjectives>
+		<Comments>Updates to a single record.</Comments>
+	</TestCaseMetaData>
+	<TestCaseMetaData id="EDOS_2.1_1.1-M08_GU" date="11/18/2015" name="M08_Update_Add" version="version3">
+		<Description>
+The Laboratory Test Compendium from Century Hospital Clinical Laboratory is a subset of their Directory of Services.  It is based upon the most commonly ordered lab tests by Dr. Radon.    This compendium is being used by Dr. Nicholas Radon's practice EHR-S to place orders electronically to Century Hospital's Clinical Laboratory.  Century Hospital has made the following changes to their test compendium:
+- Added a stool culture, colony count and antibiotic susceptibility tests.
+Century Hospital's LIS transmits the appropriate eDOS update messages with these changes to Dr. Radon's EHR.</Description>
+		<PreCondition>EDOS_1.0_1.1-M08_New
+and
+EDOS_1.0_2.1-M10_New
+and
+EDOS_1.0_3.1-M04_New
+and
+EDOS_1.0_4.1-M18_New_Approved
+and
+EDOS_1.0_5.1-M18_New_Limited
+have been uploaded.</PreCondition>
+		<PostCondition>No Post-Condition.</PostCondition>
+		<TestObjectives>Demonstrate capability to support a M08 update message - action: addition
+Demonstrate capability to support for an OM3 segment.
+Demonstrate capability to support the repeating field in OM3-5 (Abnormal Tests/Codes for Categorical Observations),  OM4-3 (Container Description), OM4-4 (Container Volume), and OM4-5 (Container Units).
+Demonstrate capability to support repeating segments for OM4.</TestObjectives>
+		<Comments>Update changes for addition of new individual observations.</Comments>
+	</TestCaseMetaData>
+	<TestCaseMetaData id="EDOS_2.1_2.1-M10_GU" date="11/18/2015" name="M10_Update_Add" version="version3">
+		<Description>
+The Laboratory Test Compendium from Century Hospital Clinical Laboratory is a subset of their Directory of Services.  It is based upon the most commonly ordered lab tests by Dr. Radon.    This compendium is being used by Dr. Nicholas Radon's practice EHR-S to place orders electronically to Century Hospital's Clinical Laboratory.  Century Hospital has made the following changes to their test compendium:
+- Added a stool culture with susceptibility reflex and a susceptibility panel
+Century Hospital's LIS transmits the appropriate eDOS update messages with these changes to Dr. Radon's EHR.</Description>
+		<PreCondition>EDOS_1.0_1.1-M08_New
+and
+EDOS_1.0_2.1-M10_New
+and
+EDOS_1.0_3.1-M04_New
+and
+EDOS_1.0_4.1-M18_New_Approved
+and
+EDOS_1.0_5.1-M18_New_Limited
+and
+EDOS_2.1_1.1-M08_Update_Add
+have been completed.</PreCondition>
+		<PostCondition>No Post-Condition.</PostCondition>
+		<TestObjectives>Demonstrate capability to support a M10 update message - action: addition
+Demonstrate capability to support the repeating field in OM4-3 (Container Description), OM4-4 (Container Volume), and OM4-5 (Container Units).
+Demonstrate capability to support all supported data elements, including repeating fields in the OM5 segment.
+Demonstrate capability to support repeating segments for OM4.</TestObjectives>
+		<Comments>Update changes for additions of new panels and their elements.</Comments>
+	</TestCaseMetaData>
+	<TestCaseMetaData id="EDOS_2.1_3.1-M04_GU" date="11/18/2015" name="M04_Update_Add" version="version3">
+		<Description>
+The Laboratory Test Compendium from Century Hospital Clinical Laboratory is a subset of their Directory of Services.  It is based upon the most commonly ordered lab tests by Dr. Radon.  This compendium is being used by Dr. Nicholas Radon's practice EHR-S to place orders electronically to Century Hospital's Clinical Laboratory.  Century Hospital has made changes to their test compendium:
+- Added CPT codes for the Stool culture with susceptibility reflex
+- Added CPT codes for the susceptibility panel
+- Added CPT codes for the individually orderable stool culture
+Century Hospital's LIS transmits the appropriate eDOS update messages with these changes to Dr. Radon's EHR.</Description>
+		<PreCondition>EDOS_1.0_1.1-M08_New
+and
+EDOS_1.0_2.1-M10_New
+and
+EDOS_1.0_3.1-M04_New
+and
+EDOS_1.0_4.1-M18_New_Approved
+and
+EDOS_1.0_5.1-M18_New_Limited
+and
+EDOS_2.1_1.1-M08_Update_Add
+and
+EDOS_2.1_2.1-M10_Update_Add
+have been completed.</PreCondition>
+		<PostCondition>No Post-Condition.</PostCondition>
+		<TestObjectives>Demonstrate capability to support a M04 update message - action: addition</TestObjectives>
+		<Comments>Update changes for addition of charge codes (CPT codes) for individually orderable tests as well as the new panels.</Comments>
+	</TestCaseMetaData>
+	<TestCaseMetaData id="EDOS_2.1_4.1-M18_GU" date="11/18/2015" name="M18_Update_Add" version="version3">
+		<Description>
+The Laboratory Test Compendium from Century Hospital Clinical Laboratory is a subset of their Directory of Services.  It is based upon the most commonly ordered lab tests by Dr. Radon.  This compendium is being used by Dr. Nicholas Radon's practice EHR-S to place orders electronically to Century Hospital's Clinical Laboratory.  Century Hospital has made changes to their test compendium:
+-  Updated approved coverage information for the newly added panels and tests
+Century Hospital's LIS transmits the appropriate eDOS update messages with these changes to Dr. Radon's EHR.</Description>
+		<PreCondition>EDOS_1.0_1.1-M08_New
+and
+EDOS_1.0_2.1-M10_New
+and
+EDOS_1.0_3.1-M04_New
+and
+EDOS_1.0_4.1-M18_New_Approved
+and
+EDOS_1.0_5.1-M18_New_Limited
+and
+EDOS_2.1_1.1-M08_Update_Add
+and
+EDOS_2.1_2.1-M10_Update_Add
+and
+EDOS_2.1_3.1-M04_Update_Add
+have been completed.</PreCondition>
+		<PostCondition>No Post-Condition.</PostCondition>
+		<TestObjectives>Demonstrate capability to support a M18 approved coverage update message for an added panel.</TestObjectives>
+		<Comments>Update message to add approved coverage information for newly added tests and panels.</Comments>
+	</TestCaseMetaData>
+	<TestCaseMetaData id="EDOS_2.2_GU" date="11/18/2015" name="Update Revise" version="version3">
+		<Description>Some time after initial Laboratory Test Compendium is delivered electronically from the LIS to the EHR-S, the LIS send up to four eDOS update messages to the EHR-S to revise an orderable test.  The EHR-S will integrate these updates into its test directory.</Description>
+		<PreCondition>Initial load of compendium data elements are incorporated appropriately into the EHR-S.</PreCondition>
+		<PostCondition>No Post-Condition.</PostCondition>
+		<TestObjectives>Demonstrate capability to support revising a single record in an existing test compendium.</TestObjectives>
+		<Comments>Updates to a single record.</Comments>
+	</TestCaseMetaData>
+	<TestCaseMetaData id="EDOS_2.2_1.1-M08_GU" date="11/18/2015" name="M08_Update_Revise" version="version3">
+		<Description>
+The Laboratory Test Compendium from Century Hospital Clinical Laboratory is a subset of their Directory of Services.  It is based upon the most commonly ordered lab tests by Dr. Radon.    This compendium is being used by Dr. Nicholas Radon's practice EHR-S to place orders electronically to Century Hospital's Clinical Laboratory.  Century Hospital has made the following changes to their test compendium:
+- Revised the LOINC for Penicillin susceptibility test.
+Century Hospital's LIS transmits the appropriate eDOS update messages with these changes to Dr. Radon's EHR.</Description>
+		<PreCondition>EDOS_1.0_1.1-M08_New
+and
+EDOS_1.0_2.1-M10_New
+and
+EDOS_1.0_3.1-M04_New
+and
+EDOS_1.0_4.1-M18_New_Approved
+and
+EDOS_1.0_5.1-M18_New_Limited
+have been uploaded.</PreCondition>
+		<PostCondition>No Post-Condition.</PostCondition>
+		<TestObjectives>Demonstrate capability to support a M08 update message - action: revision</TestObjectives>
+		<Comments>Update changes for revision of information about individual observations.</Comments>
+	</TestCaseMetaData>
+	<TestCaseMetaData id="EDOS_2.2_2.1-M10_GU" date="11/18/2015" name="M10_Update_Revise" version="version3">
+		<Description>
+The Laboratory Test Compendium from Century Hospital Clinical Laboratory is a subset of their Directory of Services.  It is based upon the most commonly ordered lab tests by Dr. Radon.    This compendium is being used by Dr. Nicholas Radon's practice EHR-S to place orders electronically to Century Hospital's Clinical Laboratory.  Century Hospital has made the following changes to their test compendium:
+- Revised the Complete Metabolic Panel (CMP) adding plasma as specimen type in addition to serum
+Century Hospital's LIS transmits the appropriate eDOS update messages with these changes to Dr. Radon's EHR.</Description>
+		<PreCondition>EDOS_1.0_1.1-M08_New
+and
+EDOS_1.0_2.1-M10_New
+and
+EDOS_1.0_3.1-M04_New
+and
+EDOS_1.0_4.1-M18_New_Approved
+and
+EDOS_1.0_5.1-M18_New_Limited
+and
+EDOS_2.2_1.1-M08_Update_Revise
+have been completed.</PreCondition>
+		<PostCondition>No Post-Condition.</PostCondition>
+		<TestObjectives>Demonstrate capability to support a M10 update message - action: revision
+Demonstrate capability to support the repeating field in OM4-3 (Container Description), OM4-4 (Container Volume), and OM4-5 (Container Units).
+Demonstrate capability to support all supported data elements, including repeating fields in the OM5 segment.
+Demonstrate capability to support repeating segments for OM4.</TestObjectives>
+		<Comments>Update changes for revision to a panel.</Comments>
+	</TestCaseMetaData>
+	<TestCaseMetaData id="EDOS_2.2_3.1-M04_GU" date="11/18/2015" name="M04_Update_Revise" version="version3">
+		<Description>
+The Laboratory Test Compendium from Century Hospital Clinical Laboratory is a subset of their Directory of Services.  It is based upon the most commonly ordered lab tests by Dr. Radon.  This compendium is being used by Dr. Nicholas Radon's practice EHR-S to place orders electronically to Century Hospital's Clinical Laboratory.  Century Hospital has made changes to their test compendium:
+- Removed a CPT code from  CBC with Differential and changed a usage Note
+Century Hospital's LIS transmits the appropriate eDOS update messages with these changes to Dr. Radon's EHR.</Description>
+		<PreCondition>EDOS_1.0_1.1-M08_New
+and
+EDOS_1.0_2.1-M10_New
+and
+EDOS_1.0_3.1-M04_New
+and
+EDOS_1.0_4.1-M18_New_Approved
+and
+EDOS_1.0_5.1-M18_New_Limited
+and
+EDOS_2.2_1.1-M08_Update_Revise
+and
+EDOS_2.2_2.1-M10_Update_Revise
+have been completed.</PreCondition>
+		<PostCondition>No Post-Condition.</PostCondition>
+		<TestObjectives>Demonstrate capability to support a M04 update message - action: revision</TestObjectives>
+		<Comments>Update changes for revision of charge codes (CPT codes).</Comments>
+	</TestCaseMetaData>
+	<TestCaseMetaData id="EDOS_2.2_4.1-M18_GU" date="11/18/2015" name="M18_Update_Revise" version="version3">
+		<Description>
+The Laboratory Test Compendium from Century Hospital Clinical Laboratory is a subset of their Directory of Services.  It is based upon the most commonly ordered lab tests by Dr. Radon.  This compendium is being used by Dr. Nicholas Radon's practice EHR-S to place orders electronically to Century Hospital's Clinical Laboratory.  Century Hospital has made changes to their test compendium:
+- Updated approved coverage information for a single test (updated price)
+Century Hospital's LIS transmits the appropriate eDOS update messages with these changes to Dr. Radon's EHR.</Description>
+		<PreCondition>EDOS_1.0_1.1-M08_New
+and
+EDOS_1.0_2.1-M10_New
+and
+EDOS_1.0_3.1-M04_New
+and
+EDOS_1.0_4.1-M18_New_Approved
+and
+EDOS_1.0_5.1-M18_New_Limited
+and
+EDOS_2.2_1.1-M08_Update_Revise
+and
+EDOS_2.2_2.1-M10_Update_Revise
+and
+EDOS_2.2_3.1-M04_Update_Revise
+have been completed.</PreCondition>
+		<PostCondition>No Post-Condition.</PostCondition>
+		<TestObjectives>Demonstrate capability to support a M18 approved coverage update message for an revised test.
+Demonstrate capability to support a maximally populated MCP segment.</TestObjectives>
+		<Comments>Update message to revise approved coverage information for a test.</Comments>
+	</TestCaseMetaData>
+	<TestCaseMetaData id="EDOS_2.3_GU" date="11/18/2015" name="Update Reactivate" version="version3">
+		<Description>Some time after initial Laboratory Test Compendium is delivered electronically from the LIS to the EHR-S, the LIS send up to four eDOS update messages to the EHR-S to revise an orderable test.  The EHR-S will integrate these updates into its test directory.</Description>
+		<PreCondition>Initial load of compendium data elements are incorporated appropriately into the EHR-S.</PreCondition>
+		<PostCondition>No Post-Condition.</PostCondition>
+		<TestObjectives>Demonstrate capability to support reactivating a single record in an existing test compendium.</TestObjectives>
+		<Comments>Updates to a single record.</Comments>
+	</TestCaseMetaData>
+	<TestCaseMetaData id="EDOS_2.3_1.1-M08_GU" date="11/18/2015" name="M08_Update_Reactivate" version="version3">
+		<Description>
+The Laboratory Test Compendium from Century Hospital Clinical Laboratory is a subset of their Directory of Services.  It is based upon the most commonly ordered lab tests by Dr. Radon.    This compendium is being used by Dr. Nicholas Radon's practice EHR-S to place orders electronically to Century Hospital's Clinical Laboratory.  Century Hospital has made the following changes to their test compendium:
+- Reactivated the Sedimentation Rate Test that was previously de-activated
+Century Hospital's LIS transmits the appropriate eDOS update messages with these changes to Dr. Radon's EHR.</Description>
+		<PreCondition>EDOS_1.0_1.1-M08_New
+and
+EDOS_1.0_2.1-M10_New
+and
+EDOS_1.0_3.1-M04_New
+and
+EDOS_1.0_4.1-M18_New_Approved
+and
+EDOS_1.0_5.1-M18_New_Limited
+and
+EDOS_2.1_1.1-M08_Deactivate
+and
+EDOS_2.1_2.1-M10_Deactivate
+and
+EDOS_2.1_3.1-M04_Deactivate
+and
+EDOS_2.1_4.1-M18_Deactivate
+have been uploaded.</PreCondition>
+		<PostCondition>No Post-Condition.</PostCondition>
+		<TestObjectives>Demonstrate capability to support a M08 update message - action: reactivate
+Demonstrate capability to support the repeating field in OM1-51 (Other Names), OM1-54 (Special Instructions), OM4-15 (Specimen Handling Code).
+Demonstrate capability to support repeating segments for OM4.</TestObjectives>
+		<Comments>Update changes for reactivation of information about individual observations.</Comments>
+	</TestCaseMetaData>
+	<TestCaseMetaData id="EDOS_2.3_2.1-M10_GU" date="11/18/2015" name="M10_Update_Reactivate" version="version3">
+		<Description>
+The Laboratory Test Compendium from Century Hospital Clinical Laboratory is a subset of their Directory of Services.  It is based upon the most commonly ordered lab tests by Dr. Radon.    This compendium is being used by Dr. Nicholas Radon's practice EHR-S to place orders electronically to Century Hospital's Clinical Laboratory.  Century Hospital has made the following changes to their test compendium:
+- Reactivated the previously de-activated GHP 
+Century Hospital's LIS transmits the appropriate eDOS update messages with these changes to Dr. Radon's EHR.</Description>
+		<PreCondition>EDOS_1.0_1.1-M08_New
+and
+EDOS_1.0_2.1-M10_New
+and
+EDOS_1.0_3.1-M04_New
+and
+EDOS_1.0_4.1-M18_New_Approved
+and
+EDOS_1.0_5.1-M18_New_Limited
+and
+EDOS_2.1_1.1-M08_Deactivate
+and
+EDOS_2.1_2.1-M10_Deactivate
+and
+EDOS_2.1_3.1-M04_Deactivate
+and
+EDOS_2.1_4.1-M18_Deactivate
+and
+EDOS_2.3_1.1-M08_Update_Reactivate
+have been completed.</PreCondition>
+		<PostCondition>No Post-Condition.</PostCondition>
+		<TestObjectives>Demonstrate capability to support a M10 update message - action: reactivate
+Demonstrate capability to support the repeating field in OM1-31 (Observations Required to Interpret the Observation), OM4-3 (Container Description), OM4-4 (Container Volume), and OM4-5 (Container Units).
+Demonstrate capability to support all supported data elements, including repeating fields in the OM5 segment.
+Demonstrate capability to support repeating segments for OM4.</TestObjectives>
+		<Comments>Update changes for reactivation of panels and panel elements.</Comments>
+	</TestCaseMetaData>
+	<TestCaseMetaData id="EDOS_2.3_3.1-M04_GU" date="11/18/2015" name="M04_Update_Reactivate" version="version3">
+		<Description>
+The Laboratory Test Compendium from Century Hospital Clinical Laboratory is a subset of their Directory of Services.  It is based upon the most commonly ordered lab tests by Dr. Radon.  This compendium is being used by Dr. Nicholas Radon's practice EHR-S to place orders electronically to Century Hospital's Clinical Laboratory.  Century Hospital has made changes to their test compendium:
+- Reactivated the CPT code for the previously de-activated Sed Rate.
+Century Hospital's LIS transmits the appropriate eDOS update messages with these changes to Dr. Radon's EHR.</Description>
+		<PreCondition>EDOS_1.0_1.1-M08_New
+and
+EDOS_1.0_2.1-M10_New
+and
+EDOS_1.0_3.1-M04_New
+and
+EDOS_1.0_4.1-M18_New_Approved
+and
+EDOS_1.0_5.1-M18_New_Limited
+and
+EDOS_2.1_1.1-M08_Deactivate
+and
+EDOS_2.1_2.1-M10_Deactivate
+and
+EDOS_2.1_3.1-M04_Deactivate
+and
+EDOS_2.1_4.1-M18_Deactivate
+and
+EDOS_2.3_1.1-M08_Update_Reactivate
+and
+EDOS_2.3_2.1-M10_Update_Reactivate
+have been completed.</PreCondition>
+		<PostCondition>No Post-Condition.</PostCondition>
+		<TestObjectives>Demonstrate capability to support a M04 update message - action: reactivate</TestObjectives>
+		<Comments>Update changes for reactivation of charge codes (CPT codes).</Comments>
+	</TestCaseMetaData>
+	<TestCaseMetaData id="EDOS_2.3_4.1-M18_GU" date="11/18/2015" name="M18_Update_Reactivate" version="version3">
+		<Description>
+The Laboratory Test Compendium from Century Hospital Clinical Laboratory is a subset of their Directory of Services.  It is based upon the most commonly ordered lab tests by Dr. Radon.  This compendium is being used by Dr. Nicholas Radon's practice EHR-S to place orders electronically to Century Hospital's Clinical Laboratory.  Century Hospital has made changes to their test compendium:
+- Updated approved coverage information for the reactivated test.
+Century Hospital's LIS transmits the appropriate eDOS update messages with these changes to Dr. Radon's EHR.</Description>
+		<PreCondition>EDOS_1.0_1.1-M08_New
+and
+EDOS_1.0_2.1-M10_New
+and
+EDOS_1.0_3.1-M04_New
+and
+EDOS_1.0_4.1-M18_New_Approved
+and
+EDOS_1.0_5.1-M18_New_Limited
+and
+EDOS_2.1_1.1-M08_Deactivate
+and
+EDOS_2.1_2.1-M10_Deactivate
+and
+EDOS_2.1_3.1-M04_Deactivate
+and
+EDOS_2.1_4.1-M18_Deactivate
+and
+EDOS_2.3_1.1-M08_Update_Reactivate
+and
+EDOS_2.3_2.1-M10_Update_Reactivate
+and
+EDOS_2.3_3.1-M04_Update_Reactivate
+have been completed.</PreCondition>
+		<PostCondition>No Post-Condition.</PostCondition>
+		<TestObjectives>Demonstrate capability to support a M18 approved coverage update message for an reactivated test.</TestObjectives>
+		<Comments>Update message for approved coverage information for the reactivated test.</Comments>
+	</TestCaseMetaData>
+	<TestCaseMetaData id="EDOS_2.4_GU" date="11/18/2015" name="Update Combo" version="version3">
+		<Description>Some time after initial Laboratory Test Compendium is delivered electronically from the LIS to the EHR-S, the LIS send up to four eDOS update messages to the EHR-S to update multiple tests.  The EHR-S will integrate these updates into its test directory.</Description>
+		<PreCondition>Initial load of compendium data elements are incorporated appropriately into the EHR-S.</PreCondition>
+		<PostCondition>No Post-Condition.</PostCondition>
+		<TestObjectives>Demonstrate capability to support update using multiple actions for several records in an existing test compendium.</TestObjectives>
+		<Comments>Updates to multiple records.</Comments>
+	</TestCaseMetaData>
+	<TestCaseMetaData id="EDOS_2.4_1.1-M08_GU" date="11/18/2015" name="M08_Update_Combo" version="version3">
+		<Description>
+The Laboratory Test Compendium from Century Hospital Clinical Laboratory is a subset of their Directory of Services.  It is based upon the most commonly ordered lab tests by Dr. Radon.    This compendium is being used by Dr. Nicholas Radon's practice EHR-S to place orders electronically to Century Hospital's Clinical Laboratory.  Century Hospital has made the following changes to their test compendium:
+- Added a Lipid Panel and its related components
+- Added a Measured Low density lipoprotein cholesterol, serum (LDL) test
+- Deactivated a serology test for Saint Luis Encephalitis IgG Antibody
+- Revised the text for interpretation of Urine Glucose test results.
+Century Hospital's LIS transmits the appropriate eDOS update messages with these changes to Dr. Radon's EHR.</Description>
+		<PreCondition>EDOS_1.0_1.1-M08_New
+and
+EDOS_1.0_2.1-M10_New
+and
+EDOS_1.0_3.1-M04_New
+and
+EDOS_1.0_4.1-M18_New_Approved
+and
+EDOS_1.0_5.1-M18_New_Limited
+have been uploaded.</PreCondition>
+		<PostCondition>No Post-Condition.</PostCondition>
+		<TestObjectives>Demonstrate capability to support a M08 update message - action: combination of addition, de-activation and revision
+Demonstrate capability to support the repeating field in OM1-31 (Observations Required to Interpret the Observation), OM1-32 (Interpretation of Observations), OM1-40 (Service/Test/Observation Performance Schedule), OM4-3 (Container Description), OM4-4 (Container Volume), and OM4-5 (Container Units).
+Demonstrate capability to support repeating segments for OM4.</TestObjectives>
+		<Comments>Combination of update changes including addition, revision and deactivation of information about individual observations..</Comments>
+	</TestCaseMetaData>
+	<TestCaseMetaData id="EDOS_2.4_2.1-M10_GU" date="11/18/2015" name="M10_Update_Combo" version="version3">
+		<Description>
+The Laboratory Test Compendium from Century Hospital Clinical Laboratory is a subset of their Directory of Services.  It is based upon the most commonly ordered lab tests by Dr. Radon.    This compendium is being used by Dr. Nicholas Radon's practice EHR-S to place orders electronically to Century Hospital's Clinical Laboratory.  Century Hospital has made the following changes to their test compendium:
+- Added a Lipid Panel and its related components
+- Deactivated the Arbovirus Panel
+- Revised the Complete Metabolic Panel (CMP) adding a Gamma Glutamyl Transferase (GGT) test to the panel
+Century Hospital's LIS transmits the appropriate eDOS update messages with these changes to Dr. Radon's EHR.</Description>
+		<PreCondition>EDOS_1.0_1.1-M08_New
+and
+EDOS_1.0_2.1-M10_New
+and
+EDOS_1.0_3.1-M04_New
+and
+EDOS_1.0_4.1-M18_New_Approved
+and
+EDOS_1.0_5.1-M18_New_Limited
+and
+EDOS_2.4_1.1-M08_Update_Combo
+have been completed.</PreCondition>
+		<PostCondition>No Post-Condition.</PostCondition>
+		<TestObjectives>Demonstrate capability to support a M10 update message - action: combination of addition, de-activation and revision
+Demonstrate capability to support the repeating field in OM1-31 (Observations Required to Interpret the Observation), OM4-3 (Container Description), OM4-4 (Container Volume), and OM4-5 (Container Units).
+Demonstrate capability to support all supported data elements, including repeating fields in the OM5 segment.
+Demonstrate capability to support repeating segments for OM4.</TestObjectives>
+		<Comments>Combination of update changes including addition, revision and deactivation of panels and panel elements.</Comments>
+	</TestCaseMetaData>
+	<TestCaseMetaData id="EDOS_2.4_3.1-M04_GU" date="11/18/2015" name="M04_Update_Combo" version="version3">
+		<Description>
+The Laboratory Test Compendium from Century Hospital Clinical Laboratory is a subset of their Directory of Services.  It is based upon the most commonly ordered lab tests by Dr. Radon.  This compendium is being used by Dr. Nicholas Radon's practice EHR-S to place orders electronically to Century Hospital's Clinical Laboratory.  Century Hospital has made changes to their test compendium:
+- Added a CPT code for the Lipid Panel
+- Added a CPT code for the Measured Low density lipoprotein cholesterol, serum (LDL) test
+- Deactivated the CPT codes for the Saint Luis Encephalitis IgG Antibody test and the Arbovirus Panel .
+- Revised the CPT code for the Prostate Biopsy
+Century Hospital's LIS transmits the appropriate eDOS update messages with these changes to Dr. Radon's EHR.</Description>
+		<PreCondition>EDOS_1.0_1.1-M08_New
+and
+EDOS_1.0_2.1-M10_New
+and
+EDOS_1.0_3.1-M04_New
+and
+EDOS_1.0_4.1-M18_New_Approved
+and
+EDOS_1.0_5.1-M18_New_Limited
+and
+EDOS_2.4_1.1-M08_Update_Combo
+and
+EDOS_2.4_2.1-M10_Update_Combo
+have been completed.</PreCondition>
+		<PostCondition>No Post-Condition.</PostCondition>
+		<TestObjectives>Demonstrate capability to support a M04 update message - action: combination of addition, de-activation and revision</TestObjectives>
+		<Comments>Combination of update changes including addition, revision and deactivation of charge codes (CPT codes).</Comments>
+	</TestCaseMetaData>
+	<TestCaseMetaData id="EDOS_2.4_4.1-M18_GU" date="11/18/2015" name="M18_Update_Combo" version="version3">
+		<Description>
+The Laboratory Test Compendium from Century Hospital Clinical Laboratory is a subset of their Directory of Services.  It is based upon the most commonly ordered lab tests by Dr. Radon.  This compendium is being used by Dr. Nicholas Radon's practice EHR-S to place orders electronically to Century Hospital's Clinical Laboratory.  Century Hospital has made changes to their test compendium:
+- limited coverage information for the added Lipid Panel
+- limited coverage information for the added Measured Low density lipoprotein cholesterol, serum (LDL) test
+- limited coverage information for the deactivated Saint Luis Encephalitis IgG Antibody test and the Arbovirus Panel.
+Century Hospital's LIS transmits the appropriate eDOS update message to update this information for limited coverage tests in Dr. Radon's EHR. </Description>
+		<PreCondition>EDOS_1.0_1.1-M08_New
+and
+EDOS_1.0_2.1-M10_New
+and
+EDOS_1.0_3.1-M04_New
+and
+EDOS_1.0_4.1-M18_New_Approved
+and
+EDOS_1.0_5.1-M18_New_Limited
+and
+EDOS_2.4_1.1-M08_Update_Combo
+and
+EDOS_2.4_2.1-M10_Update_Combo
+and
+EDOS_2.4_3.1-M04_Update_Combo
+have been completed.</PreCondition>
+		<PostCondition>No Post-Condition.</PostCondition>
+		<TestObjectives>Demonstrate capability to support a M18 limited coverage update message for an added panel, added individual test and a deactivated test.</TestObjectives>
+		<Comments>Update message to change limited coverage information for orderable tests and panels.  This update provides information for the newly added lipid panel, an individual lipid test and deactivates the arbovirus panel.</Comments>
+	</TestCaseMetaData>
+	<TestCaseMetaData id="EDOS_2.5_GU" date="11/18/2015" name="Update Post-Combo" version="version3">
+		<Description>Some time after initial Laboratory Test Compendium was updated electronically from the LIS to the EHR-S, the LIS sends up to four additional eDOS update messages to the EHR-S to update multiple tests.  The EHR-S will integrate these updates into its test directory.</Description>
+		<PreCondition>Initial load of compendium data elements and previous updates to it are incorporated appropriately into the EHR-S.</PreCondition>
+		<PostCondition>No Post-Condition.</PostCondition>
+		<TestObjectives>Demonstrate capability to support subsequent updates using multiple actions for several records in an existing test compendium.</TestObjectives>
+		<Comments>Updates to multiple records.</Comments>
+	</TestCaseMetaData>
+	<TestCaseMetaData id="EDOS_2.5_1.1-M08_GU" date="11/18/2015" name="M08_Update_Revise_PostCombo" version="version3">
+		<Description>
+The Laboratory Test Compendium from Century Hospital Clinical Laboratory is a subset of their Directory of Services.  It is based upon the most commonly ordered lab tests by Dr. Radon.    This compendium is being used by Dr. Nicholas Radon's practice EHR-S  to place orders electronically to Century Hospital's Clinical Laboratory.  Century Hospital's has revised the Lipid panel and made its components orderable.  Century Hospital's LIS transmits the appropriate eDOS update message to revise this information in Dr. Radon's EHR. .  </Description>
+		<PreCondition>EDOS_1.0_1.1-M08_New
+and
+EDOS_1.0_2.1-M10_New
+and
+EDOS_1.0_3.1-M04_New
+and
+EDOS_1.0_4.1-M18_New_Approved
+and
+EDOS_1.0_5.1-M18_New_Limited
+and
+EDOS_2.4_1.1-M08_Update_Combo
+and
+EDOS_2.4_2.1-M10_Update_Combo
+and
+EDOS_2.4_3.1-M04_Update_Combo
+and
+EDOS_2.4_4.1-M18_Update_Combo
+have been completed.</PreCondition>
+		<PostCondition>No Post-Condition.</PostCondition>
+		<TestObjectives>Demonstrate the ability to support a M08 update message - action: subsequent update to information previously sent via an update message.
+Demonstrate capability to support the repeating field in OM1-31 (Observations Required to Interpret the Observation) and OM1-40 (Service/Test/Observation Performance Schedule).
+Demonstrate capability to support repeating segments for OM4.</TestObjectives>
+		<Comments>Update message to change an individual observation that was part of a previous update of the compendium.  This update makes a nonorderable individual observation orderable.</Comments>
+	</TestCaseMetaData>
+	<TestCaseMetaData id="EDOS_2.5_2.1-M10_GU" date="11/18/2015" name="M10_Update_Revise_PostCombo" version="version3">
+		<Description>
+The Laboratory Test Compendium from Century Hospital Clinical Laboratory is a subset of their Directory of Services.  It is based upon the most commonly ordered lab tests by Dr. Radon.    This compendium is being used by Dr. Nicholas Radon's practice EHR-S  to place orders electronically to Century Hospital's Clinical Laboratory.  Century Hospital's has revised the Lipid panel and made its components orderable.  Century Hospital's LIS transmits the appropriate eDOS update message to revise this information in Dr. Radon's EHR.</Description>
+		<PreCondition>EDOS_1.0_1.1-M08_New
+and
+EDOS_1.0_2.1-M10_New
+and
+EDOS_1.0_3.1-M04_New
+and
+EDOS_1.0_4.1-M18_New_Approved
+and
+EDOS_1.0_5.1-M18_New_Limited
+and
+EDOS_2.4_1.1-M08_Update_Combo
+and
+EDOS_2.4_2.1-M10_Update_Combo
+and
+EDOS_2.4_3.1-M04_Update_Combo
+and
+EDOS_2.4_4.1-M18_Update_Combo
+and
+EDOS_2.5_1.1-M08_Update_Revise_PostCombo
+have been completed.</PreCondition>
+		<PostCondition>No Post-Condition.</PostCondition>
+		<TestObjectives>Demonstrate capability to support a M10 update message- action: subsequent update to information previously sent via an update message.
+Demonstrate capability to support all supported data elements, including repeating fields in the OM5 segment.
+Demonstrate capability to support repeating segments for OM4.</TestObjectives>
+		<Comments>Update message to change a panel that was part of a previous update of the compendium.  This update revises the Lipid panel.</Comments>
+	</TestCaseMetaData>
+	<TestCaseMetaData id="EDOS_2.5_3.1-M04_GU" date="11/18/2015" name="M04_Update_Revise_PostCombo" version="version3">
+		<Description>
+The Laboratory Test Compendium from Century Hospital Clinical Laboratory is a subset of their Directory of Services.  It is based upon the most commonly ordered lab tests by Dr. Radon.  This compendium is being used by Dr. Nicholas Radon's practice EHR-S to place orders electronically to Century Hospital's Clinical Laboratory.  Century Hospital's has revised the Lipid panel and made its components orderable.  Century Hospital's LIS transmits the appropriate eDOS update message to revise this information in Dr. Radon's EHR. </Description>
+		<PreCondition>EDOS_1.0_1.1-M08_New
+and
+EDOS_1.0_2.1-M10_New
+and
+EDOS_1.0_3.1-M04_New
+and
+EDOS_1.0_4.1-M18_New_Approved
+and
+EDOS_1.0_5.1-M18_New_Limited
+and
+EDOS_2.4_1.1-M08_Update_Combo
+and
+EDOS_2.4_2.1-M10_Update_Combo
+and
+EDOS_2.4_3.1-M04_Update_Combo
+and
+EDOS_2.4_4.1-M18_Update_Combo
+and
+EDOS_2.5_1.1-M08_Update_Revise_PostCombo
+and
+EDOS_2.5_2.1-M10_Update_Revise_PostCombo
+have been completed.</PreCondition>
+		<PostCondition>No Post-Condition.</PostCondition>
+		<TestObjectives>Demonstrate capability to support a M04 update message- action: subsequent update to information previously sent via an update message.</TestObjectives>
+		<Comments>Update message to change a charge component that was part of a previous update of the compendium.  This update adds a CPT charge code for an newly orderable individual Lipid panel component.</Comments>
+	</TestCaseMetaData>
+	<TestCaseMetaData id="EDOS_2.5_4.1-M18_GU" date="11/18/2015" name="M18_Update_Revise_PostCombo_limited" version="version3">
+		<Description>
+The Laboratory Test Compendium from Century Hospital Clinical Laboratory is a subset of their Directory of Services.  It is based upon the most commonly ordered lab tests by Dr. Radon.  This compendium is being used by Dr. Nicholas Radon's practice EHR-S to place orders electronically to Century Hospital's Clinical Laboratory.  Century Hospital's has revised the Lipid panel and made its components orderable.  Century Hospital's LIS transmits the appropriate eDOS update message to update this information for limited coverage tests in Dr. Radon's EHR. </Description>
+		<PreCondition>EDOS_1.0_1.1-M08_New
+and
+EDOS_1.0_2.1-M10_New
+and
+EDOS_1.0_3.1-M04_New
+and
+EDOS_1.0_4.1-M18_New_Approved
+and
+EDOS_1.0_5.1-M18_New_Limited
+and
+EDOS_2.4_1.1-M08_Update_Combo
+and
+EDOS_2.4_2.1-M10_Update_Combo
+and
+EDOS_2.4_3.1-M04_Update_Combo
+and
+EDOS_2.4_4.1-M18_Update_Combo
+and
+EDOS_2.5_1.1-M08_Update_Revise_PostCombo
+and
+EDOS_2.5_2.1-M10_Update_Revise_PostCombo
+and
+EDOS_2.5_3.1-M04_Update_revise_postCombo
+have been completed.</PreCondition>
+		<PostCondition>No Post-Condition.</PostCondition>
+		<TestObjectives>Demonstrate capability to support a M18 limited coverage update message for an added panel and individual tests.</TestObjectives>
+		<Comments>Update message to change limited coverage information for orderable tests and panels.  This update provides information for the newly orderable individual Lipid panel components and the revised panel.</Comments>
+	</TestCaseMetaData>
+	<TestCaseMetaData id="EDOS_0.0_NG" date="11/18/2015" name="Smoke Test" version="version3">
+		<Description>The initial Laboratory Test Compendium is delivered electronically from the LIS to the EHR-S.   The EHR-S will integrate the eDOS into its test directory and use it to allow placement of orders electronically.   The initial laboratory test compendium is composed of up to four messages.</Description>
+		<PreCondition>No Pre-Condition.</PreCondition>
+		<PostCondition>No Post-Condition.</PostCondition>
+		<TestObjectives>Demonstrate capability to support minimally populated messages (single occurrences of all required ("R") elements).</TestObjectives>
+		<Comments>This is the initial "smoke testing" to reveal simple failures severe enough to preclude further testing.</Comments>
+	</TestCaseMetaData>
+	<TestCaseMetaData id="EDOS_0.0_1.1-M08_NG" date="11/18/2015" name="M08_New_SmokeTest" version="version3">
+		<Description>
+The initial Laboratory Test Compendium built by Century Hospital Clinical Laboratory consists of a single Prothrombin Time panel (""PT +INR"").  This compendium is delivered electronically to Dr. Nicholas Radon's practice EHR, as agreed to between Laboratory and Dr. Radon's Office and EHR-S Vendor.   The EHR-S will integrate the eDOS into its test directory and use it to allow Dr. Radon to place orders electronically to Century Hospital's Clinical Laboratory.   The initial laboratory test compendium is composed of four messages.
+Century Hospital's LIS transmit the first message which provides information about the PT and INR observations.</Description>
+		<PreCondition>No Pre-Condition.</PreCondition>
+		<PostCondition>No Post-Condition.</PostCondition>
+		<TestObjectives>Demonstrate capability to support a minimal M08 initial load message.
+Demonstrate capability to support a single occurrence of all required ("R") elements in the MSH segment.
+Demonstrate capability to support a single occurrence of all required ("R") elements in the MFI segment.
+Demonstrate capability to support a single occurrence of all required ("R") elements in the MFE segment.
+Demonstrate capability to support a single occurrence of all required ("R") elements in the OM1 segment.</TestObjectives>
+		<Comments>This is the initial "smoke testing" to reveal simple failures severe enough to preclude further testing.  Initial upload of 2 individual observations for a new compendium. 
+Since this is a replace message, all data in this message will replace information from a previous eDOS M08 message.</Comments>
+	</TestCaseMetaData>
+	<TestCaseMetaData id="EDOS_0.0_2.1-M10_NG" date="11/18/2015" name="M10_New_SmokeTest" version="version3">
+		<Description>
+The initial Laboratory Test Compendium built by Century Hospital Clinical Laboratory consists of a single Prothrombin Time panel (PT +INR).  This compendium is delivered electronically to Dr. Nicholas Radon's practice EHR, as agreed to between Laboratory and Dr. Radon's Office and EHR-S Vendor.   The EHR-S will integrate the eDOS into its test directory and use it to allow Dr. Radon to place orders electronically to Century Hospital's Clinical Laboratory.   The initial laboratory test compendium is composed of four messages.  
+After Century Hospital's LIS transmits the first message which provides information about the PT and INR observations, it sends the second message which provides information about orderable PT + INR panel.
+</Description>
+		<PreCondition>EDOS_0.0_1.1-M08_New_SmokeTest
+has been completed.</PreCondition>
+		<PostCondition>No Post-Condition.</PostCondition>
+		<TestObjectives>Demonstrate capability to support a minimal M10 initial load message.
+Demonstrate capability to support a single occurrence of all required ("R") elements in the MSH segment.
+Demonstrate capability to support a single occurrence of all required ("R") elements in the MFI segment.
+Demonstrate capability to support a single occurrence of all required ("R") elements in the MFE segment.
+Demonstrate capability to support a single occurrence of all required ("R") elements in the OM1 segment.
+Demonstrate capability to support a single occurrence of all required ("R") elements in the OM5 segment.</TestObjectives>
+		<Comments>This is the initial "smoke testing" to reveal simple failures severe enough to preclude further testing.   Initial upload of a single panel.
+Since this is a replace message, all data in this message will replace information from a previous eDOS M10 message.</Comments>
+	</TestCaseMetaData>
+	<TestCaseMetaData id="EDOS_0.0_3.1-M04_NG" date="11/18/2015" name="M04_New_SmokeTest" version="version3">
+		<Description>
+The initial Laboratory Test Compendium built by Century Hospital Clinical Laboratory consists of a single Prothrombin Time panel (PT +INR).  This compendium is delivered electronically to Dr. Nicholas Radon's practice EHR, as agreed to between Laboratory and Dr. Radon's Office and EHR-S Vendor.   The EHR-S will integrate the eDOS into its test directory and use it to allow Dr. Radon to place orders electronically to Century Hospital's Clinical Laboratory.   The initial laboratory test compendium is composed of four messages.
+After Century Hospital's LIS transmits the first and second messages which provides information about the PT and INR observations and then orderable PT + INR panel,  it sends the third message which provides information about CPT procedure codes for the PT + INR panel.</Description>
+		<PreCondition>EDOS_0.0_1.1-M08_New_SmokeTest
+and
+EDOS_0.0_2.1-M10_New_SmokeTest
+have been completed.</PreCondition>
+		<PostCondition>No Post-Condition.</PostCondition>
+		<TestObjectives>Demonstrate capability to support a minimal M04 initial load message.
+Demonstrate capability to support a single occurrence of all required ("R") elements in the MSH segment.
+Demonstrate capability to support a single occurrence of all required ("R") elements in the MFI segment.
+Demonstrate capability to support a single occurrence of all required ("R") elements in the MFE segment.
+Demonstrate capability to support a single occurrence of all required ("R") elements in the CDM segment.</TestObjectives>
+		<Comments>This is the initial "smoke testing" to reveal simple failures severe enough to preclude further testing.  Initial upload of a charge code (CPT code) for a panel for a new compendium. 
+Since this is a replace message, all data in this message will replace information from a previous eDOS M04 message.</Comments>
+	</TestCaseMetaData>
+	<TestCaseMetaData id="EDOS_0.0_4.1-M18_NG" date="11/18/2015" name="M18_New_SmokeTest" version="version3">
+		<Description>
+The initial Laboratory Test Compendium built by Century Hospital Clinical Laboratory consists of a single Prothrombin Time panel (PT +INR).  This compendium is delivered electronically to Dr. Nicholas Radon's practice EHR, as agreed to between Laboratory and Dr. Radon's Office and EHR-S Vendor.   The EHR-S will integrate the eDOS into its test directory and use it to allow Dr. Radon to place orders electronically to Century Hospital's Clinical Laboratory.   The initial laboratory test compendium is composed of four messages.
+After Century Hospital's LIS transmits the first three messages with the test, panel and charge information, it sends the fourth message, which provides information about the tests that are covered by Medicare insurance.</Description>
+		<PreCondition>EDOS_0.0_1.1-M08_New_SmokeTest
+and
+EDOS_0.0_2.1-M10_New_SmokeTest
+and
+EDOS_0.0_3.1-M04_New_SmokeTest
+have been completed.</PreCondition>
+		<PostCondition>No Post-Condition.</PostCondition>
+		<TestObjectives>Demonstrate capability to support a minimal M18 approved coverage message.
+Demonstrate capability to support a single occurrence of all required ("R") elements in the MSH segment.
+Demonstrate capability to support a single occurrence of all required ("R") elements in the MFI segment.
+Demonstrate capability to support a single occurrence of all required ("R") elements in the MFE segment.
+Demonstrate capability to support a single occurrence of all required ("R") elements in the PM1 segment.
+Demonstrate capability to support a single occurrence of all required ("R") elements in the MCP segment.</TestObjectives>
+		<Comments>This is the initial "smoke testing" to reveal simple failures severe enough to preclude further testing.  Initial upload of a list of approved coverage for a panel in a new compendium. 
+Since this is a replace message, all data in this message will replace information from a previous eDOS M18 message.</Comments>
+	</TestCaseMetaData>
+	<TestCaseMetaData id="EDOS_1.0_NG" date="11/18/2015" name="Initial Load" version="version3">
+		<Description>The initial Laboratory Test Compendium is delivered electronically from the LIS to the EHR-S.   The EHR-S will integrate the eDOS into its test directory and use it to allow placement of orders electronically.   The initial laboratory test compendium is composed of up to five messages.</Description>
+		<PreCondition>No Pre-Condition.</PreCondition>
+		<PostCondition>No Post-Condition.</PostCondition>
+		<TestObjectives>Demonstrate capability to support typically and maximally populated messages including repeating elements for all supported test types.</TestObjectives>
+		<Comments>Initial upload for a new compendium.</Comments>
+	</TestCaseMetaData>
+	<TestCaseMetaData id="EDOS_1.0_1.1-M08_NG" date="11/18/2015" name="MO8_New" version="version3">
+		<Description>
+The initial Laboratory Test Compendium built by Century Hospital Clinical Laboratory is a subset of their Directory of Services.  It is based upon the most commonly ordered lab tests by Dr. Radon.
+This compendium is delivered electronically to Dr. Nicholas Radon's practice EHR, as agreed to between Laboratory and Dr. Radon's Office and EHR-S Vendor.   The EHR-S will integrate the eDOS into its test directory and use it to allow Dr. Radon to place orders electronically to Century Hospital's Clinical Laboratory.   
+The initial laboratory test compendium is composed of five messages.
+Century Hospital's LIS transmit the first message which provides information about each resultable observation.</Description>
+		<PreCondition>No Pre-Condition.</PreCondition>
+		<PostCondition>No Post-Condition.</PostCondition>
+		<TestObjectives>Demonstrate capability to support a M08 initial load message for numeric, calculated, qualitative and narrative tests.
+Demonstrate capability to support all supported data elements, including repeating fields in the MSH segment.
+Demonstrate capability to support all supported data elements, including repeating fields in the MF1 segment. 
+Demonstrate capability to support all supported data elements, including repeating fields in the OM1 - not each OM1 segment will be maximally populated or include repeating fields (OM1-52 is covered in EDOS_2.2).
+Demonstrate capability to support all supported data elements, including repeating fields in the OMC segment.
+Demonstrate capability to support repeating segments for OMC.
+Demonstrate capability to support all supported data elements, including repeating fields in the OM2 segment.
+Demonstrate capability to support all supported data elements, including repeating fields in the OM3 segment.
+Demonstrate capability to support all supported data elements, including repeating fields in the OM4 segment.
+Demonstrate capability to support repeating segments for OM4.</TestObjectives>
+		<Comments>Initial upload of individual observations for a new compendium.
+Since this is a replace message, all data in this message will replace information from a previous eDOS M08 message.
+Demonstrate capability to support sending ask at order entry requirements.
+Demonstrate capability to define the specimen requirements.</Comments>
+	</TestCaseMetaData>
+	<TestCaseMetaData id="EDOS_1.0_2.1-M10_NG" date="11/18/2015" name="M10_New" version="version3">
+		<Description>
+The initial Laboratory Test Compendium built by Century Hospital Clinical Laboratory is a subset of their Directory of Services.  It is based upon the most commonly ordered lab tests by Dr. Radon.  This compendium is delivered electronically to Dr. Nicholas Radon's practice EHR, as agreed to between Laboratory and Dr. Radon's Office and EHR-S Vendor.   The EHR-S will integrate the eDOS into its test directory and use it to allow Dr. Radon to place orders electronically to Century Hospital's Clinical Laboratory.   
+The initial laboratory test compendium is composed of five messages.  
+After Century Hospital's LIS successfully transmits the first message which provides information about each individual observation, it sends the second message which provides information for each orderable battery or profile.</Description>
+		<PreCondition>EDOS_1.0_1.1-M08_New
+has been completed.</PreCondition>
+		<PostCondition>No Post-Condition.</PostCondition>
+		<TestObjectives>Demonstrate capability to support a M10 initial load message for panels and profiles (i.e. panel of panels).
+Demonstrate capability to support all supported data elements, including repeating fields in the OM5 segment.
+Demonstrate capability to support all supported data elements, including repeating fields in the OM4 segment.
+Demonstrate capability to support repeating segments for OM4.</TestObjectives>
+		<Comments>Initial upload of panels and profiles.
+Since this is a replace message, all data in this message will replace information from a previous eDOS M10 message.</Comments>
+	</TestCaseMetaData>
+	<TestCaseMetaData id="EDOS_1.0_3.1-M04_NG" date="11/18/2015" name="M04_New" version="version3">
+		<Description>
+The initial Laboratory Test Compendium built by Century Hospital Clinical Laboratory is a subset of their Directory of Services.  It is based upon the most commonly ordered lab tests by Dr. Radon.  This compendium is delivered electronically to Dr. Nicholas Radon's practice EHR, as agreed to between Laboratory and Dr. Radon's Office and EHR-S Vendor.   The EHR-S will integrate the eDOS into its test directory and use it to allow Dr. Radon to place orders electronically to Century Hospital's Clinical Laboratory.   
+The initial laboratory test compendium is composed of five messages.  
+After Century Hospital's LIS successfully transmits the first and second messages which provide information about each individual observation and each orderable battery or profile,  it sends the third message which provides information about CPT procedure codes for each orderable panel and individual observation.</Description>
+		<PreCondition>EDOS_1.0_1.1-M08_New
+and
+EDOS_1.0_2.1-M10_New
+have been uploaded.</PreCondition>
+		<PostCondition>No Post-Condition.</PostCondition>
+		<TestObjectives>Demonstrate capability to support a M04 initial load message for panels and atomic tests.
+Demonstrate capability to support NTE segments, including repeats under one MFI.
+Demonstrate capability to support NTE segments, including repeats under one MFE.
+Demonstrate capability to support all supported data elements, including repeating fields in the CDM segment.
+Demonstrate capability to support NTE segments, including repeats under one CDM.</TestObjectives>
+		<Comments>Initial upload of charge codes (CPT codes) for orderable tests and panels for a new compendium.  
+Since this is a replace message, all data in this message will replace information from a previous eDOS M04 message.
+Demonstrate capability to support multiple instances of procedure code for a single test.</Comments>
+	</TestCaseMetaData>
+	<TestCaseMetaData id="EDOS_1.0_4.1-M18_NG" date="11/18/2015" name="M18_New_Approved" version="version3">
+		<Description>
+The initial Laboratory Test Compendium built by Century Hospital Clinical Laboratory consists of a single Prothrombin Time panel (PT +INR).  This compendium is delivered electronically to Dr. Nicholas Radon's practice EHR, as agreed to between Laboratory and Dr. Radon's Office and EHR-S Vendor.   The EHR-S will integrate the eDOS into its test directory and use it to allow Dr. Radon to place orders electronically to Century Hospital's Clinical Laboratory.   The initial laboratory test compendium is composed of five messages.
+After Century Hospital's LIS transmits the first and second messages which provides information about the PT and INR observations and then orderable PT + INR panel,  it sends the third message which provides information about CPT procedure codes for the PT + INR panel.
+After Century Hospital's LIS transmits the first three messages with the test, panel and charge information, it sends the fourth message, which provides information about the tests that are covered by several insurance companies.</Description>
+		<PreCondition>EDOS_1.0_1.1-M08_New
+and
+EDOS_1.0_2.1-M10_New
+and
+EDOS_1.0_3.1-M04_New
+have been uploaded.</PreCondition>
+		<PostCondition>No Post-Condition.</PostCondition>
+		<TestObjectives>Demonstrate capability to support a M18 approved coverage initial load message for panels and orderable atomic tests.
+Demonstrate capability to support all supported data elements, including repeating fields in the PM1 segment.
+Demonstrate capability to support repeating PM1 and MCP segment group.</TestObjectives>
+		<Comments>Initial upload of approved coverage information for orderable tests and panels for a new compendium for multiple insurance companies.  
+Since this is a replace message, all data in this message will replace information from a previous eDOS M18 message.</Comments>
+	</TestCaseMetaData>
+	<TestCaseMetaData id="EDOS_1.0_5.1-M18_NG" date="11/18/2015" name="M18_New_Limited" version="version3">
+		<Description>
+The initial Laboratory Test Compendium built by Century Hospital Clinical Laboratory consists of a single Prothrombin Time panel (PT +INR).  This compendium is delivered electronically to Dr. Nicholas Radon's practice EHR, as agreed to between Laboratory and Dr. Radon's Office and EHR-S Vendor.   The EHR-S will integrate the eDOS into its test directory and use it to allow Dr. Radon to place orders electronically to Century Hospital's Clinical Laboratory.   The initial laboratory test compendium is composed of five messages.
+After Century Hospital's LIS transmits the first three messages with the test, panel and charge information, and the fourth message, which provides information about the tests that are covered by several insurance companies, it send the last message in the initial upload, which provides information about the tests that are not covered under specific insurance company agreements.</Description>
+		<PreCondition>EDOS_1.0_1.1-M08_New
+and
+EDOS_1.0_2.1-M10_New
+and
+EDOS_1.0_3.1-M04_New
+and
+EDOS_1.0_4.1-M18_New_Approved
+have been uploaded.</PreCondition>
+		<PostCondition>No Post-Condition.</PostCondition>
+		<TestObjectives>Demonstrate capability to support a M18 limited coverage initial load message for panels and orderable atomic tests.
+Demonstrate capability to support all supported data elements, including repeating fields in the PM1 segment.
+Demonstrate capability to support repeating PM1 and MCP segment group.</TestObjectives>
+		<Comments>Initial upload of limited coverage information for orderable tests and panels for a new compendium for multiple insurance companies.  
+Since this is a replace message, all data in this message will replace information from a previous eDOS M18 message.</Comments>
+	</TestCaseMetaData>
+	<TestCaseMetaData id="EDOS_2.0_NG" date="11/18/2015" name="Update Deactivate" version="version3">
+		<Description>Some time after initial Laboratory Test Compendium is delivered electronically from the LIS to the EHR-S, the LIS send up to four eDOS update messages to the EHR-S to deactivate an orderable test.  The EHR-S will integrate these updates into its test directory.</Description>
+		<PreCondition>Initial load of compendium data elements are incorporated appropriately into the EHR-S.</PreCondition>
+		<PostCondition>No Post-Condition.</PostCondition>
+		<TestObjectives>Demonstrate capability to support deactivating a single record in an existing test compendium.</TestObjectives>
+		<Comments>Updates to a single record.</Comments>
+	</TestCaseMetaData>
+	<TestCaseMetaData id="EDOS_2.0_1.1-M08_NG" date="11/18/2015" name="M08_Update_Deactivate" version="version3">
+		<Description>
+The Laboratory Test Compendium from Century Hospital Clinical Laboratory is a subset of their Directory of Services.  It is based upon the most commonly ordered lab tests by Dr. Radon.    This compendium is being used by Dr. Nicholas Radon's practice EHR-S  to place orders electronically to Century Hospital's Clinical Laboratory.  Century Hospital Laboratory had decided to no longer offer the sedimentation rate test and Century Hospital's LIS transmits the appropriate eDOS update messages to Dr. Radon's EHR-S to deprecate this orderable test.</Description>
+		<PreCondition>EDOS_1.0_1.1-M08_New
+and
+EDOS_1.0_2.1-M10_New
+and
+EDOS_1.0_3.1-M04_New
+and
+EDOS_1.0_4.1-M18_New_Approved
+and
+EDOS_1.0_5.1-M18_New_Limited
+have been uploaded.</PreCondition>
+		<PostCondition>No Post-Condition.</PostCondition>
+		<TestObjectives>Demonstrate capability to support a M08 update message - action: deactivate.
+Demonstrate capability to support repeating segments for OM4.
+Demonstrate capability to support the repeating field in OM1-51 (Other Names), OM1-54 (Special Instructions), and OM4-15 (Specimen Handling Code).</TestObjectives>
+		<Comments>Update message to deactivate a no longer offered test (individual observation).</Comments>
+	</TestCaseMetaData>
+	<TestCaseMetaData id="EDOS_2.0_2.1-M10_NG" date="11/18/2015" name="M10_Update_Deactivate" version="version3">
+		<Description>
+The Laboratory Test Compendium from Century Hospital Clinical Laboratory is a subset of their Directory of Services.  It based upon the most commonly ordered lab tests.  This compendium is being used by Dr. Nicholas Radon's practice EHR-S  to place orders electronically to Century Hospital's Clinical Laboratory.   Century Hospital Laboratory no longer offers a particular General Health Profile (GHP).   Century Hospital's LIS transmits the appropriate eDOS update message to deactivate this GHP panel in Dr. Radon's EHR. </Description>
+		<PreCondition>EDOS_1.0_1.1-M08_New
+and
+EDOS_1.0_2.1-M10_New
+and
+EDOS_1.0_3.1-M04_New
+and
+EDOS_1.0_4.1-M18_New_Approved
+and
+EDOS_1.0_5.1-M18_New_Limited
+and
+EDOS_2.0_1.1-M08_Update_Deactivate
+have been completed.</PreCondition>
+		<PostCondition>No Post-Condition.</PostCondition>
+		<TestObjectives>Demonstrate capability to support a M10 update message - action: deactivate.
+Demonstrate capability to support the repeating field in OM1-31 (Observations Required to Interpret the Observation), OM1-52 (Replacement Producer’s Service/Test/Observation ID). OM4-3 (Container Description), OM4-4 (Container Volume), and OM4-5 (Container Units).
+Demonstrate capability to support all supported data elements, including repeating fields in the OM5 segment.
+Demonstrate capability to support repeating segments for OM4.</TestObjectives>
+		<Comments>Update message to deactivate a no longer offered test (panel and/or profile).</Comments>
+	</TestCaseMetaData>
+	<TestCaseMetaData id="EDOS_2.0_3.1-M04_NG" date="11/18/2015" name="M04_Update_Deactivate" version="version3">
+		<Description>
+The Laboratory Test Compendium from Century Hospital Clinical Laboratory is a subset of their Directory of Services.  It is based upon the most commonly ordered lab tests by Dr. Radon.  This compendium is being used by Dr. Nicholas Radon's practice EHR-S  to place orders electronically to Century Hospital's Clinical Laboratory.  Century Hospital Laboratory had decided to no longer offer the sedimentation rate test.  Century Hospital's LIS transmits the appropriate eDOS update messages to Dr. Radon's EHR-S to deprecate this orderable test.</Description>
+		<PreCondition>EDOS_1.0_1.1-M08_New
+and
+EDOS_1.0_2.1-M10_New
+and
+EDOS_1.0_3.1-M04_New
+and
+EDOS_1.0_4.1-M18_New_Approved
+and
+EDOS_1.0_5.1-M18_New_Limited
+and
+EDOS_2.0_1.1-M08_Update_Deactivate
+and
+EDOS_2.0_2.1-M10_Update_Deactivate
+have been completed.</PreCondition>
+		<PostCondition>No Post-Condition.</PostCondition>
+		<TestObjectives>Demonstrate capability to support a M04 update message - action: deactivate.
+
+</TestObjectives>
+		<Comments>Update message to deactivate the charge code (CPT codes) of a no longer offered tests.</Comments>
+	</TestCaseMetaData>
+	<TestCaseMetaData id="EDOS_2.0_4.1-M18_NG" date="11/18/2015" name="M18_Update_Deactivate" version="version3">
+		<Description>
+The Laboratory Test Compendium from Century Hospital Clinical Laboratory is a subset of their Directory of Services.  It is based upon the most commonly ordered lab tests by Dr. Radon.  This compendium is being used by Dr. Nicholas Radon's practice EHR-S  to place orders electronically to Century Hospital's Clinical Laboratory.  Century Hospital Laboratory had decided to no longer offer the sedimentation rate test.  Century Hospital's LIS transmits the appropriate eDOS update message for approved coverage information for this deactivated test to Dr. Radon's EHR.</Description>
+		<PreCondition>EDOS_1.0_1.1-M08_New
+and
+EDOS_1.0_2.1-M10_New
+and
+EDOS_1.0_3.1-M04_New
+and
+EDOS_1.0_4.1-M18_New_Approved
+and
+EDOS_1.0_5.1-M18_New_Limited
+and
+EDOS_2.0_1.1-M08_Update_Deactivate
+and
+EDOS_2.0_2.1-M10_Update_Deactivate
+and
+EDOS_2.0_3.1-M04_Update_Deactivate
+have been completed.</PreCondition>
+		<PostCondition>No Post-Condition.</PostCondition>
+		<TestObjectives>Demonstrate capability to support a M18 approved coverage update message-action: deactivate.</TestObjectives>
+		<Comments>Update message about approved coverage information for a deactivated test.</Comments>
+	</TestCaseMetaData>
+	<TestCaseMetaData id="EDOS_2.1_NG" date="11/18/2015" name="Update Add" version="version3">
+		<Description>Some time after initial Laboratory Test Compendium is delivered electronically from the LIS to the EHR-S, the LIS send up to four eDOS update messages to the EHR-S to add an orderable test.  The EHR-S will integrate these updates into its test directory.</Description>
+		<PreCondition>Initial load of compendium data elements are incorporated appropriately into the EHR-S.</PreCondition>
+		<PostCondition>No Post-Condition.</PostCondition>
+		<TestObjectives>Demonstrate capability to support adding a single record in an existing test compendium.</TestObjectives>
+		<Comments>Updates to a single record.</Comments>
+	</TestCaseMetaData>
+	<TestCaseMetaData id="EDOS_2.1_1.1-M08_NG" date="11/18/2015" name="M08_Update_Add" version="version3">
+		<Description>
+The Laboratory Test Compendium from Century Hospital Clinical Laboratory is a subset of their Directory of Services.  It is based upon the most commonly ordered lab tests by Dr. Radon.    This compendium is being used by Dr. Nicholas Radon's practice EHR-S to place orders electronically to Century Hospital's Clinical Laboratory.  Century Hospital has made the following changes to their test compendium:
+- Added a stool culture, colony count and antibiotic susceptibility tests.
+Century Hospital's LIS transmits the appropriate eDOS update messages with these changes to Dr. Radon's EHR.</Description>
+		<PreCondition>EDOS_1.0_1.1-M08_New
+and
+EDOS_1.0_2.1-M10_New
+and
+EDOS_1.0_3.1-M04_New
+and
+EDOS_1.0_4.1-M18_New_Approved
+and
+EDOS_1.0_5.1-M18_New_Limited
+have been uploaded.</PreCondition>
+		<PostCondition>No Post-Condition.</PostCondition>
+		<TestObjectives>Demonstrate capability to support a M08 update message - action: addition
+Demonstrate capability to support for an OM3 segment.
+Demonstrate capability to support the repeating field in OM3-5 (Abnormal Tests/Codes for Categorical Observations),  OM4-3 (Container Description), OM4-4 (Container Volume), and OM4-5 (Container Units).
+Demonstrate capability to support repeating segments for OM4.</TestObjectives>
+		<Comments>Update changes for addition of new individual observations.</Comments>
+	</TestCaseMetaData>
+	<TestCaseMetaData id="EDOS_2.1_2.1-M10_NG" date="11/18/2015" name="M10_Update_Add" version="version3">
+		<Description>
+The Laboratory Test Compendium from Century Hospital Clinical Laboratory is a subset of their Directory of Services.  It is based upon the most commonly ordered lab tests by Dr. Radon.    This compendium is being used by Dr. Nicholas Radon's practice EHR-S to place orders electronically to Century Hospital's Clinical Laboratory.  Century Hospital has made the following changes to their test compendium:
+- Added a stool culture with susceptibility reflex and a susceptibility panel
+Century Hospital's LIS transmits the appropriate eDOS update messages with these changes to Dr. Radon's EHR.</Description>
+		<PreCondition>EDOS_1.0_1.1-M08_New
+and
+EDOS_1.0_2.1-M10_New
+and
+EDOS_1.0_3.1-M04_New
+and
+EDOS_1.0_4.1-M18_New_Approved
+and
+EDOS_1.0_5.1-M18_New_Limited
+and
+EDOS_2.1_1.1-M08_Update_Add
+have been completed.</PreCondition>
+		<PostCondition>No Post-Condition.</PostCondition>
+		<TestObjectives>Demonstrate capability to support a M10 update message - action: addition
+Demonstrate capability to support the repeating field in OM4-3 (Container Description), OM4-4 (Container Volume), and OM4-5 (Container Units).
+Demonstrate capability to support all supported data elements, including repeating fields in the OM5 segment.
+Demonstrate capability to support repeating segments for OM4.</TestObjectives>
+		<Comments>Update changes for additions of new panels and their elements.</Comments>
+	</TestCaseMetaData>
+	<TestCaseMetaData id="EDOS_2.1_3.1-M04_NG" date="11/18/2015" name="M04_Update_Add" version="version3">
+		<Description>
+The Laboratory Test Compendium from Century Hospital Clinical Laboratory is a subset of their Directory of Services.  It is based upon the most commonly ordered lab tests by Dr. Radon.  This compendium is being used by Dr. Nicholas Radon's practice EHR-S to place orders electronically to Century Hospital's Clinical Laboratory.  Century Hospital has made changes to their test compendium:
+- Added CPT codes for the Stool culture with susceptibility reflex
+- Added CPT codes for the susceptibility panel
+- Added CPT codes for the individually orderable stool culture
+Century Hospital's LIS transmits the appropriate eDOS update messages with these changes to Dr. Radon's EHR.</Description>
+		<PreCondition>EDOS_1.0_1.1-M08_New
+and
+EDOS_1.0_2.1-M10_New
+and
+EDOS_1.0_3.1-M04_New
+and
+EDOS_1.0_4.1-M18_New_Approved
+and
+EDOS_1.0_5.1-M18_New_Limited
+and
+EDOS_2.1_1.1-M08_Update_Add
+and
+EDOS_2.1_2.1-M10_Update_Add
+have been completed.</PreCondition>
+		<PostCondition>No Post-Condition.</PostCondition>
+		<TestObjectives>Demonstrate capability to support a M04 update message - action: addition</TestObjectives>
+		<Comments>Update changes for addition of charge codes (CPT codes) for individually orderable tests as well as the new panels.</Comments>
+	</TestCaseMetaData>
+	<TestCaseMetaData id="EDOS_2.1_4.1-M18_NG" date="11/18/2015" name="M18_Update_Add" version="version3">
+		<Description>
+The Laboratory Test Compendium from Century Hospital Clinical Laboratory is a subset of their Directory of Services.  It is based upon the most commonly ordered lab tests by Dr. Radon.  This compendium is being used by Dr. Nicholas Radon's practice EHR-S to place orders electronically to Century Hospital's Clinical Laboratory.  Century Hospital has made changes to their test compendium:
+-  Updated approved coverage information for the newly added panels and tests
+Century Hospital's LIS transmits the appropriate eDOS update messages with these changes to Dr. Radon's EHR.</Description>
+		<PreCondition>EDOS_1.0_1.1-M08_New
+and
+EDOS_1.0_2.1-M10_New
+and
+EDOS_1.0_3.1-M04_New
+and
+EDOS_1.0_4.1-M18_New_Approved
+and
+EDOS_1.0_5.1-M18_New_Limited
+and
+EDOS_2.1_1.1-M08_Update_Add
+and
+EDOS_2.1_2.1-M10_Update_Add
+and
+EDOS_2.1_3.1-M04_Update_Add
+have been completed.</PreCondition>
+		<PostCondition>No Post-Condition.</PostCondition>
+		<TestObjectives>Demonstrate capability to support a M18 approved coverage update message for an added panel.</TestObjectives>
+		<Comments>Update message to add approved coverage information for newly added tests and panels.</Comments>
+	</TestCaseMetaData>
+	<TestCaseMetaData id="EDOS_2.2_NG" date="11/18/2015" name="Update Revise" version="version3">
+		<Description>Some time after initial Laboratory Test Compendium is delivered electronically from the LIS to the EHR-S, the LIS send up to four eDOS update messages to the EHR-S to revise an orderable test.  The EHR-S will integrate these updates into its test directory.</Description>
+		<PreCondition>Initial load of compendium data elements are incorporated appropriately into the EHR-S.</PreCondition>
+		<PostCondition>No Post-Condition.</PostCondition>
+		<TestObjectives>Demonstrate capability to support revising a single record in an existing test compendium.</TestObjectives>
+		<Comments>Updates to a single record.</Comments>
+	</TestCaseMetaData>
+	<TestCaseMetaData id="EDOS_2.2_1.1-M08_NG" date="11/18/2015" name="M08_Update_Revise" version="version3">
+		<Description>
+The Laboratory Test Compendium from Century Hospital Clinical Laboratory is a subset of their Directory of Services.  It is based upon the most commonly ordered lab tests by Dr. Radon.    This compendium is being used by Dr. Nicholas Radon's practice EHR-S to place orders electronically to Century Hospital's Clinical Laboratory.  Century Hospital has made the following changes to their test compendium:
+- Revised the LOINC for Penicillin susceptibility test.
+Century Hospital's LIS transmits the appropriate eDOS update messages with these changes to Dr. Radon's EHR.</Description>
+		<PreCondition>EDOS_1.0_1.1-M08_New
+and
+EDOS_1.0_2.1-M10_New
+and
+EDOS_1.0_3.1-M04_New
+and
+EDOS_1.0_4.1-M18_New_Approved
+and
+EDOS_1.0_5.1-M18_New_Limited
+have been uploaded.</PreCondition>
+		<PostCondition>No Post-Condition.</PostCondition>
+		<TestObjectives>Demonstrate capability to support a M08 update message - action: revision</TestObjectives>
+		<Comments>Update changes for revision of information about individual observations.</Comments>
+	</TestCaseMetaData>
+	<TestCaseMetaData id="EDOS_2.2_2.1-M10_NG" date="11/18/2015" name="M10_Update_Revise" version="version3">
+		<Description>
+The Laboratory Test Compendium from Century Hospital Clinical Laboratory is a subset of their Directory of Services.  It is based upon the most commonly ordered lab tests by Dr. Radon.    This compendium is being used by Dr. Nicholas Radon's practice EHR-S to place orders electronically to Century Hospital's Clinical Laboratory.  Century Hospital has made the following changes to their test compendium:
+- Revised the Complete Metabolic Panel (CMP) adding plasma as specimen type in addition to serum
+Century Hospital's LIS transmits the appropriate eDOS update messages with these changes to Dr. Radon's EHR.</Description>
+		<PreCondition>EDOS_1.0_1.1-M08_New
+and
+EDOS_1.0_2.1-M10_New
+and
+EDOS_1.0_3.1-M04_New
+and
+EDOS_1.0_4.1-M18_New_Approved
+and
+EDOS_1.0_5.1-M18_New_Limited
+and
+EDOS_2.2_1.1-M08_Update_Revise
+have been completed.</PreCondition>
+		<PostCondition>No Post-Condition.</PostCondition>
+		<TestObjectives>Demonstrate capability to support a M10 update message - action: revision
+Demonstrate capability to support the repeating field in OM4-3 (Container Description), OM4-4 (Container Volume), and OM4-5 (Container Units).
+Demonstrate capability to support all supported data elements, including repeating fields in the OM5 segment.
+Demonstrate capability to support repeating segments for OM4.</TestObjectives>
+		<Comments>Update changes for revision to a panel.</Comments>
+	</TestCaseMetaData>
+	<TestCaseMetaData id="EDOS_2.2_3.1-M04_NG" date="11/18/2015" name="M04_Update_Revise" version="version3">
+		<Description>
+The Laboratory Test Compendium from Century Hospital Clinical Laboratory is a subset of their Directory of Services.  It is based upon the most commonly ordered lab tests by Dr. Radon.  This compendium is being used by Dr. Nicholas Radon's practice EHR-S to place orders electronically to Century Hospital's Clinical Laboratory.  Century Hospital has made changes to their test compendium:
+- Removed a CPT code from  CBC with Differential and changed a usage Note
+Century Hospital's LIS transmits the appropriate eDOS update messages with these changes to Dr. Radon's EHR.</Description>
+		<PreCondition>EDOS_1.0_1.1-M08_New
+and
+EDOS_1.0_2.1-M10_New
+and
+EDOS_1.0_3.1-M04_New
+and
+EDOS_1.0_4.1-M18_New_Approved
+and
+EDOS_1.0_5.1-M18_New_Limited
+and
+EDOS_2.2_1.1-M08_Update_Revise
+and
+EDOS_2.2_2.1-M10_Update_Revise
+have been completed.</PreCondition>
+		<PostCondition>No Post-Condition.</PostCondition>
+		<TestObjectives>Demonstrate capability to support a M04 update message - action: revision</TestObjectives>
+		<Comments>Update changes for revision of charge codes (CPT codes).</Comments>
+	</TestCaseMetaData>
+	<TestCaseMetaData id="EDOS_2.2_4.1-M18_NG" date="11/18/2015" name="M18_Update_Revise" version="version3">
+		<Description>
+The Laboratory Test Compendium from Century Hospital Clinical Laboratory is a subset of their Directory of Services.  It is based upon the most commonly ordered lab tests by Dr. Radon.  This compendium is being used by Dr. Nicholas Radon's practice EHR-S to place orders electronically to Century Hospital's Clinical Laboratory.  Century Hospital has made changes to their test compendium:
+- Updated approved coverage information for a single test (updated price)
+Century Hospital's LIS transmits the appropriate eDOS update messages with these changes to Dr. Radon's EHR.</Description>
+		<PreCondition>EDOS_1.0_1.1-M08_New
+and
+EDOS_1.0_2.1-M10_New
+and
+EDOS_1.0_3.1-M04_New
+and
+EDOS_1.0_4.1-M18_New_Approved
+and
+EDOS_1.0_5.1-M18_New_Limited
+and
+EDOS_2.2_1.1-M08_Update_Revise
+and
+EDOS_2.2_2.1-M10_Update_Revise
+and
+EDOS_2.2_3.1-M04_Update_Revise
+have been completed.</PreCondition>
+		<PostCondition>No Post-Condition.</PostCondition>
+		<TestObjectives>Demonstrate capability to support a M18 approved coverage update message for an revised test.
+Demonstrate capability to support a maximally populated MCP segment.</TestObjectives>
+		<Comments>Update message to revise approved coverage information for a test.</Comments>
+	</TestCaseMetaData>
+	<TestCaseMetaData id="EDOS_2.3_NG" date="11/18/2015" name="Update Reactivate" version="version3">
+		<Description>Some time after initial Laboratory Test Compendium is delivered electronically from the LIS to the EHR-S, the LIS send up to four eDOS update messages to the EHR-S to revise an orderable test.  The EHR-S will integrate these updates into its test directory.</Description>
+		<PreCondition>Initial load of compendium data elements are incorporated appropriately into the EHR-S.</PreCondition>
+		<PostCondition>No Post-Condition.</PostCondition>
+		<TestObjectives>Demonstrate capability to support reactivate a single record in an existing test compendium.</TestObjectives>
+		<Comments>Updates to a single record.</Comments>
+	</TestCaseMetaData>
+	<TestCaseMetaData id="EDOS_2.3_1.1-M08_NG" date="11/18/2015" name="M08_Update_Reactivate" version="version3">
+		<Description>
+The Laboratory Test Compendium from Century Hospital Clinical Laboratory is a subset of their Directory of Services.  It is based upon the most commonly ordered lab tests by Dr. Radon.    This compendium is being used by Dr. Nicholas Radon's practice EHR-S to place orders electronically to Century Hospital's Clinical Laboratory.  Century Hospital has made the following changes to their test compendium:
+- Reactivated the Sedimentation Rate Test that was previously de-activated
+Century Hospital's LIS transmits the appropriate eDOS update messages with these changes to Dr. Radon's EHR.</Description>
+		<PreCondition>EDOS_1.0_1.1-M08_New
+and
+EDOS_1.0_2.1-M10_New
+and
+EDOS_1.0_3.1-M04_New
+and
+EDOS_1.0_4.1-M18_New_Approved
+and
+EDOS_1.0_5.1-M18_New_Limited
+and
+EDOS_2.1_1.1-M08_Deactivate
+and
+EDOS_2.1_2.1-M10_Deactivate
+and
+EDOS_2.1_3.1-M04_Deactivate
+and
+EDOS_2.1_4.1-M18_Deactivate
+have been uploaded.</PreCondition>
+		<PostCondition>No Post-Condition.</PostCondition>
+		<TestObjectives>Demonstrate capability to support a M08 update message - action: reactivate
+Demonstrate capability to support the repeating field in OM1-51 (Other Names), OM1-54 (Special Instructions), OM4-15 (Specimen Handling Code).
+Demonstrate capability to support repeating segments for OM4.</TestObjectives>
+		<Comments>Update changes for reactivation of information about individual observations.</Comments>
+	</TestCaseMetaData>
+	<TestCaseMetaData id="EDOS_2.3_2.1-M10_NG" date="11/18/2015" name="M10_Update_Reactivate" version="version3">
+		<Description>
+The Laboratory Test Compendium from Century Hospital Clinical Laboratory is a subset of their Directory of Services.  It is based upon the most commonly ordered lab tests by Dr. Radon.    This compendium is being used by Dr. Nicholas Radon's practice EHR-S to place orders electronically to Century Hospital's Clinical Laboratory.  Century Hospital has made the following changes to their test compendium:
+- Reactivated the previously de-activated GHP 
+Century Hospital's LIS transmits the appropriate eDOS update messages with these changes to Dr. Radon's EHR.</Description>
+		<PreCondition>EDOS_1.0_1.1-M08_New
+and
+EDOS_1.0_2.1-M10_New
+and
+EDOS_1.0_3.1-M04_New
+and
+EDOS_1.0_4.1-M18_New_Approved
+and
+EDOS_1.0_5.1-M18_New_Limited
+and
+EDOS_2.1_1.1-M08_Deactivate
+and
+EDOS_2.1_2.1-M10_Deactivate
+and
+EDOS_2.1_3.1-M04_Deactivate
+and
+EDOS_2.1_4.1-M18_Deactivate
+and
+EDOS_2.3_1.1-M08_Update_Reactivate
+have been completed.</PreCondition>
+		<PostCondition>No Post-Condition.</PostCondition>
+		<TestObjectives>Demonstrate capability to support a M10 update message - action: reactivate
+Demonstrate capability to support the repeating field in OM1-31 (Observations Required to Interpret the Observation), OM4-3 (Container Description), OM4-4 (Container Volume), and OM4-5 (Container Units).
+Demonstrate capability to support all supported data elements, including repeating fields in the OM5 segment.
+Demonstrate capability to support repeating segments for OM4.</TestObjectives>
+		<Comments>Update changes for reactivation of panels and panel elements.</Comments>
+	</TestCaseMetaData>
+	<TestCaseMetaData id="EDOS_2.3_3.1-M04_NG" date="11/18/2015" name="M04_Update_Reactivate" version="version3">
+		<Description>
+The Laboratory Test Compendium from Century Hospital Clinical Laboratory is a subset of their Directory of Services.  It is based upon the most commonly ordered lab tests by Dr. Radon.  This compendium is being used by Dr. Nicholas Radon's practice EHR-S to place orders electronically to Century Hospital's Clinical Laboratory.  Century Hospital has made changes to their test compendium:
+- Reactivated the CPT code for the previously de-activated Sed Rate.
+Century Hospital's LIS transmits the appropriate eDOS update messages with these changes to Dr. Radon's EHR.</Description>
+		<PreCondition>EDOS_1.0_1.1-M08_New
+and
+EDOS_1.0_2.1-M10_New
+and
+EDOS_1.0_3.1-M04_New
+and
+EDOS_1.0_4.1-M18_New_Approved
+and
+EDOS_1.0_5.1-M18_New_Limited
+and
+EDOS_2.1_1.1-M08_Deactivate
+and
+EDOS_2.1_2.1-M10_Deactivate
+and
+EDOS_2.1_3.1-M04_Deactivate
+and
+EDOS_2.1_4.1-M18_Deactivate
+and
+EDOS_2.3_1.1-M08_Update_Reactivate
+and
+EDOS_2.3_2.1-M10_Update_Reactivate
+have been completed.</PreCondition>
+		<PostCondition>No Post-Condition.</PostCondition>
+		<TestObjectives>Demonstrate capability to support a M04 update message - action: reactivate</TestObjectives>
+		<Comments>Update changes for reactivation of charge codes (CPT codes).</Comments>
+	</TestCaseMetaData>
+	<TestCaseMetaData id="EDOS_2.3_4.1-M18_NG" date="11/18/2015" name="M18_Update_Reactivate" version="version3">
+		<Description>
+The Laboratory Test Compendium from Century Hospital Clinical Laboratory is a subset of their Directory of Services.  It is based upon the most commonly ordered lab tests by Dr. Radon.  This compendium is being used by Dr. Nicholas Radon's practice EHR-S to place orders electronically to Century Hospital's Clinical Laboratory.  Century Hospital has made changes to their test compendium:
+- Updated approved coverage information for the reactivated test.
+Century Hospital's LIS transmits the appropriate eDOS update messages with these changes to Dr. Radon's EHR.</Description>
+		<PreCondition>EDOS_1.0_1.1-M08_New
+and
+EDOS_1.0_2.1-M10_New
+and
+EDOS_1.0_3.1-M04_New
+and
+EDOS_1.0_4.1-M18_New_Approved
+and
+EDOS_1.0_5.1-M18_New_Limited
+and
+EDOS_2.1_1.1-M08_Deactivate
+and
+EDOS_2.1_2.1-M10_Deactivate
+and
+EDOS_2.1_3.1-M04_Deactivate
+and
+EDOS_2.1_4.1-M18_Deactivate
+and
+EDOS_2.3_1.1-M08_Update_Reactivate
+and
+EDOS_2.3_2.1-M10_Update_Reactivate
+and
+EDOS_2.3_3.1-M04_Update_Reactivate
+have been completed.</PreCondition>
+		<PostCondition>No Post-Condition.</PostCondition>
+		<TestObjectives>Demonstrate capability to support a M18 approved coverage update message for an reactivated test.</TestObjectives>
+		<Comments>Update message for approved coverage information for the reactivated test.</Comments>
+	</TestCaseMetaData>
+	<TestCaseMetaData id="EDOS_2.4_NG" date="11/18/2015" name="Update Combo" version="version3">
+		<Description>Some time after initial Laboratory Test Compendium is delivered electronically from the LIS to the EHR-S, the LIS send up to four eDOS update messages to the EHR-S to update multiple tests.  The EHR-S will integrate these updates into its test directory.</Description>
+		<PreCondition>Initial load of compendium data elements are incorporated appropriately into the EHR-S.</PreCondition>
+		<PostCondition>No Post-Condition.</PostCondition>
+		<TestObjectives>Demonstrate capability to support update using multiple actions for several records in an existing test compendium.</TestObjectives>
+		<Comments>Updates to multiple records.</Comments>
+	</TestCaseMetaData>
+	<TestCaseMetaData id="EDOS_2.4_1.1-M08_NG" date="11/18/2015" name="M08_Update_Combo" version="version3">
+		<Description>
+The Laboratory Test Compendium from Century Hospital Clinical Laboratory is a subset of their Directory of Services.  It is based upon the most commonly ordered lab tests by Dr. Radon.    This compendium is being used by Dr. Nicholas Radon's practice EHR-S to place orders electronically to Century Hospital's Clinical Laboratory.  Century Hospital has made the following changes to their test compendium:
+- Added a Lipid Panel and its related components
+- Added a Measured Low density lipoprotein cholesterol, serum (LDL) test
+- Deactivated a serology test for Saint Luis Encephalitis IgG Antibody
+- Revised the text for interpretation of Urine Glucose test results.
+Century Hospital's LIS transmits the appropriate eDOS update messages with these changes to Dr. Radon's EHR.</Description>
+		<PreCondition>EDOS_1.0_1.1-M08_New
+and
+EDOS_1.0_2.1-M10_New
+and
+EDOS_1.0_3.1-M04_New
+and
+EDOS_1.0_4.1-M18_New_Approved
+and
+EDOS_1.0_5.1-M18_New_Limited
+have been uploaded.</PreCondition>
+		<PostCondition>No Post-Condition.</PostCondition>
+		<TestObjectives>Demonstrate capability to support a M08 update message - action: combination of addition, de-activation and revision
+Demonstrate capability to support the repeating field in OM1-31 (Observations Required to Interpret the Observation), OM1-32 (Interpretation of Observations), OM1-40 (Service/Test/Observation Performance Schedule), OM4-3 (Container Description), OM4-4 (Container Volume), and OM4-5 (Container Units).
+Demonstrate capability to support repeating segments for OM4.</TestObjectives>
+		<Comments>Combination of update changes including addition, revision and deactivation of information about individual observations..</Comments>
+	</TestCaseMetaData>
+	<TestCaseMetaData id="EDOS_2.4_2.1-M10_NG" date="11/18/2015" name="M10_Update_Combo" version="version3">
+		<Description>
+The Laboratory Test Compendium from Century Hospital Clinical Laboratory is a subset of their Directory of Services.  It is based upon the most commonly ordered lab tests by Dr. Radon.    This compendium is being used by Dr. Nicholas Radon's practice EHR-S to place orders electronically to Century Hospital's Clinical Laboratory.  Century Hospital has made the following changes to their test compendium:
+- Added a Lipid Panel and its related components
+- Deactivated the Arbovirus Panel
+- Revised the Complete Metabolic Panel (CMP) adding a Gamma Glutamyl Transferase (GGT) test to the panel
+Century Hospital's LIS transmits the appropriate eDOS update messages with these changes to Dr. Radon's EHR.</Description>
+		<PreCondition>EDOS_1.0_1.1-M08_New
+and
+EDOS_1.0_2.1-M10_New
+and
+EDOS_1.0_3.1-M04_New
+and
+EDOS_1.0_4.1-M18_New_Approved
+and
+EDOS_1.0_5.1-M18_New_Limited
+and
+EDOS_2.4_1.1-M08_Update_Combo
+have been completed.</PreCondition>
+		<PostCondition>No Post-Condition.</PostCondition>
+		<TestObjectives>Demonstrate capability to support a M10 update message - action: combination of addition, de-activation and revision
+Demonstrate capability to support the repeating field in OM1-31 (Observations Required to Interpret the Observation), OM4-3 (Container Description), OM4-4 (Container Volume), and OM4-5 (Container Units).
+Demonstrate capability to support all supported data elements, including repeating fields in the OM5 segment.
+Demonstrate capability to support repeating segments for OM4.</TestObjectives>
+		<Comments>Combination of update changes including addition, revision and deactivation of panels and panel elements.</Comments>
+	</TestCaseMetaData>
+	<TestCaseMetaData id="EDOS_2.4_3.1-M04_NG" date="11/18/2015" name="M04_Update_Combo" version="version3">
+		<Description>
+The Laboratory Test Compendium from Century Hospital Clinical Laboratory is a subset of their Directory of Services.  It is based upon the most commonly ordered lab tests by Dr. Radon.  This compendium is being used by Dr. Nicholas Radon's practice EHR-S to place orders electronically to Century Hospital's Clinical Laboratory.  Century Hospital has made changes to their test compendium:
+- Added a CPT code for the Lipid Panel
+- Added a CPT code for the Measured Low density lipoprotein cholesterol, serum (LDL) test
+- Deactivated the CPT codes for the Saint Luis Encephalitis IgG Antibody test and the Arbovirus Panel .
+- Revised the CPT code for the Prostate Biopsy
+Century Hospital's LIS transmits the appropriate eDOS update messages with these changes to Dr. Radon's EHR.</Description>
+		<PreCondition>EDOS_1.0_1.1-M08_New
+and
+EDOS_1.0_2.1-M10_New
+and
+EDOS_1.0_3.1-M04_New
+and
+EDOS_1.0_4.1-M18_New_Approved
+and
+EDOS_1.0_5.1-M18_New_Limited
+and
+EDOS_2.4_1.1-M08_Update_Combo
+and
+EDOS_2.4_2.1-M10_Update_Combo
+have been completed.</PreCondition>
+		<PostCondition>No Post-Condition.</PostCondition>
+		<TestObjectives>Demonstrate capability to support a M04 update message - action: combination of addition, de-activation and revision</TestObjectives>
+		<Comments>Combination of update changes including addition, revision and deactivation of charge codes (CPT codes).</Comments>
+	</TestCaseMetaData>
+	<TestCaseMetaData id="EDOS_2.4_4.1-M18_NG" date="11/18/2015" name="M18_Update_Combo" version="version3">
+		<Description>
+The Laboratory Test Compendium from Century Hospital Clinical Laboratory is a subset of their Directory of Services.  It is based upon the most commonly ordered lab tests by Dr. Radon.  This compendium is being used by Dr. Nicholas Radon's practice EHR-S to place orders electronically to Century Hospital's Clinical Laboratory.  Century Hospital has made changes to their test compendium:
+- limited coverage information for the added Lipid Panel
+- limited coverage information for the added Measured Low density lipoprotein cholesterol, serum (LDL) test
+- limited coverage information for the deactivated Saint Luis Encephalitis IgG Antibody test and the Arbovirus Panel.
+Century Hospital's LIS transmits the appropriate eDOS update message to update this information for limited coverage tests in Dr. Radon's EHR. </Description>
+		<PreCondition>EDOS_1.0_1.1-M08_New
+and
+EDOS_1.0_2.1-M10_New
+and
+EDOS_1.0_3.1-M04_New
+and
+EDOS_1.0_4.1-M18_New_Approved
+and
+EDOS_1.0_5.1-M18_New_Limited
+and
+EDOS_2.4_1.1-M08_Update_Combo
+and
+EDOS_2.4_2.1-M10_Update_Combo
+and
+EDOS_2.4_3.1-M04_Update_Combo
+have been completed.</PreCondition>
+		<PostCondition>No Post-Condition.</PostCondition>
+		<TestObjectives>Demonstrate capability to support a M18 limited coverage update message for an added panel, added individual test and a deactivated test.</TestObjectives>
+		<Comments>Update message to change limited coverage information for orderable tests and panels.  This update provides information for the newly added lipid panel, an individual lipid test and deactivates the arbovirus panel.</Comments>
+	</TestCaseMetaData>
+	<TestCaseMetaData id="EDOS_2.5_NG" date="11/18/2015" name="Update Post-Combo" version="version3">
+		<Description>Some time after initial Laboratory Test Compendium was updated electronically from the LIS to the EHR-S, the LIS sends up to four additional eDOS update messages to the EHR-S to update multiple tests.  The EHR-S will integrate these updates into its test directory.</Description>
+		<PreCondition>Initial load of compendium data elements and previous updates to it are incorporated appropriately into the EHR-S.</PreCondition>
+		<PostCondition>No Post-Condition.</PostCondition>
+		<TestObjectives>Demonstrate capability to support subsequent updates using multiple actions for several records in an existing test compendium.</TestObjectives>
+		<Comments>Updates to multiple records.</Comments>
+	</TestCaseMetaData>
+	<TestCaseMetaData id="EDOS_2.5_1.1-M08_NG" date="11/18/2015" name="M08_Update_Revise_PostCombo" version="version3">
+		<Description>
+The Laboratory Test Compendium from Century Hospital Clinical Laboratory is a subset of their Directory of Services.  It is based upon the most commonly ordered lab tests by Dr. Radon.    This compendium is being used by Dr. Nicholas Radon's practice EHR-S  to place orders electronically to Century Hospital's Clinical Laboratory.  Century Hospital's has revised the Lipid panel and made its components orderable.  Century Hospital's LIS transmits the appropriate eDOS update message to revise this information in Dr. Radon's EHR. .  </Description>
+		<PreCondition>EDOS_1.0_1.1-M08_New
+and
+EDOS_1.0_2.1-M10_New
+and
+EDOS_1.0_3.1-M04_New
+and
+EDOS_1.0_4.1-M18_New_Approved
+and
+EDOS_1.0_5.1-M18_New_Limited
+and
+EDOS_2.4_1.1-M08_Update_Combo
+and
+EDOS_2.4_2.1-M10_Update_Combo
+and
+EDOS_2.4_3.1-M04_Update_Combo
+and
+EDOS_2.4_4.1-M18_Update_Combo
+have been completed.</PreCondition>
+		<PostCondition>No Post-Condition.</PostCondition>
+		<TestObjectives>Demonstrate the ability to support a M08 update message - action: subsequent update to information previously sent via an update message.
+Demonstrate capability to support the repeating field in OM1-31 (Observations Required to Interpret the Observation) and OM1-40 (Service/Test/Observation Performance Schedule).
+Demonstrate capability to support repeating segments for OM4.</TestObjectives>
+		<Comments>Update message to change an individual observation that was part of a previous update of the compendium.  This update makes a nonorderable individual observation orderable.</Comments>
+	</TestCaseMetaData>
+	<TestCaseMetaData id="EDOS_2.5_2.1-M10_NG" date="11/18/2015" name="M10_Update_Revise_PostCombo" version="version3">
+		<Description>
+The Laboratory Test Compendium from Century Hospital Clinical Laboratory is a subset of their Directory of Services.  It is based upon the most commonly ordered lab tests by Dr. Radon.    This compendium is being used by Dr. Nicholas Radon's practice EHR-S  to place orders electronically to Century Hospital's Clinical Laboratory.  Century Hospital's has revised the Lipid panel and made its components orderable.  Century Hospital's LIS transmits the appropriate eDOS update message to revise this information in Dr. Radon's EHR.</Description>
+		<PreCondition>EDOS_1.0_1.1-M08_New
+and
+EDOS_1.0_2.1-M10_New
+and
+EDOS_1.0_3.1-M04_New
+and
+EDOS_1.0_4.1-M18_New_Approved
+and
+EDOS_1.0_5.1-M18_New_Limited
+and
+EDOS_2.4_1.1-M08_Update_Combo
+and
+EDOS_2.4_2.1-M10_Update_Combo
+and
+EDOS_2.4_3.1-M04_Update_Combo
+and
+EDOS_2.4_4.1-M18_Update_Combo
+and
+EDOS_2.5_1.1-M08_Update_Revise_PostCombo
+have been completed.</PreCondition>
+		<PostCondition>No Post-Condition.</PostCondition>
+		<TestObjectives>Demonstrate capability to support a M10 update message- action: subsequent update to information previously sent via an update message.
+Demonstrate capability to support all supported data elements, including repeating fields in the OM5 segment.
+Demonstrate capability to support repeating segments for OM4.</TestObjectives>
+		<Comments>Update message to change a panel that was part of a previous update of the compendium.  This update revises the Lipid panel.</Comments>
+	</TestCaseMetaData>
+	<TestCaseMetaData id="EDOS_2.5_3.1-M04_NG" date="11/18/2015" name="M04_Update_Revise_PostCombo" version="version3">
+		<Description>
+The Laboratory Test Compendium from Century Hospital Clinical Laboratory is a subset of their Directory of Services.  It is based upon the most commonly ordered lab tests by Dr. Radon.  This compendium is being used by Dr. Nicholas Radon's practice EHR-S to place orders electronically to Century Hospital's Clinical Laboratory.  Century Hospital's has revised the Lipid panel and made its components orderable.  Century Hospital's LIS transmits the appropriate eDOS update message to revise this information in Dr. Radon's EHR. </Description>
+		<PreCondition>EDOS_1.0_1.1-M08_New
+and
+EDOS_1.0_2.1-M10_New
+and
+EDOS_1.0_3.1-M04_New
+and
+EDOS_1.0_4.1-M18_New_Approved
+and
+EDOS_1.0_5.1-M18_New_Limited
+and
+EDOS_2.4_1.1-M08_Update_Combo
+and
+EDOS_2.4_2.1-M10_Update_Combo
+and
+EDOS_2.4_3.1-M04_Update_Combo
+and
+EDOS_2.4_4.1-M18_Update_Combo
+and
+EDOS_2.5_1.1-M08_Update_Revise_PostCombo
+and
+EDOS_2.5_2.1-M10_Update_Revise_PostCombo
+have been completed.</PreCondition>
+		<PostCondition>No Post-Condition.</PostCondition>
+		<TestObjectives>Demonstrate capability to support a M04 update message- action: subsequent update to information previously sent via an update message.</TestObjectives>
+		<Comments>Update message to change a charge component that was part of a previous update of the compendium.  This update adds a CPT charge code for an newly orderable individual Lipid panel component.</Comments>
+	</TestCaseMetaData>
+	<TestCaseMetaData id="EDOS_2.5_4.1-M18_NG" date="11/18/2015" name="M18_Update_Revise_PostCombo_limited" version="version3">
+		<Description>
+The Laboratory Test Compendium from Century Hospital Clinical Laboratory is a subset of their Directory of Services.  It is based upon the most commonly ordered lab tests by Dr. Radon.  This compendium is being used by Dr. Nicholas Radon's practice EHR-S to place orders electronically to Century Hospital's Clinical Laboratory.  Century Hospital's has revised the Lipid panel and made its components orderable.  Century Hospital's LIS transmits the appropriate eDOS update message to update this information for limited coverage tests in Dr. Radon's EHR. </Description>
+		<PreCondition>EDOS_1.0_1.1-M08_New
+and
+EDOS_1.0_2.1-M10_New
+and
+EDOS_1.0_3.1-M04_New
+and
+EDOS_1.0_4.1-M18_New_Approved
+and
+EDOS_1.0_5.1-M18_New_Limited
+and
+EDOS_2.4_1.1-M08_Update_Combo
+and
+EDOS_2.4_2.1-M10_Update_Combo
+and
+EDOS_2.4_3.1-M04_Update_Combo
+and
+EDOS_2.4_4.1-M18_Update_Combo
+and
+EDOS_2.5_1.1-M08_Update_Revise_PostCombo
+and
+EDOS_2.5_2.1-M10_Update_Revise_PostCombo
+and
+EDOS_2.5_3.1-M04_Update_revise_postCombo
+have been completed.</PreCondition>
+		<PostCondition>No Post-Condition.</PostCondition>
+		<TestObjectives>Demonstrate capability to support a M18 limited coverage update message for an added panel and individual tests.</TestObjectives>
+		<Comments>Update message to change limited coverage information for orderable tests and panels.  This update provides information for the newly orderable individual Lipid panel components and the revised panel.</Comments>
+	</TestCaseMetaData>
+	<TestCaseMetaData id="MFK_0.0_1.1-MFK_M08_GU" date="11/18/2015" name="Positive Ack for M08" version="version3">
+		<Description>Dr. Radon's practice EHR-S transmits an accept acknowledgement message to Century Hospital's LIS which indicates the first test compendium message (M08) has been successfully received.</Description>
+		<PreCondition>EDOS_0.0_1.1-M08_New_SmokeTest has been received by the EHR-S.</PreCondition>
+		<PostCondition>eDOS acknowledgement message is processed appropriately by the LIS.</PostCondition>
+		<TestObjectives>Demonstrate capability to support a positive acknowledgement Message in response to receiving the M08 message.
+Demonstrate capability to support a single occurrence of all required ("R") elements in the MSH segment.
+Demonstrate capability to support a single occurrence of all required ("R") elements in the MSA segment.
+Demonstrate capability to support a single occurrence of all required ("R") elements in the MFI segment.
+</TestObjectives>
+		<Comments>This is the initial "smoke testing" to reveal simple failures of the acknowledgment message severe enough to preclude further testing.</Comments>
+	</TestCaseMetaData>
+	<TestCaseMetaData id="MFK_0.0_1.1-MFK_M10_GU" date="11/18/2015" name="Positive Ack for M10" version="version3">
+		<Description>Dr. Radon's practice EHR-S  transmits an accept acknowledgement message to Century Hospital's LIS which indicates the second test compendium message (M10) has been successfully received.</Description>
+		<PreCondition>EDOS_0.0_2.1-M10_New_SmokeTest has been received by the EHR-S.</PreCondition>
+		<PostCondition>eDOS acknowledgement message is processed appropriately by the LIS.</PostCondition>
+		<TestObjectives>Demonstrate capability to support a positive acknowledgement Message in response to receiving the M10 message.
+Demonstrate capability to support a single occurrence of all required ("R") elements in the MSH segment.
+Demonstrate capability to support a single occurrence of all required ("R") elements in the MSA segment.
+Demonstrate capability to support a single occurrence of all required ("R") elements in the MFI segment.
+</TestObjectives>
+		<Comments>This is the initial "smoke testing" to reveal simple failures of the acknowledgment message severe enough to preclude further testing.</Comments>
+	</TestCaseMetaData>
+	<TestCaseMetaData id="MFK_0.0_1.1-MFK_M04_GU" date="11/18/2015" name="Positive Ack for M04" version="version3">
+		<Description>Dr. Radon's practice EHR-S  transmits an accept acknowledgement message to Century Hospital's LIS which indicates the third test compendium message (M04) has been successfully received.</Description>
+		<PreCondition>EDOS_0.0_3.1-M04_New_SmokeTest has been received by the EHR-S.</PreCondition>
+		<PostCondition>eDOS acknowledgement message is processed appropriately by the LIS.</PostCondition>
+		<TestObjectives>Demonstrate capability to support a positive acknowledgement Message in response to receiving the M04 message.
+Demonstrate capability to support a single occurrence of all required ("R") elements in the MSH segment.
+Demonstrate capability to support a single occurrence of all required ("R") elements in the MSA segment.
+Demonstrate capability to support a single occurrence of all required ("R") elements in the MFI segment.
+</TestObjectives>
+		<Comments>This is the initial "smoke testing" to reveal simple failures of the acknowledgment message severe enough to preclude further testing.</Comments>
+	</TestCaseMetaData>
+	<TestCaseMetaData id="MFK_0.0_1.1-MFK_M18_GU" date="11/18/2015" name="Positive Ack for M18" version="version3">
+		<Description>Dr. Radon's practice EHR-S  transmits an accept acknowledgement message to Century Hospital's LIS which indicates the fourth test compendium message (M18) has been successfully received.</Description>
+		<PreCondition>EDOS_0.0_4.1-M18_New_SmokeTest has been received by the EHR-S.</PreCondition>
+		<PostCondition>eDOS acknowledgement message is processed appropriately by the LIS.</PostCondition>
+		<TestObjectives>Demonstrate capability to support a positive acknowledgement Message in response to receiving the M18 message.
+Demonstrate capability to support a single occurrence of all required ("R") elements in the MSH segment.
+Demonstrate capability to support a single occurrence of all required ("R") elements in the MSA segment.
+Demonstrate capability to support a single occurrence of all required ("R") elements in the MFI segment.
+</TestObjectives>
+		<Comments>This is the initial "smoke testing" to reveal simple failures of the acknowledgment message severe enough to preclude further testing.</Comments>
+	</TestCaseMetaData>
+	<TestCaseMetaData id="MFK_0.0_1.1-MFK_M08_NG" date="11/18/2015" name="Positive Ack for M08" version="version3">
+		<Description>Dr. Radon's practice EHR-S  transmits an accept acknowledgement message to Century Hospital's LIS which indicates the first test compendium message (M08) has been successfully received.</Description>
+		<PreCondition>EDOS_0.0_1.1-M08_New_SmokeTest has been received by the EHR-S.</PreCondition>
+		<PostCondition>eDOS acknowledgement message is processed appropriately by the LIS.</PostCondition>
+		<TestObjectives>Demonstrate capability to support a positive acknowledgement Message in response to receiving the M08 message.
+Demonstrate capability to support a single occurrence of all required ("R") elements in the MSH segment.
+Demonstrate capability to support a single occurrence of all required ("R") elements in the MSA segment.
+Demonstrate capability to support a single occurrence of all required ("R") elements in the MFI segment.
+</TestObjectives>
+		<Comments>This is the initial "smoke testing" to reveal simple failures of the acknowledgment message severe enough to preclude further testing.</Comments>
+	</TestCaseMetaData>
+	<TestCaseMetaData id="MFK_0.0_1.1-MFK_M10_NG" date="11/18/2015" name="Positive Ack for M10" version="version3">
+		<Description>Dr. Radon's practice EHR-S  transmits an accept acknowledgement message to Century Hospital's LIS which indicates the second test compendium message (M10) has been successfully received.</Description>
+		<PreCondition>EDOS_0.0_2.1-M10_New_SmokeTest has been received by the EHR-S.</PreCondition>
+		<PostCondition>eDOS acknowledgement message is processed appropriately by the LIS.</PostCondition>
+		<TestObjectives>Demonstrate capability to support a positive acknowledgement Message in response to receiving the M10 message.
+Demonstrate capability to support a single occurrence of all required ("R") elements in the MSH segment.
+Demonstrate capability to support a single occurrence of all required ("R") elements in the MSA segment.
+Demonstrate capability to support a single occurrence of all required ("R") elements in the MFI segment.
+</TestObjectives>
+		<Comments>This is the initial "smoke testing" to reveal simple failures of the acknowledgment message severe enough to preclude further testing.</Comments>
+	</TestCaseMetaData>
+	<TestCaseMetaData id="MFK_0.0_1.1-MFK_M04_NG" date="11/18/2015" name="Positive Ack for M04" version="version3">
+		<Description>Dr. Radon's practice EHR-S  transmits an accept acknowledgement message to Century Hospital's LIS which indicates the third test compendium message (M04) has been successfully received.</Description>
+		<PreCondition>EDOS_0.0_3.1-M04_New_SmokeTest has been received by the EHR-S.</PreCondition>
+		<PostCondition>eDOS acknowledgement message is processed appropriately by the LIS.</PostCondition>
+		<TestObjectives>Demonstrate capability to support a positive acknowledgement Message in response to receiving the M04 message.
+Demonstrate capability to support a single occurrence of all required ("R") elements in the MSH segment.
+Demonstrate capability to support a single occurrence of all required ("R") elements in the MSA segment.
+Demonstrate capability to support a single occurrence of all required ("R") elements in the MFI segment.
+</TestObjectives>
+		<Comments>This is the initial "smoke testing" to reveal simple failures of the acknowledgment message severe enough to preclude further testing.</Comments>
+	</TestCaseMetaData>
+	<TestCaseMetaData id="MFK_0.0_1.1-MFK_M18_NG" date="11/18/2015" name="Positive Ack for M18" version="version3">
+		<Description>Dr. Radon's practice EHR-S  transmits an accept acknowledgement message to Century Hospital's LIS which indicates the fourth test compendium message (M18) has been successfully received.</Description>
+		<PreCondition>EDOS_0.0_4.1-M18_New_SmokeTest has been received by the EHR-S.</PreCondition>
+		<PostCondition>eDOS acknowledgement message is processed appropriately by the LIS.</PostCondition>
+		<TestObjectives>Demonstrate capability to support a positive acknowledgement Message in response to receiving the M18 message.
+Demonstrate capability to support a single occurrence of all required ("R") elements in the MSH segment.
+Demonstrate capability to support a single occurrence of all required ("R") elements in the MSA segment.
+Demonstrate capability to support a single occurrence of all required ("R") elements in the MFI segment.
+</TestObjectives>
+		<Comments>This is the initial "smoke testing" to reveal simple failures of the acknowledgment message severe enough to preclude further testing.</Comments>
+	</TestCaseMetaData>
+</TestCases>

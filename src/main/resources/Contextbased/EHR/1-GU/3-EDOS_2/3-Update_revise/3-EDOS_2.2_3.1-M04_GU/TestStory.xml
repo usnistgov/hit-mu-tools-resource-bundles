@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseMetaData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="EDOS_2.2_3.1-M04_GU" date="11/11/2015" name="M04_Update_Revise" version="version2">
+		<Description>
+The Laboratory Test Compendium from Century Hospital Clinical Laboratory is a subset of their Directory of Services.  It is based upon the most commonly ordered lab tests by Dr. Radon.  This compendium is being used by Dr. Nicholas Radon's practice EHR-S to place orders electronically to Century Hospital's Clinical Laboratory.  Century Hospital has made changes to their test compendium:
+- Removed a CPT code from  CBC with Differential and changed a usage Note
+Century Hospital's LIS transmits the appropriate eDOS update messages with these changes to Dr. Radon's EHR.</Description>
+		<PreCondition>EDOS_1.0_1.1-M08_New
+and
+EDOS_1.0_2.1-M10_New
+and
+EDOS_1.0_3.1-M04_New
+and
+EDOS_1.0_4.1-M18_New_Approved
+and
+EDOS_1.0_5.1-M18_New_Limited
+and
+EDOS_2.2_1.1-M08_Update_Revise
+and
+EDOS_2.2_2.1-M10_Update_Revise
+have been completed.</PreCondition>
+		<PostCondition>eDOS M08, M10 and M04 data elements are incorporated appropriately into the EHR-S.</PostCondition>
+		<TestObjectives>Demonstrate capability to support a M04 update message - action: revision</TestObjectives>
+		<Comments>Update changes for revision of charge codes (CPT codes).</Comments>
+	</TestCaseMetaData>

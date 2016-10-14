@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseMetaData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="MFK_0.0_1.1-MFK_M18_GU" date="11/11/2015" name="Positive Ack for M18" version="version2">
+		<Description>Dr. Radon's practice EHR-S  transmits an accept acknowledgement message to Century Hospital's LIS which indicates the fourth test compendium message (M18) has been successfully received.</Description>
+		<PreCondition>EDOS_0.0_4.1-M18_New_SmokeTest has been received by the EHR-S.</PreCondition>
+		<PostCondition>No Post-Condition.</PostCondition>
+		<TestObjectives>Demonstrate capability to support a positive acknowledgement Message in response to receiving the M18 message.
+Demonstrate capability to support a single occurrence of all required ("R") elements in the MSH segment.
+Demonstrate capability to support a single occurrence of all required ("R") elements in the MSA segment.
+Demonstrate capability to support a single occurrence of all required ("R") elements in the MFI segment.
+</TestObjectives>
+		<Comments>This is the initial "smoke testing" to reveal simple failures of the acknowledgment message severe enough to preclude further testing.</Comments>
+	</TestCaseMetaData>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseMetaData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="EDOS_0.0_1.1-M08_GU" date="11/18/2015" name="M08_New_SmokeTest" version="version3">
+		<Description>
+The initial Laboratory Test Compendium built by Century Hospital Clinical Laboratory consists of a single Prothrombin Time panel (""PT +INR"").  This compendium is delivered electronically to Dr. Nicholas Radon's practice EHR, as agreed to between Laboratory and Dr. Radon's Office and EHR-S Vendor.   The EHR-S will integrate the eDOS into its test directory and use it to allow Dr. Radon to place orders electronically to Century Hospital's Clinical Laboratory.   The initial laboratory test compendium is composed of four messages.
+Century Hospital's LIS transmit the first message which provides information about the PT and INR observations.</Description>
+		<PreCondition>No Pre-Condition.</PreCondition>
+		<PostCondition>No Post-Condition.</PostCondition>
+		<TestObjectives>Demonstrate capability to support a minimal M08 initial load message.
+Demonstrate capability to support a single occurrence of all required ("R") elements in the MSH segment.
+Demonstrate capability to support a single occurrence of all required ("R") elements in the MFI segment.
+Demonstrate capability to support a single occurrence of all required ("R") elements in the MFE segment.
+Demonstrate capability to support a single occurrence of all required ("R") elements in the OM1 segment.</TestObjectives>
+		<Comments>This is the initial "smoke testing" to reveal simple failures severe enough to preclude further testing.  Initial upload of 2 individual observations for a new compendium. 
+Since this is a replace message, all data in this message will replace information from a previous eDOS M08 message.</Comments>
+	</TestCaseMetaData>

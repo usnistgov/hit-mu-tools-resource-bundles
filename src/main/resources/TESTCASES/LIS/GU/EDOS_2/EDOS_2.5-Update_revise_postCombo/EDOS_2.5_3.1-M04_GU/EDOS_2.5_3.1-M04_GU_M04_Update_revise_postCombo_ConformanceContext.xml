@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ConformanceContext UUID="xxx">
+    <Constraints>
+        <Group>
+            <ByName Name="MFN_M04">
+                <Constraint ID="EDOS_2.5_3.1-M04_GU::4">
+                    <Description>Location 'MSH[1].3[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="1[1].3[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.5_3.1-M04_GU::5">
+                    <Description>Location 'MSH[1].3[1].2[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="1[1].3[1].2[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.5_3.1-M04_GU::8">
+                    <Description>Location 'MSH[1].4[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="1[1].4[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.5_3.1-M04_GU::9">
+                    <Description>Location 'MSH[1].4[1].2[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="1[1].4[1].2[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.5_3.1-M04_GU::12">
+                    <Description>Location 'MSH[1].6[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="1[1].6[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.5_3.1-M04_GU::13">
+                    <Description>Location 'MSH[1].6[1].2[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="1[1].6[1].2[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.5_3.1-M04_GU::16">
+                    <Description>Location 'MSH[1].7[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="1[1].7[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.5_3.1-M04_GU::21">
+                    <Description>Location 'MSH[1].10[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="1[1].10[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.5_3.1-M04_GU::23">
+                    <Description>Location 'MSH[1].11[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="1[1].11[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.5_3.1-M04_GU::40">
+                    <Description>Location 'MFI[1].1[1].2[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].1[1].2[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.5_3.1-M04_GU::42">
+                    <Description>Location 'MFI[1].1[1].7[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].1[1].7[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.5_3.1-M04_GU::44">
+                    <Description>Location 'MFI[1].3[1]' is expected to be present and valued 'UPD'</Description>
+                    <Assertion>
+                        <AND>
+                            <Presence Path="3[1].3[1]"/>
+                            <PlainText Path="3[1].3[1]" Text="UPD" IgnoreCase="false"/>
+                        </AND>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.5_3.1-M04_GU::46">
+                    <Description>Location 'MF_CDM[1].MFE[1].1[1]' is expected to be present and valued 'MAD'</Description>
+                    <Assertion>
+                        <AND>
+                            <Presence Path="5[1].1[1].1[1]"/>
+                            <PlainText Path="5[1].1[1].1[1]" Text="MAD" IgnoreCase="false"/>
+                        </AND>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.5_3.1-M04_GU::49">
+                    <Description>Location 'MF_CDM[1].MFE[1].3[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="5[1].1[1].3[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.5_3.1-M04_GU::51">
+                    <Description>Location 'MF_CDM[1].MFE[1].4[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="5[1].1[1].4[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.5_3.1-M04_GU::52">
+                    <Description>Location 'MF_CDM[1].MFE[1].4[1].2[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="5[1].1[1].4[1].2[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.5_3.1-M04_GU::53">
+                    <Description>Location 'MF_CDM[1].MFE[1].4[1].3[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="5[1].1[1].4[1].3[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.5_3.1-M04_GU::54">
+                    <Description>Location 'MF_CDM[1].MFE[1].4[1].7[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="5[1].1[1].4[1].7[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.5_3.1-M04_GU::57">
+                    <Description>Location 'MF_CDM[1].CDM[1].1[1].1[1]' is expected to be present and valued '402'</Description>
+                    <Assertion>
+                        <AND>
+                            <Presence Path="5[1].3[1].1[1].1[1]"/>
+                            <PlainText Path="5[1].3[1].1[1].1[1]" Text="402" IgnoreCase="false"/>
+                        </AND>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.5_3.1-M04_GU::58">
+                    <Description>Location 'MF_CDM[1].CDM[1].1[1].2[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="5[1].3[1].1[1].2[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.5_3.1-M04_GU::59">
+                    <Description>Location 'MF_CDM[1].CDM[1].1[1].3[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="5[1].3[1].1[1].3[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.5_3.1-M04_GU::60">
+                    <Description>Location 'MF_CDM[1].CDM[1].1[1].7[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="5[1].3[1].1[1].7[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.5_3.1-M04_GU::61">
+                    <Description>Location 'MF_CDM[1].CDM[1].3[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="5[1].3[1].3[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.5_3.1-M04_GU::63">
+                    <Description>Location 'MF_CDM[1].CDM[1].7[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="5[1].3[1].7[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.5_3.1-M04_GU::64">
+                    <Description>Location 'MF_CDM[1].CDM[1].7[1].2[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="5[1].3[1].7[1].2[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.5_3.1-M04_GU::65">
+                    <Description>Location 'MF_CDM[1].CDM[1].7[1].3[1]' is expected to be present and valued 'C4'</Description>
+                    <Assertion>
+                        <AND>
+                            <Presence Path="5[1].3[1].7[1].3[1]"/>
+                            <PlainText Path="5[1].3[1].7[1].3[1]" Text="C4" IgnoreCase="false"/>
+                        </AND>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.5_3.1-M04_GU::66">
+                    <Description>Location 'MF_CDM[1].CDM[1].7[1].7[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="5[1].3[1].7[1].7[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.5_3.1-M04_GU::92">
+                    <Description>Location 'MF_CDM[2].MFE[1].1[1]' is expected to be present and valued 'MAD'</Description>
+                    <Assertion>
+                        <AND>
+                            <Presence Path="5[2].1[1].1[1]"/>
+                            <PlainText Path="5[2].1[1].1[1]" Text="MAD" IgnoreCase="false"/>
+                        </AND>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.5_3.1-M04_GU::95">
+                    <Description>Location 'MF_CDM[2].MFE[1].3[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="5[2].1[1].3[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.5_3.1-M04_GU::97">
+                    <Description>Location 'MF_CDM[2].MFE[1].4[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="5[2].1[1].4[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.5_3.1-M04_GU::98">
+                    <Description>Location 'MF_CDM[2].MFE[1].4[1].2[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="5[2].1[1].4[1].2[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.5_3.1-M04_GU::99">
+                    <Description>Location 'MF_CDM[2].MFE[1].4[1].3[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="5[2].1[1].4[1].3[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.5_3.1-M04_GU::100">
+                    <Description>Location 'MF_CDM[2].MFE[1].4[1].7[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="5[2].1[1].4[1].7[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.5_3.1-M04_GU::103">
+                    <Description>Location 'MF_CDM[2].CDM[1].1[1].1[1]' is expected to be present and valued '404'</Description>
+                    <Assertion>
+                        <AND>
+                            <Presence Path="5[2].3[1].1[1].1[1]"/>
+                            <PlainText Path="5[2].3[1].1[1].1[1]" Text="404" IgnoreCase="false"/>
+                        </AND>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.5_3.1-M04_GU::104">
+                    <Description>Location 'MF_CDM[2].CDM[1].1[1].2[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="5[2].3[1].1[1].2[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.5_3.1-M04_GU::105">
+                    <Description>Location 'MF_CDM[2].CDM[1].1[1].3[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="5[2].3[1].1[1].3[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.5_3.1-M04_GU::106">
+                    <Description>Location 'MF_CDM[2].CDM[1].1[1].7[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="5[2].3[1].1[1].7[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.5_3.1-M04_GU::107">
+                    <Description>Location 'MF_CDM[2].CDM[1].3[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="5[2].3[1].3[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.5_3.1-M04_GU::109">
+                    <Description>Location 'MF_CDM[2].CDM[1].7[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="5[2].3[1].7[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.5_3.1-M04_GU::110">
+                    <Description>Location 'MF_CDM[2].CDM[1].7[1].2[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="5[2].3[1].7[1].2[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.5_3.1-M04_GU::111">
+                    <Description>Location 'MF_CDM[2].CDM[1].7[1].3[1]' is expected to be present and valued 'C4'</Description>
+                    <Assertion>
+                        <AND>
+                            <Presence Path="5[2].3[1].7[1].3[1]"/>
+                            <PlainText Path="5[2].3[1].7[1].3[1]" Text="C4" IgnoreCase="false"/>
+                        </AND>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.5_3.1-M04_GU::112">
+                    <Description>Location 'MF_CDM[2].CDM[1].7[1].7[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="5[2].3[1].7[1].7[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.5_3.1-M04_GU::138">
+                    <Description>Location 'MF_CDM[3].MFE[1].1[1]' is expected to be present and valued 'MAD'</Description>
+                    <Assertion>
+                        <AND>
+                            <Presence Path="5[3].1[1].1[1]"/>
+                            <PlainText Path="5[3].1[1].1[1]" Text="MAD" IgnoreCase="false"/>
+                        </AND>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.5_3.1-M04_GU::141">
+                    <Description>Location 'MF_CDM[3].MFE[1].3[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="5[3].1[1].3[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.5_3.1-M04_GU::143">
+                    <Description>Location 'MF_CDM[3].MFE[1].4[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="5[3].1[1].4[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.5_3.1-M04_GU::144">
+                    <Description>Location 'MF_CDM[3].MFE[1].4[1].2[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="5[3].1[1].4[1].2[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.5_3.1-M04_GU::145">
+                    <Description>Location 'MF_CDM[3].MFE[1].4[1].3[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="5[3].1[1].4[1].3[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.5_3.1-M04_GU::146">
+                    <Description>Location 'MF_CDM[3].MFE[1].4[1].7[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="5[3].1[1].4[1].7[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.5_3.1-M04_GU::149">
+                    <Description>Location 'MF_CDM[3].CDM[1].1[1].1[1]' is expected to be present and valued '408'</Description>
+                    <Assertion>
+                        <AND>
+                            <Presence Path="5[3].3[1].1[1].1[1]"/>
+                            <PlainText Path="5[3].3[1].1[1].1[1]" Text="408" IgnoreCase="false"/>
+                        </AND>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.5_3.1-M04_GU::150">
+                    <Description>Location 'MF_CDM[3].CDM[1].1[1].2[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="5[3].3[1].1[1].2[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.5_3.1-M04_GU::151">
+                    <Description>Location 'MF_CDM[3].CDM[1].1[1].3[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="5[3].3[1].1[1].3[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.5_3.1-M04_GU::152">
+                    <Description>Location 'MF_CDM[3].CDM[1].1[1].7[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="5[3].3[1].1[1].7[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.5_3.1-M04_GU::153">
+                    <Description>Location 'MF_CDM[3].CDM[1].3[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="5[3].3[1].3[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.5_3.1-M04_GU::155">
+                    <Description>Location 'MF_CDM[3].CDM[1].7[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="5[3].3[1].7[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.5_3.1-M04_GU::156">
+                    <Description>Location 'MF_CDM[3].CDM[1].7[1].2[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="5[3].3[1].7[1].2[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.5_3.1-M04_GU::157">
+                    <Description>Location 'MF_CDM[3].CDM[1].7[1].3[1]' is expected to be present and valued 'C4'</Description>
+                    <Assertion>
+                        <AND>
+                            <Presence Path="5[3].3[1].7[1].3[1]"/>
+                            <PlainText Path="5[3].3[1].7[1].3[1]" Text="C4" IgnoreCase="false"/>
+                        </AND>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.5_3.1-M04_GU::158">
+                    <Description>Location 'MF_CDM[3].CDM[1].7[1].7[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="5[3].3[1].7[1].7[1]"/>
+                    </Assertion>
+                </Constraint>
+            </ByName>
+        </Group>
+    </Constraints>
+</ConformanceContext>

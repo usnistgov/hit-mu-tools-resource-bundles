@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseMetaData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="EDOS_2.4_1.1-M08_GU" date="11/11/2015" name="M08_Update_Combo" version="version2">
+		<Description>
+The Laboratory Test Compendium from Century Hospital Clinical Laboratory is a subset of their Directory of Services.  It is based upon the most commonly ordered lab tests by Dr. Radon.    This compendium is being used by Dr. Nicholas Radon's practice EHR-S to place orders electronically to Century Hospital's Clinical Laboratory.  Century Hospital has made the following changes to their test compendium:
+- Added a Lipid Panel and its related components
+- Added a Measured Low density lipoprotein cholesterol, serum (LDL) test
+- Deactivated a serology test for Saint Luis Encephalitis IgG Antibody
+- Revised the text for interpretation of Urine Glucose test results.
+Century Hospital's LIS transmits the appropriate eDOS update messages with these changes to Dr. Radon's EHR.</Description>
+		<PreCondition>EDOS_1.0_1.1-M08_New
+and
+EDOS_1.0_2.1-M10_New
+and
+EDOS_1.0_3.1-M04_New
+and
+EDOS_1.0_4.1-M18_New_Approved
+and
+EDOS_1.0_5.1-M18_New_Limited
+have been uploaded.</PreCondition>
+		<PostCondition>eDOS M08 data elements are incorporated appropriately into the EHR-S.</PostCondition>
+		<TestObjectives>Demonstrate capability to support a M08 update message - action: combination of addition, de-activation and revision
+Demonstrate capability to support the repeating field in OM1-31 (Observations Required to Interpret the Observation), OM1-32 (Interpretation of Observations), OM1-40 (Service/Test/Observation Performance Schedule), OM4-3 (Container Description), OM4-4 (Container Volume), and OM4-5 (Container Units).
+Demonstrate capability to support repeating segments for OM4.</TestObjectives>
+		<Comments>Combination of update changes including addition, revision and deactivation of information about individual observations..</Comments>
+	</TestCaseMetaData>

@@ -1,0 +1,1155 @@
+<DatatypeLibrary>
+	<!-- V2_IG_LTCF_R2_DSTU_R1.1_2014MAR -->
+	<!-- eDOS CNE -->
+	<Field Datatype="CNE_EDOS">
+		<Component Name="Identifier" Usage="R" Datatype="ST" MinLength="1" MaxLength="20"/>
+		<Component Name="Text" Usage="R" Datatype="ST" MinLength="1" MaxLength="199"/>
+		<Component Name="Name of Coding System" Usage="R" Datatype="ID" MinLength="1" MaxLength="20" Table="eDOS_HL70396"/>
+		<Component Name="Alternate Identifier" Usage="O" Datatype="ST" MinLength="1" MaxLength="20"/>
+		<Component Name="Alternate Text" Usage="O" Datatype="ST" MinLength="1" MaxLength="199"/>
+		<Component Name="Name of Alternate Coding System" Usage="O" Datatype="ID" MinLength="1" MaxLength="20" Table="0396"/>
+		<Component Name="Coding System Version ID" Usage="RE" Datatype="ST" MinLength="1" MaxLength="10"/>
+		<Component Name="Alternate Coding System Version ID" Usage="O" Datatype="ST" MinLength="1" MaxLength="10"/>
+		<Component Name="Original Text" Usage="O" Datatype="ST" MinLength="1" MaxLength="199"/>
+	</Field>
+	<!-- eDOS CWE -->
+	<Field Datatype="CWE_EDOS">
+        <Component Datatype="ST" MaxLength="20" MinLength="1" Name="Identifier" PredicateFalseUsage="O" PredicateTrueUsage="R" Usage="C">
+          <Predicate> 
+            <EnglishDescription>If CWE.2 is not valued.</EnglishDescription>  
+            <Condition> 
+              <NOT> 
+                <Valued location="./2"/> 
+              </NOT> 
+            </Condition> 
+          </Predicate>
+        </Component>
+        <Component Datatype="ST" MaxLength="199" MinLength="1" Name="Text" PredicateFalseUsage="RE" PredicateTrueUsage="R" Usage="C">
+          <Predicate> 
+            <EnglishDescription>If CWE.1 is not valued.</EnglishDescription>  
+            <Condition> 
+              <NOT> 
+                <Valued location="./1"/> 
+              </NOT> 
+            </Condition> 
+          </Predicate>
+        </Component>
+        <Component Datatype="ID" MaxLength="20" MinLength="1" Name="Name of Coding System" PredicateFalseUsage="X" PredicateTrueUsage="R" Table="eDOS_HL70396" Usage="C">
+          <Predicate> 
+            <EnglishDescription>If CWE.1 is valued.</EnglishDescription>  
+            <Condition> 
+              <Valued location="./1"/> 
+            </Condition> 
+          </Predicate>
+        </Component>
+        <Component Datatype="ST" MaxLength="20" MinLength="1" Name="Alternate Identifier" Usage="O"/>
+        <Component Datatype="ST" MaxLength="199" MinLength="1" Name="Alternate Text" Usage="O"/>
+        <Component Datatype="ID" MaxLength="20" MinLength="1" Name="Name of Alternate Coding System" Table="0396" Usage="O"/>
+        <Component Datatype="ST" MaxLength="10" MinLength="1" Name="Coding System Version ID" PredicateFalseUsage="X" PredicateTrueUsage="RE" Usage="C">
+          <Predicate> 
+            <EnglishDescription>If CWE.3 (Name Of Coding System) is valued.</EnglishDescription>  
+            <Condition> 
+              <Valued location="./3"/> 
+            </Condition> 
+          </Predicate>
+        </Component>
+        <Component Datatype="ST" MaxLength="10" MinLength="1" Name="Alternate Coding System Version ID" PredicateFalseUsage="X" PredicateTrueUsage="RE" Usage="C">
+          <Predicate> 
+            <EnglishDescription>If CWE.6 (Name Of Alternate Coding System) is valued.</EnglishDescription>  
+            <Condition> 
+              <Valued location="./6"/> 
+            </Condition> 
+          </Predicate>
+        </Component>
+        <Component Datatype="ST" MaxLength="199" MinLength="1" Name="Original Text" Usage="O"/>
+        <Component Datatype="ST" MaxLength="20" MinLength="1" Name="Second Alternate Identifier" Usage="O"/>
+        <Component Datatype="ST" MaxLength="199" MinLength="1" Name="Second Alternate Text" Usage="O"/>
+        <Component Datatype="ID" MaxLength="12" MinLength="1" Name="Second Name of Alternate Coding System" Table="0396" Usage="O"/>
+        <Component Datatype="ST" MaxLength="10" MinLength="1" Name="Second Alternate Coding System Version ID" Usage="O"/>
+        <Component Datatype="ST" MaxLength="199" MinLength="1" Name="Coding System OID" Usage="O"/>
+        <Component Datatype="ST" MaxLength="199" MinLength="1" Name="Value Set OID" Usage="O"/>
+        <Component Datatype="DTM" MaxLength="8" MinLength="1" Name="Value Set Version ID" Usage="O"/>
+        <Component Datatype="ST" MaxLength="199" MinLength="1" Name="Alternate Coding System OID" Usage="O"/>
+        <Component Datatype="ST" MaxLength="199" MinLength="1" Name="Alternate Value Set OID" Usage="O"/>
+        <Component Datatype="DTM" MaxLength="8" MinLength="1" Name="Alternate Value Set Version ID" Usage="O"/>
+        <Component Datatype="ST" MaxLength="199" MinLength="1" Name="Second Alternate Coding System OID" Usage="O"/>
+        <Component Datatype="ST" MaxLength="199" MinLength="1" Name="Second Alternate Value Set OID" Usage="O"/>
+        <Component Datatype="DTM" MaxLength="8" MinLength="1" Name="Second Alternate Value Set Version ID" Usage="O"/>
+	</Field>
+	<!-- eDOS CWE_CR -->
+	<Field Datatype="CWE_CR">
+		<Component Name="Identifier" Usage="R" Datatype="ST" MinLength="1" MaxLength="20"/>
+		<Component Name="Text" Usage="RE" Datatype="ST" MinLength="1" MaxLength="199"/>
+		<Component Name="Name of Coding System" Usage="R" Datatype="ID" MinLength="1" MaxLength="20" Table="eDOS_HL70396"/>
+		<Component Name="Alternate Identifier" Usage="RE" Datatype="ST" MinLength="1" MaxLength="20"/>
+		<Component Name="Alternate Text" Usage="RE" Datatype="ST" MinLength="1" MaxLength="199"/>
+		<Component Name="Name of Alternate Coding System" Usage="C" PredicateFalseUsage="X" PredicateTrueUsage="R" Datatype="ID" MinLength="1" MaxLength="20" Table="eDOS_HL70396">
+		    <Predicate> 
+              <EnglishDescription>If CWE_CR.4 (Alternate Identifier) is valued.</EnglishDescription>  
+              <Condition> 
+                <Valued location="./4"/> 
+              </Condition> 
+            </Predicate>
+		</Component>
+		<Component Name="Coding System Version ID" Usage="RE" Datatype="ST" MinLength="1" MaxLength="10"/>
+		<Component Name="Alternate Coding System Version ID" Usage="C" PredicateFalseUsage="X" PredicateTrueUsage="RE" Datatype="ST" MinLength="1" MaxLength="10">
+		    <Predicate> 
+              <EnglishDescription>If CWE_CR.6 (Name Of Alternate Coding System) is valued.</EnglishDescription>  
+              <Condition> 
+                <Valued location="./6"/> 
+              </Condition> 
+            </Predicate>
+		</Component>
+		<Component Name="Original Text" Usage="RE" Datatype="ST" MinLength="1" MaxLength="199"/>
+		<Component Name="Second Alternate Identifier" Usage="O" Datatype="ST" MinLength="1" MaxLength="20"/>
+		<Component Name="Second Alternate Text" Usage="O" Datatype="ST" MinLength="1" MaxLength="199"/>
+		<Component Name="Second Name of Alternate Coding System" Usage="O" Datatype="ID" MinLength="1" MaxLength="12" Table="0396"/>
+		<Component Name="Second Alternate Coding System Version ID" Usage="O" Datatype="ST" MinLength="1" MaxLength="10"/>
+		<Component Name="Coding System OID" Usage="O" Datatype="ST" MinLength="1" MaxLength="199"/>
+		<Component Name="Value Set OID" Usage="O" Datatype="ST" MinLength="1" MaxLength="199"/>
+		<Component Name="Value Set Version ID" Usage="O" Datatype="DTM" MinLength="1" MaxLength="8"/>
+		<Component Name="Alternate Coding System OID" Usage="O" Datatype="ST" MinLength="1" MaxLength="199"/>
+		<Component Name="Alternate Value Set OID" Usage="O" Datatype="ST" MinLength="1" MaxLength="199"/>
+		<Component Name="Alternate Value Set Version ID" Usage="O" Datatype="DTM" MinLength="1" MaxLength="8"/>
+		<Component Name="Second Alternate Coding System OID" Usage="O" Datatype="ST" MinLength="1" MaxLength="199"/>
+		<Component Name="Second Alternate Value Set OID" Usage="O" Datatype="ST" MinLength="1" MaxLength="199"/>
+		<Component Name="Second Alternate Value Set Version ID" Usage="O" Datatype="DTM" MinLength="1" MaxLength="8"/>
+	</Field>
+	<!-- eDOS CWE_CRE -->
+	<Field Datatype="CWE_CRE">
+          <Component Datatype="ST" MaxLength="20" MinLength="1" Name="Identifier" Usage="RE"/>
+          <Component Datatype="ST" MaxLength="199" MinLength="1" Name="Text" PredicateFalseUsage="X" PredicateTrueUsage="RE" Usage="C">
+            <Predicate> 
+              <EnglishDescription>If CWE_CRE.1 (Identifier) is valued.</EnglishDescription>  
+              <Condition> 
+                <Valued location="./1"/> 
+              </Condition> 
+            </Predicate>
+          </Component>
+          <Component Datatype="ID" MaxLength="20" MinLength="1" Name="Name of Coding System" PredicateFalseUsage="X" PredicateTrueUsage="R" Table="eDOS_HL70396" Usage="C">
+            <Predicate> 
+              <EnglishDescription>If CWE_CRE.1 (Identifier) is valued.</EnglishDescription>  
+              <Condition> 
+                <Valued location="./1"/> 
+              </Condition> 
+            </Predicate>
+          </Component>
+          <Component Datatype="ST" MaxLength="20" MinLength="1" Name="Alternate Identifier" PredicateFalseUsage="X" PredicateTrueUsage="RE" Usage="C">
+            <Predicate> 
+              <EnglishDescription>If CWE_CRE.1 (Identifier) is valued.</EnglishDescription>  
+              <Condition> 
+                <Valued location="./1"/> 
+              </Condition> 
+            </Predicate>
+          </Component>
+          <Component Datatype="ST" MaxLength="199" MinLength="1" Name="Alternate Text" PredicateFalseUsage="X" PredicateTrueUsage="RE" Usage="C">
+            <Predicate> 
+              <EnglishDescription>If CWE_CRE.4 (Alternate Identifier) is valued.</EnglishDescription>  
+              <Condition> 
+                <Valued location="./4"/> 
+              </Condition> 
+            </Predicate>
+          </Component>
+          <Component Datatype="ID" MaxLength="20" MinLength="1" Name="Name of Alternate Coding System" PredicateFalseUsage="X" PredicateTrueUsage="R" Table="eDOS_HL70396" Usage="C">
+            <Predicate> 
+              <EnglishDescription>If CWE_CRE.4 (Alternate Identifier) is valued.</EnglishDescription>  
+              <Condition> 
+                <Valued location="./4"/> 
+              </Condition> 
+            </Predicate>
+          </Component>
+          <Component Datatype="ST" MaxLength="10" MinLength="1" Name="Coding System Version ID" PredicateFalseUsage="X" PredicateTrueUsage="RE" Usage="C">
+            <Predicate> 
+              <EnglishDescription>If CWE_CRE.3 (Name Of Coding System) is valued.</EnglishDescription>  
+              <Condition> 
+                <Valued location="./3"/> 
+              </Condition> 
+            </Predicate>
+          </Component>
+          <Component Datatype="ST" MaxLength="10" MinLength="1" Name="Alternate Coding System Version ID" PredicateFalseUsage="X" PredicateTrueUsage="RE" Usage="C">
+            <Predicate> 
+              <EnglishDescription>If CWE_CRE.6 (Name Of Alternate Coding System) is valued.</EnglishDescription>  
+              <Condition> 
+                <Valued location="./6"/> 
+              </Condition> 
+            </Predicate>
+          </Component>
+          <Component Datatype="ST" MaxLength="199" MinLength="1" Name="Original Text" PredicateFalseUsage="RE" PredicateTrueUsage="R" Usage="C">
+            <Predicate> 
+              <EnglishDescription>If CWE_CRE.1 (Identifier) and CWE.4_CRE (alternate identifier) are not valued.</EnglishDescription>  
+              <Condition> 
+                <AND> 
+                  <NOT> 
+                    <Valued location="./1"/> 
+                  </NOT>  
+                  <NOT> 
+                    <Valued location="./4"/> 
+                  </NOT> 
+                </AND> 
+              </Condition> 
+            </Predicate>
+          </Component>
+          <Component Datatype="ST" MaxLength="20" MinLength="1" Name="Second Alternate Identifier" Usage="O"/>
+          <Component Datatype="ST" MaxLength="199" MinLength="1" Name="Second Alternate Text" Usage="O"/>
+          <Component Datatype="ID" MaxLength="12" MinLength="1" Name="Second Name of Alternate Coding System" Table="0396" Usage="O"/>
+          <Component Datatype="ST" MaxLength="10" MinLength="1" Name="Second Alternate Coding System Version ID" Usage="O"/>
+          <Component Datatype="ST" MaxLength="199" MinLength="1" Name="Coding System OID" Usage="O"/>
+          <Component Datatype="ST" MaxLength="199" MinLength="1" Name="Value Set OID" Usage="O"/>
+          <Component Datatype="DTM" MaxLength="8" MinLength="1" Name="Value Set Version ID" Usage="O"/>
+          <Component Datatype="ST" MaxLength="199" MinLength="1" Name="Alternate Coding System OID" Usage="O"/>
+          <Component Datatype="ST" MaxLength="199" MinLength="1" Name="Alternate Value Set OID" Usage="O"/>
+          <Component Datatype="DTM" MaxLength="8" MinLength="1" Name="Alternate Value Set Version ID" Usage="O"/>
+          <Component Datatype="ST" MaxLength="199" MinLength="1" Name="Second Alternate Coding System OID" Usage="O"/>
+          <Component Datatype="ST" MaxLength="199" MinLength="1" Name="Second Alternate Value Set OID" Usage="O"/>
+          <Component Datatype="DTM" MaxLength="8" MinLength="1" Name="Second Alternate Value Set Version ID" Usage="O"/>
+	</Field>
+	<!-- eDOS CWE_RC -->
+	<Field Datatype="CWE_RC">
+          <Component Datatype="ST" MaxLength="20" MinLength="1" Name="Identifier" Usage="R"/>
+          <Component Datatype="ST" MaxLength="199" MinLength="1" Name="Text" Usage="R"/>
+          <Component Datatype="ID" MaxLength="20" MinLength="1" Name="Name of Coding System" Table="eDOS_HL70396" Usage="R"/>
+          <Component Datatype="ST" MaxLength="20" MinLength="1" Name="Alternate Identifier" Usage="O"/>
+          <Component Datatype="ST" MaxLength="199" MinLength="1" Name="Alternate Text" Usage="O"/>
+          <Component Datatype="ID" MaxLength="20" MinLength="1" Name="Name of Alternate Coding System" Table="0396" Usage="O"/>
+          <Component Datatype="ST" MaxLength="10" MinLength="1" Name="Coding System Version ID" PredicateFalseUsage="X" PredicateTrueUsage="RE" Usage="C">
+            <Predicate> 
+              <EnglishDescription>If CWE_RC.3 (Name Of Coding System) is valued.</EnglishDescription>  
+              <Condition> 
+                <Valued location="./3"/> 
+              </Condition> 
+            </Predicate>
+          </Component>
+          <Component Datatype="ST" MaxLength="10" MinLength="1" Name="Alternate Coding System Version ID" Usage="O"/>
+          <Component Datatype="ST" MaxLength="199" MinLength="1" Name="Original Text" Usage="O"/>
+          <Component Datatype="ST" MaxLength="20" MinLength="1" Name="Second Alternate Identifier" Usage="O"/>
+          <Component Datatype="ST" MaxLength="199" MinLength="1" Name="Second Alternate Text" Usage="O"/>
+          <Component Datatype="ID" MaxLength="12" MinLength="1" Name="Second Name of Alternate Coding System" Table="0396" Usage="O"/>
+          <Component Datatype="ST" MaxLength="10" MinLength="1" Name="Second Alternate Coding System Version ID" Usage="O"/>
+          <Component Datatype="ST" MaxLength="199" MinLength="1" Name="Coding System OID" Usage="O"/>
+          <Component Datatype="ST" MaxLength="199" MinLength="1" Name="Value Set OID" Usage="O"/>
+          <Component Datatype="DTM" MaxLength="8" MinLength="1" Name="Value Set Version ID" Usage="O"/>
+          <Component Datatype="ST" MaxLength="199" MinLength="1" Name="Alternate Coding System OID" Usage="O"/>
+          <Component Datatype="ST" MaxLength="199" MinLength="1" Name="Alternate Value Set OID" Usage="O"/>
+          <Component Datatype="DTM" MaxLength="8" MinLength="1" Name="Alternate Value Set Version ID" Usage="O"/>
+          <Component Datatype="ST" MaxLength="199" MinLength="1" Name="Second Alternate Coding System OID" Usage="O"/>
+          <Component Datatype="ST" MaxLength="199" MinLength="1" Name="Second Alternate Value Set OID" Usage="O"/>
+          <Component Datatype="DTM" MaxLength="8" MinLength="1" Name="Second Alternate Value Set Version ID" Usage="O"/>
+	</Field>
+	<!-- eDOS CWE_RC1 -->
+	<Field Datatype="CWE_RC1">
+          <Component Datatype="ST" MaxLength="20" MinLength="1" Name="Identifier" Usage="R"/>
+          <Component Datatype="ST" MaxLength="199" MinLength="1" Name="Text" Usage="R"/>
+          <Component Datatype="ID" MaxLength="20" MinLength="1" Name="Name of Coding System" Table="eDOS_HL70396" Usage="R"/>
+          <Component Datatype="ST" MaxLength="20" MinLength="1" Name="Alternate Identifier" Usage="RE"/>
+          <Component Datatype="ST" MaxLength="199" MinLength="1" Name="Alternate Text" Usage="RE"/>
+          <Component Datatype="ID" MaxLength="20" MinLength="1" Name="Name of Alternate Coding System" PredicateFalseUsage="X" PredicateTrueUsage="R" Table="0396" Usage="C">
+            <Predicate> 
+              <EnglishDescription>If CWE_RC1.4 (Alternate Identifier) or CWE_RC1.5 (Alternate Text) is valued.</EnglishDescription>  
+              <Condition> 
+                <OR> 
+                  <Valued location="./4"/>  
+                  <Valued location="./5"/> 
+                </OR> 
+              </Condition> 
+            </Predicate>
+          </Component>
+          <Component Datatype="ST" MaxLength="10" MinLength="1" Name="Coding System Version ID" PredicateFalseUsage="X" PredicateTrueUsage="RE" Usage="C">
+            <Predicate> 
+              <EnglishDescription>If CWE_RC1.3 (Name Of Coding System) is valued.</EnglishDescription>  
+              <Condition> 
+                <Valued location="./3"/> 
+              </Condition> 
+            </Predicate>
+          </Component>
+          <Component Datatype="ST" MaxLength="10" MinLength="1" Name="Alternate Coding System Version ID" PredicateFalseUsage="X" PredicateTrueUsage="RE" Usage="C">
+            <Predicate> 
+              <EnglishDescription>If CWE_RC.6 (Name Of Coding System) is valued.</EnglishDescription>  
+              <Condition> 
+                <Valued location="./6"/> 
+              </Condition> 
+            </Predicate>
+          </Component>
+          <Component Datatype="ST" MaxLength="199" MinLength="1" Name="Original Text" Usage="O"/>
+          <Component Datatype="ST" MaxLength="20" MinLength="1" Name="Second Alternate Identifier" Usage="O"/>
+          <Component Datatype="ST" MaxLength="199" MinLength="1" Name="Second Alternate Text" Usage="O"/>
+          <Component Datatype="ID" MaxLength="12" MinLength="1" Name="Second Name of Alternate Coding System" Table="0396" Usage="O"/>
+          <Component Datatype="ST" MaxLength="10" MinLength="1" Name="Second Alternate Coding System Version ID" Usage="O"/>
+          <Component Datatype="ST" MaxLength="199" MinLength="1" Name="Coding System OID" Usage="O"/>
+          <Component Datatype="ST" MaxLength="199" MinLength="1" Name="Value Set OID" Usage="O"/>
+          <Component Datatype="DTM" MaxLength="8" MinLength="1" Name="Value Set Version ID" Usage="O"/>
+          <Component Datatype="ST" MaxLength="199" MinLength="1" Name="Alternate Coding System OID" Usage="O"/>
+          <Component Datatype="ST" MaxLength="199" MinLength="1" Name="Alternate Value Set OID" Usage="O"/>
+          <Component Datatype="DTM" MaxLength="8" MinLength="1" Name="Alternate Value Set Version ID" Usage="O"/>
+          <Component Datatype="ST" MaxLength="199" MinLength="1" Name="Second Alternate Coding System OID" Usage="O"/>
+          <Component Datatype="ST" MaxLength="199" MinLength="1" Name="Second Alternate Value Set OID" Usage="O"/>
+          <Component Datatype="DTM" MaxLength="8" MinLength="1" Name="Second Alternate Value Set Version ID" Usage="O"/>
+	</Field>
+	<!-- eDOS CQ -->
+	<Field Datatype="CQ_EDOS">
+		<Component Name="Quantity" Usage="R" Datatype="NM" MinLength="1" MaxLength="16"/>
+		<Component Name="Units" Usage="RE" Datatype="CWE_EDOS" MinLength="1" MaxLength="483" Table="UCUM"/>
+	</Field>
+	<!-- eDOS EI_GU -->
+	<Field Datatype="EI_GU">
+        <Component Datatype="ST" MaxLength="199" MinLength="1" Name="Entity Identifier" Usage="R"/>
+        <Component Datatype="IS" MaxLength="20" MinLength="1" Name="Namespace ID" Table="0363" Usage="RE"/>
+        <Component Datatype="ST" MaxLength="199" MinLength="1" Name="Universal ID" Usage="R">
+          <ConformanceStatement Profile="Base" id="eDOS-1"> 
+            <EnglishDescription>EI_GU.3 (Universal ID) SHALL be valued with an ISO-compliant OID.</EnglishDescription>  
+            <Assertion Description="Failed Assertion : EI_GU.3 format is an ISO-compliant OID"> 
+              <Regex location="." regex="[0-2](\.(0|[1-9][0-9]*))*"/> 
+            </Assertion> 
+          </ConformanceStatement>
+        </Component>
+        <Component Datatype="ID" MaxLength="6" MinLength="1" Name="Universal ID Type" Usage="R">
+          <ConformanceStatement Profile="Base" id="eDOS-2"> 
+            <EnglishDescription>EI_GU.4 (Universal ID Type) SHALL contain the value 'ISO'.</EnglishDescription>  
+            <Assertion Description="Failed Assertion : EI_GU.4='ISO'"> 
+              <PlainText location="." value="ISO"/> 
+            </Assertion> 
+          </ConformanceStatement>
+        </Component>
+    </Field>
+	<!-- eDOS EI_NG -->
+	<Field Datatype="EI_NG">
+		<Component Name="Entity Identifier" Usage="R" Datatype="ST" MinLength="1" MaxLength="199"/>
+		<Component Name="Namespace ID" Usage="C" PredicateTrueUsage="R" PredicateFalseUsage="O" Datatype="IS" MinLength="1" MaxLength="20">
+			<Predicate>
+				<EnglishDescription>If EI_NG.3 (Universal ID) is not valued.</EnglishDescription>
+				<Condition>
+					<NOT>
+						<Valued location="./3"/>
+					</NOT>
+				</Condition>
+			</Predicate>
+		</Component>
+		<Component Name="Universal ID" Usage="C" PredicateTrueUsage="R" PredicateFalseUsage="O" Datatype="ST" MinLength="1" MaxLength="199">
+			<Predicate>
+				<EnglishDescription>If EI_NG.2 (Namespace ID) is not valued.</EnglishDescription>
+				<Condition>
+					<NOT>
+						<Valued location="./2"/>
+					</NOT>
+				</Condition>
+			</Predicate>
+		</Component>
+		<Component Name="Universal ID Type" Usage="C" PredicateTrueUsage="R" PredicateFalseUsage="X" Datatype="ID" MinLength="1" MaxLength="6" Table="eDOS_HL70301">
+			<Predicate>
+				<EnglishDescription>If EI_NG.3 (Universal ID) is valued.</EnglishDescription>
+				<Condition>
+					<Valued location="./3"/>
+				</Condition>
+			</Predicate>
+		</Component>
+	</Field>
+	<!-- eDOS HD_GU -->
+	<Field Datatype="HD_GU">
+        <Component Datatype="IS" MaxLength="20" MinLength="1" Name="Namespace ID" Usage="RE"/>
+        <Component Datatype="ST" MaxLength="199" MinLength="1" Name="Universal ID" Usage="R">
+          <ConformanceStatement Profile="Base" id="eDOS-3"> 
+            <EnglishDescription>HD_GU.2 (Universal ID) SHALL be valued with an ISO-compliant OID.</EnglishDescription>  
+            <Assertion Description="Failed Assertion : HD_GU.2 format must be an ISO-compliant OID"> 
+              <Regex location="." regex="[0-2](\.(0|[1-9][0-9]*))*"/> 
+            </Assertion> 
+          </ConformanceStatement>
+        </Component>
+        <Component Datatype="ID" MaxLength="6" MinLength="1" Name="Universal ID Type" Usage="R">
+          <ConformanceStatement Profile="Base" id="eDOS-4"> 
+            <EnglishDescription>HD_GU.3 (Universal ID Type) SHALL contain the value 'ISO'.</EnglishDescription>  
+            <Assertion Description="Failed Assertion : HD_GU.3='ISO'"> 
+              <PlainText location="." value="ISO"/> 
+            </Assertion> 
+          </ConformanceStatement>
+        </Component>
+    </Field>
+	<!-- eDOS HD_NG -->
+	<Field Datatype="HD_NG">
+		<Component Name="Namespace ID" Usage="C" PredicateTrueUsage="R" PredicateFalseUsage="O" Datatype="IS" MinLength="1" MaxLength="20">
+			<Predicate>
+				<EnglishDescription>If HD_NG.2 (Universal ID) is not valued.</EnglishDescription>
+				<Condition>
+					<NOT>
+						<Valued location="./2"/>
+					</NOT>
+				</Condition>
+			</Predicate>
+		</Component>
+		<Component Name="Universal ID" Usage="C"  PredicateTrueUsage="R" PredicateFalseUsage="O" Datatype="ST" MinLength="1" MaxLength="199">
+			<Predicate>
+				<EnglishDescription>If HD_NG.1 (Namespace ID) is not valued.</EnglishDescription>
+				<Condition>
+					<NOT>
+						<Valued location="./1"/>
+					</NOT>
+				</Condition>
+			</Predicate>
+		</Component>
+		<Component Name="Universal ID Type" Usage="C" PredicateTrueUsage="R" PredicateFalseUsage="X" Datatype="ID" MinLength="1" MaxLength="6" Table="eDOS_HL70301">
+			<Predicate>
+				<EnglishDescription>If HD_NG.2 (Universal ID) is valued.</EnglishDescription>
+				<Condition>
+					<Valued location="./2"/>
+				</Condition>
+			</Predicate>
+		</Component>
+	</Field>
+	<!-- eDOS MSG -->
+	<Field Datatype="MSG_EDOS">
+		<Component Name="Message Code" Usage="R" Datatype="ID" MinLength="1" MaxLength="3" Table="eDOS_HL70076"/>
+		<Component Name="Trigger Event" Usage="R" Datatype="ID" MinLength="1" MaxLength="3" Table="eDOS_HL70003"/>
+		<Component Name="Message Structure" Usage="R" Datatype="ID" MinLength="1" MaxLength="7" Table="eDOS_HL70354"/>
+	</Field>
+	<!-- eDOS_NR -->
+	<Field Datatype="NR_EDOS">
+		<Component Name="Low Value" Usage="RE" Datatype="NM" MinLength="1" MaxLength="16"/>
+		<Component Name="High Value" Usage="RE" Datatype="NM" MinLength="1" MaxLength="16"/>
+	</Field>
+	<!-- eDOS PT -->
+	<Field Datatype="PT_EDOS">
+		<Component Name="Processing ID" Usage="R" Datatype="ID" MinLength="1" MaxLength="1" Table="HL70103"/>
+		<Component Name="Processing Mode" Usage="O" Datatype="ID" MinLength="1" MaxLength="1" Table="0207"/>
+	</Field>
+	<!-- eDOS RFR -->
+	<Field Datatype="RFR_EDOS">
+		<Component Name="Numeric Range" Usage="R" Datatype="NR_EDOS" MinLength="1" MaxLength="33"/>
+		<Component Name="Administrative Sex" Usage="RE" Datatype="CWE_EDOS" MinLength="1" MaxLength="8" Table="HL70001"/>
+		<Component Name="Age Range" Usage="O" Datatype="NR" MinLength="1" MaxLength="33"/>
+		<Component Name="Gestational Age Range" Usage="O" Datatype="NR" MinLength="1" MaxLength="33"/>
+		<Component Name="Species" Usage="O" Datatype="ST" MinLength="1" MaxLength="20"/>
+		<Component Name="Race/subspecies" Usage="RE" Datatype="CWE_EDOS" MinLength="1" MaxLength="20" Table="HL70005"/>
+		<Component Name="Conditions" Usage="O" Datatype="TX" MinLength="1" MaxLength="199"/>
+	</Field>
+	<!-- eDOS TS_1 -->
+	<Field Datatype="TS_1">
+		<Component Name="Time" Usage="R" Datatype="DTM" MinLength="1" MaxLength="24">
+			<ConformanceStatement  Profile="Base" id="NIST-18" >
+				<EnglishDescription>TS_1 SHALL be precise to the second.</EnglishDescription>
+				<Assertion Description="Failed Assertion : Format : YYYYMMDDHHMMSS[.S[S[S[S]]]][+/-ZZZZ]">
+					<Regex location="." regex="\d{14}.*"/>
+				</Assertion>
+			</ConformanceStatement>
+		</Component>
+		<Component Name="Degree of Precision" Usage="X" Datatype="ID" MinLength="1" MaxLength="1" Table="0529"/>
+	</Field>
+	<!-- eDOS VID -->
+	<Field Datatype="VID_EDOS">
+        <Component Datatype="ID" MaxLength="5" MinLength="1" Name="Version ID" Table="eDOS_HL70104" Usage="R">
+          <ConformanceStatement Profile="Base" id="eDOS-5"> 
+            <EnglishDescription>VID.1 (Version Identifier) SHALL be valued with '2.5.1'.</EnglishDescription>  
+            <Assertion Description="Failed Assertion : VID.1='2.5.1'"> 
+              <PlainText location="." value="2.5.1"/> 
+            </Assertion> 
+          </ConformanceStatement>
+        </Component>
+        <Component Datatype="CE" MaxLength="483" MinLength="1" Name="Internationalization Code" Table="0399" Usage="O"/>
+        <Component Datatype="CE" MaxLength="483" MinLength="1" Name="International Version ID" Usage="O"/>
+      </Field>
+	<!-- eDOS XAD -->
+	<Field Datatype="XAD_EDOS">
+		<Component Name="Street Address" Usage="RE" Datatype="SAD" MinLength="1" MaxLength="184"/>
+		<Component Name="Other Designation" Usage="O" Datatype="ST" MinLength="1" MaxLength="120"/>
+		<Component Name="City" Usage="RE" Datatype="ST" MinLength="1" MaxLength="50"/>
+		<Component Name="State or Province" Usage="RE" Datatype="ST" MinLength="1" MaxLength="50" Table="USPS"/>
+		<Component Name="Zip or Postal Code" Usage="RE" Datatype="ST" MinLength="1" MaxLength="12"/>
+		<Component Name="Country" Usage="RE" Datatype="ID" MinLength="1" MaxLength="3" Table="HL70399"/>
+		<Component Name="Address Type" Usage="RE" Datatype="ID" MinLength="1" MaxLength="3" Table="HL70190"/>
+		<Component Name="Other Geographic Designation" Usage="O" Datatype="ST" MinLength="1" MaxLength="50"/>
+		<Component Name="County/Parish Code" Usage="O" Datatype="IS" MinLength="1" MaxLength="20"/>
+		<Component Name="Census Tract" Usage="O" Datatype="IS" MinLength="1" MaxLength="20" Table="0288"/>
+		<Component Name="Address Representation Code" Usage="O" Datatype="ID" MinLength="1" MaxLength="1" Table="0465"/>
+		<Component Name="Address Validity Range" Usage="X" Datatype="DR" MinLength="1" MaxLength="53"/>
+		<Component Name="Effective Date" Usage="O" Datatype="TS" MinLength="1" MaxLength="26"/>
+		<Component Name="Expiration Date" Usage="O" Datatype="TS" MinLength="1" MaxLength="26"/>
+	</Field>
+	<!-- HL7 v2.5.1 AD -->
+	<Field Datatype="AD">
+		<Component Name="Street Address" Usage="O" Datatype="ST" MinLength="1" MaxLength="120"/>
+		<Component Name="Other Designation" Usage="O" Datatype="ST" MinLength="1" MaxLength="120"/>
+		<Component Name="City" Usage="O" Datatype="ST" MinLength="1" MaxLength="50"/>
+		<Component Name="State or Province" Usage="O" Datatype="ST" MinLength="1" MaxLength="50"/>
+		<Component Name="Zip or Postal Code" Usage="O" Datatype="ST" MinLength="1" MaxLength="12"/>
+		<Component Name="Country" Usage="O" Datatype="ID" MinLength="1" MaxLength="3" Table="0399"/>
+		<Component Name="Address Type" Usage="O" Datatype="ID" MinLength="1" MaxLength="3" Table="0190"/>
+		<Component Name="Other Geographic Designation" Usage="O" Datatype="ST" MinLength="1" MaxLength="50"/>
+	</Field>
+	<!-- HL7 v2.5.1 AUI -->
+	<Field Datatype="AUI">
+		<Component Name="Authorization Number" Usage="O" Datatype="ST" MinLength="1" MaxLength="30"/>
+		<Component Name="Date" Usage="O" Datatype="DT" MinLength="1" MaxLength="8"/>
+		<Component Name="Source" Usage="O" Datatype="ST" MinLength="1" MaxLength="199"/>
+	</Field>
+	<!-- HL7 v2.5.1 CCD -->
+	<Field Datatype="CCD">
+		<Component Name="Invocation Event" Usage="R" Datatype="ID" MinLength="1" MaxLength="1" Table="0100"/>
+		<Component Name="Date/time" Usage="O" Datatype="TS" MinLength="1" MaxLength="26"/>
+	</Field>
+	<!-- HL7 v2.5.1 CCP -->
+	<Field Datatype="CCP">
+		<Component Name="Channel Calibration Sensitivity Correction Factor" Usage="O" Datatype="NM" MinLength="1" MaxLength="6"/>
+		<Component Name="Channel Calibration Baseline" Usage="O" Datatype="NM" MinLength="1" MaxLength="6"/>
+		<Component Name="Channel Calibration Time Skew" Usage="O" Datatype="NM" MinLength="1" MaxLength="6"/>
+	</Field>
+	<!-- HL7 v2.5.1 CD -->
+	<Field Datatype="CD">
+		<Component Name="Channel Identifier" Usage="O" Datatype="WVI" MinLength="1" MaxLength="22"/>
+		<Component Name="Waveform Source" Usage="O" Datatype="WVS" MinLength="1" MaxLength="17"/>
+		<Component Name="Channel Sensitivity/Units" Usage="O" Datatype="CSU" MinLength="1" MaxLength="478"/>
+		<Component Name="Channel Calibration Parameters" Usage="O" Datatype="CCP" MinLength="1" MaxLength="20"/>
+		<Component Name="Channel Sampling Frequency" Usage="O" Datatype="NM" MinLength="1" MaxLength="6"/>
+		<Component Name="Minimum/Maximum Data Values" Usage="O" Datatype="NR" MinLength="1" MaxLength="33"/>
+	</Field>
+	<!-- HL7 v2.5.1 CE -->
+	<Field Datatype="CE">
+		<Component Name="Identifier" Usage="O" Datatype="ST" MinLength="1" MaxLength="20"/>
+		<Component Name="Text" Usage="O" Datatype="ST" MinLength="1" MaxLength="199"/>
+		<Component Name="Name of Coding System" Usage="O" Datatype="ID" MinLength="1" MaxLength="20" Table="0396"/>
+		<Component Name="Alternate Identifier" Usage="O" Datatype="ST" MinLength="1" MaxLength="20"/>
+		<Component Name="Alternate Text" Usage="O" Datatype="ST" MinLength="1" MaxLength="199"/>
+		<Component Name="Name of Alternate Coding System" Usage="O" Datatype="ID" MinLength="1" MaxLength="20" Table="0396"/>
+	</Field>
+	<!-- HL7 v2.5.1 CF -->
+	<Field Datatype="CF">
+		<Component Name="Identifier" Usage="O" Datatype="ST" MinLength="1" MaxLength="20"/>
+		<Component Name="Formatted Text" Usage="O" Datatype="FT" MinLength="1" MaxLength="65536"/>
+		<Component Name="Name of Coding System" Usage="O" Datatype="ID" MinLength="1" MaxLength="20" Table="0396"/>
+		<Component Name="Alternate Identifier" Usage="O" Datatype="ST" MinLength="1" MaxLength="20"/>
+		<Component Name="Alternate Formatted Text" Usage="O" Datatype="FT" MinLength="1" MaxLength="65536"/>
+		<Component Name="Name of Alternate Coding System" Usage="O" Datatype="ID" MinLength="1" MaxLength="20" Table="0396"/>
+	</Field>
+	<!-- HL7 v2.5.1 CNE -->
+	<Field Datatype="CNE">
+		<Component Name="Identifier" Usage="R" Datatype="ST" MinLength="1" MaxLength="20"/>
+		<Component Name="Text" Usage="O" Datatype="ST" MinLength="1" MaxLength="199"/>
+		<Component Name="Name of Coding System" Usage="O" Datatype="ID" MinLength="1" MaxLength="20" Table="0396"/>
+		<Component Name="Alternate Identifier" Usage="O" Datatype="ST" MinLength="1" MaxLength="20"/>
+		<Component Name="Alternate Text" Usage="O" Datatype="ST" MinLength="1" MaxLength="199"/>
+		<Component Name="Name of Alternate Coding System" Usage="O" Datatype="ID" MinLength="1" MaxLength="20" Table="0396"/>
+		<Component Name="Coding System Version ID" Usage="C" Datatype="ST" MinLength="1" MaxLength="10"/>
+		<Component Name="Alternate Coding System Version ID" Usage="O" Datatype="ST" MinLength="1" MaxLength="10"/>
+		<Component Name="Original Text" Usage="O" Datatype="ST" MinLength="1" MaxLength="199"/>
+	</Field>
+	<!-- HL7 v2.5.1 CNN -->
+	<Field Datatype="CNN">
+		<Component Name="ID Number" Usage="O" Datatype="ST" MinLength="1" MaxLength="15"/>
+		<Component Name="Family Name" Usage="O" Datatype="ST" MinLength="1" MaxLength="50"/>
+		<Component Name="Given Name" Usage="O" Datatype="ST" MinLength="1" MaxLength="30"/>
+		<Component Name="Second and Further Given Names or Initials Thereof" Usage="O" Datatype="ST" MinLength="1" MaxLength="30"/>
+		<Component Name="Suffix (e.g., JR or III)" Usage="O" Datatype="ST" MinLength="1" MaxLength="20"/>
+		<Component Name="Prefix (e.g., DR)" Usage="O" Datatype="ST" MinLength="1" MaxLength="20"/>
+		<Component Name="Degree (e.g., MD" Usage="O" Datatype="IS" MinLength="1" MaxLength="5" Table="0360"/>
+		<Component Name="Source Table" Usage="C" Datatype="IS" MinLength="1" MaxLength="4" Table="0297"/>
+		<Component Name="Assigning Authority - Namespace ID" Usage="C" Datatype="IS" MinLength="1" MaxLength="20" Table="0363"/>
+		<Component Name="Assigning Authority - Universal ID" Usage="C" Datatype="ST" MinLength="1" MaxLength="199"/>
+		<Component Name="Assigning Authority - Universal ID Type" Usage="C" Datatype="ID" MinLength="1" MaxLength="6" Table="0301"/>
+	</Field>
+	<!-- HL7 v2.5.1 CP -->
+	<Field Datatype="CP">
+		<Component Name="Price" Usage="R" Datatype="MO" MinLength="1" MaxLength="20"/>
+		<Component Name="Price Type" Usage="O" Datatype="ID" MinLength="1" MaxLength="2" Table="0205"/>
+		<Component Name="From Value" Usage="O" Datatype="NM" MinLength="1" MaxLength="16"/>
+		<Component Name="To Value" Usage="O" Datatype="NM" MinLength="1" MaxLength="16"/>
+		<Component Name="Range Units" Usage="O" Datatype="CE" MinLength="1" MaxLength="483"/>
+		<Component Name="Range Type" Usage="O" Datatype="ID" MinLength="1" MaxLength="1" Table="0298"/>
+	</Field>
+	<!-- HL7 v2.5.1 CQ -->
+	<Field Datatype="CQ">
+		<Component Name="Quantity" Usage="O" Datatype="NM" MinLength="1" MaxLength="16"/>
+		<Component Name="Units" Usage="O" Datatype="CE" MinLength="1" MaxLength="483"/>
+	</Field>
+	<!-- HL7 v2.5.1 CSU -->
+	<Field Datatype="CSU">
+		<Component Name="Channel Sensitivity" Usage="R" Datatype="NM" MinLength="1" MaxLength="60"/>
+		<Component Name="Unit of Measure Identifier" Usage="C" Datatype="ST" MinLength="1" MaxLength="20"/>
+		<Component Name="Unit of Measure Description" Usage="C" Datatype="ST" MinLength="1" MaxLength="199"/>
+		<Component Name="Unit of Measure Coding System" Usage="C" Datatype="ID" MinLength="1" MaxLength="20" Table="0396"/>
+		<Component Name="Alternate Unit of Measure Identifier" Usage="O" Datatype="ST" MinLength="1" MaxLength="20"/>
+		<Component Name="Alternate Unit of Measure Description" Usage="O" Datatype="ST" MinLength="1" MaxLength="199"/>
+		<Component Name="Alternate Unit of Measure Coding System" Usage="O" Datatype="ID" MinLength="1" MaxLength="20" Table="0396"/>
+	</Field>
+	<!-- HL7 v2.5.1 CWE -->
+	<Field Datatype="CWE">
+		<Component Name="Identifier" Usage="O" Datatype="ST" MinLength="1" MaxLength="20"/>
+		<Component Name="Text" Usage="O" Datatype="ST" MinLength="1" MaxLength="199"/>
+		<Component Name="Name of Coding System" Usage="O" Datatype="ID" MinLength="1" MaxLength="20" Table="0396"/>
+		<Component Name="Alternate Identifier" Usage="O" Datatype="ST" MinLength="1" MaxLength="20"/>
+		<Component Name="Alternate Text" Usage="O" Datatype="ST" MinLength="1" MaxLength="199"/>
+		<Component Name="Name of Alternate Coding System" Usage="O" Datatype="ID" MinLength="1" MaxLength="20" Table="0396"/>
+		<Component Name="Coding System Version ID" Usage="C" Datatype="ST" MinLength="1" MaxLength="10"/>
+		<Component Name="Alternate Coding System Version ID" Usage="O" Datatype="ST" MinLength="1" MaxLength="10"/>
+		<Component Name="Original Text" Usage="O" Datatype="ST" MinLength="1" MaxLength="199"/>
+	</Field>
+	<!-- HL7 v2.5.1 CX -->
+	<Field Datatype="CX">
+		<Component Name="ID Number" Usage="R" Datatype="ST" MinLength="1" MaxLength="15"/>
+		<Component Name="Check Digit" Usage="O" Datatype="ST" MinLength="1" MaxLength="1"/>
+		<Component Name="Check Digit Scheme" Usage="O" Datatype="ID" MinLength="1" MaxLength="3" Table="0061"/>
+		<Component Name="Assigning Authority" Usage="O" Datatype="HD" MinLength="1" MaxLength="227" Table="0363"/>
+		<Component Name="Identifier Type Code" Usage="O" Datatype="ID" MinLength="1" MaxLength="5" Table="0203"/>
+		<Component Name="Assigning Facility" Usage="O" Datatype="HD" MinLength="1" MaxLength="227"/>
+		<Component Name="Effective Date" Usage="O" Datatype="DT" MinLength="1" MaxLength="8"/>
+		<Component Name="Expiration Date" Usage="O" Datatype="DT" MinLength="1" MaxLength="8"/>
+		<Component Name="Assigning Jurisdiction" Usage="O" Datatype="CWE" MinLength="1" MaxLength="705"/>
+		<Component Name="Assigning Agency or Department" Usage="O" Datatype="CWE" MinLength="1" MaxLength="705"/>
+	</Field>
+	<!-- HL7 v2.5.1 DDI -->
+	<Field Datatype="DDI">
+		<Component Name="Delay Days" Usage="O" Datatype="NM" MinLength="1" MaxLength="3"/>
+		<Component Name="Monetary Amount" Usage="R" Datatype="MO" MinLength="1" MaxLength="16"/>
+		<Component Name="Number of Days" Usage="O" Datatype="NM" MinLength="1" MaxLength="4"/>
+	</Field>
+	<!-- HL7 v2.5.1 DIN -->
+	<Field Datatype="DIN">
+		<Component Name="Date" Usage="R" Datatype="TS" MinLength="1" MaxLength="26"/>
+		<Component Name="Institution Name" Usage="R" Datatype="CE" MinLength="1" MaxLength="483" Table="0531"/>
+	</Field>
+	<!-- HL7 v2.5.1 DLD -->
+	<Field Datatype="DLD">
+		<Component Name="Discharge Location" Usage="R" Datatype="IS" MinLength="1" MaxLength="20" Table="0113"/>
+		<Component Name="Effective Date" Usage="O" Datatype="TS" MinLength="1" MaxLength="26"/>
+	</Field>
+	<!-- HL7 v2.5.1 DLN -->
+	<Field Datatype="DLN">
+		<Component Name="License Number" Usage="R" Datatype="ST" MinLength="1" MaxLength="20"/>
+		<Component Name="Issuing State, Province, Country" Usage="O" Datatype="IS" MinLength="1" MaxLength="20" Table="0333"/>
+		<Component Name="Expiration Date" Usage="O" Datatype="DT" MinLength="1" MaxLength="24"/>
+	</Field>
+	<!-- HL7 v2.5.1 DLT -->
+	<Field Datatype="DLT">
+		<Component Name="Normal Range" Usage="O" Datatype="NR" MinLength="1" MaxLength="33"/>
+		<Component Name="Numeric Threshold" Usage="O" Datatype="NM" MinLength="1" MaxLength="4"/>
+		<Component Name="Change Computation" Usage="O" Datatype="ID" MinLength="1" MaxLength="1" Table="0523"/>
+		<Component Name="Days Retained" Usage="O" Datatype="NM" MinLength="1" MaxLength="4"/>
+	</Field>
+	<!-- HL7 v2.5.1 DR -->
+	<Field Datatype="DR">
+		<Component Name="Range Start Date/Time" Usage="O" Datatype="TS" MinLength="1" MaxLength="26"/>
+		<Component Name="Range End Date/Time" Usage="O" Datatype="TS" MinLength="1" MaxLength="26"/>
+	</Field>
+	<!-- HL7 v2.5.1 DT -->
+	<Field Datatype="DT"/>
+	<!-- HL7 v2.5.1 DTM -->
+	<Field Datatype="DTM"/>
+	<!-- HL7 v2.5.1 DTN -->
+	<Field Datatype="DTN">
+		<Component Name="Day Type" Usage="R" Datatype="IS" MinLength="1" MaxLength="2" Table="0149"/>
+		<Component Name="Number of Days" Usage="R" Datatype="NM" MinLength="1" MaxLength="3"/>
+	</Field>
+	<!-- HL7 v2.5.1 ED -->
+	<Field Datatype="ED">
+		<Component Name="Source Application" Usage="O" Datatype="HD" MinLength="1" MaxLength="227"/>
+		<Component Name="Type of Data" Usage="R" Datatype="ID" MinLength="1" MaxLength="9" Table="0191"/>
+		<Component Name="Data Subtype" Usage="O" Datatype="ID" MinLength="1" MaxLength="18" Table="0291"/>
+		<Component Name="Encoding" Usage="R" Datatype="ID" MinLength="1" MaxLength="6" Table="0299"/>
+		<Component Name="Data" Usage="R" Datatype="TX" MinLength="1" MaxLength="65536"/>
+	</Field>
+	<!-- HL7 v2.5.1 EI -->
+	<Field Datatype="EI">
+		<Component Name="Entity Identifier" Usage="O" Datatype="ST" MinLength="1" MaxLength="199"/>
+		<Component Name="Namespace ID" Usage="O" Datatype="IS" MinLength="1" MaxLength="20" Table="0363"/>
+		<Component Name="Universal ID" Usage="C" Datatype="ST" MinLength="1" MaxLength="199"/>
+		<Component Name="Universal ID Type" Usage="C" Datatype="ID" MinLength="1" MaxLength="6" Table="0301"/>
+	</Field>
+	<!-- HL7 v2.5.1 EIP -->
+	<Field Datatype="EIP">
+		<Component Name="Placer Assigned Identifier" Usage="O" Datatype="EI" MinLength="1" MaxLength="427"/>
+		<Component Name="Filler Assigned Identifier" Usage="O" Datatype="EI" MinLength="1" MaxLength="427"/>
+	</Field>
+	<!-- HL7 v2.5.1 ELD -->
+	<Field Datatype="ELD">
+		<Component Name="Segment ID" Usage="O" Datatype="ST" MinLength="1" MaxLength="3"/>
+		<Component Name="Segment Sequence" Usage="O" Datatype="NM" MinLength="1" MaxLength="2"/>
+		<Component Name="Field Position" Usage="O" Datatype="NM" MinLength="1" MaxLength="2"/>
+		<Component Name="Code Identifying Error" Usage="O" Datatype="CE" MinLength="1" MaxLength="483" Table="0357"/>
+	</Field>
+	<!-- HL7 v2.5.1 ERL -->
+	<Field Datatype="ERL">
+		<Component Name="Segment ID" Usage="R" Datatype="ST" MinLength="1" MaxLength="3"/>
+		<Component Name="Segment Sequence" Usage="R" Datatype="NM" MinLength="1" MaxLength="2"/>
+		<Component Name="Field Position" Usage="O" Datatype="NM" MinLength="1" MaxLength="2"/>
+		<Component Name="Field Repetition" Usage="O" Datatype="NM" MinLength="1" MaxLength="2"/>
+		<Component Name="Component Number" Usage="O" Datatype="NM" MinLength="1" MaxLength="2"/>
+		<Component Name="Sub-Component Number" Usage="O" Datatype="NM" MinLength="1" MaxLength="2"/>
+	</Field>
+	<!-- HL7 v2.5.1 FC -->
+	<Field Datatype="FC">
+		<Component Name="Financial Class Code" Usage="R" Datatype="IS" MinLength="1" MaxLength="20" Table="0064"/>
+		<Component Name="Effective Date" Usage="O" Datatype="TS" MinLength="1" MaxLength="26"/>
+	</Field>
+	<!-- HL7 v2.5.1 FN -->
+	<Field Datatype="FN">
+		<Component Name="Surname" Usage="R" Datatype="ST" MinLength="1" MaxLength="50"/>
+		<Component Name="Own Surname Prefix" Usage="O" Datatype="ST" MinLength="1" MaxLength="20"/>
+		<Component Name="Own Surname" Usage="O" Datatype="ST" MinLength="1" MaxLength="50"/>
+		<Component Name="Surname Prefix From Partner/Spouse" Usage="O" Datatype="ST" MinLength="1" MaxLength="20"/>
+		<Component Name="Surname From Partner/Spouse" Usage="O" Datatype="ST" MinLength="1" MaxLength="50"/>
+	</Field>
+	<!-- HL7 v2.5.1 FT -->
+	<Field Datatype="FT"/>
+	<!-- HL7 v2.5.1 GTS -->
+	<Field Datatype="GTS"/>
+	<!-- HL7 v2.5.1 HD -->
+	<Field Datatype="HD">
+		<Component Name="Namespace ID" Usage="O" Datatype="IS" MinLength="1" MaxLength="20" Table="0300"/>
+		<Component Name="Universal ID" Usage="C" Datatype="ST" MinLength="1" MaxLength="199"/>
+		<Component Name="Universal ID Type" Usage="C" Datatype="ID" MinLength="1" MaxLength="6" Table="0301"/>
+	</Field>
+	<!-- HL7 v2.5.1 ICD -->
+	<Field Datatype="ICD">
+		<Component Name="Certification Patient Type" Usage="O" Datatype="IS" MinLength="1" MaxLength="11" Table="0150"/>
+		<Component Name="Certification Required" Usage="R" Datatype="ID" MinLength="1" MaxLength="1" Table="0136"/>
+		<Component Name="Date/Time Certification Required" Usage="O" Datatype="TS" MinLength="1" MaxLength="26"/>
+	</Field>
+	<!-- HL7 v2.5.1 ID -->
+	<Field Datatype="ID"/>
+	<!-- HL7 v2.5.1 IS -->
+	<Field Datatype="IS"/>
+	<!-- HL7 v2.5.1 JCC -->
+	<Field Datatype="JCC">
+		<Component Name="Job Code" Usage="O" Datatype="IS" MinLength="1" MaxLength="20" Table="0327"/>
+		<Component Name="Job Class" Usage="O" Datatype="IS" MinLength="1" MaxLength="20" Table="0328"/>
+		<Component Name="Job Description Text" Usage="O" Datatype="TX" MinLength="1" MaxLength="250"/>
+	</Field>
+	<!-- HL7 v2.5.1 LA1 -->
+	<Field Datatype="LA1">
+		<Component Name="Point of Care" Usage="O" Datatype="IS" MinLength="1" MaxLength="20" Table="0302"/>
+		<Component Name="Room" Usage="O" Datatype="IS" MinLength="1" MaxLength="20" Table="0303"/>
+		<Component Name="Bed" Usage="O" Datatype="IS" MinLength="1" MaxLength="20" Table="0304"/>
+		<Component Name="Facility" Usage="O" Datatype="HD" MinLength="1" MaxLength="227"/>
+		<Component Name="Location Status" Usage="O" Datatype="IS" MinLength="1" MaxLength="20" Table="0306"/>
+		<Component Name="Patient Location Type" Usage="O" Datatype="IS" MinLength="1" MaxLength="20" Table="0305"/>
+		<Component Name="Building" Usage="O" Datatype="IS" MinLength="1" MaxLength="20" Table="0307"/>
+		<Component Name="Floor" Usage="O" Datatype="IS" MinLength="1" MaxLength="20" Table="0308"/>
+		<Component Name="Address" Usage="O" Datatype="AD" MinLength="1" MaxLength="415"/>
+	</Field>
+	<!-- HL7 v2.5.1 LA2 -->
+	<Field Datatype="LA2">
+		<Component Name="Point of Care" Usage="O" Datatype="IS" MinLength="1" MaxLength="20" Table="0302"/>
+		<Component Name="Room" Usage="O" Datatype="IS" MinLength="1" MaxLength="20" Table="0303"/>
+		<Component Name="Bed" Usage="O" Datatype="IS" MinLength="1" MaxLength="20" Table="0304"/>
+		<Component Name="Facility" Usage="O" Datatype="HD" MinLength="1" MaxLength="227"/>
+		<Component Name="Location Status" Usage="O" Datatype="IS" MinLength="1" MaxLength="20" Table="0306"/>
+		<Component Name="Patient Location Type" Usage="O" Datatype="IS" MinLength="1" MaxLength="20" Table="0305"/>
+		<Component Name="Building" Usage="O" Datatype="IS" MinLength="1" MaxLength="20" Table="0307"/>
+		<Component Name="Floor" Usage="O" Datatype="IS" MinLength="1" MaxLength="20" Table="0308"/>
+		<Component Name="Street Address" Usage="O" Datatype="ST" MinLength="1" MaxLength="120"/>
+		<Component Name="Other Designation" Usage="O" Datatype="ST" MinLength="1" MaxLength="120"/>
+		<Component Name="City" Usage="O" Datatype="ST" MinLength="1" MaxLength="50"/>
+		<Component Name="State or Province" Usage="O" Datatype="ST" MinLength="1" MaxLength="50"/>
+		<Component Name="Zip or Postal Code" Usage="O" Datatype="ST" MinLength="1" MaxLength="12"/>
+		<Component Name="Country" Usage="O" Datatype="ID" MinLength="1" MaxLength="3" Table="0399"/>
+		<Component Name="Address Type" Usage="O" Datatype="ID" MinLength="1" MaxLength="3" Table="0190"/>
+		<Component Name="Other Geographic Designation" Usage="O" Datatype="ST" MinLength="1" MaxLength="50"/>
+	</Field>
+	<!-- HL7 v2.5.1 MA -->
+	<Field Datatype="MA">
+		<Component Name="Sample 1 From Channel 1" Usage="O" Datatype="NM" MinLength="1" MaxLength="16"/>
+		<Component Name="Sample 1 From Channel 2" Usage="O" Datatype="NM" MinLength="1" MaxLength="16"/>
+		<Component Name="Sample 1 From Channel N" Usage="O" Datatype="NM" MinLength="1" MaxLength="16"/>
+		<Component Name="Sample 2 From Channel 1" Usage="O" Datatype="NM" MinLength="1" MaxLength="16"/>
+		<Component Name="Sample 2 From Channel N" Usage="O" Datatype="NM" MinLength="1" MaxLength="16"/>
+		<Component Name="Sample N From Channel N" Usage="O" Datatype="NM" MinLength="1" MaxLength="16"/>
+	</Field>
+	<!-- HL7 v2.5.1 MO -->
+	<Field Datatype="MO">
+		<Component Name="Quantity" Usage="O" Datatype="NM" MinLength="1" MaxLength="16"/>
+		<Component Name="Denomination" Usage="O" Datatype="ID" MinLength="1" MaxLength="3"/>
+	</Field>
+	<!-- HL7 v2.5.1 MOC -->
+	<Field Datatype="MOC">
+		<Component Name="Monetary Amount" Usage="O" Datatype="MO" MinLength="1" MaxLength="20"/>
+		<Component Name="Charge Code" Usage="O" Datatype="CE" MinLength="1" MaxLength="483"/>
+	</Field>
+	<!-- HL7 v2.5.1 MOP -->
+	<Field Datatype="MOP">
+		<Component Name="Money or Percentage Indicator" Usage="R" Datatype="ID" MinLength="1" MaxLength="2" Table="0148"/>
+		<Component Name="Money or Percentage Quantity" Usage="R" Datatype="NM" MinLength="1" MaxLength="16"/>
+		<Component Name="Currency Denomination" Usage="O" Datatype="ID" MinLength="1" MaxLength="3"/>
+	</Field>
+	<!-- HL7 v2.5.1 MSG -->
+	<Field Datatype="MSG">
+		<Component Name="Message Code" Usage="R" Datatype="ID" MinLength="1" MaxLength="3" Table="0076"/>
+		<Component Name="Trigger Event" Usage="R" Datatype="ID" MinLength="1" MaxLength="3" Table="0003"/>
+		<Component Name="Message Structure" Usage="R" Datatype="ID" MinLength="1" MaxLength="7" Table="0354"/>
+	</Field>
+	<!-- HL7 v2.5.1 NA -->
+	<Field Datatype="NA">
+		<Component Name="Value1" Usage="R" Datatype="NM" MinLength="1" MaxLength="16"/>
+		<Component Name="Value2" Usage="O" Datatype="NM" MinLength="1" MaxLength="16"/>
+		<Component Name="Value3" Usage="O" Datatype="NM" MinLength="1" MaxLength="16"/>
+		<Component Name="Value4" Usage="O" Datatype="NM" MinLength="1" MaxLength="16"/>
+	</Field>
+	<!-- HL7 v2.5.1 NDL -->
+	<Field Datatype="NDL">
+		<Component Name="Name" Usage="O" Datatype="CNN" MinLength="1" MaxLength="406"/>
+		<Component Name="Start Date/time" Usage="O" Datatype="TS" MinLength="1" MaxLength="26"/>
+		<Component Name="End Date/time" Usage="O" Datatype="TS" MinLength="1" MaxLength="26"/>
+		<Component Name="Point of Care" Usage="O" Datatype="IS" MinLength="1" MaxLength="20" Table="0302"/>
+		<Component Name="Room" Usage="O" Datatype="IS" MinLength="1" MaxLength="20" Table="0303"/>
+		<Component Name="Bed" Usage="O" Datatype="IS" MinLength="1" MaxLength="20" Table="0304"/>
+		<Component Name="Facility" Usage="O" Datatype="HD" MinLength="1" MaxLength="227"/>
+		<Component Name="Location Status" Usage="O" Datatype="IS" MinLength="1" MaxLength="20" Table="0306"/>
+		<Component Name="Patient Location Type" Usage="O" Datatype="IS" MinLength="1" MaxLength="20" Table="0305"/>
+		<Component Name="Building" Usage="O" Datatype="IS" MinLength="1" MaxLength="20" Table="0307"/>
+		<Component Name="Floor" Usage="O" Datatype="IS" MinLength="1" MaxLength="20" Table="0308"/>
+	</Field>
+	<!-- HL7 v2.5.1 NM -->
+	<Field Datatype="NM"/>
+	<!-- HL7 v2.5.1 NR -->
+	<Field Datatype="NR">
+		<Component Name="Low Value" Usage="O" Datatype="NM" MinLength="1" MaxLength="16"/>
+		<Component Name="High Value" Usage="O" Datatype="NM" MinLength="1" MaxLength="16"/>
+	</Field>
+	<!-- HL7 v2.5.1 NUL -->
+	<Field Datatype="NUL"/>
+	<!-- HL7 v2.5.1 OCD -->
+	<Field Datatype="OCD">
+		<Component Name="Occurrence Code" Usage="R" Datatype="CNE" MinLength="1" MaxLength="705" Table="0350"/>
+		<Component Name="Occurrence Date" Usage="R" Datatype="DT" MinLength="1" MaxLength="8"/>
+	</Field>
+	<!-- HL7 v2.5.1 OSD -->
+	<Field Datatype="OSD">
+		<Component Name="Sequence/Results Flag" Usage="R" Datatype="ID" MinLength="1" MaxLength="1" Table="0524"/>
+		<Component Name="Placer Order Number: Entity Identifier" Usage="R" Datatype="ST" MinLength="1" MaxLength="15"/>
+		<Component Name="Placer Order Number: Namespace ID" Usage="O" Datatype="IS" MinLength="1" MaxLength="6" Table="0363"/>
+		<Component Name="Filler Order Number: Entity Identifier" Usage="R" Datatype="ST" MinLength="1" MaxLength="15"/>
+		<Component Name="Filler Order Number: Namespace ID" Usage="O" Datatype="IS" MinLength="1" MaxLength="6" Table="0363"/>
+		<Component Name="Sequence Condition Value" Usage="O" Datatype="ST" MinLength="1" MaxLength="12"/>
+		<Component Name="Maximum Number of Repeats" Usage="O" Datatype="NM" MinLength="1" MaxLength="3"/>
+		<Component Name="Placer Order Number: Universal ID" Usage="R" Datatype="ST" MinLength="1" MaxLength="15"/>
+		<Component Name="Placer Order Number: Universal ID Type" Usage="O" Datatype="ID" MinLength="1" MaxLength="6" Table="0301"/>
+		<Component Name="Filler Order Number: Universal ID" Usage="R" Datatype="ST" MinLength="1" MaxLength="15"/>
+		<Component Name="Filler Order Number: Universal ID Type" Usage="O" Datatype="ID" MinLength="1" MaxLength="6" Table="0301"/>
+	</Field>
+	<!-- HL7 v2.5.1 OSP -->
+	<Field Datatype="OSP">
+		<Component Name="Occurrence Span Code" Usage="R" Datatype="CNE" MinLength="1" MaxLength="705" Table="0351"/>
+		<Component Name="Occurrence Span Start Date" Usage="C" Datatype="DT" MinLength="1" MaxLength="8"/>
+		<Component Name="Occurrence Span Stop Date" Usage="C" Datatype="DT" MinLength="1" MaxLength="8"/>
+	</Field>
+	<!-- HL7 v2.5.1 PIP -->
+	<Field Datatype="PIP">
+		<Component Name="Privilege" Usage="R" Datatype="CE" MinLength="1" MaxLength="483" Table="0525"/>
+		<Component Name="Privilege Class" Usage="O" Datatype="CE" MinLength="1" MaxLength="483" Table="0526"/>
+		<Component Name="Expiration Date" Usage="O" Datatype="DT" MinLength="1" MaxLength="8"/>
+		<Component Name="Activation Date" Usage="O" Datatype="DT" MinLength="1" MaxLength="8"/>
+		<Component Name="Facility" Usage="O" Datatype="EI" MinLength="1" MaxLength="427"/>
+	</Field>
+	<!-- HL7 v2.5.1 PL -->
+	<Field Datatype="PL">
+		<Component Name="Point of Care" Usage="O" Datatype="IS" MinLength="1" MaxLength="20" Table="0302"/>
+		<Component Name="Room" Usage="O" Datatype="IS" MinLength="1" MaxLength="20" Table="0303"/>
+		<Component Name="Bed" Usage="O" Datatype="IS" MinLength="1" MaxLength="20" Table="0304"/>
+		<Component Name="Facility" Usage="O" Datatype="HD" MinLength="1" MaxLength="227"/>
+		<Component Name="Location Status" Usage="O" Datatype="IS" MinLength="1" MaxLength="20" Table="0306"/>
+		<Component Name="Person Location Type" Usage="C" Datatype="IS" MinLength="1" MaxLength="20" Table="0305"/>
+		<Component Name="Building" Usage="O" Datatype="IS" MinLength="1" MaxLength="20" Table="0307"/>
+		<Component Name="Floor" Usage="O" Datatype="IS" MinLength="1" MaxLength="20" Table="0308"/>
+		<Component Name="Location Description" Usage="O" Datatype="ST" MinLength="1" MaxLength="199"/>
+		<Component Name="Comprehensive Location Identifier" Usage="O" Datatype="EI" MinLength="1" MaxLength="427"/>
+		<Component Name="Assigning Authority for Location" Usage="O" Datatype="HD" MinLength="1" MaxLength="227"/>
+	</Field>
+	<!-- HL7 v2.5.1 PLN -->
+	<Field Datatype="PLN">
+		<Component Name="ID Number" Usage="R" Datatype="ST" MinLength="1" MaxLength="20"/>
+		<Component Name="Type of ID Number" Usage="R" Datatype="IS" MinLength="1" MaxLength="8" Table="0338"/>
+		<Component Name="State/other Qualifying Information" Usage="O" Datatype="ST" MinLength="1" MaxLength="62"/>
+		<Component Name="Expiration Date" Usage="O" Datatype="DT" MinLength="1" MaxLength="8"/>
+	</Field>
+	<!-- HL7 v2.5.1 PPN -->
+	<Field Datatype="PPN">
+		<Component Name="ID Number" Usage="O" Datatype="ST" MinLength="1" MaxLength="15"/>
+		<Component Name="Family Name" Usage="O" Datatype="FN" MinLength="1" MaxLength="194"/>
+		<Component Name="Given Name" Usage="O" Datatype="ST" MinLength="1" MaxLength="30"/>
+		<Component Name="Second and Further Given Names or Initials Thereof" Usage="O" Datatype="ST" MinLength="1" MaxLength="30"/>
+		<Component Name="Suffix (e.g., JR or III)" Usage="O" Datatype="ST" MinLength="1" MaxLength="20"/>
+		<Component Name="Prefix (e.g., DR)" Usage="O" Datatype="ST" MinLength="1" MaxLength="20"/>
+		<Component Name="Degree (e.g., MD)" Usage="B" Datatype="IS" MinLength="1" MaxLength="5" Table="0360"/>
+		<Component Name="Source Table" Usage="C" Datatype="IS" MinLength="1" MaxLength="4" Table="0297"/>
+		<Component Name="Assigning Authority" Usage="O" Datatype="HD" MinLength="1" MaxLength="227" Table="0363"/>
+		<Component Name="Name Type Code" Usage="O" Datatype="ID" MinLength="1" MaxLength="1" Table="0200"/>
+		<Component Name="Identifier Check Digit" Usage="O" Datatype="ST" MinLength="1" MaxLength="1"/>
+		<Component Name="Check Digit Scheme" Usage="C" Datatype="ID" MinLength="1" MaxLength="3" Table="0061"/>
+		<Component Name="Identifier Type Code" Usage="O" Datatype="ID" MinLength="1" MaxLength="5" Table="0203"/>
+		<Component Name="Assigning Facility" Usage="O" Datatype="HD" MinLength="1" MaxLength="227"/>
+		<Component Name="Date/Time Action Performed" Usage="O" Datatype="TS" MinLength="1" MaxLength="26"/>
+		<Component Name="Name Representation Code" Usage="O" Datatype="ID" MinLength="1" MaxLength="1" Table="0465"/>
+		<Component Name="Name Context" Usage="O" Datatype="CE" MinLength="1" MaxLength="483" Table="0448"/>
+		<Component Name="Name Validity Range" Usage="B" Datatype="DR" MinLength="1" MaxLength="17"/>
+		<Component Name="Name Assembly Order" Usage="O" Datatype="ID" MinLength="1" MaxLength="1" Table="0444"/>
+		<Component Name="Effective Date" Usage="O" Datatype="TS" MinLength="1" MaxLength="26"/>
+		<Component Name="Expiration Date" Usage="O" Datatype="TS" MinLength="1" MaxLength="26"/>
+		<Component Name="Professional Suffix" Usage="O" Datatype="ST" MinLength="1" MaxLength="199"/>
+		<Component Name="Assigning Jurisdiction" Usage="O" Datatype="CWE" MinLength="1" MaxLength="705"/>
+		<Component Name="Assigning Agency or Department" Usage="O" Datatype="CWE" MinLength="1" MaxLength="705"/>
+	</Field>
+	<!-- HL7 v2.5.1 PRL -->
+	<Field Datatype="PRL">
+		<Component Name="Parent Observation Identifier" Usage="R" Datatype="CE" MinLength="1" MaxLength="483"/>
+		<Component Name="Parent Observation Sub-identifier" Usage="O" Datatype="ST" MinLength="1" MaxLength="20"/>
+		<Component Name="Parent Observation Value Descriptor" Usage="O" Datatype="TX" MinLength="1" MaxLength="250"/>
+	</Field>
+	<!-- HL7 v2.5.1 PT -->
+	<Field Datatype="PT">
+		<Component Name="Processing ID" Usage="O" Datatype="ID" MinLength="1" MaxLength="1" Table="0103"/>
+		<Component Name="Processing Mode" Usage="O" Datatype="ID" MinLength="1" MaxLength="1" Table="0207"/>
+	</Field>
+	<!-- HL7 v2.5.1 PTA -->
+	<Field Datatype="PTA">
+		<Component Name="Policy Type" Usage="R" Datatype="IS" MinLength="1" MaxLength="5" Table="0147"/>
+		<Component Name="Amount Class" Usage="O" Datatype="IS" MinLength="1" MaxLength="9" Table="0193"/>
+		<Component Name="Money or Percentage Quantity" Usage="B" Datatype="NM" MinLength="1" MaxLength="16"/>
+		<Component Name="Money or Percentage" Usage="R" Datatype="MOP" MinLength="1" MaxLength="23"/>
+	</Field>
+	<!-- HL7 v2.5.1 QIP -->
+	<Field Datatype="QIP">
+		<Component Name="Segment Field Datatype" Usage="R" Datatype="ST" MinLength="1" MaxLength="12"/>
+		<Component Name="Values" Usage="R" Datatype="ST" MinLength="1" MaxLength="199"/>
+	</Field>
+	<!-- HL7 v2.5.1 QSC -->
+	<Field Datatype="QSC">
+		<Component Name="Segment Field Datatype" Usage="R" Datatype="ST" MinLength="1" MaxLength="12"/>
+		<Component Name="Relational Operator" Usage="O" Datatype="ID" MinLength="1" MaxLength="2" Table="0209"/>
+		<Component Name="Value" Usage="O" Datatype="ST" MinLength="1" MaxLength="199"/>
+		<Component Name="Relational Conjunction" Usage="O" Datatype="ID" MinLength="1" MaxLength="3" Table="0210"/>
+	</Field>
+	<!-- HL7 v2.5.1 RCD -->
+	<Field Datatype="RCD">
+		<Component Name="Segment Field Datatype" Usage="O" Datatype="ST" MinLength="1" MaxLength="12"/>
+		<Component Name="HL7 Data Type" Usage="O" Datatype="ID" MinLength="1" MaxLength="3" Table="0440"/>
+		<Component Name="Maximum Column Width" Usage="O" Datatype="NM" MinLength="1" MaxLength="2"/>
+	</Field>
+	<!-- HL7 v2.5.1 RFR -->
+	<Field Datatype="RFR">
+		<Component Name="Numeric Range" Usage="R" Datatype="NR" MinLength="1" MaxLength="33"/>
+		<Component Name="Administrative Sex" Usage="O" Datatype="IS" MinLength="1" MaxLength="8" Table="0001"/>
+		<Component Name="Age Range" Usage="O" Datatype="NR" MinLength="1" MaxLength="33"/>
+		<Component Name="Gestational Age Range" Usage="O" Datatype="NR" MinLength="1" MaxLength="33"/>
+		<Component Name="Species" Usage="O" Datatype="ST" MinLength="1" MaxLength="20"/>
+		<Component Name="Race/subspecies" Usage="O" Datatype="ST" MinLength="1" MaxLength="20"/>
+		<Component Name="Conditions" Usage="O" Datatype="TX" MinLength="1" MaxLength="199"/>
+	</Field>
+	<!-- HL7 v2.5.1 RI -->
+	<Field Datatype="RI">
+		<Component Name="Repeat Pattern" Usage="O" Datatype="IS" MinLength="1" MaxLength="6" Table="0335"/>
+		<Component Name="Explicit Time Interval" Usage="O" Datatype="ST" MinLength="1" MaxLength="199"/>
+	</Field>
+	<!-- HL7 v2.5.1 RMC -->
+	<Field Datatype="RMC">
+		<Component Name="Room Type" Usage="R" Datatype="IS" MinLength="1" MaxLength="20" Table="0145"/>
+		<Component Name="Amount Type" Usage="O" Datatype="IS" MinLength="1" MaxLength="20" Table="0146"/>
+		<Component Name="Coverage Amount" Usage="B" Datatype="NM" MinLength="1" MaxLength="16"/>
+		<Component Name="Money or Percentage" Usage="R" Datatype="MOP" MinLength="1" MaxLength="23"/>
+	</Field>
+	<!-- HL7 v2.5.1 RP -->
+	<Field Datatype="RP">
+		<Component Name="Pointer" Usage="O" Datatype="ST" MinLength="1" MaxLength="15"/>
+		<Component Name="Application ID" Usage="O" Datatype="HD" MinLength="1" MaxLength="227"/>
+		<Component Name="Type of Data" Usage="O" Datatype="ID" MinLength="1" MaxLength="9" Table="0191"/>
+		<Component Name="Subtype" Usage="O" Datatype="ID" MinLength="1" MaxLength="19" Table="0291"/>
+	</Field>
+	<!-- HL7 v2.5.1 RPT -->
+	<Field Datatype="RPT">
+		<Component Name="Repeat Pattern Code" Usage="R" Datatype="CWE" MinLength="1" MaxLength="705" Table="0335"/>
+		<Component Name="Calendar Alignment" Usage="O" Datatype="ID" MinLength="1" MaxLength="2" Table="0527"/>
+		<Component Name="Phase Range Begin Value" Usage="O" Datatype="NM" MinLength="1" MaxLength="10"/>
+		<Component Name="Phase Range End Value" Usage="O" Datatype="NM" MinLength="1" MaxLength="10"/>
+		<Component Name="Period Quantity" Usage="O" Datatype="NM" MinLength="1" MaxLength="10"/>
+		<Component Name="Period Units" Usage="C" Datatype="IS" MinLength="1" MaxLength="10"/>
+		<Component Name="Institution Specified Time" Usage="O" Datatype="ID" MinLength="1" MaxLength="1" Table="0136"/>
+		<Component Name="Event" Usage="O" Datatype="ID" MinLength="1" MaxLength="6" Table="0528"/>
+		<Component Name="Event Offset Quantity" Usage="O" Datatype="NM" MinLength="1" MaxLength="10"/>
+		<Component Name="Event Offset Units" Usage="C" Datatype="IS" MinLength="1" MaxLength="10"/>
+		<Component Name="General Timing Specification" Usage="O" Datatype="GTS" MinLength="1" MaxLength="200"/>
+	</Field>
+	<!-- HL7 v2.5.1 SAD -->
+	<Field Datatype="SAD">
+		<Component Name="Street or Mailing Address" Usage="O" Datatype="ST" MinLength="1" MaxLength="120"/>
+		<Component Name="Street Name" Usage="O" Datatype="ST" MinLength="1" MaxLength="50"/>
+		<Component Name="Dwelling Number" Usage="O" Datatype="ST" MinLength="1" MaxLength="12"/>
+	</Field>
+	<!-- HL7 v2.5.1 SCV -->
+	<Field Datatype="SCV">
+		<Component Name="Parameter Class" Usage="O" Datatype="CWE" MinLength="1" MaxLength="20"/>
+		<Component Name="Parameter Value" Usage="O" Datatype="ST" MinLength="1" MaxLength="20"/>
+	</Field>
+	<!-- HL7 v2.5.1 SI -->
+	<Field Datatype="SI"/>
+	<!-- HL7 v2.5.1 SN -->
+	<Field Datatype="SN">
+		<Component Name="Comparator" Usage="O" Datatype="ST" MinLength="1" MaxLength="2"/>
+		<Component Name="Num1" Usage="O" Datatype="NM" MinLength="1" MaxLength="15"/>
+		<Component Name="Separator/Suffix" Usage="O" Datatype="ST" MinLength="1" MaxLength="1"/>
+		<Component Name="Num2" Usage="O" Datatype="NM" MinLength="1" MaxLength="15"/>
+	</Field>
+	<!-- HL7 v2.5.1 SPD -->
+	<Field Datatype="SPD">
+		<Component Name="Specialty Name" Usage="R" Datatype="ST" MinLength="1" MaxLength="50"/>
+		<Component Name="Governing Board" Usage="O" Datatype="ST" MinLength="1" MaxLength="50"/>
+		<Component Name="Eligible or Certified" Usage="O" Datatype="ID" MinLength="1" MaxLength="1" Table="0337"/>
+		<Component Name="Date of Certification" Usage="O" Datatype="DT" MinLength="1" MaxLength="8"/>
+	</Field>
+	<!-- HL7 v2.5.1 SPS -->
+	<Field Datatype="SPS">
+		<Component Name="Specimen Source Name or Code" Usage="O" Datatype="CWE" MinLength="1" MaxLength="705"/>
+		<Component Name="Additives" Usage="O" Datatype="CWE" MinLength="1" MaxLength="705" Table="0371"/>
+		<Component Name="Specimen Collection Method" Usage="O" Datatype="TX" MinLength="1" MaxLength="200"/>
+		<Component Name="Body Site" Usage="O" Datatype="CWE" MinLength="1" MaxLength="705" Table="0163"/>
+		<Component Name="Site Modifier" Usage="O" Datatype="CWE" MinLength="1" MaxLength="705" Table="0495"/>
+		<Component Name="Collection Method Modifier Code" Usage="O" Datatype="CWE" MinLength="1" MaxLength="705"/>
+		<Component Name="Specimen Role" Usage="O" Datatype="CWE" MinLength="1" MaxLength="705" Table="0369"/>
+	</Field>
+	<!-- HL7 v2.5.1 SRT -->
+	<Field Datatype="SRT">
+		<Component Name="Sort-by Field" Usage="R" Datatype="ST" MinLength="1" MaxLength="12"/>
+		<Component Name="Sequencing" Usage="O" Datatype="ID" MinLength="1" MaxLength="2" Table="0397"/>
+	</Field>
+	<!-- HL7 v2.5.1 ST -->
+	<Field Datatype="ST"/>
+	<!-- HL7 v2.5.1 TM -->
+	<Field Datatype="TM"/>
+	<!-- HL7 v2.5.1 TQ -->
+	<Field Datatype="TQ">
+		<Component Name="Quantity" Usage="O" Datatype="CQ" MinLength="1" MaxLength="267"/>
+		<Component Name="Interval" Usage="O" Datatype="RI" MinLength="1" MaxLength="206"/>
+		<Component Name="Duration" Usage="O" Datatype="ST" MinLength="1" MaxLength="6"/>
+		<Component Name="Start Date/Time" Usage="O" Datatype="TS" MinLength="1" MaxLength="26"/>
+		<Component Name="End Date/Time" Usage="O" Datatype="TS" MinLength="1" MaxLength="26"/>
+		<Component Name="Priority" Usage="O" Datatype="ST" MinLength="1" MaxLength="6"/>
+		<Component Name="Condition" Usage="O" Datatype="ST" MinLength="1" MaxLength="199"/>
+		<Component Name="Text" Usage="O" Datatype="TX" MinLength="1" MaxLength="200"/>
+		<Component Name="Conjunction" Usage="O" Datatype="ID" MinLength="1" MaxLength="1" Table="0472"/>
+		<Component Name="Order Sequencing" Usage="O" Datatype="OSD" MinLength="1" MaxLength="110"/>
+		<Component Name="Occurrence Duration" Usage="O" Datatype="CE" MinLength="1" MaxLength="483"/>
+		<Component Name="Total Occurrences" Usage="O" Datatype="NM" MinLength="1" MaxLength="4"/>
+	</Field>
+	<!-- HL7 v2.5.1 TS -->
+	<Field Datatype="TS">
+		<Component Name="Time" Usage="R" Datatype="DTM" MinLength="1" MaxLength="24"/>
+		<Component Name="Degree of Precision" Usage="B" Datatype="ID" MinLength="1" MaxLength="1" Table="0529"/>
+	</Field>
+	<!-- HL7 v2.5.1 TX -->
+	<Field Datatype="TX"/>
+	<!-- HL7 v2.5.1 UVC -->
+	<Field Datatype="UVC">
+		<Component Name="Value Code" Usage="R" Datatype="CNE" MinLength="1" MaxLength="20" Table="0153"/>
+		<Component Name="Value Amount" Usage="O" Datatype="MO" MinLength="1" MaxLength="20"/>
+	</Field>
+	<!-- HL7 v2.5.1 varies -->
+	<Field Datatype="varies"/>
+	<!-- HL7 v2.5.1 VH -->
+	<Field Datatype="VH">
+		<Component Name="Start Day Range" Usage="O" Datatype="ID" MinLength="1" MaxLength="3" Table="0267"/>
+		<Component Name="End Day Range" Usage="O" Datatype="ID" MinLength="1" MaxLength="3" Table="0267"/>
+		<Component Name="Start Hour Range" Usage="O" Datatype="TM" MinLength="1" MaxLength="16"/>
+		<Component Name="End Hour Range" Usage="O" Datatype="TM" MinLength="1" MaxLength="16"/>
+	</Field>
+	<!-- HL7 v2.5.1 VID -->
+	<Field Datatype="VID">
+		<Component Name="Version ID" Usage="O" Datatype="ID" MinLength="1" MaxLength="5" Table="0104"/>
+		<Component Name="Internationalization Code" Usage="O" Datatype="CE" MinLength="1" MaxLength="483" Table="0399"/>
+		<Component Name="International Version ID" Usage="O" Datatype="CE" MinLength="1" MaxLength="483"/>
+	</Field>
+	<!-- HL7 v2.5.1 VR -->
+	<Field Datatype="VR">
+		<Component Name="First Data Code Value" Usage="O" Datatype="ST" MinLength="1" MaxLength="6"/>
+		<Component Name="Last Data Code Value" Usage="O" Datatype="ST" MinLength="1" MaxLength="6"/>
+	</Field>
+	<!-- HL7 v2.5.1 WVI -->
+	<Field Datatype="WVI">
+		<Component Name="Channel Number" Usage="R" Datatype="NM" MinLength="1" MaxLength="4"/>
+		<Component Name="Channel Name" Usage="O" Datatype="ST" MinLength="1" MaxLength="17"/>
+	</Field>
+	<!-- HL7 v2.5.1 WVS -->
+	<Field Datatype="WVS">
+		<Component Name="Source One Name" Usage="R" Datatype="ST" MinLength="1" MaxLength="8"/>
+		<Component Name="Source Two Name" Usage="O" Datatype="ST" MinLength="1" MaxLength="8"/>
+	</Field>
+	<!-- HL7 v2.5.1 XAD -->
+	<Field Datatype="XAD">
+		<Component Name="Street Address" Usage="O" Datatype="SAD" MinLength="1" MaxLength="184"/>
+		<Component Name="Other Designation" Usage="O" Datatype="ST" MinLength="1" MaxLength="120"/>
+		<Component Name="City" Usage="O" Datatype="ST" MinLength="1" MaxLength="50"/>
+		<Component Name="State or Province" Usage="O" Datatype="ST" MinLength="1" MaxLength="50"/>
+		<Component Name="Zip or Postal Code" Usage="O" Datatype="ST" MinLength="1" MaxLength="12"/>
+		<Component Name="Country" Usage="O" Datatype="ID" MinLength="1" MaxLength="3" Table="0399"/>
+		<Component Name="Address Type" Usage="O" Datatype="ID" MinLength="1" MaxLength="3" Table="0190"/>
+		<Component Name="Other Geographic Designation" Usage="O" Datatype="ST" MinLength="1" MaxLength="50"/>
+		<Component Name="County/Parish Code" Usage="O" Datatype="IS" MinLength="1" MaxLength="20" Table="0289"/>
+		<Component Name="Census Tract" Usage="O" Datatype="IS" MinLength="1" MaxLength="20" Table="0288"/>
+		<Component Name="Address Representation Code" Usage="O" Datatype="ID" MinLength="1" MaxLength="1" Table="0465"/>
+		<Component Name="Address Validity Range" Usage="B" Datatype="DR" MinLength="1" MaxLength="53"/>
+		<Component Name="Effective Date" Usage="O" Datatype="TS" MinLength="1" MaxLength="26"/>
+		<Component Name="Expiration Date" Usage="O" Datatype="TS" MinLength="1" MaxLength="26"/>
+	</Field>
+	<!-- HL7 v2.5.1 XCN -->
+	<Field Datatype="XCN">
+		<Component Name="ID Number" Usage="O" Datatype="ST" MinLength="1" MaxLength="15"/>
+		<Component Name="Family Name" Usage="O" Datatype="FN" MinLength="1" MaxLength="194"/>
+		<Component Name="Given Name" Usage="O" Datatype="ST" MinLength="1" MaxLength="30"/>
+		<Component Name="Second and Further Given Names or Initials Thereof" Usage="O" Datatype="ST" MinLength="1" MaxLength="30"/>
+		<Component Name="Suffix (e.g., JR or III)" Usage="O" Datatype="ST" MinLength="1" MaxLength="20"/>
+		<Component Name="Prefix (e.g., DR)" Usage="O" Datatype="ST" MinLength="1" MaxLength="20"/>
+		<Component Name="Degree (e.g., MD)" Usage="B" Datatype="IS" MinLength="1" MaxLength="5" Table="0360"/>
+		<Component Name="Source Table" Usage="C" Datatype="IS" MinLength="1" MaxLength="4" Table="0297"/>
+		<Component Name="Assigning Authority" Usage="O" Datatype="HD" MinLength="1" MaxLength="227" Table="0363"/>
+		<Component Name="Name Type Code" Usage="O" Datatype="ID" MinLength="1" MaxLength="1" Table="0200"/>
+		<Component Name="Identifier Check Digit" Usage="O" Datatype="ST" MinLength="1" MaxLength="1"/>
+		<Component Name="Check Digit Scheme" Usage="C" Datatype="ID" MinLength="1" MaxLength="3" Table="0061"/>
+		<Component Name="Identifier Type Code" Usage="O" Datatype="ID" MinLength="1" MaxLength="5" Table="0203"/>
+		<Component Name="Assigning Facility" Usage="O" Datatype="HD" MinLength="1" MaxLength="227"/>
+		<Component Name="Name Representation Code" Usage="O" Datatype="ID" MinLength="1" MaxLength="1" Table="0465"/>
+		<Component Name="Name Context" Usage="O" Datatype="CE" MinLength="1" MaxLength="483" Table="0448"/>
+		<Component Name="Name Validity Range" Usage="B" Datatype="DR" MinLength="1" MaxLength="53"/>
+		<Component Name="Name Assembly Order" Usage="O" Datatype="ID" MinLength="1" MaxLength="1" Table="0444"/>
+		<Component Name="Effective Date" Usage="O" Datatype="TS" MinLength="1" MaxLength="26"/>
+		<Component Name="Expiration Date" Usage="O" Datatype="TS" MinLength="1" MaxLength="26"/>
+		<Component Name="Professional Suffix" Usage="O" Datatype="ST" MinLength="1" MaxLength="199"/>
+		<Component Name="Assigning Jurisdiction" Usage="O" Datatype="CWE" MinLength="1" MaxLength="705"/>
+		<Component Name="Assigning Agency or Department" Usage="O" Datatype="CWE" MinLength="1" MaxLength="705"/>
+	</Field>
+	<!-- HL7 v2.5.1 XON -->
+	<Field Datatype="XON">
+		<Component Name="Organization Name" Usage="O" Datatype="ST" MinLength="1" MaxLength="50"/>
+		<Component Name="Organization Name Type Code" Usage="O" Datatype="IS" MinLength="1" MaxLength="20" Table="0204"/>
+		<Component Name="ID Number" Usage="B" Datatype="NM" MinLength="1" MaxLength="4"/>
+		<Component Name="Check Digit" Usage="O" Datatype="NM" MinLength="1" MaxLength="1"/>
+		<Component Name="Check Digit Scheme" Usage="O" Datatype="ID" MinLength="1" MaxLength="3" Table="0061"/>
+		<Component Name="Assigning Authority" Usage="O" Datatype="HD" MinLength="1" MaxLength="227" Table="0363"/>
+		<Component Name="Identifier Type Code" Usage="O" Datatype="ID" MinLength="1" MaxLength="5" Table="0203"/>
+		<Component Name="Assigning Facility" Usage="O" Datatype="HD" MinLength="1" MaxLength="227"/>
+		<Component Name="Name Representation Code" Usage="O" Datatype="ID" MinLength="1" MaxLength="1" Table="0465"/>
+		<Component Name="Organization Identifier" Usage="O" Datatype="ST" MinLength="1" MaxLength="20"/>
+	</Field>
+	<!-- HL7 v2.5.1 XPN -->
+	<Field Datatype="XPN">
+		<Component Name="Family Name" Usage="O" Datatype="FN" MinLength="1" MaxLength="194"/>
+		<Component Name="Given Name" Usage="O" Datatype="ST" MinLength="1" MaxLength="30"/>
+		<Component Name="Second and Further Given Names or Initials Thereof" Usage="O" Datatype="ST" MinLength="1" MaxLength="30"/>
+		<Component Name="Suffix (e.g., JR or III)" Usage="O" Datatype="ST" MinLength="1" MaxLength="20"/>
+		<Component Name="Prefix (e.g., DR)" Usage="O" Datatype="ST" MinLength="1" MaxLength="20"/>
+		<Component Name="Degree (e.g., MD)" Usage="B" Datatype="IS" MinLength="1" MaxLength="6" Table="0360"/>
+		<Component Name="Name Type Code" Usage="O" Datatype="ID" MinLength="1" MaxLength="1" Table="0200"/>
+		<Component Name="Name Representation Code" Usage="O" Datatype="ID" MinLength="1" MaxLength="1" Table="0465"/>
+		<Component Name="Name Context" Usage="O" Datatype="CE" MinLength="1" MaxLength="483" Table="0448"/>
+		<Component Name="Name Validity Range" Usage="B" Datatype="DR" MinLength="1" MaxLength="53"/>
+		<Component Name="Name Assembly Order" Usage="O" Datatype="ID" MinLength="1" MaxLength="1" Table="0444"/>
+		<Component Name="Effective Date" Usage="O" Datatype="TS" MinLength="1" MaxLength="26"/>
+		<Component Name="Expiration Date" Usage="O" Datatype="TS" MinLength="1" MaxLength="26"/>
+		<Component Name="Professional Suffix" Usage="O" Datatype="ST" MinLength="1" MaxLength="199"/>
+	</Field>
+	<!-- HL7 v2.5.1 XTN -->
+	<Field Datatype="XTN">
+		<Component Name="Telephone Number" Usage="B" Datatype="ST" MinLength="1" MaxLength="199"/>
+		<Component Name="Telecommunication Use Code" Usage="O" Datatype="ID" MinLength="1" MaxLength="3" Table="0201"/>
+		<Component Name="Telecommunication Equipment Type" Usage="O" Datatype="ID" MinLength="1" MaxLength="8" Table="0202"/>
+		<Component Name="Email Address" Usage="O" Datatype="ST" MinLength="1" MaxLength="199"/>
+		<Component Name="Country Code" Usage="O" Datatype="NM" MinLength="1" MaxLength="3"/>
+		<Component Name="Area/City Code" Usage="O" Datatype="NM" MinLength="1" MaxLength="5"/>
+		<Component Name="Local Number" Usage="O" Datatype="NM" MinLength="1" MaxLength="9"/>
+		<Component Name="Extension" Usage="O" Datatype="NM" MinLength="1" MaxLength="5"/>
+		<Component Name="Any Text" Usage="O" Datatype="ST" MinLength="1" MaxLength="199"/>
+		<Component Name="Extension Prefix" Usage="O" Datatype="ST" MinLength="1" MaxLength="4"/>
+		<Component Name="Speed Dial Code" Usage="O" Datatype="ST" MinLength="1" MaxLength="6"/>
+		<Component Name="Unformatted Telephone number" Usage="C" Datatype="ST" MinLength="1" MaxLength="199"/>
+	</Field>
+</DatatypeLibrary>

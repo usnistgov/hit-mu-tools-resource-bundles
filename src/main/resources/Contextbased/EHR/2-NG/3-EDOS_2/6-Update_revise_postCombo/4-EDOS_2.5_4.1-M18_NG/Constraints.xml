@@ -1,0 +1,471 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ConformanceContext UUID="EDOS_2.5_4.1-M18_NG">
+    <MetaData Name="Conformance context for EDOS_2.5_4.1-M18_NG" OrgName="NIST" Version="2016-10-13" Date="2016-10-13"/>
+    <Predicates>
+        <Datatype/>
+        <Segment/>
+        <Group/>
+    </Predicates>
+    <Constraints>
+        <Message>
+            <ByID ID="MFN_M18_NG">
+                <Constraint ID="EDOS_2.5_4.1-M18_NG::1">
+                    <Description>Location 'MSH[1].3[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="1[1].3[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.5_4.1-M18_NG::2">
+                    <Description>Location 'MSH[1].4[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="1[1].4[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.5_4.1-M18_NG::3">
+                    <Description>Location 'MSH[1].6[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="1[1].6[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.5_4.1-M18_NG::4">
+                    <Description>Location 'MSH[1].7[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="1[1].7[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.5_4.1-M18_NG::5">
+                    <Description>Location 'MSH[1].10[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="1[1].10[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.5_4.1-M18_NG::6">
+                    <Description>Location 'MSH[1].11[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="1[1].11[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.5_4.1-M18_NG::7">
+                    <Description>Location 'MFI[1].1[1].2[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].1[1].2[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.5_4.1-M18_NG::8">
+                    <Description>Location 'MFI[1].1[1].7[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].1[1].7[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.5_4.1-M18_NG::9">
+                    <Description>Location 'MFI[1].3[1]' is expected to be present and valued 'UPD'</Description>
+                    <Assertion>
+                        <AND>
+                            <Presence Path="4[1].3[1]"/>
+                            <PlainText Path="4[1].3[1]" Text="UPD" IgnoreCase="false"/>
+                        </AND>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.5_4.1-M18_NG::10">
+                    <Description>Location 'MF_PAYER[1].MFE[1].1[1]' is expected to be present and valued 'MAD'</Description>
+                    <Assertion>
+                        <AND>
+                            <Presence Path="5[1].1[1].1[1]"/>
+                            <PlainText Path="5[1].1[1].1[1]" Text="MAD" IgnoreCase="false"/>
+                        </AND>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.5_4.1-M18_NG::11">
+                    <Description>Location 'MF_PAYER[1].MFE[1].3[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="5[1].1[1].3[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.5_4.1-M18_NG::12">
+                    <Description>Location 'MF_PAYER[1].MFE[1].4[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="5[1].1[1].4[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.5_4.1-M18_NG::13">
+                    <Description>Location 'MF_PAYER[1].MFE[1].4[1].2[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="5[1].1[1].4[1].2[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.5_4.1-M18_NG::14">
+                    <Description>Location 'MF_PAYER[1].MFE[1].4[1].3[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="5[1].1[1].4[1].3[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.5_4.1-M18_NG::15">
+                    <Description>Location 'MF_PAYER[1].MFE[1].4[1].7[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="5[1].1[1].4[1].7[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.5_4.1-M18_NG::16">
+                    <Description>Location 'MF_PAYER[1].PAYER_MF_ENTRY[1].PM1[1].1[1].2[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="5[1].2[1].1[1].1[1].2[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.5_4.1-M18_NG::17">
+                    <Description>Location 'MF_PAYER[1].PAYER_MF_ENTRY[1].PM1[1].2[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="5[1].2[1].1[1].2[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.5_4.1-M18_NG::18">
+                    <Description>Location 'MF_PAYER[1].PAYER_MF_ENTRY[1].PM1[1].2[1].4[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="5[1].2[1].1[1].2[1].4[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.5_4.1-M18_NG::19">
+                    <Description>Location 'MF_PAYER[1].PAYER_MF_ENTRY[1].PM1[1].2[1].5[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="5[1].2[1].1[1].2[1].5[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.5_4.1-M18_NG::20">
+                    <Description>Location 'MF_PAYER[1].PAYER_MF_ENTRY[1].PAYER_MF_COVERAGE[1].MCP[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="5[1].2[1].2[1].1[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.5_4.1-M18_NG::21">
+                    <Description>Location 'MF_PAYER[1].PAYER_MF_ENTRY[1].PAYER_MF_COVERAGE[1].MCP[1].2[1].1[1]' is expected to be present and valued '402'</Description>
+                    <Assertion>
+                        <AND>
+                            <Presence Path="5[1].2[1].2[1].1[1].2[1].1[1]"/>
+                            <PlainText Path="5[1].2[1].2[1].1[1].2[1].1[1]" Text="402" IgnoreCase="false"/>
+                        </AND>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.5_4.1-M18_NG::22">
+                    <Description>Location 'MF_PAYER[1].PAYER_MF_ENTRY[1].PAYER_MF_COVERAGE[1].MCP[1].2[1].2[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="5[1].2[1].2[1].1[1].2[1].2[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.5_4.1-M18_NG::23">
+                    <Description>Location 'MF_PAYER[1].PAYER_MF_ENTRY[1].PAYER_MF_COVERAGE[1].MCP[1].2[1].3[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="5[1].2[1].2[1].1[1].2[1].3[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.5_4.1-M18_NG::24">
+                    <Description>Location 'MF_PAYER[1].PAYER_MF_ENTRY[1].PAYER_MF_COVERAGE[1].MCP[1].2[1].7[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="5[1].2[1].2[1].1[1].2[1].7[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.5_4.1-M18_NG::25">
+                    <Description>Location 'MF_PAYER[2].MFE[1].1[1]' is expected to be present and valued 'MAD'</Description>
+                    <Assertion>
+                        <AND>
+                            <Presence Path="5[2].1[1].1[1]"/>
+                            <PlainText Path="5[2].1[1].1[1]" Text="MAD" IgnoreCase="false"/>
+                        </AND>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.5_4.1-M18_NG::26">
+                    <Description>Location 'MF_PAYER[2].MFE[1].3[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="5[2].1[1].3[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.5_4.1-M18_NG::27">
+                    <Description>Location 'MF_PAYER[2].MFE[1].4[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="5[2].1[1].4[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.5_4.1-M18_NG::28">
+                    <Description>Location 'MF_PAYER[2].MFE[1].4[1].2[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="5[2].1[1].4[1].2[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.5_4.1-M18_NG::29">
+                    <Description>Location 'MF_PAYER[2].MFE[1].4[1].3[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="5[2].1[1].4[1].3[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.5_4.1-M18_NG::30">
+                    <Description>Location 'MF_PAYER[2].MFE[1].4[1].7[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="5[2].1[1].4[1].7[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.5_4.1-M18_NG::31">
+                    <Description>Location 'MF_PAYER[2].PAYER_MF_ENTRY[1].PM1[1].1[1].2[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="5[2].2[1].1[1].1[1].2[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.5_4.1-M18_NG::32">
+                    <Description>Location 'MF_PAYER[2].PAYER_MF_ENTRY[1].PM1[1].2[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="5[2].2[1].1[1].2[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.5_4.1-M18_NG::33">
+                    <Description>Location 'MF_PAYER[2].PAYER_MF_ENTRY[1].PM1[1].2[1].4[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="5[2].2[1].1[1].2[1].4[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.5_4.1-M18_NG::34">
+                    <Description>Location 'MF_PAYER[2].PAYER_MF_ENTRY[1].PM1[1].2[1].5[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="5[2].2[1].1[1].2[1].5[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.5_4.1-M18_NG::35">
+                    <Description>Location 'MF_PAYER[2].PAYER_MF_ENTRY[1].PAYER_MF_COVERAGE[1].MCP[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="5[2].2[1].2[1].1[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.5_4.1-M18_NG::36">
+                    <Description>Location 'MF_PAYER[2].PAYER_MF_ENTRY[1].PAYER_MF_COVERAGE[1].MCP[1].2[1].1[1]' is expected to be present and valued '404'</Description>
+                    <Assertion>
+                        <AND>
+                            <Presence Path="5[2].2[1].2[1].1[1].2[1].1[1]"/>
+                            <PlainText Path="5[2].2[1].2[1].1[1].2[1].1[1]" Text="404" IgnoreCase="false"/>
+                        </AND>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.5_4.1-M18_NG::37">
+                    <Description>Location 'MF_PAYER[2].PAYER_MF_ENTRY[1].PAYER_MF_COVERAGE[1].MCP[1].2[1].2[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="5[2].2[1].2[1].1[1].2[1].2[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.5_4.1-M18_NG::38">
+                    <Description>Location 'MF_PAYER[2].PAYER_MF_ENTRY[1].PAYER_MF_COVERAGE[1].MCP[1].2[1].3[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="5[2].2[1].2[1].1[1].2[1].3[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.5_4.1-M18_NG::39">
+                    <Description>Location 'MF_PAYER[2].PAYER_MF_ENTRY[1].PAYER_MF_COVERAGE[1].MCP[1].2[1].7[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="5[2].2[1].2[1].1[1].2[1].7[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.5_4.1-M18_NG::40">
+                    <Description>Location 'MF_PAYER[3].MFE[1].1[1]' is expected to be present and valued 'MAD'</Description>
+                    <Assertion>
+                        <AND>
+                            <Presence Path="5[3].1[1].1[1]"/>
+                            <PlainText Path="5[3].1[1].1[1]" Text="MAD" IgnoreCase="false"/>
+                        </AND>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.5_4.1-M18_NG::41">
+                    <Description>Location 'MF_PAYER[3].MFE[1].3[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="5[3].1[1].3[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.5_4.1-M18_NG::42">
+                    <Description>Location 'MF_PAYER[3].MFE[1].4[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="5[3].1[1].4[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.5_4.1-M18_NG::43">
+                    <Description>Location 'MF_PAYER[3].MFE[1].4[1].2[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="5[3].1[1].4[1].2[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.5_4.1-M18_NG::44">
+                    <Description>Location 'MF_PAYER[3].MFE[1].4[1].3[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="5[3].1[1].4[1].3[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.5_4.1-M18_NG::45">
+                    <Description>Location 'MF_PAYER[3].MFE[1].4[1].7[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="5[3].1[1].4[1].7[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.5_4.1-M18_NG::46">
+                    <Description>Location 'MF_PAYER[3].PAYER_MF_ENTRY[1].PM1[1].1[1].2[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="5[3].2[1].1[1].1[1].2[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.5_4.1-M18_NG::47">
+                    <Description>Location 'MF_PAYER[3].PAYER_MF_ENTRY[1].PM1[1].2[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="5[3].2[1].1[1].2[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.5_4.1-M18_NG::48">
+                    <Description>Location 'MF_PAYER[3].PAYER_MF_ENTRY[1].PM1[1].2[1].4[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="5[3].2[1].1[1].2[1].4[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.5_4.1-M18_NG::49">
+                    <Description>Location 'MF_PAYER[3].PAYER_MF_ENTRY[1].PM1[1].2[1].5[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="5[3].2[1].1[1].2[1].5[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.5_4.1-M18_NG::50">
+                    <Description>Location 'MF_PAYER[3].PAYER_MF_ENTRY[1].PAYER_MF_COVERAGE[1].MCP[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="5[3].2[1].2[1].1[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.5_4.1-M18_NG::51">
+                    <Description>Location 'MF_PAYER[3].PAYER_MF_ENTRY[1].PAYER_MF_COVERAGE[1].MCP[1].2[1].1[1]' is expected to be present and valued '408'</Description>
+                    <Assertion>
+                        <AND>
+                            <Presence Path="5[3].2[1].2[1].1[1].2[1].1[1]"/>
+                            <PlainText Path="5[3].2[1].2[1].1[1].2[1].1[1]" Text="408" IgnoreCase="false"/>
+                        </AND>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.5_4.1-M18_NG::52">
+                    <Description>Location 'MF_PAYER[3].PAYER_MF_ENTRY[1].PAYER_MF_COVERAGE[1].MCP[1].2[1].2[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="5[3].2[1].2[1].1[1].2[1].2[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.5_4.1-M18_NG::53">
+                    <Description>Location 'MF_PAYER[3].PAYER_MF_ENTRY[1].PAYER_MF_COVERAGE[1].MCP[1].2[1].3[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="5[3].2[1].2[1].1[1].2[1].3[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.5_4.1-M18_NG::54">
+                    <Description>Location 'MF_PAYER[3].PAYER_MF_ENTRY[1].PAYER_MF_COVERAGE[1].MCP[1].2[1].7[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="5[3].2[1].2[1].1[1].2[1].7[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.5_4.1-M18_NG::55">
+                    <Description>Location 'MF_PAYER[4].MFE[1].1[1]' is expected to be present and valued 'MUP'</Description>
+                    <Assertion>
+                        <AND>
+                            <Presence Path="5[4].1[1].1[1]"/>
+                            <PlainText Path="5[4].1[1].1[1]" Text="MUP" IgnoreCase="false"/>
+                        </AND>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.5_4.1-M18_NG::56">
+                    <Description>Location 'MF_PAYER[4].MFE[1].3[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="5[4].1[1].3[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.5_4.1-M18_NG::57">
+                    <Description>Location 'MF_PAYER[4].MFE[1].4[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="5[4].1[1].4[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.5_4.1-M18_NG::58">
+                    <Description>Location 'MF_PAYER[4].MFE[1].4[1].2[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="5[4].1[1].4[1].2[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.5_4.1-M18_NG::59">
+                    <Description>Location 'MF_PAYER[4].MFE[1].4[1].3[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="5[4].1[1].4[1].3[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.5_4.1-M18_NG::60">
+                    <Description>Location 'MF_PAYER[4].MFE[1].4[1].7[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="5[4].1[1].4[1].7[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.5_4.1-M18_NG::61">
+                    <Description>Location 'MF_PAYER[4].PAYER_MF_ENTRY[1].PM1[1].1[1].2[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="5[4].2[1].1[1].1[1].2[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.5_4.1-M18_NG::62">
+                    <Description>Location 'MF_PAYER[4].PAYER_MF_ENTRY[1].PM1[1].2[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="5[4].2[1].1[1].2[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.5_4.1-M18_NG::63">
+                    <Description>Location 'MF_PAYER[4].PAYER_MF_ENTRY[1].PM1[1].2[1].4[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="5[4].2[1].1[1].2[1].4[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.5_4.1-M18_NG::64">
+                    <Description>Location 'MF_PAYER[4].PAYER_MF_ENTRY[1].PM1[1].2[1].5[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="5[4].2[1].1[1].2[1].5[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.5_4.1-M18_NG::65">
+                    <Description>Location 'MF_PAYER[4].PAYER_MF_ENTRY[1].PAYER_MF_COVERAGE[1].MCP[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="5[4].2[1].2[1].1[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.5_4.1-M18_NG::66">
+                    <Description>Location 'MF_PAYER[4].PAYER_MF_ENTRY[1].PAYER_MF_COVERAGE[1].MCP[1].2[1].1[1]' is expected to be present and valued '400.1'</Description>
+                    <Assertion>
+                        <AND>
+                            <Presence Path="5[4].2[1].2[1].1[1].2[1].1[1]"/>
+                            <PlainText Path="5[4].2[1].2[1].1[1].2[1].1[1]" Text="400.1" IgnoreCase="false"/>
+                        </AND>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.5_4.1-M18_NG::67">
+                    <Description>Location 'MF_PAYER[4].PAYER_MF_ENTRY[1].PAYER_MF_COVERAGE[1].MCP[1].2[1].2[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="5[4].2[1].2[1].1[1].2[1].2[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.5_4.1-M18_NG::68">
+                    <Description>Location 'MF_PAYER[4].PAYER_MF_ENTRY[1].PAYER_MF_COVERAGE[1].MCP[1].2[1].3[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="5[4].2[1].2[1].1[1].2[1].3[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.5_4.1-M18_NG::69">
+                    <Description>Location 'MF_PAYER[4].PAYER_MF_ENTRY[1].PAYER_MF_COVERAGE[1].MCP[1].2[1].7[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="5[4].2[1].2[1].1[1].2[1].7[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.5_4.1-M18_NG::70">
+                    <Description>Location 'MF_PAYER[4].PAYER_MF_ENTRY[1].PAYER_MF_COVERAGE[1].MCP[1].4[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="5[4].2[1].2[1].1[1].4[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.5_4.1-M18_NG::71">
+                    <Description>Location 'MF_PAYER[4].PAYER_MF_ENTRY[1].PAYER_MF_COVERAGE[1].MCP[1].4[1].2[1]' is expected to be present and valued 'USD'</Description>
+                    <Assertion>
+                        <AND>
+                            <Presence Path="5[4].2[1].2[1].1[1].4[1].2[1]"/>
+                            <PlainText Path="5[4].2[1].2[1].1[1].4[1].2[1]" Text="USD" IgnoreCase="false"/>
+                        </AND>
+                    </Assertion>
+                </Constraint>
+            </ByID>
+        </Message>
+    </Constraints>
+</ConformanceContext>

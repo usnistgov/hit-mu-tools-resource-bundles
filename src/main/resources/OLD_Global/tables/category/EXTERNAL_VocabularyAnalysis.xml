@@ -1,0 +1,771 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TableLibrary Description="eDOS External Value Sets" OrganizationName="HL7 NIST" TableLibraryVersion="V2_IG_LTCF_R2_D1_2013JUN" Status="Active" TableLibraryIdentifier="2.16.840.1.113883.3.72.4.1.00007" Name="eDOS External Value Sets" xmlns="http://www.nist.gov/healthcare/data">
+	<!--  LOINC -->
+	<TableDefinition Codesys="LN" Id="LOINC" Name="LOINC" Type="External" Version="1">
+		<Comment>This value set only contains the LOINC codes used in the test tool. Please refer to http://loinc.org/ for more information on LOINC.</Comment>
+		<TableElement Code="53294-5" Codesys="LN" DisplayName="Epithelial cells.non-squamous [#/area] in Urine sediment by Automated count" Source="SDO"/>
+		<TableElement Code="17861-6" Codesys="LN" DisplayName="Calcium [Mass/volume] in Serum or Plasma" Source="SDO"/>
+		<TableElement Code="28-1" Codesys="LN" DisplayName="Ampicillin [Susceptibility] by Minimum inhibitory concentration (MIC)" Source="SDO"/>
+		<TableElement Code="1920-8" Codesys="LN" DisplayName="Aspartate aminotransferase [Enzymatic activity/volume] in Serum or Plasma" Source="SDO"/>
+		<TableElement Code="20624-3" Codesys="LN" DisplayName="Creatinine [Mass/volume] in 24 hour Urine" Source="SDO"/>
+		<TableElement Code="50558-6" Codesys="LN" DisplayName="Nitrite [Presence] in Urine by Automated test strip" Source="SDO"/>
+		<TableElement Code="2089-1" Codesys="LN" DisplayName="Cholesterol in LDL [Mass/volume] in Serum or Plasma" Source="SDO"/>
+		<TableElement Code="24331-1" Codesys="LN" DisplayName="Lipid 1996 panel in Serum or Plasma" Source="SDO"/>
+		<TableElement Code="57698-3" Codesys="LN" DisplayName="Lipid panel with direct LDL - Serum or Plasma" Source="SDO"/>
+		<TableElement Code="50557-8" Codesys="LN" DisplayName="Ketones [Mass/volume] in Urine by Automated test strip" Source="SDO"/>
+		<TableElement Code="32624-9" Codesys="LN" DisplayName="Race" Source="SDO"/>
+		<TableElement Code="18964-7" Codesys="LN" DisplayName="Penicillin [Susceptibility]" Source="SDO"/>
+		<TableElement Code="33037-3" Codesys="LN" DisplayName="Anion gap in Serum or Plasma" Source="SDO"/>
+		<TableElement Code="21482-5" Codesys="LN" DisplayName="Protein [Mass/volume] in 24 hour Urine" Source="SDO"/>
+		<TableElement Code="10378-8" Codesys="LN" DisplayName="Polychromasia [Presence] in Blood by Light microscopy" Source="SDO"/>
+		<TableElement Code="26515-7" Codesys="LN" DisplayName="Platelets [#/volume] in Blood" Source="SDO"/>
+		<TableElement Code="3094-0" Codesys="LN" DisplayName="Urea nitrogen [Mass/volume] in Serum or Plasma" Source="SDO"/>
+		<TableElement Code="2085-9" Codesys="LN" DisplayName="Cholesterol in HDL [Mass/volume] in Serum or Plasma" Source="SDO"/>
+		<TableElement Code="53326-5" Codesys="LN" DisplayName="Specific gravity of Urine by Automated test strip" Source="SDO"/>
+		<TableElement Code="13457-7" Codesys="LN" DisplayName="Cholesterol in LDL [Mass/volume] in Serum or Plasma by calculation" Source="SDO"/>
+		<TableElement Code="625-4" Codesys="LN" DisplayName="Bacteria identified in Stool by Culture" Source="SDO"/>
+		<TableElement Code="26478-8" Codesys="LN" DisplayName="Lymphocytes/100 leukocytes in Blood" Source="SDO"/>
+		<TableElement Code="6812-2" Codesys="LN" DisplayName="Dengue virus IgM Ab [Titer] in Serum" Source="SDO"/>
+		<TableElement Code="11011-4" Codesys="LN" DisplayName="Hepatitis C virus RNA [Units/volume] (viral load) in Serum or Plasma by Probe and target amplification method" Source="SDO"/>
+		<TableElement Code="53324-0" Codesys="LN" DisplayName="Spermatozoa [#/area] in Urine sediment by Automated count" Source="SDO"/>
+		<TableElement Code="6768-6" Codesys="LN" DisplayName="Alkaline phosphatase [Enzymatic activity/volume] in Serum or Plasma" Source="SDO"/>
+		<TableElement Code="26511-6" Codesys="LN" DisplayName="Neutrophils/100 leukocytes in Blood" Source="SDO"/>
+		<TableElement Code="18262-6" Codesys="LN" DisplayName="Cholesterol in LDL [Mass/volume] in Serum or Plasma by Direct assay" Source="SDO"/>
+		<TableElement Code="50563-6" Codesys="LN" DisplayName="Urobilinogen [Mass/volume] in Urine by Automated test strip" Source="SDO"/>
+		<TableElement Code="50561-0" Codesys="LN" DisplayName="Protein [Mass/volume] in Urine by Automated test strip" Source="SDO"/>
+		<TableElement Code="33331-0" Codesys="LN" DisplayName="West Nile virus IgM Ab [Titer] in Serum" Source="SDO"/>
+		<TableElement Code="50559-4" Codesys="LN" DisplayName="Hemoglobin [Mass/volume] in Urine by Automated test strip" Source="SDO"/>
+		<TableElement Code="14316-4" Codesys="LN" DisplayName="Benzodiazepines [Presence] in Urine by Screen method" Source="SDO"/>
+		<TableElement Code="2093-3" Codesys="LN" DisplayName="Cholesterol [Mass/volume] in Serum or Plasma" Source="SDO"/>
+		<TableElement Code="28540-3" Codesys="LN" DisplayName="Erythrocyte mean corpuscular hemoglobin concentration [Mass/volume]" Source="SDO"/>
+		<TableElement Code="26484-6" Codesys="LN" DisplayName="Monocytes [#/volume] in Blood" Source="SDO"/>
+		<TableElement Code="33914-3" Codesys="LN" DisplayName="Glomerular filtration rate/1.73 sq M.predicted by Creatinine-based formula (MDRD)" Source="SDO"/>
+		<TableElement Code="22514-4" Codesys="LN" DisplayName="Saint Louis encephalitis virus IgM Ab [Titer] in Serum" Source="SDO"/>
+		<TableElement Code="53322-4" Codesys="LN" DisplayName="Crystals [#/area] in Urine sediment by Automated count" Source="SDO"/>
+		<TableElement Code="3097-3" Codesys="LN" DisplayName="Urea nitrogen/Creatinine [Mass Ratio] in Serum or Plasma" Source="SDO"/>
+		<TableElement Code="19270-8" Codesys="LN" DisplayName="Barbiturates [Presence] in Urine by Screen method" Source="SDO"/>
+		<TableElement Code="26444-0" Codesys="LN" DisplayName="Basophils [#/volume] in Blood" Source="SDO"/>
+		<TableElement Code="30428-7" Codesys="LN" DisplayName="Erythrocyte mean corpuscular volume [Entitic volume]" Source="SDO"/>
+		<TableElement Code="48159-8" Codesys="LN" DisplayName="Hepatitis C virus Ab Signal/Cutoff in Serum or Plasma by Immunoassay" Source="SDO"/>
+		<TableElement Code="50235-1" Codesys="LN" DisplayName="Mucus [#/area] in Urine sediment by Automated count" Source="SDO"/>
+		<TableElement Code="34555-3" Codesys="LN" DisplayName="Creatinine 24H renal clearance panel" Source="SDO"/>
+		<TableElement Code="26464-8" Codesys="LN" DisplayName="Leukocytes [#/volume] in Blood" Source="SDO"/>
+		<TableElement Code="2571-8" Codesys="LN" DisplayName="Triglyceride [Mass/volume] in Serum or Plasma" Source="SDO"/>
+		<TableElement Code="5195-3" Codesys="LN" DisplayName="Hepatitis B virus surface Ag [Presence] in Serum" Source="SDO"/>
+		<TableElement Code="3016-3" Codesys="LN" DisplayName="Thyrotropin [Units/volume] in Serum or Plasma" Source="SDO"/>
+		<TableElement Code="22314-9" Codesys="LN" DisplayName="Hepatitis A virus IgM Ab [Presence] in Serum" Source="SDO"/>
+		<TableElement Code="2324-2" Codesys="LN" DisplayName="Gamma glutamyl transferase [Enzymatic activity/volume] in Serum or Plasma" Source="SDO"/>
+		<TableElement Code="8665-2" Codesys="LN" DisplayName="Date last menstrual period" Source="SDO"/>
+		<TableElement Code="26499-4" Codesys="LN" DisplayName="Neutrophils [#/volume] in Blood" Source="SDO"/>
+		<TableElement Code="22320-6" Codesys="LN" DisplayName="Hepatitis B virus e Ab [Presence] in Serum" Source="SDO"/>
+		<TableElement Code="26474-7" Codesys="LN" DisplayName="Lymphocytes [#/volume] in Blood" Source="SDO"/>
+		<TableElement Code="2951-2" Codesys="LN" DisplayName="Sodium [Moles/volume] in Serum or Plasma" Source="SDO"/>
+		<TableElement Code="2823-3" Codesys="LN" DisplayName="Potassium [Moles/volume] in Serum or Plasma" Source="SDO"/>
+		<TableElement Code="1759-0" Codesys="LN" DisplayName="Albumin/Globulin [Mass Ratio] in Serum or Plasma" Source="SDO"/>
+		<TableElement Code="50545-3" Codesys="LN" DisplayName="Bacterial susceptibility panel in Isolate by Minimum inhibitory concentration (MIC)" Source="SDO"/>
+		<TableElement Code="43755-8" Codesys="LN" DisplayName="Casts [#/area] in Urine sediment by Automated count" Source="SDO"/>
+		<TableElement Code="32167-9" Codesys="LN" DisplayName="Clarity of Urine" Source="SDO"/>
+		<TableElement Code="24323-8" Codesys="LN" DisplayName="Comprehensive metabolic 2000 panel - Serum or Plasma" Source="SDO"/>
+		<TableElement Code="53328-1" Codesys="LN" DisplayName="Glucose [Mass/volume] in Urine by Automated test strip" Source="SDO"/>
+		<TableElement Code="30385-9" Codesys="LN" DisplayName="Erythrocyte distribution width [Ratio]" Source="SDO"/>
+		<TableElement Code="22322-2" Codesys="LN" DisplayName="Hepatitis B virus surface Ab [Presence] in Serum" Source="SDO"/>
+		<TableElement Code="16933-4" Codesys="LN" DisplayName="Hepatitis B virus core Ab [Presence] in Serum" Source="SDO"/>
+		<TableElement Code="33223-9" Codesys="LN" DisplayName="Hyaline casts [#/area] in Urine sediment by Automated count" Source="SDO"/>
+		<TableElement Code="11125-2" Codesys="LN" DisplayName="Platelet morphology finding [Identifier] in Blood" Source="SDO"/>
+		<TableElement Code="47527-7" Codesys="LN" DisplayName="" Source="SDO"/>
+		<TableElement Code="2028-9" Codesys="LN" DisplayName="Carbon dioxide, total [Moles/volume] in Serum or Plasma" Source="SDO"/>
+		<TableElement Code="30525-0" Codesys="LN" DisplayName="Age" Source="SDO"/>
+		<TableElement Code="38892-6" Codesys="LN" DisplayName="Anisocytosis [Presence] in Blood" Source="SDO"/>
+		<TableElement Code="50564-4" Codesys="LN" DisplayName="Urinalysis panel - Urine by Auto" Source="SDO"/>
+		<TableElement Code="53327-3" Codesys="LN" DisplayName="Bilirubin.total [Mass/volume] in Urine by Automated test strip" Source="SDO"/>
+		<TableElement Code="20575-7" Codesys="LN" DisplayName="Hepatitis A virus Ab [Presence] in Serum" Source="SDO"/>
+		<TableElement Code="57021-8" Codesys="LN" DisplayName="CBC W Auto Differential panel in Blood" Source="SDO"/>
+		<TableElement Code="50233-6" Codesys="LN" DisplayName="Leukocyte clumps [#/area] in Urine sediment by Automated count" Source="SDO"/>
+		<TableElement Code="66117-3" Codesys="LN" DisplayName="Prostate Pathology biopsy report" Source="SDO"/>
+		<TableElement Code="30341-2" Codesys="LN" DisplayName="Erythrocyte sedimentation rate" Source="SDO"/>
+		<TableElement Code="718-7" Codesys="LN" DisplayName="Hemoglobin [Mass/volume] in Blood" Source="SDO"/>
+		<TableElement Code="33329-4" Codesys="LN" DisplayName="West Nile virus IgG Ab [Titer] in Serum" Source="SDO"/>
+		<TableElement Code="516-5" Codesys="LN" DisplayName="Trimethoprim+Sulfamethoxazole [Susceptibility] by Minimum inhibitory concentration (MIC)" Source="SDO"/>
+		<TableElement Code="26450-7" Codesys="LN" DisplayName="Eosinophils/100 leukocytes in Blood" Source="SDO"/>
+		<TableElement Code="20-8" Codesys="LN" DisplayName="Amoxicillin+Clavulanate [Susceptibility] by Minimum inhibitory concentration (MIC)" Source="SDO"/>
+		<TableElement Code="6811-4" Codesys="LN" DisplayName="Dengue virus IgG Ab [Titer] in Serum" Source="SDO"/>
+		<TableElement Code="11156-7" Codesys="LN" DisplayName="Leukocyte morphology finding [Identifier] in Blood" Source="SDO"/>
+		<TableElement Code="1975-2" Codesys="LN" DisplayName="Bilirubin.total [Mass/volume] in Serum or Plasma" Source="SDO"/>
+		<TableElement Code="50560-2" Codesys="LN" DisplayName="pH of Urine by Automated test strip" Source="SDO"/>
+		<TableElement Code="67471-3" Codesys="LN" DisplayName="Pregnancy status" Source="SDO"/>
+		<TableElement Code="30424-6" Codesys="LN" DisplayName="Macrocytes [Presence] in Blood" Source="SDO"/>
+		<TableElement Code="2075-0" Codesys="LN" DisplayName="Chloride [Moles/volume] in Serum or Plasma" Source="SDO"/>
+		<TableElement Code="26449-9" Codesys="LN" DisplayName="Eosinophils [#/volume] in Blood" Source="SDO"/>
+		<TableElement Code="564-5" Codesys="LN" DisplayName="COLONY COUNT" Source="SDO"/>
+		<TableElement Code="49541-6" Codesys="LN" DisplayName="Fasting status" Source="SDO"/>
+		<TableElement Code="22316-4" Codesys="LN" DisplayName="Hepatitis B virus core Ab [Units/volume] in Serum" Source="SDO"/>
+		<TableElement Code="26485-3" Codesys="LN" DisplayName="Monocytes/100 leukocytes in Blood" Source="SDO"/>
+		<TableElement Code="22512-8" Codesys="LN" DisplayName="Saint Louis encephalitis virus IgG Ab [Titer] in Serum" Source="SDO"/>
+		<TableElement Code="6932-8" Codesys="LN" DisplayName="Penicillin [Susceptibility] by Minimum inhibitory concentration (MIC)" Source="SDO"/>
+		<TableElement Code="26453-1" Codesys="LN" DisplayName="Erythrocytes [#/volume] in Blood" Source="SDO"/>
+		<TableElement Code="2160-0" Codesys="LN" DisplayName="Creatinine [Mass/volume] in Serum or Plasma" Source="SDO"/>
+		<TableElement Code="1751-7" Codesys="LN" DisplayName="Albumin [Mass/volume] in Serum or Plasma" Source="SDO"/>
+		<TableElement Code="46419-8" Codesys="LN" DisplayName="Erythrocytes [#/area] in Urine sediment by Automated count" Source="SDO"/>
+		<TableElement Code="60026-2" Codesys="LN" DisplayName="Leukocyte esterase [Presence] in Urine by Automated test strip" Source="SDO"/>
+		<TableElement Code="2345-7" Codesys="LN" DisplayName="Glucose [Mass/volume] in Serum or Plasma" Source="SDO"/>
+		<TableElement Code="33219-7" Codesys="LN" DisplayName="Epithelial cells.squamous [#/area] in Urine sediment by Automated count" Source="SDO"/>
+		<TableElement Code="6742-1" Codesys="LN" DisplayName="Erythrocyte morphology finding [Identifier] in Blood" Source="SDO"/>
+		<TableElement Code="10834-0" Codesys="LN" DisplayName="Globulin [Mass/volume] in Serum by calculation" Source="SDO"/>
+		<TableElement Code="30400-6" Codesys="LN" DisplayName="Hypochromia [Presence] in Blood" Source="SDO"/>
+		<TableElement Code="20570-8" Codesys="LN" DisplayName="Hematocrit [Volume Fraction] of Blood" Source="SDO"/>
+		<TableElement Code="30180-4" Codesys="LN" DisplayName="Basophils/100 leukocytes in Blood" Source="SDO"/>
+		<TableElement Code="2885-2" Codesys="LN" DisplayName="Protein [Mass/volume] in Serum or Plasma" Source="SDO"/>
+		<TableElement Code="33218-9" Codesys="LN" DisplayName="Bacteria [#/area] in Urine sediment by Automated count" Source="SDO"/>
+		<TableElement Code="69739-1" Codesys="LN" DisplayName="Drugs of abuse panel - Urine" Source="SDO"/>
+		<TableElement Code="28539-5" Codesys="LN" DisplayName="Erythrocyte mean corpuscular hemoglobin [Entitic mass]" Source="SDO"/>
+		<TableElement Code="16128-1" Codesys="LN" DisplayName="Hepatitis C virus Ab [Presence] in Serum" Source="SDO"/>
+		<TableElement Code="779-9" Codesys="LN" DisplayName="Poikilocytosis [Presence] in Blood by Light microscopy" Source="SDO"/>
+		<TableElement Code="3167-4" Codesys="LN" DisplayName="Volume of 24 hour Urine" Source="SDO"/>
+		<TableElement Code="1742-6" Codesys="LN" DisplayName="Alanine aminotransferase [Enzymatic activity/volume] in Serum or Plasma" Source="SDO"/>
+		<TableElement Code="46702-7" Codesys="LN" DisplayName="Leukocytes [#/area] in Urine sediment by Automated count" Source="SDO"/>
+		<TableElement Code="267-5" Codesys="LN" DisplayName="Gentamicin [Susceptibility] by Minimum inhibitory concentration (MIC)" Source="SDO"/>
+		<TableElement Code="2164-2" Codesys="LN" DisplayName="Creatinine renal clearance in 24 hour" Source="SDO"/>
+		<TableElement Code="19261-7" Codesys="LN" DisplayName="Amphetamines [Presence] in Urine by Screen method" Source="SDO"/>
+		<TableElement Code="2349-9" Codesys="LN" DisplayName="Glucose [Presence] in Urine" Source="SDO"/>
+		<TableElement Code="185-9" Codesys="LN" DisplayName="Ciprofloxacin [Susceptibility] by Minimum inhibitory concentration (MIC)" Source="SDO"/>
+		<TableElement Code="5778-6" Codesys="LN" DisplayName="Color of Urine" Source="SDO"/>
+		<TableElement Code="30434-5" Codesys="LN" DisplayName="Microcytes [Presence] in Blood" Source="SDO"/>
+	</TableDefinition>
+	<!--  SNOMED CT -->
+	<TableDefinition Codesys="SCT" Id="SNOMED" Name="SNOMED CT" Type="External" Version="1">
+		<Comment>This value set only contains the SNOMED codes used in the test tool. Please refer to http://www.nlm.nih.gov/research/umls/Snomed/snomed_main.html for more information on SNOMED CT.</Comment>
+		<TableElement Code="122575003" Codesys="SCT" DisplayName="Urine specimen" Source="SDO"/>
+		<TableElement Code="429951000124103" Codesys="SCT" DisplayName="Bacterial isolate specimen" Source="SDO"/>
+		<TableElement Code="119364003" Codesys="SCT" DisplayName="Serum specimen" Source="SDO"/>
+		<TableElement Code="119297000" Codesys="SCT" DisplayName="Blood sample" Source="SDO"/>
+		<TableElement Code="79411002" Codesys="SCT" DisplayName="Acute prostatitis" Source="SDO"/>
+		<TableElement Code="309132009" Codesys="SCT" DisplayName="Prostate biopsy sample" Source="SDO"/>
+		<TableElement Code="110951002" Codesys="SCT" DisplayName="Endocervical cytologic material" Source="SDO"/>
+		<TableElement Code="119361006" Codesys="SCT" DisplayName="Plasma specimen" Source="SDO"/>
+		<TableElement Code="119339001" Codesys="SCT" DisplayName="Stool specimen" Source="SDO"/>
+	</TableDefinition>
+	<!-- USPS -->
+	<TableDefinition Codesys="FIPS5_2" Id="USPS" Name="State Value Set" Type="External" Version="1">
+		<TableElement Code="AK" Codesys="FIPS5_2" DisplayName="[Alternative Code]Alaska" Source="SDO"/>
+		<TableElement Code="AL" Codesys="FIPS5_2" DisplayName="[Alternative Code]Alabama" Source="SDO"/>
+		<TableElement Code="AR" Codesys="FIPS5_2" DisplayName="[Alternative Code]Arkansas" Source="SDO"/>
+		<TableElement Code="AZ" Codesys="FIPS5_2" DisplayName="[Alternative Code]Arizona" Source="SDO"/>
+		<TableElement Code="CA" Codesys="FIPS5_2" DisplayName="[Alternative Code]California" Source="SDO"/>
+		<TableElement Code="CO" Codesys="FIPS5_2" DisplayName="[Alternative Code]Colorado" Source="SDO"/>
+		<TableElement Code="CT" Codesys="FIPS5_2" DisplayName="[Alternative Code]Connecticut" Source="SDO"/>
+		<TableElement Code="DC" Codesys="FIPS5_2" DisplayName="[Alternative Code]District of Columbia" Source="SDO"/>
+		<TableElement Code="DE" Codesys="FIPS5_2" DisplayName="[Alternative Code]Delaware" Source="SDO"/>
+		<TableElement Code="FL" Codesys="FIPS5_2" DisplayName="[Alternative Code]Florida" Source="SDO"/>
+		<TableElement Code="GA" Codesys="FIPS5_2" DisplayName="[Alternative Code]Georgia" Source="SDO"/>
+		<TableElement Code="HI" Codesys="FIPS5_2" DisplayName="[Alternative Code]Hawaii" Source="SDO"/>
+		<TableElement Code="IA" Codesys="FIPS5_2" DisplayName="[Alternative Code]Iowa" Source="SDO"/>
+		<TableElement Code="ID" Codesys="FIPS5_2" DisplayName="[Alternative Code]Idaho" Source="SDO"/>
+		<TableElement Code="IL" Codesys="FIPS5_2" DisplayName="[Alternative Code]Illinois" Source="SDO"/>
+		<TableElement Code="IN" Codesys="FIPS5_2" DisplayName="[Alternative Code]Indiana" Source="SDO"/>
+		<TableElement Code="KS" Codesys="FIPS5_2" DisplayName="[Alternative Code]Kansas" Source="SDO"/>
+		<TableElement Code="KY" Codesys="FIPS5_2" DisplayName="[Alternative Code]Kentucky" Source="SDO"/>
+		<TableElement Code="LA" Codesys="FIPS5_2" DisplayName="[Alternative Code]Louisiana" Source="SDO"/>
+		<TableElement Code="MA" Codesys="FIPS5_2" DisplayName="[Alternative Code]Massachusetts" Source="SDO"/>
+		<TableElement Code="MD" Codesys="FIPS5_2" DisplayName="[Alternative Code]Maryland" Source="SDO"/>
+		<TableElement Code="ME" Codesys="FIPS5_2" DisplayName="[Alternative Code]Maine" Source="SDO"/>
+		<TableElement Code="MI" Codesys="FIPS5_2" DisplayName="[Alternative Code]Michigan" Source="SDO"/>
+		<TableElement Code="MN" Codesys="FIPS5_2" DisplayName="[Alternative Code]Minnesota" Source="SDO"/>
+		<TableElement Code="MO" Codesys="FIPS5_2" DisplayName="[Alternative Code]Missouri" Source="SDO"/>
+		<TableElement Code="MS" Codesys="FIPS5_2" DisplayName="[Alternative Code]Mississippi" Source="SDO"/>
+		<TableElement Code="MT" Codesys="FIPS5_2" DisplayName="[Alternative Code]Montana" Source="SDO"/>
+		<TableElement Code="NC" Codesys="FIPS5_2" DisplayName="[Alternative Code]North Carolina" Source="SDO"/>
+		<TableElement Code="ND" Codesys="FIPS5_2" DisplayName="[Alternative Code]North Dakota" Source="SDO"/>
+		<TableElement Code="NE" Codesys="FIPS5_2" DisplayName="[Alternative Code]Nebraska" Source="SDO"/>
+		<TableElement Code="NH" Codesys="FIPS5_2" DisplayName="[Alternative Code]New Hampshire" Source="SDO"/>
+		<TableElement Code="NJ" Codesys="FIPS5_2" DisplayName="[Alternative Code]New Jersey" Source="SDO"/>
+		<TableElement Code="NM" Codesys="FIPS5_2" DisplayName="[Alternative Code]New Mexico" Source="SDO"/>
+		<TableElement Code="NV" Codesys="FIPS5_2" DisplayName="[Alternative Code]Nevada" Source="SDO"/>
+		<TableElement Code="NY" Codesys="FIPS5_2" DisplayName="[Alternative Code]New York" Source="SDO"/>
+		<TableElement Code="OH" Codesys="FIPS5_2" DisplayName="[Alternative Code]Ohio" Source="SDO"/>
+		<TableElement Code="OK" Codesys="FIPS5_2" DisplayName="[Alternative Code]Oklahoma" Source="SDO"/>
+		<TableElement Code="OR" Codesys="FIPS5_2" DisplayName="[Alternative Code]Oregon" Source="SDO"/>
+		<TableElement Code="PA" Codesys="FIPS5_2" DisplayName="[Alternative Code]Pennsylvania" Source="SDO"/>
+		<TableElement Code="PR" Codesys="FIPS5_2" DisplayName="[Alternative Code]Puerto Rico" Source="SDO"/>
+		<TableElement Code="RI" Codesys="FIPS5_2" DisplayName="[Alternative Code]Rhode Island" Source="SDO"/>
+		<TableElement Code="SC" Codesys="FIPS5_2" DisplayName="[Alternative Code]South Carolina" Source="SDO"/>
+		<TableElement Code="SD" Codesys="FIPS5_2" DisplayName="[Alternative Code]South Dakota" Source="SDO"/>
+		<TableElement Code="TN" Codesys="FIPS5_2" DisplayName="[Alternative Code]Tennessee" Source="SDO"/>
+		<TableElement Code="TX" Codesys="FIPS5_2" DisplayName="[Alternative Code]Texas" Source="SDO"/>
+		<TableElement Code="UT" Codesys="FIPS5_2" DisplayName="[Alternative Code]Utah" Source="SDO"/>
+		<TableElement Code="VA" Codesys="FIPS5_2" DisplayName="[Alternative Code]Virginia" Source="SDO"/>
+		<TableElement Code="VT" Codesys="FIPS5_2" DisplayName="[Alternative Code]Vermont" Source="SDO"/>
+		<TableElement Code="WA" Codesys="FIPS5_2" DisplayName="[Alternative Code]Washington" Source="SDO"/>
+		<TableElement Code="WI" Codesys="FIPS5_2" DisplayName="[Alternative Code]Wisconsin" Source="SDO"/>
+		<TableElement Code="WV" Codesys="FIPS5_2" DisplayName="[Alternative Code]West Virginia" Source="SDO"/>
+		<TableElement Code="WY" Codesys="FIPS5_2" DisplayName="[Alternative Code]Wyoming" Source="SDO"/>
+	</TableDefinition>
+	<!-- UCUM-->
+	<TableDefinition Id="UCUM" Name="Unified Code for Units of Measure" Codesys="UCUM" Version="1" Type="External">
+		<TableElement Code="[CCID_50]" Codesys="UCUM" DisplayName="50% cell culture infectious dose" Source="Local"/>
+		<TableElement Code="[TCID_50]" Codesys="UCUM" DisplayName="50% tissue culture infectious dose" Source="Local"/>
+		<TableElement Code="[acr_br]" Codesys="UCUM" DisplayName="acre" Source="Local"/>
+		<TableElement Code="[acr_us]" Codesys="UCUM" DisplayName="acre" Source="Local"/>
+		<TableElement Code="{AHG}eq/mL" Codesys="UCUM" DisplayName="AHGEquivalentsPerMilliLiter [Substance Concentration Units]" Source="Local"/>
+		<TableElement Code="A" Codesys="UCUM" DisplayName="Ampère" Source="Local"/>
+		<TableElement Code="Ao" Codesys="UCUM" DisplayName="Ångström" Source="Local"/>
+		<TableElement Code="[APL'U]" Codesys="UCUM" DisplayName="APL unit" Source="Local"/>
+		<TableElement Code="[arb'U]" Codesys="UCUM" DisplayName="arbitrary unit" Source="Local"/>
+		<TableElement Code="ar" Codesys="UCUM" DisplayName="are" Source="Local"/>
+		<TableElement Code="AU" Codesys="UCUM" DisplayName="astronomic unit" Source="Local"/>
+		<TableElement Code="bar" Codesys="UCUM" DisplayName="bar" Source="Local"/>
+		<TableElement Code="b" Codesys="UCUM" DisplayName="barn" Source="Local"/>
+		<TableElement Code="[bbl_us]" Codesys="UCUM" DisplayName="barrel" Source="Local"/>
+		<TableElement Code="Bd" Codesys="UCUM" DisplayName="baud" Source="Local"/>
+		<TableElement Code="Bq" Codesys="UCUM" DisplayName="Becquerel" Source="Local"/>
+		<TableElement Code="B" Codesys="UCUM" DisplayName="bel" Source="Local"/>
+		<TableElement Code="B[kW]" Codesys="UCUM" DisplayName="bel kilowatt" Source="Local"/>
+		<TableElement Code="B[uV]" Codesys="UCUM" DisplayName="bel microvolt" Source="Local"/>
+		<TableElement Code="B[mV]" Codesys="UCUM" DisplayName="bel millivolt" Source="Local"/>
+		<TableElement Code="B[SPL]" Codesys="UCUM" DisplayName="bel sound pressure" Source="Local"/>
+		<TableElement Code="B[V]" Codesys="UCUM" DisplayName="bel volt" Source="Local"/>
+		<TableElement Code="B[W]" Codesys="UCUM" DisplayName="bel watt" Source="Local"/>
+		<TableElement Code="[beth'U]" Codesys="UCUM" DisplayName="Bethesda unit" Source="Local"/>
+		<TableElement Code="10*9/L" Codesys="UCUM" DisplayName="BillionPerLiter [Number Concentration Units]" Source="Local"/>
+		<TableElement Code="10*9/uL" Codesys="UCUM" DisplayName="BillionsPerMicroLiter [Number Concentration Units]" Source="Local"/>
+		<TableElement Code="10*9/mL" Codesys="UCUM" DisplayName="BillionsPerMilliliter [Number Concentration Units]" Source="Local"/>
+		<TableElement Code="Bi" Codesys="UCUM" DisplayName="Biot" Source="Local"/>
+		<TableElement Code="bit" Codesys="UCUM" DisplayName="bit" Source="Local"/>
+		<TableElement Code="bit_s" Codesys="UCUM" DisplayName="bit" Source="Local"/>
+		<TableElement Code="[bf_i]" Codesys="UCUM" DisplayName="board foot" Source="Local"/>
+		<TableElement Code="[bdsk'U]" Codesys="UCUM" DisplayName="Bodansky unit" Source="Local"/>
+		<TableElement Code="[k]" Codesys="UCUM" DisplayName="Boltzmann constant" Source="Local"/>
+		<TableElement Code="{BoneCollagen}eq/umol{Cre}" Codesys="UCUM" DisplayName="BoneCollagenEquivalentsPerMicroMoleCreatinine [Substance Ratio Or Substance Fraction Units]" Source="Local"/>
+		<TableElement Code="{BoneCollagen}eq/mmol{Cre}" Codesys="UCUM" DisplayName="BoneCollagenEquivalentsPerMilliMoleCreatinine [Substance Ratio Or Substance Fraction Units]" Source="Local"/>
+		<TableElement Code="[Btu]" Codesys="UCUM" DisplayName="British thermal unit" Source="Local"/>
+		<TableElement Code="[Btu_39]" Codesys="UCUM" DisplayName="British thermal unit at 39 °F" Source="Local"/>
+		<TableElement Code="[Btu_59]" Codesys="UCUM" DisplayName="British thermal unit at 59 °F" Source="Local"/>
+		<TableElement Code="[Btu_60]" Codesys="UCUM" DisplayName="British thermal unit at 60 °F" Source="Local"/>
+		<TableElement Code="[bu_br]" Codesys="UCUM" DisplayName="bushel" Source="Local"/>
+		<TableElement Code="[bu_us]" Codesys="UCUM" DisplayName="bushel" Source="Local"/>
+		<TableElement Code="By" Codesys="UCUM" DisplayName="byte" Source="Local"/>
+		<TableElement Code="cal" Codesys="UCUM" DisplayName="calorie" Source="Local"/>
+		<TableElement Code="cal_[15]" Codesys="UCUM" DisplayName="calorie at 15 °C" Source="Local"/>
+		<TableElement Code="cal_[20]" Codesys="UCUM" DisplayName="calorie at 20 °C" Source="Local"/>
+		<TableElement Code="cd" Codesys="UCUM" DisplayName="candela" Source="Local"/>
+		<TableElement Code="[car_Au]" Codesys="UCUM" DisplayName="carat of gold alloys" Source="Local"/>
+		<TableElement Code="{Cells}/uL" Codesys="UCUM" DisplayName="CellsPerMicroLiter [Number Concentration Units]" Source="Local"/>
+		<TableElement Code="cg" Codesys="UCUM" DisplayName="CentiGram [SI Mass Units]" Source="Local"/>
+		<TableElement Code="cL" Codesys="UCUM" DisplayName="CentiLiter [SI Volume Units]" Source="Local"/>
+		<TableElement Code="cm" Codesys="UCUM" DisplayName="CentiMeter [SI Length Units]" Source="Local"/>
+		<TableElement Code="[Ch]" Codesys="UCUM" DisplayName="Charrière french" Source="Local"/>
+		<TableElement Code="[cicero]" Codesys="UCUM" DisplayName="cicero Didot's pica" Source="Local"/>
+		<TableElement Code="circ" Codesys="UCUM" DisplayName="circle" Source="Local"/>
+		<TableElement Code="[cml_i]" Codesys="UCUM" DisplayName="circular mil" Source="Local"/>
+		<TableElement Code="[CFU]/mL" Codesys="UCUM" DisplayName="colony forming unit per milliliter" Source="Local"/>
+		<TableElement Code="[CFU]" Codesys="UCUM" DisplayName="colony forming units" Source="Local"/>
+		<TableElement Code="{cfu}/mL" Codesys="UCUM" DisplayName="ColonyFormingUnitsPerMilliLiter [Number Concentration Units]" Source="Local"/>
+		<TableElement Code="{ComplementCh50}U/mL" Codesys="UCUM" DisplayName="ComplementCh50UnitsPerMilliLiter [Arbitrary Concentration Units]" Source="Local"/>
+		<TableElement Code="{Copies}/mL" Codesys="UCUM" DisplayName="CopiesPerMilliLiter [Number Concentration Units]" Source="Local"/>
+		<TableElement Code="[cr_i]" Codesys="UCUM" DisplayName="cord" Source="Local"/>
+		<TableElement Code="[crd_us]" Codesys="UCUM" DisplayName="cord" Source="Local"/>
+		<TableElement Code="C" Codesys="UCUM" DisplayName="Coulomb" Source="Local"/>
+		<TableElement Code="{count}" Codesys="UCUM" DisplayName="count" Source="Local"/>
+		<TableElement Code="[cft_i]" Codesys="UCUM" DisplayName="cubic foot" Source="Local"/>
+		<TableElement Code="[cin_i]" Codesys="UCUM" DisplayName="cubic inch" Source="Local"/>
+		<TableElement Code="[cyd_i]" Codesys="UCUM" DisplayName="cubic yard" Source="Local"/>
+		<TableElement Code="[cup_us]" Codesys="UCUM" DisplayName="cup" Source="Local"/>
+		<TableElement Code="Ci" Codesys="UCUM" DisplayName="Curie" Source="Local"/>
+		<TableElement Code="d" Codesys="UCUM" DisplayName="day" Source="Local"/>
+		<TableElement Code="dg" Codesys="UCUM" DisplayName="DeciGram [SI Mass Units]" Source="Local"/>
+		<TableElement Code="dL" Codesys="UCUM" DisplayName="DeciLiter [SI Volume Units]" Source="Local"/>
+		<TableElement Code="dm" Codesys="UCUM" DisplayName="DeciMeter [SI Length Units]" Source="Local"/>
+		<TableElement Code="deg" Codesys="UCUM" DisplayName="degree" Source="Local"/>
+		<TableElement Code="Cel" Codesys="UCUM" DisplayName="degree Celsius" Source="Local"/>
+		<TableElement Code="[degF]" Codesys="UCUM" DisplayName="degree Fahrenheit" Source="Local"/>
+		<TableElement Code="[didot]" Codesys="UCUM" DisplayName="didot Didot's point" Source="Local"/>
+		<TableElement Code="[diop]" Codesys="UCUM" DisplayName="diopter" Source="Local"/>
+		<TableElement Code="[dr_av]" Codesys="UCUM" DisplayName="dram" Source="Local"/>
+		<TableElement Code="[dr_ap]" Codesys="UCUM" DisplayName="dram drachm" Source="Local"/>
+		<TableElement Code="[drp]" Codesys="UCUM" DisplayName="drop" Source="Local"/>
+		<TableElement Code="[dpt_us]" Codesys="UCUM" DisplayName="dry pint" Source="Local"/>
+		<TableElement Code="[dqt_us]" Codesys="UCUM" DisplayName="dry quart" Source="Local"/>
+		<TableElement Code="[dye'U]" Codesys="UCUM" DisplayName="Dye unit" Source="Local"/>
+		<TableElement Code="dyn" Codesys="UCUM" DisplayName="dyne" Source="Local"/>
+		<TableElement Code="{EhrlichU}/100g" Codesys="UCUM" DisplayName="EhrlichUnitsPer100Gram [Arbitrary Concentration Content Units]" Source="Local"/>
+		<TableElement Code="{EhrlichU}/dL" Codesys="UCUM" DisplayName="EhrlichUnitsPerDeciLiter [Arbitrary Concentration Units]" Source="Local"/>
+		<TableElement Code="[m_e]" Codesys="UCUM" DisplayName="electron mass" Source="Local"/>
+		<TableElement Code="eV" Codesys="UCUM" DisplayName="electronvolt" Source="Local"/>
+		<TableElement Code="[e]" Codesys="UCUM" DisplayName="elementary charge" Source="Local"/>
+		<TableElement Code="{ElisaU}/mL" Codesys="UCUM" DisplayName="ElisaUnitsPerMilliLiter [Arbitrary Concentration Units]" Source="Local"/>
+		<TableElement Code="U/L" Codesys="UCUM" DisplayName="enzyme unit per liter" Source="Local"/>
+		<TableElement Code="eq" Codesys="UCUM" DisplayName="equivalents" Source="Local"/>
+		<TableElement Code="eq/L" Codesys="UCUM" DisplayName="EquivalentsPerLiter [Substance Concentration Units]" Source="Local"/>
+		<TableElement Code="eq/umol" Codesys="UCUM" DisplayName="EquivalentsPerMicroMole [Substance Ratio Or Substance Fraction Units]" Source="Local"/>
+		<TableElement Code="eq/mL" Codesys="UCUM" DisplayName="EquivalentsPerMilliLiter [Substance Concentration Units]" Source="Local"/>
+		<TableElement Code="eq/mmol" Codesys="UCUM" DisplayName="EquivalentsPerMilliMole [Substance Ratio Or Substance Fraction Units]" Source="Local"/>
+		<TableElement Code="erg" Codesys="UCUM" DisplayName="erg" Source="Local"/>
+		<TableElement Code="F" Codesys="UCUM" DisplayName="Farad" Source="Local"/>
+		<TableElement Code="[fth_br]" Codesys="UCUM" DisplayName="fathom" Source="Local"/>
+		<TableElement Code="[fth_i]" Codesys="UCUM" DisplayName="fathom" Source="Local"/>
+		<TableElement Code="[fth_us]" Codesys="UCUM" DisplayName="fathom" Source="Local"/>
+		<TableElement Code="fg" Codesys="UCUM" DisplayName="FemtoGram [SI Mass Units]" Source="Local"/>
+		<TableElement Code="fL" Codesys="UCUM" DisplayName="FemtoLiter [SI Volume Units]" Source="Local"/>
+		<TableElement Code="fm" Codesys="UCUM" DisplayName="FemtoMeter [SI Length Units]" Source="Local"/>
+		<TableElement Code="fmol" Codesys="UCUM" DisplayName="Femtomole [Substance Units]" Source="Local"/>
+		<TableElement Code="fmol/g" Codesys="UCUM" DisplayName="FemtoMolesPerGram [Substance Content Units]" Source="Local"/>
+		<TableElement Code="fmol/mg" Codesys="UCUM" DisplayName="FemtoMolesPerMilliGram [Substance Content Units]" Source="Local"/>
+		<TableElement Code="fmol/mL" Codesys="UCUM" DisplayName="FemtoMolesPerMilliLiter [Substance Concentration Units]" Source="Local"/>
+		<TableElement Code="[fdr_br]" Codesys="UCUM" DisplayName="fluid dram" Source="Local"/>
+		<TableElement Code="[fdr_us]" Codesys="UCUM" DisplayName="fluid dram" Source="Local"/>
+		<TableElement Code="[foz_br]" Codesys="UCUM" DisplayName="fluid ounce" Source="Local"/>
+		<TableElement Code="[foz_us]" Codesys="UCUM" DisplayName="fluid ounce" Source="Local"/>
+		<TableElement Code="[ft_br]" Codesys="UCUM" DisplayName="foot" Source="Local"/>
+		<TableElement Code="[ft_i]" Codesys="UCUM" DisplayName="foot" Source="Local"/>
+		<TableElement Code="[ft_us]" Codesys="UCUM" DisplayName="foot" Source="Local"/>
+		<TableElement Code="[fur_us]" Codesys="UCUM" DisplayName="furlong" Source="Local"/>
+		<TableElement Code="Gal" Codesys="UCUM" DisplayName="Gal" Source="Local"/>
+		<TableElement Code="[gal_br]" Codesys="UCUM" DisplayName="gallon" Source="Local"/>
+		<TableElement Code="G" Codesys="UCUM" DisplayName="Gauss" Source="Local"/>
+		<TableElement Code="Gb" Codesys="UCUM" DisplayName="Gilbert" Source="Local"/>
+		<TableElement Code="[gil_br]" Codesys="UCUM" DisplayName="gill" Source="Local"/>
+		<TableElement Code="[gil_us]" Codesys="UCUM" DisplayName="gill" Source="Local"/>
+		<TableElement Code="gon" Codesys="UCUM" DisplayName="gon grade" Source="Local"/>
+		<TableElement Code="[GPL'U]" Codesys="UCUM" DisplayName="GPL unit" Source="Local"/>
+		<TableElement Code="[gr]" Codesys="UCUM" DisplayName="grain" Source="Local"/>
+		<TableElement Code="g" Codesys="UCUM" DisplayName="gram" Source="Local"/>
+		<TableElement Code="g.m/{H.B.}" Codesys="UCUM" DisplayName="gram meter per heartbeat" Source="Local"/>
+		<TableElement Code="g%" Codesys="UCUM" DisplayName="gram percent" Source="Local"/>
+		<TableElement Code="gf" Codesys="UCUM" DisplayName="gram-force" Source="Local"/>
+		<TableElement Code="g.m" Codesys="UCUM" DisplayName="GramMeter [Massive Distance Units]" Source="Local"/>
+		<TableElement Code="g.m/{hb}" Codesys="UCUM" DisplayName="GramMeterPerHeartbeat [Massive Distance Units]" Source="Local"/>
+		<TableElement Code="g.m/({hb}.m2)" Codesys="UCUM" DisplayName="GramMeterPerHeartbeatPerSquareMeter [Lineic Mass Units]" Source="Local"/>
+		<TableElement Code="g/[100]g" Codesys="UCUM" DisplayName="GramsPer100Gram [Mass Ratio Or Mass Fraction Or Mass Content Units]" Source="Local"/>
+		<TableElement Code="g/dL" Codesys="UCUM" DisplayName="GramsPerDeciLiter [Mass Concentration Units]" Source="Local"/>
+		<TableElement Code="g/g" Codesys="UCUM" DisplayName="GramsPerGram [Mass Ratio Or Mass Fraction Or Mass Content Units]" Source="Local"/>
+		<TableElement Code="g/g{Cre}" Codesys="UCUM" DisplayName="GramsPerGramCreatinine [Mass Ratio Or Mass Fraction Or Mass Content Units]" Source="Local"/>
+		<TableElement Code="g/kg" Codesys="UCUM" DisplayName="GramsPerKiloGram [Mass Ratio Or Mass Fraction Or Mass Content Units]" Source="Local"/>
+		<TableElement Code="g/L" Codesys="UCUM" DisplayName="GramsPerLiter [Mass Concentration Units]" Source="Local"/>
+		<TableElement Code="g/mL" Codesys="UCUM" DisplayName="GramsPerMilliLiter [Mass Concentration Units]" Source="Local"/>
+		<TableElement Code="g/m2" Codesys="UCUM" DisplayName="GramsPerSquareMeter [Areic Mass Units]" Source="Local"/>
+		<TableElement Code="g/{TotalWeight}" Codesys="UCUM" DisplayName="GramsPerTotalWeight [SI Mass Units]" Source="Local"/>
+		<TableElement Code="Gy" Codesys="UCUM" DisplayName="Gray" Source="Local"/>
+		<TableElement Code="[ch_br]" Codesys="UCUM" DisplayName="Gunter's chain" Source="Local"/>
+		<TableElement Code="[ch_us]" Codesys="UCUM" DisplayName="Gunter's chain Surveyor's chain" Source="Local"/>
+		<TableElement Code="[hd_i]" Codesys="UCUM" DisplayName="hand" Source="Local"/>
+		<TableElement Code="hL" Codesys="UCUM" DisplayName="HectoLiter [SI Volume Units]" Source="Local"/>
+		<TableElement Code="H" Codesys="UCUM" DisplayName="Henry" Source="Local"/>
+		<TableElement Code="Hz" Codesys="UCUM" DisplayName="Hertz" Source="Local"/>
+		<TableElement Code="[HPF]" Codesys="UCUM" DisplayName="high power field" Source="Local"/>
+		<TableElement Code="[gal_wi]" Codesys="UCUM" DisplayName="historical winchester gallon" Source="Local"/>
+		<TableElement Code="[hp_C]" Codesys="UCUM" DisplayName="homeopathic potency of centesimal series" Source="Local"/>
+		<TableElement Code="[hp_X]" Codesys="UCUM" DisplayName="homeopathic potency of decimal series" Source="Local"/>
+		<TableElement Code="[HP]" Codesys="UCUM" DisplayName="horsepower" Source="Local"/>
+		<TableElement Code="[hnsf'U]" Codesys="UCUM" DisplayName="Hounsfield unit" Source="Local"/>
+		<TableElement Code="h" Codesys="UCUM" DisplayName="hour" Source="Local"/>
+		<TableElement Code="{IgAPhospholipid}U/mL" Codesys="UCUM" DisplayName="IgAPhospholipidUnitsPerMilliLiter [Arbitrary Concentration Units]" Source="Local"/>
+		<TableElement Code="{IgGPhospholipid}U/mL" Codesys="UCUM" DisplayName="IgGPhospholipidUnitsPerMilliLiter [Arbitrary Concentration Units]" Source="Local"/>
+		<TableElement Code="{IgMPhospholipid}U/mL" Codesys="UCUM" DisplayName="IgMPhospholipidUnitsPerMilliLiter [Arbitrary Concentration Units]" Source="Local"/>
+		<TableElement Code="[FFU]" Codesys="UCUM" DisplayName="immunofocus forming units" Source="Local"/>
+		<TableElement Code="[in_br]" Codesys="UCUM" DisplayName="inch" Source="Local"/>
+		<TableElement Code="[in_i]" Codesys="UCUM" DisplayName="inch" Source="Local"/>
+		<TableElement Code="[in_us]" Codesys="UCUM" DisplayName="inch" Source="Local"/>
+		<TableElement Code="[in_i'Hg]" Codesys="UCUM" DisplayName="inch of mercury column" Source="Local"/>
+		<TableElement Code="[in_i'H2O]" Codesys="UCUM" DisplayName="inch of water column" Source="Local"/>
+		<TableElement Code="{index_val}" Codesys="UCUM" DisplayName="index value" Source="Local"/>
+		<TableElement Code="[Btu_IT]" Codesys="UCUM" DisplayName="international table British thermal unit" Source="Local"/>
+		<TableElement Code="cal_IT" Codesys="UCUM" DisplayName="international table calorie" Source="Local"/>
+		<TableElement Code="[iU]" Codesys="UCUM" DisplayName="international unit" Source="Local"/>
+		<TableElement Code="[IU]/mL" Codesys="UCUM" DisplayName="international unit per milliliter" Source="Local"/>
+		<TableElement Code="[iU]/dL" Codesys="UCUM" DisplayName="InternationalUnitsPerDeciLiter [Arbitrary Concentration Units]" Source="Local"/>
+		<TableElement Code="[iU]/g" Codesys="UCUM" DisplayName="InternationalUnitsPerGram [Arbitrary Concentration Content Units]" Source="Local"/>
+		<TableElement Code="[iU]/g{Hgb}" Codesys="UCUM" DisplayName="InternationalUnitsPerGramHemoglobin [Arbitrary Concentration Content Units]" Source="Local"/>
+		<TableElement Code="[iU]/kg" Codesys="UCUM" DisplayName="InternationalUnitsPerKilogram [Arbitrary Concentration Content Units]" Source="Local"/>
+		<TableElement Code="[iU]/L" Codesys="UCUM" DisplayName="InternationalUnitsPerLiter [Arbitrary Concentration Units]" Source="Local"/>
+		<TableElement Code="[iU]/mL" Codesys="UCUM" DisplayName="InternationalUnitsPerMilliLiter [Arbitrary Concentration Units]" Source="Local"/>
+		<TableElement Code="J" Codesys="UCUM" DisplayName="Joule" Source="Local"/>
+		<TableElement Code="kat" Codesys="UCUM" DisplayName="katal" Source="Local"/>
+		<TableElement Code="kat/kg" Codesys="UCUM" DisplayName="KatalPerKilogram [Substance Rate Content Units]" Source="Local"/>
+		<TableElement Code="Ky" Codesys="UCUM" DisplayName="Kayser" Source="Local"/>
+		<TableElement Code="K" Codesys="UCUM" DisplayName="Kelvin" Source="Local"/>
+		<TableElement Code="K/W" Codesys="UCUM" DisplayName="KelvinPerWatt [Thermal Resistance Units]" Source="Local"/>
+		<TableElement Code="kCal/[oz_av]" Codesys="UCUM" DisplayName="KiloCaloriesPerOunce [Energy Content Units]" Source="Local"/>
+		<TableElement Code="kg" Codesys="UCUM" DisplayName="KiloGram [SI Mass Units]" Source="Local"/>
+		<TableElement Code="kg{wet'tis}" Codesys="UCUM" DisplayName="kilogram of wet tissue" Source="Local"/>
+		<TableElement Code="kg/m3" Codesys="UCUM" DisplayName="KiloGramsPerCubicMeter [Mass Concentration Units]" Source="Local"/>
+		<TableElement Code="kg/L" Codesys="UCUM" DisplayName="KiloGramsPerLiter [Mass Concentration Units]" Source="Local"/>
+		<TableElement Code="kg/mol" Codesys="UCUM" DisplayName="KiloGramsPerMole [Molar Mass Units]" Source="Local"/>
+		<TableElement Code="kg/m2" Codesys="UCUM" DisplayName="KiloGramsPerSquareMeter [Areic Mass Units]" Source="Local"/>
+		<TableElement Code="k[iU]/mL" Codesys="UCUM" DisplayName="KiloInternationalUnitsPerMilliLiter [Arbitrary Concentration Units]" Source="Local"/>
+		<TableElement Code="kL" Codesys="UCUM" DisplayName="KiloLiter [SI Volume Units]" Source="Local"/>
+		<TableElement Code="km" Codesys="UCUM" DisplayName="KiloMeter [SI Length Units]" Source="Local"/>
+		<TableElement Code="ks" Codesys="UCUM" DisplayName="KiloSecond [Time Units]" Source="Local"/>
+		<TableElement Code="kU/g" Codesys="UCUM" DisplayName="KiloUnitsPerGram [Substance Rate Content Units]" Source="Local"/>
+		<TableElement Code="[ka'U]" Codesys="UCUM" DisplayName="King-Armstrong unit" Source="Local"/>
+		<TableElement Code="[kn_br]" Codesys="UCUM" DisplayName="knot" Source="Local"/>
+		<TableElement Code="[kn_i]" Codesys="UCUM" DisplayName="knot" Source="Local"/>
+		<TableElement Code="[knk'U]" Codesys="UCUM" DisplayName="Kunkel unit" Source="Local"/>
+		<TableElement Code="Lmb" Codesys="UCUM" DisplayName="Lambert" Source="Local"/>
+		<TableElement Code="[ly]" Codesys="UCUM" DisplayName="light-year" Source="Local"/>
+		<TableElement Code="[ligne]" Codesys="UCUM" DisplayName="ligne French line" Source="Local"/>
+		<TableElement Code="[lne]" Codesys="UCUM" DisplayName="line" Source="Local"/>
+		<TableElement Code="[lk_br]" Codesys="UCUM" DisplayName="link for Gunter's chain" Source="Local"/>
+		<TableElement Code="[lk_us]" Codesys="UCUM" DisplayName="link for Gunter's chain" Source="Local"/>
+		<TableElement Code="[rlk_us]" Codesys="UCUM" DisplayName="link for Ramden's chain" Source="Local"/>
+		<TableElement Code="l" Codesys="UCUM" DisplayName="liter" Source="Local"/>
+		<TableElement Code="L" Codesys="UCUM" DisplayName="liter" Source="Local"/>
+		<TableElement Code="L/kg" Codesys="UCUM" DisplayName="LitersPerKilogram [Volume Content Units]" Source="Local"/>
+		<TableElement Code="L.s2/s" Codesys="UCUM" DisplayName="LiterSquareSecondPerSecond [Volume Duration Units]" Source="Local"/>
+		<TableElement Code="[lg]" Codesys="UCUM" DisplayName="Log10 [Unity]" Source="Local"/>
+		<TableElement Code="[lcwt_av]" Codesys="UCUM" DisplayName="long hunderdweight British hundredweight" Source="Local"/>
+		<TableElement Code="[lton_av]" Codesys="UCUM" DisplayName="long ton British ton" Source="Local"/>
+		<TableElement Code="[LPF]" Codesys="UCUM" DisplayName="low power field" Source="Local"/>
+		<TableElement Code="lm" Codesys="UCUM" DisplayName="lumen" Source="Local"/>
+		<TableElement Code="lx" Codesys="UCUM" DisplayName="lux" Source="Local"/>
+		<TableElement Code="[mclg'U]" Codesys="UCUM" DisplayName="Mac Lagan unit" Source="Local"/>
+		<TableElement Code="Mx" Codesys="UCUM" DisplayName="Maxwell" Source="Local"/>
+		<TableElement Code="[Btu_m]" Codesys="UCUM" DisplayName="mean British thermal unit" Source="Local"/>
+		<TableElement Code="cal_m" Codesys="UCUM" DisplayName="mean calorie" Source="Local"/>
+		<TableElement Code="mo_g" Codesys="UCUM" DisplayName="mean Gregorian month" Source="Local"/>
+		<TableElement Code="a_g" Codesys="UCUM" DisplayName="mean Gregorian year" Source="Local"/>
+		<TableElement Code="mo_j" Codesys="UCUM" DisplayName="mean Julian month" Source="Local"/>
+		<TableElement Code="a_j" Codesys="UCUM" DisplayName="mean Julian year" Source="Local"/>
+		<TableElement Code="Ms" Codesys="UCUM" DisplayName="Megasecond [Time Units]" Source="Local"/>
+		<TableElement Code="[mesh_i]" Codesys="UCUM" DisplayName="mesh" Source="Local"/>
+		<TableElement Code="[MET]" Codesys="UCUM" DisplayName="metabolic equivalent" Source="Local"/>
+		<TableElement Code="m" Codesys="UCUM" DisplayName="meter" Source="Local"/>
+		<TableElement Code="m[Hg]" Codesys="UCUM" DisplayName="meter of mercury column" Source="Local"/>
+		<TableElement Code="m[H2O]" Codesys="UCUM" DisplayName="meter of water column" Source="Local"/>
+		<TableElement Code="[car_m]" Codesys="UCUM" DisplayName="metric carat" Source="Local"/>
+		<TableElement Code="mho" Codesys="UCUM" DisplayName="mho" Source="Local"/>
+		<TableElement Code="ueq" Codesys="UCUM" DisplayName="MicroEquivalent [Substance Units]" Source="Local"/>
+		<TableElement Code="ueq/L" Codesys="UCUM" DisplayName="MicroEquivalentsPerLiter [Substance Concentration Units]" Source="Local"/>
+		<TableElement Code="ueq/mL" Codesys="UCUM" DisplayName="MicroEquivalentsPerMilliLiter [Substance Concentration Units]" Source="Local"/>
+		<TableElement Code="ug" Codesys="UCUM" DisplayName="MicroGram [SI Mass Units]" Source="Local"/>
+		<TableElement Code="ug/dL" Codesys="UCUM" DisplayName="microgram per deciliter" Source="Local"/>
+		<TableElement Code="ug/[100]g" Codesys="UCUM" DisplayName="MicroGramPer100Gram [Mass Ratio Or Mass Fraction Or Mass Content Units]" Source="Local"/>
+		<TableElement Code="ug/g{Cre}" Codesys="UCUM" DisplayName="MicroGramPerGramCreatinine [Mass Ratio Or Mass Fraction Or Mass Content Units]" Source="Local"/>
+		<TableElement Code="ug/g{DryWeight}" Codesys="UCUM" DisplayName="MicroGramPerGramDryWeight [Mass Ratio Or Mass Fraction Or Mass Content Units]" Source="Local"/>
+		<TableElement Code="ug/dL{rbc}" Codesys="UCUM" DisplayName="MicroGramsPerDeciLiterRedBloodCells [Mass Concentration Units]" Source="Local"/>
+		<TableElement Code="ug/g" Codesys="UCUM" DisplayName="MicroGramsPerGram [Mass Ratio Or Mass Fraction Or Mass Content Units]" Source="Local"/>
+		<TableElement Code="ug/g{Hgb}" Codesys="UCUM" DisplayName="MicroGramsPerGramHemoglobin [Mass Ratio Or Mass Fraction Or Mass Content Units]" Source="Local"/>
+		<TableElement Code="ug/kg" Codesys="UCUM" DisplayName="MicroGramsPerKiloGram [Mass Ratio Or Mass Fraction Or Mass Content Units]" Source="Local"/>
+		<TableElement Code="ug/L" Codesys="UCUM" DisplayName="MicroGramsPerLiter [Mass Concentration Units]" Source="Local"/>
+		<TableElement Code="ug/mg" Codesys="UCUM" DisplayName="MicroGramsPerMilliGram [Mass Ratio Or Mass Fraction Or Mass Content Units]" Source="Local"/>
+		<TableElement Code="ug/mg{Cre}" Codesys="UCUM" DisplayName="MicroGramsPerMilliGramCreatinine [Mass Ratio Or Mass Fraction Or Mass Content Units]" Source="Local"/>
+		<TableElement Code="ug/mL" Codesys="UCUM" DisplayName="MicroGramsPerMilliLiter [Mass Concentration Units]" Source="Local"/>
+		<TableElement Code="ug/ng" Codesys="UCUM" DisplayName="MicroGramsPerNanoGram [Mass Ratio Or Mass Fraction Or Mass Content Units]" Source="Local"/>
+		<TableElement Code="ug/{Specimen}" Codesys="UCUM" DisplayName="MicroGramsPerSpecimen [SI Mass Units]" Source="Local"/>
+		<TableElement Code="ug/m2" Codesys="UCUM" DisplayName="MicroGramsPerSquareMeter [Areic Mass Units]" Source="Local"/>
+		<TableElement Code="ug/{TotalVolume}" Codesys="UCUM" DisplayName="MicroGramsPerTotalVolume [SI Mass Units]" Source="Local"/>
+		<TableElement Code="u[iU]" Codesys="UCUM" DisplayName="MicroInternationalUnit [Arbitrary Units]" Source="Local"/>
+		<TableElement Code="u[iU]/mL" Codesys="UCUM" DisplayName="MicroInternationalUnitsPerMilliLiter [Arbitrary Concentration Units]" Source="Local"/>
+		<TableElement Code="uL" Codesys="UCUM" DisplayName="MicroLiter [SI Volume Units]" Source="Local"/>
+		<TableElement Code="um" Codesys="UCUM" DisplayName="MicroMeter [SI Length Units]" Source="Local"/>
+		<TableElement Code="umol" Codesys="UCUM" DisplayName="MicroMole [Substance Units]" Source="Local"/>
+		<TableElement Code="umol/dL" Codesys="UCUM" DisplayName="MicroMolesPerDeciLiter [Substance Concentration Units]" Source="Local"/>
+		<TableElement Code="umol/g" Codesys="UCUM" DisplayName="MicroMolesPerGram [Substance Content Units]" Source="Local"/>
+		<TableElement Code="umol/g{Cre}" Codesys="UCUM" DisplayName="MicroMolesPerGramCreatinine [Substance Content Units]" Source="Local"/>
+		<TableElement Code="umol/g{Hgb}" Codesys="UCUM" DisplayName="MicroMolesPerGramHemoglobin [Substance Content Units]" Source="Local"/>
+		<TableElement Code="umol/L" Codesys="UCUM" DisplayName="MicroMolesPerLiter [Substance Concentration Units]" Source="Local"/>
+		<TableElement Code="umol/mg" Codesys="UCUM" DisplayName="MicroMolesPerMilliGram [Substance Content Units]" Source="Local"/>
+		<TableElement Code="umol/mg{Cre}" Codesys="UCUM" DisplayName="MicroMolesPerMilliGramCreatinine [Substance Content Units]" Source="Local"/>
+		<TableElement Code="umol/mL" Codesys="UCUM" DisplayName="MicroMolesPerMilliLiter [Substance Concentration Units]" Source="Local"/>
+		<TableElement Code="umol/min/g" Codesys="UCUM" DisplayName="MicroMolesPerMinutePerGram [Substance Rate Content Units]" Source="Local"/>
+		<TableElement Code="umol/mol" Codesys="UCUM" DisplayName="MicroMolesPerMole [Substance Ratio Or Substance Fraction Units]" Source="Local"/>
+		<TableElement Code="umol/mol{Cre}" Codesys="UCUM" DisplayName="MicroMolesPerMoleCreatinine [Substance Ratio Or Substance Fraction Units]" Source="Local"/>
+		<TableElement Code="us" Codesys="UCUM" DisplayName="MicroSecond [Time Units]" Source="Local"/>
+		<TableElement Code="[mil_i]" Codesys="UCUM" DisplayName="mil" Source="Local"/>
+		<TableElement Code="[mil_us]" Codesys="UCUM" DisplayName="mil" Source="Local"/>
+		<TableElement Code="[mi_br]" Codesys="UCUM" DisplayName="mile" Source="Local"/>
+		<TableElement Code="[mi_us]" Codesys="UCUM" DisplayName="mile" Source="Local"/>
+		<TableElement Code="meq" Codesys="UCUM" DisplayName="MilliEquivalent [Substance Units]" Source="Local"/>
+		<TableElement Code="meq/mL" Codesys="UCUM" DisplayName="MilliEquivalentPerMilliLiter [Substance Concentration Units]" Source="Local"/>
+		<TableElement Code="meq/dL" Codesys="UCUM" DisplayName="MilliEquivalentsPerDeciLiter [Substance Concentration Units]" Source="Local"/>
+		<TableElement Code="meq/g" Codesys="UCUM" DisplayName="MilliEquivalentsPerGram [Substance Content Units]" Source="Local"/>
+		<TableElement Code="meq/g{Cre}" Codesys="UCUM" DisplayName="MilliEquivalentsPerGramCreatinine [Substance Content Units]" Source="Local"/>
+		<TableElement Code="meq/kg" Codesys="UCUM" DisplayName="MilliEquivalentsPerKiloGram [Substance Content Units]" Source="Local"/>
+		<TableElement Code="meq/L" Codesys="UCUM" DisplayName="MilliEquivalentsPerLiter [Substance Concentration Units]" Source="Local"/>
+		<TableElement Code="meq/{Specimen}" Codesys="UCUM" DisplayName="MilliEquivalentsPerSpecimen [Substance Units]" Source="Local"/>
+		<TableElement Code="meq/m2" Codesys="UCUM" DisplayName="MilliEquivalentsPerSquareMeter [Areic Substance Units]" Source="Local"/>
+		<TableElement Code="mg" Codesys="UCUM" DisplayName="MilliGram [SI Mass Units]" Source="Local"/>
+		<TableElement Code="mg{creat}" Codesys="UCUM" DisplayName="milligram of creatinine" Source="Local"/>
+		<TableElement Code="mg/g{Cre}" Codesys="UCUM" DisplayName="MilliGramPerGramCreatinine [Mass Ratio Or Mass Fraction Or Mass Content Units]" Source="Local"/>
+		<TableElement Code="mg/{TotalVolume}" Codesys="UCUM" DisplayName="MilliGramPerTotalVolume [SI Mass Units]" Source="Local"/>
+		<TableElement Code="mg/m3" Codesys="UCUM" DisplayName="MilliGramsPerCubicMeter [Mass Concentration Units]" Source="Local"/>
+		<TableElement Code="mg/dL" Codesys="UCUM" DisplayName="MilliGramsPerDeciLiter [Mass Concentration Units]" Source="Local"/>
+		<TableElement Code="mg/g" Codesys="UCUM" DisplayName="MilliGramsPerGram [Mass Ratio Or Mass Fraction Or Mass Content Units]" Source="Local"/>
+		<TableElement Code="mg/kg" Codesys="UCUM" DisplayName="MilliGramsPerKiloGram [Mass Ratio Or Mass Fraction Or Mass Content Units]" Source="Local"/>
+		<TableElement Code="mg/L" Codesys="UCUM" DisplayName="MilliGramsPerLiter [Mass Concentration Units]" Source="Local"/>
+		<TableElement Code="mg/mg" Codesys="UCUM" DisplayName="MilliGramsPerMilliGram [Mass Ratio Or Mass Fraction Or Mass Content Units]" Source="Local"/>
+		<TableElement Code="mg/mg{Cre}" Codesys="UCUM" DisplayName="MilligramsPerMilligramCreatinine [Mass Ratio Or Mass Fraction Or Mass Content Units]" Source="Local"/>
+		<TableElement Code="mg/mL" Codesys="UCUM" DisplayName="MilliGramsPerMilliLiter [Mass Concentration Units]" Source="Local"/>
+		<TableElement Code="mg/m2" Codesys="UCUM" DisplayName="MilliGramsPerSquareMeter [Areic Mass Units]" Source="Local"/>
+		<TableElement Code="mg/{Volume}" Codesys="UCUM" DisplayName="MilliGramsPerVolume [SI Mass Units]" Source="Local"/>
+		<TableElement Code="mg{Phenylketones}/dL" Codesys="UCUM" DisplayName="MilliGramsPhenylketonesPerDeciLiter [Mass Concentration Units]" Source="Local"/>
+		<TableElement Code="m[iU]/L" Codesys="UCUM" DisplayName="MilliInternationalUnitsPerLiter [Arbitrary Concentration Units]" Source="Local"/>
+		<TableElement Code="m[iU]/mL" Codesys="UCUM" DisplayName="MilliInternationalUnitsPerMilliLiter [Arbitrary Concentration Units]" Source="Local"/>
+		<TableElement Code="mL" Codesys="UCUM" DisplayName="MilliLiter [SI Volume Units]" Source="Local"/>
+		<TableElement Code="mL/dL" Codesys="UCUM" DisplayName="MilliLitersPerDeciLiter [Volume Fraction Units]" Source="Local"/>
+		<TableElement Code="mL/{h'b}" Codesys="UCUM" DisplayName="MilliLitersPerHeartbeat [SI Volume Units]" Source="Local"/>
+		<TableElement Code="mL/kg" Codesys="UCUM" DisplayName="MilliLitersPerKiloGram [Volume Content Units]" Source="Local"/>
+		<TableElement Code="mm" Codesys="UCUM" DisplayName="MilliMeter [SI Length Units]" Source="Local"/>
+		<TableElement Code="mm[Hg]" Codesys="UCUM" DisplayName="MilliMeters of Mercury [Blood Pressure Unit]" Source="Local"/>
+		<TableElement Code="mmol" Codesys="UCUM" DisplayName="MilliMole [Substance Units]" Source="Local"/>
+		<TableElement Code="mmol/dL" Codesys="UCUM" DisplayName="MilliMolesPerDeciLiter [Substance Concentration Units]" Source="Local"/>
+		<TableElement Code="mmol/g" Codesys="UCUM" DisplayName="MilliMolesPerGram [Substance Content Units]" Source="Local"/>
+		<TableElement Code="mmol/kg" Codesys="UCUM" DisplayName="MilliMolesPerKiloGram [Substance Content Units]" Source="Local"/>
+		<TableElement Code="mmol/L" Codesys="UCUM" DisplayName="MilliMolesPerLiter [Substance Concentration Units]" Source="Local"/>
+		<TableElement Code="mmol/mol" Codesys="UCUM" DisplayName="MilliMolesPerMole [Substance Ratio Or Substance Fraction Units]" Source="Local"/>
+		<TableElement Code="mmol/mol{Cre}" Codesys="UCUM" DisplayName="MilliMolesPerMoleCreatinine [Substance Ratio Or Substance Fraction Units]" Source="Local"/>
+		<TableElement Code="mmol/m2" Codesys="UCUM" DisplayName="MilliMolesPerSquareMeter [Areic Substance Units]" Source="Local"/>
+		<TableElement Code="mmol/{TotalVolume}" Codesys="UCUM" DisplayName="MilliMolesPerTotalVolume [Substance Units]" Source="Local"/>
+		<TableElement Code="10*6" Codesys="UCUM" DisplayName="Million [Unity]" Source="Local"/>
+		<TableElement Code="10*6.eq/mL" Codesys="UCUM" DisplayName="MillionEquivalentsPerMilliLiter [Substance Concentration Units]" Source="Local"/>
+		<TableElement Code="10*6.[iU]" Codesys="UCUM" DisplayName="MillionInternationalUnit [Arbitrary Units]" Source="Local"/>
+		<TableElement Code="10*6/L" Codesys="UCUM" DisplayName="MillionPerLiter [Number Concentration Units]" Source="Local"/>
+		<TableElement Code="10*6/mL" Codesys="UCUM" DisplayName="MillionPerMilliLiter [Number Concentration Units]" Source="Local"/>
+		<TableElement Code="10*6/{Specimen}" Codesys="UCUM" DisplayName="MillionPerSpecimen [Unity]" Source="Local"/>
+		<TableElement Code="10*6/uL" Codesys="UCUM" DisplayName="MillionsPerMicroLiter [Number Concentration Units]" Source="Local"/>
+		<TableElement Code="mosm" Codesys="UCUM" DisplayName="MilliOsmole [Substance Units]" Source="Local"/>
+		<TableElement Code="mosm/kg" Codesys="UCUM" DisplayName="MilliOsmolesPerKiloGram [Substance Content Units]" Source="Local"/>
+		<TableElement Code="mosm/L" Codesys="UCUM" DisplayName="MilliOsmolesPerLiter [Substance Concentration Units]" Source="Local"/>
+		<TableElement Code="ms" Codesys="UCUM" DisplayName="MilliSecond [Time Units]" Source="Local"/>
+		<TableElement Code="mU/g" Codesys="UCUM" DisplayName="MilliUnitsPerGram [Substance Rate Content Units]" Source="Local"/>
+		<TableElement Code="mU/g{Hgb}" Codesys="UCUM" DisplayName="MilliUnitsPerGramHemoglobin [Substance Rate Content Units]" Source="Local"/>
+		<TableElement Code="mU/mg" Codesys="UCUM" DisplayName="MilliUnitsPerMilligram [Substance Rate Content Units]" Source="Local"/>
+		<TableElement Code="mU/mg{Cre}" Codesys="UCUM" DisplayName="MilliUnitsPerMilliGramCreatinine [Substance Rate Content Units]" Source="Local"/>
+		<TableElement Code="[min_br]" Codesys="UCUM" DisplayName="minim" Source="Local"/>
+		<TableElement Code="[min_us]" Codesys="UCUM" DisplayName="minim" Source="Local"/>
+		<TableElement Code="'" Codesys="UCUM" DisplayName="minute" Source="Local"/>
+		<TableElement Code="min" Codesys="UCUM" DisplayName="minute" Source="Local"/>
+		<TableElement Code="mol" Codesys="UCUM" DisplayName="mole" Source="Local"/>
+		<TableElement Code="mol/m3" Codesys="UCUM" DisplayName="MolesPerCubicMeter [Substance Concentration Units]" Source="Local"/>
+		<TableElement Code="mol/kg" Codesys="UCUM" DisplayName="MolesPerKiloGram [Substance Content Units]" Source="Local"/>
+		<TableElement Code="mol/L" Codesys="UCUM" DisplayName="MolesPerLiter [Substance Concentration Units]" Source="Local"/>
+		<TableElement Code="mol/mL" Codesys="UCUM" DisplayName="MolesPerMilliLiter [Substance Concentration Units]" Source="Local"/>
+		<TableElement Code="mo" Codesys="UCUM" DisplayName="month" Source="Local"/>
+		<TableElement Code="[MPL'U]" Codesys="UCUM" DisplayName="MPL unit" Source="Local"/>
+		<TableElement Code="ng" Codesys="UCUM" DisplayName="NanoGram [SI Mass Units]" Source="Local"/>
+		<TableElement Code="ng/dL" Codesys="UCUM" DisplayName="NanoGramsPerDeciLiter [Mass Concentration Units]" Source="Local"/>
+		<TableElement Code="ng/g" Codesys="UCUM" DisplayName="NanoGramsPerGram [Mass Ratio Or Mass Fraction Or Mass Content Units]" Source="Local"/>
+		<TableElement Code="ng/g{Cre}" Codesys="UCUM" DisplayName="NanoGramsPerGramCreatinine [Mass Ratio Or Mass Fraction Or Mass Content Units]" Source="Local"/>
+		<TableElement Code="ng/kg" Codesys="UCUM" DisplayName="NanoGramsPerKiloGram [Mass Ratio Or Mass Fraction Or Mass Content Units]" Source="Local"/>
+		<TableElement Code="ng/L" Codesys="UCUM" DisplayName="NanoGramsPerLiter [Mass Concentration Units]" Source="Local"/>
+		<TableElement Code="ng/mg" Codesys="UCUM" DisplayName="NanoGramsPerMilliGram [Mass Ratio Or Mass Fraction Or Mass Content Units]" Source="Local"/>
+		<TableElement Code="ng/mg{Protein}" Codesys="UCUM" DisplayName="NanoGramsPerMilliGramProtein [Mass Ratio Or Mass Fraction Or Mass Content Units]" Source="Local"/>
+		<TableElement Code="ng/mL" Codesys="UCUM" DisplayName="NanoGramsPerMilliLiter [Mass Concentration Units]" Source="Local"/>
+		<TableElement Code="ng/mL{rbc}" Codesys="UCUM" DisplayName="NanoGramsPerMilliLiterRedBloodCells [Mass Concentration Units]" Source="Local"/>
+		<TableElement Code="ng/m2" Codesys="UCUM" DisplayName="NanoGramsPerSquareMeter [Areic Mass Units]" Source="Local"/>
+		<TableElement Code="nL" Codesys="UCUM" DisplayName="NanoLiter [SI Volume Units]" Source="Local"/>
+		<TableElement Code="nm" Codesys="UCUM" DisplayName="NanoMeter [SI Length Units]" Source="Local"/>
+		<TableElement Code="nmol" Codesys="UCUM" DisplayName="NanoMole [Substance Units]" Source="Local"/>
+		<TableElement Code="nmol/dL" Codesys="UCUM" DisplayName="NanoMolesPerDeciLiter [Substance Concentration Units]" Source="Local"/>
+		<TableElement Code="nmol/g" Codesys="UCUM" DisplayName="NanoMolesPerGram [Substance Content Units]" Source="Local"/>
+		<TableElement Code="nmol/g{Cre}" Codesys="UCUM" DisplayName="NanoMolesPerGramCreatinine [Substance Content Units]" Source="Local"/>
+		<TableElement Code="nmol/L" Codesys="UCUM" DisplayName="NanoMolesPerLiter [Substance Concentration Units]" Source="Local"/>
+		<TableElement Code="nmol/mg" Codesys="UCUM" DisplayName="NanoMolesPerMilliGram [Substance Content Units]" Source="Local"/>
+		<TableElement Code="nmol/mL" Codesys="UCUM" DisplayName="NanoMolesPerMilliLiter [Substance Concentration Units]" Source="Local"/>
+		<TableElement Code="nmol/mmol" Codesys="UCUM" DisplayName="NanoMolesPerMilliMole [Substance Ratio Or Substance Fraction Units]" Source="Local"/>
+		<TableElement Code="nmol/mmol{Cre}" Codesys="UCUM" DisplayName="NanoMolesPerMilliMoleCreatinine [Substance Ratio Or Substance Fraction Units]" Source="Local"/>
+		<TableElement Code="nmol/mol" Codesys="UCUM" DisplayName="NanoMolesPerMole [Substance Ratio Or Substance Fraction Units]" Source="Local"/>
+		<TableElement Code="ns" Codesys="UCUM" DisplayName="NanoSecond [Time Units]" Source="Local"/>
+		<TableElement Code="[nmi_br]" Codesys="UCUM" DisplayName="nautical mile" Source="Local"/>
+		<TableElement Code="[nmi_i]" Codesys="UCUM" DisplayName="nautical mile" Source="Local"/>
+		<TableElement Code="Np" Codesys="UCUM" DisplayName="neper" Source="Local"/>
+		<TableElement Code="N" Codesys="UCUM" DisplayName="Newton" Source="Local"/>
+		<TableElement Code="[G]" Codesys="UCUM" DisplayName="Newtonian constant of gravitation" Source="Local"/>
+		<TableElement Code="{#}" Codesys="UCUM" DisplayName="number" Source="Local"/>
+		<TableElement Code="[Cal]" Codesys="UCUM" DisplayName="nutrition label Calories" Source="Local"/>
+		<TableElement Code="Oe" Codesys="UCUM" DisplayName="Oersted" Source="Local"/>
+		<TableElement Code="Ohm" Codesys="UCUM" DisplayName="Ohm" Source="Local"/>
+		<TableElement Code="10*5" Codesys="UCUM" DisplayName="OneHundredThousand [Unity]" Source="Local"/>
+		<TableElement Code="osm" Codesys="UCUM" DisplayName="osmole" Source="Local"/>
+		<TableElement Code="osm/kg" Codesys="UCUM" DisplayName="OsmolesPerKiloGram [Substance Content Units]" Source="Local"/>
+		<TableElement Code="osm/L" Codesys="UCUM" DisplayName="OsmolesPerLiter [Substance Concentration Units]" Source="Local"/>
+		<TableElement Code="[oz_ap]" Codesys="UCUM" DisplayName="ounce" Source="Local"/>
+		<TableElement Code="[oz_av]" Codesys="UCUM" DisplayName="ounce" Source="Local"/>
+		<TableElement Code="[oz_tr]" Codesys="UCUM" DisplayName="ounce" Source="Local"/>
+		<TableElement Code="[pc_br]" Codesys="UCUM" DisplayName="pace" Source="Local"/>
+		<TableElement Code="pc" Codesys="UCUM" DisplayName="parsec" Source="Local"/>
+		<TableElement Code="{tot}" Codesys="UCUM" DisplayName="particles total count" Source="Local"/>
+		<TableElement Code="[ppb]" Codesys="UCUM" DisplayName="parts per billion" Source="Local"/>
+		<TableElement Code="[ppm]" Codesys="UCUM" DisplayName="parts per million" Source="Local"/>
+		<TableElement Code="[ppth]" Codesys="UCUM" DisplayName="parts per thousand" Source="Local"/>
+		<TableElement Code="[pptr]" Codesys="UCUM" DisplayName="parts per trillion" Source="Local"/>
+		<TableElement Code="Pa" Codesys="UCUM" DisplayName="Pascal" Source="Local"/>
+		<TableElement Code="[pk_br]" Codesys="UCUM" DisplayName="peck" Source="Local"/>
+		<TableElement Code="[pk_us]" Codesys="UCUM" DisplayName="peck" Source="Local"/>
+		<TableElement Code="[pwt_tr]" Codesys="UCUM" DisplayName="pennyweight" Source="Local"/>
+		<TableElement Code="/100" Codesys="UCUM" DisplayName="Per100 [Entitic Number Units]" Source="Local"/>
+		<TableElement Code="/100{Spermatozoa}" Codesys="UCUM" DisplayName="Per100Spermatozoa [Entitic Number Units]" Source="Local"/>
+		<TableElement Code="/100{WBC}" Codesys="UCUM" DisplayName="Per100WBC [Entitic Number Units]" Source="Local"/>
+		<TableElement Code="/[arb'U]" Codesys="UCUM" DisplayName="PerArbitraryUnit [Arbitrary Number Units]" Source="Local"/>
+		<TableElement Code="/10*9" Codesys="UCUM" DisplayName="PerBillion [Number Fraction Units]" Source="Local"/>
+		<TableElement Code="%" Codesys="UCUM" DisplayName="percent" Source="Local"/>
+		<TableElement Code="%[slope]" Codesys="UCUM" DisplayName="percent of slope" Source="Local"/>
+		<TableElement Code="%{0to3Hours}" Codesys="UCUM" DisplayName="Percent0to3Hours [General Fraction Unit]" Source="Local"/>
+		<TableElement Code="%{Abnormal}" Codesys="UCUM" DisplayName="PercentAbnormal [Number Fraction Units]" Source="Local"/>
+		<TableElement Code="%{Activity}" Codesys="UCUM" DisplayName="PercentActivity [Catalytic Fraction Or Arbitrary Fraction Units]" Source="Local"/>
+		<TableElement Code="%{BasalActivity}" Codesys="UCUM" DisplayName="PercentBasalActivity [Catalytic Fraction Or Arbitrary Fraction Units]" Source="Local"/>
+		<TableElement Code="%{Binding}" Codesys="UCUM" DisplayName="PercentBinding [Mass Or Substance Fraction Units]" Source="Local"/>
+		<TableElement Code="%{Blockade}" Codesys="UCUM" DisplayName="PercentBlockade [Number Fraction Units]" Source="Local"/>
+		<TableElement Code="%{Bound}" Codesys="UCUM" DisplayName="PercentBound [Mass Or Substance Fraction Units]" Source="Local"/>
+		<TableElement Code="%{Carboxyhemoglobin}" Codesys="UCUM" DisplayName="PercentCarboxyhemoglobin [Mass Or Substance Fraction Units]" Source="Local"/>
+		<TableElement Code="%{EosSeen}" Codesys="UCUM" DisplayName="PercentEosinophilsSeen [Number Fraction Units]" Source="Local"/>
+		<TableElement Code="%{Excretion}" Codesys="UCUM" DisplayName="PercentExcretion [Mass Or Substance Rate Fraction Units]" Source="Local"/>
+		<TableElement Code="%{FetalErythrocytes}" Codesys="UCUM" DisplayName="PercentFetalErythrocytes [Number Fraction Units]" Source="Local"/>
+		<TableElement Code="%{Hemoglobin}" Codesys="UCUM" DisplayName="PercentHemoglobin [Mass Or Substance Fraction Units]" Source="Local"/>
+		<TableElement Code="%{HemoglobinA1C}" Codesys="UCUM" DisplayName="PercentHemoglobinA1C [Mass Or Substance Fraction Units]" Source="Local"/>
+		<TableElement Code="%{HemoglobinSaturation}" Codesys="UCUM" DisplayName="PercentHemoglobinSaturation [Mass Or Substance Fraction Units]" Source="Local"/>
+		<TableElement Code="%{Hemolysis}" Codesys="UCUM" DisplayName="PercentHemolysis [Number Fraction Units]" Source="Local"/>
+		<TableElement Code="%{Inhibition}" Codesys="UCUM" DisplayName="PercentInhibition [Catalytic Fraction Or Arbitrary Fraction Units]" Source="Local"/>
+		<TableElement Code="%{Normal}" Codesys="UCUM" DisplayName="PercentNormal [Number Fraction Units]" Source="Local"/>
+		<TableElement Code="%{NormalPooledPlasma}" Codesys="UCUM" DisplayName="PercentNormalPooledPlasma [Catalytic Fraction Or Arbitrary Fraction Units]" Source="Local"/>
+		<TableElement Code="%{ofBacteria}" Codesys="UCUM" DisplayName="PercentofBacteria [Number Fraction Units]" Source="Local"/>
+		<TableElement Code="%{OfLymphocytes}" Codesys="UCUM" DisplayName="PercentOfLymphocytes [Number Fraction Units]" Source="Local"/>
+		<TableElement Code="%{OfWBCs}" Codesys="UCUM" DisplayName="PercentOfWBCs [Number Fraction Units]" Source="Local"/>
+		<TableElement Code="%{Oxygen}" Codesys="UCUM" DisplayName="PercentOxygen [Volume Fraction Units]" Source="Local"/>
+		<TableElement Code="%/100{WBC}" Codesys="UCUM" DisplayName="PercentPer100WBC [Number Fraction Units]" Source="Local"/>
+		<TableElement Code="%{Positive}" Codesys="UCUM" DisplayName="PercentPositive [Number Fraction Units]" Source="Local"/>
+		<TableElement Code="%{SpermMotility}" Codesys="UCUM" DisplayName="PercentSpermMotility [Number Fraction Units]" Source="Local"/>
+		<TableElement Code="%{Total}" Codesys="UCUM" DisplayName="PercentTotal [General Fraction Unit]" Source="Local"/>
+		<TableElement Code="%{TotalProtein}" Codesys="UCUM" DisplayName="PercentTotalProtein [Mass Or Substance Fraction Units]" Source="Local"/>
+		<TableElement Code="%{Uptake}" Codesys="UCUM" DisplayName="PercentUptake [Mass Or Substance Rate Fraction Units]" Source="Local"/>
+		<TableElement Code="/dL" Codesys="UCUM" DisplayName="PerDeciLiter [Number Concentration Units]" Source="Local"/>
+		<TableElement Code="/{Entity}" Codesys="UCUM" DisplayName="PerEntity [Entitic Number Units]" Source="Local"/>
+		<TableElement Code="/g" Codesys="UCUM" DisplayName="PerGram [Number Content Units]" Source="Local"/>
+		<TableElement Code="/g{creat}" Codesys="UCUM" DisplayName="PerGramCreatinine [Number Content Units]" Source="Local"/>
+		<TableElement Code="/g{HGB}" Codesys="UCUM" DisplayName="PerGramHemoglobin [Number Content Units]" Source="Local"/>
+		<TableElement Code="/g{tot'nit}" Codesys="UCUM" DisplayName="PerGramTotalNitrogen [Number Content Units]" Source="Local"/>
+		<TableElement Code="/g{tot'prot}" Codesys="UCUM" DisplayName="PerGramTotalProtein [Number Content Units]" Source="Local"/>
+		<TableElement Code="/g{wet'tis}" Codesys="UCUM" DisplayName="PerGramWetTissue [Number Content Units]" Source="Local"/>
+		<TableElement Code="[PRU]" Codesys="UCUM" DisplayName="peripheral vascular resistance unit" Source="Local"/>
+		<TableElement Code="/kg" Codesys="UCUM" DisplayName="PerKiloGram [Number Content Units]" Source="Local"/>
+		<TableElement Code="/kg{body'wt}" Codesys="UCUM" DisplayName="PerKiloGramBodyWeight [Number Content Units]" Source="Local"/>
+		<TableElement Code="/L" Codesys="UCUM" DisplayName="PerLiter [Number Concentration Units]" Source="Local"/>
+		<TableElement Code="[mu_0]" Codesys="UCUM" DisplayName="permeability of vacuum" Source="Local"/>
+		<TableElement Code="/uL" Codesys="UCUM" DisplayName="PerMicroLiter [Number Concentration Units]" Source="Local"/>
+		<TableElement Code="/mg" Codesys="UCUM" DisplayName="PerMilliGram [Number Content Units]" Source="Local"/>
+		<TableElement Code="/mL" Codesys="UCUM" DisplayName="PerMilliLiter [Number Concentration Units]" Source="Local"/>
+		<TableElement Code="/10*6" Codesys="UCUM" DisplayName="PerMillion [Number Fraction Units]" Source="Local"/>
+		<TableElement Code="[eps_0]" Codesys="UCUM" DisplayName="permittivity of vacuum" Source="Local"/>
+		<TableElement Code="/m2" Codesys="UCUM" DisplayName="PerSquareMeter [Areic Number Units]" Source="Local"/>
+		<TableElement Code="/10*10" Codesys="UCUM" DisplayName="PerTenGiga [Number Fraction Units]" Source="Local"/>
+		<TableElement Code="/{tot}" Codesys="UCUM" DisplayName="PerTotalCount [Unity]" Source="Local"/>
+		<TableElement Code="/10*12" Codesys="UCUM" DisplayName="PerTrillion [Number Fraction Units]" Source="Local"/>
+		<TableElement Code="/10*12{rbc}" Codesys="UCUM" DisplayName="PerTrillionRedBloodCells [Entitic Number Units]" Source="Local"/>
+		<TableElement Code="[pH]" Codesys="UCUM" DisplayName="pH" Source="Local"/>
+		<TableElement Code="ph" Codesys="UCUM" DisplayName="phot" Source="Local"/>
+		<TableElement Code="[pca]" Codesys="UCUM" DisplayName="pica" Source="Local"/>
+		<TableElement Code="pg" Codesys="UCUM" DisplayName="PicoGram [SI Mass Units]" Source="Local"/>
+		<TableElement Code="pg/dL" Codesys="UCUM" DisplayName="PicoGramsPerDeciLiter [Mass Concentration Units]" Source="Local"/>
+		<TableElement Code="pg/L" Codesys="UCUM" DisplayName="PicoGramsPerLiter [Mass Concentration Units]" Source="Local"/>
+		<TableElement Code="pg/mL" Codesys="UCUM" DisplayName="PicoGramsPerMilliLiter [Mass Concentration Units]" Source="Local"/>
+		<TableElement Code="pg/mm" Codesys="UCUM" DisplayName="PicoGramsPerMilliMeter [Lineic Mass Units]" Source="Local"/>
+		<TableElement Code="pL" Codesys="UCUM" DisplayName="PicoLiter [SI Volume Units]" Source="Local"/>
+		<TableElement Code="pm" Codesys="UCUM" DisplayName="PicoMeter [SI Length Units]" Source="Local"/>
+		<TableElement Code="pmol" Codesys="UCUM" DisplayName="PicoMole [Substance Units]" Source="Local"/>
+		<TableElement Code="pmol/dL" Codesys="UCUM" DisplayName="PicoMolesPerDeciLiter [Substance Concentration Units]" Source="Local"/>
+		<TableElement Code="pmol/L" Codesys="UCUM" DisplayName="PicoMolesPerLiter [Substance Concentration Units]" Source="Local"/>
+		<TableElement Code="pmol/umol" Codesys="UCUM" DisplayName="PicoMolesPerMicroMole [Substance Ratio Or Substance Fraction Units]" Source="Local"/>
+		<TableElement Code="pmol/mL" Codesys="UCUM" DisplayName="PicoMolesPerMilliLiter [Substance Concentration Units]" Source="Local"/>
+		<TableElement Code="ps" Codesys="UCUM" DisplayName="PicoSecond [Time Units]" Source="Local"/>
+		<TableElement Code="[pied]" Codesys="UCUM" DisplayName="pied French foot" Source="Local"/>
+		<TableElement Code="[pt_br]" Codesys="UCUM" DisplayName="pint" Source="Local"/>
+		<TableElement Code="[pt_us]" Codesys="UCUM" DisplayName="pint" Source="Local"/>
+		<TableElement Code="[h]" Codesys="UCUM" DisplayName="Planck constant" Source="Local"/>
+		<TableElement Code="[PFU]" Codesys="UCUM" DisplayName="plaque forming units" Source="Local"/>
+		<TableElement Code="[pnt]" Codesys="UCUM" DisplayName="point" Source="Local"/>
+		<TableElement Code="P" Codesys="UCUM" DisplayName="Poise" Source="Local"/>
+		<TableElement Code="[pouce]" Codesys="UCUM" DisplayName="pouce French inch" Source="Local"/>
+		<TableElement Code="[lb_ap]" Codesys="UCUM" DisplayName="pound" Source="Local"/>
+		<TableElement Code="[lb_av]" Codesys="UCUM" DisplayName="pound" Source="Local"/>
+		<TableElement Code="[lb_tr]" Codesys="UCUM" DisplayName="pound" Source="Local"/>
+		<TableElement Code="[lbf_av]" Codesys="UCUM" DisplayName="pound force" Source="Local"/>
+		<TableElement Code="[psi]" Codesys="UCUM" DisplayName="pound per sqare inch" Source="Local"/>
+		<TableElement Code="[pca_pr]" Codesys="UCUM" DisplayName="Printer's pica" Source="Local"/>
+		<TableElement Code="[pnt_pr]" Codesys="UCUM" DisplayName="Printer's point" Source="Local"/>
+		<TableElement Code="[p'diop]" Codesys="UCUM" DisplayName="prism diopter" Source="Local"/>
+		<TableElement Code="[m_p]" Codesys="UCUM" DisplayName="proton mass" Source="Local"/>
+		<TableElement Code="[qt_br]" Codesys="UCUM" DisplayName="quart" Source="Local"/>
+		<TableElement Code="[qt_us]" Codesys="UCUM" DisplayName="quart" Source="Local"/>
+		<TableElement Code="[gal_us]" Codesys="UCUM" DisplayName="Queen Anne's wine gallon" Source="Local"/>
+		<TableElement Code="rad" Codesys="UCUM" DisplayName="radian" Source="Local"/>
+		<TableElement Code="RAD" Codesys="UCUM" DisplayName="radiation absorbed dose" Source="Local"/>
+		<TableElement Code="REM" Codesys="UCUM" DisplayName="radiation equivalent man" Source="Local"/>
+		<TableElement Code="[rch_us]" Codesys="UCUM" DisplayName="Ramden's chain Engineer's chain" Source="Local"/>
+		<TableElement Code="{rbc}" Codesys="UCUM" DisplayName="red blood cell count" Source="Local"/>
+		<TableElement Code="{rbc}/uL" Codesys="UCUM" DisplayName="RedBloodCellsPerMicroLiter [Number Concentration Units]" Source="Local"/>
+		<TableElement Code="{Relative}%" Codesys="UCUM" DisplayName="RelativePercent [General Fraction Unit]" Source="Local"/>
+		<TableElement Code="[rd_br]" Codesys="UCUM" DisplayName="rod" Source="Local"/>
+		<TableElement Code="[rd_us]" Codesys="UCUM" DisplayName="rod" Source="Local"/>
+		<TableElement Code="R" Codesys="UCUM" DisplayName="Roentgen" Source="Local"/>
+		<TableElement Code="[sc_ap]" Codesys="UCUM" DisplayName="scruple" Source="Local"/>
+		<TableElement Code="''" Codesys="UCUM" DisplayName="second" Source="Local"/>
+		<TableElement Code="s" Codesys="UCUM" DisplayName="second" Source="Local"/>
+		<TableElement Code="[sct]" Codesys="UCUM" DisplayName="section" Source="Local"/>
+		<TableElement Code="[scwt_av]" Codesys="UCUM" DisplayName="short hundredweight U.S. hundredweight" Source="Local"/>
+		<TableElement Code="[ston_av]" Codesys="UCUM" DisplayName="short ton U.S. ton" Source="Local"/>
+		<TableElement Code="S" Codesys="UCUM" DisplayName="Siemens" Source="Local"/>
+		<TableElement Code="Sv" Codesys="UCUM" DisplayName="Sievert" Source="Local"/>
+		<TableElement Code="{s_co_ratio}" Codesys="UCUM" DisplayName="signal to cutoff ratio" Source="Local"/>
+		<TableElement Code="[smoot]" Codesys="UCUM" DisplayName="Smoot" Source="Local"/>
+		<TableElement Code="[smgy'U]" Codesys="UCUM" DisplayName="Somogyi unit" Source="Local"/>
+		<TableElement Code="sph" Codesys="UCUM" DisplayName="spere" Source="Local"/>
+		<TableElement Code="{Spermatozoa}/mL" Codesys="UCUM" DisplayName="SpermatozoaPerMilliLiter [Number Concentration Units]" Source="Local"/>
+		<TableElement Code="[sft_i]" Codesys="UCUM" DisplayName="square foot" Source="Local"/>
+		<TableElement Code="[sin_i]" Codesys="UCUM" DisplayName="square inch" Source="Local"/>
+		<TableElement Code="[smi_us]" Codesys="UCUM" DisplayName="square mile" Source="Local"/>
+		<TableElement Code="[srd_us]" Codesys="UCUM" DisplayName="square rod" Source="Local"/>
+		<TableElement Code="[syd_i]" Codesys="UCUM" DisplayName="square yard" Source="Local"/>
+		<TableElement Code="cm2" Codesys="UCUM" DisplayName="SquareCentiMeter [SI Area Units]" Source="Local"/>
+		<TableElement Code="m2" Codesys="UCUM" DisplayName="SquareMeter [SI Area Units]" Source="Local"/>
+		<TableElement Code="mm2" Codesys="UCUM" DisplayName="SquareMilliMeter [SI Area Units]" Source="Local"/>
+		<TableElement Code="[g]" Codesys="UCUM" DisplayName="standard acceleration of free fall" Source="Local"/>
+		<TableElement Code="atm" Codesys="UCUM" DisplayName="standard atmosphere" Source="Local"/>
+		<TableElement Code="[mi_i]" Codesys="UCUM" DisplayName="statute mile" Source="Local"/>
+		<TableElement Code="sr" Codesys="UCUM" DisplayName="steradian" Source="Local"/>
+		<TableElement Code="st" Codesys="UCUM" DisplayName="stere" Source="Local"/>
+		<TableElement Code="sb" Codesys="UCUM" DisplayName="stilb" Source="Local"/>
+		<TableElement Code="St" Codesys="UCUM" DisplayName="Stokes" Source="Local"/>
+		<TableElement Code="[stone_av]" Codesys="UCUM" DisplayName="stone British stone" Source="Local"/>
+		<TableElement Code="[S]" Codesys="UCUM" DisplayName="Svedberg unit" Source="Local"/>
+		<TableElement Code="mo_s" Codesys="UCUM" DisplayName="synodal month" Source="Local"/>
+		<TableElement Code="[tbs_us]" Codesys="UCUM" DisplayName="tablespoon" Source="Local"/>
+		<TableElement Code="{tbl}" Codesys="UCUM" DisplayName="tablets" Source="Local"/>
+		<TableElement Code="[tsp_us]" Codesys="UCUM" DisplayName="teaspoon" Source="Local"/>
+		<TableElement Code="att" Codesys="UCUM" DisplayName="technical atmosphere" Source="Local"/>
+		<TableElement Code="10*8" Codesys="UCUM" DisplayName="TenToEighth [Unity]" Source="Local"/>
+		<TableElement Code="T" Codesys="UCUM" DisplayName="Tesla" Source="Local"/>
+		<TableElement Code="[pi]" Codesys="UCUM" DisplayName="the number pi" Source="Local"/>
+		<TableElement Code="10^" Codesys="UCUM" DisplayName="the number ten for arbitrary powers" Source="Local"/>
+		<TableElement Code="10*" Codesys="UCUM" DisplayName="the number ten for arbitrary powers" Source="Local"/>
+		<TableElement Code="[Btu_th]" Codesys="UCUM" DisplayName="thermochemical British thermal unit" Source="Local"/>
+		<TableElement Code="cal_th" Codesys="UCUM" DisplayName="thermochemical calorie" Source="Local"/>
+		<TableElement Code="10*3" Codesys="UCUM" DisplayName="Thousand [Unity]" Source="Local"/>
+		<TableElement Code="10*3{Copies}/mL" Codesys="UCUM" DisplayName="ThousandCopiesPerMilliLiter [Number Concentration Units]" Source="Local"/>
+		<TableElement Code="10*3/L" Codesys="UCUM" DisplayName="ThousandPerLiter [Number Concentration Units]" Source="Local"/>
+		<TableElement Code="10*3/mL" Codesys="UCUM" DisplayName="ThousandPerMilliLiter [Number Concentration Units]" Source="Local"/>
+		<TableElement Code="10*3.{RBC}" Codesys="UCUM" DisplayName="ThousandRedBloodCells [Unity]" Source="Local"/>
+		<TableElement Code="10*3/uL" Codesys="UCUM" DisplayName="ThousandsPerMicroLiter [Number Concentration Units]" Source="Local"/>
+		<TableElement Code="{titer}" Codesys="UCUM" DisplayName="titer" Source="Local"/>
+		<TableElement Code="[todd'U]" Codesys="UCUM" DisplayName="Todd unit" Source="Local"/>
+		<TableElement Code="t" Codesys="UCUM" DisplayName="tonne" Source="Local"/>
+		<TableElement Code="[twp]" Codesys="UCUM" DisplayName="township" Source="Local"/>
+		<TableElement Code="10*12/L" Codesys="UCUM" DisplayName="TrillionPerLiter [Number Concentration Units]" Source="Local"/>
+		<TableElement Code="a_t" Codesys="UCUM" DisplayName="tropical year" Source="Local"/>
+		<TableElement Code="[tb'U]" Codesys="UCUM" DisplayName="tuberculin unit" Source="Local"/>
+		<TableElement Code="u" Codesys="UCUM" DisplayName="unified atomic mass unit" Source="Local"/>
+		<TableElement Code="U" Codesys="UCUM" DisplayName="Unit" Source="Local"/>
+		<TableElement Code="[USP'U]" Codesys="UCUM" DisplayName="United States Pharmacopeia unit" Source="Local"/>
+		<TableElement Code="U/g" Codesys="UCUM" DisplayName="UnitsPerGram [Substance Rate Content Units]" Source="Local"/>
+		<TableElement Code="U/g{Cre}" Codesys="UCUM" DisplayName="UnitsPerGramCreatinine [Substance Rate Content Units]" Source="Local"/>
+		<TableElement Code="U/g{Hgb}" Codesys="UCUM" DisplayName="UnitsPerGramHemoglobin [Substance Rate Content Units]" Source="Local"/>
+		<TableElement Code="[c]" Codesys="UCUM" DisplayName="velocity of light" Source="Local"/>
+		<TableElement Code="V" Codesys="UCUM" DisplayName="Volt" Source="Local"/>
+		<TableElement Code="%{vol}" Codesys="UCUM" DisplayName="VolumePercent [Volume Fraction Units]" Source="Local"/>
+		<TableElement Code="W" Codesys="UCUM" DisplayName="Watt" Source="Local"/>
+		<TableElement Code="Wb" Codesys="UCUM" DisplayName="Weber" Source="Local"/>
+		<TableElement Code="wk" Codesys="UCUM" DisplayName="week" Source="Local"/>
+		<TableElement Code="[yd_br]" Codesys="UCUM" DisplayName="yard" Source="Local"/>
+		<TableElement Code="[yd_i]" Codesys="UCUM" DisplayName="yard" Source="Local"/>
+		<TableElement Code="[yd_us]" Codesys="UCUM" DisplayName="yard" Source="Local"/>
+		<TableElement Code="a" Codesys="UCUM" DisplayName="year" Source="Local"/>
+	</TableDefinition>
+
+</TableLibrary>

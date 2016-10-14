@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:HL7V2MessageValidationContextDefinition xmlns:con="http://www.nist.gov/healthcare/validation/message/hl7/v2/context">
+	<con:ValidationConfiguration>
+		<con:HL7Tables>
+			<con:All />
+		</con:HL7Tables>
+		<con:UserTables>
+			<con:All />
+		</con:UserTables>
+		<con:TablesToExclude>
+			<con:Table>SNOMED_CT;HL70487</con:Table>
+			<con:Table>9999</con:Table>
+			<con:Table>eDOS_HL70088</con:Table>
+		</con:TablesToExclude>
+	</con:ValidationConfiguration>
+	<con:FailureInterpretation>
+		<con:MessageFailure Type="MESSAGE_STRUCTURE" Result="ERROR"/>
+		<con:MessageFailure Type="USAGE" Result="ERROR"/>
+		<con:MessageFailure Type="RE-USAGE" Result="INFORMATIONAL"/>
+		<con:MessageFailure Type="CARDINALITY" Result="ERROR"/>
+		<con:MessageFailure Type="LENGTH" Result="IGNORE"/>
+		<con:MessageFailure Type="DATATYPE" Result="ERROR"/>
+		<con:MessageFailure Type="DATA" Result="ERROR"/>
+		<con:MessageFailure Type="DATA_PASSED" Result="AFFIRMATIVE"/>
+		<con:MessageFailure Type="CHECKED" Result="AFFIRMATIVE"/>
+		<con:MessageFailure Type="VERSION" Result="ERROR"/>
+		<con:MessageFailure Type="MESSAGE_STRUCTURE_ID" Result="ERROR"/>
+		<con:MessageFailure Type="MESSAGE_VALIDATION_CONTEXT" Result="ALERT"/>
+		<con:MessageFailure Type="TABLE_NOT_FOUND" Result="ALERT"/>
+		<con:MessageFailure Type="AMBIGUOUS_PROFILE" Result="ERROR"/>
+	</con:FailureInterpretation>
+</con:HL7V2MessageValidationContextDefinition>

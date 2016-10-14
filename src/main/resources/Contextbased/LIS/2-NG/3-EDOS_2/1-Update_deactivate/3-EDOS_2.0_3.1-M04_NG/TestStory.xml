@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseMetaData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="EDOS_2.0_3.1-M04_NG" date="11/18/2015" name="M04_Update_Deactivate" version="version3">
+		<Description>
+The Laboratory Test Compendium from Century Hospital Clinical Laboratory is a subset of their Directory of Services.  It is based upon the most commonly ordered lab tests by Dr. Radon.  This compendium is being used by Dr. Nicholas Radon's practice EHR-S  to place orders electronically to Century Hospital's Clinical Laboratory.  Century Hospital Laboratory had decided to no longer offer the sedimentation rate test.  Century Hospital's LIS transmits the appropriate eDOS update messages to Dr. Radon's EHR-S to deprecate this orderable test.</Description>
+		<PreCondition>EDOS_1.0_1.1-M08_New
+and
+EDOS_1.0_2.1-M10_New
+and
+EDOS_1.0_3.1-M04_New
+and
+EDOS_1.0_4.1-M18_New_Approved
+and
+EDOS_1.0_5.1-M18_New_Limited
+and
+EDOS_2.0_1.1-M08_Update_Deactivate
+and
+EDOS_2.0_2.1-M10_Update_Deactivate
+have been completed.</PreCondition>
+		<PostCondition>No Post-Condition.</PostCondition>
+		<TestObjectives>Demonstrate capability to support a M04 update message - action: deactivate.
+
+</TestObjectives>
+		<Comments>Update message to deactivate the charge code (CPT codes) of a no longer offered tests.</Comments>
+	</TestCaseMetaData>

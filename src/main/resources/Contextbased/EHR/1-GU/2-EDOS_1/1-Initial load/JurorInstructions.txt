@@ -1,0 +1,33 @@
+This test case verifies proper functionality for handling updates to an initial load of a electronic test compendium (EDOS). The juror document from that initial load test case should be used to evaluate that the kind of expected updates have been properly represented, by evaluating the delta between the initial load and the state at the end of the update test case.
+In this test case the following update action is tested:
+
+For 2.0:
+Deactivation:
+The end result of deactivation is that a certain test or group of tests are no longer available for ordering. ESR, and GHP should no longer be available in CPOE and AOE view. For the admin view and the incorporate view that could be accomplished by setting an inactive flag, attaching an effective date or any other means to indicate, that the test was once available, but now can no longer be ordered - including the use of the billing code(s) and payor related information.
+
+For 2.1:
+Addition:
+The end result of addition is that a certain test or group of tests are now available. A new stool culture, colony count and antibiotic susceptibilities for Ciprofloxacin, Gentamicin, Ampicillin, Amoxicillin+Clavulanate and Trimethoprim-sulfamethoxazole are available as individually orderable tests as well as components of two new panels: Stool culture with susceptibility testing and Bacterial Susceptibility testing in all views, including the applicable billing code(s) and payor related information.
+
+For 2.2:
+Revision:
+The end result of revision is that a part of a test or group of tests have been changed. The LOINC was changed for Penicillin Susceptibility test, the specimen preference information was changed for the CMP, a billing code was updated for the CMP along with additional billing notes, and update price coverage information for the Prostate biopsy.
+
+For 2.3:
+Reactivate:
+The end result of reactivation is that a certain test or group of tests is again available for ordering. The ESR and GHP are again orderable, including access to the billing and payor related information.
+
+For 2.4:
+Combination of update activities:
+Deactivation: The end result of deactivation is that a certain test or group of tests are no longer available for ordering. SLE IgG and Arboviruspanel should no longer be available in CPOE and AOE view. For the admin view and the incorporate view that could be accomplished by setting an inactive flag, attaching an effective date or any other means to indicate, that the test was once available, but now can no longer be ordered - including the use of the billing code(s) and payor related information.
+Addition:
+The end result of addition is that a certain test or group of tests are now available. A Tests for Triglyceride, Cholesterol, HDL and calculated LDL have been added as components of the new Lipid Panel, but they are not orderable individually so should not be in the CPOE or AOE view. A new orderable measured LDL and the aforementioned lipid panel are also added and should be visible in all views, including the applicable billing code(s) and payor related information.
+Revision:
+The end result of revision is that a part of a test or group of tests have been changed. The interpretation of Urine Glucose was changed,and CPT codes updated for the Prostate biopsy.
+
+For 2.5:
+This test case is verifying that the system can handle updates to a previous update change. In this case the juror document from Test case 2.4 is the basis for comparison of the following actions;
+Revision:
+The end result of revision is that a part of a test or group of tests have been changed. The components of the lipid panel are now all individually orderable, so they should now be available in CPOE and AOE view as well.
+Addition:
+The end result of addition is that a certain test or group of tests are now available. The applicable billing code(s) and payor related information for the newly orderable lipid panel components have been added..

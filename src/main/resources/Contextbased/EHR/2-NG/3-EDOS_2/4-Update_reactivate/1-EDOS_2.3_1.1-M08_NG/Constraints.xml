@@ -1,0 +1,1020 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ConformanceContext UUID="EDOS_2.3_1.1-M08_NG">
+    <MetaData Name="Conformance context for EDOS_2.3_1.1-M08_NG" OrgName="NIST" Version="2016-10-13" Date="2016-10-13"/>
+    <Predicates>
+        <Datatype/>
+        <Segment/>
+        <Group/>
+    </Predicates>
+    <Constraints>
+        <Message>
+            <ByID ID="MFN_M08_NG">
+                <Constraint ID="EDOS_2.3_1.1-M08_NG::1">
+                    <Description>Location 'MSH[1].3[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="1[1].3[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.3_1.1-M08_NG::2">
+                    <Description>Location 'MSH[1].4[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="1[1].4[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.3_1.1-M08_NG::3">
+                    <Description>Location 'MSH[1].6[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="1[1].6[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.3_1.1-M08_NG::4">
+                    <Description>Location 'MSH[1].7[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="1[1].7[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.3_1.1-M08_NG::5">
+                    <Description>Location 'MSH[1].10[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="1[1].10[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.3_1.1-M08_NG::6">
+                    <Description>Location 'MSH[1].11[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="1[1].11[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.3_1.1-M08_NG::7">
+                    <Description>Location 'MFI[1].1[1].2[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].1[1].2[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.3_1.1-M08_NG::8">
+                    <Description>Location 'MFI[1].1[1].7[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].1[1].7[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.3_1.1-M08_NG::9">
+                    <Description>Location 'MFI[1].3[1]' is expected to be present and valued 'UPD'</Description>
+                    <Assertion>
+                        <AND>
+                            <Presence Path="3[1].3[1]"/>
+                            <PlainText Path="3[1].3[1]" Text="UPD" IgnoreCase="false"/>
+                        </AND>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.3_1.1-M08_NG::10">
+                    <Description>Location 'MF_TEST[1].MFE[1].1[1]' is expected to be present and valued 'MAC'</Description>
+                    <Assertion>
+                        <AND>
+                            <Presence Path="4[1].1[1].1[1]"/>
+                            <PlainText Path="4[1].1[1].1[1]" Text="MAC" IgnoreCase="false"/>
+                        </AND>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.3_1.1-M08_NG::11">
+                    <Description>Location 'MF_TEST[1].MFE[1].3[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].1[1].3[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.3_1.1-M08_NG::12">
+                    <Description>Location 'MF_TEST[1].MFE[1].4[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].1[1].4[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.3_1.1-M08_NG::13">
+                    <Description>Location 'MF_TEST[1].MFE[1].4[1].2[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].1[1].4[1].2[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.3_1.1-M08_NG::14">
+                    <Description>Location 'MF_TEST[1].MFE[1].4[1].3[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].1[1].4[1].3[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.3_1.1-M08_NG::15">
+                    <Description>Location 'MF_TEST[1].MFE[1].4[1].7[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].1[1].4[1].7[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.3_1.1-M08_NG::16">
+                    <Description>Location 'MF_TEST[1].OM1[1].2[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].2[1].2[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.3_1.1-M08_NG::17">
+                    <Description>Location 'MF_TEST[1].OM1[1].2[1].2[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].2[1].2[1].2[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.3_1.1-M08_NG::18">
+                    <Description>Location 'MF_TEST[1].OM1[1].2[1].3[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].2[1].2[1].3[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.3_1.1-M08_NG::19">
+                    <Description>Location 'MF_TEST[1].OM1[1].2[1].7[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].2[1].2[1].7[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.3_1.1-M08_NG::20">
+                    <Description>Location 'MF_TEST[1].OM1[1].4[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].2[1].4[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.3_1.1-M08_NG::21">
+                    <Description>Location 'MF_TEST[1].OM1[1].5[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].2[1].5[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.3_1.1-M08_NG::22">
+                    <Description>Location 'MF_TEST[1].OM1[1].5[1].2[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].2[1].5[1].2[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.3_1.1-M08_NG::23">
+                    <Description>Location 'MF_TEST[1].OM1[1].5[1].3[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].2[1].5[1].3[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.3_1.1-M08_NG::24">
+                    <Description>Location 'MF_TEST[1].OM1[1].5[1].7[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].2[1].5[1].7[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.3_1.1-M08_NG::25">
+                    <Description>Location 'MF_TEST[1].OM1[1].7[1].1[1]' is expected to be present and valued '30341-2'</Description>
+                    <Assertion>
+                        <AND>
+                            <Presence Path="4[1].2[1].7[1].1[1]"/>
+                            <PlainText Path="4[1].2[1].7[1].1[1]" Text="30341-2" IgnoreCase="false"/>
+                        </AND>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.3_1.1-M08_NG::26">
+                    <Description>Location 'MF_TEST[1].OM1[1].7[1].2[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].2[1].7[1].2[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.3_1.1-M08_NG::27">
+                    <Description>Location 'MF_TEST[1].OM1[1].7[1].3[1]' is expected to be present and valued 'LN'</Description>
+                    <Assertion>
+                        <AND>
+                            <Presence Path="4[1].2[1].7[1].3[1]"/>
+                            <PlainText Path="4[1].2[1].7[1].3[1]" Text="LN" IgnoreCase="false"/>
+                        </AND>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.3_1.1-M08_NG::28">
+                    <Description>Location 'MF_TEST[1].OM1[1].7[1].7[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].2[1].7[1].7[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.3_1.1-M08_NG::29">
+                    <Description>Location 'MF_TEST[1].OM1[1].9[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].2[1].9[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.3_1.1-M08_NG::30">
+                    <Description>Location 'MF_TEST[1].OM1[1].12[1]' is expected to be present and valued 'Y'</Description>
+                    <Assertion>
+                        <AND>
+                            <Presence Path="4[1].2[1].12[1]"/>
+                            <PlainText Path="4[1].2[1].12[1]" Text="Y" IgnoreCase="false"/>
+                        </AND>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.3_1.1-M08_NG::31">
+                    <Description>Location 'MF_TEST[1].OM1[1].18[1]' is expected to be present and valued 'A'</Description>
+                    <Assertion>
+                        <AND>
+                            <Presence Path="4[1].2[1].18[1]"/>
+                            <PlainText Path="4[1].2[1].18[1]" Text="A" IgnoreCase="false"/>
+                        </AND>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.3_1.1-M08_NG::32">
+                    <Description>Location 'MF_TEST[1].OM1[1].32[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].2[1].32[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.3_1.1-M08_NG::33">
+                    <Description>Location 'MF_TEST[1].OM1[1].39[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].2[1].39[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.3_1.1-M08_NG::34">
+                    <Description>Location 'MF_TEST[1].OM1[1].40[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].2[1].40[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.3_1.1-M08_NG::35">
+                    <Description>Location 'MF_TEST[1].OM1[1].40[2]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].2[1].40[2]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.3_1.1-M08_NG::36">
+                    <Description>Location 'MF_TEST[1].OM1[1].48[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].2[1].48[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.3_1.1-M08_NG::37">
+                    <Description>Location 'MF_TEST[1].OM1[1].49[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].2[1].49[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.3_1.1-M08_NG::38">
+                    <Description>Location 'MF_TEST[1].OM1[1].51[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].2[1].51[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.3_1.1-M08_NG::39">
+                    <Description>Location 'MF_TEST[1].OM1[1].51[2]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].2[1].51[2]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.3_1.1-M08_NG::40">
+                    <Description>Location 'MF_TEST[1].OM1[1].54[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].2[1].54[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.3_1.1-M08_NG::41">
+                    <Description>Location 'MF_TEST[1].OM1[1].54[2]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].2[1].54[2]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.3_1.1-M08_NG::42">
+                    <Description>Location 'MF_TEST[1].OM1[1].55[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].2[1].55[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.3_1.1-M08_NG::43">
+                    <Description>Location 'MF_TEST[1].OM1[1].55[1].2[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].2[1].55[1].2[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.3_1.1-M08_NG::44">
+                    <Description>Location 'MF_TEST[1].OM1[1].55[1].3[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].2[1].55[1].3[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.3_1.1-M08_NG::45">
+                    <Description>Location 'MF_TEST[1].OM1[1].55[1].7[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].2[1].55[1].7[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.3_1.1-M08_NG::46">
+                    <Description>Location 'MF_TEST[1].OM1[1].55[2].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].2[1].55[2].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.3_1.1-M08_NG::47">
+                    <Description>Location 'MF_TEST[1].OM1[1].55[2].2[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].2[1].55[2].2[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.3_1.1-M08_NG::48">
+                    <Description>Location 'MF_TEST[1].OM1[1].55[2].3[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].2[1].55[2].3[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.3_1.1-M08_NG::49">
+                    <Description>Location 'MF_TEST[1].OM1[1].55[2].7[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].2[1].55[2].7[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.3_1.1-M08_NG::50">
+                    <Description>Location 'MF_TEST[1].OM1[1].56[1].1[1]' is expected to be present and valued '30341-2'</Description>
+                    <Assertion>
+                        <AND>
+                            <Presence Path="4[1].2[1].56[1].1[1]"/>
+                            <PlainText Path="4[1].2[1].56[1].1[1]" Text="30341-2" IgnoreCase="false"/>
+                        </AND>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.3_1.1-M08_NG::51">
+                    <Description>Location 'MF_TEST[1].OM1[1].56[1].2[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].2[1].56[1].2[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.3_1.1-M08_NG::52">
+                    <Description>Location 'MF_TEST[1].OM1[1].56[1].3[1]' is expected to be present and valued 'LN'</Description>
+                    <Assertion>
+                        <AND>
+                            <Presence Path="4[1].2[1].56[1].3[1]"/>
+                            <PlainText Path="4[1].2[1].56[1].3[1]" Text="LN" IgnoreCase="false"/>
+                        </AND>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.3_1.1-M08_NG::53">
+                    <Description>Location 'MF_TEST[1].OM1[1].56[1].4[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].2[1].56[1].4[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.3_1.1-M08_NG::54">
+                    <Description>Location 'MF_TEST[1].OM1[1].56[1].5[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].2[1].56[1].5[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.3_1.1-M08_NG::55">
+                    <Description>Location 'MF_TEST[1].OM1[1].56[1].6[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].2[1].56[1].6[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.3_1.1-M08_NG::56">
+                    <Description>Location 'MF_TEST[1].OM1[1].56[1].7[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].2[1].56[1].7[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.3_1.1-M08_NG::57">
+                    <Description>Location 'MF_TEST[1].OM1[1].56[1].8[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].2[1].56[1].8[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.3_1.1-M08_NG::58">
+                    <Description>Location 'MF_TEST[1].OM1[1].56[1].9[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].2[1].56[1].9[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.3_1.1-M08_NG::59">
+                    <Description>Location 'MF_TEST[1].OM1[1].57[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].2[1].57[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.3_1.1-M08_NG::60">
+                    <Description>Location 'MF_TEST[1].OM1[1].57[1].2[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].2[1].57[1].2[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.3_1.1-M08_NG::61">
+                    <Description>Location 'MF_TEST[1].OM1[1].57[1].2[1].2[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].2[1].57[1].2[1].2[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.3_1.1-M08_NG::62">
+                    <Description>Location 'MF_TEST[1].OM1[1].57[1].2[1].3[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].2[1].57[1].2[1].3[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.3_1.1-M08_NG::63">
+                    <Description>Location 'MF_TEST[1].OM1[1].57[1].2[1].7[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].2[1].57[1].2[1].7[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.3_1.1-M08_NG::64">
+                    <Description>Location 'MF_TEST[1].OM2[1].2[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].5[1].2[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.3_1.1-M08_NG::65">
+                    <Description>Location 'MF_TEST[1].OM2[1].2[1].2[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].5[1].2[1].2[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.3_1.1-M08_NG::66">
+                    <Description>Location 'MF_TEST[1].OM2[1].2[1].3[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].5[1].2[1].3[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.3_1.1-M08_NG::67">
+                    <Description>Location 'MF_TEST[1].OM2[1].2[1].4[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].5[1].2[1].4[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.3_1.1-M08_NG::68">
+                    <Description>Location 'MF_TEST[1].OM2[1].2[1].5[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].5[1].2[1].5[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.3_1.1-M08_NG::69">
+                    <Description>Location 'MF_TEST[1].OM2[1].2[1].6[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].5[1].2[1].6[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.3_1.1-M08_NG::70">
+                    <Description>Location 'MF_TEST[1].OM2[1].2[1].7[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].5[1].2[1].7[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.3_1.1-M08_NG::71">
+                    <Description>Location 'MF_TEST[1].OM2[1].2[1].8[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].5[1].2[1].8[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.3_1.1-M08_NG::72">
+                    <Description>Location 'MF_TEST[1].OM2[1].2[1].9[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].5[1].2[1].9[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.3_1.1-M08_NG::73">
+                    <Description>Location 'MF_TEST[1].OM2[1].6[1].1[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].5[1].6[1].1[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.3_1.1-M08_NG::74">
+                    <Description>Location 'MF_TEST[1].OM2[1].6[1].1[1].2[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].5[1].6[1].1[1].2[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.3_1.1-M08_NG::75">
+                    <Description>Location 'MF_TEST[1].OM2[1].6[1].2[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].5[1].6[1].2[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.3_1.1-M08_NG::76">
+                    <Description>Location 'MF_TEST[1].OM2[1].6[1].2[1].2[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].5[1].6[1].2[1].2[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.3_1.1-M08_NG::77">
+                    <Description>Location 'MF_TEST[1].OM2[1].6[1].2[1].3[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].5[1].6[1].2[1].3[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.3_1.1-M08_NG::78">
+                    <Description>Location 'MF_TEST[1].OM2[1].6[1].2[1].7[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].5[1].6[1].2[1].7[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.3_1.1-M08_NG::79">
+                    <Description>Location 'MF_TEST[1].OM2[1].6[2].1[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].5[1].6[2].1[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.3_1.1-M08_NG::80">
+                    <Description>Location 'MF_TEST[1].OM2[1].6[2].1[1].2[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].5[1].6[2].1[1].2[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.3_1.1-M08_NG::81">
+                    <Description>Location 'MF_TEST[1].OM2[1].6[2].2[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].5[1].6[2].2[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.3_1.1-M08_NG::82">
+                    <Description>Location 'MF_TEST[1].OM2[1].6[2].2[1].2[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].5[1].6[2].2[1].2[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.3_1.1-M08_NG::83">
+                    <Description>Location 'MF_TEST[1].OM2[1].6[2].2[1].3[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].5[1].6[2].2[1].3[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.3_1.1-M08_NG::84">
+                    <Description>Location 'MF_TEST[1].OM4[1].3[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].7[1].3[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.3_1.1-M08_NG::85">
+                    <Description>Location 'MF_TEST[1].OM4[1].4[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].7[1].4[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.3_1.1-M08_NG::86">
+                    <Description>Location 'MF_TEST[1].OM4[1].5[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].7[1].5[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.3_1.1-M08_NG::87">
+                    <Description>Location 'MF_TEST[1].OM4[1].5[1].2[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].7[1].5[1].2[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.3_1.1-M08_NG::88">
+                    <Description>Location 'MF_TEST[1].OM4[1].5[1].3[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].7[1].5[1].3[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.3_1.1-M08_NG::89">
+                    <Description>Location 'MF_TEST[1].OM4[1].5[1].7[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].7[1].5[1].7[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.3_1.1-M08_NG::90">
+                    <Description>Location 'MF_TEST[1].OM4[1].6[1].1[1]' is expected to be present and valued '119297000'</Description>
+                    <Assertion>
+                        <AND>
+                            <Presence Path="4[1].7[1].6[1].1[1]"/>
+                            <PlainText Path="4[1].7[1].6[1].1[1]" Text="119297000" IgnoreCase="false"/>
+                        </AND>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.3_1.1-M08_NG::91">
+                    <Description>Location 'MF_TEST[1].OM4[1].6[1].2[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].7[1].6[1].2[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.3_1.1-M08_NG::92">
+                    <Description>Location 'MF_TEST[1].OM4[1].6[1].3[1]' is expected to be present and valued 'SCT'</Description>
+                    <Assertion>
+                        <AND>
+                            <Presence Path="4[1].7[1].6[1].3[1]"/>
+                            <PlainText Path="4[1].7[1].6[1].3[1]" Text="SCT" IgnoreCase="false"/>
+                        </AND>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.3_1.1-M08_NG::93">
+                    <Description>Location 'MF_TEST[1].OM4[1].6[1].4[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].7[1].6[1].4[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.3_1.1-M08_NG::94">
+                    <Description>Location 'MF_TEST[1].OM4[1].6[1].5[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].7[1].6[1].5[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.3_1.1-M08_NG::95">
+                    <Description>Location 'MF_TEST[1].OM4[1].6[1].6[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].7[1].6[1].6[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.3_1.1-M08_NG::96">
+                    <Description>Location 'MF_TEST[1].OM4[1].6[1].7[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].7[1].6[1].7[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.3_1.1-M08_NG::97">
+                    <Description>Location 'MF_TEST[1].OM4[1].6[1].8[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].7[1].6[1].8[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.3_1.1-M08_NG::98">
+                    <Description>Location 'MF_TEST[1].OM4[1].6[1].9[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].7[1].6[1].9[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.3_1.1-M08_NG::99">
+                    <Description>Location 'MF_TEST[1].OM4[1].7[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].7[1].7[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.3_1.1-M08_NG::100">
+                    <Description>Location 'MF_TEST[1].OM4[1].7[1].2[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].7[1].7[1].2[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.3_1.1-M08_NG::101">
+                    <Description>Location 'MF_TEST[1].OM4[1].7[1].3[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].7[1].7[1].3[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.3_1.1-M08_NG::102">
+                    <Description>Location 'MF_TEST[1].OM4[1].7[1].7[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].7[1].7[1].7[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.3_1.1-M08_NG::103">
+                    <Description>Location 'MF_TEST[1].OM4[1].10[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].7[1].10[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.3_1.1-M08_NG::104">
+                    <Description>Location 'MF_TEST[1].OM4[1].10[1].2[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].7[1].10[1].2[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.3_1.1-M08_NG::105">
+                    <Description>Location 'MF_TEST[1].OM4[1].10[1].2[1].2[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].7[1].10[1].2[1].2[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.3_1.1-M08_NG::106">
+                    <Description>Location 'MF_TEST[1].OM4[1].10[1].2[1].3[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].7[1].10[1].2[1].3[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.3_1.1-M08_NG::107">
+                    <Description>Location 'MF_TEST[1].OM4[1].10[1].2[1].7[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].7[1].10[1].2[1].7[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.3_1.1-M08_NG::108">
+                    <Description>Location 'MF_TEST[1].OM4[1].11[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].7[1].11[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.3_1.1-M08_NG::109">
+                    <Description>Location 'MF_TEST[1].OM4[1].11[1].2[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].7[1].11[1].2[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.3_1.1-M08_NG::110">
+                    <Description>Location 'MF_TEST[1].OM4[1].11[1].2[1].2[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].7[1].11[1].2[1].2[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.3_1.1-M08_NG::111">
+                    <Description>Location 'MF_TEST[1].OM4[1].11[1].2[1].3[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].7[1].11[1].2[1].3[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.3_1.1-M08_NG::112">
+                    <Description>Location 'MF_TEST[1].OM4[1].11[1].2[1].7[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].7[1].11[1].2[1].7[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.3_1.1-M08_NG::113">
+                    <Description>Location 'MF_TEST[1].OM4[1].12[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].7[1].12[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.3_1.1-M08_NG::114">
+                    <Description>Location 'MF_TEST[1].OM4[1].15[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].7[1].15[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.3_1.1-M08_NG::115">
+                    <Description>Location 'MF_TEST[1].OM4[1].15[1].2[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].7[1].15[1].2[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.3_1.1-M08_NG::116">
+                    <Description>Location 'MF_TEST[1].OM4[1].15[1].7[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].7[1].15[1].7[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.3_1.1-M08_NG::117">
+                    <Description>Location 'MF_TEST[1].OM4[1].15[2].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].7[1].15[2].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.3_1.1-M08_NG::118">
+                    <Description>Location 'MF_TEST[1].OM4[1].15[2].2[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].7[1].15[2].2[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.3_1.1-M08_NG::119">
+                    <Description>Location 'MF_TEST[1].OM4[1].15[2].3[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].7[1].15[2].3[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.3_1.1-M08_NG::120">
+                    <Description>Location 'MF_TEST[1].OM4[1].15[2].7[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].7[1].15[2].7[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.3_1.1-M08_NG::121">
+                    <Description>Location 'MF_TEST[1].OM4[1].16[1]' is expected to be present and valued 'P'</Description>
+                    <Assertion>
+                        <AND>
+                            <Presence Path="4[1].7[1].16[1]"/>
+                            <PlainText Path="4[1].7[1].16[1]" Text="P" IgnoreCase="false"/>
+                        </AND>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.3_1.1-M08_NG::122">
+                    <Description>Location 'MF_TEST[1].OM4[2].3[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].7[2].3[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.3_1.1-M08_NG::123">
+                    <Description>Location 'MF_TEST[1].OM4[2].4[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].7[2].4[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.3_1.1-M08_NG::124">
+                    <Description>Location 'MF_TEST[1].OM4[2].5[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].7[2].5[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.3_1.1-M08_NG::125">
+                    <Description>Location 'MF_TEST[1].OM4[2].5[1].2[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].7[2].5[1].2[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.3_1.1-M08_NG::126">
+                    <Description>Location 'MF_TEST[1].OM4[2].5[1].3[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].7[2].5[1].3[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.3_1.1-M08_NG::127">
+                    <Description>Location 'MF_TEST[1].OM4[2].5[1].7[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].7[2].5[1].7[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.3_1.1-M08_NG::128">
+                    <Description>Location 'MF_TEST[1].OM4[2].6[1].1[1]' is expected to be present and valued '119297000'</Description>
+                    <Assertion>
+                        <AND>
+                            <Presence Path="4[1].7[2].6[1].1[1]"/>
+                            <PlainText Path="4[1].7[2].6[1].1[1]" Text="119297000" IgnoreCase="false"/>
+                        </AND>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.3_1.1-M08_NG::129">
+                    <Description>Location 'MF_TEST[1].OM4[2].6[1].2[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].7[2].6[1].2[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.3_1.1-M08_NG::130">
+                    <Description>Location 'MF_TEST[1].OM4[2].6[1].3[1]' is expected to be present and valued 'SCT'</Description>
+                    <Assertion>
+                        <AND>
+                            <Presence Path="4[1].7[2].6[1].3[1]"/>
+                            <PlainText Path="4[1].7[2].6[1].3[1]" Text="SCT" IgnoreCase="false"/>
+                        </AND>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.3_1.1-M08_NG::131">
+                    <Description>Location 'MF_TEST[1].OM4[2].6[1].4[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].7[2].6[1].4[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.3_1.1-M08_NG::132">
+                    <Description>Location 'MF_TEST[1].OM4[2].6[1].5[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].7[2].6[1].5[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.3_1.1-M08_NG::133">
+                    <Description>Location 'MF_TEST[1].OM4[2].6[1].6[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].7[2].6[1].6[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.3_1.1-M08_NG::134">
+                    <Description>Location 'MF_TEST[1].OM4[2].6[1].7[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].7[2].6[1].7[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.3_1.1-M08_NG::135">
+                    <Description>Location 'MF_TEST[1].OM4[2].6[1].8[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].7[2].6[1].8[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.3_1.1-M08_NG::136">
+                    <Description>Location 'MF_TEST[1].OM4[2].6[1].9[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].7[2].6[1].9[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.3_1.1-M08_NG::137">
+                    <Description>Location 'MF_TEST[1].OM4[2].7[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].7[2].7[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.3_1.1-M08_NG::138">
+                    <Description>Location 'MF_TEST[1].OM4[2].7[1].2[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].7[2].7[1].2[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.3_1.1-M08_NG::139">
+                    <Description>Location 'MF_TEST[1].OM4[2].7[1].3[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].7[2].7[1].3[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.3_1.1-M08_NG::140">
+                    <Description>Location 'MF_TEST[1].OM4[2].7[1].7[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].7[2].7[1].7[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.3_1.1-M08_NG::141">
+                    <Description>Location 'MF_TEST[1].OM4[2].10[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].7[2].10[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.3_1.1-M08_NG::142">
+                    <Description>Location 'MF_TEST[1].OM4[2].10[1].2[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].7[2].10[1].2[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.3_1.1-M08_NG::143">
+                    <Description>Location 'MF_TEST[1].OM4[2].10[1].2[1].2[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].7[2].10[1].2[1].2[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.3_1.1-M08_NG::144">
+                    <Description>Location 'MF_TEST[1].OM4[2].10[1].2[1].3[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].7[2].10[1].2[1].3[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.3_1.1-M08_NG::145">
+                    <Description>Location 'MF_TEST[1].OM4[2].10[1].2[1].7[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].7[2].10[1].2[1].7[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.3_1.1-M08_NG::146">
+                    <Description>Location 'MF_TEST[1].OM4[2].11[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].7[2].11[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.3_1.1-M08_NG::147">
+                    <Description>Location 'MF_TEST[1].OM4[2].11[1].2[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].7[2].11[1].2[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.3_1.1-M08_NG::148">
+                    <Description>Location 'MF_TEST[1].OM4[2].11[1].2[1].2[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].7[2].11[1].2[1].2[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.3_1.1-M08_NG::149">
+                    <Description>Location 'MF_TEST[1].OM4[2].11[1].2[1].3[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].7[2].11[1].2[1].3[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.3_1.1-M08_NG::150">
+                    <Description>Location 'MF_TEST[1].OM4[2].11[1].2[1].7[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].7[2].11[1].2[1].7[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.3_1.1-M08_NG::151">
+                    <Description>Location 'MF_TEST[1].OM4[2].12[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].7[2].12[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.3_1.1-M08_NG::152">
+                    <Description>Location 'MF_TEST[1].OM4[2].15[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].7[2].15[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.3_1.1-M08_NG::153">
+                    <Description>Location 'MF_TEST[1].OM4[2].15[1].2[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].7[2].15[1].2[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.3_1.1-M08_NG::154">
+                    <Description>Location 'MF_TEST[1].OM4[2].15[1].7[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].7[2].15[1].7[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.3_1.1-M08_NG::155">
+                    <Description>Location 'MF_TEST[1].OM4[2].15[2].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].7[2].15[2].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.3_1.1-M08_NG::156">
+                    <Description>Location 'MF_TEST[1].OM4[2].15[2].2[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].7[2].15[2].2[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.3_1.1-M08_NG::157">
+                    <Description>Location 'MF_TEST[1].OM4[2].15[2].3[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].7[2].15[2].3[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.3_1.1-M08_NG::158">
+                    <Description>Location 'MF_TEST[1].OM4[2].15[2].7[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].7[2].15[2].7[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.3_1.1-M08_NG::159">
+                    <Description>Location 'MF_TEST[1].OM4[2].16[1]' is expected to be present and valued 'A'</Description>
+                    <Assertion>
+                        <AND>
+                            <Presence Path="4[1].7[2].16[1]"/>
+                            <PlainText Path="4[1].7[2].16[1]" Text="A" IgnoreCase="false"/>
+                        </AND>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.3_1.1-M08_NG::160">
+                    <Description>Location 'MF_TEST[1].OM4[2].17[1]' is expected to be present and valued '1.1'</Description>
+                    <Assertion>
+                        <AND>
+                            <Presence Path="4[1].7[2].17[1]"/>
+                            <PlainText Path="4[1].7[2].17[1]" Text="1.1" IgnoreCase="false"/>
+                        </AND>
+                    </Assertion>
+                </Constraint>
+            </ByID>
+        </Message>
+    </Constraints>
+</ConformanceContext>

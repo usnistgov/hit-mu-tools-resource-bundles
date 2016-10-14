@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseMetaData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="EDOS_2.1_1.1-M08_GU" date="11/18/2015" name="M08_Update_Add" version="version3">
+		<Description>
+The Laboratory Test Compendium from Century Hospital Clinical Laboratory is a subset of their Directory of Services.  It is based upon the most commonly ordered lab tests by Dr. Radon.    This compendium is being used by Dr. Nicholas Radon's practice EHR-S to place orders electronically to Century Hospital's Clinical Laboratory.  Century Hospital has made the following changes to their test compendium:
+- Added a stool culture, colony count and antibiotic susceptibility tests.
+Century Hospital's LIS transmits the appropriate eDOS update messages with these changes to Dr. Radon's EHR.</Description>
+		<PreCondition>EDOS_1.0_1.1-M08_New
+and
+EDOS_1.0_2.1-M10_New
+and
+EDOS_1.0_3.1-M04_New
+and
+EDOS_1.0_4.1-M18_New_Approved
+and
+EDOS_1.0_5.1-M18_New_Limited
+have been uploaded.</PreCondition>
+		<PostCondition>No Post-Condition.</PostCondition>
+		<TestObjectives>Demonstrate capability to support a M08 update message - action: addition
+Demonstrate capability to support for an OM3 segment.
+Demonstrate capability to support the repeating field in OM3-5 (Abnormal Tests/Codes for Categorical Observations),  OM4-3 (Container Description), OM4-4 (Container Volume), and OM4-5 (Container Units).
+Demonstrate capability to support repeating segments for OM4.</TestObjectives>
+		<Comments>Update changes for addition of new individual observations.</Comments>
+	</TestCaseMetaData>

@@ -1,0 +1,902 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--2015-02-23T11:20:35.689-05:00--><HL7v2xConformanceProfile HL7Version="2.5.1" ProfileType="HL7">
+	  <MetaData Name="" OrgName="NIST" Version="V2_IG_LTCF_R2_DSTU_R1.1_2014MAR" Status=""
+             Topics="confsig--2.5.1-profile-accNE_accAL-Deferred"/>
+	  <Encodings>
+		    <Encoding>ER7</Encoding>
+	  </Encodings>
+	  <DynamicDef AccAck="NE" AppAck="AL" MsgAckMode="Deferred"/>
+	  <HL7v2xStaticDef MsgType="MFK" EventType="M08" MsgStructID="MFK_M01"
+                    EventDesc="MFN/MFK - Test/observation (numeric) master file"
+                    Role="Sender">
+		    <MetaData Name="" OrgName="" Version="" Status=""
+                Topics="confsig--2.5.1-static-MFK-M08-null-MFK_M01---Sender"/>
+		    <Segment Name="MSH" Usage="R" Min="1" Max="1" LongName="Message Header">
+         <ConformanceStatement Profile="Base" id="NIST-XX">
+			         <EnglishDescription>An occurrence of MSH-21 (Message Profile Identifier) SHALL be valued with '2.16.840.1.113883.9.76' (eDOS_NG_Response_Profile) or two occurrences SHALL be valued with '2.16.840.1.113883.9.72' (eDOS_Acknowledgement_Component) and '2.16.840.1.113883.9.74' (eDOS_NG_Acknowledgement_Component) in any order.</EnglishDescription>
+			         <Assertion Description="Failed Assertion:  No detailed assertion information is available">
+				           <Custom className="gov.nist.healthcare.mu.edos.custom.MSH" id="4"/>
+			         </Assertion>
+		       </ConformanceStatement>
+         <Field Datatype="ST" ItemNo="00001" Max="1" MaxLength="1" Min="1" MinLength="1"
+                Name="Field Separator"
+                Usage="R">
+			         <ConformanceStatement Profile="Base" id="eDOS-6"> 
+				           <EnglishDescription>MSH-1 (Field Separator) SHALL contain the constant value '|'.</EnglishDescription>  
+				           <Assertion Description="Failed Assertion : MSH-1='|'"> 
+					             <PlainText location="." value="|"/> 
+				           </Assertion> 
+			         </ConformanceStatement>
+		       </Field>
+         <Field Datatype="ST" ItemNo="00002" Max="1" MaxLength="4" Min="1" MinLength="1"
+                Name="Encoding Characters"
+                Usage="R">
+			         <ConformanceStatement Profile="Base" id="eDOS-7"> 
+				           <EnglishDescription>MSH-2 (Encoding Characters) SHALL contain the constant value '^~\&amp;' or the constant value '^~\&amp;#'.</EnglishDescription>  
+				           <Assertion Description="Failed Assertion : MSH-2='^~\&amp;' OR MSH-2='^~\&amp;#'"> 
+					             <OR> 
+						               <PlainText location="." value="^~\&amp;#"/>  
+						               <PlainText location="." value="^~\&amp;"/> 
+					             </OR> 
+				           </Assertion> 
+			         </ConformanceStatement>
+		       </Field>
+         <Field Datatype="HD_NG" ItemNo="00003" Max="1" MaxLength="227" Min="0" MinLength="1"
+                Name="Sending Application"
+                Table="HL70361"
+                Usage="RE">
+            <Component Datatype="IS" MaxLength="20" MinLength="1" Name="Namespace ID"
+                       PredicateFalseUsage="O"
+                       PredicateTrueUsage="R"
+                       Usage="C">
+			            <Predicate>
+				              <EnglishDescription>If HD_NG.2 (Universal ID) is not valued.</EnglishDescription>
+				              <Condition>
+					                <NOT>
+						                  <Valued location="./2"/>
+					                </NOT>
+				              </Condition>
+			            </Predicate>
+		          </Component>
+            <Component Datatype="ST" MaxLength="199" MinLength="1" Name="Universal ID"
+                       PredicateFalseUsage="O"
+                       PredicateTrueUsage="R"
+                       Usage="C">
+			            <Predicate>
+				              <EnglishDescription>If HD_NG.1 (Namespace ID) is not valued.</EnglishDescription>
+				              <Condition>
+					                <NOT>
+						                  <Valued location="./1"/>
+					                </NOT>
+				              </Condition>
+			            </Predicate>
+		          </Component>
+            <Component Datatype="ID" MaxLength="6" MinLength="1" Name="Universal ID Type"
+                       PredicateFalseUsage="X"
+                       PredicateTrueUsage="R"
+                       Table="eDOS_HL70301"
+                       Usage="C">
+			            <Predicate>
+				              <EnglishDescription>If HD_NG.2 (Universal ID) is valued.</EnglishDescription>
+				              <Condition>
+					                <Valued location="./2"/>
+				              </Condition>
+			            </Predicate>
+		          </Component>
+         </Field>
+         <Field Datatype="HD_NG" ItemNo="00004" Max="1" MaxLength="227" Min="1" MinLength="1"
+                Name="Sending Facility"
+                Table="HL70362"
+                Usage="R">
+            <Component Datatype="IS" MaxLength="20" MinLength="1" Name="Namespace ID"
+                       PredicateFalseUsage="O"
+                       PredicateTrueUsage="R"
+                       Usage="C">
+			            <Predicate>
+				              <EnglishDescription>If HD_NG.2 (Universal ID) is not valued.</EnglishDescription>
+				              <Condition>
+					                <NOT>
+						                  <Valued location="./2"/>
+					                </NOT>
+				              </Condition>
+			            </Predicate>
+		          </Component>
+            <Component Datatype="ST" MaxLength="199" MinLength="1" Name="Universal ID"
+                       PredicateFalseUsage="O"
+                       PredicateTrueUsage="R"
+                       Usage="C">
+			            <Predicate>
+				              <EnglishDescription>If HD_NG.1 (Namespace ID) is not valued.</EnglishDescription>
+				              <Condition>
+					                <NOT>
+						                  <Valued location="./1"/>
+					                </NOT>
+				              </Condition>
+			            </Predicate>
+		          </Component>
+            <Component Datatype="ID" MaxLength="6" MinLength="1" Name="Universal ID Type"
+                       PredicateFalseUsage="X"
+                       PredicateTrueUsage="R"
+                       Table="eDOS_HL70301"
+                       Usage="C">
+			            <Predicate>
+				              <EnglishDescription>If HD_NG.2 (Universal ID) is valued.</EnglishDescription>
+				              <Condition>
+					                <Valued location="./2"/>
+				              </Condition>
+			            </Predicate>
+		          </Component>
+         </Field>
+         <Field Datatype="HD" ItemNo="00005" Max="1" MaxLength="227" Min="0" MinLength="1"
+                Name="Receiving Application"
+                Table="0361"
+                Usage="O">
+            <Component Datatype="IS" MaxLength="20" MinLength="1" Name="Namespace ID" Table="0300"
+                       Usage="O"/>
+            <Component Datatype="ST" MaxLength="199" MinLength="1" Name="Universal ID" Usage="C"/>
+            <Component Datatype="ID" MaxLength="6" MinLength="1" Name="Universal ID Type" Table="0301"
+                       Usage="C"/>
+         </Field>
+         <Field Datatype="HD_NG" ItemNo="00006" Max="1" MaxLength="227" Min="0" MinLength="1"
+                Name="Receiving Facility"
+                Table="HL70362"
+                Usage="RE">
+            <Component Datatype="IS" MaxLength="20" MinLength="1" Name="Namespace ID"
+                       PredicateFalseUsage="O"
+                       PredicateTrueUsage="R"
+                       Usage="C">
+			            <Predicate>
+				              <EnglishDescription>If HD_NG.2 (Universal ID) is not valued.</EnglishDescription>
+				              <Condition>
+					                <NOT>
+						                  <Valued location="./2"/>
+					                </NOT>
+				              </Condition>
+			            </Predicate>
+		          </Component>
+            <Component Datatype="ST" MaxLength="199" MinLength="1" Name="Universal ID"
+                       PredicateFalseUsage="O"
+                       PredicateTrueUsage="R"
+                       Usage="C">
+			            <Predicate>
+				              <EnglishDescription>If HD_NG.1 (Namespace ID) is not valued.</EnglishDescription>
+				              <Condition>
+					                <NOT>
+						                  <Valued location="./1"/>
+					                </NOT>
+				              </Condition>
+			            </Predicate>
+		          </Component>
+            <Component Datatype="ID" MaxLength="6" MinLength="1" Name="Universal ID Type"
+                       PredicateFalseUsage="X"
+                       PredicateTrueUsage="R"
+                       Table="eDOS_HL70301"
+                       Usage="C">
+			            <Predicate>
+				              <EnglishDescription>If HD_NG.2 (Universal ID) is valued.</EnglishDescription>
+				              <Condition>
+					                <Valued location="./2"/>
+				              </Condition>
+			            </Predicate>
+		          </Component>
+         </Field>
+         <Field Datatype="TS_1" ItemNo="00007" Max="1" MaxLength="26" Min="1" MinLength="1"
+                Name="Date/Time Of Message"
+                Usage="R">
+            <Component Datatype="DTM" MaxLength="24" MinLength="1" Name="Time" Usage="R">
+			            <ConformanceStatement Profile="Base" id="NIST-18">
+				              <EnglishDescription>TS_1 SHALL be precise to the second.</EnglishDescription>
+				              <Assertion Description="Failed Assertion : Format : YYYYMMDDHHMMSS[.S[S[S[S]]]][+/-ZZZZ]">
+					                <Regex location="." regex="\d{14}.*"/>
+				              </Assertion>
+			            </ConformanceStatement>
+		          </Component>
+            <Component Datatype="ID" MaxLength="1" MinLength="1" Name="Degree of Precision"
+                       Table="0529"
+                       Usage="X"/>
+         </Field>
+         <Field Datatype="ST" ItemNo="00008" Max="1" MaxLength="40" Min="0" MinLength="1"
+                Name="Security"
+                Usage="O"/>
+         <Field Datatype="MSG_EDOS" ItemNo="00009" Max="1" MaxLength="15" Min="1" MinLength="1"
+                Name="Message Type"
+                Usage="R">
+            <Component Datatype="ID" MaxLength="3" MinLength="1" Name="Message Code"
+                       Table="eDOS_HL70076"
+                       Usage="R"/>
+            <Component Datatype="ID" MaxLength="3" MinLength="1" Name="Trigger Event"
+                       Table="eDOS_HL70003"
+                       Usage="R"/>
+            <Component Datatype="ID" MaxLength="7" MinLength="1" Name="Message Structure"
+                       Table="eDOS_HL70354"
+                       Usage="R"/>
+         </Field>
+         <Field Datatype="ST" ItemNo="00010" Max="1" MaxLength="20" Min="1" MinLength="1"
+                Name="Message Control ID"
+                Usage="R"/>
+         <Field Datatype="PT_EDOS" ItemNo="00011" Max="1" MaxLength="3" Min="1" MinLength="1"
+                Name="Processing ID"
+                Usage="R">
+            <Component Datatype="ID" MaxLength="1" MinLength="1" Name="Processing ID" Table="HL70103"
+                       Usage="R"/>
+            <Component Datatype="ID" MaxLength="1" MinLength="1" Name="Processing Mode" Table="0207"
+                       Usage="O"/>
+         </Field>
+         <Field Datatype="VID_EDOS" ItemNo="00012" Max="1" MaxLength="60" Min="1" MinLength="1"
+                Name="Version ID"
+                Table="eDOS_HL70104"
+                Usage="R">
+			         <ConformanceStatement Profile="Base" id="eDOS-8"> 
+				           <EnglishDescription>MSH-12.1 (Version ID) SHALL contain the constant value '2.5.1'.</EnglishDescription>  
+				           <Assertion Description="Failed Assertion : MSH-12.1='2.5.1'"> 
+					             <PlainText location="./1" value="2.5.1"/> 
+				           </Assertion> 
+			         </ConformanceStatement>
+		          <Component Datatype="ID" MaxLength="5" MinLength="1" Name="Version ID"
+                       Table="eDOS_HL70104"
+                       Usage="R">
+               <ConformanceStatement Profile="Base" id="eDOS-5"> 
+                  <EnglishDescription>VID.1 (Version Identifier) SHALL be valued with '2.5.1'.</EnglishDescription>  
+                  <Assertion Description="Failed Assertion : VID.1='2.5.1'"> 
+                     <PlainText location="." value="2.5.1"/> 
+                  </Assertion> 
+               </ConformanceStatement>
+            </Component>
+            <Component Datatype="CE" MaxLength="483" MinLength="1" Name="Internationalization Code"
+                       Table="0399"
+                       Usage="O">
+               <SubComponent Datatype="ST" MaxLength="20" MinLength="1" Name="Identifier" Usage="O"/>
+               <SubComponent Datatype="ST" MaxLength="199" MinLength="1" Name="Text" Usage="O"/>
+               <SubComponent Datatype="ID" MaxLength="20" MinLength="1" Name="Name of Coding System"
+                             Table="0396"
+                             Usage="O"/>
+               <SubComponent Datatype="ST" MaxLength="20" MinLength="1" Name="Alternate Identifier"
+                             Usage="O"/>
+               <SubComponent Datatype="ST" MaxLength="199" MinLength="1" Name="Alternate Text" Usage="O"/>
+               <SubComponent Datatype="ID" MaxLength="20" MinLength="1"
+                             Name="Name of Alternate Coding System"
+                             Table="0396"
+                             Usage="O"/>
+            </Component>
+            <Component Datatype="CE" MaxLength="483" MinLength="1" Name="International Version ID"
+                       Usage="O">
+               <SubComponent Datatype="ST" MaxLength="20" MinLength="1" Name="Identifier" Usage="O"/>
+               <SubComponent Datatype="ST" MaxLength="199" MinLength="1" Name="Text" Usage="O"/>
+               <SubComponent Datatype="ID" MaxLength="20" MinLength="1" Name="Name of Coding System"
+                             Table="0396"
+                             Usage="O"/>
+               <SubComponent Datatype="ST" MaxLength="20" MinLength="1" Name="Alternate Identifier"
+                             Usage="O"/>
+               <SubComponent Datatype="ST" MaxLength="199" MinLength="1" Name="Alternate Text" Usage="O"/>
+               <SubComponent Datatype="ID" MaxLength="20" MinLength="1"
+                             Name="Name of Alternate Coding System"
+                             Table="0396"
+                             Usage="O"/>
+            </Component>
+         </Field>
+         <Field Datatype="NM" ItemNo="00013" Max="1" MaxLength="15" Min="0" MinLength="1"
+                Name="Sequence Number"
+                Usage="O"/>
+         <Field Datatype="ST" ItemNo="00014" Max="1" MaxLength="180" Min="0" MinLength="1"
+                Name="Continuation Pointer"
+                Usage="O"/>
+         <Field Datatype="ID" ItemNo="00015" Max="1" MaxLength="2" Min="1" MinLength="1"
+                Name="Accept Acknowledgment Type"
+                Table="HL70155"
+                Usage="R"/>
+         <Field Datatype="ID" ItemNo="00016" Max="1" MaxLength="2" Min="1" MinLength="1"
+                Name="Application Acknowledgment Type"
+                Table="HL70155"
+                Usage="R"/>
+         <Field Datatype="ID" ItemNo="00017" Max="1" MaxLength="3" Min="0" MinLength="1"
+                Name="Country Code"
+                Table="0399"
+                Usage="O"/>
+         <Field Datatype="ID" ItemNo="00692" Max="*" MaxLength="16" Min="0" MinLength="1"
+                Name="Character Set"
+                Table="0211"
+                Usage="O"/>
+         <Field Datatype="CE" ItemNo="00693" Max="1" MaxLength="250" Min="0" MinLength="1"
+                Name="Principal Language Of Message"
+                Usage="O">
+            <Component Datatype="ST" MaxLength="20" MinLength="1" Name="Identifier" Usage="O"/>
+            <Component Datatype="ST" MaxLength="199" MinLength="1" Name="Text" Usage="O"/>
+            <Component Datatype="ID" MaxLength="20" MinLength="1" Name="Name of Coding System"
+                       Table="0396"
+                       Usage="O"/>
+            <Component Datatype="ST" MaxLength="20" MinLength="1" Name="Alternate Identifier"
+                       Usage="O"/>
+            <Component Datatype="ST" MaxLength="199" MinLength="1" Name="Alternate Text" Usage="O"/>
+            <Component Datatype="ID" MaxLength="20" MinLength="1"
+                       Name="Name of Alternate Coding System"
+                       Table="0396"
+                       Usage="O"/>
+         </Field>
+         <Field Datatype="ID" ItemNo="01317" Max="1" MaxLength="20" Min="0" MinLength="1"
+                Name="Alternate Character Set Handling Scheme"
+                Table="0356"
+                Usage="O"/>
+         <Field Datatype="EI_GU" ItemNo="01598" Max="*" MaxLength="427" Min="1" MinLength="1"
+                Name="Message Profile Identifier"
+                Usage="R">
+            <Component Datatype="ST" MaxLength="199" MinLength="1" Name="Entity Identifier" Usage="R"/>
+            <Component Datatype="IS" MaxLength="20" MinLength="1" Name="Namespace ID" Table="0363"
+                       Usage="RE"/>
+            <Component Datatype="ST" MaxLength="199" MinLength="1" Name="Universal ID" Usage="R">
+               <ConformanceStatement Profile="Base" id="eDOS-1"> 
+                  <EnglishDescription>EI_GU.3 (Universal ID) SHALL be valued with an ISO-compliant OID.</EnglishDescription>  
+                  <Assertion Description="Failed Assertion : EI_GU.3 format is an ISO-compliant OID"> 
+                     <Regex location="." regex="[0-2](\.(0|[1-9][0-9]*))*"/> 
+                  </Assertion> 
+               </ConformanceStatement>
+            </Component>
+            <Component Datatype="ID" MaxLength="6" MinLength="1" Name="Universal ID Type" Usage="R">
+               <ConformanceStatement Profile="Base" id="eDOS-2"> 
+                  <EnglishDescription>EI_GU.4 (Universal ID Type) SHALL contain the value 'ISO'.</EnglishDescription>  
+                  <Assertion Description="Failed Assertion : EI_GU.4='ISO'"> 
+                     <PlainText location="." value="ISO"/> 
+                  </Assertion> 
+               </ConformanceStatement>
+            </Component>
+         </Field>
+      </Segment>
+		    <Segment Name="SFT" Usage="O" Min="0" Max="*" LongName="Software Segment">
+         <Field Datatype="XON" ItemNo="01834" Max="1" MaxLength="567" Min="1" MinLength="1"
+                Name="Software Vendor Organization"
+                Usage="R">
+            <Component Datatype="ST" MaxLength="50" MinLength="1" Name="Organization Name" Usage="O"/>
+            <Component Datatype="IS" MaxLength="20" MinLength="1" Name="Organization Name Type Code"
+                       Table="0204"
+                       Usage="O"/>
+            <Component Datatype="NM" MaxLength="4" MinLength="1" Name="ID Number" Usage="B"/>
+            <Component Datatype="NM" MaxLength="1" MinLength="1" Name="Check Digit" Usage="O"/>
+            <Component Datatype="ID" MaxLength="3" MinLength="1" Name="Check Digit Scheme"
+                       Table="0061"
+                       Usage="O"/>
+            <Component Datatype="HD" MaxLength="227" MinLength="1" Name="Assigning Authority"
+                       Table="0363"
+                       Usage="O">
+               <SubComponent Datatype="IS" MaxLength="20" MinLength="1" Name="Namespace ID" Table="0300"
+                             Usage="O"/>
+               <SubComponent Datatype="ST" MaxLength="199" MinLength="1" Name="Universal ID" Usage="C"/>
+               <SubComponent Datatype="ID" MaxLength="6" MinLength="1" Name="Universal ID Type" Table="0301"
+                             Usage="C"/>
+            </Component>
+            <Component Datatype="ID" MaxLength="5" MinLength="1" Name="Identifier Type Code"
+                       Table="0203"
+                       Usage="O"/>
+            <Component Datatype="HD" MaxLength="227" MinLength="1" Name="Assigning Facility" Usage="O">
+               <SubComponent Datatype="IS" MaxLength="20" MinLength="1" Name="Namespace ID" Table="0300"
+                             Usage="O"/>
+               <SubComponent Datatype="ST" MaxLength="199" MinLength="1" Name="Universal ID" Usage="C"/>
+               <SubComponent Datatype="ID" MaxLength="6" MinLength="1" Name="Universal ID Type" Table="0301"
+                             Usage="C"/>
+            </Component>
+            <Component Datatype="ID" MaxLength="1" MinLength="1" Name="Name Representation Code"
+                       Table="0465"
+                       Usage="O"/>
+            <Component Datatype="ST" MaxLength="20" MinLength="1" Name="Organization Identifier"
+                       Usage="O"/>
+         </Field>
+         <Field Datatype="ST" ItemNo="01835" Max="1" MaxLength="15" Min="1" MinLength="1"
+                Name="Software Certified Version or Release Number"
+                Usage="R"/>
+         <Field Datatype="ST" ItemNo="01836" Max="1" MaxLength="20" Min="1" MinLength="1"
+                Name="Software Product Name"
+                Usage="R"/>
+         <Field Datatype="ST" ItemNo="01837" Max="1" MaxLength="20" Min="1" MinLength="1"
+                Name="Software Binary ID"
+                Usage="R"/>
+         <Field Datatype="TX" ItemNo="01838" Max="1" MaxLength="1024" Min="0" MinLength="1"
+                Name="Software Product Information"
+                Usage="O"/>
+         <Field Datatype="TS" ItemNo="01839" Max="1" MaxLength="26" Min="0" MinLength="1"
+                Name="Software Install Date"
+                Usage="O">
+            <Component Datatype="DTM" MaxLength="24" MinLength="1" Name="Time" Usage="R"/>
+            <Component Datatype="ID" MaxLength="1" MinLength="1" Name="Degree of Precision"
+                       Table="0529"
+                       Usage="B"/>
+         </Field>
+      </Segment>
+		    <Segment Name="MSA" Usage="R" Min="1" Max="1" LongName="Message Acknowledgment">
+         <Field Datatype="ID" ItemNo="00018" Max="1" MaxLength="2" Min="1" MinLength="1"
+                Name="Acknowledgment Code"
+                Table="HL70008"
+                Usage="R"/>
+         <Field Datatype="ST" ItemNo="00010" Max="1" MaxLength="20" Min="1" MinLength="1"
+                Name="Message Control ID"
+                Usage="R"/>
+         <Field Datatype="ST" ItemNo="00020" Max="1" MaxLength="80" Min="0" MinLength="1"
+                Name="Text Message"
+                Usage="X"/>
+         <Field Datatype="NM" ItemNo="00021" Max="1" MaxLength="15" Min="0" MinLength="1"
+                Name="Expected Sequence Number"
+                Usage="O"/>
+         <Field Datatype="NUL" ItemNo="00022" Max="1" MaxLength="0" Min="0" MinLength="1"
+                Name="Delayed Acknowledgment Type"
+                Usage="X"/>
+         <Field Datatype="CE" ItemNo="00023" Max="1" MaxLength="250" Min="0" MinLength="1"
+                Name="Error Condition"
+                Table="0357"
+                Usage="X">
+            <Component Datatype="ST" MaxLength="20" MinLength="1" Name="Identifier" Usage="O"/>
+            <Component Datatype="ST" MaxLength="199" MinLength="1" Name="Text" Usage="O"/>
+            <Component Datatype="ID" MaxLength="20" MinLength="1" Name="Name of Coding System"
+                       Table="0396"
+                       Usage="O"/>
+            <Component Datatype="ST" MaxLength="20" MinLength="1" Name="Alternate Identifier"
+                       Usage="O"/>
+            <Component Datatype="ST" MaxLength="199" MinLength="1" Name="Alternate Text" Usage="O"/>
+            <Component Datatype="ID" MaxLength="20" MinLength="1"
+                       Name="Name of Alternate Coding System"
+                       Table="0396"
+                       Usage="O"/>
+         </Field>
+      </Segment>
+		    <Segment Name="ERR" Usage="C" PredicateFalseUsage="O" PredicateTrueUsage="R" Min="0"
+               Max="*"
+               LongName="Error">
+         <Predicate>
+				        <EnglishDescription>If MSA-1 (Message Acknowledgement) is not valued AA or CA.</EnglishDescription>
+				        <Condition>
+					          <NOT>
+						            <OR>
+							              <PlainText location="../3/1" value="AA"/>
+							              <PlainText location="../3/1" value="CA"/> 											
+						            </OR>
+					          </NOT>
+				        </Condition>
+			      </Predicate>
+         <Field Datatype="ELD" ItemNo="00024" Max="*" MaxLength="493" Min="0" MinLength="1"
+                Name="Error Code and Location"
+                Usage="X">
+            <Component Datatype="ST" MaxLength="3" MinLength="1" Name="Segment ID" Usage="O"/>
+            <Component Datatype="NM" MaxLength="2" MinLength="1" Name="Segment Sequence" Usage="O"/>
+            <Component Datatype="NM" MaxLength="2" MinLength="1" Name="Field Position" Usage="O"/>
+            <Component Datatype="CE" MaxLength="483" MinLength="1" Name="Code Identifying Error"
+                       Table="0357"
+                       Usage="O">
+               <SubComponent Datatype="ST" MaxLength="20" MinLength="1" Name="Identifier" Usage="O"/>
+               <SubComponent Datatype="ST" MaxLength="199" MinLength="1" Name="Text" Usage="O"/>
+               <SubComponent Datatype="ID" MaxLength="20" MinLength="1" Name="Name of Coding System"
+                             Table="0396"
+                             Usage="O"/>
+               <SubComponent Datatype="ST" MaxLength="20" MinLength="1" Name="Alternate Identifier"
+                             Usage="O"/>
+               <SubComponent Datatype="ST" MaxLength="199" MinLength="1" Name="Alternate Text" Usage="O"/>
+               <SubComponent Datatype="ID" MaxLength="20" MinLength="1"
+                             Name="Name of Alternate Coding System"
+                             Table="0396"
+                             Usage="O"/>
+            </Component>
+         </Field>
+         <Field Datatype="ERL" ItemNo="01812" Max="*" MaxLength="18" Min="0" MinLength="1"
+                Name="Error Location"
+                Usage="O">
+            <Component Datatype="ST" MaxLength="3" MinLength="1" Name="Segment ID" Usage="R"/>
+            <Component Datatype="NM" MaxLength="2" MinLength="1" Name="Segment Sequence" Usage="R"/>
+            <Component Datatype="NM" MaxLength="2" MinLength="1" Name="Field Position" Usage="O"/>
+            <Component Datatype="NM" MaxLength="2" MinLength="1" Name="Field Repetition" Usage="O"/>
+            <Component Datatype="NM" MaxLength="2" MinLength="1" Name="Component Number" Usage="O"/>
+            <Component Datatype="NM" MaxLength="2" MinLength="1" Name="Sub-Component Number" Usage="O"/>
+         </Field>
+         <Field Datatype="CWE_EDOS" ItemNo="01813" Max="1" MaxLength="705" Min="1"
+                MinLength="1"
+                Name="HL7 Error Code"
+                Table="HL70357"
+                Usage="R">
+            <Component Datatype="ST" MaxLength="20" MinLength="1" Name="Identifier"
+                       PredicateFalseUsage="O"
+                       PredicateTrueUsage="R"
+                       Usage="C">
+               <Predicate> 
+                  <EnglishDescription>If CWE.2 is not valued.</EnglishDescription>  
+                  <Condition> 
+                     <NOT> 
+                        <Valued location="./2"/> 
+                     </NOT> 
+                  </Condition> 
+               </Predicate>
+            </Component>
+            <Component Datatype="ST" MaxLength="199" MinLength="1" Name="Text"
+                       PredicateFalseUsage="RE"
+                       PredicateTrueUsage="R"
+                       Usage="C">
+               <Predicate> 
+                  <EnglishDescription>If CWE.1 is not valued.</EnglishDescription>  
+                  <Condition> 
+                     <NOT> 
+                        <Valued location="./1"/> 
+                     </NOT> 
+                  </Condition> 
+               </Predicate>
+            </Component>
+            <Component Datatype="ID" MaxLength="20" MinLength="1" Name="Name of Coding System"
+                       PredicateFalseUsage="X"
+                       PredicateTrueUsage="R"
+                       Table="eDOS_HL70396"
+                       Usage="C">
+               <Predicate> 
+                  <EnglishDescription>If CWE.1 is valued.</EnglishDescription>  
+                  <Condition> 
+                     <Valued location="./1"/> 
+                  </Condition> 
+               </Predicate>
+            </Component>
+            <Component Datatype="ST" MaxLength="20" MinLength="1" Name="Alternate Identifier"
+                       Usage="O"/>
+            <Component Datatype="ST" MaxLength="199" MinLength="1" Name="Alternate Text" Usage="O"/>
+            <Component Datatype="ID" MaxLength="20" MinLength="1"
+                       Name="Name of Alternate Coding System"
+                       Table="0396"
+                       Usage="O"/>
+            <Component Datatype="ST" MaxLength="10" MinLength="1" Name="Coding System Version ID"
+                       PredicateFalseUsage="X"
+                       PredicateTrueUsage="RE"
+                       Usage="C">
+               <Predicate> 
+                  <EnglishDescription>If CWE.3 (Name Of Coding System) is valued.</EnglishDescription>  
+                  <Condition> 
+                     <Valued location="./3"/> 
+                  </Condition> 
+               </Predicate>
+            </Component>
+            <Component Datatype="ST" MaxLength="10" MinLength="1"
+                       Name="Alternate Coding System Version ID"
+                       PredicateFalseUsage="X"
+                       PredicateTrueUsage="RE"
+                       Usage="C">
+               <Predicate> 
+                  <EnglishDescription>If CWE.6 (Name Of Alternate Coding System) is valued.</EnglishDescription>  
+                  <Condition> 
+                     <Valued location="./6"/> 
+                  </Condition> 
+               </Predicate>
+            </Component>
+            <Component Datatype="ST" MaxLength="199" MinLength="1" Name="Original Text" Usage="O"/>
+            <Component Datatype="ST" MaxLength="20" MinLength="1" Name="Second Alternate Identifier"
+                       Usage="O"/>
+            <Component Datatype="ST" MaxLength="199" MinLength="1" Name="Second Alternate Text"
+                       Usage="O"/>
+            <Component Datatype="ID" MaxLength="12" MinLength="1"
+                       Name="Second Name of Alternate Coding System"
+                       Table="0396"
+                       Usage="O"/>
+            <Component Datatype="ST" MaxLength="10" MinLength="1"
+                       Name="Second Alternate Coding System Version ID"
+                       Usage="O"/>
+            <Component Datatype="ST" MaxLength="199" MinLength="1" Name="Coding System OID" Usage="O"/>
+            <Component Datatype="ST" MaxLength="199" MinLength="1" Name="Value Set OID" Usage="O"/>
+            <Component Datatype="DTM" MaxLength="8" MinLength="1" Name="Value Set Version ID"
+                       Usage="O"/>
+            <Component Datatype="ST" MaxLength="199" MinLength="1" Name="Alternate Coding System OID"
+                       Usage="O"/>
+            <Component Datatype="ST" MaxLength="199" MinLength="1" Name="Alternate Value Set OID"
+                       Usage="O"/>
+            <Component Datatype="DTM" MaxLength="8" MinLength="1"
+                       Name="Alternate Value Set Version ID"
+                       Usage="O"/>
+            <Component Datatype="ST" MaxLength="199" MinLength="1"
+                       Name="Second Alternate Coding System OID"
+                       Usage="O"/>
+            <Component Datatype="ST" MaxLength="199" MinLength="1"
+                       Name="Second Alternate Value Set OID"
+                       Usage="O"/>
+            <Component Datatype="DTM" MaxLength="8" MinLength="1"
+                       Name="Second Alternate Value Set Version ID"
+                       Usage="O"/>
+         </Field>
+         <Field Datatype="ID" ItemNo="01814" Max="1" MaxLength="2" Min="1" MinLength="1"
+                Name="Severity"
+                Table="HL70516"
+                Usage="R"/>
+         <Field Datatype="CWE" ItemNo="01815" Max="1" MaxLength="705" Min="0" MinLength="1"
+                Name="Application Error Code"
+                Table="0533"
+                Usage="O">
+            <Component Datatype="ST" MaxLength="20" MinLength="1" Name="Identifier" Usage="O"/>
+            <Component Datatype="ST" MaxLength="199" MinLength="1" Name="Text" Usage="O"/>
+            <Component Datatype="ID" MaxLength="20" MinLength="1" Name="Name of Coding System"
+                       Table="0396"
+                       Usage="O"/>
+            <Component Datatype="ST" MaxLength="20" MinLength="1" Name="Alternate Identifier"
+                       Usage="O"/>
+            <Component Datatype="ST" MaxLength="199" MinLength="1" Name="Alternate Text" Usage="O"/>
+            <Component Datatype="ID" MaxLength="20" MinLength="1"
+                       Name="Name of Alternate Coding System"
+                       Table="0396"
+                       Usage="O"/>
+            <Component Datatype="ST" MaxLength="10" MinLength="1" Name="Coding System Version ID"
+                       Usage="C"/>
+            <Component Datatype="ST" MaxLength="10" MinLength="1"
+                       Name="Alternate Coding System Version ID"
+                       Usage="O"/>
+            <Component Datatype="ST" MaxLength="199" MinLength="1" Name="Original Text" Usage="O"/>
+         </Field>
+         <Field Datatype="ST" ItemNo="01816" Max="10" MaxLength="80" Min="0" MinLength="1"
+                Name="Application Error Parameter"
+                Usage="O"/>
+         <Field Datatype="TX" ItemNo="01817" Max="1" MaxLength="2048" Min="0" MinLength="1"
+                Name="Diagnostic Information"
+                Usage="RE"/>
+         <Field Datatype="TX" ItemNo="01818" Max="1" MaxLength="250" Min="0" MinLength="1"
+                Name="User Message"
+                Usage="O"/>
+         <Field Datatype="IS" ItemNo="01819" Max="*" MaxLength="20" Min="0" MinLength="1"
+                Name="Inform Person Indicator"
+                Table="0517"
+                Usage="O"/>
+         <Field Datatype="CWE" ItemNo="01820" Max="1" MaxLength="705" Min="0" MinLength="1"
+                Name="Override Type"
+                Table="0518"
+                Usage="O">
+            <Component Datatype="ST" MaxLength="20" MinLength="1" Name="Identifier" Usage="O"/>
+            <Component Datatype="ST" MaxLength="199" MinLength="1" Name="Text" Usage="O"/>
+            <Component Datatype="ID" MaxLength="20" MinLength="1" Name="Name of Coding System"
+                       Table="0396"
+                       Usage="O"/>
+            <Component Datatype="ST" MaxLength="20" MinLength="1" Name="Alternate Identifier"
+                       Usage="O"/>
+            <Component Datatype="ST" MaxLength="199" MinLength="1" Name="Alternate Text" Usage="O"/>
+            <Component Datatype="ID" MaxLength="20" MinLength="1"
+                       Name="Name of Alternate Coding System"
+                       Table="0396"
+                       Usage="O"/>
+            <Component Datatype="ST" MaxLength="10" MinLength="1" Name="Coding System Version ID"
+                       Usage="C"/>
+            <Component Datatype="ST" MaxLength="10" MinLength="1"
+                       Name="Alternate Coding System Version ID"
+                       Usage="O"/>
+            <Component Datatype="ST" MaxLength="199" MinLength="1" Name="Original Text" Usage="O"/>
+         </Field>
+         <Field Datatype="CWE" ItemNo="01821" Max="*" MaxLength="705" Min="0" MinLength="1"
+                Name="Override Reason Code"
+                Table="0519"
+                Usage="O">
+            <Component Datatype="ST" MaxLength="20" MinLength="1" Name="Identifier" Usage="O"/>
+            <Component Datatype="ST" MaxLength="199" MinLength="1" Name="Text" Usage="O"/>
+            <Component Datatype="ID" MaxLength="20" MinLength="1" Name="Name of Coding System"
+                       Table="0396"
+                       Usage="O"/>
+            <Component Datatype="ST" MaxLength="20" MinLength="1" Name="Alternate Identifier"
+                       Usage="O"/>
+            <Component Datatype="ST" MaxLength="199" MinLength="1" Name="Alternate Text" Usage="O"/>
+            <Component Datatype="ID" MaxLength="20" MinLength="1"
+                       Name="Name of Alternate Coding System"
+                       Table="0396"
+                       Usage="O"/>
+            <Component Datatype="ST" MaxLength="10" MinLength="1" Name="Coding System Version ID"
+                       Usage="C"/>
+            <Component Datatype="ST" MaxLength="10" MinLength="1"
+                       Name="Alternate Coding System Version ID"
+                       Usage="O"/>
+            <Component Datatype="ST" MaxLength="199" MinLength="1" Name="Original Text" Usage="O"/>
+         </Field>
+         <Field Datatype="XTN" ItemNo="01822" Max="*" MaxLength="652" Min="0" MinLength="1"
+                Name="Help Desk Contact Point"
+                Usage="O">
+            <Component Datatype="ST" MaxLength="199" MinLength="1" Name="Telephone Number" Usage="B"/>
+            <Component Datatype="ID" MaxLength="3" MinLength="1" Name="Telecommunication Use Code"
+                       Table="0201"
+                       Usage="O"/>
+            <Component Datatype="ID" MaxLength="8" MinLength="1"
+                       Name="Telecommunication Equipment Type"
+                       Table="0202"
+                       Usage="O"/>
+            <Component Datatype="ST" MaxLength="199" MinLength="1" Name="Email Address" Usage="O"/>
+            <Component Datatype="NM" MaxLength="3" MinLength="1" Name="Country Code" Usage="O"/>
+            <Component Datatype="NM" MaxLength="5" MinLength="1" Name="Area/City Code" Usage="O"/>
+            <Component Datatype="NM" MaxLength="9" MinLength="1" Name="Local Number" Usage="O"/>
+            <Component Datatype="NM" MaxLength="5" MinLength="1" Name="Extension" Usage="O"/>
+            <Component Datatype="ST" MaxLength="199" MinLength="1" Name="Any Text" Usage="O"/>
+            <Component Datatype="ST" MaxLength="4" MinLength="1" Name="Extension Prefix" Usage="O"/>
+            <Component Datatype="ST" MaxLength="6" MinLength="1" Name="Speed Dial Code" Usage="O"/>
+            <Component Datatype="ST" MaxLength="199" MinLength="1" Name="Unformatted Telephone number"
+                       Usage="C"/>
+         </Field>
+      </Segment>
+		    <Segment Name="MFI" Usage="R" Min="1" Max="1" LongName="Master File Identification">
+         <Field Datatype="CWE_EDOS" ItemNo="00658" Max="1" MaxLength="250" Min="1"
+                MinLength="1"
+                Name="Master File Identifier"
+                Table="HL70175"
+                Usage="R">
+			         <ConformanceStatement Profile="Base" id="eDOS-11"> 
+				           <EnglishDescription>If MSH-9.2 (Message Type^Trigger Event) is valued 'M10' then MFI-1.1 (Identifier) SHALL be valued 'OMC'.</EnglishDescription>  
+				           <Assertion Description="Failed Assertion : MFI-1.1='OMC'"> 
+					             <Custom className="gov.nist.healthcare.mu.edos.custom.MFI" id="1"/> 
+				           </Assertion> 
+			         </ConformanceStatement>
+			         <ConformanceStatement Profile="Base" id="eDOS-10"> 
+				           <EnglishDescription>If MSH-9.2 (Message Type^Trigger Event) is valued 'M08' then MFI-1.1 (Identifier) SHALL be valued 'OMA'.</EnglishDescription>  
+				           <Assertion Description="Failed Assertion : MFI-1.1='OMA'"> 
+					             <Custom className="gov.nist.healthcare.mu.edos.custom.MFI" id="2"/> 
+				           </Assertion> 
+			         </ConformanceStatement>
+			         <ConformanceStatement Profile="Base" id="eDOS-9"> 
+				           <EnglishDescription>If MSH-9.2 (Message Type^Trigger Event) is valued 'M04' then MFI-1.1 (Identifier) SHALL be valued 'CDM'.</EnglishDescription>  
+				           <Assertion Description="Failed Assertion : MFI-1.1='CDM'"> 
+					             <Custom className="gov.nist.healthcare.mu.edos.custom.MFI" id="3"/> 
+				           </Assertion> 
+			         </ConformanceStatement>
+		          <Component Datatype="ST" MaxLength="20" MinLength="1" Name="Identifier"
+                       PredicateFalseUsage="O"
+                       PredicateTrueUsage="R"
+                       Usage="C">
+               <Predicate> 
+                  <EnglishDescription>If CWE.2 is not valued.</EnglishDescription>  
+                  <Condition> 
+                     <NOT> 
+                        <Valued location="./2"/> 
+                     </NOT> 
+                  </Condition> 
+               </Predicate>
+            </Component>
+            <Component Datatype="ST" MaxLength="199" MinLength="1" Name="Text"
+                       PredicateFalseUsage="RE"
+                       PredicateTrueUsage="R"
+                       Usage="C">
+               <Predicate> 
+                  <EnglishDescription>If CWE.1 is not valued.</EnglishDescription>  
+                  <Condition> 
+                     <NOT> 
+                        <Valued location="./1"/> 
+                     </NOT> 
+                  </Condition> 
+               </Predicate>
+            </Component>
+            <Component Datatype="ID" MaxLength="20" MinLength="1" Name="Name of Coding System"
+                       PredicateFalseUsage="X"
+                       PredicateTrueUsage="R"
+                       Table="eDOS_HL70396"
+                       Usage="C">
+               <Predicate> 
+                  <EnglishDescription>If CWE.1 is valued.</EnglishDescription>  
+                  <Condition> 
+                     <Valued location="./1"/> 
+                  </Condition> 
+               </Predicate>
+            </Component>
+            <Component Datatype="ST" MaxLength="20" MinLength="1" Name="Alternate Identifier"
+                       Usage="O"/>
+            <Component Datatype="ST" MaxLength="199" MinLength="1" Name="Alternate Text" Usage="O"/>
+            <Component Datatype="ID" MaxLength="20" MinLength="1"
+                       Name="Name of Alternate Coding System"
+                       Table="0396"
+                       Usage="O"/>
+            <Component Datatype="ST" MaxLength="10" MinLength="1" Name="Coding System Version ID"
+                       PredicateFalseUsage="X"
+                       PredicateTrueUsage="RE"
+                       Usage="C">
+               <Predicate> 
+                  <EnglishDescription>If CWE.3 (Name Of Coding System) is valued.</EnglishDescription>  
+                  <Condition> 
+                     <Valued location="./3"/> 
+                  </Condition> 
+               </Predicate>
+            </Component>
+            <Component Datatype="ST" MaxLength="10" MinLength="1"
+                       Name="Alternate Coding System Version ID"
+                       PredicateFalseUsage="X"
+                       PredicateTrueUsage="RE"
+                       Usage="C">
+               <Predicate> 
+                  <EnglishDescription>If CWE.6 (Name Of Alternate Coding System) is valued.</EnglishDescription>  
+                  <Condition> 
+                     <Valued location="./6"/> 
+                  </Condition> 
+               </Predicate>
+            </Component>
+            <Component Datatype="ST" MaxLength="199" MinLength="1" Name="Original Text" Usage="O"/>
+            <Component Datatype="ST" MaxLength="20" MinLength="1" Name="Second Alternate Identifier"
+                       Usage="O"/>
+            <Component Datatype="ST" MaxLength="199" MinLength="1" Name="Second Alternate Text"
+                       Usage="O"/>
+            <Component Datatype="ID" MaxLength="12" MinLength="1"
+                       Name="Second Name of Alternate Coding System"
+                       Table="0396"
+                       Usage="O"/>
+            <Component Datatype="ST" MaxLength="10" MinLength="1"
+                       Name="Second Alternate Coding System Version ID"
+                       Usage="O"/>
+            <Component Datatype="ST" MaxLength="199" MinLength="1" Name="Coding System OID" Usage="O"/>
+            <Component Datatype="ST" MaxLength="199" MinLength="1" Name="Value Set OID" Usage="O"/>
+            <Component Datatype="DTM" MaxLength="8" MinLength="1" Name="Value Set Version ID"
+                       Usage="O"/>
+            <Component Datatype="ST" MaxLength="199" MinLength="1" Name="Alternate Coding System OID"
+                       Usage="O"/>
+            <Component Datatype="ST" MaxLength="199" MinLength="1" Name="Alternate Value Set OID"
+                       Usage="O"/>
+            <Component Datatype="DTM" MaxLength="8" MinLength="1"
+                       Name="Alternate Value Set Version ID"
+                       Usage="O"/>
+            <Component Datatype="ST" MaxLength="199" MinLength="1"
+                       Name="Second Alternate Coding System OID"
+                       Usage="O"/>
+            <Component Datatype="ST" MaxLength="199" MinLength="1"
+                       Name="Second Alternate Value Set OID"
+                       Usage="O"/>
+            <Component Datatype="DTM" MaxLength="8" MinLength="1"
+                       Name="Second Alternate Value Set Version ID"
+                       Usage="O"/>
+         </Field>
+         <Field Datatype="HD" ItemNo="00659" Max="1" MaxLength="180" Min="0" MinLength="1"
+                Name="Master File Application Identifier"
+                Table="0361"
+                Usage="O">
+            <Component Datatype="IS" MaxLength="20" MinLength="1" Name="Namespace ID" Table="0300"
+                       Usage="O"/>
+            <Component Datatype="ST" MaxLength="199" MinLength="1" Name="Universal ID" Usage="C"/>
+            <Component Datatype="ID" MaxLength="6" MinLength="1" Name="Universal ID Type" Table="0301"
+                       Usage="C"/>
+         </Field>
+         <Field Datatype="ID" ItemNo="00660" Max="1" MaxLength="3" Min="1" MinLength="1"
+                Name="File-Level Event Code"
+                Table="HL70178"
+                Usage="R"/>
+         <Field Datatype="TS" ItemNo="00661" Max="1" MaxLength="26" Min="0" MinLength="1"
+                Name="Entered Date/Time"
+                Usage="O">
+            <Component Datatype="DTM" MaxLength="24" MinLength="1" Name="Time" Usage="R"/>
+            <Component Datatype="ID" MaxLength="1" MinLength="1" Name="Degree of Precision"
+                       Table="0529"
+                       Usage="B"/>
+         </Field>
+         <Field Datatype="TS" ItemNo="00662" Max="1" MaxLength="26" Min="0" MinLength="1"
+                Name="Effective Date/Time"
+                Usage="X">
+            <Component Datatype="DTM" MaxLength="24" MinLength="1" Name="Time" Usage="R"/>
+            <Component Datatype="ID" MaxLength="1" MinLength="1" Name="Degree of Precision"
+                       Table="0529"
+                       Usage="B"/>
+         </Field>
+         <Field Datatype="ID" ItemNo="00663" Max="1" MaxLength="2" Min="1" MinLength="1"
+                Name="Response Level Code"
+                Table="eDOS_HL70179"
+                Usage="R">
+			         <ConformanceStatement Profile="Base" id="eDOS-12"> 
+				           <EnglishDescription>MFI-6 (Response Level Code) SHALL be valued 'NE'.</EnglishDescription>  
+				           <Assertion Description="Failed Assertion : MFI-6='NE'"> 
+					             <PlainText location="." value="NE"/> 
+				           </Assertion> 
+			         </ConformanceStatement>
+		       </Field>
+      </Segment>
+		    <Segment Name="MFA" Usage="O" Min="0" Max="*" LongName="Master File Acknowledgment">
+         <Field Datatype="ID" Length="3" Max="1" Min="1" Name="Record-Level Event Code"
+                Table="0180"
+                Usage="R"/>
+         <Field Datatype="ST" Length="20" Max="1" Min="0" Name="MFN Control ID" Usage="C"/>
+         <Field Datatype="TS" Length="26" Max="1" Min="0" Name="Event Completion Date/Time"
+                Usage="O">
+            <Component Datatype="DTM" MaxLength="24" MinLength="1" Name="Time" Usage="R"/>
+            <Component Datatype="ID" MaxLength="1" MinLength="1" Name="Degree of Precision"
+                       Table="0529"
+                       Usage="B"/>
+         </Field>
+         <Field Datatype="CE" Length="483" Max="1" Min="1" Name="MFN Record Level Error Return"
+                Table="0181"
+                Usage="R">
+            <Component Datatype="ST" MaxLength="20" MinLength="1" Name="Identifier" Usage="O"/>
+            <Component Datatype="ST" MaxLength="199" MinLength="1" Name="Text" Usage="O"/>
+            <Component Datatype="ID" MaxLength="20" MinLength="1" Name="Name of Coding System"
+                       Table="0396"
+                       Usage="O"/>
+            <Component Datatype="ST" MaxLength="20" MinLength="1" Name="Alternate Identifier"
+                       Usage="O"/>
+            <Component Datatype="ST" MaxLength="199" MinLength="1" Name="Alternate Text" Usage="O"/>
+            <Component Datatype="ID" MaxLength="20" MinLength="1"
+                       Name="Name of Alternate Coding System"
+                       Table="0396"
+                       Usage="O"/>
+         </Field>
+         <Field Datatype="varies" Length="250" Max="*" Min="1" Name="Primary Key Value - MFA"
+                Table="9999"
+                Usage="R"/>
+         <Field Datatype="ID" Length="3" Max="*" Min="1" Name="Primary Key Value Type - MFA"
+                Table="0355"
+                Usage="R"/>
+      </Segment>
+	  </HL7v2xStaticDef>
+</HL7v2xConformanceProfile>

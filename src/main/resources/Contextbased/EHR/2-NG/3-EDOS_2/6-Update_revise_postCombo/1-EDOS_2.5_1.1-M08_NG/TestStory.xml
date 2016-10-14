@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseMetaData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="EDOS_2.5_1.1-M08_NG" date="11/11/2015" name="M08_Update_Revise_PostCombo" version="version2">
+		<Description>
+The Laboratory Test Compendium from Century Hospital Clinical Laboratory is a subset of their Directory of Services.  It is based upon the most commonly ordered lab tests by Dr. Radon.    This compendium is being used by Dr. Nicholas Radon's practice EHR-S  to place orders electronically to Century Hospital's Clinical Laboratory.  Century Hospital's has revised the Lipid panel and made its components orderable.  Century Hospital's LIS transmits the appropriate eDOS update message to revise this information in Dr. Radon's EHR. .  </Description>
+		<PreCondition>EDOS_1.0_1.1-M08_New
+and
+EDOS_1.0_2.1-M10_New
+and
+EDOS_1.0_3.1-M04_New
+and
+EDOS_1.0_4.1-M18_New_Approved
+and
+EDOS_1.0_5.1-M18_New_Limited
+and
+EDOS_2.4_1.1-M08_Update_Combo
+and
+EDOS_2.4_2.1-M10_Update_Combo
+and
+EDOS_2.4_3.1-M04_Update_Combo
+and
+EDOS_2.4_4.1-M18_Update_Combo
+have been completed.</PreCondition>
+		<PostCondition>eDOS M08 data elements are incorporated appropriately into the EHR-S.</PostCondition>
+		<TestObjectives>Demonstrate the ability to support a M08 update message - action: subsequent update to information previously sent via an update message.
+Demonstrate capability to support the repeating field in OM1-31 (Observations Required to Interpret the Observation) and OM1-40 (Service/Test/Observation Performance Schedule).
+Demonstrate capability to support repeating segments for OM4.</TestObjectives>
+		<Comments>Update message to change an individual observation that was part of a previous update of the compendium.  This update makes a nonorderable individual observation orderable.</Comments>
+	</TestCaseMetaData>

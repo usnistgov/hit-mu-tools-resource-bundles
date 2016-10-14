@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<HL7v2xConformanceProfile HL7Version="2.5.1" ProfileType="HL7">
+	<MetaData Name="" OrgName="NIST" Version="V2_IG_LTCF_R2_DSTU_R1.1_2014MAR" Status="" Topics="confsig--2.5.1-profile-accNE_accAL-Deferred"/>
+	<Encodings>
+		<Encoding>ER7</Encoding>
+	</Encodings>
+	<DynamicDef AccAck="NE" AppAck="AL" MsgAckMode="Deferred"/>
+	<HL7v2xStaticDef MsgType="MFK" EventType="M10" MsgStructID="MFK_M01" EventDesc="MFN/MFK - Test /observation batteries master file" Role="Sender">
+		<MetaData Name="" OrgName="" Version="" Status="" Topics="confsig--2.5.1-static-MFK-M10-null-MFK_M01---Sender"/>
+		<Segment Name="MSH" flavor="EDOS_ACK_NG" LongName="Message Header" Usage="R" Min="1" Max="1"/>
+		<Segment Name="SFT" flavor="HL7" LongName="Software Segment" Usage="O" Min="0" Max="*"/>
+		<Segment Name="MSA" flavor="EDOS" LongName="Message Acknowledgment" Usage="R" Min="1" Max="1"/>
+		<Segment Name="ERR" flavor="EDOS" LongName="Error" Usage="C" Min="0" Max="*" PredicateTrueUsage="R" PredicateFalseUsage="O">
+			<Predicate>
+				<EnglishDescription>If MSA-1 (Message Acknowledgement) is not valued AA or CA.</EnglishDescription>
+				<Condition>
+					<NOT>
+						<OR>
+							<PlainText location="../3/1" value="AA"/>
+							<PlainText location="../3/1" value="CA"/> 											
+						</OR>
+					</NOT>
+				</Condition>
+			</Predicate>
+		</Segment>
+		<Segment Name="MFI" flavor="EDOS" LongName="Master File Identification" Usage="R" Min="1" Max="1"/>
+		<Segment Name="MFA" flavor="HL7" LongName="Master File Acknowledgment" Usage="O" Min="0" Max="*" />
+	</HL7v2xStaticDef>
+</HL7v2xConformanceProfile>

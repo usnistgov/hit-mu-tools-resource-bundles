@@ -1,0 +1,1896 @@
+<style xmlns="http://www.w3.org/1999/xhtml" xmlns:util="http://hl7.nist.gov/data-specs/util" type="text/css">
+		@media screen {		
+		.test-data-specs-main maskByMediaType {display:table;}			
+				
+		.test-data-specs-main table tbody tr th {font-size:95%}			
+		.test-data-specs-main table tbody tr td {font-size:100%;}			
+		.test-data-specs-main table tbody tr th {text-align:left;background:#C6DEFF}			
+		.test-data-specs-main table thead tr th {text-align:center;}			
+		.test-data-specs-main {text-align:center;}			
+		.test-data-specs-main table { width:98%;border: 1px groove;table-layout: fixed; margin:0 auto;border-collapse: collapse;}			
+		.test-data-specs-main table  tr { border: 3px groove; }			
+		.test-data-specs-main table  th { border: 2px groove;}			
+		.test-data-specs-main table  td { border: 2px groove; }			
+		.test-data-specs-main table thead {border: 1px groove;background:#446BEC;text-align:left;}			
+		.test-data-specs-main table tbody tr td {text-align:left}				
+			
+		/* Don't display empty rows */
+		.test-data-specs-main .tds_noData {display:none;}
+	
+		}	
+			
+			@media print {
+		.test-data-specs-main 
+		.test-data-specs-main tds_maskByMediaType {display:table;}			
+		.test-data-specs-main fieldset table tbody tr th {font-size:90%}			
+		.test-data-specs-main fieldset table tbody tr td {font-size:90%;}			
+		.test-data-specs-main fieldset table tbody tr th {text-align:left;background:#C6DEFF}			
+		.test-data-specs-main fieldset table thead tr th {text-align:center;background:#4682B4}			
+		.test-data-specs-main fieldset {text-align:center;page-break-inside: avoid;}			
+		.test-data-specs-main fieldset table { width:98%;border: 1px groove;table-layout: fixed; margin:0 auto;page-break-inside: avoid;border-collapse: collapse;}			
+		.test-data-specs-main fieldset table[id=vendor-labResults] thead tr {font-size:80%}			
+		.test-data-specs-main fieldset table[id=vendor-labResults] tbody tr {font-size:75%}			
+		.test-data-specs-main fieldset table  tr { border: 3px groove; }			
+		.test-data-specs-main fieldset table  th { border: 2px groove;}			
+		.test-data-specs-main fieldset table  td { border: 2px groove; }			
+		.test-data-specs-main fieldset table thead {border: 1px groove;background:#446BEC;text-align:left;}			
+		.test-data-specs-main fieldset table tbody tr td {text-align:left;}			
+		
+		.test-data-specs-main .tds_noData {display:none;}
+				
+		.test-data-specs-main .tds_title {text-align:left;margin-bottom:1%}			
+		.test-data-specs-main h3 {text-align:center;}			
+		.test-data-specs-main h2 {text-align:center;}			
+		.test-data-specs-main h1 {text-align:center;}	
+		.test-data-specs-main .tds_pgBrk {page-break-after:always;}
+		}
+		</style><div xmlns="http://www.w3.org/1999/xhtml" class="test-data-specs-main">
+   <tabset>
+      <tab heading="Master File Identification">
+         <table>
+            <tbody>
+               <tr>
+                  <th>Element</th>
+                  <th>Data</th>
+               </tr>
+               <tr>
+                  <td>Identifier</td>
+                  <td>MACP</td>
+               </tr>
+               <tr>
+                  <td>Event code</td>
+                  <td>REP</td>
+               </tr>
+            </tbody>
+         </table>
+      </tab>
+      <tab heading="Payer Information[*]" vertical="false">
+         <div class="panel panel-info">
+            <div class="panel-body">
+               <fieldset>
+                  <accordion>
+                     <accordion-group class="panel-info" type="pills" style="margin-top:0;border: 1px ridge  #C6DEFF;" is-open="PayerInfo1" vertical="true">
+                        <accordion-heading><span class="clearfix"><span class="accordion-heading pull-left"><i class="pull-left fa" ng-class="{'fa-caret-down': PayerInfo1, 'fa-caret-right': !PayerInfo1}"></i>Payer Information - Erythrocyte sedimentation rate</span></span></accordion-heading>
+                        <div class="panel panel-info">
+                           <div class="panel-body">
+                              <fieldset>
+                                 <legend>Record information</legend>
+                                 <table>
+                                    <tbody>
+                                       <tr>
+                                          <th>Element</th>
+                                          <th>Data</th>
+                                       </tr>
+                                       <tr>
+                                          <td>Event code</td>
+                                          <td>MAD</td>
+                                       </tr>
+                                       <tr>
+                                          <td>Effective date and time</td>
+                                          <td>20131219145310</td>
+                                       </tr>
+                                       <tr>
+                                          <td>Test/Panel Name</td>
+                                          <td>Erythrocyte sedimentation rate</td>
+                                       </tr>
+                                       <tr>
+                                          <td>Test/Panel identifier (code system)</td>
+                                          <td>500 (99USL)</td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </fieldset>
+                              <fieldset>
+                                 <legend>Payer &amp; coverage details</legend>
+                                 <fieldset>
+                                    <legend>Payer</legend>
+                                    <table>
+                                       <tbody>
+                                          <tr>
+                                             <th>Element</th>
+                                             <th>Data</th>
+                                          </tr>
+                                          <tr>
+                                             <td>Health Plan</td>
+                                             <td>Healthplan2</td>
+                                          </tr>
+                                          <tr>
+                                             <td>Insurance Company</td>
+                                             <td>SMCA2</td>
+                                          </tr>
+                                          <tr>
+                                             <td>Insurance Company</td>
+                                             <td>MR002</td>
+                                          </tr>
+                                       </tbody>
+                                    </table>
+                                 </fieldset>
+                                 <fieldset>
+                                    <legend>Coverage Policy</legend>
+                                    <table>
+                                       <tbody>
+                                          <tr>
+                                             <td>Low price range</td>
+                                             <td>USD 25</td>
+                                          </tr>
+                                          <tr>
+                                             <td>High price range</td>
+                                             <td>USD 30</td>
+                                          </tr>
+                                          <tr>
+                                             <td>Reason for universal service cost range</td>
+                                             <td>Some reason</td>
+                                          </tr>
+                                       </tbody>
+                                    </table>
+                                 </fieldset>
+                              </fieldset>
+                           </div>
+                        </div>
+                     </accordion-group>
+                     <accordion-group class="panel-info" type="pills" style="margin-top:0;border: 1px ridge  #C6DEFF;" is-open="PayerInfo2" vertical="true">
+                        <accordion-heading><span class="clearfix"><span class="accordion-heading pull-left"><i class="pull-left fa" ng-class="{'fa-caret-down': PayerInfo2, 'fa-caret-right': !PayerInfo2}"></i>Payer Information - CMP</span></span></accordion-heading>
+                        <div class="panel panel-info">
+                           <div class="panel-body">
+                              <fieldset>
+                                 <legend>Record information</legend>
+                                 <table>
+                                    <tbody>
+                                       <tr>
+                                          <th>Element</th>
+                                          <th>Data</th>
+                                       </tr>
+                                       <tr>
+                                          <td>Event code</td>
+                                          <td>MAD</td>
+                                       </tr>
+                                       <tr>
+                                          <td>Effective date and time</td>
+                                          <td>20131219145310</td>
+                                       </tr>
+                                       <tr>
+                                          <td>Test/Panel Name</td>
+                                          <td>CMP</td>
+                                       </tr>
+                                       <tr>
+                                          <td>Test/Panel identifier (code system)</td>
+                                          <td>100 (99USL)</td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </fieldset>
+                              <fieldset>
+                                 <legend>Payer &amp; coverage details</legend>
+                                 <fieldset>
+                                    <legend>Payer</legend>
+                                    <table>
+                                       <tbody>
+                                          <tr>
+                                             <th>Element</th>
+                                             <th>Data</th>
+                                          </tr>
+                                          <tr>
+                                             <td>Health Plan</td>
+                                             <td>Healthplan2</td>
+                                          </tr>
+                                          <tr>
+                                             <td>Insurance Company</td>
+                                             <td>SMCA2</td>
+                                          </tr>
+                                       </tbody>
+                                    </table>
+                                 </fieldset>
+                                 <fieldset>
+                                    <legend>Coverage Policy</legend>
+                                    <table>
+                                       <tbody>
+                                          <tr>
+                                             <td>High price range</td>
+                                             <td>USD 29</td>
+                                          </tr>
+                                       </tbody>
+                                    </table>
+                                 </fieldset>
+                              </fieldset>
+                              <fieldset>
+                                 <legend>Payer &amp; coverage details</legend>
+                                 <fieldset>
+                                    <legend>Payer</legend>
+                                    <table>
+                                       <tbody>
+                                          <tr>
+                                             <th>Element</th>
+                                             <th>Data</th>
+                                          </tr>
+                                          <tr>
+                                             <td>Health Plan</td>
+                                             <td>Healthplan1</td>
+                                          </tr>
+                                          <tr>
+                                             <td>Insurance Company</td>
+                                             <td>SKCA0</td>
+                                          </tr>
+                                       </tbody>
+                                    </table>
+                                 </fieldset>
+                                 <fieldset>
+                                    <legend>Coverage Policy</legend>
+                                    <table>
+                                       <tbody>
+                                          <tr>
+                                             <td>High price range</td>
+                                             <td>USD 29</td>
+                                          </tr>
+                                       </tbody>
+                                    </table>
+                                 </fieldset>
+                              </fieldset>
+                           </div>
+                        </div>
+                     </accordion-group>
+                     <accordion-group class="panel-info" type="pills" style="margin-top:0;border: 1px ridge  #C6DEFF;" is-open="PayerInfo3" vertical="true">
+                        <accordion-heading><span class="clearfix"><span class="accordion-heading pull-left"><i class="pull-left fa" ng-class="{'fa-caret-down': PayerInfo3, 'fa-caret-right': !PayerInfo3}"></i>Payer Information - Crystals , urine</span></span></accordion-heading>
+                        <div class="panel panel-info">
+                           <div class="panel-body">
+                              <fieldset>
+                                 <legend>Record information</legend>
+                                 <table>
+                                    <tbody>
+                                       <tr>
+                                          <th>Element</th>
+                                          <th>Data</th>
+                                       </tr>
+                                       <tr>
+                                          <td>Event code</td>
+                                          <td>MAD</td>
+                                       </tr>
+                                       <tr>
+                                          <td>Effective date and time</td>
+                                          <td>20131219145310</td>
+                                       </tr>
+                                       <tr>
+                                          <td>Test/Panel Name</td>
+                                          <td>Crystals , urine</td>
+                                       </tr>
+                                       <tr>
+                                          <td>Test/Panel identifier (code system)</td>
+                                          <td>312 (99USL)</td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </fieldset>
+                              <fieldset>
+                                 <legend>Payer &amp; coverage details</legend>
+                                 <fieldset>
+                                    <legend>Payer</legend>
+                                    <table>
+                                       <tbody>
+                                          <tr>
+                                             <th>Element</th>
+                                             <th>Data</th>
+                                          </tr>
+                                          <tr>
+                                             <td>Health Plan</td>
+                                             <td>Healthplan2</td>
+                                          </tr>
+                                          <tr>
+                                             <td>Insurance Company</td>
+                                             <td>SMCA2</td>
+                                          </tr>
+                                       </tbody>
+                                    </table>
+                                 </fieldset>
+                              </fieldset>
+                           </div>
+                        </div>
+                     </accordion-group>
+                     <accordion-group class="panel-info" type="pills" style="margin-top:0;border: 1px ridge  #C6DEFF;" is-open="PayerInfo4" vertical="true">
+                        <accordion-heading><span class="clearfix"><span class="accordion-heading pull-left"><i class="pull-left fa" ng-class="{'fa-caret-down': PayerInfo4, 'fa-caret-right': !PayerInfo4}"></i>Payer Information - Hemoglobin, urine</span></span></accordion-heading>
+                        <div class="panel panel-info">
+                           <div class="panel-body">
+                              <fieldset>
+                                 <legend>Record information</legend>
+                                 <table>
+                                    <tbody>
+                                       <tr>
+                                          <th>Element</th>
+                                          <th>Data</th>
+                                       </tr>
+                                       <tr>
+                                          <td>Event code</td>
+                                          <td>MAD</td>
+                                       </tr>
+                                       <tr>
+                                          <td>Effective date and time</td>
+                                          <td>20131219145310</td>
+                                       </tr>
+                                       <tr>
+                                          <td>Test/Panel Name</td>
+                                          <td>Hemoglobin, urine</td>
+                                       </tr>
+                                       <tr>
+                                          <td>Test/Panel identifier (code system)</td>
+                                          <td>328 (99USL)</td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </fieldset>
+                              <fieldset>
+                                 <legend>Payer &amp; coverage details</legend>
+                                 <fieldset>
+                                    <legend>Payer</legend>
+                                    <table>
+                                       <tbody>
+                                          <tr>
+                                             <th>Element</th>
+                                             <th>Data</th>
+                                          </tr>
+                                          <tr>
+                                             <td>Health Plan</td>
+                                             <td>Healthplan2</td>
+                                          </tr>
+                                          <tr>
+                                             <td>Insurance Company</td>
+                                             <td>SMCA2</td>
+                                          </tr>
+                                       </tbody>
+                                    </table>
+                                 </fieldset>
+                              </fieldset>
+                           </div>
+                        </div>
+                     </accordion-group>
+                     <accordion-group class="panel-info" type="pills" style="margin-top:0;border: 1px ridge  #C6DEFF;" is-open="PayerInfo5" vertical="true">
+                        <accordion-heading><span class="clearfix"><span class="accordion-heading pull-left"><i class="pull-left fa" ng-class="{'fa-caret-down': PayerInfo5, 'fa-caret-right': !PayerInfo5}"></i>Payer Information - Urine pH</span></span></accordion-heading>
+                        <div class="panel panel-info">
+                           <div class="panel-body">
+                              <fieldset>
+                                 <legend>Record information</legend>
+                                 <table>
+                                    <tbody>
+                                       <tr>
+                                          <th>Element</th>
+                                          <th>Data</th>
+                                       </tr>
+                                       <tr>
+                                          <td>Event code</td>
+                                          <td>MAD</td>
+                                       </tr>
+                                       <tr>
+                                          <td>Effective date and time</td>
+                                          <td>20131219145310</td>
+                                       </tr>
+                                       <tr>
+                                          <td>Test/Panel Name</td>
+                                          <td>Urine pH</td>
+                                       </tr>
+                                       <tr>
+                                          <td>Test/Panel identifier (code system)</td>
+                                          <td>336 (99USL)</td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </fieldset>
+                              <fieldset>
+                                 <legend>Payer &amp; coverage details</legend>
+                                 <fieldset>
+                                    <legend>Payer</legend>
+                                    <table>
+                                       <tbody>
+                                          <tr>
+                                             <th>Element</th>
+                                             <th>Data</th>
+                                          </tr>
+                                          <tr>
+                                             <td>Health Plan</td>
+                                             <td>Healthplan2</td>
+                                          </tr>
+                                          <tr>
+                                             <td>Insurance Company</td>
+                                             <td>SMCA2</td>
+                                          </tr>
+                                       </tbody>
+                                    </table>
+                                 </fieldset>
+                              </fieldset>
+                           </div>
+                        </div>
+                     </accordion-group>
+                     <accordion-group class="panel-info" type="pills" style="margin-top:0;border: 1px ridge  #C6DEFF;" is-open="PayerInfo6" vertical="true">
+                        <accordion-heading><span class="clearfix"><span class="accordion-heading pull-left"><i class="pull-left fa" ng-class="{'fa-caret-down': PayerInfo6, 'fa-caret-right': !PayerInfo6}"></i>Payer Information - Protein, urine</span></span></accordion-heading>
+                        <div class="panel panel-info">
+                           <div class="panel-body">
+                              <fieldset>
+                                 <legend>Record information</legend>
+                                 <table>
+                                    <tbody>
+                                       <tr>
+                                          <th>Element</th>
+                                          <th>Data</th>
+                                       </tr>
+                                       <tr>
+                                          <td>Event code</td>
+                                          <td>MAD</td>
+                                       </tr>
+                                       <tr>
+                                          <td>Effective date and time</td>
+                                          <td>20131219145310</td>
+                                       </tr>
+                                       <tr>
+                                          <td>Test/Panel Name</td>
+                                          <td>Protein, urine</td>
+                                       </tr>
+                                       <tr>
+                                          <td>Test/Panel identifier (code system)</td>
+                                          <td>338 (99USL)</td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </fieldset>
+                              <fieldset>
+                                 <legend>Payer &amp; coverage details</legend>
+                                 <fieldset>
+                                    <legend>Payer</legend>
+                                    <table>
+                                       <tbody>
+                                          <tr>
+                                             <th>Element</th>
+                                             <th>Data</th>
+                                          </tr>
+                                          <tr>
+                                             <td>Health Plan</td>
+                                             <td>Healthplan2</td>
+                                          </tr>
+                                          <tr>
+                                             <td>Insurance Company</td>
+                                             <td>SMCA2</td>
+                                          </tr>
+                                       </tbody>
+                                    </table>
+                                 </fieldset>
+                              </fieldset>
+                           </div>
+                        </div>
+                     </accordion-group>
+                     <accordion-group class="panel-info" type="pills" style="margin-top:0;border: 1px ridge  #C6DEFF;" is-open="PayerInfo7" vertical="true">
+                        <accordion-heading><span class="clearfix"><span class="accordion-heading pull-left"><i class="pull-left fa" ng-class="{'fa-caret-down': PayerInfo7, 'fa-caret-right': !PayerInfo7}"></i>Payer Information - Urine specific gravity</span></span></accordion-heading>
+                        <div class="panel panel-info">
+                           <div class="panel-body">
+                              <fieldset>
+                                 <legend>Record information</legend>
+                                 <table>
+                                    <tbody>
+                                       <tr>
+                                          <th>Element</th>
+                                          <th>Data</th>
+                                       </tr>
+                                       <tr>
+                                          <td>Event code</td>
+                                          <td>MAD</td>
+                                       </tr>
+                                       <tr>
+                                          <td>Effective date and time</td>
+                                          <td>20131219145310</td>
+                                       </tr>
+                                       <tr>
+                                          <td>Test/Panel Name</td>
+                                          <td>Urine specific gravity</td>
+                                       </tr>
+                                       <tr>
+                                          <td>Test/Panel identifier (code system)</td>
+                                          <td>342 (99USL)</td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </fieldset>
+                              <fieldset>
+                                 <legend>Payer &amp; coverage details</legend>
+                                 <fieldset>
+                                    <legend>Payer</legend>
+                                    <table>
+                                       <tbody>
+                                          <tr>
+                                             <th>Element</th>
+                                             <th>Data</th>
+                                          </tr>
+                                          <tr>
+                                             <td>Health Plan</td>
+                                             <td>Healthplan2</td>
+                                          </tr>
+                                          <tr>
+                                             <td>Insurance Company</td>
+                                             <td>SMCA2</td>
+                                          </tr>
+                                       </tbody>
+                                    </table>
+                                 </fieldset>
+                              </fieldset>
+                           </div>
+                        </div>
+                     </accordion-group>
+                     <accordion-group class="panel-info" type="pills" style="margin-top:0;border: 1px ridge  #C6DEFF;" is-open="PayerInfo8" vertical="true">
+                        <accordion-heading><span class="clearfix"><span class="accordion-heading pull-left"><i class="pull-left fa" ng-class="{'fa-caret-down': PayerInfo8, 'fa-caret-right': !PayerInfo8}"></i>Payer Information - Blood Urea Nitrogen (BUN)</span></span></accordion-heading>
+                        <div class="panel panel-info">
+                           <div class="panel-body">
+                              <fieldset>
+                                 <legend>Record information</legend>
+                                 <table>
+                                    <tbody>
+                                       <tr>
+                                          <th>Element</th>
+                                          <th>Data</th>
+                                       </tr>
+                                       <tr>
+                                          <td>Event code</td>
+                                          <td>MAD</td>
+                                       </tr>
+                                       <tr>
+                                          <td>Effective date and time</td>
+                                          <td>20131219145310</td>
+                                       </tr>
+                                       <tr>
+                                          <td>Test/Panel Name</td>
+                                          <td>Blood Urea Nitrogen (BUN)</td>
+                                       </tr>
+                                       <tr>
+                                          <td>Test/Panel identifier (code system)</td>
+                                          <td>106 (99USL)</td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </fieldset>
+                              <fieldset>
+                                 <legend>Payer &amp; coverage details</legend>
+                                 <fieldset>
+                                    <legend>Payer</legend>
+                                    <table>
+                                       <tbody>
+                                          <tr>
+                                             <th>Element</th>
+                                             <th>Data</th>
+                                          </tr>
+                                          <tr>
+                                             <td>Health Plan</td>
+                                             <td>Healthplan2</td>
+                                          </tr>
+                                          <tr>
+                                             <td>Insurance Company</td>
+                                             <td>SMCA2</td>
+                                          </tr>
+                                       </tbody>
+                                    </table>
+                                 </fieldset>
+                              </fieldset>
+                           </div>
+                        </div>
+                     </accordion-group>
+                     <accordion-group class="panel-info" type="pills" style="margin-top:0;border: 1px ridge  #C6DEFF;" is-open="PayerInfo9" vertical="true">
+                        <accordion-heading><span class="clearfix"><span class="accordion-heading pull-left"><i class="pull-left fa" ng-class="{'fa-caret-down': PayerInfo9, 'fa-caret-right': !PayerInfo9}"></i>Payer Information - Creatinine</span></span></accordion-heading>
+                        <div class="panel panel-info">
+                           <div class="panel-body">
+                              <fieldset>
+                                 <legend>Record information</legend>
+                                 <table>
+                                    <tbody>
+                                       <tr>
+                                          <th>Element</th>
+                                          <th>Data</th>
+                                       </tr>
+                                       <tr>
+                                          <td>Event code</td>
+                                          <td>MAD</td>
+                                       </tr>
+                                       <tr>
+                                          <td>Effective date and time</td>
+                                          <td>20131219145310</td>
+                                       </tr>
+                                       <tr>
+                                          <td>Test/Panel Name</td>
+                                          <td>Creatinine</td>
+                                       </tr>
+                                       <tr>
+                                          <td>Test/Panel identifier (code system)</td>
+                                          <td>102 (99USL)</td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </fieldset>
+                              <fieldset>
+                                 <legend>Payer &amp; coverage details</legend>
+                                 <fieldset>
+                                    <legend>Payer</legend>
+                                    <table>
+                                       <tbody>
+                                          <tr>
+                                             <th>Element</th>
+                                             <th>Data</th>
+                                          </tr>
+                                          <tr>
+                                             <td>Health Plan</td>
+                                             <td>Healthplan2</td>
+                                          </tr>
+                                          <tr>
+                                             <td>Insurance Company</td>
+                                             <td>SMCA2</td>
+                                          </tr>
+                                       </tbody>
+                                    </table>
+                                 </fieldset>
+                              </fieldset>
+                           </div>
+                        </div>
+                     </accordion-group>
+                     <accordion-group class="panel-info" type="pills" style="margin-top:0;border: 1px ridge  #C6DEFF;" is-open="PayerInfo10" vertical="true">
+                        <accordion-heading><span class="clearfix"><span class="accordion-heading pull-left"><i class="pull-left fa" ng-class="{'fa-caret-down': PayerInfo10, 'fa-caret-right': !PayerInfo10}"></i>Payer Information - Calcium</span></span></accordion-heading>
+                        <div class="panel panel-info">
+                           <div class="panel-body">
+                              <fieldset>
+                                 <legend>Record information</legend>
+                                 <table>
+                                    <tbody>
+                                       <tr>
+                                          <th>Element</th>
+                                          <th>Data</th>
+                                       </tr>
+                                       <tr>
+                                          <td>Event code</td>
+                                          <td>MAD</td>
+                                       </tr>
+                                       <tr>
+                                          <td>Effective date and time</td>
+                                          <td>20131219145310</td>
+                                       </tr>
+                                       <tr>
+                                          <td>Test/Panel Name</td>
+                                          <td>Calcium</td>
+                                       </tr>
+                                       <tr>
+                                          <td>Test/Panel identifier (code system)</td>
+                                          <td>112 (99USL)</td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </fieldset>
+                              <fieldset>
+                                 <legend>Payer &amp; coverage details</legend>
+                                 <fieldset>
+                                    <legend>Payer</legend>
+                                    <table>
+                                       <tbody>
+                                          <tr>
+                                             <th>Element</th>
+                                             <th>Data</th>
+                                          </tr>
+                                          <tr>
+                                             <td>Health Plan</td>
+                                             <td>Healthplan2</td>
+                                          </tr>
+                                          <tr>
+                                             <td>Insurance Company</td>
+                                             <td>SMCA2</td>
+                                          </tr>
+                                       </tbody>
+                                    </table>
+                                 </fieldset>
+                              </fieldset>
+                           </div>
+                        </div>
+                     </accordion-group>
+                     <accordion-group class="panel-info" type="pills" style="margin-top:0;border: 1px ridge  #C6DEFF;" is-open="PayerInfo11" vertical="true">
+                        <accordion-heading><span class="clearfix"><span class="accordion-heading pull-left"><i class="pull-left fa" ng-class="{'fa-caret-down': PayerInfo11, 'fa-caret-right': !PayerInfo11}"></i>Payer Information - Total protein, serum</span></span></accordion-heading>
+                        <div class="panel panel-info">
+                           <div class="panel-body">
+                              <fieldset>
+                                 <legend>Record information</legend>
+                                 <table>
+                                    <tbody>
+                                       <tr>
+                                          <th>Element</th>
+                                          <th>Data</th>
+                                       </tr>
+                                       <tr>
+                                          <td>Event code</td>
+                                          <td>MAD</td>
+                                       </tr>
+                                       <tr>
+                                          <td>Effective date and time</td>
+                                          <td>20131219145310</td>
+                                       </tr>
+                                       <tr>
+                                          <td>Test/Panel Name</td>
+                                          <td>Total protein, serum</td>
+                                       </tr>
+                                       <tr>
+                                          <td>Test/Panel identifier (code system)</td>
+                                          <td>114 (99USL)</td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </fieldset>
+                              <fieldset>
+                                 <legend>Payer &amp; coverage details</legend>
+                                 <fieldset>
+                                    <legend>Payer</legend>
+                                    <table>
+                                       <tbody>
+                                          <tr>
+                                             <th>Element</th>
+                                             <th>Data</th>
+                                          </tr>
+                                          <tr>
+                                             <td>Health Plan</td>
+                                             <td>Healthplan2</td>
+                                          </tr>
+                                          <tr>
+                                             <td>Insurance Company</td>
+                                             <td>SMCA2</td>
+                                          </tr>
+                                       </tbody>
+                                    </table>
+                                 </fieldset>
+                              </fieldset>
+                           </div>
+                        </div>
+                     </accordion-group>
+                     <accordion-group class="panel-info" type="pills" style="margin-top:0;border: 1px ridge  #C6DEFF;" is-open="PayerInfo12" vertical="true">
+                        <accordion-heading><span class="clearfix"><span class="accordion-heading pull-left"><i class="pull-left fa" ng-class="{'fa-caret-down': PayerInfo12, 'fa-caret-right': !PayerInfo12}"></i>Payer Information - Albumin</span></span></accordion-heading>
+                        <div class="panel panel-info">
+                           <div class="panel-body">
+                              <fieldset>
+                                 <legend>Record information</legend>
+                                 <table>
+                                    <tbody>
+                                       <tr>
+                                          <th>Element</th>
+                                          <th>Data</th>
+                                       </tr>
+                                       <tr>
+                                          <td>Event code</td>
+                                          <td>MAD</td>
+                                       </tr>
+                                       <tr>
+                                          <td>Effective date and time</td>
+                                          <td>20131219145310</td>
+                                       </tr>
+                                       <tr>
+                                          <td>Test/Panel Name</td>
+                                          <td>Albumin</td>
+                                       </tr>
+                                       <tr>
+                                          <td>Test/Panel identifier (code system)</td>
+                                          <td>116 (99USL)</td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </fieldset>
+                              <fieldset>
+                                 <legend>Payer &amp; coverage details</legend>
+                                 <fieldset>
+                                    <legend>Payer</legend>
+                                    <table>
+                                       <tbody>
+                                          <tr>
+                                             <th>Element</th>
+                                             <th>Data</th>
+                                          </tr>
+                                          <tr>
+                                             <td>Health Plan</td>
+                                             <td>Healthplan2</td>
+                                          </tr>
+                                          <tr>
+                                             <td>Insurance Company</td>
+                                             <td>SMCA2</td>
+                                          </tr>
+                                       </tbody>
+                                    </table>
+                                 </fieldset>
+                              </fieldset>
+                           </div>
+                        </div>
+                     </accordion-group>
+                     <accordion-group class="panel-info" type="pills" style="margin-top:0;border: 1px ridge  #C6DEFF;" is-open="PayerInfo13" vertical="true">
+                        <accordion-heading><span class="clearfix"><span class="accordion-heading pull-left"><i class="pull-left fa" ng-class="{'fa-caret-down': PayerInfo13, 'fa-caret-right': !PayerInfo13}"></i>Payer Information - Total bilirubin, serum</span></span></accordion-heading>
+                        <div class="panel panel-info">
+                           <div class="panel-body">
+                              <fieldset>
+                                 <legend>Record information</legend>
+                                 <table>
+                                    <tbody>
+                                       <tr>
+                                          <th>Element</th>
+                                          <th>Data</th>
+                                       </tr>
+                                       <tr>
+                                          <td>Event code</td>
+                                          <td>MAD</td>
+                                       </tr>
+                                       <tr>
+                                          <td>Effective date and time</td>
+                                          <td>20131219145310</td>
+                                       </tr>
+                                       <tr>
+                                          <td>Test/Panel Name</td>
+                                          <td>Total bilirubin, serum</td>
+                                       </tr>
+                                       <tr>
+                                          <td>Test/Panel identifier (code system)</td>
+                                          <td>122 (99USL)</td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </fieldset>
+                              <fieldset>
+                                 <legend>Payer &amp; coverage details</legend>
+                                 <fieldset>
+                                    <legend>Payer</legend>
+                                    <table>
+                                       <tbody>
+                                          <tr>
+                                             <th>Element</th>
+                                             <th>Data</th>
+                                          </tr>
+                                          <tr>
+                                             <td>Health Plan</td>
+                                             <td>Healthplan2</td>
+                                          </tr>
+                                          <tr>
+                                             <td>Insurance Company</td>
+                                             <td>SMCA2</td>
+                                          </tr>
+                                       </tbody>
+                                    </table>
+                                 </fieldset>
+                                 <fieldset>
+                                    <legend>Coverage Policy</legend>
+                                    <table>
+                                       <tbody>
+                                          <tr>
+                                             <td>High price range</td>
+                                             <td>USD 29</td>
+                                          </tr>
+                                       </tbody>
+                                    </table>
+                                 </fieldset>
+                              </fieldset>
+                           </div>
+                        </div>
+                     </accordion-group>
+                     <accordion-group class="panel-info" type="pills" style="margin-top:0;border: 1px ridge  #C6DEFF;" is-open="PayerInfo14" vertical="true">
+                        <accordion-heading><span class="clearfix"><span class="accordion-heading pull-left"><i class="pull-left fa" ng-class="{'fa-caret-down': PayerInfo14, 'fa-caret-right': !PayerInfo14}"></i>Payer Information - Alkaline phosphatase (ALP)</span></span></accordion-heading>
+                        <div class="panel panel-info">
+                           <div class="panel-body">
+                              <fieldset>
+                                 <legend>Record information</legend>
+                                 <table>
+                                    <tbody>
+                                       <tr>
+                                          <th>Element</th>
+                                          <th>Data</th>
+                                       </tr>
+                                       <tr>
+                                          <td>Event code</td>
+                                          <td>MAD</td>
+                                       </tr>
+                                       <tr>
+                                          <td>Effective date and time</td>
+                                          <td>20131219145310</td>
+                                       </tr>
+                                       <tr>
+                                          <td>Test/Panel Name</td>
+                                          <td>Alkaline phosphatase (ALP)</td>
+                                       </tr>
+                                       <tr>
+                                          <td>Test/Panel identifier (code system)</td>
+                                          <td>124 (99USL)</td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </fieldset>
+                              <fieldset>
+                                 <legend>Payer &amp; coverage details</legend>
+                                 <fieldset>
+                                    <legend>Payer</legend>
+                                    <table>
+                                       <tbody>
+                                          <tr>
+                                             <th>Element</th>
+                                             <th>Data</th>
+                                          </tr>
+                                          <tr>
+                                             <td>Health Plan</td>
+                                             <td>Healthplan2</td>
+                                          </tr>
+                                          <tr>
+                                             <td>Insurance Company</td>
+                                             <td>SMCA2</td>
+                                          </tr>
+                                       </tbody>
+                                    </table>
+                                 </fieldset>
+                                 <fieldset>
+                                    <legend>Coverage Policy</legend>
+                                    <table>
+                                       <tbody>
+                                          <tr>
+                                             <td>High price range</td>
+                                             <td>USD 49</td>
+                                          </tr>
+                                       </tbody>
+                                    </table>
+                                 </fieldset>
+                              </fieldset>
+                           </div>
+                        </div>
+                     </accordion-group>
+                     <accordion-group class="panel-info" type="pills" style="margin-top:0;border: 1px ridge  #C6DEFF;" is-open="PayerInfo15" vertical="true">
+                        <accordion-heading><span class="clearfix"><span class="accordion-heading pull-left"><i class="pull-left fa" ng-class="{'fa-caret-down': PayerInfo15, 'fa-caret-right': !PayerInfo15}"></i>Payer Information - Alanine aminotransferase (ALT)</span></span></accordion-heading>
+                        <div class="panel panel-info">
+                           <div class="panel-body">
+                              <fieldset>
+                                 <legend>Record information</legend>
+                                 <table>
+                                    <tbody>
+                                       <tr>
+                                          <th>Element</th>
+                                          <th>Data</th>
+                                       </tr>
+                                       <tr>
+                                          <td>Event code</td>
+                                          <td>MAD</td>
+                                       </tr>
+                                       <tr>
+                                          <td>Effective date and time</td>
+                                          <td>20131219145310</td>
+                                       </tr>
+                                       <tr>
+                                          <td>Test/Panel Name</td>
+                                          <td>Alanine aminotransferase (ALT)</td>
+                                       </tr>
+                                       <tr>
+                                          <td>Test/Panel identifier (code system)</td>
+                                          <td>126 (99USL)</td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </fieldset>
+                              <fieldset>
+                                 <legend>Payer &amp; coverage details</legend>
+                                 <fieldset>
+                                    <legend>Payer</legend>
+                                    <table>
+                                       <tbody>
+                                          <tr>
+                                             <th>Element</th>
+                                             <th>Data</th>
+                                          </tr>
+                                          <tr>
+                                             <td>Health Plan</td>
+                                             <td>Healthplan2</td>
+                                          </tr>
+                                          <tr>
+                                             <td>Insurance Company</td>
+                                             <td>SMCA2</td>
+                                          </tr>
+                                       </tbody>
+                                    </table>
+                                 </fieldset>
+                              </fieldset>
+                           </div>
+                        </div>
+                     </accordion-group>
+                     <accordion-group class="panel-info" type="pills" style="margin-top:0;border: 1px ridge  #C6DEFF;" is-open="PayerInfo16" vertical="true">
+                        <accordion-heading><span class="clearfix"><span class="accordion-heading pull-left"><i class="pull-left fa" ng-class="{'fa-caret-down': PayerInfo16, 'fa-caret-right': !PayerInfo16}"></i>Payer Information - Aspartate aminotransferase (ASP)</span></span></accordion-heading>
+                        <div class="panel panel-info">
+                           <div class="panel-body">
+                              <fieldset>
+                                 <legend>Record information</legend>
+                                 <table>
+                                    <tbody>
+                                       <tr>
+                                          <th>Element</th>
+                                          <th>Data</th>
+                                       </tr>
+                                       <tr>
+                                          <td>Event code</td>
+                                          <td>MAD</td>
+                                       </tr>
+                                       <tr>
+                                          <td>Effective date and time</td>
+                                          <td>20131219145310</td>
+                                       </tr>
+                                       <tr>
+                                          <td>Test/Panel Name</td>
+                                          <td>Aspartate aminotransferase (ASP)</td>
+                                       </tr>
+                                       <tr>
+                                          <td>Test/Panel identifier (code system)</td>
+                                          <td>128 (99USL)</td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </fieldset>
+                              <fieldset>
+                                 <legend>Payer &amp; coverage details</legend>
+                                 <fieldset>
+                                    <legend>Payer</legend>
+                                    <table>
+                                       <tbody>
+                                          <tr>
+                                             <th>Element</th>
+                                             <th>Data</th>
+                                          </tr>
+                                          <tr>
+                                             <td>Health Plan</td>
+                                             <td>Healthplan2</td>
+                                          </tr>
+                                          <tr>
+                                             <td>Insurance Company</td>
+                                             <td>SMCA2</td>
+                                          </tr>
+                                       </tbody>
+                                    </table>
+                                 </fieldset>
+                              </fieldset>
+                           </div>
+                        </div>
+                     </accordion-group>
+                     <accordion-group class="panel-info" type="pills" style="margin-top:0;border: 1px ridge  #C6DEFF;" is-open="PayerInfo17" vertical="true">
+                        <accordion-heading><span class="clearfix"><span class="accordion-heading pull-left"><i class="pull-left fa" ng-class="{'fa-caret-down': PayerInfo17, 'fa-caret-right': !PayerInfo17}"></i>Payer Information - Sodium, serum</span></span></accordion-heading>
+                        <div class="panel panel-info">
+                           <div class="panel-body">
+                              <fieldset>
+                                 <legend>Record information</legend>
+                                 <table>
+                                    <tbody>
+                                       <tr>
+                                          <th>Element</th>
+                                          <th>Data</th>
+                                       </tr>
+                                       <tr>
+                                          <td>Event code</td>
+                                          <td>MAD</td>
+                                       </tr>
+                                       <tr>
+                                          <td>Effective date and time</td>
+                                          <td>20131219145310</td>
+                                       </tr>
+                                       <tr>
+                                          <td>Test/Panel Name</td>
+                                          <td>Sodium, serum</td>
+                                       </tr>
+                                       <tr>
+                                          <td>Test/Panel identifier (code system)</td>
+                                          <td>130 (99USL)</td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </fieldset>
+                              <fieldset>
+                                 <legend>Payer &amp; coverage details</legend>
+                                 <fieldset>
+                                    <legend>Payer</legend>
+                                    <table>
+                                       <tbody>
+                                          <tr>
+                                             <th>Element</th>
+                                             <th>Data</th>
+                                          </tr>
+                                          <tr>
+                                             <td>Health Plan</td>
+                                             <td>Healthplan2</td>
+                                          </tr>
+                                          <tr>
+                                             <td>Insurance Company</td>
+                                             <td>SMCA2</td>
+                                          </tr>
+                                       </tbody>
+                                    </table>
+                                 </fieldset>
+                              </fieldset>
+                           </div>
+                        </div>
+                     </accordion-group>
+                     <accordion-group class="panel-info" type="pills" style="margin-top:0;border: 1px ridge  #C6DEFF;" is-open="PayerInfo18" vertical="true">
+                        <accordion-heading><span class="clearfix"><span class="accordion-heading pull-left"><i class="pull-left fa" ng-class="{'fa-caret-down': PayerInfo18, 'fa-caret-right': !PayerInfo18}"></i>Payer Information - Potassium, serum</span></span></accordion-heading>
+                        <div class="panel panel-info">
+                           <div class="panel-body">
+                              <fieldset>
+                                 <legend>Record information</legend>
+                                 <table>
+                                    <tbody>
+                                       <tr>
+                                          <th>Element</th>
+                                          <th>Data</th>
+                                       </tr>
+                                       <tr>
+                                          <td>Event code</td>
+                                          <td>MAD</td>
+                                       </tr>
+                                       <tr>
+                                          <td>Effective date and time</td>
+                                          <td>20131219145310</td>
+                                       </tr>
+                                       <tr>
+                                          <td>Test/Panel Name</td>
+                                          <td>Potassium, serum</td>
+                                       </tr>
+                                       <tr>
+                                          <td>Test/Panel identifier (code system)</td>
+                                          <td>132 (99USL)</td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </fieldset>
+                              <fieldset>
+                                 <legend>Payer &amp; coverage details</legend>
+                                 <fieldset>
+                                    <legend>Payer</legend>
+                                    <table>
+                                       <tbody>
+                                          <tr>
+                                             <th>Element</th>
+                                             <th>Data</th>
+                                          </tr>
+                                          <tr>
+                                             <td>Health Plan</td>
+                                             <td>Healthplan2</td>
+                                          </tr>
+                                          <tr>
+                                             <td>Insurance Company</td>
+                                             <td>SMCA2</td>
+                                          </tr>
+                                       </tbody>
+                                    </table>
+                                 </fieldset>
+                              </fieldset>
+                           </div>
+                        </div>
+                     </accordion-group>
+                     <accordion-group class="panel-info" type="pills" style="margin-top:0;border: 1px ridge  #C6DEFF;" is-open="PayerInfo19" vertical="true">
+                        <accordion-heading><span class="clearfix"><span class="accordion-heading pull-left"><i class="pull-left fa" ng-class="{'fa-caret-down': PayerInfo19, 'fa-caret-right': !PayerInfo19}"></i>Payer Information - Chloride, serum</span></span></accordion-heading>
+                        <div class="panel panel-info">
+                           <div class="panel-body">
+                              <fieldset>
+                                 <legend>Record information</legend>
+                                 <table>
+                                    <tbody>
+                                       <tr>
+                                          <th>Element</th>
+                                          <th>Data</th>
+                                       </tr>
+                                       <tr>
+                                          <td>Event code</td>
+                                          <td>MAD</td>
+                                       </tr>
+                                       <tr>
+                                          <td>Effective date and time</td>
+                                          <td>20131219145310</td>
+                                       </tr>
+                                       <tr>
+                                          <td>Test/Panel Name</td>
+                                          <td>Chloride, serum</td>
+                                       </tr>
+                                       <tr>
+                                          <td>Test/Panel identifier (code system)</td>
+                                          <td>134 (99USL)</td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </fieldset>
+                              <fieldset>
+                                 <legend>Payer &amp; coverage details</legend>
+                                 <fieldset>
+                                    <legend>Payer</legend>
+                                    <table>
+                                       <tbody>
+                                          <tr>
+                                             <th>Element</th>
+                                             <th>Data</th>
+                                          </tr>
+                                          <tr>
+                                             <td>Health Plan</td>
+                                             <td>Healthplan2</td>
+                                          </tr>
+                                          <tr>
+                                             <td>Insurance Company</td>
+                                             <td>SMCA2</td>
+                                          </tr>
+                                       </tbody>
+                                    </table>
+                                 </fieldset>
+                              </fieldset>
+                           </div>
+                        </div>
+                     </accordion-group>
+                     <accordion-group class="panel-info" type="pills" style="margin-top:0;border: 1px ridge  #C6DEFF;" is-open="PayerInfo20" vertical="true">
+                        <accordion-heading><span class="clearfix"><span class="accordion-heading pull-left"><i class="pull-left fa" ng-class="{'fa-caret-down': PayerInfo20, 'fa-caret-right': !PayerInfo20}"></i>Payer Information - Carbon dioxide, serum</span></span></accordion-heading>
+                        <div class="panel panel-info">
+                           <div class="panel-body">
+                              <fieldset>
+                                 <legend>Record information</legend>
+                                 <table>
+                                    <tbody>
+                                       <tr>
+                                          <th>Element</th>
+                                          <th>Data</th>
+                                       </tr>
+                                       <tr>
+                                          <td>Event code</td>
+                                          <td>MAD</td>
+                                       </tr>
+                                       <tr>
+                                          <td>Effective date and time</td>
+                                          <td>20131219145310</td>
+                                       </tr>
+                                       <tr>
+                                          <td>Test/Panel Name</td>
+                                          <td>Carbon dioxide, serum</td>
+                                       </tr>
+                                       <tr>
+                                          <td>Test/Panel identifier (code system)</td>
+                                          <td>136 (99USL)</td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </fieldset>
+                              <fieldset>
+                                 <legend>Payer &amp; coverage details</legend>
+                                 <fieldset>
+                                    <legend>Payer</legend>
+                                    <table>
+                                       <tbody>
+                                          <tr>
+                                             <th>Element</th>
+                                             <th>Data</th>
+                                          </tr>
+                                          <tr>
+                                             <td>Health Plan</td>
+                                             <td>Healthplan2</td>
+                                          </tr>
+                                          <tr>
+                                             <td>Insurance Company</td>
+                                             <td>SMCA2</td>
+                                          </tr>
+                                       </tbody>
+                                    </table>
+                                 </fieldset>
+                              </fieldset>
+                           </div>
+                        </div>
+                     </accordion-group>
+                     <accordion-group class="panel-info" type="pills" style="margin-top:0;border: 1px ridge  #C6DEFF;" is-open="PayerInfo21" vertical="true">
+                        <accordion-heading><span class="clearfix"><span class="accordion-heading pull-left"><i class="pull-left fa" ng-class="{'fa-caret-down': PayerInfo21, 'fa-caret-right': !PayerInfo21}"></i>Payer Information - Pap Test</span></span></accordion-heading>
+                        <div class="panel panel-info">
+                           <div class="panel-body">
+                              <fieldset>
+                                 <legend>Record information</legend>
+                                 <table>
+                                    <tbody>
+                                       <tr>
+                                          <th>Element</th>
+                                          <th>Data</th>
+                                       </tr>
+                                       <tr>
+                                          <td>Event code</td>
+                                          <td>MAD</td>
+                                       </tr>
+                                       <tr>
+                                          <td>Effective date and time</td>
+                                          <td>20131219145310</td>
+                                       </tr>
+                                       <tr>
+                                          <td>Test/Panel Name</td>
+                                          <td>Pap Test</td>
+                                       </tr>
+                                       <tr>
+                                          <td>Test/Panel identifier (code system)</td>
+                                          <td>610 (99USL)</td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </fieldset>
+                              <fieldset>
+                                 <legend>Payer &amp; coverage details</legend>
+                                 <fieldset>
+                                    <legend>Payer</legend>
+                                    <table>
+                                       <tbody>
+                                          <tr>
+                                             <th>Element</th>
+                                             <th>Data</th>
+                                          </tr>
+                                          <tr>
+                                             <td>Health Plan</td>
+                                             <td>Healthplan2</td>
+                                          </tr>
+                                          <tr>
+                                             <td>Insurance Company</td>
+                                             <td>SMCA2</td>
+                                          </tr>
+                                       </tbody>
+                                    </table>
+                                 </fieldset>
+                              </fieldset>
+                           </div>
+                        </div>
+                     </accordion-group>
+                     <accordion-group class="panel-info" type="pills" style="margin-top:0;border: 1px ridge  #C6DEFF;" is-open="PayerInfo22" vertical="true">
+                        <accordion-heading><span class="clearfix"><span class="accordion-heading pull-left"><i class="pull-left fa" ng-class="{'fa-caret-down': PayerInfo22, 'fa-caret-right': !PayerInfo22}"></i>Payer Information - Prostate Biopsy Pathology Report</span></span></accordion-heading>
+                        <div class="panel panel-info">
+                           <div class="panel-body">
+                              <fieldset>
+                                 <legend>Record information</legend>
+                                 <table>
+                                    <tbody>
+                                       <tr>
+                                          <th>Element</th>
+                                          <th>Data</th>
+                                       </tr>
+                                       <tr>
+                                          <td>Event code</td>
+                                          <td>MAD</td>
+                                       </tr>
+                                       <tr>
+                                          <td>Effective date and time</td>
+                                          <td>20131219145310</td>
+                                       </tr>
+                                       <tr>
+                                          <td>Test/Panel Name</td>
+                                          <td>Prostate Biopsy Pathology Report</td>
+                                       </tr>
+                                       <tr>
+                                          <td>Test/Panel identifier (code system)</td>
+                                          <td>600 (99USL)</td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </fieldset>
+                              <fieldset>
+                                 <legend>Payer &amp; coverage details</legend>
+                                 <fieldset>
+                                    <legend>Payer</legend>
+                                    <table>
+                                       <tbody>
+                                          <tr>
+                                             <th>Element</th>
+                                             <th>Data</th>
+                                          </tr>
+                                          <tr>
+                                             <td>Health Plan</td>
+                                             <td>Healthplan2</td>
+                                          </tr>
+                                          <tr>
+                                             <td>Insurance Company</td>
+                                             <td>SMCA2</td>
+                                          </tr>
+                                       </tbody>
+                                    </table>
+                                 </fieldset>
+                                 <fieldset>
+                                    <legend>Coverage Policy</legend>
+                                    <table>
+                                       <tbody>
+                                          <tr>
+                                             <td>Low price range</td>
+                                             <td>USD 25</td>
+                                          </tr>
+                                          <tr>
+                                             <td>High price range</td>
+                                             <td>USD 125</td>
+                                          </tr>
+                                          <tr>
+                                             <td>Reason for universal service cost range</td>
+                                             <td>Depending on the number of biopsies submitted - max covered are 25</td>
+                                          </tr>
+                                       </tbody>
+                                    </table>
+                                 </fieldset>
+                              </fieldset>
+                           </div>
+                        </div>
+                     </accordion-group>
+                     <accordion-group class="panel-info" type="pills" style="margin-top:0;border: 1px ridge  #C6DEFF;" is-open="PayerInfo23" vertical="true">
+                        <accordion-heading><span class="clearfix"><span class="accordion-heading pull-left"><i class="pull-left fa" ng-class="{'fa-caret-down': PayerInfo23, 'fa-caret-right': !PayerInfo23}"></i>Payer Information - Creatinine Clearance</span></span></accordion-heading>
+                        <div class="panel panel-info">
+                           <div class="panel-body">
+                              <fieldset>
+                                 <legend>Record information</legend>
+                                 <table>
+                                    <tbody>
+                                       <tr>
+                                          <th>Element</th>
+                                          <th>Data</th>
+                                       </tr>
+                                       <tr>
+                                          <td>Event code</td>
+                                          <td>MAD</td>
+                                       </tr>
+                                       <tr>
+                                          <td>Effective date and time</td>
+                                          <td>20131219145310</td>
+                                       </tr>
+                                       <tr>
+                                          <td>Test/Panel Name</td>
+                                          <td>Creatinine Clearance</td>
+                                       </tr>
+                                       <tr>
+                                          <td>Test/Panel identifier (code system)</td>
+                                          <td>1200 (99USL)</td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </fieldset>
+                              <fieldset>
+                                 <legend>Payer &amp; coverage details</legend>
+                                 <fieldset>
+                                    <legend>Payer</legend>
+                                    <table>
+                                       <tbody>
+                                          <tr>
+                                             <th>Element</th>
+                                             <th>Data</th>
+                                          </tr>
+                                          <tr>
+                                             <td>Health Plan</td>
+                                             <td>Healthplan2</td>
+                                          </tr>
+                                          <tr>
+                                             <td>Insurance Company</td>
+                                             <td>SMCA2</td>
+                                          </tr>
+                                       </tbody>
+                                    </table>
+                                 </fieldset>
+                                 <fieldset>
+                                    <legend>Coverage Policy</legend>
+                                    <table>
+                                       <tbody>
+                                          <tr>
+                                             <td>High price range</td>
+                                             <td>USD 59</td>
+                                          </tr>
+                                       </tbody>
+                                    </table>
+                                 </fieldset>
+                              </fieldset>
+                           </div>
+                        </div>
+                     </accordion-group>
+                     <accordion-group class="panel-info" type="pills" style="margin-top:0;border: 1px ridge  #C6DEFF;" is-open="PayerInfo24" vertical="true">
+                        <accordion-heading><span class="clearfix"><span class="accordion-heading pull-left"><i class="pull-left fa" ng-class="{'fa-caret-down': PayerInfo24, 'fa-caret-right': !PayerInfo24}"></i>Payer Information - Penicillin</span></span></accordion-heading>
+                        <div class="panel panel-info">
+                           <div class="panel-body">
+                              <fieldset>
+                                 <legend>Record information</legend>
+                                 <table>
+                                    <tbody>
+                                       <tr>
+                                          <th>Element</th>
+                                          <th>Data</th>
+                                       </tr>
+                                       <tr>
+                                          <td>Event code</td>
+                                          <td>MAD</td>
+                                       </tr>
+                                       <tr>
+                                          <td>Effective date and time</td>
+                                          <td>20131219145310</td>
+                                       </tr>
+                                       <tr>
+                                          <td>Test/Panel Name</td>
+                                          <td>Penicillin</td>
+                                       </tr>
+                                       <tr>
+                                          <td>Test/Panel identifier (code system)</td>
+                                          <td>1506 (99USL)</td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </fieldset>
+                              <fieldset>
+                                 <legend>Payer &amp; coverage details</legend>
+                                 <fieldset>
+                                    <legend>Payer</legend>
+                                    <table>
+                                       <tbody>
+                                          <tr>
+                                             <th>Element</th>
+                                             <th>Data</th>
+                                          </tr>
+                                          <tr>
+                                             <td>Health Plan</td>
+                                             <td>Healthplan2</td>
+                                          </tr>
+                                          <tr>
+                                             <td>Insurance Company</td>
+                                             <td>SMCA2</td>
+                                          </tr>
+                                       </tbody>
+                                    </table>
+                                 </fieldset>
+                                 <fieldset>
+                                    <legend>Coverage Policy</legend>
+                                    <table>
+                                       <tbody>
+                                          <tr>
+                                             <td>Low price range</td>
+                                             <td>USD 39</td>
+                                          </tr>
+                                          <tr>
+                                             <td>High price range</td>
+                                             <td>USD 99</td>
+                                          </tr>
+                                          <tr>
+                                             <td>Reason for universal service cost range</td>
+                                             <td>Depending on number of antibiotica tested</td>
+                                          </tr>
+                                       </tbody>
+                                    </table>
+                                 </fieldset>
+                              </fieldset>
+                           </div>
+                        </div>
+                     </accordion-group>
+                     <accordion-group class="panel-info" type="pills" style="margin-top:0;border: 1px ridge  #C6DEFF;" is-open="PayerInfo25" vertical="true">
+                        <accordion-heading><span class="clearfix"><span class="accordion-heading pull-left"><i class="pull-left fa" ng-class="{'fa-caret-down': PayerInfo25, 'fa-caret-right': !PayerInfo25}"></i>Payer Information - Comprehensive Urinalysis</span></span></accordion-heading>
+                        <div class="panel panel-info">
+                           <div class="panel-body">
+                              <fieldset>
+                                 <legend>Record information</legend>
+                                 <table>
+                                    <tbody>
+                                       <tr>
+                                          <th>Element</th>
+                                          <th>Data</th>
+                                       </tr>
+                                       <tr>
+                                          <td>Event code</td>
+                                          <td>MAD</td>
+                                       </tr>
+                                       <tr>
+                                          <td>Effective date and time</td>
+                                          <td>20131219145310</td>
+                                       </tr>
+                                       <tr>
+                                          <td>Test/Panel Name</td>
+                                          <td>Comprehensive Urinalysis</td>
+                                       </tr>
+                                       <tr>
+                                          <td>Test/Panel identifier (code system)</td>
+                                          <td>300 (99USL)</td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </fieldset>
+                              <fieldset>
+                                 <legend>Payer &amp; coverage details</legend>
+                                 <fieldset>
+                                    <legend>Payer</legend>
+                                    <table>
+                                       <tbody>
+                                          <tr>
+                                             <th>Element</th>
+                                             <th>Data</th>
+                                          </tr>
+                                          <tr>
+                                             <td>Health Plan</td>
+                                             <td>Healthplan2</td>
+                                          </tr>
+                                          <tr>
+                                             <td>Insurance Company</td>
+                                             <td>SMCA2</td>
+                                          </tr>
+                                       </tbody>
+                                    </table>
+                                 </fieldset>
+                              </fieldset>
+                           </div>
+                        </div>
+                     </accordion-group>
+                     <accordion-group class="panel-info" type="pills" style="margin-top:0;border: 1px ridge  #C6DEFF;" is-open="PayerInfo26" vertical="true">
+                        <accordion-heading><span class="clearfix"><span class="accordion-heading pull-left"><i class="pull-left fa" ng-class="{'fa-caret-down': PayerInfo26, 'fa-caret-right': !PayerInfo26}"></i>Payer Information - Hepatitis C RNA PCR</span></span></accordion-heading>
+                        <div class="panel panel-info">
+                           <div class="panel-body">
+                              <fieldset>
+                                 <legend>Record information</legend>
+                                 <table>
+                                    <tbody>
+                                       <tr>
+                                          <th>Element</th>
+                                          <th>Data</th>
+                                       </tr>
+                                       <tr>
+                                          <td>Event code</td>
+                                          <td>MAD</td>
+                                       </tr>
+                                       <tr>
+                                          <td>Effective date and time</td>
+                                          <td>20131219145310</td>
+                                       </tr>
+                                       <tr>
+                                          <td>Test/Panel Name</td>
+                                          <td>Hepatitis C RNA PCR</td>
+                                       </tr>
+                                       <tr>
+                                          <td>Test/Panel identifier (code system)</td>
+                                          <td>1010 (99USL)</td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </fieldset>
+                              <fieldset>
+                                 <legend>Payer &amp; coverage details</legend>
+                                 <fieldset>
+                                    <legend>Payer</legend>
+                                    <table>
+                                       <tbody>
+                                          <tr>
+                                             <th>Element</th>
+                                             <th>Data</th>
+                                          </tr>
+                                          <tr>
+                                             <td>Health Plan</td>
+                                             <td>Healthplan2</td>
+                                          </tr>
+                                          <tr>
+                                             <td>Insurance Company</td>
+                                             <td>SMCA2</td>
+                                          </tr>
+                                       </tbody>
+                                    </table>
+                                 </fieldset>
+                              </fieldset>
+                           </div>
+                        </div>
+                     </accordion-group>
+                     <accordion-group class="panel-info" type="pills" style="margin-top:0;border: 1px ridge  #C6DEFF;" is-open="PayerInfo27" vertical="true">
+                        <accordion-heading><span class="clearfix"><span class="accordion-heading pull-left"><i class="pull-left fa" ng-class="{'fa-caret-down': PayerInfo27, 'fa-caret-right': !PayerInfo27}"></i>Payer Information - Protein in 24 hour Urine</span></span></accordion-heading>
+                        <div class="panel panel-info">
+                           <div class="panel-body">
+                              <fieldset>
+                                 <legend>Record information</legend>
+                                 <table>
+                                    <tbody>
+                                       <tr>
+                                          <th>Element</th>
+                                          <th>Data</th>
+                                       </tr>
+                                       <tr>
+                                          <td>Event code</td>
+                                          <td>MAD</td>
+                                       </tr>
+                                       <tr>
+                                          <td>Effective date and time</td>
+                                          <td>20131219145310</td>
+                                       </tr>
+                                       <tr>
+                                          <td>Test/Panel Name</td>
+                                          <td>Protein in 24 hour Urine</td>
+                                       </tr>
+                                       <tr>
+                                          <td>Test/Panel identifier (code system)</td>
+                                          <td>1203 (99USL)</td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </fieldset>
+                              <fieldset>
+                                 <legend>Payer &amp; coverage details</legend>
+                                 <fieldset>
+                                    <legend>Payer</legend>
+                                    <table>
+                                       <tbody>
+                                          <tr>
+                                             <th>Element</th>
+                                             <th>Data</th>
+                                          </tr>
+                                          <tr>
+                                             <td>Health Plan</td>
+                                             <td>Healthplan2</td>
+                                          </tr>
+                                          <tr>
+                                             <td>Insurance Company</td>
+                                             <td>SMCA2</td>
+                                          </tr>
+                                       </tbody>
+                                    </table>
+                                 </fieldset>
+                              </fieldset>
+                           </div>
+                        </div>
+                     </accordion-group>
+                     <accordion-group class="panel-info" type="pills" style="margin-top:0;border: 1px ridge  #C6DEFF;" is-open="PayerInfo28" vertical="true">
+                        <accordion-heading><span class="clearfix"><span class="accordion-heading pull-left"><i class="pull-left fa" ng-class="{'fa-caret-down': PayerInfo28, 'fa-caret-right': !PayerInfo28}"></i>Payer Information - Arbovirus IgG and IgM Panel (DNG, WNV)  in Serum</span></span></accordion-heading>
+                        <div class="panel panel-info">
+                           <div class="panel-body">
+                              <fieldset>
+                                 <legend>Record information</legend>
+                                 <table>
+                                    <tbody>
+                                       <tr>
+                                          <th>Element</th>
+                                          <th>Data</th>
+                                       </tr>
+                                       <tr>
+                                          <td>Event code</td>
+                                          <td>MAD</td>
+                                       </tr>
+                                       <tr>
+                                          <td>Effective date and time</td>
+                                          <td>20131219145310</td>
+                                       </tr>
+                                       <tr>
+                                          <td>Test/Panel Name</td>
+                                          <td>Arbovirus IgG and IgM Panel (DNG, WNV)  in Serum</td>
+                                       </tr>
+                                       <tr>
+                                          <td>Test/Panel identifier (code system)</td>
+                                          <td>1300 (99USL)</td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </fieldset>
+                              <fieldset>
+                                 <legend>Payer &amp; coverage details</legend>
+                                 <fieldset>
+                                    <legend>Payer</legend>
+                                    <table>
+                                       <tbody>
+                                          <tr>
+                                             <th>Element</th>
+                                             <th>Data</th>
+                                          </tr>
+                                          <tr>
+                                             <td>Health Plan</td>
+                                             <td>Healthplan2</td>
+                                          </tr>
+                                          <tr>
+                                             <td>Insurance Company</td>
+                                             <td>SMCA2</td>
+                                          </tr>
+                                       </tbody>
+                                    </table>
+                                 </fieldset>
+                              </fieldset>
+                           </div>
+                        </div>
+                     </accordion-group>
+                     <accordion-group class="panel-info" type="pills" style="margin-top:0;border: 1px ridge  #C6DEFF;" is-open="PayerInfo29" vertical="true">
+                        <accordion-heading><span class="clearfix"><span class="accordion-heading pull-left"><i class="pull-left fa" ng-class="{'fa-caret-down': PayerInfo29, 'fa-caret-right': !PayerInfo29}"></i>Payer Information - SLE IgG Titer Serum</span></span></accordion-heading>
+                        <div class="panel panel-info">
+                           <div class="panel-body">
+                              <fieldset>
+                                 <legend>Record information</legend>
+                                 <table>
+                                    <tbody>
+                                       <tr>
+                                          <th>Element</th>
+                                          <th>Data</th>
+                                       </tr>
+                                       <tr>
+                                          <td>Event code</td>
+                                          <td>MAD</td>
+                                       </tr>
+                                       <tr>
+                                          <td>Effective date and time</td>
+                                          <td>20131219145310</td>
+                                       </tr>
+                                       <tr>
+                                          <td>Test/Panel Name</td>
+                                          <td>SLE IgG Titer Serum</td>
+                                       </tr>
+                                       <tr>
+                                          <td>Test/Panel identifier (code system)</td>
+                                          <td>1305 (99USL)</td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </fieldset>
+                              <fieldset>
+                                 <legend>Payer &amp; coverage details</legend>
+                                 <fieldset>
+                                    <legend>Payer</legend>
+                                    <table>
+                                       <tbody>
+                                          <tr>
+                                             <th>Element</th>
+                                             <th>Data</th>
+                                          </tr>
+                                          <tr>
+                                             <td>Health Plan</td>
+                                             <td>Healthplan2</td>
+                                          </tr>
+                                          <tr>
+                                             <td>Insurance Company</td>
+                                             <td>SMCA2</td>
+                                          </tr>
+                                       </tbody>
+                                    </table>
+                                 </fieldset>
+                              </fieldset>
+                           </div>
+                        </div>
+                     </accordion-group>
+                     <accordion-group class="panel-info" type="pills" style="margin-top:0;border: 1px ridge  #C6DEFF;" is-open="PayerInfo30" vertical="true">
+                        <accordion-heading><span class="clearfix"><span class="accordion-heading pull-left"><i class="pull-left fa" ng-class="{'fa-caret-down': PayerInfo30, 'fa-caret-right': !PayerInfo30}"></i>Payer Information - SLE IgM Titer Serum</span></span></accordion-heading>
+                        <div class="panel panel-info">
+                           <div class="panel-body">
+                              <fieldset>
+                                 <legend>Record information</legend>
+                                 <table>
+                                    <tbody>
+                                       <tr>
+                                          <th>Element</th>
+                                          <th>Data</th>
+                                       </tr>
+                                       <tr>
+                                          <td>Event code</td>
+                                          <td>MAD</td>
+                                       </tr>
+                                       <tr>
+                                          <td>Effective date and time</td>
+                                          <td>20131219145310</td>
+                                       </tr>
+                                       <tr>
+                                          <td>Test/Panel Name</td>
+                                          <td>SLE IgM Titer Serum</td>
+                                       </tr>
+                                       <tr>
+                                          <td>Test/Panel identifier (code system)</td>
+                                          <td>1306 (99USL)</td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </fieldset>
+                              <fieldset>
+                                 <legend>Payer &amp; coverage details</legend>
+                                 <fieldset>
+                                    <legend>Payer</legend>
+                                    <table>
+                                       <tbody>
+                                          <tr>
+                                             <th>Element</th>
+                                             <th>Data</th>
+                                          </tr>
+                                          <tr>
+                                             <td>Health Plan</td>
+                                             <td>Healthplan2</td>
+                                          </tr>
+                                          <tr>
+                                             <td>Insurance Company</td>
+                                             <td>SMCA2</td>
+                                          </tr>
+                                       </tbody>
+                                    </table>
+                                 </fieldset>
+                              </fieldset>
+                           </div>
+                        </div>
+                     </accordion-group>
+                  </accordion>
+               </fieldset>
+            </div>
+         </div>
+      </tab>
+   </tabset>
+</div>

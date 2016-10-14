@@ -1,0 +1,2622 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ConformanceContext UUID="xxx">
+    <Constraints>
+        <Group>
+            <ByName Name="MFN_M10">
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::4">
+                    <Description>Location 'MSH[1].3[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="1[1].3[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::5">
+                    <Description>Location 'MSH[1].3[1].2[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="1[1].3[1].2[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::8">
+                    <Description>Location 'MSH[1].4[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="1[1].4[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::9">
+                    <Description>Location 'MSH[1].4[1].2[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="1[1].4[1].2[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::12">
+                    <Description>Location 'MSH[1].6[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="1[1].6[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::13">
+                    <Description>Location 'MSH[1].6[1].2[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="1[1].6[1].2[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::16">
+                    <Description>Location 'MSH[1].7[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="1[1].7[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::21">
+                    <Description>Location 'MSH[1].10[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="1[1].10[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::23">
+                    <Description>Location 'MSH[1].11[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="1[1].11[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::40">
+                    <Description>Location 'MFI[1].1[1].2[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].1[1].2[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::42">
+                    <Description>Location 'MFI[1].1[1].7[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].1[1].7[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::44">
+                    <Description>Location 'MFI[1].3[1]' is expected to be present and valued 'UPD'</Description>
+                    <Assertion>
+                        <AND>
+                            <Presence Path="3[1].3[1]"/>
+                            <PlainText Path="3[1].3[1]" Text="UPD" IgnoreCase="false"/>
+                        </AND>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::46">
+                    <Description>Location 'MF_BATTERY[1].MFE[1].1[1]' is expected to be present and valued 'MDC'</Description>
+                    <Assertion>
+                        <AND>
+                            <Presence Path="4[1].1[1].1[1]"/>
+                            <PlainText Path="4[1].1[1].1[1]" Text="MDC" IgnoreCase="false"/>
+                        </AND>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::49">
+                    <Description>Location 'MF_BATTERY[1].MFE[1].3[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].1[1].3[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::51">
+                    <Description>Location 'MF_BATTERY[1].MFE[1].4[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].1[1].4[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::52">
+                    <Description>Location 'MF_BATTERY[1].MFE[1].4[1].2[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].1[1].4[1].2[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::53">
+                    <Description>Location 'MF_BATTERY[1].MFE[1].4[1].3[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].1[1].4[1].3[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::54">
+                    <Description>Location 'MF_BATTERY[1].MFE[1].4[1].7[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].1[1].4[1].7[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::58">
+                    <Description>Location 'MF_BATTERY[1].OM1[1].2[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].2[1].2[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::59">
+                    <Description>Location 'MF_BATTERY[1].OM1[1].2[1].2[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].2[1].2[1].2[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::60">
+                    <Description>Location 'MF_BATTERY[1].OM1[1].2[1].3[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].2[1].2[1].3[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::61">
+                    <Description>Location 'MF_BATTERY[1].OM1[1].2[1].7[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].2[1].2[1].7[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::62">
+                    <Description>Location 'MF_BATTERY[1].OM1[1].4[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].2[1].4[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::64">
+                    <Description>Location 'MF_BATTERY[1].OM1[1].5[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].2[1].5[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::65">
+                    <Description>Location 'MF_BATTERY[1].OM1[1].5[1].2[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].2[1].5[1].2[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::66">
+                    <Description>Location 'MF_BATTERY[1].OM1[1].5[1].3[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].2[1].5[1].3[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::67">
+                    <Description>Location 'MF_BATTERY[1].OM1[1].5[1].7[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].2[1].5[1].7[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::74">
+                    <Description>Location 'MF_BATTERY[1].OM1[1].9[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].2[1].9[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::77">
+                    <Description>Location 'MF_BATTERY[1].OM1[1].12[1]' is expected to be present and valued 'Y'</Description>
+                    <Assertion>
+                        <AND>
+                            <Presence Path="4[1].2[1].12[1]"/>
+                            <PlainText Path="4[1].2[1].12[1]" Text="Y" IgnoreCase="false"/>
+                        </AND>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::154">
+                    <Description>Location 'MF_BATTERY[1].OM1[1].39[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].2[1].39[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::155">
+                    <Description>Location 'MF_BATTERY[1].OM1[1].40[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].2[1].40[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::157">
+                    <Description>Location 'MF_BATTERY[1].OM1[1].48[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].2[1].48[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::158">
+                    <Description>Location 'MF_BATTERY[1].OM1[1].49[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].2[1].49[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::218">
+                    <Description>Location 'MF_BATTERY[1].OM1[1].57[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].2[1].57[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::221">
+                    <Description>Location 'MF_BATTERY[1].OM1[1].57[1].2[1].2[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].2[1].57[1].2[1].2[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::227">
+                    <Description>Location 'MF_BATTERY[1].BATTERY_DETAIL[1].OM5[1].2[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].3[1].1[1].2[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::228">
+                    <Description>Location 'MF_BATTERY[1].BATTERY_DETAIL[1].OM5[1].2[1].2[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].3[1].1[1].2[1].2[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::229">
+                    <Description>Location 'MF_BATTERY[1].BATTERY_DETAIL[1].OM5[1].2[1].3[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].3[1].1[1].2[1].3[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::230">
+                    <Description>Location 'MF_BATTERY[1].BATTERY_DETAIL[1].OM5[1].2[1].4[1]' is expected to be present and valued '6811-4'</Description>
+                    <Assertion>
+                        <AND>
+                            <Presence Path="4[1].3[1].1[1].2[1].4[1]"/>
+                            <PlainText Path="4[1].3[1].1[1].2[1].4[1]" Text="6811-4" IgnoreCase="false"/>
+                        </AND>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::231">
+                    <Description>Location 'MF_BATTERY[1].BATTERY_DETAIL[1].OM5[1].2[1].5[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].3[1].1[1].2[1].5[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::232">
+                    <Description>Location 'MF_BATTERY[1].BATTERY_DETAIL[1].OM5[1].2[1].6[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].3[1].1[1].2[1].6[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::236">
+                    <Description>Location 'MF_BATTERY[1].BATTERY_DETAIL[1].OM5[1].2[2].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].3[1].1[1].2[2].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::237">
+                    <Description>Location 'MF_BATTERY[1].BATTERY_DETAIL[1].OM5[1].2[2].2[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].3[1].1[1].2[2].2[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::238">
+                    <Description>Location 'MF_BATTERY[1].BATTERY_DETAIL[1].OM5[1].2[2].3[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].3[1].1[1].2[2].3[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::239">
+                    <Description>Location 'MF_BATTERY[1].BATTERY_DETAIL[1].OM5[1].2[2].4[1]' is expected to be present and valued '6812-2'</Description>
+                    <Assertion>
+                        <AND>
+                            <Presence Path="4[1].3[1].1[1].2[2].4[1]"/>
+                            <PlainText Path="4[1].3[1].1[1].2[2].4[1]" Text="6812-2" IgnoreCase="false"/>
+                        </AND>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::240">
+                    <Description>Location 'MF_BATTERY[1].BATTERY_DETAIL[1].OM5[1].2[2].5[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].3[1].1[1].2[2].5[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::241">
+                    <Description>Location 'MF_BATTERY[1].BATTERY_DETAIL[1].OM5[1].2[2].6[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].3[1].1[1].2[2].6[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::245">
+                    <Description>Location 'MF_BATTERY[1].BATTERY_DETAIL[1].OM5[1].2[3].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].3[1].1[1].2[3].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::246">
+                    <Description>Location 'MF_BATTERY[1].BATTERY_DETAIL[1].OM5[1].2[3].2[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].3[1].1[1].2[3].2[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::247">
+                    <Description>Location 'MF_BATTERY[1].BATTERY_DETAIL[1].OM5[1].2[3].3[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].3[1].1[1].2[3].3[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::248">
+                    <Description>Location 'MF_BATTERY[1].BATTERY_DETAIL[1].OM5[1].2[3].4[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].3[1].1[1].2[3].4[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::249">
+                    <Description>Location 'MF_BATTERY[1].BATTERY_DETAIL[1].OM5[1].2[3].5[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].3[1].1[1].2[3].5[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::250">
+                    <Description>Location 'MF_BATTERY[1].BATTERY_DETAIL[1].OM5[1].2[3].6[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].3[1].1[1].2[3].6[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::254">
+                    <Description>Location 'MF_BATTERY[1].BATTERY_DETAIL[1].OM5[1].2[4].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].3[1].1[1].2[4].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::255">
+                    <Description>Location 'MF_BATTERY[1].BATTERY_DETAIL[1].OM5[1].2[4].2[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].3[1].1[1].2[4].2[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::256">
+                    <Description>Location 'MF_BATTERY[1].BATTERY_DETAIL[1].OM5[1].2[4].3[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].3[1].1[1].2[4].3[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::257">
+                    <Description>Location 'MF_BATTERY[1].BATTERY_DETAIL[1].OM5[1].2[4].4[1]' is expected to be present and valued '33331-0'</Description>
+                    <Assertion>
+                        <AND>
+                            <Presence Path="4[1].3[1].1[1].2[4].4[1]"/>
+                            <PlainText Path="4[1].3[1].1[1].2[4].4[1]" Text="33331-0" IgnoreCase="false"/>
+                        </AND>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::258">
+                    <Description>Location 'MF_BATTERY[1].BATTERY_DETAIL[1].OM5[1].2[4].5[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].3[1].1[1].2[4].5[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::259">
+                    <Description>Location 'MF_BATTERY[1].BATTERY_DETAIL[1].OM5[1].2[4].6[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].3[1].1[1].2[4].6[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::507">
+                    <Description>Location 'MF_BATTERY[1].BATTERY_DETAIL[1].OM4[1].3[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].3[1].2[1].3[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::508">
+                    <Description>Location 'MF_BATTERY[1].BATTERY_DETAIL[1].OM4[1].3[2]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].3[1].2[1].3[2]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::509">
+                    <Description>Location 'MF_BATTERY[1].BATTERY_DETAIL[1].OM4[1].4[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].3[1].2[1].4[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::510">
+                    <Description>Location 'MF_BATTERY[1].BATTERY_DETAIL[1].OM4[1].4[2]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].3[1].2[1].4[2]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::512">
+                    <Description>Location 'MF_BATTERY[1].BATTERY_DETAIL[1].OM4[1].5[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].3[1].2[1].5[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::513">
+                    <Description>Location 'MF_BATTERY[1].BATTERY_DETAIL[1].OM4[1].5[1].2[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].3[1].2[1].5[1].2[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::514">
+                    <Description>Location 'MF_BATTERY[1].BATTERY_DETAIL[1].OM4[1].5[1].3[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].3[1].2[1].5[1].3[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::515">
+                    <Description>Location 'MF_BATTERY[1].BATTERY_DETAIL[1].OM4[1].5[1].7[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].3[1].2[1].5[1].7[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::518">
+                    <Description>Location 'MF_BATTERY[1].BATTERY_DETAIL[1].OM4[1].5[2].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].3[1].2[1].5[2].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::519">
+                    <Description>Location 'MF_BATTERY[1].BATTERY_DETAIL[1].OM4[1].5[2].2[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].3[1].2[1].5[2].2[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::520">
+                    <Description>Location 'MF_BATTERY[1].BATTERY_DETAIL[1].OM4[1].5[2].3[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].3[1].2[1].5[2].3[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::521">
+                    <Description>Location 'MF_BATTERY[1].BATTERY_DETAIL[1].OM4[1].5[2].7[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].3[1].2[1].5[2].7[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::524">
+                    <Description>Location 'MF_BATTERY[1].BATTERY_DETAIL[1].OM4[1].6[1].1[1]' is expected to be present and valued '119364003'</Description>
+                    <Assertion>
+                        <AND>
+                            <Presence Path="4[1].3[1].2[1].6[1].1[1]"/>
+                            <PlainText Path="4[1].3[1].2[1].6[1].1[1]" Text="119364003" IgnoreCase="false"/>
+                        </AND>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::525">
+                    <Description>Location 'MF_BATTERY[1].BATTERY_DETAIL[1].OM4[1].6[1].2[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].3[1].2[1].6[1].2[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::526">
+                    <Description>Location 'MF_BATTERY[1].BATTERY_DETAIL[1].OM4[1].6[1].3[1]' is expected to be present and valued 'SCT'</Description>
+                    <Assertion>
+                        <AND>
+                            <Presence Path="4[1].3[1].2[1].6[1].3[1]"/>
+                            <PlainText Path="4[1].3[1].2[1].6[1].3[1]" Text="SCT" IgnoreCase="false"/>
+                        </AND>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::530">
+                    <Description>Location 'MF_BATTERY[1].BATTERY_DETAIL[1].OM4[1].6[1].7[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].3[1].2[1].6[1].7[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::540">
+                    <Description>Location 'MF_BATTERY[1].BATTERY_DETAIL[1].OM4[1].10[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].3[1].2[1].10[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::542">
+                    <Description>Location 'MF_BATTERY[1].BATTERY_DETAIL[1].OM4[1].10[1].2[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].3[1].2[1].10[1].2[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::543">
+                    <Description>Location 'MF_BATTERY[1].BATTERY_DETAIL[1].OM4[1].10[1].2[1].2[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].3[1].2[1].10[1].2[1].2[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::544">
+                    <Description>Location 'MF_BATTERY[1].BATTERY_DETAIL[1].OM4[1].10[1].2[1].3[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].3[1].2[1].10[1].2[1].3[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::548">
+                    <Description>Location 'MF_BATTERY[1].BATTERY_DETAIL[1].OM4[1].11[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].3[1].2[1].11[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::550">
+                    <Description>Location 'MF_BATTERY[1].BATTERY_DETAIL[1].OM4[1].11[1].2[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].3[1].2[1].11[1].2[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::551">
+                    <Description>Location 'MF_BATTERY[1].BATTERY_DETAIL[1].OM4[1].11[1].2[1].2[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].3[1].2[1].11[1].2[1].2[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::552">
+                    <Description>Location 'MF_BATTERY[1].BATTERY_DETAIL[1].OM4[1].11[1].2[1].3[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].3[1].2[1].11[1].2[1].3[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::553">
+                    <Description>Location 'MF_BATTERY[1].BATTERY_DETAIL[1].OM4[1].11[1].2[1].7[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].3[1].2[1].11[1].2[1].7[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::555">
+                    <Description>Location 'MF_BATTERY[1].BATTERY_DETAIL[1].OM4[1].12[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].3[1].2[1].12[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::557">
+                    <Description>Location 'MF_BATTERY[1].BATTERY_DETAIL[1].OM4[1].15[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].3[1].2[1].15[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::558">
+                    <Description>Location 'MF_BATTERY[1].BATTERY_DETAIL[1].OM4[1].15[1].2[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].3[1].2[1].15[1].2[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::560">
+                    <Description>Location 'MF_BATTERY[1].BATTERY_DETAIL[1].OM4[1].15[1].7[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[1].3[1].2[1].15[1].7[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::568">
+                    <Description>Location 'MF_BATTERY[1].BATTERY_DETAIL[1].OM4[1].16[1]' is expected to be present and valued 'P'</Description>
+                    <Assertion>
+                        <AND>
+                            <Presence Path="4[1].3[1].2[1].16[1]"/>
+                            <PlainText Path="4[1].3[1].2[1].16[1]" Text="P" IgnoreCase="false"/>
+                        </AND>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::570">
+                    <Description>Location 'MF_BATTERY[2].MFE[1].1[1]' is expected to be present and valued 'MUP'</Description>
+                    <Assertion>
+                        <AND>
+                            <Presence Path="4[2].1[1].1[1]"/>
+                            <PlainText Path="4[2].1[1].1[1]" Text="MUP" IgnoreCase="false"/>
+                        </AND>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::573">
+                    <Description>Location 'MF_BATTERY[2].MFE[1].3[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].1[1].3[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::575">
+                    <Description>Location 'MF_BATTERY[2].MFE[1].4[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].1[1].4[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::576">
+                    <Description>Location 'MF_BATTERY[2].MFE[1].4[1].2[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].1[1].4[1].2[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::577">
+                    <Description>Location 'MF_BATTERY[2].MFE[1].4[1].3[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].1[1].4[1].3[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::578">
+                    <Description>Location 'MF_BATTERY[2].MFE[1].4[1].7[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].1[1].4[1].7[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::582">
+                    <Description>Location 'MF_BATTERY[2].OM1[1].2[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].2[1].2[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::583">
+                    <Description>Location 'MF_BATTERY[2].OM1[1].2[1].2[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].2[1].2[1].2[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::584">
+                    <Description>Location 'MF_BATTERY[2].OM1[1].2[1].3[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].2[1].2[1].3[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::585">
+                    <Description>Location 'MF_BATTERY[2].OM1[1].2[1].7[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].2[1].2[1].7[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::586">
+                    <Description>Location 'MF_BATTERY[2].OM1[1].4[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].2[1].4[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::588">
+                    <Description>Location 'MF_BATTERY[2].OM1[1].5[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].2[1].5[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::589">
+                    <Description>Location 'MF_BATTERY[2].OM1[1].5[1].2[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].2[1].5[1].2[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::590">
+                    <Description>Location 'MF_BATTERY[2].OM1[1].5[1].3[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].2[1].5[1].3[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::591">
+                    <Description>Location 'MF_BATTERY[2].OM1[1].5[1].7[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].2[1].5[1].7[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::594">
+                    <Description>Location 'MF_BATTERY[2].OM1[1].7[1].1[1]' is expected to be present and valued '24323-8'</Description>
+                    <Assertion>
+                        <AND>
+                            <Presence Path="4[2].2[1].7[1].1[1]"/>
+                            <PlainText Path="4[2].2[1].7[1].1[1]" Text="24323-8" IgnoreCase="false"/>
+                        </AND>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::595">
+                    <Description>Location 'MF_BATTERY[2].OM1[1].7[1].2[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].2[1].7[1].2[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::596">
+                    <Description>Location 'MF_BATTERY[2].OM1[1].7[1].3[1]' is expected to be present and valued 'LN'</Description>
+                    <Assertion>
+                        <AND>
+                            <Presence Path="4[2].2[1].7[1].3[1]"/>
+                            <PlainText Path="4[2].2[1].7[1].3[1]" Text="LN" IgnoreCase="false"/>
+                        </AND>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::597">
+                    <Description>Location 'MF_BATTERY[2].OM1[1].7[1].7[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].2[1].7[1].7[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::599">
+                    <Description>Location 'MF_BATTERY[2].OM1[1].10[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].2[1].10[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::601">
+                    <Description>Location 'MF_BATTERY[2].OM1[1].12[1]' is expected to be present and valued 'Y'</Description>
+                    <Assertion>
+                        <AND>
+                            <Presence Path="4[2].2[1].12[1]"/>
+                            <PlainText Path="4[2].2[1].12[1]" Text="Y" IgnoreCase="false"/>
+                        </AND>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::632">
+                    <Description>Location 'MF_BATTERY[2].OM1[1].31[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].2[1].31[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::633">
+                    <Description>Location 'MF_BATTERY[2].OM1[1].31[1].2[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].2[1].31[1].2[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::634">
+                    <Description>Location 'MF_BATTERY[2].OM1[1].31[1].3[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].2[1].31[1].3[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::635">
+                    <Description>Location 'MF_BATTERY[2].OM1[1].31[1].7[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].2[1].31[1].7[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::638">
+                    <Description>Location 'MF_BATTERY[2].OM1[1].31[2].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].2[1].31[2].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::639">
+                    <Description>Location 'MF_BATTERY[2].OM1[1].31[2].2[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].2[1].31[2].2[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::640">
+                    <Description>Location 'MF_BATTERY[2].OM1[1].31[2].3[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].2[1].31[2].3[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::641">
+                    <Description>Location 'MF_BATTERY[2].OM1[1].31[2].7[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].2[1].31[2].7[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::643">
+                    <Description>Location 'MF_BATTERY[2].OM1[1].32[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].2[1].32[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::676">
+                    <Description>Location 'MF_BATTERY[2].OM1[1].37[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].2[1].37[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::678">
+                    <Description>Location 'MF_BATTERY[2].OM1[1].39[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].2[1].39[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::679">
+                    <Description>Location 'MF_BATTERY[2].OM1[1].40[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].2[1].40[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::681">
+                    <Description>Location 'MF_BATTERY[2].OM1[1].48[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].2[1].48[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::682">
+                    <Description>Location 'MF_BATTERY[2].OM1[1].49[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].2[1].49[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::683">
+                    <Description>Location 'MF_BATTERY[2].OM1[1].51[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].2[1].51[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::742">
+                    <Description>Location 'MF_BATTERY[2].OM1[1].57[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].2[1].57[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::744">
+                    <Description>Location 'MF_BATTERY[2].OM1[1].57[1].2[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].2[1].57[1].2[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::745">
+                    <Description>Location 'MF_BATTERY[2].OM1[1].57[1].2[1].2[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].2[1].57[1].2[1].2[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::746">
+                    <Description>Location 'MF_BATTERY[2].OM1[1].57[1].2[1].3[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].2[1].57[1].2[1].3[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::747">
+                    <Description>Location 'MF_BATTERY[2].OM1[1].57[1].2[1].7[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].2[1].57[1].2[1].7[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::751">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM5[1].2[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].1[1].2[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::752">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM5[1].2[1].2[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].1[1].2[1].2[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::753">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM5[1].2[1].3[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].1[1].2[1].3[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::754">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM5[1].2[1].4[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].1[1].2[1].4[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::755">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM5[1].2[1].5[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].1[1].2[1].5[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::756">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM5[1].2[1].6[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].1[1].2[1].6[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::757">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM5[1].2[1].7[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].1[1].2[1].7[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::758">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM5[1].2[1].8[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].1[1].2[1].8[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::760">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM5[1].2[2].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].1[1].2[2].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::761">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM5[1].2[2].2[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].1[1].2[2].2[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::762">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM5[1].2[2].3[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].1[1].2[2].3[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::763">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM5[1].2[2].4[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].1[1].2[2].4[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::764">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM5[1].2[2].5[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].1[1].2[2].5[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::765">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM5[1].2[2].6[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].1[1].2[2].6[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::766">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM5[1].2[2].7[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].1[1].2[2].7[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::767">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM5[1].2[2].8[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].1[1].2[2].8[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::769">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM5[1].2[3].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].1[1].2[3].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::770">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM5[1].2[3].2[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].1[1].2[3].2[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::771">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM5[1].2[3].3[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].1[1].2[3].3[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::772">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM5[1].2[3].4[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].1[1].2[3].4[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::773">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM5[1].2[3].5[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].1[1].2[3].5[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::774">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM5[1].2[3].6[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].1[1].2[3].6[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::775">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM5[1].2[3].7[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].1[1].2[3].7[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::776">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM5[1].2[3].8[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].1[1].2[3].8[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::778">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM5[1].2[4].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].1[1].2[4].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::779">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM5[1].2[4].2[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].1[1].2[4].2[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::780">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM5[1].2[4].3[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].1[1].2[4].3[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::781">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM5[1].2[4].4[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].1[1].2[4].4[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::782">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM5[1].2[4].5[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].1[1].2[4].5[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::783">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM5[1].2[4].6[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].1[1].2[4].6[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::784">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM5[1].2[4].7[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].1[1].2[4].7[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::785">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM5[1].2[4].8[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].1[1].2[4].8[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::787">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM5[1].2[5].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].1[1].2[5].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::788">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM5[1].2[5].2[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].1[1].2[5].2[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::789">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM5[1].2[5].3[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].1[1].2[5].3[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::790">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM5[1].2[5].4[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].1[1].2[5].4[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::791">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM5[1].2[5].5[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].1[1].2[5].5[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::792">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM5[1].2[5].6[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].1[1].2[5].6[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::793">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM5[1].2[5].7[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].1[1].2[5].7[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::794">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM5[1].2[5].8[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].1[1].2[5].8[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::796">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM5[1].2[6].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].1[1].2[6].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::797">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM5[1].2[6].2[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].1[1].2[6].2[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::798">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM5[1].2[6].3[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].1[1].2[6].3[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::799">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM5[1].2[6].4[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].1[1].2[6].4[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::800">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM5[1].2[6].5[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].1[1].2[6].5[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::801">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM5[1].2[6].6[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].1[1].2[6].6[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::802">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM5[1].2[6].7[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].1[1].2[6].7[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::803">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM5[1].2[6].8[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].1[1].2[6].8[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::805">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM5[1].2[7].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].1[1].2[7].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::806">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM5[1].2[7].2[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].1[1].2[7].2[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::807">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM5[1].2[7].3[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].1[1].2[7].3[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::808">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM5[1].2[7].4[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].1[1].2[7].4[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::809">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM5[1].2[7].5[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].1[1].2[7].5[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::810">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM5[1].2[7].6[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].1[1].2[7].6[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::811">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM5[1].2[7].7[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].1[1].2[7].7[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::812">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM5[1].2[7].8[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].1[1].2[7].8[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::814">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM5[1].2[8].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].1[1].2[8].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::815">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM5[1].2[8].2[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].1[1].2[8].2[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::816">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM5[1].2[8].3[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].1[1].2[8].3[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::817">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM5[1].2[8].4[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].1[1].2[8].4[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::818">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM5[1].2[8].5[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].1[1].2[8].5[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::819">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM5[1].2[8].6[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].1[1].2[8].6[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::820">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM5[1].2[8].7[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].1[1].2[8].7[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::821">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM5[1].2[8].8[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].1[1].2[8].8[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::823">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM5[1].2[9].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].1[1].2[9].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::824">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM5[1].2[9].2[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].1[1].2[9].2[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::825">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM5[1].2[9].3[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].1[1].2[9].3[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::826">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM5[1].2[9].4[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].1[1].2[9].4[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::827">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM5[1].2[9].5[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].1[1].2[9].5[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::828">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM5[1].2[9].6[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].1[1].2[9].6[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::829">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM5[1].2[9].7[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].1[1].2[9].7[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::830">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM5[1].2[9].8[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].1[1].2[9].8[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::832">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM5[1].2[10].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].1[1].2[10].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::833">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM5[1].2[10].2[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].1[1].2[10].2[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::834">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM5[1].2[10].3[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].1[1].2[10].3[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::835">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM5[1].2[10].4[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].1[1].2[10].4[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::836">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM5[1].2[10].5[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].1[1].2[10].5[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::837">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM5[1].2[10].6[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].1[1].2[10].6[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::838">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM5[1].2[10].7[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].1[1].2[10].7[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::839">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM5[1].2[10].8[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].1[1].2[10].8[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::841">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM5[1].2[11].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].1[1].2[11].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::842">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM5[1].2[11].2[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].1[1].2[11].2[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::843">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM5[1].2[11].3[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].1[1].2[11].3[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::844">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM5[1].2[11].4[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].1[1].2[11].4[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::845">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM5[1].2[11].5[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].1[1].2[11].5[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::846">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM5[1].2[11].6[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].1[1].2[11].6[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::847">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM5[1].2[11].7[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].1[1].2[11].7[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::848">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM5[1].2[11].8[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].1[1].2[11].8[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::850">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM5[1].2[12].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].1[1].2[12].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::851">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM5[1].2[12].2[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].1[1].2[12].2[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::852">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM5[1].2[12].3[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].1[1].2[12].3[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::853">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM5[1].2[12].4[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].1[1].2[12].4[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::854">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM5[1].2[12].5[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].1[1].2[12].5[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::855">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM5[1].2[12].6[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].1[1].2[12].6[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::856">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM5[1].2[12].7[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].1[1].2[12].7[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::857">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM5[1].2[12].8[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].1[1].2[12].8[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::859">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM5[1].2[13].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].1[1].2[13].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::860">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM5[1].2[13].2[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].1[1].2[13].2[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::861">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM5[1].2[13].3[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].1[1].2[13].3[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::862">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM5[1].2[13].4[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].1[1].2[13].4[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::863">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM5[1].2[13].5[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].1[1].2[13].5[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::864">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM5[1].2[13].6[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].1[1].2[13].6[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::865">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM5[1].2[13].7[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].1[1].2[13].7[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::866">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM5[1].2[13].8[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].1[1].2[13].8[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::868">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM5[1].2[14].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].1[1].2[14].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::869">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM5[1].2[14].2[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].1[1].2[14].2[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::870">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM5[1].2[14].3[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].1[1].2[14].3[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::871">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM5[1].2[14].4[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].1[1].2[14].4[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::872">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM5[1].2[14].5[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].1[1].2[14].5[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::873">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM5[1].2[14].6[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].1[1].2[14].6[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::874">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM5[1].2[14].7[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].1[1].2[14].7[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::875">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM5[1].2[14].8[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].1[1].2[14].8[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::877">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM5[1].2[15].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].1[1].2[15].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::878">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM5[1].2[15].2[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].1[1].2[15].2[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::879">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM5[1].2[15].3[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].1[1].2[15].3[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::880">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM5[1].2[15].4[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].1[1].2[15].4[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::881">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM5[1].2[15].5[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].1[1].2[15].5[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::882">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM5[1].2[15].6[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].1[1].2[15].6[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::883">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM5[1].2[15].7[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].1[1].2[15].7[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::884">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM5[1].2[15].8[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].1[1].2[15].8[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::886">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM5[1].2[16].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].1[1].2[16].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::887">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM5[1].2[16].2[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].1[1].2[16].2[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::888">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM5[1].2[16].3[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].1[1].2[16].3[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::889">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM5[1].2[16].4[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].1[1].2[16].4[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::890">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM5[1].2[16].5[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].1[1].2[16].5[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::891">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM5[1].2[16].6[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].1[1].2[16].6[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::892">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM5[1].2[16].7[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].1[1].2[16].7[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::893">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM5[1].2[16].8[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].1[1].2[16].8[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::895">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM5[1].2[17].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].1[1].2[17].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::896">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM5[1].2[17].2[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].1[1].2[17].2[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::897">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM5[1].2[17].3[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].1[1].2[17].3[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::898">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM5[1].2[17].4[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].1[1].2[17].4[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::899">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM5[1].2[17].5[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].1[1].2[17].5[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::900">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM5[1].2[17].6[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].1[1].2[17].6[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::901">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM5[1].2[17].7[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].1[1].2[17].7[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::902">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM5[1].2[17].8[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].1[1].2[17].8[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::904">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM5[1].2[18].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].1[1].2[18].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::905">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM5[1].2[18].2[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].1[1].2[18].2[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::906">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM5[1].2[18].3[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].1[1].2[18].3[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::907">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM5[1].2[18].4[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].1[1].2[18].4[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::908">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM5[1].2[18].5[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].1[1].2[18].5[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::909">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM5[1].2[18].6[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].1[1].2[18].6[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::910">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM5[1].2[18].7[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].1[1].2[18].7[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::911">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM5[1].2[18].8[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].1[1].2[18].8[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::913">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM5[1].2[19].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].1[1].2[19].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::914">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM5[1].2[19].2[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].1[1].2[19].2[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::915">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM5[1].2[19].3[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].1[1].2[19].3[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::916">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM5[1].2[19].7[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].1[1].2[19].7[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::918">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM5[1].2[20].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].1[1].2[20].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::919">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM5[1].2[20].2[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].1[1].2[20].2[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::920">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM5[1].2[20].3[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].1[1].2[20].3[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::921">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM5[1].2[20].4[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].1[1].2[20].4[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::922">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM5[1].2[20].5[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].1[1].2[20].5[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::923">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM5[1].2[20].6[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].1[1].2[20].6[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::924">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM5[1].2[20].7[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].1[1].2[20].7[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::925">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM5[1].2[20].8[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].1[1].2[20].8[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::1031">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM4[1].3[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].2[1].3[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::1032">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM4[1].3[2]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].2[1].3[2]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::1033">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM4[1].4[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].2[1].4[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::1034">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM4[1].4[2]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].2[1].4[2]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::1036">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM4[1].5[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].2[1].5[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::1037">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM4[1].5[1].2[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].2[1].5[1].2[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::1038">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM4[1].5[1].3[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].2[1].5[1].3[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::1039">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM4[1].5[1].7[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].2[1].5[1].7[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::1042">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM4[1].5[2].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].2[1].5[2].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::1043">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM4[1].5[2].2[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].2[1].5[2].2[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::1044">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM4[1].5[2].3[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].2[1].5[2].3[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::1045">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM4[1].5[2].7[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].2[1].5[2].7[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::1048">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM4[1].6[1].1[1]' is expected to be present and valued '119364003'</Description>
+                    <Assertion>
+                        <AND>
+                            <Presence Path="4[2].3[1].2[1].6[1].1[1]"/>
+                            <PlainText Path="4[2].3[1].2[1].6[1].1[1]" Text="119364003" IgnoreCase="false"/>
+                        </AND>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::1049">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM4[1].6[1].2[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].2[1].6[1].2[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::1050">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM4[1].6[1].3[1]' is expected to be present and valued 'SCT'</Description>
+                    <Assertion>
+                        <AND>
+                            <Presence Path="4[2].3[1].2[1].6[1].3[1]"/>
+                            <PlainText Path="4[2].3[1].2[1].6[1].3[1]" Text="SCT" IgnoreCase="false"/>
+                        </AND>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::1054">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM4[1].6[1].7[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].2[1].6[1].7[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::1064">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM4[1].10[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].2[1].10[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::1066">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM4[1].10[1].2[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].2[1].10[1].2[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::1067">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM4[1].10[1].2[1].2[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].2[1].10[1].2[1].2[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::1068">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM4[1].10[1].2[1].3[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].2[1].10[1].2[1].3[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::1072">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM4[1].11[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].2[1].11[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::1074">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM4[1].11[1].2[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].2[1].11[1].2[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::1075">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM4[1].11[1].2[1].2[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].2[1].11[1].2[1].2[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::1076">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM4[1].11[1].2[1].3[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].2[1].11[1].2[1].3[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::1077">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM4[1].11[1].2[1].7[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].2[1].11[1].2[1].7[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::1079">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM4[1].12[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].2[1].12[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::1081">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM4[1].15[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].2[1].15[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::1082">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM4[1].15[1].2[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].2[1].15[1].2[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::1084">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM4[1].15[1].7[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[2].3[1].2[1].15[1].7[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::1092">
+                    <Description>Location 'MF_BATTERY[2].BATTERY_DETAIL[1].OM4[1].16[1]' is expected to be present and valued 'P'</Description>
+                    <Assertion>
+                        <AND>
+                            <Presence Path="4[2].3[1].2[1].16[1]"/>
+                            <PlainText Path="4[2].3[1].2[1].16[1]" Text="P" IgnoreCase="false"/>
+                        </AND>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::1094">
+                    <Description>Location 'MF_BATTERY[3].MFE[1].1[1]' is expected to be present and valued 'MAD'</Description>
+                    <Assertion>
+                        <AND>
+                            <Presence Path="4[3].1[1].1[1]"/>
+                            <PlainText Path="4[3].1[1].1[1]" Text="MAD" IgnoreCase="false"/>
+                        </AND>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::1097">
+                    <Description>Location 'MF_BATTERY[3].MFE[1].3[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[3].1[1].3[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::1099">
+                    <Description>Location 'MF_BATTERY[3].MFE[1].4[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[3].1[1].4[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::1100">
+                    <Description>Location 'MF_BATTERY[3].MFE[1].4[1].2[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[3].1[1].4[1].2[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::1101">
+                    <Description>Location 'MF_BATTERY[3].MFE[1].4[1].3[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[3].1[1].4[1].3[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::1102">
+                    <Description>Location 'MF_BATTERY[3].MFE[1].4[1].7[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[3].1[1].4[1].7[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::1106">
+                    <Description>Location 'MF_BATTERY[3].OM1[1].2[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[3].2[1].2[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::1107">
+                    <Description>Location 'MF_BATTERY[3].OM1[1].2[1].2[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[3].2[1].2[1].2[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::1108">
+                    <Description>Location 'MF_BATTERY[3].OM1[1].2[1].3[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[3].2[1].2[1].3[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::1109">
+                    <Description>Location 'MF_BATTERY[3].OM1[1].2[1].7[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[3].2[1].2[1].7[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::1110">
+                    <Description>Location 'MF_BATTERY[3].OM1[1].4[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[3].2[1].4[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::1112">
+                    <Description>Location 'MF_BATTERY[3].OM1[1].5[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[3].2[1].5[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::1113">
+                    <Description>Location 'MF_BATTERY[3].OM1[1].5[1].2[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[3].2[1].5[1].2[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::1114">
+                    <Description>Location 'MF_BATTERY[3].OM1[1].5[1].3[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[3].2[1].5[1].3[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::1115">
+                    <Description>Location 'MF_BATTERY[3].OM1[1].5[1].7[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[3].2[1].5[1].7[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::1118">
+                    <Description>Location 'MF_BATTERY[3].OM1[1].7[1].1[1]' is expected to be present and valued '24331-1'</Description>
+                    <Assertion>
+                        <AND>
+                            <Presence Path="4[3].2[1].7[1].1[1]"/>
+                            <PlainText Path="4[3].2[1].7[1].1[1]" Text="24331-1" IgnoreCase="false"/>
+                        </AND>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::1119">
+                    <Description>Location 'MF_BATTERY[3].OM1[1].7[1].2[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[3].2[1].7[1].2[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::1120">
+                    <Description>Location 'MF_BATTERY[3].OM1[1].7[1].3[1]' is expected to be present and valued 'LN'</Description>
+                    <Assertion>
+                        <AND>
+                            <Presence Path="4[3].2[1].7[1].3[1]"/>
+                            <PlainText Path="4[3].2[1].7[1].3[1]" Text="LN" IgnoreCase="false"/>
+                        </AND>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::1121">
+                    <Description>Location 'MF_BATTERY[3].OM1[1].7[1].7[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[3].2[1].7[1].7[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::1122">
+                    <Description>Location 'MF_BATTERY[3].OM1[1].9[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[3].2[1].9[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::1125">
+                    <Description>Location 'MF_BATTERY[3].OM1[1].12[1]' is expected to be present and valued 'Y'</Description>
+                    <Assertion>
+                        <AND>
+                            <Presence Path="4[3].2[1].12[1]"/>
+                            <PlainText Path="4[3].2[1].12[1]" Text="Y" IgnoreCase="false"/>
+                        </AND>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::1167">
+                    <Description>Location 'MF_BATTERY[3].OM1[1].32[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[3].2[1].32[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::1202">
+                    <Description>Location 'MF_BATTERY[3].OM1[1].39[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[3].2[1].39[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::1203">
+                    <Description>Location 'MF_BATTERY[3].OM1[1].40[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[3].2[1].40[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::1205">
+                    <Description>Location 'MF_BATTERY[3].OM1[1].48[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[3].2[1].48[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::1206">
+                    <Description>Location 'MF_BATTERY[3].OM1[1].49[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[3].2[1].49[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::1266">
+                    <Description>Location 'MF_BATTERY[3].OM1[1].57[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[3].2[1].57[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::1269">
+                    <Description>Location 'MF_BATTERY[3].OM1[1].57[1].2[1].2[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[3].2[1].57[1].2[1].2[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::1275">
+                    <Description>Location 'MF_BATTERY[3].BATTERY_DETAIL[1].OM5[1].2[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[3].3[1].1[1].2[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::1276">
+                    <Description>Location 'MF_BATTERY[3].BATTERY_DETAIL[1].OM5[1].2[1].2[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[3].3[1].1[1].2[1].2[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::1277">
+                    <Description>Location 'MF_BATTERY[3].BATTERY_DETAIL[1].OM5[1].2[1].3[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[3].3[1].1[1].2[1].3[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::1278">
+                    <Description>Location 'MF_BATTERY[3].BATTERY_DETAIL[1].OM5[1].2[1].4[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[3].3[1].1[1].2[1].4[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::1279">
+                    <Description>Location 'MF_BATTERY[3].BATTERY_DETAIL[1].OM5[1].2[1].5[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[3].3[1].1[1].2[1].5[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::1280">
+                    <Description>Location 'MF_BATTERY[3].BATTERY_DETAIL[1].OM5[1].2[1].6[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[3].3[1].1[1].2[1].6[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::1284">
+                    <Description>Location 'MF_BATTERY[3].BATTERY_DETAIL[1].OM5[1].2[2].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[3].3[1].1[1].2[2].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::1285">
+                    <Description>Location 'MF_BATTERY[3].BATTERY_DETAIL[1].OM5[1].2[2].2[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[3].3[1].1[1].2[2].2[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::1286">
+                    <Description>Location 'MF_BATTERY[3].BATTERY_DETAIL[1].OM5[1].2[2].3[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[3].3[1].1[1].2[2].3[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::1287">
+                    <Description>Location 'MF_BATTERY[3].BATTERY_DETAIL[1].OM5[1].2[2].4[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[3].3[1].1[1].2[2].4[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::1288">
+                    <Description>Location 'MF_BATTERY[3].BATTERY_DETAIL[1].OM5[1].2[2].5[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[3].3[1].1[1].2[2].5[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::1289">
+                    <Description>Location 'MF_BATTERY[3].BATTERY_DETAIL[1].OM5[1].2[2].6[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[3].3[1].1[1].2[2].6[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::1293">
+                    <Description>Location 'MF_BATTERY[3].BATTERY_DETAIL[1].OM5[1].2[3].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[3].3[1].1[1].2[3].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::1294">
+                    <Description>Location 'MF_BATTERY[3].BATTERY_DETAIL[1].OM5[1].2[3].2[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[3].3[1].1[1].2[3].2[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::1295">
+                    <Description>Location 'MF_BATTERY[3].BATTERY_DETAIL[1].OM5[1].2[3].3[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[3].3[1].1[1].2[3].3[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::1296">
+                    <Description>Location 'MF_BATTERY[3].BATTERY_DETAIL[1].OM5[1].2[3].4[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[3].3[1].1[1].2[3].4[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::1297">
+                    <Description>Location 'MF_BATTERY[3].BATTERY_DETAIL[1].OM5[1].2[3].5[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[3].3[1].1[1].2[3].5[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::1298">
+                    <Description>Location 'MF_BATTERY[3].BATTERY_DETAIL[1].OM5[1].2[3].6[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[3].3[1].1[1].2[3].6[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::1302">
+                    <Description>Location 'MF_BATTERY[3].BATTERY_DETAIL[1].OM5[1].2[4].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[3].3[1].1[1].2[4].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::1303">
+                    <Description>Location 'MF_BATTERY[3].BATTERY_DETAIL[1].OM5[1].2[4].2[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[3].3[1].1[1].2[4].2[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::1304">
+                    <Description>Location 'MF_BATTERY[3].BATTERY_DETAIL[1].OM5[1].2[4].3[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[3].3[1].1[1].2[4].3[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::1305">
+                    <Description>Location 'MF_BATTERY[3].BATTERY_DETAIL[1].OM5[1].2[4].4[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[3].3[1].1[1].2[4].4[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::1306">
+                    <Description>Location 'MF_BATTERY[3].BATTERY_DETAIL[1].OM5[1].2[4].5[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[3].3[1].1[1].2[4].5[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::1307">
+                    <Description>Location 'MF_BATTERY[3].BATTERY_DETAIL[1].OM5[1].2[4].6[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[3].3[1].1[1].2[4].6[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::1555">
+                    <Description>Location 'MF_BATTERY[3].BATTERY_DETAIL[1].OM4[1].3[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[3].3[1].2[1].3[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::1557">
+                    <Description>Location 'MF_BATTERY[3].BATTERY_DETAIL[1].OM4[1].4[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[3].3[1].2[1].4[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::1560">
+                    <Description>Location 'MF_BATTERY[3].BATTERY_DETAIL[1].OM4[1].5[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[3].3[1].2[1].5[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::1561">
+                    <Description>Location 'MF_BATTERY[3].BATTERY_DETAIL[1].OM4[1].5[1].2[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[3].3[1].2[1].5[1].2[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::1562">
+                    <Description>Location 'MF_BATTERY[3].BATTERY_DETAIL[1].OM4[1].5[1].3[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[3].3[1].2[1].5[1].3[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::1563">
+                    <Description>Location 'MF_BATTERY[3].BATTERY_DETAIL[1].OM4[1].5[1].7[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[3].3[1].2[1].5[1].7[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::1572">
+                    <Description>Location 'MF_BATTERY[3].BATTERY_DETAIL[1].OM4[1].6[1].1[1]' is expected to be present and valued '119364003'</Description>
+                    <Assertion>
+                        <AND>
+                            <Presence Path="4[3].3[1].2[1].6[1].1[1]"/>
+                            <PlainText Path="4[3].3[1].2[1].6[1].1[1]" Text="119364003" IgnoreCase="false"/>
+                        </AND>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::1573">
+                    <Description>Location 'MF_BATTERY[3].BATTERY_DETAIL[1].OM4[1].6[1].2[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[3].3[1].2[1].6[1].2[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::1574">
+                    <Description>Location 'MF_BATTERY[3].BATTERY_DETAIL[1].OM4[1].6[1].3[1]' is expected to be present and valued 'SCT'</Description>
+                    <Assertion>
+                        <AND>
+                            <Presence Path="4[3].3[1].2[1].6[1].3[1]"/>
+                            <PlainText Path="4[3].3[1].2[1].6[1].3[1]" Text="SCT" IgnoreCase="false"/>
+                        </AND>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::1578">
+                    <Description>Location 'MF_BATTERY[3].BATTERY_DETAIL[1].OM4[1].6[1].7[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[3].3[1].2[1].6[1].7[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::1582">
+                    <Description>Location 'MF_BATTERY[3].BATTERY_DETAIL[1].OM4[1].7[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[3].3[1].2[1].7[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::1583">
+                    <Description>Location 'MF_BATTERY[3].BATTERY_DETAIL[1].OM4[1].7[1].2[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[3].3[1].2[1].7[1].2[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::1584">
+                    <Description>Location 'MF_BATTERY[3].BATTERY_DETAIL[1].OM4[1].7[1].3[1]' is expected to be present and valued 'HL70371'</Description>
+                    <Assertion>
+                        <AND>
+                            <Presence Path="4[3].3[1].2[1].7[1].3[1]"/>
+                            <PlainText Path="4[3].3[1].2[1].7[1].3[1]" Text="HL70371" IgnoreCase="false"/>
+                        </AND>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::1585">
+                    <Description>Location 'MF_BATTERY[3].BATTERY_DETAIL[1].OM4[1].7[1].7[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[3].3[1].2[1].7[1].7[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::1588">
+                    <Description>Location 'MF_BATTERY[3].BATTERY_DETAIL[1].OM4[1].10[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[3].3[1].2[1].10[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::1590">
+                    <Description>Location 'MF_BATTERY[3].BATTERY_DETAIL[1].OM4[1].10[1].2[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[3].3[1].2[1].10[1].2[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::1591">
+                    <Description>Location 'MF_BATTERY[3].BATTERY_DETAIL[1].OM4[1].10[1].2[1].2[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[3].3[1].2[1].10[1].2[1].2[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::1592">
+                    <Description>Location 'MF_BATTERY[3].BATTERY_DETAIL[1].OM4[1].10[1].2[1].3[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[3].3[1].2[1].10[1].2[1].3[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::1593">
+                    <Description>Location 'MF_BATTERY[3].BATTERY_DETAIL[1].OM4[1].10[1].2[1].7[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[3].3[1].2[1].10[1].2[1].7[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::1596">
+                    <Description>Location 'MF_BATTERY[3].BATTERY_DETAIL[1].OM4[1].11[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[3].3[1].2[1].11[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::1598">
+                    <Description>Location 'MF_BATTERY[3].BATTERY_DETAIL[1].OM4[1].11[1].2[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[3].3[1].2[1].11[1].2[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::1599">
+                    <Description>Location 'MF_BATTERY[3].BATTERY_DETAIL[1].OM4[1].11[1].2[1].2[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[3].3[1].2[1].11[1].2[1].2[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::1600">
+                    <Description>Location 'MF_BATTERY[3].BATTERY_DETAIL[1].OM4[1].11[1].2[1].3[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[3].3[1].2[1].11[1].2[1].3[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::1601">
+                    <Description>Location 'MF_BATTERY[3].BATTERY_DETAIL[1].OM4[1].11[1].2[1].7[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[3].3[1].2[1].11[1].2[1].7[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::1603">
+                    <Description>Location 'MF_BATTERY[3].BATTERY_DETAIL[1].OM4[1].12[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[3].3[1].2[1].12[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::1605">
+                    <Description>Location 'MF_BATTERY[3].BATTERY_DETAIL[1].OM4[1].15[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[3].3[1].2[1].15[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::1606">
+                    <Description>Location 'MF_BATTERY[3].BATTERY_DETAIL[1].OM4[1].15[1].2[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[3].3[1].2[1].15[1].2[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::1608">
+                    <Description>Location 'MF_BATTERY[3].BATTERY_DETAIL[1].OM4[1].15[1].7[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[3].3[1].2[1].15[1].7[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::1616">
+                    <Description>Location 'MF_BATTERY[3].BATTERY_DETAIL[1].OM4[1].16[1]' is expected to be present and valued 'P'</Description>
+                    <Assertion>
+                        <AND>
+                            <Presence Path="4[3].3[1].2[1].16[1]"/>
+                            <PlainText Path="4[3].3[1].2[1].16[1]" Text="P" IgnoreCase="false"/>
+                        </AND>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::1619">
+                    <Description>Location 'MF_BATTERY[3].BATTERY_DETAIL[1].OM4[2].3[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[3].3[1].2[2].3[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::1621">
+                    <Description>Location 'MF_BATTERY[3].BATTERY_DETAIL[1].OM4[2].4[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[3].3[1].2[2].4[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::1624">
+                    <Description>Location 'MF_BATTERY[3].BATTERY_DETAIL[1].OM4[2].5[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[3].3[1].2[2].5[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::1625">
+                    <Description>Location 'MF_BATTERY[3].BATTERY_DETAIL[1].OM4[2].5[1].2[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[3].3[1].2[2].5[1].2[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::1626">
+                    <Description>Location 'MF_BATTERY[3].BATTERY_DETAIL[1].OM4[2].5[1].3[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[3].3[1].2[2].5[1].3[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::1627">
+                    <Description>Location 'MF_BATTERY[3].BATTERY_DETAIL[1].OM4[2].5[1].7[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[3].3[1].2[2].5[1].7[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::1636">
+                    <Description>Location 'MF_BATTERY[3].BATTERY_DETAIL[1].OM4[2].6[1].1[1]' is expected to be present and valued '119364003'</Description>
+                    <Assertion>
+                        <AND>
+                            <Presence Path="4[3].3[1].2[2].6[1].1[1]"/>
+                            <PlainText Path="4[3].3[1].2[2].6[1].1[1]" Text="119364003" IgnoreCase="false"/>
+                        </AND>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::1637">
+                    <Description>Location 'MF_BATTERY[3].BATTERY_DETAIL[1].OM4[2].6[1].2[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[3].3[1].2[2].6[1].2[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::1638">
+                    <Description>Location 'MF_BATTERY[3].BATTERY_DETAIL[1].OM4[2].6[1].3[1]' is expected to be present and valued 'SCT'</Description>
+                    <Assertion>
+                        <AND>
+                            <Presence Path="4[3].3[1].2[2].6[1].3[1]"/>
+                            <PlainText Path="4[3].3[1].2[2].6[1].3[1]" Text="SCT" IgnoreCase="false"/>
+                        </AND>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::1642">
+                    <Description>Location 'MF_BATTERY[3].BATTERY_DETAIL[1].OM4[2].6[1].7[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[3].3[1].2[2].6[1].7[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::1652">
+                    <Description>Location 'MF_BATTERY[3].BATTERY_DETAIL[1].OM4[2].10[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[3].3[1].2[2].10[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::1654">
+                    <Description>Location 'MF_BATTERY[3].BATTERY_DETAIL[1].OM4[2].10[1].2[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[3].3[1].2[2].10[1].2[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::1655">
+                    <Description>Location 'MF_BATTERY[3].BATTERY_DETAIL[1].OM4[2].10[1].2[1].2[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[3].3[1].2[2].10[1].2[1].2[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::1656">
+                    <Description>Location 'MF_BATTERY[3].BATTERY_DETAIL[1].OM4[2].10[1].2[1].3[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[3].3[1].2[2].10[1].2[1].3[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::1657">
+                    <Description>Location 'MF_BATTERY[3].BATTERY_DETAIL[1].OM4[2].10[1].2[1].7[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[3].3[1].2[2].10[1].2[1].7[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::1660">
+                    <Description>Location 'MF_BATTERY[3].BATTERY_DETAIL[1].OM4[2].11[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[3].3[1].2[2].11[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::1662">
+                    <Description>Location 'MF_BATTERY[3].BATTERY_DETAIL[1].OM4[2].11[1].2[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[3].3[1].2[2].11[1].2[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::1663">
+                    <Description>Location 'MF_BATTERY[3].BATTERY_DETAIL[1].OM4[2].11[1].2[1].2[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[3].3[1].2[2].11[1].2[1].2[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::1664">
+                    <Description>Location 'MF_BATTERY[3].BATTERY_DETAIL[1].OM4[2].11[1].2[1].3[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[3].3[1].2[2].11[1].2[1].3[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::1665">
+                    <Description>Location 'MF_BATTERY[3].BATTERY_DETAIL[1].OM4[2].11[1].2[1].7[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[3].3[1].2[2].11[1].2[1].7[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::1667">
+                    <Description>Location 'MF_BATTERY[3].BATTERY_DETAIL[1].OM4[2].12[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[3].3[1].2[2].12[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::1669">
+                    <Description>Location 'MF_BATTERY[3].BATTERY_DETAIL[1].OM4[2].15[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[3].3[1].2[2].15[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::1670">
+                    <Description>Location 'MF_BATTERY[3].BATTERY_DETAIL[1].OM4[2].15[1].2[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[3].3[1].2[2].15[1].2[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::1672">
+                    <Description>Location 'MF_BATTERY[3].BATTERY_DETAIL[1].OM4[2].15[1].7[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="4[3].3[1].2[2].15[1].7[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="EDOS_2.4_2.1-M10_GU::1680">
+                    <Description>Location 'MF_BATTERY[3].BATTERY_DETAIL[1].OM4[2].16[1]' is expected to be present and valued 'P'</Description>
+                    <Assertion>
+                        <AND>
+                            <Presence Path="4[3].3[1].2[2].16[1]"/>
+                            <PlainText Path="4[3].3[1].2[2].16[1]" Text="P" IgnoreCase="false"/>
+                        </AND>
+                    </Assertion>
+                </Constraint>
+            </ByName>
+        </Group>
+    </Constraints>
+</ConformanceContext>

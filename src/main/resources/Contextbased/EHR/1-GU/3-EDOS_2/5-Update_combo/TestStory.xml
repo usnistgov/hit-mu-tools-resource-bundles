@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseMetaData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="EDOS_2.4_GU" date="11/11/2015" name="Update Combo" version="version2">
+		<Description>Some time after initial Laboratory Test Compendium is delivered electronically from the LIS to the EHR-S, the LIS send up to four eDOS update messages to the EHR-S to update multiple tests.  The EHR-S will integrate these updates into its test directory.</Description>
+		<PreCondition>Initial load of compendium data elements are incorporated appropriately into the EHR-S.</PreCondition>
+		<PostCondition>Data elements are incorporated appropriately into the EHR-S.</PostCondition>
+		<TestObjectives>Demonstrate capability to support update using multiple actions for several records in an existing test compendium.</TestObjectives>
+		<Notes>Verification of this test case requires comparison to the data that was available after the intial load.</Notes>
+		<Comments>Updates to multiple records.</Comments>
+	</TestCaseMetaData>

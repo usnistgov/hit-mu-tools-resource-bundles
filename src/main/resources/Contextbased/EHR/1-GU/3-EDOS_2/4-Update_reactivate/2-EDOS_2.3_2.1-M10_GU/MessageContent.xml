@@ -1,0 +1,689 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<TestStep id="EDOS_2.3_2.1-M10_GU" name="EDOS_2.3_2.1-M10_GU - M10_Update_reactivate">
+    <Message>
+        <Segment name="MSH">
+            <Element location="MSH.1[1]" dataElement="Field Separator" data="|" categorization="IG Fixed Data"/>
+            <Element location="MSH.2[1]" dataElement="Encoding Characters" data="^~\&amp;#" categorization="IG Fixed Data"/>
+            <Element location="MSH.3[1]" dataElement="Sending Application" data="" categorization=""/>
+            <Element location="MSH.3[1].1" dataElement="Namespace ID" data="NIST Test Lab APP" categorization="Configurable Data"/>
+            <Element location="MSH.3[1].2" dataElement="Universal ID" data="2.16.840.1.113883.3.72.5.20" categorization="Configurable Data"/>
+            <Element location="MSH.3[1].3" dataElement="Universal ID Type" data="ISO" categorization="IG Fixed Data"/>
+            <Element location="MSH.4[1]" dataElement="Sending Facility" data="" categorization=""/>
+            <Element location="MSH.4[1].1" dataElement="Namespace ID" data="NIST Lab Facility" categorization="Configurable Data"/>
+            <Element location="MSH.4[1].2" dataElement="Universal ID" data="2.16.840.1.113883.3.72.5.21" categorization="Configurable Data"/>
+            <Element location="MSH.4[1].3" dataElement="Universal ID Type" data="ISO" categorization="IG Fixed Data"/>
+            <Element location="MSH.6[1]" dataElement="Receiving Facility" data="" categorization=""/>
+            <Element location="MSH.6[1].1" dataElement="Namespace ID" data="NIST EHR Facility" categorization="Configurable Data"/>
+            <Element location="MSH.6[1].2" dataElement="Universal ID" data="2.16.840.1.113883.3.72.5.23" categorization="Configurable Data"/>
+            <Element location="MSH.6[1].3" dataElement="Universal ID Type" data="ISO" categorization="IG Fixed Data"/>
+            <Element location="MSH.7[1]" dataElement="Date/Time Of Message" data="" categorization=""/>
+            <Element location="MSH.7[1].1" dataElement="Time" data="20130421113601-0700" categorization="System Generated"/>
+            <Element location="MSH.9[1]" dataElement="Message Type" data="" categorization=""/>
+            <Element location="MSH.9[1].1" dataElement="Message Code" data="MFN" categorization="IG Fixed Data"/>
+            <Element location="MSH.9[1].2" dataElement="Trigger Event" data="M10" categorization="IG Fixed Data"/>
+            <Element location="MSH.9[1].3" dataElement="Message Structure" data="MFN_M10" categorization="IG Fixed Data"/>
+            <Element location="MSH.10[1]" dataElement="Message Control ID" data="EDOS_2.3_2.1-M10_GU" categorization="System Generated"/>
+            <Element location="MSH.11[1]" dataElement="Processing ID" data="" categorization=""/>
+            <Element location="MSH.11[1].1" dataElement="Processing ID" data="D" categorization="Changeable Data"/>
+            <Element location="MSH.12[1]" dataElement="VersionID" data="" categorization=""/>
+            <Element location="MSH.12[1].1" dataElement="Version ID" data="2.5.1" categorization="IG Fixed Data"/>
+            <Element location="MSH.21[1]" dataElement="Message Profile Identifier" data="" categorization=""/>
+            <Element location="MSH.21[1].1" dataElement="Entity Identifier" data="EDOS_Common_Component" categorization="Test Case Fixed Data"/>
+            <Element location="MSH.21[1].2" dataElement="Namespace ID" data="EDOS Base Profile" categorization="Changeable Data"/>
+            <Element location="MSH.21[1].3" dataElement="Universal ID" data="2.16.840.1.113883.9.67" categorization="Test Case Fixed Data"/>
+            <Element location="MSH.21[1].4" dataElement="Universal ID Type" data="ISO" categorization="IG Fixed Data"/>
+            <Element location="MSH.21[2]" dataElement="Message Profile Identifier" data="" categorization=""/>
+            <Element location="MSH.21[2].1" dataElement="Entity Identifier" data="EDOS_GU_Component" categorization="Test Case Fixed Data"/>
+            <Element location="MSH.21[2].2" dataElement="Namespace ID" data="EDOS GU Profile" categorization="Changeable Data"/>
+            <Element location="MSH.21[2].3" dataElement="Universal ID" data="2.16.840.1.113883.9.68" categorization="Test Case Fixed Data"/>
+            <Element location="MSH.21[2].4" dataElement="Universal ID Type" data="ISO" categorization="IG Fixed Data"/>
+        </Segment>
+        <Segment name="MFI">
+            <Element location="MFI.1[1]" dataElement="Master File Identifier" data="" categorization=""/>
+            <Element location="MFI.1[1].1" dataElement="Identifier" data="OMC" categorization="IG Fixed Data"/>
+            <Element location="MFI.1[1].2" dataElement="Text" data="Observation batteries master file" categorization="Changeable Data"/>
+            <Element location="MFI.1[1].3" dataElement="Name of Coding System" data="HL70175" categorization="IG Fixed Data"/>
+            <Element location="MFI.1[1].7" dataElement="Coding System Version ID" data="2.5.1" categorization="Test Case Fixed Data"/>
+            <Element location="MFI.1[1].8" dataElement="Alternate Coding System Version ID" data="" categorization=""/>
+            <Element location="MFI.3[1]" dataElement="File-Level Event Code" data="UPD" categorization="Test Case Fixed Data"/>
+            <Element location="MFI.6[1]" dataElement="Response Level Code" data="NE" categorization="IG Fixed Data"/>
+        </Segment>
+        <Segment name="MFE">
+            <Element location="MFE.1[1]" dataElement="Record-Level Event Code" data="MAC" categorization="Test Case Fixed Data"/>
+            <Element location="MFE.2[1]" dataElement="MFN Control ID" data="" categorization=""/>
+            <Element location="MFE.3[1]" dataElement="Effective Date/Time" data="" categorization=""/>
+            <Element location="MFE.3[1].1" dataElement="Time" data="20131219145310" categorization="System Generated"/>
+            <Element location="MFE.4[1]" dataElement="Primary Key Value - MFE" data="" categorization=""/>
+            <Element location="MFE.4[1].1" dataElement="Identifier" data="800" categorization="Changeable Data"/>
+            <Element location="MFE.4[1].2" dataElement="Text" data="GHP" categorization="Changeable Data"/>
+            <Element location="MFE.4[1].3" dataElement="Name of Coding System" data="99USL" categorization="Changeable Data"/>
+            <Element location="MFE.4[1].7" dataElement="Coding System Version ID" data="20130421" categorization="Changeable Data"/>
+            <Element location="MFE.5[1]" dataElement="Primary Key Value Type" data="CWE" categorization="IG Fixed Data"/>
+        </Segment>
+        <Segment name="OM1">
+            <Element location="OM1.1[1]" dataElement="Sequence Number - Test/Observation Master File" data="1" categorization="IG Fixed Data"/>
+            <Element location="OM1.2[1]" dataElement="Producer's Service/Test/Observation ID" data="" categorization=""/>
+            <Element location="OM1.2[1].1" dataElement="Identifier" data="800" categorization="Changeable Data"/>
+            <Element location="OM1.2[1].2" dataElement="Text" data="GHP" categorization="Changeable Data"/>
+            <Element location="OM1.2[1].3" dataElement="Name of Coding System" data="99USL" categorization="Changeable Data"/>
+            <Element location="OM1.2[1].7" dataElement="Coding System Version ID" data="20130421" categorization="Changeable Data"/>
+            <Element location="OM1.4[1]" dataElement="Specimen Required" data="Y" categorization="Changeable Data"/>
+            <Element location="OM1.5[1]" dataElement="Producer ID" data="" categorization=""/>
+            <Element location="OM1.5[1].1" dataElement="Identifier" data="05D0669071" categorization="Changeable Data"/>
+            <Element location="OM1.5[1].2" dataElement="Text" data="Century Hospital Clinical Laboratory" categorization="Changeable Data"/>
+            <Element location="OM1.5[1].3" dataElement="Name of Coding System" data="99USL" categorization="Changeable Data"/>
+            <Element location="OM1.5[1].7" dataElement="Coding System Version ID" data="2013" categorization="Changeable Data"/>
+            <Element location="OM1.5[1].8" dataElement="Alternate Coding System Version ID" data="" categorization=""/>
+            <Element location="OM1.7[1]" dataElement="Other Service/Test/Observation IDs for the Observation" data="" categorization=""/>
+            <Element location="OM1.7[1].1" dataElement="Identifier" data="" categorization=""/>
+            <Element location="OM1.7[1].2" dataElement="Text" data="" categorization=""/>
+            <Element location="OM1.7[1].3" dataElement="Name of Coding System" data="" categorization=""/>
+            <Element location="OM1.7[1].7" dataElement="Coding System Version ID" data="" categorization=""/>
+            <Element location="OM1.7[2]" dataElement="Other Service/Test/Observation IDs for the Observation" data="" categorization=""/>
+            <Element location="OM1.7[2].1" dataElement="Identifier" data="" categorization=""/>
+            <Element location="OM1.7[2].2" dataElement="Text" data="" categorization=""/>
+            <Element location="OM1.7[2].3" dataElement="Name of Coding System" data="" categorization=""/>
+            <Element location="OM1.7[2].7" dataElement="Coding System Version ID" data="" categorization=""/>
+            <Element location="OM1.9[1]" dataElement="Preferred Report Name for the Observation" data="General Health Profile" categorization="Changeable Data"/>
+            <Element location="OM1.10[1]" dataElement="Preferred Short Name on Mnemonic for Observation" data="" categorization=""/>
+            <Element location="OM1.11[1]" dataElement="Preferred Long Name for the Observation" data="" categorization=""/>
+            <Element location="OM1.12[1]" dataElement="Orderability" data="Y" categorization="Test Case Fixed Data"/>
+            <Element location="OM1.18[1]" dataElement="Nature of Service/Test/Observation" data="S" categorization="Test Case Fixed Data"/>
+            <Element location="OM1.32[1]" dataElement="Interpretation of Observations" data="This blood test is used to determine general health status and to screen for and monitor a variety of disorders. This profile includes a complete metabolic profile, comprehensive CBC, Urinalysis and total Thyrotropin (T4)." categorization="Changeable Data"/>
+            <Element location="OM1.33[1]" dataElement="Contraindications to Observations" data="" categorization=""/>
+            <Element location="OM1.33[1].1" dataElement="Identifier" data="" categorization=""/>
+            <Element location="OM1.33[1].2" dataElement="Text" data="" categorization=""/>
+            <Element location="OM1.33[1].3" dataElement="Name of Coding System" data="" categorization=""/>
+            <Element location="OM1.33[1].7" dataElement="Coding System Version ID" data="" categorization=""/>
+            <Element location="OM1.33[1].8" dataElement="Alternate Coding System Version ID" data="" categorization=""/>
+            <Element location="OM1.33[2]" dataElement="Contraindications to Observations" data="" categorization=""/>
+            <Element location="OM1.33[2].1" dataElement="Identifier" data="" categorization=""/>
+            <Element location="OM1.33[2].2" dataElement="Text" data="" categorization=""/>
+            <Element location="OM1.33[2].3" dataElement="Name of Coding System" data="" categorization=""/>
+            <Element location="OM1.33[2].7" dataElement="Coding System Version ID" data="" categorization=""/>
+            <Element location="OM1.33[2].8" dataElement="Alternate Coding System Version ID" data="" categorization=""/>
+            <Element location="OM1.34[1]" dataElement="Reflex Tests/Observations" data="" categorization=""/>
+            <Element location="OM1.34[1].1" dataElement="Identifier" data="" categorization=""/>
+            <Element location="OM1.34[1].2" dataElement="Text" data="" categorization=""/>
+            <Element location="OM1.34[1].3" dataElement="Name of Coding System" data="" categorization=""/>
+            <Element location="OM1.34[1].4" dataElement="Alternate Identifier" data="" categorization=""/>
+            <Element location="OM1.34[1].5" dataElement="Alternate Text" data="" categorization=""/>
+            <Element location="OM1.34[1].6" dataElement="Name of Alternate Coding System" data="" categorization=""/>
+            <Element location="OM1.34[1].7" dataElement="Coding System Version ID" data="" categorization=""/>
+            <Element location="OM1.34[1].8" dataElement="Alternate Coding System Version ID" data="" categorization=""/>
+            <Element location="OM1.34[2]" dataElement="Reflex Tests/Observations" data="" categorization=""/>
+            <Element location="OM1.34[2].1" dataElement="Identifier" data="" categorization=""/>
+            <Element location="OM1.34[2].2" dataElement="Text" data="" categorization=""/>
+            <Element location="OM1.34[2].3" dataElement="Name of Coding System" data="" categorization=""/>
+            <Element location="OM1.34[2].4" dataElement="Alternate Identifier" data="" categorization=""/>
+            <Element location="OM1.34[2].5" dataElement="Alternate Text" data="" categorization=""/>
+            <Element location="OM1.34[2].6" dataElement="Name of Alternate Coding System" data="" categorization=""/>
+            <Element location="OM1.34[2].7" dataElement="Coding System Version ID" data="" categorization=""/>
+            <Element location="OM1.34[2].8" dataElement="Alternate Coding System Version ID" data="" categorization=""/>
+            <Element location="OM1.35[1]" dataElement="Rules that Trigger Reflex Testing" data="" categorization=""/>
+            <Element location="OM1.35[2]" dataElement="Rules that Trigger Reflex Testing" data="" categorization=""/>
+            <Element location="OM1.37[1]" dataElement="Patient Preparation" data="Patient fasting required for 12 hours." categorization="Changeable Data"/>
+            <Element location="OM1.37[2]" dataElement="Patient Preparation" data="" categorization=""/>
+            <Element location="OM1.39[1]" dataElement="Factors that may Affect the Observation" data="Insufficient specimen, Gross hemolysis, Improper labeling.." categorization="Changeable Data"/>
+            <Element location="OM1.40[1]" dataElement="Service/Test/Observation Performance Schedule" data="Daily" categorization="Changeable Data"/>
+            <Element location="OM1.40[2]" dataElement="Service/Test/Observation Performance Schedule" data="" categorization=""/>
+            <Element location="OM1.48[1]" dataElement="Exclusive Test" data="N" categorization="Changeable Data"/>
+            <Element location="OM1.49[1]" dataElement="Diagnostic Service Sector ID" data="LAB" categorization="Changeable Data"/>
+            <Element location="OM1.51[1]" dataElement="Other Names" data="" categorization=""/>
+            <Element location="OM1.51[2]" dataElement="Other Names" data="" categorization=""/>
+            <Element location="OM1.52[1]" dataElement="Replacement Producer's Service/Test/Observation ID" data="" categorization=""/>
+            <Element location="OM1.52[1].1" dataElement="Identifier" data="" categorization=""/>
+            <Element location="OM1.52[1].2" dataElement="Text" data="" categorization=""/>
+            <Element location="OM1.52[1].3" dataElement="Name of Coding System" data="" categorization=""/>
+            <Element location="OM1.52[1].7" dataElement="Coding System Version ID" data="" categorization=""/>
+            <Element location="OM1.52[2]" dataElement="Replacement Producer's Service/Test/Observation ID" data="" categorization=""/>
+            <Element location="OM1.52[2].1" dataElement="Identifier" data="" categorization=""/>
+            <Element location="OM1.52[2].2" dataElement="Text" data="" categorization=""/>
+            <Element location="OM1.52[2].3" dataElement="Name of Coding System" data="" categorization=""/>
+            <Element location="OM1.52[2].7" dataElement="Coding System Version ID" data="" categorization=""/>
+            <Element location="OM1.52[3]" dataElement="Replacement Producer's Service/Test/Observation ID" data="" categorization=""/>
+            <Element location="OM1.52[3].1" dataElement="Identifier" data="" categorization=""/>
+            <Element location="OM1.52[3].2" dataElement="Text" data="" categorization=""/>
+            <Element location="OM1.52[3].3" dataElement="Name of Coding System" data="" categorization=""/>
+            <Element location="OM1.52[3].7" dataElement="Coding System Version ID" data="" categorization=""/>
+            <Element location="OM1.52[4]" dataElement="Replacement Producer's Service/Test/Observation ID" data="" categorization=""/>
+            <Element location="OM1.52[4].1" dataElement="Identifier" data="" categorization=""/>
+            <Element location="OM1.52[4].2" dataElement="Text" data="" categorization=""/>
+            <Element location="OM1.52[4].3" dataElement="Name of Coding System" data="" categorization=""/>
+            <Element location="OM1.52[4].7" dataElement="Coding System Version ID" data="" categorization=""/>
+            <Element location="OM1.53[1]" dataElement="Prior Results Instructions" data="" categorization=""/>
+            <Element location="OM1.53[2]" dataElement="Prior Results Instructions" data="" categorization=""/>
+            <Element location="OM1.54[1]" dataElement="Special Instructions" data="" categorization=""/>
+            <Element location="OM1.54[2]" dataElement="Special Instructions" data="" categorization=""/>
+            <Element location="OM1.55[1]" dataElement="Test Relationship Category" data="" categorization=""/>
+            <Element location="OM1.55[1].1" dataElement="Identifier" data="" categorization=""/>
+            <Element location="OM1.55[1].2" dataElement="Text" data="" categorization=""/>
+            <Element location="OM1.55[1].3" dataElement="Name of Coding System" data="" categorization=""/>
+            <Element location="OM1.55[1].7" dataElement="Coding System Version ID" data="" categorization=""/>
+            <Element location="OM1.55[1].8" dataElement="Alternate Coding System Version ID" data="" categorization=""/>
+            <Element location="OM1.55[2]" dataElement="Test Relationship Category" data="" categorization=""/>
+            <Element location="OM1.55[2].1" dataElement="Identifier" data="" categorization=""/>
+            <Element location="OM1.55[2].2" dataElement="Text" data="" categorization=""/>
+            <Element location="OM1.55[2].3" dataElement="Name of Coding System" data="" categorization=""/>
+            <Element location="OM1.55[2].7" dataElement="Coding System Version ID" data="" categorization=""/>
+            <Element location="OM1.55[2].8" dataElement="Alternate Coding System Version ID" data="" categorization=""/>
+            <Element location="OM1.56[1]" dataElement="Observation Identifier associated with Producer's Service/Test/Observation ID" data="" categorization=""/>
+            <Element location="OM1.56[1].1" dataElement="Identifier" data="" categorization=""/>
+            <Element location="OM1.56[1].2" dataElement="Text" data="" categorization=""/>
+            <Element location="OM1.56[1].3" dataElement="Name of Coding System" data="" categorization=""/>
+            <Element location="OM1.56[1].4" dataElement="Alternate Identifier" data="" categorization=""/>
+            <Element location="OM1.56[1].5" dataElement="Alternate Text" data="" categorization=""/>
+            <Element location="OM1.56[1].6" dataElement="Name of Alternate Coding System" data="" categorization=""/>
+            <Element location="OM1.56[1].7" dataElement="Coding System Version ID" data="" categorization=""/>
+            <Element location="OM1.56[1].8" dataElement="Alternate Coding System Version ID" data="" categorization=""/>
+            <Element location="OM1.56[1].9" dataElement="Original Text" data="" categorization=""/>
+            <Element location="OM1.57[1]" dataElement="Expected Turn-Around Time" data="" categorization=""/>
+            <Element location="OM1.57[1].1" dataElement="Quantity" data="1" categorization="Changeable Data"/>
+            <Element location="OM1.57[1].2" dataElement="Units" data="" categorization=""/>
+            <Element location="OM1.57[1].2.1" dataElement="Identifier" data="d" categorization="Changeable Data"/>
+            <Element location="OM1.57[1].2.2" dataElement="Text" data="day" categorization="Changeable Data"/>
+            <Element location="OM1.57[1].2.3" dataElement="Name of Coding System" data="UCUM" categorization="Changeable Data"/>
+            <Element location="OM1.57[1].2.7" dataElement="Coding System Version ID" data="1.8" categorization="Changeable Data"/>
+            <Element location="OM1.57[1].2.8" dataElement="Alternate Coding System Version ID" data="" categorization=""/>
+            <Element location="OM1.58[1]" dataElement="Gender Restriction" data="" categorization=""/>
+            <Element location="OM1.58[1].1" dataElement="Identifier" data="" categorization=""/>
+            <Element location="OM1.58[1].2" dataElement="Text" data="" categorization=""/>
+            <Element location="OM1.58[1].3" dataElement="Name of Coding System" data="" categorization=""/>
+            <Element location="OM1.58[1].7" dataElement="Coding System Version ID" data="" categorization=""/>
+            <Element location="OM1.58[1].8" dataElement="Alternate Coding System Version ID" data="" categorization=""/>
+            <Element location="OM1.58[2]" dataElement="Gender Restriction" data="" categorization=""/>
+            <Element location="OM1.58[2].1" dataElement="Identifier" data="" categorization=""/>
+            <Element location="OM1.58[2].2" dataElement="Text" data="" categorization=""/>
+            <Element location="OM1.58[2].3" dataElement="Name of Coding System" data="" categorization=""/>
+            <Element location="OM1.58[2].7" dataElement="Coding System Version ID" data="" categorization=""/>
+            <Element location="OM1.58[2].8" dataElement="Alternate Coding System Version ID" data="" categorization=""/>
+            <Element location="OM1.59[1]" dataElement="Age Restriction" data="" categorization=""/>
+            <Element location="OM1.59[1].1" dataElement="Low Value" data="" categorization=""/>
+            <Element location="OM1.59[1].2" dataElement="High Value" data="" categorization=""/>
+            <Element location="OM1.59[2]" dataElement="Age Restriction" data="" categorization=""/>
+            <Element location="OM1.59[2].1" dataElement="Low Value" data="" categorization=""/>
+            <Element location="OM1.59[2].2" dataElement="High Value" data="" categorization=""/>
+        </Segment>
+        <Segment name="OM5">
+            <Element location="OM5.1[1]" dataElement="Sequence Number - Test/Observation Master File" data="1" categorization="IG Fixed Data"/>
+            <Element location="OM5.2[1]" dataElement="Test/Observations Included Within an Ordered Test Battery" data="" categorization=""/>
+            <Element location="OM5.2[1].1" dataElement="Identifier" data="100" categorization="Changeable Data"/>
+            <Element location="OM5.2[1].2" dataElement="Text" data="CMP" categorization="Changeable Data"/>
+            <Element location="OM5.2[1].3" dataElement="Name of Coding System" data="99USL" categorization="Changeable Data"/>
+            <Element location="OM5.2[1].4" dataElement="Alternate Identifier" data="24323-8" categorization="Changeable Data"/>
+            <Element location="OM5.2[1].5" dataElement="Alternate Text" data="Comprehensive metabolic 2000 panel - Serum or Plasma" categorization="Changeable Data"/>
+            <Element location="OM5.2[1].6" dataElement="Name of Alternate Coding System" data="LN" categorization="Changeable Data"/>
+            <Element location="OM5.2[1].7" dataElement="Coding System Version ID" data="" categorization=""/>
+            <Element location="OM5.2[1].8" dataElement="Alternate Coding System Version ID" data="2.42" categorization="Changeable Data"/>
+            <Element location="OM5.2[2]" dataElement="Test/Observations Included Within an Ordered Test Battery" data="" categorization=""/>
+            <Element location="OM5.2[2].1" dataElement="Identifier" data="200" categorization="Changeable Data"/>
+            <Element location="OM5.2[2].2" dataElement="Text" data="CBC_diff" categorization="Changeable Data"/>
+            <Element location="OM5.2[2].3" dataElement="Name of Coding System" data="99USL" categorization="Changeable Data"/>
+            <Element location="OM5.2[2].4" dataElement="Alternate Identifier" data="57021-8" categorization="Changeable Data"/>
+            <Element location="OM5.2[2].5" dataElement="Alternate Text" data="CBC W Auto Differential panel in Blood" categorization="Changeable Data"/>
+            <Element location="OM5.2[2].6" dataElement="Name of Alternate Coding System" data="LN" categorization="Changeable Data"/>
+            <Element location="OM5.2[2].7" dataElement="Coding System Version ID" data="" categorization=""/>
+            <Element location="OM5.2[2].8" dataElement="Alternate Coding System Version ID" data="2.42" categorization="Changeable Data"/>
+            <Element location="OM5.2[3]" dataElement="Test/Observations Included Within an Ordered Test Battery" data="" categorization=""/>
+            <Element location="OM5.2[3].1" dataElement="Identifier" data="700" categorization="Changeable Data"/>
+            <Element location="OM5.2[3].2" dataElement="Text" data="TSH" categorization="Changeable Data"/>
+            <Element location="OM5.2[3].3" dataElement="Name of Coding System" data="99USL" categorization="Changeable Data"/>
+            <Element location="OM5.2[3].4" dataElement="Alternate Identifier" data="3016-3" categorization="Changeable Data"/>
+            <Element location="OM5.2[3].5" dataElement="Alternate Text" data="Thyrotropin [Units/volume] in Serum or Plasma" categorization="Changeable Data"/>
+            <Element location="OM5.2[3].6" dataElement="Name of Alternate Coding System" data="LN" categorization="Changeable Data"/>
+            <Element location="OM5.2[3].7" dataElement="Coding System Version ID" data="" categorization=""/>
+            <Element location="OM5.2[3].8" dataElement="Alternate Coding System Version ID" data="2.42" categorization="Changeable Data"/>
+            <Element location="OM5.2[4]" dataElement="Test/Observations Included Within an Ordered Test Battery" data="" categorization=""/>
+            <Element location="OM5.2[4].1" dataElement="Identifier" data="300" categorization="Changeable Data"/>
+            <Element location="OM5.2[4].2" dataElement="Text" data="Comprehensive Urinalysis" categorization="Changeable Data"/>
+            <Element location="OM5.2[4].3" dataElement="Name of Coding System" data="99USL" categorization="Changeable Data"/>
+            <Element location="OM5.2[4].4" dataElement="Alternate Identifier" data="50564-4" categorization="Changeable Data"/>
+            <Element location="OM5.2[4].5" dataElement="Alternate Text" data="Urinalysis panel - Urine by Auto" categorization="Changeable Data"/>
+            <Element location="OM5.2[4].6" dataElement="Name of Alternate Coding System" data="LN" categorization="Changeable Data"/>
+            <Element location="OM5.2[4].7" dataElement="Coding System Version ID" data="" categorization=""/>
+            <Element location="OM5.2[4].8" dataElement="Alternate Coding System Version ID" data="2.42" categorization="Changeable Data"/>
+            <Element location="OM5.2[5]" dataElement="Test/Observations Included Within an Ordered Test Battery" data="" categorization=""/>
+            <Element location="OM5.2[5].1" dataElement="Identifier" data="" categorization=""/>
+            <Element location="OM5.2[5].2" dataElement="Text" data="" categorization=""/>
+            <Element location="OM5.2[5].3" dataElement="Name of Coding System" data="" categorization=""/>
+            <Element location="OM5.2[5].4" dataElement="Alternate Identifier" data="" categorization=""/>
+            <Element location="OM5.2[5].5" dataElement="Alternate Text" data="" categorization=""/>
+            <Element location="OM5.2[5].6" dataElement="Name of Alternate Coding System" data="" categorization=""/>
+            <Element location="OM5.2[5].7" dataElement="Coding System Version ID" data="" categorization=""/>
+            <Element location="OM5.2[5].8" dataElement="Alternate Coding System Version ID" data="" categorization=""/>
+            <Element location="OM5.2[6]" dataElement="Test/Observations Included Within an Ordered Test Battery" data="" categorization=""/>
+            <Element location="OM5.2[6].1" dataElement="Identifier" data="" categorization=""/>
+            <Element location="OM5.2[6].2" dataElement="Text" data="" categorization=""/>
+            <Element location="OM5.2[6].3" dataElement="Name of Coding System" data="" categorization=""/>
+            <Element location="OM5.2[6].4" dataElement="Alternate Identifier" data="" categorization=""/>
+            <Element location="OM5.2[6].5" dataElement="Alternate Text" data="" categorization=""/>
+            <Element location="OM5.2[6].6" dataElement="Name of Alternate Coding System" data="" categorization=""/>
+            <Element location="OM5.2[6].7" dataElement="Coding System Version ID" data="" categorization=""/>
+            <Element location="OM5.2[6].8" dataElement="Alternate Coding System Version ID" data="" categorization=""/>
+            <Element location="OM5.2[7]" dataElement="Test/Observations Included Within an Ordered Test Battery" data="" categorization=""/>
+            <Element location="OM5.2[7].1" dataElement="Identifier" data="" categorization=""/>
+            <Element location="OM5.2[7].2" dataElement="Text" data="" categorization=""/>
+            <Element location="OM5.2[7].3" dataElement="Name of Coding System" data="" categorization=""/>
+            <Element location="OM5.2[7].4" dataElement="Alternate Identifier" data="" categorization=""/>
+            <Element location="OM5.2[7].5" dataElement="Alternate Text" data="" categorization=""/>
+            <Element location="OM5.2[7].6" dataElement="Name of Alternate Coding System" data="" categorization=""/>
+            <Element location="OM5.2[7].7" dataElement="Coding System Version ID" data="" categorization=""/>
+            <Element location="OM5.2[7].8" dataElement="Alternate Coding System Version ID" data="" categorization=""/>
+            <Element location="OM5.2[8]" dataElement="Test/Observations Included Within an Ordered Test Battery" data="" categorization=""/>
+            <Element location="OM5.2[8].1" dataElement="Identifier" data="" categorization=""/>
+            <Element location="OM5.2[8].2" dataElement="Text" data="" categorization=""/>
+            <Element location="OM5.2[8].3" dataElement="Name of Coding System" data="" categorization=""/>
+            <Element location="OM5.2[8].4" dataElement="Alternate Identifier" data="" categorization=""/>
+            <Element location="OM5.2[8].5" dataElement="Alternate Text" data="" categorization=""/>
+            <Element location="OM5.2[8].6" dataElement="Name of Alternate Coding System" data="" categorization=""/>
+            <Element location="OM5.2[8].7" dataElement="Coding System Version ID" data="" categorization=""/>
+            <Element location="OM5.2[8].8" dataElement="Alternate Coding System Version ID" data="" categorization=""/>
+            <Element location="OM5.2[9]" dataElement="Test/Observations Included Within an Ordered Test Battery" data="" categorization=""/>
+            <Element location="OM5.2[9].1" dataElement="Identifier" data="" categorization=""/>
+            <Element location="OM5.2[9].2" dataElement="Text" data="" categorization=""/>
+            <Element location="OM5.2[9].3" dataElement="Name of Coding System" data="" categorization=""/>
+            <Element location="OM5.2[9].4" dataElement="Alternate Identifier" data="" categorization=""/>
+            <Element location="OM5.2[9].5" dataElement="Alternate Text" data="" categorization=""/>
+            <Element location="OM5.2[9].6" dataElement="Name of Alternate Coding System" data="" categorization=""/>
+            <Element location="OM5.2[9].7" dataElement="Coding System Version ID" data="" categorization=""/>
+            <Element location="OM5.2[9].8" dataElement="Alternate Coding System Version ID" data="" categorization=""/>
+            <Element location="OM5.2[10]" dataElement="Test/Observations Included Within an Ordered Test Battery" data="" categorization=""/>
+            <Element location="OM5.2[10].1" dataElement="Identifier" data="" categorization=""/>
+            <Element location="OM5.2[10].2" dataElement="Text" data="" categorization=""/>
+            <Element location="OM5.2[10].3" dataElement="Name of Coding System" data="" categorization=""/>
+            <Element location="OM5.2[10].4" dataElement="Alternate Identifier" data="" categorization=""/>
+            <Element location="OM5.2[10].5" dataElement="Alternate Text" data="" categorization=""/>
+            <Element location="OM5.2[10].6" dataElement="Name of Alternate Coding System" data="" categorization=""/>
+            <Element location="OM5.2[10].7" dataElement="Coding System Version ID" data="" categorization=""/>
+            <Element location="OM5.2[10].8" dataElement="Alternate Coding System Version ID" data="" categorization=""/>
+            <Element location="OM5.2[11]" dataElement="Test/Observations Included Within an Ordered Test Battery" data="" categorization=""/>
+            <Element location="OM5.2[11].1" dataElement="Identifier" data="" categorization=""/>
+            <Element location="OM5.2[11].2" dataElement="Text" data="" categorization=""/>
+            <Element location="OM5.2[11].3" dataElement="Name of Coding System" data="" categorization=""/>
+            <Element location="OM5.2[11].4" dataElement="Alternate Identifier" data="" categorization=""/>
+            <Element location="OM5.2[11].5" dataElement="Alternate Text" data="" categorization=""/>
+            <Element location="OM5.2[11].6" dataElement="Name of Alternate Coding System" data="" categorization=""/>
+            <Element location="OM5.2[11].7" dataElement="Coding System Version ID" data="" categorization=""/>
+            <Element location="OM5.2[11].8" dataElement="Alternate Coding System Version ID" data="" categorization=""/>
+            <Element location="OM5.2[12]" dataElement="Test/Observations Included Within an Ordered Test Battery" data="" categorization=""/>
+            <Element location="OM5.2[12].1" dataElement="Identifier" data="" categorization=""/>
+            <Element location="OM5.2[12].2" dataElement="Text" data="" categorization=""/>
+            <Element location="OM5.2[12].3" dataElement="Name of Coding System" data="" categorization=""/>
+            <Element location="OM5.2[12].4" dataElement="Alternate Identifier" data="" categorization=""/>
+            <Element location="OM5.2[12].5" dataElement="Alternate Text" data="" categorization=""/>
+            <Element location="OM5.2[12].6" dataElement="Name of Alternate Coding System" data="" categorization=""/>
+            <Element location="OM5.2[12].7" dataElement="Coding System Version ID" data="" categorization=""/>
+            <Element location="OM5.2[12].8" dataElement="Alternate Coding System Version ID" data="" categorization=""/>
+            <Element location="OM5.2[13]" dataElement="Test/Observations Included Within an Ordered Test Battery" data="" categorization=""/>
+            <Element location="OM5.2[13].1" dataElement="Identifier" data="" categorization=""/>
+            <Element location="OM5.2[13].2" dataElement="Text" data="" categorization=""/>
+            <Element location="OM5.2[13].3" dataElement="Name of Coding System" data="" categorization=""/>
+            <Element location="OM5.2[13].4" dataElement="Alternate Identifier" data="" categorization=""/>
+            <Element location="OM5.2[13].5" dataElement="Alternate Text" data="" categorization=""/>
+            <Element location="OM5.2[13].6" dataElement="Name of Alternate Coding System" data="" categorization=""/>
+            <Element location="OM5.2[13].7" dataElement="Coding System Version ID" data="" categorization=""/>
+            <Element location="OM5.2[13].8" dataElement="Alternate Coding System Version ID" data="" categorization=""/>
+            <Element location="OM5.2[14]" dataElement="Test/Observations Included Within an Ordered Test Battery" data="" categorization=""/>
+            <Element location="OM5.2[14].1" dataElement="Identifier" data="" categorization=""/>
+            <Element location="OM5.2[14].2" dataElement="Text" data="" categorization=""/>
+            <Element location="OM5.2[14].3" dataElement="Name of Coding System" data="" categorization=""/>
+            <Element location="OM5.2[14].4" dataElement="Alternate Identifier" data="" categorization=""/>
+            <Element location="OM5.2[14].5" dataElement="Alternate Text" data="" categorization=""/>
+            <Element location="OM5.2[14].6" dataElement="Name of Alternate Coding System" data="" categorization=""/>
+            <Element location="OM5.2[14].7" dataElement="Coding System Version ID" data="" categorization=""/>
+            <Element location="OM5.2[14].8" dataElement="Alternate Coding System Version ID" data="" categorization=""/>
+            <Element location="OM5.2[15]" dataElement="Test/Observations Included Within an Ordered Test Battery" data="" categorization=""/>
+            <Element location="OM5.2[15].1" dataElement="Identifier" data="" categorization=""/>
+            <Element location="OM5.2[15].2" dataElement="Text" data="" categorization=""/>
+            <Element location="OM5.2[15].3" dataElement="Name of Coding System" data="" categorization=""/>
+            <Element location="OM5.2[15].4" dataElement="Alternate Identifier" data="" categorization=""/>
+            <Element location="OM5.2[15].5" dataElement="Alternate Text" data="" categorization=""/>
+            <Element location="OM5.2[15].6" dataElement="Name of Alternate Coding System" data="" categorization=""/>
+            <Element location="OM5.2[15].7" dataElement="Coding System Version ID" data="" categorization=""/>
+            <Element location="OM5.2[15].8" dataElement="Alternate Coding System Version ID" data="" categorization=""/>
+            <Element location="OM5.2[16]" dataElement="Test/Observations Included Within an Ordered Test Battery" data="" categorization=""/>
+            <Element location="OM5.2[16].1" dataElement="Identifier" data="" categorization=""/>
+            <Element location="OM5.2[16].2" dataElement="Text" data="" categorization=""/>
+            <Element location="OM5.2[16].3" dataElement="Name of Coding System" data="" categorization=""/>
+            <Element location="OM5.2[16].4" dataElement="Alternate Identifier" data="" categorization=""/>
+            <Element location="OM5.2[16].5" dataElement="Alternate Text" data="" categorization=""/>
+            <Element location="OM5.2[16].6" dataElement="Name of Alternate Coding System" data="" categorization=""/>
+            <Element location="OM5.2[16].7" dataElement="Coding System Version ID" data="" categorization=""/>
+            <Element location="OM5.2[16].8" dataElement="Alternate Coding System Version ID" data="" categorization=""/>
+            <Element location="OM5.2[17]" dataElement="Test/Observations Included Within an Ordered Test Battery" data="" categorization=""/>
+            <Element location="OM5.2[17].1" dataElement="Identifier" data="" categorization=""/>
+            <Element location="OM5.2[17].2" dataElement="Text" data="" categorization=""/>
+            <Element location="OM5.2[17].3" dataElement="Name of Coding System" data="" categorization=""/>
+            <Element location="OM5.2[17].4" dataElement="Alternate Identifier" data="" categorization=""/>
+            <Element location="OM5.2[17].5" dataElement="Alternate Text" data="" categorization=""/>
+            <Element location="OM5.2[17].6" dataElement="Name of Alternate Coding System" data="" categorization=""/>
+            <Element location="OM5.2[17].7" dataElement="Coding System Version ID" data="" categorization=""/>
+            <Element location="OM5.2[17].8" dataElement="Alternate Coding System Version ID" data="" categorization=""/>
+            <Element location="OM5.2[18]" dataElement="Test/Observations Included Within an Ordered Test Battery" data="" categorization=""/>
+            <Element location="OM5.2[18].1" dataElement="Identifier" data="" categorization=""/>
+            <Element location="OM5.2[18].2" dataElement="Text" data="" categorization=""/>
+            <Element location="OM5.2[18].3" dataElement="Name of Coding System" data="" categorization=""/>
+            <Element location="OM5.2[18].4" dataElement="Alternate Identifier" data="" categorization=""/>
+            <Element location="OM5.2[18].5" dataElement="Alternate Text" data="" categorization=""/>
+            <Element location="OM5.2[18].6" dataElement="Name of Alternate Coding System" data="" categorization=""/>
+            <Element location="OM5.2[18].7" dataElement="Coding System Version ID" data="" categorization=""/>
+            <Element location="OM5.2[18].8" dataElement="Alternate Coding System Version ID" data="" categorization=""/>
+            <Element location="OM5.2[19]" dataElement="Test/Observations Included Within an Ordered Test Battery" data="" categorization=""/>
+            <Element location="OM5.2[19].1" dataElement="Identifier" data="" categorization=""/>
+            <Element location="OM5.2[19].2" dataElement="Text" data="" categorization=""/>
+            <Element location="OM5.2[19].3" dataElement="Name of Coding System" data="" categorization=""/>
+            <Element location="OM5.2[19].7" dataElement="Coding System Version ID" data="" categorization=""/>
+            <Element location="OM5.2[20]" dataElement="Test/Observations Included Within an Ordered Test Battery" data="" categorization=""/>
+            <Element location="OM5.2[20].1" dataElement="Identifier" data="" categorization=""/>
+            <Element location="OM5.2[20].2" dataElement="Text" data="" categorization=""/>
+            <Element location="OM5.2[20].3" dataElement="Name of Coding System" data="" categorization=""/>
+            <Element location="OM5.2[20].4" dataElement="Alternate Identifier" data="" categorization=""/>
+            <Element location="OM5.2[20].5" dataElement="Alternate Text" data="" categorization=""/>
+            <Element location="OM5.2[20].6" dataElement="Name of Alternate Coding System" data="" categorization=""/>
+            <Element location="OM5.2[20].7" dataElement="Coding System Version ID" data="" categorization=""/>
+            <Element location="OM5.2[20].8" dataElement="Alternate Coding System Version ID" data="" categorization=""/>
+            <Element location="OM5.2[21]" dataElement="Test/Observations Included Within an Ordered Test Battery" data="" categorization=""/>
+            <Element location="OM5.2[21].1" dataElement="Identifier" data="" categorization=""/>
+            <Element location="OM5.2[21].2" dataElement="Text" data="" categorization=""/>
+            <Element location="OM5.2[21].3" dataElement="Name of Coding System" data="" categorization=""/>
+            <Element location="OM5.2[21].4" dataElement="Alternate Identifier" data="" categorization=""/>
+            <Element location="OM5.2[21].5" dataElement="Alternate Text" data="" categorization=""/>
+            <Element location="OM5.2[21].6" dataElement="Name of Alternate Coding System" data="" categorization=""/>
+            <Element location="OM5.2[21].7" dataElement="Coding System Version ID" data="" categorization=""/>
+            <Element location="OM5.2[21].8" dataElement="Alternate Coding System Version ID" data="" categorization=""/>
+            <Element location="OM5.2[22]" dataElement="Test/Observations Included Within an Ordered Test Battery" data="" categorization=""/>
+            <Element location="OM5.2[22].1" dataElement="Identifier" data="" categorization=""/>
+            <Element location="OM5.2[22].2" dataElement="Text" data="" categorization=""/>
+            <Element location="OM5.2[22].3" dataElement="Name of Coding System" data="" categorization=""/>
+            <Element location="OM5.2[22].4" dataElement="Alternate Identifier" data="" categorization=""/>
+            <Element location="OM5.2[22].5" dataElement="Alternate Text" data="" categorization=""/>
+            <Element location="OM5.2[22].6" dataElement="Name of Alternate Coding System" data="" categorization=""/>
+            <Element location="OM5.2[22].7" dataElement="Coding System Version ID" data="" categorization=""/>
+            <Element location="OM5.2[22].8" dataElement="Alternate Coding System Version ID" data="" categorization=""/>
+            <Element location="OM5.2[23]" dataElement="Test/Observations Included Within an Ordered Test Battery" data="" categorization=""/>
+            <Element location="OM5.2[23].1" dataElement="Identifier" data="" categorization=""/>
+            <Element location="OM5.2[23].2" dataElement="Text" data="" categorization=""/>
+            <Element location="OM5.2[23].3" dataElement="Name of Coding System" data="" categorization=""/>
+            <Element location="OM5.2[23].4" dataElement="Alternate Identifier" data="" categorization=""/>
+            <Element location="OM5.2[23].5" dataElement="Alternate Text" data="" categorization=""/>
+            <Element location="OM5.2[23].6" dataElement="Name of Alternate Coding System" data="" categorization=""/>
+            <Element location="OM5.2[23].7" dataElement="Coding System Version ID" data="" categorization=""/>
+            <Element location="OM5.2[23].8" dataElement="Alternate Coding System Version ID" data="" categorization=""/>
+            <Element location="OM5.2[24]" dataElement="Test/Observations Included Within an Ordered Test Battery" data="" categorization=""/>
+            <Element location="OM5.2[24].1" dataElement="Identifier" data="" categorization=""/>
+            <Element location="OM5.2[24].2" dataElement="Text" data="" categorization=""/>
+            <Element location="OM5.2[24].3" dataElement="Name of Coding System" data="" categorization=""/>
+            <Element location="OM5.2[24].7" dataElement="Coding System Version ID" data="" categorization=""/>
+            <Element location="OM5.2[25]" dataElement="Test/Observations Included Within an Ordered Test Battery" data="" categorization=""/>
+            <Element location="OM5.2[25].1" dataElement="Identifier" data="" categorization=""/>
+            <Element location="OM5.2[25].2" dataElement="Text" data="" categorization=""/>
+            <Element location="OM5.2[25].3" dataElement="Name of Coding System" data="" categorization=""/>
+            <Element location="OM5.2[25].4" dataElement="Alternate Identifier" data="" categorization=""/>
+            <Element location="OM5.2[25].5" dataElement="Alternate Text" data="" categorization=""/>
+            <Element location="OM5.2[25].6" dataElement="Name of Alternate Coding System" data="" categorization=""/>
+            <Element location="OM5.2[25].7" dataElement="Coding System Version ID" data="" categorization=""/>
+            <Element location="OM5.2[25].8" dataElement="Alternate Coding System Version ID" data="" categorization=""/>
+            <Element location="OM5.2[26]" dataElement="Test/Observations Included Within an Ordered Test Battery" data="" categorization=""/>
+            <Element location="OM5.2[26].1" dataElement="Identifier" data="" categorization=""/>
+            <Element location="OM5.2[26].2" dataElement="Text" data="" categorization=""/>
+            <Element location="OM5.2[26].3" dataElement="Name of Coding System" data="" categorization=""/>
+            <Element location="OM5.2[26].4" dataElement="Alternate Identifier" data="" categorization=""/>
+            <Element location="OM5.2[26].5" dataElement="Alternate Text" data="" categorization=""/>
+            <Element location="OM5.2[26].6" dataElement="Name of Alternate Coding System" data="" categorization=""/>
+            <Element location="OM5.2[26].7" dataElement="Coding System Version ID" data="" categorization=""/>
+            <Element location="OM5.2[26].8" dataElement="Alternate Coding System Version ID" data="" categorization=""/>
+            <Element location="OM5.2[27]" dataElement="Test/Observations Included Within an Ordered Test Battery" data="" categorization=""/>
+            <Element location="OM5.2[27].1" dataElement="Identifier" data="" categorization=""/>
+            <Element location="OM5.2[27].2" dataElement="Text" data="" categorization=""/>
+            <Element location="OM5.2[27].3" dataElement="Name of Coding System" data="" categorization=""/>
+            <Element location="OM5.2[27].4" dataElement="Alternate Identifier" data="" categorization=""/>
+            <Element location="OM5.2[27].5" dataElement="Alternate Text" data="" categorization=""/>
+            <Element location="OM5.2[27].6" dataElement="Name of Alternate Coding System" data="" categorization=""/>
+            <Element location="OM5.2[27].7" dataElement="Coding System Version ID" data="" categorization=""/>
+            <Element location="OM5.2[27].8" dataElement="Alternate Coding System Version ID" data="" categorization=""/>
+            <Element location="OM5.2[28]" dataElement="Test/Observations Included Within an Ordered Test Battery" data="" categorization=""/>
+            <Element location="OM5.2[28].1" dataElement="Identifier" data="" categorization=""/>
+            <Element location="OM5.2[28].2" dataElement="Text" data="" categorization=""/>
+            <Element location="OM5.2[28].3" dataElement="Name of Coding System" data="" categorization=""/>
+            <Element location="OM5.2[28].4" dataElement="Alternate Identifier" data="" categorization=""/>
+            <Element location="OM5.2[28].5" dataElement="Alternate Text" data="" categorization=""/>
+            <Element location="OM5.2[28].6" dataElement="Name of Alternate Coding System" data="" categorization=""/>
+            <Element location="OM5.2[28].7" dataElement="Coding System Version ID" data="" categorization=""/>
+            <Element location="OM5.2[28].8" dataElement="Alternate Coding System Version ID" data="" categorization=""/>
+            <Element location="OM5.2[29]" dataElement="Test/Observations Included Within an Ordered Test Battery" data="" categorization=""/>
+            <Element location="OM5.2[29].1" dataElement="Identifier" data="" categorization=""/>
+            <Element location="OM5.2[29].2" dataElement="Text" data="" categorization=""/>
+            <Element location="OM5.2[29].3" dataElement="Name of Coding System" data="" categorization=""/>
+            <Element location="OM5.2[29].4" dataElement="Alternate Identifier" data="" categorization=""/>
+            <Element location="OM5.2[29].5" dataElement="Alternate Text" data="" categorization=""/>
+            <Element location="OM5.2[29].6" dataElement="Name of Alternate Coding System" data="" categorization=""/>
+            <Element location="OM5.2[29].7" dataElement="Coding System Version ID" data="" categorization=""/>
+            <Element location="OM5.2[29].8" dataElement="Alternate Coding System Version ID" data="" categorization=""/>
+            <Element location="OM5.2[30]" dataElement="Test/Observations Included Within an Ordered Test Battery" data="" categorization=""/>
+            <Element location="OM5.2[30].1" dataElement="Identifier" data="" categorization=""/>
+            <Element location="OM5.2[30].2" dataElement="Text" data="" categorization=""/>
+            <Element location="OM5.2[30].3" dataElement="Name of Coding System" data="" categorization=""/>
+            <Element location="OM5.2[30].4" dataElement="Alternate Identifier" data="" categorization=""/>
+            <Element location="OM5.2[30].5" dataElement="Alternate Text" data="" categorization=""/>
+            <Element location="OM5.2[30].6" dataElement="Name of Alternate Coding System" data="" categorization=""/>
+            <Element location="OM5.2[30].7" dataElement="Coding System Version ID" data="" categorization=""/>
+            <Element location="OM5.2[30].8" dataElement="Alternate Coding System Version ID" data="" categorization=""/>
+            <Element location="OM5.2[31]" dataElement="Test/Observations Included Within an Ordered Test Battery" data="" categorization=""/>
+            <Element location="OM5.2[31].1" dataElement="Identifier" data="" categorization=""/>
+            <Element location="OM5.2[31].2" dataElement="Text" data="" categorization=""/>
+            <Element location="OM5.2[31].3" dataElement="Name of Coding System" data="" categorization=""/>
+            <Element location="OM5.2[31].4" dataElement="Alternate Identifier" data="" categorization=""/>
+            <Element location="OM5.2[31].5" dataElement="Alternate Text" data="" categorization=""/>
+            <Element location="OM5.2[31].6" dataElement="Name of Alternate Coding System" data="" categorization=""/>
+            <Element location="OM5.2[31].7" dataElement="Coding System Version ID" data="" categorization=""/>
+            <Element location="OM5.2[31].8" dataElement="Alternate Coding System Version ID" data="" categorization=""/>
+            <Element location="OM5.2[32]" dataElement="Test/Observations Included Within an Ordered Test Battery" data="" categorization=""/>
+            <Element location="OM5.2[32].1" dataElement="Identifier" data="" categorization=""/>
+            <Element location="OM5.2[32].2" dataElement="Text" data="" categorization=""/>
+            <Element location="OM5.2[32].3" dataElement="Name of Coding System" data="" categorization=""/>
+            <Element location="OM5.2[32].4" dataElement="Alternate Identifier" data="" categorization=""/>
+            <Element location="OM5.2[32].5" dataElement="Alternate Text" data="" categorization=""/>
+            <Element location="OM5.2[32].6" dataElement="Name of Alternate Coding System" data="" categorization=""/>
+            <Element location="OM5.2[32].7" dataElement="Coding System Version ID" data="" categorization=""/>
+            <Element location="OM5.2[32].8" dataElement="Alternate Coding System Version ID" data="" categorization=""/>
+        </Segment>
+        <Segment name="OM4">
+            <Element location="OM4.1[1]" dataElement="Sequence Number - Test/Observation Master File" data="1" categorization="IG Fixed Data"/>
+            <Element location="OM4.3[1]" dataElement="Container Description" data="Gold Serum Separator tube" categorization="Changeable Data"/>
+            <Element location="OM4.3[2]" dataElement="Container Description" data="Red, No Additive tube" categorization="Changeable Data"/>
+            <Element location="OM4.4[1]" dataElement="Container Volume" data="5.0" categorization="Changeable Data"/>
+            <Element location="OM4.4[2]" dataElement="Container Volume" data="5.0" categorization="Changeable Data"/>
+            <Element location="OM4.5[1]" dataElement="Container Units" data="" categorization=""/>
+            <Element location="OM4.5[1].1" dataElement="Identifier" data="mL" categorization="Changeable Data"/>
+            <Element location="OM4.5[1].2" dataElement="Text" data="milliliter" categorization="Changeable Data"/>
+            <Element location="OM4.5[1].3" dataElement="Name of Coding System" data="UCUM" categorization="Changeable Data"/>
+            <Element location="OM4.5[1].7" dataElement="Coding System Version ID" data="1.8" categorization="Changeable Data"/>
+            <Element location="OM4.5[1].8" dataElement="Alternate Coding System Version ID" data="" categorization=""/>
+            <Element location="OM4.5[2]" dataElement="Container Units" data="" categorization=""/>
+            <Element location="OM4.5[2].1" dataElement="Identifier" data="mL" categorization="Changeable Data"/>
+            <Element location="OM4.5[2].2" dataElement="Text" data="milliliter" categorization="Changeable Data"/>
+            <Element location="OM4.5[2].3" dataElement="Name of Coding System" data="UCUM" categorization="Changeable Data"/>
+            <Element location="OM4.5[2].7" dataElement="Coding System Version ID" data="1.8" categorization="Changeable Data"/>
+            <Element location="OM4.5[2].8" dataElement="Alternate Coding System Version ID" data="" categorization=""/>
+            <Element location="OM4.6[1]" dataElement="Specimen" data="" categorization=""/>
+            <Element location="OM4.6[1].1" dataElement="Identifier" data="119364003" categorization="Test Case Fixed Data"/>
+            <Element location="OM4.6[1].2" dataElement="Text" data="Serum specimen" categorization="Changeable Data"/>
+            <Element location="OM4.6[1].3" dataElement="Name of Coding System" data="SCT" categorization="Test Case Fixed Data"/>
+            <Element location="OM4.6[1].4" dataElement="Alternate Identifier" data="" categorization=""/>
+            <Element location="OM4.6[1].5" dataElement="Alternate Text" data="" categorization=""/>
+            <Element location="OM4.6[1].6" dataElement="Name of Alternate Coding System" data="" categorization=""/>
+            <Element location="OM4.6[1].7" dataElement="Coding System Version ID" data="201509-US Ed" categorization="Changeable Data"/>
+            <Element location="OM4.6[1].8" dataElement="Alternate Coding System Version ID" data="" categorization=""/>
+            <Element location="OM4.6[1].9" dataElement="Original Text" data="" categorization=""/>
+            <Element location="OM4.7[1]" dataElement="Additive" data="" categorization=""/>
+            <Element location="OM4.7[1].1" dataElement="Identifier" data="" categorization=""/>
+            <Element location="OM4.7[1].2" dataElement="Text" data="" categorization=""/>
+            <Element location="OM4.7[1].3" dataElement="Name of Coding System" data="" categorization=""/>
+            <Element location="OM4.7[1].7" dataElement="Coding System Version ID" data="" categorization=""/>
+            <Element location="OM4.7[1].8" dataElement="Alternate Coding System Version ID" data="" categorization=""/>
+            <Element location="OM4.10[1]" dataElement="Normal Collection Volume" data="" categorization=""/>
+            <Element location="OM4.10[1].1" dataElement="Quantity" data="1" categorization="Changeable Data"/>
+            <Element location="OM4.10[1].2" dataElement="Units" data="" categorization=""/>
+            <Element location="OM4.10[1].2.1" dataElement="Identifier" data="mL" categorization="Changeable Data"/>
+            <Element location="OM4.10[1].2.2" dataElement="Text" data="milliliter" categorization="Changeable Data"/>
+            <Element location="OM4.10[1].2.3" dataElement="Name of Coding System" data="UCUM" categorization="IG Fixed Data"/>
+            <Element location="OM4.10[1].2.7" dataElement="Coding System Version ID" data="" categorization=""/>
+            <Element location="OM4.10[1].2.8" dataElement="Alternate Coding System Version ID" data="" categorization=""/>
+            <Element location="OM4.11[1]" dataElement="Minimum Collection Volume" data="" categorization=""/>
+            <Element location="OM4.11[1].1" dataElement="Quantity" data="0.5" categorization="Changeable Data"/>
+            <Element location="OM4.11[1].2" dataElement="Units" data="" categorization=""/>
+            <Element location="OM4.11[1].2.1" dataElement="Identifier" data="mL" categorization="Changeable Data"/>
+            <Element location="OM4.11[1].2.2" dataElement="Text" data="milliliter" categorization="Changeable Data"/>
+            <Element location="OM4.11[1].2.3" dataElement="Name of Coding System" data="UCUM" categorization="IG Fixed Data"/>
+            <Element location="OM4.11[1].2.7" dataElement="Coding System Version ID" data="1.8" categorization="Changeable Data"/>
+            <Element location="OM4.11[1].2.8" dataElement="Alternate Coding System Version ID" data="" categorization=""/>
+            <Element location="OM4.12[1]" dataElement="Specimen Requirements" data="Protect from light. Allow serum tube to clot completely at room temperature. Separate serum or plasma from cells ASAP or within 30 minutes of collection." categorization="Changeable Data"/>
+            <Element location="OM4.15[1]" dataElement="Specimen Handling Code" data="" categorization=""/>
+            <Element location="OM4.15[1].1" dataElement="Identifier" data="REF" categorization="Changeable Data"/>
+            <Element location="OM4.15[1].2" dataElement="Text" data="Refrigerated temperature" categorization="Changeable Data"/>
+            <Element location="OM4.15[1].3" dataElement="Name of Coding System" data="HL70376" categorization="IG Fixed Data"/>
+            <Element location="OM4.15[1].7" dataElement="Coding System Version ID" data="2.5.1" categorization="Changeable Data"/>
+            <Element location="OM4.15[1].8" dataElement="Alternate Coding System Version ID" data="" categorization=""/>
+            <Element location="OM4.15[2]" dataElement="Specimen Handling Code" data="" categorization=""/>
+            <Element location="OM4.15[2].1" dataElement="Identifier" data="" categorization=""/>
+            <Element location="OM4.15[2].2" dataElement="Text" data="" categorization=""/>
+            <Element location="OM4.15[2].3" dataElement="Name of Coding System" data="" categorization=""/>
+            <Element location="OM4.15[2].7" dataElement="Coding System Version ID" data="" categorization=""/>
+            <Element location="OM4.15[2].8" dataElement="Alternate Coding System Version ID" data="" categorization=""/>
+            <Element location="OM4.16[1]" dataElement="Specimen Preference" data="P" categorization="Test Case Fixed Data"/>
+            <Element location="OM4.17[1]" dataElement="Preferred Specimen/Attribute Sequence" data="" categorization=""/>
+        </Segment>
+        <Segment name="OM4">
+            <Element location="OM4.1[1]" dataElement="Sequence Number - Test/Observation Master File" data="1.2" categorization="IG Fixed Data"/>
+            <Element location="OM4.3[1]" dataElement="Container Description" data="Lavender Top (EDTA) tube" categorization="Changeable Data"/>
+            <Element location="OM4.3[2]" dataElement="Container Description" data="Pink Top (K2EDTA) tube" categorization="Changeable Data"/>
+            <Element location="OM4.4[1]" dataElement="Container Volume" data="3.0" categorization="Changeable Data"/>
+            <Element location="OM4.4[2]" dataElement="Container Volume" data="3.0" categorization="Changeable Data"/>
+            <Element location="OM4.5[1]" dataElement="Container Units" data="" categorization=""/>
+            <Element location="OM4.5[1].1" dataElement="Identifier" data="mL" categorization="Changeable Data"/>
+            <Element location="OM4.5[1].2" dataElement="Text" data="milliliters" categorization="Changeable Data"/>
+            <Element location="OM4.5[1].3" dataElement="Name of Coding System" data="UCUM" categorization="Changeable Data"/>
+            <Element location="OM4.5[1].7" dataElement="Coding System Version ID" data="1.8" categorization="Changeable Data"/>
+            <Element location="OM4.5[1].8" dataElement="Alternate Coding System Version ID" data="" categorization=""/>
+            <Element location="OM4.5[2]" dataElement="Container Units" data="" categorization=""/>
+            <Element location="OM4.5[2].1" dataElement="Identifier" data="mL" categorization="Changeable Data"/>
+            <Element location="OM4.5[2].2" dataElement="Text" data="milliliters" categorization="Changeable Data"/>
+            <Element location="OM4.5[2].3" dataElement="Name of Coding System" data="UCUM" categorization="Changeable Data"/>
+            <Element location="OM4.5[2].7" dataElement="Coding System Version ID" data="1.8" categorization="Changeable Data"/>
+            <Element location="OM4.5[2].8" dataElement="Alternate Coding System Version ID" data="" categorization=""/>
+            <Element location="OM4.6[1]" dataElement="Specimen" data="" categorization=""/>
+            <Element location="OM4.6[1].1" dataElement="Identifier" data="119297000" categorization="Test Case Fixed Data"/>
+            <Element location="OM4.6[1].2" dataElement="Text" data="Blood sample" categorization="Changeable Data"/>
+            <Element location="OM4.6[1].3" dataElement="Name of Coding System" data="SCT" categorization="Test Case Fixed Data"/>
+            <Element location="OM4.6[1].4" dataElement="Alternate Identifier" data="WBLD" categorization="Changeable Data"/>
+            <Element location="OM4.6[1].5" dataElement="Alternate Text" data="Whole blood" categorization="Changeable Data"/>
+            <Element location="OM4.6[1].6" dataElement="Name of Alternate Coding System" data="99USL" categorization="Changeable Data"/>
+            <Element location="OM4.6[1].7" dataElement="Coding System Version ID" data="201509-US Ed" categorization="Changeable Data"/>
+            <Element location="OM4.6[1].8" dataElement="Alternate Coding System Version ID" data="2014" categorization="Changeable Data"/>
+            <Element location="OM4.6[1].9" dataElement="Original Text" data="Whole blood" categorization="Changeable Data"/>
+            <Element location="OM4.7[1]" dataElement="Additive" data="" categorization=""/>
+            <Element location="OM4.7[1].1" dataElement="Identifier" data="EDTK" categorization="Changeable Data"/>
+            <Element location="OM4.7[1].2" dataElement="Text" data="Potassium/K EDTA" categorization="Changeable Data"/>
+            <Element location="OM4.7[1].3" dataElement="Name of Coding System" data="HL70371" categorization="Changeable Data"/>
+            <Element location="OM4.7[1].7" dataElement="Coding System Version ID" data="2.5.1" categorization="Changeable Data"/>
+            <Element location="OM4.7[1].8" dataElement="Alternate Coding System Version ID" data="" categorization=""/>
+            <Element location="OM4.10[1]" dataElement="Normal Collection Volume" data="" categorization=""/>
+            <Element location="OM4.10[1].1" dataElement="Quantity" data="3" categorization="Changeable Data"/>
+            <Element location="OM4.10[1].2" dataElement="Units" data="" categorization=""/>
+            <Element location="OM4.10[1].2.1" dataElement="Identifier" data="mL" categorization="Changeable Data"/>
+            <Element location="OM4.10[1].2.2" dataElement="Text" data="milliliters" categorization="Changeable Data"/>
+            <Element location="OM4.10[1].2.3" dataElement="Name of Coding System" data="UCUM" categorization="IG Fixed Data"/>
+            <Element location="OM4.10[1].2.7" dataElement="Coding System Version ID" data="1.8" categorization="Changeable Data"/>
+            <Element location="OM4.10[1].2.8" dataElement="Alternate Coding System Version ID" data="" categorization=""/>
+            <Element location="OM4.11[1]" dataElement="Minimum Collection Volume" data="" categorization=""/>
+            <Element location="OM4.11[1].1" dataElement="Quantity" data="0.5" categorization="Changeable Data"/>
+            <Element location="OM4.11[1].2" dataElement="Units" data="" categorization=""/>
+            <Element location="OM4.11[1].2.1" dataElement="Identifier" data="mL" categorization="Changeable Data"/>
+            <Element location="OM4.11[1].2.2" dataElement="Text" data="milliliters" categorization="Changeable Data"/>
+            <Element location="OM4.11[1].2.3" dataElement="Name of Coding System" data="UCUM" categorization="IG Fixed Data"/>
+            <Element location="OM4.11[1].2.7" dataElement="Coding System Version ID" data="1.8" categorization="Changeable Data"/>
+            <Element location="OM4.11[1].2.8" dataElement="Alternate Coding System Version ID" data="" categorization=""/>
+            <Element location="OM4.12[1]" dataElement="Specimen Requirements" data="Refrigeration is required if specimen is not brought immediately to laboratory.  Two blood smears should be prepared if sample is not delivered to the laboratory within 4 hrs.  Sample should be analyzed within 6 hours at room temperature and 24 hrs when stored at 4 degrees C." categorization="Changeable Data"/>
+            <Element location="OM4.15[1]" dataElement="Specimen Handling Code" data="" categorization=""/>
+            <Element location="OM4.15[1].1" dataElement="Identifier" data="CREF" categorization="Changeable Data"/>
+            <Element location="OM4.15[1].2" dataElement="Text" data="Critical refrigerated" categorization="Changeable Data"/>
+            <Element location="OM4.15[1].3" dataElement="Name of Coding System" data="HL70376" categorization="IG Fixed Data"/>
+            <Element location="OM4.15[1].7" dataElement="Coding System Version ID" data="2.5.1" categorization="Changeable Data"/>
+            <Element location="OM4.15[1].8" dataElement="Alternate Coding System Version ID" data="" categorization=""/>
+            <Element location="OM4.15[2]" dataElement="Specimen Handling Code" data="" categorization=""/>
+            <Element location="OM4.15[2].1" dataElement="Identifier" data="" categorization=""/>
+            <Element location="OM4.15[2].2" dataElement="Text" data="" categorization=""/>
+            <Element location="OM4.15[2].3" dataElement="Name of Coding System" data="" categorization=""/>
+            <Element location="OM4.15[2].7" dataElement="Coding System Version ID" data="" categorization=""/>
+            <Element location="OM4.15[2].8" dataElement="Alternate Coding System Version ID" data="" categorization=""/>
+            <Element location="OM4.16[1]" dataElement="Specimen Preference" data="P" categorization="Test Case Fixed Data"/>
+            <Element location="OM4.17[1]" dataElement="Preferred Specimen/Attribute Sequence" data="" categorization=""/>
+        </Segment>
+        <Segment name="OM4">
+            <Element location="OM4.1[1]" dataElement="Sequence Number - Test/Observation Master File" data="1.3" categorization="IG Fixed Data"/>
+            <Element location="OM4.3[1]" dataElement="Container Description" data="Sterile, plastic, leak proof container" categorization="Changeable Data"/>
+            <Element location="OM4.3[2]" dataElement="Container Description" data="" categorization=""/>
+            <Element location="OM4.4[1]" dataElement="Container Volume" data="4" categorization="Changeable Data"/>
+            <Element location="OM4.4[2]" dataElement="Container Volume" data="" categorization=""/>
+            <Element location="OM4.5[1]" dataElement="Container Units" data="" categorization=""/>
+            <Element location="OM4.5[1].1" dataElement="Identifier" data="[foz_us]" categorization="Changeable Data"/>
+            <Element location="OM4.5[1].2" dataElement="Text" data="fluid ounce (US)" categorization="Changeable Data"/>
+            <Element location="OM4.5[1].3" dataElement="Name of Coding System" data="UCUM" categorization="Changeable Data"/>
+            <Element location="OM4.5[1].7" dataElement="Coding System Version ID" data="1.8" categorization="Changeable Data"/>
+            <Element location="OM4.5[1].8" dataElement="Alternate Coding System Version ID" data="" categorization=""/>
+            <Element location="OM4.5[2]" dataElement="Container Units" data="" categorization=""/>
+            <Element location="OM4.5[2].1" dataElement="Identifier" data="" categorization=""/>
+            <Element location="OM4.5[2].2" dataElement="Text" data="" categorization=""/>
+            <Element location="OM4.5[2].3" dataElement="Name of Coding System" data="" categorization=""/>
+            <Element location="OM4.5[2].7" dataElement="Coding System Version ID" data="" categorization=""/>
+            <Element location="OM4.5[2].8" dataElement="Alternate Coding System Version ID" data="" categorization=""/>
+            <Element location="OM4.6[1]" dataElement="Specimen" data="" categorization=""/>
+            <Element location="OM4.6[1].1" dataElement="Identifier" data="122575003" categorization="Test Case Fixed Data"/>
+            <Element location="OM4.6[1].2" dataElement="Text" data="Urine specimen" categorization="Changeable Data"/>
+            <Element location="OM4.6[1].3" dataElement="Name of Coding System" data="SCT" categorization="Test Case Fixed Data"/>
+            <Element location="OM4.6[1].4" dataElement="Alternate Identifier" data="UR" categorization="Changeable Data"/>
+            <Element location="OM4.6[1].5" dataElement="Alternate Text" data="Random urine" categorization="Changeable Data"/>
+            <Element location="OM4.6[1].6" dataElement="Name of Alternate Coding System" data="99USL" categorization="Changeable Data"/>
+            <Element location="OM4.6[1].7" dataElement="Coding System Version ID" data="201509-US Ed" categorization="Changeable Data"/>
+            <Element location="OM4.6[1].8" dataElement="Alternate Coding System Version ID" data="2014" categorization="Changeable Data"/>
+            <Element location="OM4.6[1].9" dataElement="Original Text" data="Random urine" categorization="Changeable Data"/>
+            <Element location="OM4.7[1]" dataElement="Additive" data="" categorization=""/>
+            <Element location="OM4.7[1].1" dataElement="Identifier" data="" categorization=""/>
+            <Element location="OM4.7[1].2" dataElement="Text" data="" categorization=""/>
+            <Element location="OM4.7[1].3" dataElement="Name of Coding System" data="" categorization=""/>
+            <Element location="OM4.7[1].7" dataElement="Coding System Version ID" data="" categorization=""/>
+            <Element location="OM4.7[1].8" dataElement="Alternate Coding System Version ID" data="" categorization=""/>
+            <Element location="OM4.10[1]" dataElement="Normal Collection Volume" data="" categorization=""/>
+            <Element location="OM4.10[1].1" dataElement="Quantity" data="20" categorization="Changeable Data"/>
+            <Element location="OM4.10[1].2" dataElement="Units" data="" categorization=""/>
+            <Element location="OM4.10[1].2.1" dataElement="Identifier" data="mL" categorization="Changeable Data"/>
+            <Element location="OM4.10[1].2.2" dataElement="Text" data="milliliter" categorization="Changeable Data"/>
+            <Element location="OM4.10[1].2.3" dataElement="Name of Coding System" data="UCUM" categorization="IG Fixed Data"/>
+            <Element location="OM4.10[1].2.7" dataElement="Coding System Version ID" data="1.8" categorization="Changeable Data"/>
+            <Element location="OM4.10[1].2.8" dataElement="Alternate Coding System Version ID" data="" categorization=""/>
+            <Element location="OM4.11[1]" dataElement="Minimum Collection Volume" data="" categorization=""/>
+            <Element location="OM4.11[1].1" dataElement="Quantity" data="4" categorization="Changeable Data"/>
+            <Element location="OM4.11[1].2" dataElement="Units" data="" categorization=""/>
+            <Element location="OM4.11[1].2.1" dataElement="Identifier" data="mL" categorization="Changeable Data"/>
+            <Element location="OM4.11[1].2.2" dataElement="Text" data="milliliter" categorization="Changeable Data"/>
+            <Element location="OM4.11[1].2.3" dataElement="Name of Coding System" data="UCUM" categorization="IG Fixed Data"/>
+            <Element location="OM4.11[1].2.7" dataElement="Coding System Version ID" data="1.8" categorization="Changeable Data"/>
+            <Element location="OM4.11[1].2.8" dataElement="Alternate Coding System Version ID" data="" categorization=""/>
+            <Element location="OM4.12[1]" dataElement="Specimen Requirements" data="Keep refrigerated" categorization="Changeable Data"/>
+            <Element location="OM4.15[1]" dataElement="Specimen Handling Code" data="" categorization=""/>
+            <Element location="OM4.15[1].1" dataElement="Identifier" data="REF" categorization="Changeable Data"/>
+            <Element location="OM4.15[1].2" dataElement="Text" data="Refrigerated temperature" categorization="Changeable Data"/>
+            <Element location="OM4.15[1].3" dataElement="Name of Coding System" data="HL70376" categorization="IG Fixed Data"/>
+            <Element location="OM4.15[1].7" dataElement="Coding System Version ID" data="2.5.1" categorization="Changeable Data"/>
+            <Element location="OM4.15[1].8" dataElement="Alternate Coding System Version ID" data="" categorization=""/>
+            <Element location="OM4.15[2]" dataElement="Specimen Handling Code" data="" categorization=""/>
+            <Element location="OM4.15[2].1" dataElement="Identifier" data="" categorization=""/>
+            <Element location="OM4.15[2].2" dataElement="Text" data="" categorization=""/>
+            <Element location="OM4.15[2].3" dataElement="Name of Coding System" data="" categorization=""/>
+            <Element location="OM4.15[2].7" dataElement="Coding System Version ID" data="" categorization=""/>
+            <Element location="OM4.15[2].8" dataElement="Alternate Coding System Version ID" data="" categorization=""/>
+            <Element location="OM4.16[1]" dataElement="Specimen Preference" data="P" categorization="Test Case Fixed Data"/>
+            <Element location="OM4.17[1]" dataElement="Preferred Specimen/Attribute Sequence" data="" categorization=""/>
+        </Segment>
+    </Message>
+</TestStep>

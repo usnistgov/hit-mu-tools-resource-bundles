@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseMetaData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="EDOS_2.2_4.1-M18_NG" date="11/18/2015" name="M18_Update_Revise" version="version3">
+		<Description>
+The Laboratory Test Compendium from Century Hospital Clinical Laboratory is a subset of their Directory of Services.  It is based upon the most commonly ordered lab tests by Dr. Radon.  This compendium is being used by Dr. Nicholas Radon's practice EHR-S to place orders electronically to Century Hospital's Clinical Laboratory.  Century Hospital has made changes to their test compendium:
+- Updated approved coverage information for a single test (updated price)
+Century Hospital's LIS transmits the appropriate eDOS update messages with these changes to Dr. Radon's EHR.</Description>
+		<PreCondition>EDOS_1.0_1.1-M08_New
+and
+EDOS_1.0_2.1-M10_New
+and
+EDOS_1.0_3.1-M04_New
+and
+EDOS_1.0_4.1-M18_New_Approved
+and
+EDOS_1.0_5.1-M18_New_Limited
+and
+EDOS_2.2_1.1-M08_Update_Revise
+and
+EDOS_2.2_2.1-M10_Update_Revise
+and
+EDOS_2.2_3.1-M04_Update_Revise
+have been completed.</PreCondition>
+		<PostCondition>No Post-Condition.</PostCondition>
+		<TestObjectives>Demonstrate capability to support a M18 approved coverage update message for an revised test.
+Demonstrate capability to support a maximally populated MCP segment.</TestObjectives>
+		<Comments>Update message to revise approved coverage information for a test.</Comments>
+	</TestCaseMetaData>

@@ -1,0 +1,978 @@
+<?xml version="1.0" encoding="UTF-8"?><html>
+   <head>
+      <style type="text/css">
+         @media screen{
+         .jurorContainer fieldset{
+         font-size:100%;
+         }
+         .jurorContainer fieldset table tbody tr th{
+         font-size:90%
+         }
+         .jurorContainer fieldset table tbody tr td{
+         font-size:90%;
+         }
+         }
+         @media print{
+         .jurorContainer fieldset{
+         font-size:small;
+         overflow:visible !important;
+         }
+         .jurorContainer fieldset table th{
+         font-size:x-small;
+         }
+         .jurorContainer fieldset table tr{
+         page-break-inside:avoid;
+         }
+         .jurorContainer fieldset table td{
+         font-size:xx-small;
+         }
+         .jurorContainer * [type = text]{
+         width:98%;
+         height:15px;
+         margin:2px;
+         padding:0px;
+         background:1px #ccc;
+         }
+         
+         .jurorContainer * [type = checkbox]{
+         width:10px;
+         height:10px;
+         margin:2px;
+         padding:0px;
+         background:1px #ccc;
+         }
+         }
+         
+         .jurorContainer * [type = text]{
+         width:95%;
+         }
+         
+         .jurorContainer fieldset{
+         page-break-inside:avoid;
+         }
+         .jurorContainer fieldset pre{
+         font-weight:normal;
+         border:1px groove;
+         font-family:Times New Roman;
+         }
+         .jurorContainer fieldset table{
+         width:98%;
+         border:1px groove;
+         margin:0 auto;
+         page-break-inside:avoid;
+         }
+         .jurorContainer fieldset table tr{
+         border:1px groove;
+         page-break-inside:avoid;
+         }
+         .jurorContainer fieldset table th{
+         border:1px groove;
+         }
+         .jurorContainer fieldset table td{
+         border:1px groove;
+         empty-cells:show;
+         
+         }
+         .jurorContainer fieldset table[id = inspectionStatus] thead tr th:last-child{
+         width:2%;
+         color:black;
+         }
+         .jurorContainer fieldset table[id = inspectionStatus] thead tr th:nth-last-child(2){
+         width:2%;
+         color:black;
+         }
+         .jurorContainer fieldset table[id = inspectionStatus] thead tr th:nth-last-child(3){
+         width:45%;
+         }
+         .jurorContainer fieldset table thead{
+         border:1px groove;
+         font-weight:bold;
+         font-size:large;
+         background:#446BEC;
+         text-align:left;
+         color:white;
+         }
+         .jurorContainer fieldset table tbody tr th{
+         text-align:left;
+         background:#C6DEFF;
+         }
+         .jurorContainer fieldset table tbody tr[id = noColor] th{
+         font-weight:bold;
+         text-align:left;
+         background:none;
+         }
+         .jurorContainer fieldset table tr[id = header] th{
+         text-align:left;
+         background:#4682B4;
+         color:white;
+         font-style:italic;
+         }
+         
+         .jurorContainer fieldset table tbody tr td{
+         text-align:left
+         }
+         .jurorContainer fieldset table tbody tr td [type = text]{
+         text-align:left;
+         margin-left:1%
+         }
+         .jurorContainer fieldset table caption{
+         font-weight:bold;
+         color:#0840F8;
+         }
+         .jurorContainer fieldset{
+         width:98%;
+         font-weight:bold;
+         border:1px solid #446BEC;
+         }
+         .embSpace{
+         padding-left:25px;
+         }
+         .noData{
+         background:#B8B8B8;
+         }
+         .addSpace{
+         height:20px;
+         }
+      </style>
+      <script type="text/javascript">
+         
+         
+         function comment(){
+         
+         $("textarea").on("keyup",function (){
+         var h=$(this);
+         h.height(10).height(h[0].scrollHeight);
+         });
+         
+         } 
+         
+         if(typeof jQuery =='undefined') {
+         var headTag = document.getElementsByTagName("head")[0];
+         var jqTag = document.createElement('script');
+         jqTag.type = 'text/javascript';
+         jqTag.src = 'http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js';
+         jqTag.onload = comment;
+         
+         headTag.appendChild(jqTag);
+         }
+         else {  
+         $(document).ready(function (){
+         
+         comment();
+         
+         
+         });
+         
+         }
+         
+      </script>
+   </head>
+   <body>
+      <div class="jurorContainer">
+         <fieldset id="juror">
+            <h3>ELECTRONIC DIRECTORY OF SERVICE(eDOS)</h3>
+            <table id="headerTable">
+               <thead>
+                  <tr>
+                     <th colspan="2">Electronic Directory Of Service (eDOS)</th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr>
+                     <th>Test Case ID</th>
+                     <td>1-Smoke Test</td>
+                  </tr>
+                  <tr>
+                     <th>Juror ID</th>
+                     <td>
+                        <input style="background: 1px  #E2E2E2;" type="text" maxlength="50" value=""></input>
+                     </td>
+                  </tr>
+                  <tr>
+                     <th>Juror Name</th>
+                     <td>
+                        <input style="background: 1px  #E2E2E2;" type="text" maxlength="50" value=""></input>
+                     </td>
+                  </tr>
+                  <tr>
+                     <th>HIT System Tested</th>
+                     <td>
+                        <input style="background: 1px  #E2E2E2;" type="text" maxlength="50" value=""></input>
+                     </td>
+                  </tr>
+                  <tr>
+                     <th>Inspection Date/Time</th>
+                     <td>
+                        <input style="background: 1px  #E2E2E2;" type="text" maxlength="50" value=""></input>
+                     </td>
+                  </tr>
+                  <tr>
+                     <th>Inspection Settlement (Pass/Fail)</th>
+                     <td>
+                        <table id="inspectionStatus">
+                           <thead>
+                              <tr>
+                                 <th>Pass</th>
+                                 <th>Fail</th>
+                              </tr>
+                           </thead>
+                           <tbody>
+                              <tr>
+                                 <td>
+                                    <input type="checkbox" value=""></input>
+                                 </td>
+                                 <td>
+                                    <input type="checkbox" value=""></input>
+                                 </td>
+                              </tr>
+                           </tbody>
+                        </table>
+                     </td>
+                  </tr>
+                  <tr>
+                     <th>Reason Failed</th>
+                     <td>
+                        <input style="background: 1px  #E2E2E2;" type="text" maxlength="50" value=""></input>
+                     </td>
+                  </tr>
+                  <tr>
+                     <th>Juror Comments</th>
+                     <td>
+                        <input style="background: 1px  #E2E2E2;" type="text" maxlength="50" value=""></input>
+                     </td>
+                  </tr>
+               </tbody>
+            </table>
+         </fieldset>
+         <br></br>
+         <fieldset>
+            <h3>INSTRUCTIONS</h3>
+            <pre>No Specific Instructions</pre>
+         </fieldset>
+         <br></br>
+         <fieldset>
+            <h3>DISPLAY VERIFICATION : CPOE View</h3>
+            <table id="orderablePanel">
+               <thead>
+                  <tr>
+                     <th colspan="2" style="width:60%">Orderable Atomic Tests and
+                        /or Panels
+                     </th>
+                     <th style="width:40%">Tester Comment</th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr>
+                     <th style="width:30%">Laboratary Name</th>
+                     <th style="width:30%">Name of the Test/Panel*</th>
+                     <th></th>
+                  </tr>
+                  <tr>
+                     <td>Century Hospital Clinical Laboratory</td>
+                     <td>PT + INR</td>
+                     <td style="background-color: #F2F2F2;">
+                        <textarea maxlength="100" rows="1"
+                                  style="width: 100%; height: 100%; border: 1px; background: 1px  #F2F2F2; resize:vertical; overflow-y:hidden "></textarea>
+                     </td>
+                  </tr>
+               </tbody>
+               <tfoot>
+                  <tr>
+                     <td style="font-weight:bold;" colspan="3">* equivalent name
+                        accepted 
+                     </td>
+                  </tr>
+               </tfoot>
+            </table>
+            <br></br>
+            <table>
+               <thead>
+                  <tr>
+                     <th colspan="2" style="width:60%">Panel : PT + INR</th>
+                     <th style="width:40%">Tester Comment</th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr>
+                     <th colspan="3">Panel Components</th>
+                  </tr>
+                  <tr>
+                     <td colspan="2">Prothrombin Time, PT</td>
+                     <td style="background-color: #F2F2F2;">
+                        <textarea maxlength="100" rows="1"
+                                  style="width: 100%; height: 100%; border: 1px; background: 1px  #F2F2F2; resize:vertical; overflow-y:hidden "></textarea>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td colspan="2">INR</td>
+                     <td style="background-color: #F2F2F2;">
+                        <textarea maxlength="100" rows="1"
+                                  style="width: 100%; height: 100%; border: 1px; background: 1px  #F2F2F2; resize:vertical; overflow-y:hidden "></textarea>
+                     </td>
+                  </tr>
+               </tbody>
+            </table>
+            <br></br>
+         </fieldset>
+         <br></br>
+         <fieldset>
+            <h3>DISPLAY VERIFICATION : Directory Admin View</h3>
+            <table>
+               <thead>
+                  <tr>
+                     <th colspan="3" style="width:60%">Panel : PT + INR</th>
+                     <th style="width:40%">Tester Comment</th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr>
+                     <th colspan="4">Global Information</th>
+                  </tr>
+                  <tr id="noColor">
+                     <th style="width:20%">Identifier assigned by lab </th>
+                     <th style="width:20%">Text</th>
+                     <th style="width:20%">Code System</th>
+                     <th></th>
+                  </tr>
+                  <tr>
+                     <td>10</td>
+                     <td>PT + INR</td>
+                     <td>99USL</td>
+                     <td style="background-color: #F2F2F2;">
+                        <textarea maxlength="100" rows="1"
+                                  style="width: 100%; height: 100%; border: 1px; background: 1px  #F2F2F2; resize:vertical; overflow-y:hidden "></textarea>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td colspan="4" class="addSpace"></td>
+                  </tr>
+                  <tr>
+                     <th colspan="4">Charge Code Information</th>
+                  </tr>
+                  <tr id="noColor">
+                     <th style="width:20%">CPT4-code</th>
+                     <td colspan="2">85610</td>
+                     <td style="background-color: #F2F2F2;">
+                        <textarea maxlength="100" rows="1"
+                                  style="width: 100%; height: 100%; border: 1px; background: 1px  #F2F2F2; resize:vertical; overflow-y:hidden "></textarea>
+                     </td>
+                  </tr>
+               </tbody>
+            </table>
+            <br></br>
+            <table>
+               <thead>
+                  <tr id="header">
+                     <th colspan="3" style="width:60%">Panel Component
+                        :Prothrombin Time, PT
+                     </th>
+                     <th style="width:40%">Tester Comment</th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr>
+                     <th colspan="4">Global Information</th>
+                  </tr>
+                  <tr id="noColor">
+                     <th style="width:20%">Identifier assigned by lab </th>
+                     <th style="width:20%">Text</th>
+                     <th style="width:20%">Code System</th>
+                     <th></th>
+                  </tr>
+                  <tr>
+                     <td>11</td>
+                     <td>Prothrombin Time, PT</td>
+                     <td>99USL</td>
+                     <td style="background-color: #F2F2F2;">
+                        <textarea maxlength="100" rows="1"
+                                  style="width: 100%; height: 100%; border: 1px; background: 1px  #F2F2F2; resize:vertical; overflow-y:hidden "></textarea>
+                     </td>
+                  </tr>
+               </tbody>
+            </table>
+            <br></br>
+            <table>
+               <thead>
+                  <tr id="header">
+                     <th colspan="3" style="width:60%">Panel Component
+                        :INR
+                     </th>
+                     <th style="width:40%">Tester Comment</th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr>
+                     <th colspan="4">Global Information</th>
+                  </tr>
+                  <tr id="noColor">
+                     <th style="width:20%">Identifier assigned by lab </th>
+                     <th style="width:20%">Text</th>
+                     <th style="width:20%">Code System</th>
+                     <th></th>
+                  </tr>
+                  <tr>
+                     <td>12</td>
+                     <td>INR</td>
+                     <td>99USL</td>
+                     <td style="background-color: #F2F2F2;">
+                        <textarea maxlength="100" rows="1"
+                                  style="width: 100%; height: 100%; border: 1px; background: 1px  #F2F2F2; resize:vertical; overflow-y:hidden "></textarea>
+                     </td>
+                  </tr>
+               </tbody>
+            </table>
+            <br></br>
+         </fieldset>
+         <br></br>
+         <fieldset>
+            <h3>INCORPORATE VERIFICATION</h3>
+            <h3>Incorporate Verification for Prothrombin Time, PT</h3>
+            <table>
+               <thead>
+                  <tr>
+                     <th style="width:20%">Data Element Name</th>
+                     <th style="width:40%">Data</th>
+                     <th style="width:40%">Tester Comment</th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr>
+                     <th>Test Name</th>
+                     <td>Prothrombin Time, PT</td>
+                     <td style="background-color: #F2F2F2;">
+                        <textarea maxlength="100" rows="1"
+                                  style="width: 100%; height: 100%; border: 1px; background: 1px  #F2F2F2; resize:vertical; overflow-y:hidden "></textarea>
+                     </td>
+                  </tr>
+                  <tr>
+                     <th>Test Identifier</th>
+                     <td>11</td>
+                     <td style="background-color: #F2F2F2;">
+                        <textarea maxlength="100" rows="1"
+                                  style="width: 100%; height: 100%; border: 1px; background: 1px  #F2F2F2; resize:vertical; overflow-y:hidden "></textarea>
+                     </td>
+                  </tr>
+                  <tr>
+                     <th>Test Identifier Code System</th>
+                     <td>99USL</td>
+                     <td style="background-color: #F2F2F2;">
+                        <textarea maxlength="100" rows="1"
+                                  style="width: 100%; height: 100%; border: 1px; background: 1px  #F2F2F2; resize:vertical; overflow-y:hidden "></textarea>
+                     </td>
+                  </tr>
+                  <tr>
+                     <th>Status</th>
+                     <td>Active</td>
+                     <td style="background-color: #F2F2F2;">
+                        <textarea maxlength="100" rows="1"
+                                  style="width: 100%; height: 100%; border: 1px; background: 1px  #F2F2F2; resize:vertical; overflow-y:hidden "></textarea>
+                     </td>
+                  </tr>
+               </tbody>
+            </table>
+            <br></br>
+            <table>
+               <thead>
+                  <tr>
+                     <th colspan="4">General Information</th>
+                  </tr>
+                  <tr>
+                     <th style="width:10%">Location</th>
+                     <th style="width:20%">Data Element Name</th>
+                     <th style="width:30%">Data</th>
+                     <th style="width:40%">Tester Comment</th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr>
+                     <th>OM1.2</th>
+                     <th>Producer's Service/Test/Observation ID </th>
+                     <th></th>
+                     <th></th>
+                  </tr>
+                  <tr>
+                     <th style="text-indent: 20px; font-weight:normal">OM1.2.1</th>
+                     <td>Identifier</td>
+                     <td>11</td>
+                     <td style="background-color: #F2F2F2;">
+                        <textarea maxlength="100" rows="1"
+                                  style="width: 100%; height: 100%; border: 1px; background: 1px  #F2F2F2; resize:vertical; overflow-y:hidden "></textarea>
+                     </td>
+                  </tr>
+                  <tr>
+                     <th style="text-indent: 20px; font-weight:normal">OM1.2.2</th>
+                     <td>Text</td>
+                     <td>Prothrombin Time, PT</td>
+                     <td style="background-color: #F2F2F2;">
+                        <textarea maxlength="100" rows="1"
+                                  style="width: 100%; height: 100%; border: 1px; background: 1px  #F2F2F2; resize:vertical; overflow-y:hidden "></textarea>
+                     </td>
+                  </tr>
+                  <tr>
+                     <th style="text-indent: 20px; font-weight:normal">OM1.2.3</th>
+                     <td>Name of Coding System</td>
+                     <td>99USL</td>
+                     <td style="background-color: #F2F2F2;">
+                        <textarea maxlength="100" rows="1"
+                                  style="width: 100%; height: 100%; border: 1px; background: 1px  #F2F2F2; resize:vertical; overflow-y:hidden "></textarea>
+                     </td>
+                  </tr>
+                  <tr>
+                     <th>OM1.5</th>
+                     <th>Producer ID </th>
+                     <th></th>
+                     <th></th>
+                  </tr>
+                  <tr>
+                     <th style="text-indent: 20px; font-weight:normal">OM1.5.2</th>
+                     <td>Text</td>
+                     <td>Century Hospital Clinical Laboratory</td>
+                     <td style="background-color: #F2F2F2;">
+                        <textarea maxlength="100" rows="1"
+                                  style="width: 100%; height: 100%; border: 1px; background: 1px  #F2F2F2; resize:vertical; overflow-y:hidden "></textarea>
+                     </td>
+                  </tr>
+                  <tr>
+                     <th style="text-indent: 0px; font-weight:normal">OM1.11</th>
+                     <td>Preferred Long Name for the Observation</td>
+                     <td>Prothrombin Time</td>
+                     <td style="background-color: #F2F2F2;">
+                        <textarea maxlength="100" rows="1"
+                                  style="width: 100%; height: 100%; border: 1px; background: 1px  #F2F2F2; resize:vertical; overflow-y:hidden "></textarea>
+                     </td>
+                  </tr>
+               </tbody>
+            </table>
+            <br></br>
+            <h3>Incorporate Verification for INR</h3>
+            <table>
+               <thead>
+                  <tr>
+                     <th style="width:20%">Data Element Name</th>
+                     <th style="width:40%">Data</th>
+                     <th style="width:40%">Tester Comment</th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr>
+                     <th>Test Name</th>
+                     <td>INR</td>
+                     <td style="background-color: #F2F2F2;">
+                        <textarea maxlength="100" rows="1"
+                                  style="width: 100%; height: 100%; border: 1px; background: 1px  #F2F2F2; resize:vertical; overflow-y:hidden "></textarea>
+                     </td>
+                  </tr>
+                  <tr>
+                     <th>Test Identifier</th>
+                     <td>12</td>
+                     <td style="background-color: #F2F2F2;">
+                        <textarea maxlength="100" rows="1"
+                                  style="width: 100%; height: 100%; border: 1px; background: 1px  #F2F2F2; resize:vertical; overflow-y:hidden "></textarea>
+                     </td>
+                  </tr>
+                  <tr>
+                     <th>Test Identifier Code System</th>
+                     <td>99USL</td>
+                     <td style="background-color: #F2F2F2;">
+                        <textarea maxlength="100" rows="1"
+                                  style="width: 100%; height: 100%; border: 1px; background: 1px  #F2F2F2; resize:vertical; overflow-y:hidden "></textarea>
+                     </td>
+                  </tr>
+                  <tr>
+                     <th>Status</th>
+                     <td>Active</td>
+                     <td style="background-color: #F2F2F2;">
+                        <textarea maxlength="100" rows="1"
+                                  style="width: 100%; height: 100%; border: 1px; background: 1px  #F2F2F2; resize:vertical; overflow-y:hidden "></textarea>
+                     </td>
+                  </tr>
+               </tbody>
+            </table>
+            <br></br>
+            <table>
+               <thead>
+                  <tr>
+                     <th colspan="4">General Information</th>
+                  </tr>
+                  <tr>
+                     <th style="width:10%">Location</th>
+                     <th style="width:20%">Data Element Name</th>
+                     <th style="width:30%">Data</th>
+                     <th style="width:40%">Tester Comment</th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr>
+                     <th>OM1.2</th>
+                     <th>Producer's Service/Test/Observation ID </th>
+                     <th></th>
+                     <th></th>
+                  </tr>
+                  <tr>
+                     <th style="text-indent: 20px; font-weight:normal">OM1.2.1</th>
+                     <td>Identifier</td>
+                     <td>12</td>
+                     <td style="background-color: #F2F2F2;">
+                        <textarea maxlength="100" rows="1"
+                                  style="width: 100%; height: 100%; border: 1px; background: 1px  #F2F2F2; resize:vertical; overflow-y:hidden "></textarea>
+                     </td>
+                  </tr>
+                  <tr>
+                     <th style="text-indent: 20px; font-weight:normal">OM1.2.2</th>
+                     <td>Text</td>
+                     <td>INR</td>
+                     <td style="background-color: #F2F2F2;">
+                        <textarea maxlength="100" rows="1"
+                                  style="width: 100%; height: 100%; border: 1px; background: 1px  #F2F2F2; resize:vertical; overflow-y:hidden "></textarea>
+                     </td>
+                  </tr>
+                  <tr>
+                     <th style="text-indent: 20px; font-weight:normal">OM1.2.3</th>
+                     <td>Name of Coding System</td>
+                     <td>99USL</td>
+                     <td style="background-color: #F2F2F2;">
+                        <textarea maxlength="100" rows="1"
+                                  style="width: 100%; height: 100%; border: 1px; background: 1px  #F2F2F2; resize:vertical; overflow-y:hidden "></textarea>
+                     </td>
+                  </tr>
+                  <tr>
+                     <th>OM1.5</th>
+                     <th>Producer ID </th>
+                     <th></th>
+                     <th></th>
+                  </tr>
+                  <tr>
+                     <th style="text-indent: 20px; font-weight:normal">OM1.5.2</th>
+                     <td>Text</td>
+                     <td>Century Hospital Clinical Laboratory</td>
+                     <td style="background-color: #F2F2F2;">
+                        <textarea maxlength="100" rows="1"
+                                  style="width: 100%; height: 100%; border: 1px; background: 1px  #F2F2F2; resize:vertical; overflow-y:hidden "></textarea>
+                     </td>
+                  </tr>
+                  <tr>
+                     <th style="text-indent: 0px; font-weight:normal">OM1.11</th>
+                     <td>Preferred Long Name for the Observation</td>
+                     <td>International Normalized Ratio</td>
+                     <td style="background-color: #F2F2F2;">
+                        <textarea maxlength="100" rows="1"
+                                  style="width: 100%; height: 100%; border: 1px; background: 1px  #F2F2F2; resize:vertical; overflow-y:hidden "></textarea>
+                     </td>
+                  </tr>
+               </tbody>
+            </table>
+            <br></br>
+            <h3>Incorporate Verification for PT + INR</h3>
+            <table>
+               <thead>
+                  <tr>
+                     <th style="width:20%">Data Element Name</th>
+                     <th style="width:40%">Data</th>
+                     <th style="width:40%">Tester Comment</th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr>
+                     <th>Test Name</th>
+                     <td>PT + INR</td>
+                     <td style="background-color: #F2F2F2;">
+                        <textarea maxlength="100" rows="1"
+                                  style="width: 100%; height: 100%; border: 1px; background: 1px  #F2F2F2; resize:vertical; overflow-y:hidden "></textarea>
+                     </td>
+                  </tr>
+                  <tr>
+                     <th>Test Identifier</th>
+                     <td>10</td>
+                     <td style="background-color: #F2F2F2;">
+                        <textarea maxlength="100" rows="1"
+                                  style="width: 100%; height: 100%; border: 1px; background: 1px  #F2F2F2; resize:vertical; overflow-y:hidden "></textarea>
+                     </td>
+                  </tr>
+                  <tr>
+                     <th>Test Identifier Code System</th>
+                     <td>99USL</td>
+                     <td style="background-color: #F2F2F2;">
+                        <textarea maxlength="100" rows="1"
+                                  style="width: 100%; height: 100%; border: 1px; background: 1px  #F2F2F2; resize:vertical; overflow-y:hidden "></textarea>
+                     </td>
+                  </tr>
+                  <tr>
+                     <th>Status</th>
+                     <td>Active</td>
+                     <td style="background-color: #F2F2F2;">
+                        <textarea maxlength="100" rows="1"
+                                  style="width: 100%; height: 100%; border: 1px; background: 1px  #F2F2F2; resize:vertical; overflow-y:hidden "></textarea>
+                     </td>
+                  </tr>
+               </tbody>
+            </table>
+            <br></br>
+            <table>
+               <thead>
+                  <tr>
+                     <th colspan="4">General Information</th>
+                  </tr>
+                  <tr>
+                     <th style="width:10%">Location</th>
+                     <th style="width:20%">Data Element Name</th>
+                     <th style="width:30%">Data</th>
+                     <th style="width:40%">Tester Comment</th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr>
+                     <th>OM1.2</th>
+                     <th>Producer's Service/Test/Observation ID </th>
+                     <th></th>
+                     <th></th>
+                  </tr>
+                  <tr>
+                     <th style="text-indent: 20px; font-weight:normal">OM1.2.1</th>
+                     <td>Identifier</td>
+                     <td>10</td>
+                     <td style="background-color: #F2F2F2;">
+                        <textarea maxlength="100" rows="1"
+                                  style="width: 100%; height: 100%; border: 1px; background: 1px  #F2F2F2; resize:vertical; overflow-y:hidden "></textarea>
+                     </td>
+                  </tr>
+                  <tr>
+                     <th style="text-indent: 20px; font-weight:normal">OM1.2.2</th>
+                     <td>Text</td>
+                     <td>PT + INR</td>
+                     <td style="background-color: #F2F2F2;">
+                        <textarea maxlength="100" rows="1"
+                                  style="width: 100%; height: 100%; border: 1px; background: 1px  #F2F2F2; resize:vertical; overflow-y:hidden "></textarea>
+                     </td>
+                  </tr>
+                  <tr>
+                     <th style="text-indent: 20px; font-weight:normal">OM1.2.3</th>
+                     <td>Name of Coding System</td>
+                     <td>99USL</td>
+                     <td style="background-color: #F2F2F2;">
+                        <textarea maxlength="100" rows="1"
+                                  style="width: 100%; height: 100%; border: 1px; background: 1px  #F2F2F2; resize:vertical; overflow-y:hidden "></textarea>
+                     </td>
+                  </tr>
+                  <tr>
+                     <th>OM1.5</th>
+                     <th>Producer ID </th>
+                     <th></th>
+                     <th></th>
+                  </tr>
+                  <tr>
+                     <th style="text-indent: 20px; font-weight:normal">OM1.5.2</th>
+                     <td>Text</td>
+                     <td>Century Hospital Clinical Laboratory</td>
+                     <td style="background-color: #F2F2F2;">
+                        <textarea maxlength="100" rows="1"
+                                  style="width: 100%; height: 100%; border: 1px; background: 1px  #F2F2F2; resize:vertical; overflow-y:hidden "></textarea>
+                     </td>
+                  </tr>
+                  <tr>
+                     <th style="text-indent: 0px; font-weight:normal">OM1.11</th>
+                     <td>Preferred Long Name for the Observation</td>
+                     <td>Prothrombin Time and International Normalized Ratio Panel</td>
+                     <td style="background-color: #F2F2F2;">
+                        <textarea maxlength="100" rows="1"
+                                  style="width: 100%; height: 100%; border: 1px; background: 1px  #F2F2F2; resize:vertical; overflow-y:hidden "></textarea>
+                     </td>
+                  </tr>
+               </tbody>
+            </table>
+            <br></br>
+            <table>
+               <thead>
+                  <tr>
+                     <th colspan="4">Observation Batteries(sets)</th>
+                  </tr>
+                  <tr>
+                     <th style="width:10%">Location</th>
+                     <th style="width:20%">Data Element Name</th>
+                     <th style="width:30%">Data</th>
+                     <th style="width:40%">Tester Comment</th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr>
+                     <th>OM5.2[1]</th>
+                     <th>Test/Observations Included Within an Ordered Test Battery</th>
+                     <th></th>
+                     <th></th>
+                  </tr>
+                  <tr>
+                     <th style="text-indent: 20px; font-weight:normal">OM5.2.1[1]</th>
+                     <td>Identifier</td>
+                     <td>11</td>
+                     <td style="background-color: #F2F2F2;">
+                        <textarea maxlength="100" rows="1"
+                                  style="width: 100%; height: 100%; border: 1px; background: 1px  #F2F2F2; resize:vertical; overflow-y:hidden "></textarea>
+                     </td>
+                  </tr>
+                  <tr>
+                     <th style="text-indent: 20px; font-weight:normal">OM5.2.2[1]</th>
+                     <td>Text</td>
+                     <td>Prothrombin Time, PT</td>
+                     <td style="background-color: #F2F2F2;">
+                        <textarea maxlength="100" rows="1"
+                                  style="width: 100%; height: 100%; border: 1px; background: 1px  #F2F2F2; resize:vertical; overflow-y:hidden "></textarea>
+                     </td>
+                  </tr>
+                  <tr>
+                     <th style="text-indent: 20px; font-weight:normal">OM5.2.3[1]</th>
+                     <td>Name of Coding System</td>
+                     <td>99USL</td>
+                     <td style="background-color: #F2F2F2;">
+                        <textarea maxlength="100" rows="1"
+                                  style="width: 100%; height: 100%; border: 1px; background: 1px  #F2F2F2; resize:vertical; overflow-y:hidden "></textarea>
+                     </td>
+                  </tr>
+                  <tr>
+                     <th>OM5.2[2]</th>
+                     <th>Test/Observations Included Within an Ordered Test Battery</th>
+                     <th></th>
+                     <th></th>
+                  </tr>
+                  <tr>
+                     <th style="text-indent: 20px; font-weight:normal">OM5.2.1[2]</th>
+                     <td>Identifier</td>
+                     <td>12</td>
+                     <td style="background-color: #F2F2F2;">
+                        <textarea maxlength="100" rows="1"
+                                  style="width: 100%; height: 100%; border: 1px; background: 1px  #F2F2F2; resize:vertical; overflow-y:hidden "></textarea>
+                     </td>
+                  </tr>
+                  <tr>
+                     <th style="text-indent: 20px; font-weight:normal">OM5.2.2[2]</th>
+                     <td>Text</td>
+                     <td>INR</td>
+                     <td style="background-color: #F2F2F2;">
+                        <textarea maxlength="100" rows="1"
+                                  style="width: 100%; height: 100%; border: 1px; background: 1px  #F2F2F2; resize:vertical; overflow-y:hidden "></textarea>
+                     </td>
+                  </tr>
+                  <tr>
+                     <th style="text-indent: 20px; font-weight:normal">OM5.2.3[2]</th>
+                     <td>Name of Coding System</td>
+                     <td>99USL</td>
+                     <td style="background-color: #F2F2F2;">
+                        <textarea maxlength="100" rows="1"
+                                  style="width: 100%; height: 100%; border: 1px; background: 1px  #F2F2F2; resize:vertical; overflow-y:hidden "></textarea>
+                     </td>
+                  </tr>
+               </tbody>
+            </table>
+            <br></br>
+            <table>
+               <thead>
+                  <tr>
+                     <th colspan="4">Charge Description</th>
+                  </tr>
+                  <tr>
+                     <th style="width:10%">Location</th>
+                     <th style="width:20%">Data Element Name</th>
+                     <th style="width:30%">Data</th>
+                     <th style="width:40%">Tester Comment</th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr>
+                     <th style="text-indent: 0px; font-weight:normal">CDM.3</th>
+                     <td>Identifier</td>
+                     <td>N/A</td>
+                     <td style="background-color: #F2F2F2;">
+                        <textarea maxlength="100" rows="1"
+                                  style="width: 100%; height: 100%; border: 1px; background: 1px  #F2F2F2; resize:vertical; overflow-y:hidden "></textarea>
+                     </td>
+                  </tr>
+                  <tr>
+                     <th>CDM.7</th>
+                     <th>Procedure Code</th>
+                     <th></th>
+                     <th></th>
+                  </tr>
+                  <tr>
+                     <th style="text-indent: 20px; font-weight:normal">CDM.7.1</th>
+                     <td>Identifier</td>
+                     <td>85610</td>
+                     <td style="background-color: #F2F2F2;">
+                        <textarea maxlength="100" rows="1"
+                                  style="width: 100%; height: 100%; border: 1px; background: 1px  #F2F2F2; resize:vertical; overflow-y:hidden "></textarea>
+                     </td>
+                  </tr>
+                  <tr>
+                     <th style="text-indent: 20px; font-weight:normal">CDM.7.2</th>
+                     <td>Text</td>
+                     <td>Prothrombin Time</td>
+                     <td style="background-color: #F2F2F2;">
+                        <textarea maxlength="100" rows="1"
+                                  style="width: 100%; height: 100%; border: 1px; background: 1px  #F2F2F2; resize:vertical; overflow-y:hidden "></textarea>
+                     </td>
+                  </tr>
+               </tbody>
+            </table>
+            <br></br>
+            <table>
+               <thead>
+                  <tr>
+                     <th colspan="4">Payer Information</th>
+                  </tr>
+                  <tr>
+                     <th style="width:10%">Location</th>
+                     <th style="width:20%">Data Element Name</th>
+                     <th style="width:30%">Data</th>
+                     <th style="width:40%">Tester Comment</th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr>
+                     <th>PM1.1</th>
+                     <th>Health Plan ID</th>
+                     <th></th>
+                     <th></th>
+                  </tr>
+                  <tr>
+                     <th style="text-indent: 20px; font-weight:normal">PM1.1.2</th>
+                     <td>Text</td>
+                     <td>Healthplan1</td>
+                     <td style="background-color: #F2F2F2;">
+                        <textarea maxlength="100" rows="1"
+                                  style="width: 100%; height: 100%; border: 1px; background: 1px  #F2F2F2; resize:vertical; overflow-y:hidden "></textarea>
+                     </td>
+                  </tr>
+                  <tr>
+                     <th>PM1.2</th>
+                     <th>Insurance Company ID</th>
+                     <th></th>
+                     <th></th>
+                  </tr>
+                  <tr>
+                     <th style="text-indent: 20px; font-weight:normal">PM1.2.1</th>
+                     <td>ID Number</td>
+                     <td>SMCA2</td>
+                     <td style="background-color: #F2F2F2;">
+                        <textarea maxlength="100" rows="1"
+                                  style="width: 100%; height: 100%; border: 1px; background: 1px  #F2F2F2; resize:vertical; overflow-y:hidden "></textarea>
+                     </td>
+                  </tr>
+                  <tr>
+                     <th>PM1.2.4</th>
+                     <th>Assiging Authority</th>
+                     <th></th>
+                     <th></th>
+                  </tr>
+                  <tr>
+                     <th style="text-indent: 20px; font-weight:normal">PM1.2.4.1</th>
+                     <td>Namespace ID</td>
+                     <td>NIST EHR</td>
+                     <td style="background-color: #F2F2F2;">
+                        <textarea maxlength="100" rows="1"
+                                  style="width: 100%; height: 100%; border: 1px; background: 1px  #F2F2F2; resize:vertical; overflow-y:hidden "></textarea>
+                     </td>
+                  </tr>
+               </tbody>
+            </table>
+            <br></br>
+         </fieldset>
+      </div>
+   </body>
+</html>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<TestStep id="MFK_0.0_3.1-MFK_M04_GU" name="MFK_0.0_3.1-MFK_M04_GU - Smoke_M04_SysAck">
+    <Message>
+        <Segment name="MSH">
+            <Element location="MSH.1[1]" dataElement="Field Separator" data="|" categorization="IG Fixed Data"/>
+            <Element location="MSH.2[1]" dataElement="Encoding Characters" data="^~\&amp;#" categorization="IG Fixed Data"/>
+            <Element location="MSH.3[1]" dataElement="Sending Application" data="" categorization=""/>
+            <Element location="MSH.3[1].1" dataElement="Namespace ID" data="" categorization=""/>
+            <Element location="MSH.3[1].2" dataElement="Universal ID" data="" categorization=""/>
+            <Element location="MSH.3[1].3" dataElement="Universal ID Type" data="" categorization=""/>
+            <Element location="MSH.4[1]" dataElement="Sending Facility" data="" categorization=""/>
+            <Element location="MSH.4[1].1" dataElement="Namespace ID" data="" categorization=""/>
+            <Element location="MSH.4[1].2" dataElement="Universal ID" data="2.16.840.1.113883.3.72.5.23" categorization="Configurable Data"/>
+            <Element location="MSH.4[1].3" dataElement="Universal ID Type" data="ISO" categorization="IG Fixed Data"/>
+            <Element location="MSH.6[1]" dataElement="Receiving Facility" data="" categorization=""/>
+            <Element location="MSH.6[1].1" dataElement="Namespace ID" data="" categorization=""/>
+            <Element location="MSH.6[1].2" dataElement="Universal ID" data="" categorization=""/>
+            <Element location="MSH.6[1].3" dataElement="Universal ID Type" data="" categorization=""/>
+            <Element location="MSH.7[1]" dataElement="Date/Time Of Message" data="" categorization=""/>
+            <Element location="MSH.7[1].1" dataElement="Time" data="20130219180035-0800" categorization="System Generated"/>
+            <Element location="MSH.9[1]" dataElement="Message Type" data="" categorization=""/>
+            <Element location="MSH.9[1].1" dataElement="Message Code" data="MFK" categorization="IG Fixed Data"/>
+            <Element location="MSH.9[1].2" dataElement="Trigger Event" data="M04" categorization="IG Fixed Data"/>
+            <Element location="MSH.9[1].3" dataElement="Message Structure" data="MFK_M01" categorization="IG Fixed Data"/>
+            <Element location="MSH.10[1]" dataElement="Message Control ID" data="MFK_0.0_3.1-MFK_M04_GU" categorization="System Generated"/>
+            <Element location="MSH.11[1]" dataElement="Processing ID" data="" categorization=""/>
+            <Element location="MSH.11[1].1" dataElement="Processing ID" data="D" categorization="Changeable Data"/>
+            <Element location="MSH.12[1]" dataElement="VersionID" data="" categorization=""/>
+            <Element location="MSH.12[1].1" dataElement="Version ID" data="2.5.1" categorization="IG Fixed Data"/>
+            <Element location="MSH.21[1]" dataElement="Message Profile Identifier" data="" categorization=""/>
+            <Element location="MSH.21[1].1" dataElement="Entity Identifier" data="EDOS_GU_RESPONSE_PROFILE" categorization="Test Case Fixed Data"/>
+            <Element location="MSH.21[1].2" dataElement="Namespace ID" data="" categorization=""/>
+            <Element location="MSH.21[1].3" dataElement="Universal ID" data="2.16.840.1.113883.9.75" categorization="Test Case Fixed Data"/>
+            <Element location="MSH.21[1].4" dataElement="Universal ID Type" data="ISO" categorization="IG Fixed Data"/>
+            <Element location="MSH.21[2]" dataElement="Message Profile Identifier" data="" categorization=""/>
+            <Element location="MSH.21[2].1" dataElement="Entity Identifier" data="" categorization=""/>
+            <Element location="MSH.21[2].2" dataElement="Namespace ID" data="" categorization=""/>
+            <Element location="MSH.21[2].3" dataElement="Universal ID" data="" categorization=""/>
+            <Element location="MSH.21[2].4" dataElement="Universal ID Type" data="" categorization=""/>
+        </Segment>
+        <Segment name="MSA">
+            <Element location="MSA.1[1]" dataElement="Acknowledgement Code" data="CA" categorization="Test Case Fixed Data"/>
+            <Element location="MSA.2[1]" dataElement="Message Control ID" data="EDOS_0.0_3.1-M04_GU" categorization="Test Case Fixed Data"/>
+        </Segment>
+        <Segment name="MFI">
+            <Element location="MFI.1[1]" dataElement="Master File Identifier" data="" categorization=""/>
+            <Element location="MFI.1[1].1" dataElement="Identifier" data="CDM" categorization="IG Fixed Data"/>
+            <Element location="MFI.1[1].2" dataElement="Text" data="" categorization=""/>
+            <Element location="MFI.1[1].3" dataElement="Name of Coding System" data="HL70175" categorization="IG Fixed Data"/>
+            <Element location="MFI.1[1].7" dataElement="Coding System Version ID" data="" categorization=""/>
+            <Element location="MFI.1[1].8" dataElement="Alternate Coding System Version ID" data="" categorization=""/>
+            <Element location="MFI.3[1]" dataElement="File-Level Event Code" data="REP" categorization="Test Case Fixed Data"/>
+            <Element location="MFI.6[1]" dataElement="Response Level Code" data="NE" categorization="IG Fixed Data"/>
+        </Segment>
+    </Message>
+</TestStep>

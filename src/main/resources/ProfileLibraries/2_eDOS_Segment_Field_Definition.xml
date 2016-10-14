@@ -1,0 +1,488 @@
+<SegmentLibrary>
+<!-- V2_IG_LTCF_R2_DSTU_R1_2013NOV -->
+	<!-- MSH EDOS GU -->
+	<Segment Name="MSH" flavor="EDOS_GU" LongName="Message Header">
+		<Field Name="Field Separator" Usage="R" Min="1" Max="1" Datatype="ST" MinLength="1" MaxLength="1" ItemNo="00001"/>
+		<Field Name="Encoding Characters" Usage="R" Min="1" Max="1" Datatype="ST" MinLength="1" MaxLength="4" ItemNo="00002"/>
+		<Field Name="Sending Application" Usage="RE" Min="0" Max="1" Datatype="HD_GU" MinLength="1" MaxLength="227" Table="0361" ItemNo="00003"/>
+		<Field Name="Sending Facility" Usage="R" Min="1" Max="1" Datatype="HD_GU" MinLength="1" MaxLength="227" Table="0362" ItemNo="00004"/>
+		<Field Name="Receiving Application" Usage="O" Min="0" Max="1" Datatype="HD" MinLength="1" MaxLength="227" Table="0361" ItemNo="00005"/>
+		<Field Name="Receiving Facility" Usage="RE" Min="0" Max="1" Datatype="HD_GU" MinLength="1" MaxLength="227" Table="0362" ItemNo="00006"/>
+		<Field Name="Date/Time Of Message" Usage="R" Min="1" Max="1" Datatype="TS_1" MinLength="1" MaxLength="26" ItemNo="00007"/>
+		<Field Name="Security" Usage="O" Min="0" Max="1" Datatype="ST" MinLength="1" MaxLength="40" ItemNo="00008"/>
+		<Field Name="Message Type" Usage="R" Min="1" Max="1" Datatype="MSG_EDOS" MinLength="1" MaxLength="15" ItemNo="00009"/>
+		<Field Name="Message Control ID" Usage="R" Min="1" Max="1" Datatype="ST" MinLength="1" MaxLength="20" ItemNo="00010"/>
+		<Field Name="Processing ID" Usage="R" Min="1" Max="1" Datatype="PT_EDOS" MinLength="1" MaxLength="3" ItemNo="00011"/>
+		<Field Name="Version ID" Usage="R" Min="1" Max="1" Datatype="VID_EDOS" MinLength="1" MaxLength="60" ItemNo="00012"/>
+		<Field Name="Sequence Number" Usage="O" Min="0" Max="1" Datatype="NM" MinLength="1" MaxLength="15" ItemNo="00013"/>
+		<Field Name="Continuation Pointer" Usage="O" Min="0" Max="1" Datatype="ST" MinLength="1" MaxLength="180" ItemNo="00014"/>
+		<Field Name="Accept Acknowledgment Type" Usage="R" Min="1" Max="1" Datatype="ID" MinLength="1" MaxLength="2" Table="0155" ItemNo="00015"/>
+		<Field Name="Application Acknowledgment Type" Usage="R" Min="1" Max="1" Datatype="ID" MinLength="1" MaxLength="2" Table="0155" ItemNo="00016"/>
+		<Field Name="Country Code" Usage="O" Min="0" Max="1" Datatype="ID" MinLength="1" MaxLength="3" Table="0399" ItemNo="00017"/>
+		<Field Name="Character Set" Usage="O" Min="0" Max="*" Datatype="ID" MinLength="1" MaxLength="16" Table="0211" ItemNo="00692"/>
+		<Field Name="Principal Language Of Message" Usage="O" Min="0" Max="1" Datatype="CE" MinLength="1" MaxLength="250" ItemNo="00693"/>
+		<Field Name="Alternate Character Set Handling Scheme" Usage="O" Min="0" Max="1" Datatype="ID" MinLength="1" MaxLength="20" Table="0356" ItemNo="01317"/>
+		<Field Name="Message Profile Identifier" Usage="R" Min="1" Max="*" Datatype="EI_GU" MinLength="1" MaxLength="427" ItemNo="01598"/>
+	</Segment>
+	<!-- MSH EDOS NG -->
+	<Segment Name="MSH" flavor="EDOS_NG" LongName="Message Header">
+		<Field Name="Field Separator" Usage="R" Min="1" Max="1" Datatype="ST" MinLength="1" MaxLength="1" ItemNo="00001"/>
+		<Field Name="Encoding Characters" Usage="R" Min="1" Max="1" Datatype="ST" MinLength="1" MaxLength="4" ItemNo="00002"/>
+		<Field Name="Sending Application" Usage="RE" Min="0" Max="1" Datatype="HD_NG" MinLength="1" MaxLength="227" Table="0361" ItemNo="00003"/>
+		<Field Name="Sending Facility" Usage="R" Min="1" Max="1" Datatype="HD_NG" MinLength="1" MaxLength="227" Table="0362" ItemNo="00004"/>
+		<Field Name="Receiving Application" Usage="O" Min="0" Max="1" Datatype="HD" MinLength="1" MaxLength="227" Table="0361" ItemNo="00005"/>
+		<Field Name="Receiving Facility" Usage="RE" Min="0" Max="1" Datatype="HD_NG" MinLength="1" MaxLength="227" Table="0362" ItemNo="00006"/>
+		<Field Name="Date/Time Of Message" Usage="R" Min="1" Max="1" Datatype="TS_1" MinLength="1" MaxLength="26" ItemNo="00007"/>
+		<Field Name="Security" Usage="O" Min="0" Max="1" Datatype="ST" MinLength="1" MaxLength="40" ItemNo="00008"/>
+		<Field Name="Message Type" Usage="R" Min="1" Max="1" Datatype="MSG_EDOS" MinLength="1" MaxLength="15" ItemNo="00009"/>
+		<Field Name="Message Control ID" Usage="R" Min="1" Max="1" Datatype="ST" MinLength="1" MaxLength="20" ItemNo="00010"/>
+		<Field Name="Processing ID" Usage="R" Min="1" Max="1" Datatype="PT_EDOS" MinLength="1" MaxLength="3" ItemNo="00011"/>
+		<Field Name="Version ID" Usage="R" Min="1" Max="1" Datatype="VID_EDOS" MinLength="1" MaxLength="60" ItemNo="00012"/>
+		<Field Name="Sequence Number" Usage="O" Min="0" Max="1" Datatype="NM" MinLength="1" MaxLength="15" ItemNo="00013"/>
+		<Field Name="Continuation Pointer" Usage="O" Min="0" Max="1" Datatype="ST" MinLength="1" MaxLength="180" ItemNo="00014"/>
+		<Field Name="Accept Acknowledgment Type" Usage="R" Min="1" Max="1" Datatype="ID" MinLength="1" MaxLength="2" Table="0155" ItemNo="00015"/>
+		<Field Name="Application Acknowledgment Type" Usage="R" Min="1" Max="1" Datatype="ID" MinLength="1" MaxLength="2" Table="0155" ItemNo="00016"/>
+		<Field Name="Country Code" Usage="O" Min="0" Max="1" Datatype="ID" MinLength="1" MaxLength="3" Table="0399" ItemNo="00017"/>
+		<Field Name="Character Set" Usage="O" Min="0" Max="*" Datatype="ID" MinLength="1" MaxLength="16" Table="0211" ItemNo="00692"/>
+		<Field Name="Principal Language Of Message" Usage="O" Min="0" Max="1" Datatype="CE" MinLength="1" MaxLength="250" ItemNo="00693"/>
+		<Field Name="Alternate Character Set Handling Scheme" Usage="O" Min="0" Max="1" Datatype="ID" MinLength="1" MaxLength="20" Table="0356" ItemNo="01317"/>
+		<Field Name="Message Profile Identifier" Usage="R" Min="1" Max="*" Datatype="EI_GU" MinLength="1" MaxLength="427" ItemNo="01598"/>
+	</Segment>
+	<!-- MSA EDOS -->
+	<Segment Name="MSA" flavor="EDOS" LongName="Message Acknowledgment">
+		<Field Name="Acknowledgment Code" Usage="R" Min="1" Max="1" Datatype="ID" MinLength="1" MaxLength="2" Table="0008" ItemNo="00018"/>
+		<Field Name="Message Control ID" Usage="R" Min="1" Max="1" Datatype="ST" MinLength="1" MaxLength="20" ItemNo="00010"/>
+		<Field Name="Text Message" Usage="X" Min="0" Max="1" Datatype="ST" MinLength="1" MaxLength="80" ItemNo="00020"/>
+		<Field Name="Expected Sequence Number" Usage="O" Min="0" Max="1" Datatype="NM" MinLength="1" MaxLength="15" ItemNo="00021"/>
+		<Field Name="Delayed Acknowledgment Type" Usage="X" Min="0" Max="1" Datatype="NUL" MinLength="1" MaxLength="0" ItemNo="00022"/>
+		<Field Name="Error Condition" Usage="X" Min="0" Max="1" Datatype="CE" MinLength="1" MaxLength="250" Table="0357" ItemNo="00023"/>
+	</Segment>
+	<!-- ERR EDOS -->
+	<Segment Name="ERR" flavor="EDOS" LongName="Error">
+		<Field Name="Error Code and Location" Usage="X" Min="0" Max="*" Datatype="ELD" MinLength="1" MaxLength="493" ItemNo="00024"/>
+		<Field Name="Error Location" Usage="O" Min="0" Max="*" Datatype="ERL" MinLength="1" MaxLength="18" ItemNo="01812"/>
+		<Field Name="HL7 Error Code" Usage="R" Min="1" Max="1" Datatype="CWE_EDOS" MinLength="1" MaxLength="705" Table="0357" ItemNo="01813"/>
+		<Field Name="Severity" Usage="R" Min="1" Max="1" Datatype="ID" MinLength="1" MaxLength="2" Table="0516" ItemNo="01814"/>
+		<Field Name="Application Error Code" Usage="O" Min="0" Max="1" Datatype="CWE" MinLength="1" MaxLength="705" Table="0533" ItemNo="01815"/>
+		<Field Name="Application Error Parameter" Usage="O" Min="0" Max="10" Datatype="ST" MinLength="1" MaxLength="80" ItemNo="01816"/>
+		<Field Name="Diagnostic Information" Usage="RE" Min="0" Max="1" Datatype="TX" MinLength="1" MaxLength="2048" ItemNo="01817"/>
+		<Field Name="User Message" Usage="O" Min="0" Max="1" Datatype="TX" MinLength="1" MaxLength="250" ItemNo="01818"/>
+		<Field Name="Inform Person Indicator" Usage="O" Min="0" Max="*" Datatype="IS" MinLength="1" MaxLength="20" Table="0517" ItemNo="01819"/>
+		<Field Name="Override Type" Usage="O" Min="0" Max="1" Datatype="CWE" MinLength="1" MaxLength="705" Table="0518" ItemNo="01820"/>
+		<Field Name="Override Reason Code" Usage="O" Min="0" Max="*" Datatype="CWE" MinLength="1" MaxLength="705" Table="0519" ItemNo="01821"/>
+		<Field Name="Help Desk Contact Point" Usage="O" Min="0" Max="*" Datatype="XTN" MinLength="1" MaxLength="652" ItemNo="01822"/>
+	</Segment>
+	<!-- MFI EDOS -->
+	<Segment Name="MFI" flavor="EDOS" LongName="Master File Identification">
+		<Field Name="Master File Identifier" Usage="R" Min="1" Max="1" Datatype="CWE_EDOS" MinLength="1" MaxLength="250" Table="0175" ItemNo="00658"/>
+		<Field Name="Master File Application Identifier" Usage="O" Min="0" Max="1" Datatype="HD" MinLength="1" MaxLength="180" Table="0361" ItemNo="00659"/>
+		<Field Name="File-Level Event Code" Usage="R" Min="1" Max="1" Datatype="ID" MinLength="1" MaxLength="3" Table="0178" ItemNo="00660"/>
+		<Field Name="Entered Date/Time" Usage="O" Min="0" Max="1" Datatype="TS" MinLength="1" MaxLength="26" ItemNo="00661"/>
+		<Field Name="Effective Date/Time" Usage="X" Min="0" Max="1" Datatype="TS" MinLength="1" MaxLength="26" ItemNo="00662"/>
+		<Field Name="Response Level Code" Usage="R" Min="1" Max="1" Datatype="ID" MinLength="1" MaxLength="2" Table="0179" ItemNo="00663"/>
+	</Segment>
+	<!-- MFE EDOS -->
+	<Segment Name="MFE" flavor="EDOS" LongName="Master File Entry">
+		<Field Name="Record-Level Event Code" Usage="R" Min="1" Max="1" Datatype="ID" MinLength="1" MaxLength="3" Table="0180_EDOS" ItemNo="00664"/>
+		<Field Name="MFN Control ID" Usage="C" Min="0" Max="1" Datatype="ST" MinLength="1" MaxLength="20" ItemNo="00665"/>
+		<Field Name="Effective Date/Time" Usage="R" Min="1" Max="1" Datatype="TS_1" MinLength="1" MaxLength="26" ItemNo="00662"/>
+		<Field Name="Primary Key Value - MFE" Usage="R" Min="1" Max="1" Datatype="CWE_RC" MinLength="1" MaxLength="200" Table="9999" ItemNo="00667"/>
+		<Field Name="Primary Key Value Type" Usage="R" Min="1" Max="1" Datatype="ID" MinLength="1" MaxLength="3" ItemNo="01319"/>
+	</Segment>
+	
+	<!-- OM1 M08 EDOS -->
+	<Segment Name="OM1" flavor="EDOS_M08" LongName="General Segment">
+		<Field Name="Sequence Number - Test/Observation Master File" Usage="R" Min="1" Max="1" Datatype="NM" MinLength="1" MaxLength="4" ItemNo="00586">
+			<!-- conformance statement for sequence -->
+			<ConformanceStatement Profile="Base" id="NIST-eDOS-XX">
+				<EnglishDescription>OM1.1 (Sequence Number - Test/Observation Master File) SHALL be valued sequentially starting with the value '1' within the message</EnglishDescription>
+					<Assertion>
+						<SequenceID location="." location1=".."/>
+					</Assertion>
+			</ConformanceStatement>
+		</Field>
+		<Field Name="Producer's Service/Test/Observation ID" Usage="R" Min="1" Max="1" Datatype="CWE_RC" MinLength="1" MaxLength="250" Table="9999" ItemNo="00587"/>
+		<Field Name="Permitted Data Types" Usage="O" Min="0" Max="*" Datatype="ID" MinLength="1" MaxLength="12" Table="0125" ItemNo="00588"/>
+		<Field Name="Specimen Required" Usage="R" Min="1" Max="1" Datatype="ID" MinLength="1" MaxLength="1" Table="0136" ItemNo="00589"/>
+		<Field Name="Producer ID" Usage="R" Min="1" Max="1" Datatype="CWE_EDOS" MinLength="1" MaxLength="250" Table="9999" ItemNo="00590"/>
+		<Field Name="Observation Description" Usage="O" Min="0" Max="1" Datatype="TX" MinLength="1" MaxLength="200" ItemNo="00591"/>
+		<Field Name="Other Service/Test/Observation IDs for the Observation" Usage="RE" Min="0" Max="*" Datatype="CWE_RC" MinLength="1" MaxLength="250" Table="9999" ItemNo="00592"/>
+		<Field Name="Other Names" Usage="X" Min="1" Max="*" Datatype="ST" MinLength="1" MaxLength="200" ItemNo="00593"/>
+		<Field Name="Preferred Report Name for the Observation" Usage="RE" Min="0" Max="1" Datatype="ST" MinLength="1" MaxLength="30" ItemNo="00594"/>
+		<Field Name="Preferred Short Name or Mnemonic for Observation" Usage="C" Min="0" Max="1" Datatype="ST" MinLength="1" MaxLength="8" ItemNo="00595"/>
+		<Field Name="Preferred Long Name for the Observation" Usage="C" Min="0" Max="1" Datatype="ST" MinLength="1" MaxLength="200" ItemNo="00596"/>
+		<Field Name="Orderability" Usage="R" Min="1" Max="1" Datatype="ID" MinLength="1" MaxLength="1" Table="0136" ItemNo="00597"/>
+		<Field Name="Identity of Instrument Used to Perform this Study" Usage="O" Min="0" Max="*" Datatype="CE" MinLength="1" MaxLength="250" Table="9999" ItemNo="00598"/>
+		<Field Name="Coded Representation of Method" Usage="O" Min="0" Max="*" Datatype="CE" MinLength="1" MaxLength="250" Table="9999" ItemNo="00599"/>
+		<Field Name="Portable Device Indicator" Usage="O" Min="0" Max="1" Datatype="ID" MinLength="1" MaxLength="1" Table="0136" ItemNo="00600"/>
+		<Field Name="Observation Producing Department/Section" Usage="X" Min="0" Max="*" Datatype="CE" MinLength="1" MaxLength="250" Table="9999" ItemNo="00601"/>
+		<Field Name="Telephone Number of Section" Usage="O" Min="0" Max="1" Datatype="XTN" MinLength="1" MaxLength="250" ItemNo="00602"/>
+		<Field Name="Nature of Service/Test/Observation" Usage="R" Min="1" Max="1" Datatype="IS" MinLength="1" MaxLength="1" Table="0174" ItemNo="00603"/>
+		<Field Name="Report Subheader" Usage="O" Min="0" Max="1" Datatype="CE" MinLength="1" MaxLength="250" Table="9999" ItemNo="00604"/>
+		<Field Name="Report Display Order" Usage="O" Min="0" Max="1" Datatype="ST" MinLength="1" MaxLength="20" ItemNo="00605"/>
+		<Field Name="Date/Time Stamp for any change in Definition for the Observation" Usage="O" Min="0" Max="1" Datatype="TS" MinLength="1" MaxLength="26" ItemNo="00606"/>
+		<Field Name="Effective Date/Time of Change" Usage="O" Min="0" Max="1" Datatype="DTM" MinLength="1" MaxLength="26" ItemNo="00607"/>
+		<Field Name="Typical Turn-Around Time" Usage="RE" Min="0" Max="1" Datatype="NM" MinLength="1" MaxLength="20" ItemNo="00608"/>
+		<Field Name="Processing Time" Usage="O" Min="0" Max="1" Datatype="NM" MinLength="1" MaxLength="20" ItemNo="00609"/>
+		<Field Name="Processing Priority" Usage="O" Min="0" Max="*" Datatype="ID" MinLength="1" MaxLength="40" Table="0168" ItemNo="00610"/>
+		<Field Name="Reporting Priority" Usage="O" Min="0" Max="1" Datatype="ID" MinLength="1" MaxLength="5" Table="0169" ItemNo="00611"/>
+		<Field Name="Outside Site(s) Where Observation may be Performed" Usage="RE" Min="0" Max="*" Datatype="CWE_EDOS" MinLength="1" MaxLength="250" Table="9999" ItemNo="00612"/>
+		<Field Name="Address of Outside Site(s)" Usage="C" Min="0" Max="*" Datatype="XAD_EDOS" MinLength="1" MaxLength="250" ItemNo="00613"/>
+		<Field Name="Phone Number of Outside Site" Usage="O" Min="0" Max="1" Datatype="XTN" MinLength="1" MaxLength="250" ItemNo="00614"/>
+		<Field Name="Confidentiality Code" Usage="O" Min="0" Max="1" Datatype="CWE" MinLength="1" MaxLength="250" Table="0177" ItemNo="00615"/>
+		<Field Name="Observations Required to Interpret the Observation" Usage="RE" Min="0" Max="*" Datatype="CWE_EDOS" MinLength="1" MaxLength="250" Table="9999" ItemNo="00616"/>
+		<Field Name="Interpretation of Observations" Usage="RE" Min="0" Max="1" Datatype="TX" MinLength="1" MaxLength="65536" ItemNo="00617"/>
+		<Field Name="Contraindications to Observations" Usage="RE" Min="0" Max="*" Datatype="CWE_EDOS" MinLength="1" MaxLength="250" Table="9999" ItemNo="00618"/>
+		<Field Name="Reflex Tests/Observations" Usage="RE" Min="0" Max="*" Datatype="CWE_RC1" MinLength="1" MaxLength="250" Table="9999" ItemNo="00619"/>
+		<Field Name="Rules that Trigger Reflex Testing" Usage="RE" Min="0" Max="*" Datatype="TX" MinLength="1" MaxLength="80" ItemNo="00620"/>
+		<Field Name="Fixed Canned Message" Usage="O" Min="0" Max="1" Datatype="CE" MinLength="1" MaxLength="250" Table="9999" ItemNo="00621"/>
+		<Field Name="Patient Preparation" Usage="RE" Min="0" Max="*" Datatype="TX" MinLength="1" MaxLength="200" ItemNo="00622"/>
+		<Field Name="Procedure Medication" Usage="O" Min="0" Max="1" Datatype="CE" MinLength="1" MaxLength="250" Table="9999" ItemNo="00623"/>
+		<Field Name="Factors that may Affect the Observation" Usage="RE" Min="0" Max="1" Datatype="TX" MinLength="1" MaxLength="200" ItemNo="00624"/>
+		<Field Name="Service/Test/Observation Performance Schedule" Usage="RE" Min="0" Max="*" Datatype="ST" MinLength="1" MaxLength="60" ItemNo="00625"/>
+		<Field Name="Description of Test Methods" Usage="O" Min="0" Max="1" Datatype="TX" MinLength="1" MaxLength="65536" ItemNo="00626"/>
+		<Field Name="Kind of Quantity Observed" Usage="O" Min="0" Max="1" Datatype="CE" MinLength="1" MaxLength="250" Table="0254" ItemNo="00937"/>
+		<Field Name="Point Versus Interval" Usage="O" Min="0" Max="1" Datatype="CE" MinLength="1" MaxLength="250" Table="0255" ItemNo="00938"/>
+		<Field Name="Challenge Information" Usage="O" Min="0" Max="1" Datatype="TX" MinLength="1" MaxLength="200" Table="0256" ItemNo="00939"/>
+		<Field Name="Relationship Modifier" Usage="O" Min="0" Max="1" Datatype="CE" MinLength="1" MaxLength="250" Table="0258" ItemNo="00940"/>
+		<Field Name="Target Anatomic Site Of Test" Usage="O" Min="0" Max="1" Datatype="CE" MinLength="1" MaxLength="250" Table="9999" ItemNo="00941"/>
+		<Field Name="Modality Of Imaging Measurement" Usage="O" Min="0" Max="1" Datatype="CE" MinLength="1" MaxLength="250" Table="0259" ItemNo="00942"/>
+		<!--  elements preadopted from HL7 v2.8 -->
+		<!-- need to check attributes -->
+		<Field Name="Exclusive Test" Usage="RE" Min="0" Max="1" Datatype="ID" MinLength="1" MaxLength="1" Table="0919_EDOS" ItemNo="003310"/>
+		<Field Name="Diagnostic Service Sector ID" Usage="RE" Min="0" Max="1" Datatype="ID" MinLength="2" MaxLength="3" Table="0074" ItemNo="00257"/>
+		<Field Name="Taxonomic Classification Code" Usage="O" Min="0" Max="1" Datatype="CWE" MinLength="1" MaxLength="9999" Table="0446" ItemNo="01539"/>
+		<Field Name="Other Names" Usage="RE" Min="0" Max="*" Datatype="ST" MinLength="1" MaxLength="200" ItemNo="03399"/>
+		<Field Name="Replacement Producer's Service/Test/Observation ID" Usage="C" Min="0" Max="*" Datatype="CWE_RC1" MinLength="1" MaxLength="9999" Table="9999" ItemNo="?????"/>
+		<Field Name="Prior Resuts Instructions" Usage="RE" Min="0" Max="*" Datatype="TX" MinLength="1" MaxLength="9999" ItemNo="?????"/>
+		<Field Name="Special Instructions" Usage="O" Min="0" Max="*" Datatype="TX" MinLength="1" MaxLength="9999" ItemNo="?????"/>
+	</Segment>
+	<!-- OM1 M10 EDOS -->
+	<Segment Name="OM1" flavor="EDOS_M10" LongName="General Segment">
+		<Field Name="Sequence Number - Test/Observation Master File" Usage="R" Min="1" Max="1" Datatype="NM" MinLength="1" MaxLength="4" ItemNo="00586">
+			<!-- conformance statement for sequence -->
+			<ConformanceStatement Profile="Base" id="NIST-eDOS-XX">
+				<EnglishDescription>OM1.1 (Sequence Number - Test/Observation Master File) SHALL be valued sequentially starting with the value '1' within the message</EnglishDescription>
+					<Assertion>
+						<SequenceID location="." location1=".."/>
+					</Assertion>
+			</ConformanceStatement>
+		</Field>
+		<Field Name="Producer's Service/Test/Observation ID" Usage="R" Min="1" Max="1" Datatype="CWE_RC" MinLength="1" MaxLength="250" Table="9999" ItemNo="00587"/>
+		<Field Name="Permitted Data Types" Usage="O" Min="0" Max="*" Datatype="ID" MinLength="1" MaxLength="12" Table="0125" ItemNo="00588"/>
+		<Field Name="Specimen Required" Usage="R" Min="1" Max="1" Datatype="ID" MinLength="1" MaxLength="1" Table="0136" ItemNo="00589"/>
+		<Field Name="Producer ID" Usage="R" Min="1" Max="1" Datatype="CWE_EDOS" MinLength="1" MaxLength="250" Table="9999" ItemNo="00590"/>
+		<Field Name="Observation Description" Usage="O" Min="0" Max="1" Datatype="TX" MinLength="1" MaxLength="200" ItemNo="00591"/>
+		<Field Name="Other Service/Test/Observation IDs for the Observation" Usage="RE" Min="0" Max="*" Datatype="CWE_RC" MinLength="1" MaxLength="250" Table="9999" ItemNo="00592"/>
+		<Field Name="Other Names" Usage="X" Min="1" Max="*" Datatype="ST" MinLength="1" MaxLength="200" ItemNo="00593"/>
+		<Field Name="Preferred Report Name for the Observation" Usage="RE" Min="0" Max="1" Datatype="ST" MinLength="1" MaxLength="30" ItemNo="00594"/>
+		<Field Name="Preferred Short Name or Mnemonic for Observation" Usage="C" Min="0" Max="1" Datatype="ST" MinLength="1" MaxLength="8" ItemNo="00595"/>
+		<Field Name="Preferred Long Name for the Observation" Usage="C" Min="0" Max="1" Datatype="ST" MinLength="1" MaxLength="200" ItemNo="00596"/>
+		<Field Name="Orderability" Usage="R" Min="1" Max="1" Datatype="ID" MinLength="1" MaxLength="1" Table="0136" ItemNo="00597"/>
+		<Field Name="Identity of Instrument Used to Perform this Study" Usage="O" Min="0" Max="*" Datatype="CE" MinLength="1" MaxLength="250" Table="9999" ItemNo="00598"/>
+		<Field Name="Coded Representation of Method" Usage="O" Min="0" Max="*" Datatype="CE" MinLength="1" MaxLength="250" Table="9999" ItemNo="00599"/>
+		<Field Name="Portable Device Indicator" Usage="O" Min="0" Max="1" Datatype="ID" MinLength="1" MaxLength="1" Table="0136" ItemNo="00600"/>
+		<Field Name="Observation Producing Department/Section" Usage="X" Min="0" Max="*" Datatype="CE" MinLength="1" MaxLength="250" Table="9999" ItemNo="00601"/>
+		<Field Name="Telephone Number of Section" Usage="O" Min="0" Max="1" Datatype="XTN" MinLength="1" MaxLength="250" ItemNo="00602"/>
+		<Field Name="Nature of Service/Test/Observation" Usage="R" Min="1" Max="1" Datatype="IS" MinLength="1" MaxLength="1" Table="0174" ItemNo="00603"/>
+		<Field Name="Report Subheader" Usage="O" Min="0" Max="1" Datatype="CE" MinLength="1" MaxLength="250" Table="9999" ItemNo="00604"/>
+		<Field Name="Report Display Order" Usage="O" Min="0" Max="1" Datatype="ST" MinLength="1" MaxLength="20" ItemNo="00605"/>
+		<Field Name="Date/Time Stamp for any change in Definition for the Observation" Usage="O" Min="0" Max="1" Datatype="TS" MinLength="1" MaxLength="26" ItemNo="00606"/>
+		<Field Name="Effective Date/Time of Change" Usage="O" Min="0" Max="1" Datatype="DTM" MinLength="1" MaxLength="26" ItemNo="00607"/>
+		<Field Name="Typical Turn-Around Time" Usage="RE" Min="0" Max="1" Datatype="NM" MinLength="1" MaxLength="20" ItemNo="00608"/>
+		<Field Name="Processing Time" Usage="O" Min="0" Max="1" Datatype="NM" MinLength="1" MaxLength="20" ItemNo="00609"/>
+		<Field Name="Processing Priority" Usage="O" Min="0" Max="*" Datatype="ID" MinLength="1" MaxLength="40" Table="0168" ItemNo="00610"/>
+		<Field Name="Reporting Priority" Usage="O" Min="0" Max="1" Datatype="ID" MinLength="1" MaxLength="5" Table="0169" ItemNo="00611"/>
+		<Field Name="Outside Site(s) Where Observation may be Performed" Usage="RE" Min="0" Max="*" Datatype="CWE_EDOS" MinLength="1" MaxLength="250" Table="9999" ItemNo="00612"/>
+		<Field Name="Address of Outside Site(s)" Usage="C" Min="0" Max="*" Datatype="XAD_EDOS" MinLength="1" MaxLength="250" ItemNo="00613"/>
+		<Field Name="Phone Number of Outside Site" Usage="O" Min="0" Max="1" Datatype="XTN" MinLength="1" MaxLength="250" ItemNo="00614"/>
+		<Field Name="Confidentiality Code" Usage="O" Min="0" Max="1" Datatype="CWE" MinLength="1" MaxLength="250" Table="0177" ItemNo="00615"/>
+		<Field Name="Observations Required to Interpret the Observation" Usage="RE" Min="0" Max="*" Datatype="CWE_EDOS" MinLength="1" MaxLength="250" Table="9999" ItemNo="00616"/>
+		<Field Name="Interpretation of Observations" Usage="RE" Min="0" Max="1" Datatype="TX" MinLength="1" MaxLength="65536" ItemNo="00617"/>
+		<Field Name="Contraindications to Observations" Usage="RE" Min="0" Max="*" Datatype="CWE_EDOS" MinLength="1" MaxLength="250" Table="9999" ItemNo="00618"/>
+		<Field Name="Reflex Tests/Observations" Usage="RE" Min="0" Max="*" Datatype="CWE_RC1" MinLength="1" MaxLength="250" Table="9999" ItemNo="00619"/>
+		<Field Name="Rules that Trigger Reflex Testing" Usage="RE" Min="0" Max="*" Datatype="TX" MinLength="1" MaxLength="80" ItemNo="00620"/>
+		<Field Name="Fixed Canned Message" Usage="O" Min="0" Max="1" Datatype="CE" MinLength="1" MaxLength="250" Table="9999" ItemNo="00621"/>
+		<Field Name="Patient Preparation" Usage="RE" Min="0" Max="*" Datatype="TX" MinLength="1" MaxLength="200" ItemNo="00622"/>
+		<Field Name="Procedure Medication" Usage="O" Min="0" Max="1" Datatype="CE" MinLength="1" MaxLength="250" Table="9999" ItemNo="00623"/>
+		<Field Name="Factors that may Affect the Observation" Usage="RE" Min="0" Max="1" Datatype="TX" MinLength="1" MaxLength="200" ItemNo="00624"/>
+		<Field Name="Service/Test/Observation Performance Schedule" Usage="RE" Min="0" Max="*" Datatype="ST" MinLength="1" MaxLength="60" ItemNo="00625"/>
+		<Field Name="Description of Test Methods" Usage="O" Min="0" Max="1" Datatype="TX" MinLength="1" MaxLength="65536" ItemNo="00626"/>
+		<Field Name="Kind of Quantity Observed" Usage="O" Min="0" Max="1" Datatype="CE" MinLength="1" MaxLength="250" Table="0254" ItemNo="00937"/>
+		<Field Name="Point Versus Interval" Usage="O" Min="0" Max="1" Datatype="CE" MinLength="1" MaxLength="250" Table="0255" ItemNo="00938"/>
+		<Field Name="Challenge Information" Usage="O" Min="0" Max="1" Datatype="TX" MinLength="1" MaxLength="200" Table="0256" ItemNo="00939"/>
+		<Field Name="Relationship Modifier" Usage="O" Min="0" Max="1" Datatype="CE" MinLength="1" MaxLength="250" Table="0258" ItemNo="00940"/>
+		<Field Name="Target Anatomic Site Of Test" Usage="O" Min="0" Max="1" Datatype="CE" MinLength="1" MaxLength="250" Table="9999" ItemNo="00941"/>
+		<Field Name="Modality Of Imaging Measurement" Usage="O" Min="0" Max="1" Datatype="CE" MinLength="1" MaxLength="250" Table="0259" ItemNo="00942"/>
+		<!--  elements preadopted from HL7 v2.8 -->
+		<!-- need to check attributes -->
+		<Field Name="Exclusive Test" Usage="RE" Min="0" Max="1" Datatype="ID" MinLength="1" MaxLength="1" Table="0919_EDOS" ItemNo="003310"/>
+		<Field Name="Diagnostic Service Sector ID" Usage="RE" Min="0" Max="1" Datatype="ID" MinLength="2" MaxLength="3" Table="0074" ItemNo="00257"/>
+		<Field Name="Taxonomic Classification Code" Usage="O" Min="0" Max="1" Datatype="CWE" MinLength="1" MaxLength="9999" Table="0446" ItemNo="01539"/>
+		<Field Name="Other Names" Usage="RE" Min="0" Max="*" Datatype="ST" MinLength="1" MaxLength="200" ItemNo="03399"/>
+		<Field Name="Replacement Producer's Service/Test/Observation ID" Usage="C" Min="0" Max="*" Datatype="CWE_RC1" MinLength="1" MaxLength="9999" Table="9999" ItemNo="?????"/>
+		<Field Name="Prior Resuts Instructions" Usage="RE" Min="0" Max="*" Datatype="TX" MinLength="1" MaxLength="9999" ItemNo="?????"/>
+		<Field Name="Special Instructions" Usage="O" Min="0" Max="*" Datatype="TX" MinLength="1" MaxLength="9999" ItemNo="?????"/>
+	</Segment>
+	
+	<!-- OM2 EDOS -->
+	<Segment Name="OM2" flavor="EDOS" LongName="Numeric Observation">
+		<Field Name="Sequence Number - Test/Observation Master File" Usage="R" Min="1" Max="1" Datatype="NM" MinLength="1" MaxLength="4" ItemNo="00586"/>
+		<Field Name="Units of Measure" Usage="RE" Min="0" Max="1" Datatype="CWE_CRE" MinLength="1" MaxLength="250" Table="9999" ItemNo="00627"/>
+		<Field Name="Range of Decimal Precision" Usage="O" Min="0" Max="*" Datatype="NM" MinLength="1" MaxLength="10" ItemNo="00628"/>
+		<Field Name="Corresponding SI Units of Measure" Usage="O" Min="0" Max="1" Datatype="CE" MinLength="1" MaxLength="250" Table="9999" ItemNo="00629"/>
+		<Field Name="SI Conversion Factor" Usage="O" Min="0" Max="1" Datatype="TX" MinLength="1" MaxLength="60" ItemNo="00630"/>
+		<Field Name="Reference (Normal) Range - Ordinal and Continuous Observations" Usage="RE" Min="0" Max="*" Datatype="RFR_EDOS" MinLength="1" MaxLength="250" ItemNo="00631"/>
+		<Field Name="Critical Range for Ordinal and Continuous Observations" Usage="RE" Min="0" Max="*" Datatype="RFR_EDOS" MinLength="1" MaxLength="205" ItemNo="00632"/>
+		<Field Name="Absolute Range for Ordinal and Continuous Observations" Usage="RE" Min="0" Max="*" Datatype="RFR_EDOS" MinLength="1" MaxLength="250" ItemNo="00633"/>
+		<Field Name="Delta Check Criteria" Usage="O" Min="0" Max="*" Datatype="DLT" MinLength="1" MaxLength="250" ItemNo="00634"/>
+		<Field Name="Minimum Meaningful Increments" Usage="O" Min="0" Max="1" Datatype="NM" MinLength="1" MaxLength="20" ItemNo="00635"/>
+	</Segment>
+	<!-- OM3 EDOS -->
+	<Segment Name="OM3" flavor="EDOS" LongName="Categorical Service/Test/Observation">
+		<Field Name="Sequence Number - Test/Observation Master File" Usage="R" Min="1" Max="1" Datatype="NM" MinLength="1" MaxLength="4" ItemNo="00586"/>
+		<Field Name="Preferred Coding System" Usage="O" Min="0" Max="1" Datatype="CE" MinLength="1" MaxLength="250" Table="9999" ItemNo="00636"/>
+		<Field Name="Valid Coded &quot;Answers&quot;" Usage="O" Min="0" Max="1" Datatype="CE" MinLength="1" MaxLength="250" Table="9999" ItemNo="00637"/>
+		<Field Name="Normal Text/Codes for Categorical Observations" Usage="RE" Min="0" Max="*" Datatype="CWE_EDOS" MinLength="1" MaxLength="250" Table="9999" ItemNo="00638"/>
+		<Field Name="Abnormal Text/Codes for Categorical Observations" Usage="RE" Min="0" Max="*" Datatype="CWE_EDOS" MinLength="1" MaxLength="250" Table="9999" ItemNo="00639"/>
+		<Field Name="Critical Text/Codes for Categorical Observations" Usage="O" Min="0" Max="*" Datatype="CE" MinLength="1" MaxLength="250" Table="9999" ItemNo="00640"/>
+		<Field Name="Value Type" Usage="RE" Min="0" Max="1" Datatype="ID" MinLength="1" MaxLength="2" Table="0125_EDOS" ItemNo="00570"/>
+	</Segment>	
+	<!-- OM4 EDOS -->
+	<Segment Name="OM4" flavor="EDOS" LongName="Observations that Require Specimens">
+		<Field Name="Sequence Number - Test/Observation Master File" Usage="R" Min="1" Max="1" Datatype="NM" MinLength="1" MaxLength="4" ItemNo="00586"/>
+		<Field Name="Derived Specimen" Usage="O" Min="0" Max="1" Datatype="ID" MinLength="1" MaxLength="1" Table="0170" ItemNo="00642"/>
+		<Field Name="Container Description" Usage="RE" Min="0" Max="*" Datatype="TX" MinLength="1" MaxLength="60" ItemNo="00643"/>
+		<Field Name="Container Volume" Usage="RE" Min="0" Max="*" Datatype="NM" MinLength="1" MaxLength="20" ItemNo="00644"/>
+		<Field Name="Container Units" Usage="RE" Min="0" Max="*" Datatype="CWE_EDOS" MinLength="1" MaxLength="250" Table="9999" ItemNo="00645"/>
+		<Field Name="Specimen" Usage="RE" Min="0" Max="1" Datatype="CWE_CRE" MinLength="1" MaxLength="250" Table="SNOMED_CT;HL70487" ItemNo="00646"/>
+		<Field Name="Additive" Usage="RE" Min="0" Max="1" Datatype="CWE_EDOS" MinLength="1" MaxLength="250" Table="0371" ItemNo="00647"/>
+		<Field Name="Preparation" Usage="O" Min="0" Max="1" Datatype="TX" MinLength="1" MaxLength="10240" ItemNo="00648"/>
+		<Field Name="Special Handling Requirements" Usage="X" Min="0" Max="1" Datatype="TX" MinLength="1" MaxLength="10240" ItemNo="00649"/>
+		<Field Name="Normal Collection Volume" Usage="RE" Min="0" Max="1" Datatype="CQ_EDOS" MinLength="1" MaxLength="20" ItemNo="00650"/>
+		<Field Name="Minimum Collection Volume" Usage="RE" Min="0" Max="1" Datatype="CQ_EDOS" MinLength="1" MaxLength="20" ItemNo="00651"/>
+		<Field Name="Specimen Requirements" Usage="RE" Min="0" Max="1" Datatype="TX" MinLength="1" MaxLength="10240" ItemNo="00652"/>
+		<Field Name="Specimen Priorities" Usage="O" Min="0" Max="*" Datatype="ID" MinLength="1" MaxLength="1" Table="0027" ItemNo="00653"/>
+		<Field Name="Specimen Retention Time" Usage="O" Min="0" Max="1" Datatype="CQ" MinLength="1" MaxLength="20" ItemNo="00654"/>
+		<!-- preadopted 2.8 -->
+		<!-- check attributes -->
+		<Field Name="Specimen Handling Code" Usage="RE" Min="0" Max="*" Datatype="CWE_EDOS" MinLength="1" MaxLength="9999" Table="0376" ItemNo="01908"/>
+		<Field Name="Specimen Preference" Usage="RE" Min="0" Max="1" Datatype="ID" MinLength="1" MaxLength="9999" Table="0920_EDOS" ItemNo="03311"/>
+		<Field Name="Preferred Specimen/Attribute Sequence ID" Usage="RE" Min="0" Max="1" Datatype="NM" MinLength="1" MaxLength="9999" ItemNo="03312"/>
+	</Segment>
+	<!-- OM5 EDOS -->
+	<Segment Name="OM5" flavor="EDOS" LongName="Observation Batteries (Sets)">
+		<Field Name="Sequence Number - Test/Observation Master File" Usage="R" Min="1" Max="1" Datatype="NM" MinLength="1" MaxLength="4" ItemNo="00586"/>
+		<Field Name="Test/Observations Included within an Ordered Test Battery" Usage="R" Min="1" Max="*" Datatype="CWE_RC1" MinLength="1" MaxLength="250" Table="9999" ItemNo="00655"/>
+		<Field Name="Observation ID Suffixes" Usage="O" Min="0" Max="1" Datatype="ST" MinLength="1" MaxLength="250" ItemNo="00656"/>
+	</Segment>
+	<!-- CDM EDOS -->	
+	<Segment Name="CDM" flavor="EDOS" LongName="Charge Description Master">
+		<Field Name="Primary Key Value - CDM" Usage="R" Min="1" Max="1" Datatype="CWE_RC" MinLength="1" MaxLength="250" Table="0132" ItemNo="01306"/>
+		<Field Name="Charge Code Alias" Usage="O" Min="0" Max="*" Datatype="CE" MinLength="1" MaxLength="250" ItemNo="00983"/>
+		<Field Name="Charge Description Short" Usage="R" Min="1" Max="1" Datatype="ST" MinLength="1" MaxLength="20" ItemNo="00984"/>
+		<Field Name="Charge Description Long" Usage="O" Min="0" Max="1" Datatype="ST" MinLength="1" MaxLength="250" ItemNo="00985"/>
+		<Field Name="Description Override Indicator" Usage="O" Min="0" Max="1" Datatype="IS" MinLength="1" MaxLength="1" Table="0268" ItemNo="00986"/>
+		<Field Name="Exploding Charges" Usage="O" Min="0" Max="*" Datatype="CE" MinLength="1" MaxLength="250" ItemNo="00987"/>
+		<Field Name="Procedure Code" Usage="R" Min="1" Max="*" Datatype="CNE_EDOS" MinLength="1" MaxLength="250" Table="0088_EDOS" ItemNo="00393"/>
+		<Field Name="Active/Inactive Flag" Usage="O" Min="0" Max="1" Datatype="ID" MinLength="1" MaxLength="1" Table="0183" ItemNo="00675"/>
+		<Field Name="Inventory Number" Usage="O" Min="0" Max="*" Datatype="CE" MinLength="1" MaxLength="250" Table="0463" ItemNo="00990"/>
+		<Field Name="Resource Load" Usage="O" Min="0" Max="1" Datatype="NM" MinLength="1" MaxLength="12" ItemNo="00991"/>
+		<Field Name="Contract Number" Usage="O" Min="0" Max="*" Datatype="CX" MinLength="1" MaxLength="250" ItemNo="00992"/>
+		<Field Name="Contract Organization" Usage="O" Min="0" Max="*" Datatype="XON" MinLength="1" MaxLength="250" ItemNo="00993"/>
+		<Field Name="Room Fee Indicator" Usage="O" Min="0" Max="1" Datatype="ID" MinLength="1" MaxLength="1" Table="0136" ItemNo="00994"/>
+	</Segment>
+	
+	
+	<!-- HL7 segments -->
+	<!-- HL7 v2.5.1 MSH -->
+	<Segment Name="MSH" flavor="HL7" LongName="Message Header">
+		<Field Name="Field Separator" Usage="R" Min="1" Max="1" Datatype="ST" MinLength="1" MaxLength="1" ItemNo="00001"/>
+		<Field Name="Encoding Characters" Usage="R" Min="1" Max="1" Datatype="ST" MinLength="1" MaxLength="4" ItemNo="00002"/>
+		<Field Name="Sending Application" Usage="O" Min="0" Max="1" Datatype="HD" MinLength="1" MaxLength="227" Table="0361" ItemNo="00003"/>
+		<Field Name="Sending Facility" Usage="O" Min="0" Max="1" Datatype="HD" MinLength="1" MaxLength="227" Table="0362" ItemNo="00004"/>
+		<Field Name="Receiving Application" Usage="O" Min="0" Max="1" Datatype="HD" MinLength="1" MaxLength="227" Table="0361" ItemNo="00005"/>
+		<Field Name="Receiving Facility" Usage="O" Min="0" Max="1" Datatype="HD" MinLength="1" MaxLength="227" Table="0362" ItemNo="00006"/>
+		<Field Name="Date/Time Of Message" Usage="R" Min="1" Max="1" Datatype="TS" MinLength="1" MaxLength="26" ItemNo="00007"/>
+		<Field Name="Security" Usage="O" Min="0" Max="1" Datatype="ST" MinLength="1" MaxLength="40" ItemNo="00008"/>
+		<Field Name="Message Type" Usage="R" Min="1" Max="1" Datatype="MSG" MinLength="1" MaxLength="15" ItemNo="00009"/>
+		<Field Name="Message Control ID" Usage="R" Min="1" Max="1" Datatype="ST" MinLength="1" MaxLength="20" ItemNo="00010"/>
+		<Field Name="Processing ID" Usage="R" Min="1" Max="1" Datatype="PT" MinLength="1" MaxLength="3" ItemNo="00011"/>
+		<Field Name="Version ID" Usage="R" Min="1" Max="1" Datatype="VID" MinLength="1" MaxLength="60" ItemNo="00012"/>
+		<Field Name="Sequence Number" Usage="O" Min="0" Max="1" Datatype="NM" MinLength="1" MaxLength="15" ItemNo="00013"/>
+		<Field Name="Continuation Pointer" Usage="O" Min="0" Max="1" Datatype="ST" MinLength="1" MaxLength="180" ItemNo="00014"/>
+		<Field Name="Accept Acknowledgment Type" Usage="O" Min="0" Max="1" Datatype="ID" MinLength="1" MaxLength="2" Table="0155" ItemNo="00015"/>
+		<Field Name="Application Acknowledgment Type" Usage="O" Min="0" Max="1" Datatype="ID" MinLength="1" MaxLength="2" Table="0155" ItemNo="00016"/>
+		<Field Name="Country Code" Usage="O" Min="0" Max="1" Datatype="ID" MinLength="1" MaxLength="3" Table="0399" ItemNo="00017"/>
+		<Field Name="Character Set" Usage="O" Min="0" Max="*" Datatype="ID" MinLength="1" MaxLength="16" Table="0211" ItemNo="00692"/>
+		<Field Name="Principal Language Of Message" Usage="O" Min="0" Max="1" Datatype="CE" MinLength="1" MaxLength="250" ItemNo="00693"/>
+		<Field Name="Alternate Character Set Handling Scheme" Usage="O" Min="0" Max="1" Datatype="ID" MinLength="1" MaxLength="20" Table="0356" ItemNo="01317"/>
+		<Field Name="Message Profile Identifier" Usage="O" Min="0" Max="*" Datatype="EI" MinLength="1" MaxLength="427" ItemNo="01598"/>
+	</Segment>
+	<!-- HL7 v2.5.1 SFT -->
+	<Segment Name="SFT" flavor="HL7" LongName="Software Segment">
+		<Field Name="Software Vendor Organization" Usage="R" Min="1" Max="1" Datatype="XON" MinLength="1" MaxLength="567" ItemNo="01834"/>
+		<Field Name="Software Certified Version or Release Number" Usage="R" Min="1" Max="1" Datatype="ST" MinLength="1" MaxLength="15" ItemNo="01835"/>
+		<Field Name="Software Product Name" Usage="R" Min="1" Max="1" Datatype="ST" MinLength="1" MaxLength="20" ItemNo="01836"/>
+		<Field Name="Software Binary ID" Usage="R" Min="1" Max="1" Datatype="ST" MinLength="1" MaxLength="20" ItemNo="01837"/>
+		<Field Name="Software Product Information" Usage="O" Min="0" Max="1" Datatype="TX" MinLength="1" MaxLength="1024" ItemNo="01838"/>
+		<Field Name="Software Install Date" Usage="O" Min="0" Max="1" Datatype="TS" MinLength="1" MaxLength="26" ItemNo="01839"/>
+	</Segment>
+	<!-- HL7 v2.5.1 MFI -->
+	<Segment Name="MFI" flavor="HL7" LongName="Master File Identification">
+		<Field Name="Master File Identifier" Usage="R" Min="1" Max="1" Datatype="CE" MinLength="1" MaxLength="250" Table="0175" ItemNo="00658"/>
+		<Field Name="Master File Application Identifier" Usage="O" Min="0" Max="1" Datatype="HD" MinLength="1" MaxLength="180" Table="0361" ItemNo="00659"/>
+		<Field Name="File-Level Event Code" Usage="R" Min="1" Max="1" Datatype="ID" MinLength="1" MaxLength="3" Table="0178" ItemNo="00660"/>
+		<Field Name="Entered Date/Time" Usage="O" Min="0" Max="1" Datatype="TS" MinLength="1" MaxLength="26" ItemNo="00661"/>
+		<Field Name="Effective Date/Time" Usage="O" Min="0" Max="1" Datatype="TS" MinLength="1" MaxLength="26" ItemNo="00662"/>
+		<Field Name="Response Level Code" Usage="R" Min="1" Max="1" Datatype="ID" MinLength="1" MaxLength="2" Table="0179" ItemNo="00663"/>
+	</Segment>
+	<!-- HL7 v2.5.1 MFE -->
+	<Segment Name="MFE" flavor="HL7" LongName="Master File Entry">
+		<Field Name="Record-Level Event Code" Usage="R" Min="1" Max="1" Datatype="ID" MinLength="1" MaxLength="3" Table="0180" ItemNo="00664"/>
+		<Field Name="MFN Control ID" Usage="C" Min="0" Max="1" Datatype="ST" MinLength="1" MaxLength="20" ItemNo="00665"/>
+		<Field Name="Effective Date/Time" Usage="O" Min="0" Max="1" Datatype="TS" MinLength="1" MaxLength="26" ItemNo="00662"/>
+		<Field Name="Primary Key Value - MFE" Usage="R" Min="1" Max="*" Datatype="varies" MinLength="1" MaxLength="200" Table="9999" ItemNo="00667"/>
+		<Field Name="Primary Key Value Type" Usage="R" Min="1" Max="*" Datatype="ID" MinLength="1" MaxLength="3" Table="0355" ItemNo="01319"/>
+	</Segment>
+	<!-- HL7 v2.5.1 OM1 -->
+	<Segment Name="OM1" flavor="HL7" LongName="General Segment">
+		<Field Name="Sequence Number - Test/Observation Master File" Usage="R" Min="1" Max="1" Datatype="NM" MinLength="1" MaxLength="4" ItemNo="00586"/>
+		<Field Name="Producer's Service/Test/Observation ID" Usage="R" Min="1" Max="1" Datatype="CE" MinLength="1" MaxLength="250" Table="9999" ItemNo="00587"/>
+		<Field Name="Permitted Data Types" Usage="O" Min="0" Max="*" Datatype="ID" MinLength="1" MaxLength="12" Table="0125" ItemNo="00588"/>
+		<Field Name="Specimen Required" Usage="R" Min="1" Max="1" Datatype="ID" MinLength="1" MaxLength="1" Table="0136" ItemNo="00589"/>
+		<Field Name="Producer ID" Usage="R" Min="1" Max="1" Datatype="CE" MinLength="1" MaxLength="250" Table="9999" ItemNo="00590"/>
+		<Field Name="Observation Description" Usage="O" Min="0" Max="1" Datatype="TX" MinLength="1" MaxLength="200" ItemNo="00591"/>
+		<Field Name="Other Service/Test/Observation IDs for the Observation" Usage="O" Min="0" Max="1" Datatype="CE" MinLength="1" MaxLength="250" Table="9999" ItemNo="00592"/>
+		<Field Name="Other Names" Usage="R" Min="1" Max="*" Datatype="ST" MinLength="1" MaxLength="200" ItemNo="00593"/>
+		<Field Name="Preferred Report Name for the Observation" Usage="O" Min="0" Max="1" Datatype="ST" MinLength="1" MaxLength="30" ItemNo="00594"/>
+		<Field Name="Preferred Short Name or Mnemonic for Observation" Usage="O" Min="0" Max="1" Datatype="ST" MinLength="1" MaxLength="8" ItemNo="00595"/>
+		<Field Name="Preferred Long Name for the Observation" Usage="O" Min="0" Max="1" Datatype="ST" MinLength="1" MaxLength="200" ItemNo="00596"/>
+		<Field Name="Orderability" Usage="O" Min="0" Max="1" Datatype="ID" MinLength="1" MaxLength="1" Table="0136" ItemNo="00597"/>
+		<Field Name="Identity of Instrument Used to Perform this Study" Usage="O" Min="0" Max="*" Datatype="CE" MinLength="1" MaxLength="250" Table="9999" ItemNo="00598"/>
+		<Field Name="Coded Representation of Method" Usage="O" Min="0" Max="*" Datatype="CE" MinLength="1" MaxLength="250" Table="9999" ItemNo="00599"/>
+		<Field Name="Portable Device Indicator" Usage="O" Min="0" Max="1" Datatype="ID" MinLength="1" MaxLength="1" Table="0136" ItemNo="00600"/>
+		<Field Name="Observation Producing Department/Section" Usage="O" Min="0" Max="*" Datatype="CE" MinLength="1" MaxLength="250" Table="9999" ItemNo="00601"/>
+		<Field Name="Telephone Number of Section" Usage="O" Min="0" Max="1" Datatype="XTN" MinLength="1" MaxLength="250" ItemNo="00602"/>
+		<Field Name="Nature of Service/Test/Observation" Usage="R" Min="1" Max="1" Datatype="IS" MinLength="1" MaxLength="1" Table="0174" ItemNo="00603"/>
+		<Field Name="Report Subheader" Usage="O" Min="0" Max="1" Datatype="CE" MinLength="1" MaxLength="250" Table="9999" ItemNo="00604"/>
+		<Field Name="Report Display Order" Usage="O" Min="0" Max="1" Datatype="ST" MinLength="1" MaxLength="20" ItemNo="00605"/>
+		<Field Name="Date/Time Stamp for any change in Definition for the Observation" Usage="O" Min="0" Max="1" Datatype="TS" MinLength="1" MaxLength="26" ItemNo="00606"/>
+		<Field Name="Effective Date/Time of Change" Usage="O" Min="0" Max="1" Datatype="TS" MinLength="1" MaxLength="26" ItemNo="00607"/>
+		<Field Name="Typical Turn-Around Time" Usage="O" Min="0" Max="1" Datatype="NM" MinLength="1" MaxLength="20" ItemNo="00608"/>
+		<Field Name="Processing Time" Usage="O" Min="0" Max="1" Datatype="NM" MinLength="1" MaxLength="20" ItemNo="00609"/>
+		<Field Name="Processing Priority" Usage="O" Min="0" Max="*" Datatype="ID" MinLength="1" MaxLength="40" Table="0168" ItemNo="00610"/>
+		<Field Name="Reporting Priority" Usage="O" Min="0" Max="1" Datatype="ID" MinLength="1" MaxLength="5" Table="0169" ItemNo="00611"/>
+		<Field Name="Outside Site(s) Where Observation may be Performed" Usage="O" Min="0" Max="*" Datatype="CE" MinLength="1" MaxLength="250" Table="9999" ItemNo="00612"/>
+		<Field Name="Address of Outside Site(s)" Usage="O" Min="0" Max="*" Datatype="XAD" MinLength="1" MaxLength="250" ItemNo="00613"/>
+		<Field Name="Phone Number of Outside Site" Usage="O" Min="0" Max="1" Datatype="XTN" MinLength="1" MaxLength="250" ItemNo="00614"/>
+		<Field Name="Confidentiality Code" Usage="O" Min="0" Max="1" Datatype="CWE" MinLength="1" MaxLength="250" Table="0177" ItemNo="00615"/>
+		<Field Name="Observations Required to Interpret the Observation" Usage="O" Min="0" Max="1" Datatype="CE" MinLength="1" MaxLength="250" Table="9999" ItemNo="00616"/>
+		<Field Name="Interpretation of Observations" Usage="O" Min="0" Max="1" Datatype="TX" MinLength="1" MaxLength="65536" ItemNo="00617"/>
+		<Field Name="Contraindications to Observations" Usage="O" Min="0" Max="1" Datatype="CE" MinLength="1" MaxLength="250" Table="9999" ItemNo="00618"/>
+		<Field Name="Reflex Tests/Observations" Usage="O" Min="0" Max="*" Datatype="CE" MinLength="1" MaxLength="250" Table="9999" ItemNo="00619"/>
+		<Field Name="Rules that Trigger Reflex Testing" Usage="O" Min="0" Max="1" Datatype="TX" MinLength="1" MaxLength="80" ItemNo="00620"/>
+		<Field Name="Fixed Canned Message" Usage="O" Min="0" Max="1" Datatype="CE" MinLength="1" MaxLength="250" Table="9999" ItemNo="00621"/>
+		<Field Name="Patient Preparation" Usage="O" Min="0" Max="1" Datatype="TX" MinLength="1" MaxLength="200" ItemNo="00622"/>
+		<Field Name="Procedure Medication" Usage="O" Min="0" Max="1" Datatype="CE" MinLength="1" MaxLength="250" Table="9999" ItemNo="00623"/>
+		<Field Name="Factors that may Affect the Observation" Usage="O" Min="0" Max="1" Datatype="TX" MinLength="1" MaxLength="200" ItemNo="00624"/>
+		<Field Name="Service/Test/Observation Performance Schedule" Usage="O" Min="0" Max="*" Datatype="ST" MinLength="1" MaxLength="60" ItemNo="00625"/>
+		<Field Name="Description of Test Methods" Usage="O" Min="0" Max="1" Datatype="TX" MinLength="1" MaxLength="65536" ItemNo="00626"/>
+		<Field Name="Kind of Quantity Observed" Usage="O" Min="0" Max="1" Datatype="CE" MinLength="1" MaxLength="250" Table="0254" ItemNo="00937"/>
+		<Field Name="Point Versus Interval" Usage="O" Min="0" Max="1" Datatype="CE" MinLength="1" MaxLength="250" Table="0255" ItemNo="00938"/>
+		<Field Name="Challenge Information" Usage="O" Min="0" Max="1" Datatype="TX" MinLength="1" MaxLength="200" Table="0256" ItemNo="00939"/>
+		<Field Name="Relationship Modifier" Usage="O" Min="0" Max="1" Datatype="CE" MinLength="1" MaxLength="250" Table="0258" ItemNo="00940"/>
+		<Field Name="Target Anatomic Site Of Test" Usage="O" Min="0" Max="1" Datatype="CE" MinLength="1" MaxLength="250" Table="9999" ItemNo="00941"/>
+		<Field Name="Modality Of Imaging Measurement" Usage="O" Min="0" Max="1" Datatype="CE" MinLength="1" MaxLength="250" Table="0259" ItemNo="00942"/>
+	</Segment>
+	<!-- HL7 v2.5.1 OM2 -->
+	<Segment Name="OM2" flavor="HL7" LongName="Numeric Observation">
+		<Field Name="Sequence Number - Test/Observation Master File" Usage="O" Min="0" Max="1" Datatype="NM" MinLength="1" MaxLength="4" ItemNo="00586"/>
+		<Field Name="Units of Measure" Usage="O" Min="0" Max="1" Datatype="CE" MinLength="1" MaxLength="250" Table="9999" ItemNo="00627"/>
+		<Field Name="Range of Decimal Precision" Usage="O" Min="0" Max="*" Datatype="NM" MinLength="1" MaxLength="10" ItemNo="00628"/>
+		<Field Name="Corresponding SI Units of Measure" Usage="O" Min="0" Max="1" Datatype="CE" MinLength="1" MaxLength="250" Table="9999" ItemNo="00629"/>
+		<Field Name="SI Conversion Factor" Usage="O" Min="0" Max="1" Datatype="TX" MinLength="1" MaxLength="60" ItemNo="00630"/>
+		<Field Name="Reference (Normal) Range - Ordinal and Continuous Observations" Usage="O" Min="0" Max="*" Datatype="RFR" MinLength="1" MaxLength="250" ItemNo="00631"/>
+		<Field Name="Critical Range for Ordinal and Continuous Observations" Usage="O" Min="0" Max="*" Datatype="RFR" MinLength="1" MaxLength="205" ItemNo="00632"/>
+		<Field Name="Absolute Range for Ordinal and Continuous Observations" Usage="O" Min="0" Max="1" Datatype="RFR" MinLength="1" MaxLength="250" ItemNo="00633"/>
+		<Field Name="Delta Check Criteria" Usage="O" Min="0" Max="*" Datatype="DLT" MinLength="1" MaxLength="250" ItemNo="00634"/>
+		<Field Name="Minimum Meaningful Increments" Usage="O" Min="0" Max="1" Datatype="NM" MinLength="1" MaxLength="20" ItemNo="00635"/>
+	</Segment>
+	<!-- HL7 v2.5.1 OM3 -->
+	<Segment Name="OM3" flavor="HL7" LongName="Categorical Service/Test/Observation">
+		<Field Name="Sequence Number - Test/Observation Master File" Usage="O" Min="0" Max="1" Datatype="NM" MinLength="1" MaxLength="4" ItemNo="00586"/>
+		<Field Name="Preferred Coding System" Usage="O" Min="0" Max="1" Datatype="CE" MinLength="1" MaxLength="250" Table="9999" ItemNo="00636"/>
+		<Field Name="Valid Coded &quot;Answers&quot;" Usage="O" Min="0" Max="1" Datatype="CE" MinLength="1" MaxLength="250" Table="9999" ItemNo="00637"/>
+		<Field Name="Normal Text/Codes for Categorical Observations" Usage="O" Min="0" Max="*" Datatype="CE" MinLength="1" MaxLength="250" Table="9999" ItemNo="00638"/>
+		<Field Name="Abnormal Text/Codes for Categorical Observations" Usage="O" Min="0" Max="*" Datatype="CE" MinLength="1" MaxLength="250" Table="9999" ItemNo="00639"/>
+		<Field Name="Critical Text/Codes for Categorical Observations" Usage="O" Min="0" Max="*" Datatype="CE" MinLength="1" MaxLength="250" Table="9999" ItemNo="00640"/>
+		<Field Name="Value Type" Usage="O" Min="0" Max="1" Datatype="ID" MinLength="1" MaxLength="2" Table="0125" ItemNo="00570"/>
+	</Segment>
+	<!-- HL7 v2.5.1 OM4 -->
+	<Segment Name="OM4" flavor="HL7" LongName="Observations that Require Specimens">
+		<Field Name="Sequence Number - Test/Observation Master File" Usage="O" Min="0" Max="1" Datatype="NM" MinLength="1" MaxLength="4" ItemNo="00586"/>
+		<Field Name="Derived Specimen" Usage="O" Min="0" Max="1" Datatype="ID" MinLength="1" MaxLength="1" Table="0170" ItemNo="00642"/>
+		<Field Name="Container Description" Usage="O" Min="0" Max="1" Datatype="TX" MinLength="1" MaxLength="60" ItemNo="00643"/>
+		<Field Name="Container Volume" Usage="O" Min="0" Max="1" Datatype="NM" MinLength="1" MaxLength="20" ItemNo="00644"/>
+		<Field Name="Container Units" Usage="O" Min="0" Max="1" Datatype="CE" MinLength="1" MaxLength="250" Table="9999" ItemNo="00645"/>
+		<Field Name="Specimen" Usage="O" Min="0" Max="1" Datatype="CE" MinLength="1" MaxLength="250" Table="9999" ItemNo="00646"/>
+		<Field Name="Additive" Usage="O" Min="0" Max="1" Datatype="CWE" MinLength="1" MaxLength="250" Table="0371" ItemNo="00647"/>
+		<Field Name="Preparation" Usage="O" Min="0" Max="1" Datatype="TX" MinLength="1" MaxLength="10240" ItemNo="00648"/>
+		<Field Name="Special Handling Requirements" Usage="O" Min="0" Max="1" Datatype="TX" MinLength="1" MaxLength="10240" ItemNo="00649"/>
+		<Field Name="Normal Collection Volume" Usage="O" Min="0" Max="1" Datatype="CQ" MinLength="1" MaxLength="20" ItemNo="00650"/>
+		<Field Name="Minimum Collection Volume" Usage="O" Min="0" Max="1" Datatype="CQ" MinLength="1" MaxLength="20" ItemNo="00651"/>
+		<Field Name="Specimen Requirements" Usage="O" Min="0" Max="1" Datatype="TX" MinLength="1" MaxLength="10240" ItemNo="00652"/>
+		<Field Name="Specimen Priorities" Usage="O" Min="0" Max="*" Datatype="ID" MinLength="1" MaxLength="1" Table="0027" ItemNo="00653"/>
+		<Field Name="Specimen Retention Time" Usage="O" Min="0" Max="1" Datatype="CQ" MinLength="1" MaxLength="20" ItemNo="00654"/>
+	</Segment>
+	<!-- HL7 v2.5.1 OM5 -->
+	<Segment Name="OM5" flavor="HL7" LongName="Observation Batteries (Sets)">
+		<Field Name="Sequence Number - Test/Observation Master File" Usage="O" Min="0" Max="1" Datatype="NM" MinLength="1" MaxLength="4" ItemNo="00586"/>
+		<Field Name="Test/Observations Included within an Ordered Test Battery" Usage="O" Min="0" Max="*" Datatype="CE" MinLength="1" MaxLength="250" Table="9999" ItemNo="00655"/>
+		<Field Name="Observation ID Suffixes" Usage="O" Min="0" Max="1" Datatype="ST" MinLength="1" MaxLength="250" ItemNo="00656"/>
+	</Segment>
+	<!-- HL7 v2.8.1 NTE -->
+	<Segment Name="NTE" flavor="HL7" LongName="Notes and Comments">
+		<Field Name="Set ID - NTE" Usage="O" Min="0" Max="1" Datatype="SI" MinLength="1" MaxLength="4" ItemNo="00096"/>
+		<Field Name="Source of Comment" Usage="O" Min="0" Max="1" Datatype="ID" MinLength="1" MaxLength="8" Table="0105" ItemNo="00097"/>
+		<Field Name="Comment" Usage="O" Min="0" Max="*" Datatype="FT" MinLength="1" MaxLength="65536" ItemNo="00098"/>
+		<Field Name="Comment Type" Usage="O" Min="0" Max="1" Datatype="CE" MinLength="1" MaxLength="250" Table="0364" ItemNo="01318"/>
+	</Segment>
+	<!-- HL7 v2.5.1 CDM -->
+	<Segment Name="CDM" flavor="HL7" LongName="Charge Description Master">
+		<Field Name="Primary Key Value - CDM" Usage="R" Min="1" Max="1" Datatype="CE" MinLength="1" MaxLength="250" Table="0132" ItemNo="01306"/>
+		<Field Name="Charge Code Alias" Usage="O" Min="0" Max="*" Datatype="CE" MinLength="1" MaxLength="250" ItemNo="00983"/>
+		<Field Name="Charge Description Short" Usage="R" Min="1" Max="1" Datatype="ST" MinLength="1" MaxLength="20" ItemNo="00984"/>
+		<Field Name="Charge Description Long" Usage="O" Min="0" Max="1" Datatype="ST" MinLength="1" MaxLength="250" ItemNo="00985"/>
+		<Field Name="Description Override Indicator" Usage="O" Min="0" Max="1" Datatype="IS" MinLength="1" MaxLength="1" Table="0268" ItemNo="00986"/>
+		<Field Name="Exploding Charges" Usage="O" Min="0" Max="*" Datatype="CE" MinLength="1" MaxLength="250" ItemNo="00987"/>
+		<Field Name="Procedure Code" Usage="O" Min="0" Max="*" Datatype="CE" MinLength="1" MaxLength="250" Table="0088" ItemNo="00393"/>
+		<Field Name="Active/Inactive Flag" Usage="O" Min="0" Max="1" Datatype="ID" MinLength="1" MaxLength="1" Table="0183" ItemNo="00675"/>
+		<Field Name="Inventory Number" Usage="O" Min="0" Max="*" Datatype="CE" MinLength="1" MaxLength="250" Table="0463" ItemNo="00990"/>
+		<Field Name="Resource Load" Usage="O" Min="0" Max="1" Datatype="NM" MinLength="1" MaxLength="12" ItemNo="00991"/>
+		<Field Name="Contract Number" Usage="O" Min="0" Max="*" Datatype="CX" MinLength="1" MaxLength="250" ItemNo="00992"/>
+		<Field Name="Contract Organization" Usage="O" Min="0" Max="*" Datatype="XON" MinLength="1" MaxLength="250" ItemNo="00993"/>
+		<Field Name="Room Fee Indicator" Usage="O" Min="0" Max="1" Datatype="ID" MinLength="1" MaxLength="1" Table="0136" ItemNo="00994"/>
+	</Segment>
+	<!-- HL7 v2.5.1 PRC -->
+	<Segment Name="PRC" flavor="HL7" LongName="Pricing">
+		<Field Name="Primary Key Value - PRC" Usage="R" Min="1" Max="1" Datatype="CE" MinLength="1" MaxLength="250" Table="0132" ItemNo="00982"/>
+		<Field Name="Facility ID - PRC" Usage="O" Min="0" Max="*" Datatype="CE" MinLength="1" MaxLength="250" Table="0464" ItemNo="00995"/>
+		<Field Name="Department" Usage="O" Min="0" Max="*" Datatype="CE" MinLength="1" MaxLength="250" Table="0184" ItemNo="00676"/>
+		<Field Name="Valid Patient Classes" Usage="O" Min="0" Max="*" Datatype="IS" MinLength="1" MaxLength="1" Table="0004" ItemNo="00967"/>
+		<Field Name="Price" Usage="C" Min="0" Max="*" Datatype="CP" MinLength="1" MaxLength="12" ItemNo="00998"/>
+		<Field Name="Formula" Usage="O" Min="0" Max="*" Datatype="ST" MinLength="1" MaxLength="200" ItemNo="00999"/>
+		<Field Name="Minimum Quantity" Usage="O" Min="0" Max="1" Datatype="NM" MinLength="1" MaxLength="4" ItemNo="01000"/>
+		<Field Name="Maximum Quantity" Usage="O" Min="0" Max="1" Datatype="NM" MinLength="1" MaxLength="4" ItemNo="01001"/>
+		<Field Name="Minimum Price" Usage="O" Min="0" Max="1" Datatype="MO" MinLength="1" MaxLength="12" ItemNo="01002"/>
+		<Field Name="Maximum Price" Usage="O" Min="0" Max="1" Datatype="MO" MinLength="1" MaxLength="12" ItemNo="01003"/>
+		<Field Name="Effective Start Date" Usage="O" Min="0" Max="1" Datatype="TS" MinLength="1" MaxLength="26" ItemNo="01004"/>
+		<Field Name="Effective End Date" Usage="O" Min="0" Max="1" Datatype="TS" MinLength="1" MaxLength="26" ItemNo="01005"/>
+		<Field Name="Price Override Flag" Usage="O" Min="0" Max="1" Datatype="IS" MinLength="1" MaxLength="1" Table="0268" ItemNo="01006"/>
+		<Field Name="Billing Category" Usage="O" Min="0" Max="*" Datatype="CE" MinLength="1" MaxLength="250" Table="0293" ItemNo="01007"/>
+		<Field Name="Chargeable Flag" Usage="O" Min="0" Max="1" Datatype="ID" MinLength="1" MaxLength="1" Table="0136" ItemNo="01008"/>
+		<Field Name="Active/Inactive Flag" Usage="O" Min="0" Max="1" Datatype="ID" MinLength="1" MaxLength="1" Table="0183" ItemNo="00675"/>
+		<Field Name="Cost" Usage="O" Min="0" Max="1" Datatype="MO" MinLength="1" MaxLength="12" ItemNo="00989"/>
+		<Field Name="Charge On Indicator" Usage="O" Min="0" Max="1" Datatype="IS" MinLength="1" MaxLength="1" Table="0269" ItemNo="01009"/>
+	</Segment>
+</SegmentLibrary>

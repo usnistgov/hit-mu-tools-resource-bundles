@@ -1,0 +1,124 @@
+<html>
+<script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+<angular-script/>
+<head>
+   <style xmlns:util="http://hl7.nist.gov" type="text/css">
+         	@media screen {	
+				li {display: inline;}			
+				.test-data-specs-main fieldset {text-align:center;}	
+         		.test-data-specs-main fieldset table tbody tr th {font-size:95%}			
+         		.test-data-specs-main fieldset table tbody tr td {font-size:100%;}			
+         		.test-data-specs-main fieldset table tbody tr th {text-align:left;background:#C6DEFF}			
+         		.test-data-specs-main fieldset table thead tr th {text-align:center;}			
+         		.test-data-specs-main fieldset table { width:98%;border: 1px groove;table-layout: fixed; margin:0 auto;border-collapse:collapse;}			
+         		.test-data-specs-main fieldset table  tr { border: 3px groove; }			
+         		.test-data-specs-main fieldset table  th { border: 2px groove;}			
+         		.test-data-specs-main fieldset table  td { border: 2px groove; }			
+         		.test-data-specs-main fieldset table thead {border: 1px groove;background:#446BEC;text-align:left;}			
+         		.test-data-specs-main fieldset table tbody tr td {text-align:left}		
+         		}	
+         			
+         	@media print {
+         		.test-data-specs-main fieldset {text-align:center;page-break-inside: avoid;}			
+         		.test-data-specs-main fieldset table tbody tr th {font-size:90%}			
+         		.test-data-specs-main fieldset table tbody tr td {font-size:90%;}			
+         		.test-data-specs-main fieldset table tbody tr th {text-align:left;background:#C6DEFF}			
+         		.test-data-specs-main fieldset table thead tr th {text-align:center;background:#4682B4}			
+         		.test-data-specs-main fieldset table { width:98%;border: 1px groove;table-layout: fixed; margin:0 auto;page-break-inside:avoid;border-collapse: collapse;}			
+         		.test-data-specs-main fieldset table  tr { border: 3px groove; }			
+         		.test-data-specs-main fieldset table  th { border: 2px groove;}			
+         		.test-data-specs-main fieldset table  td { border: 2px groove; }			
+         		.test-data-specs-main fieldset table thead {border: 1px groove;background:#446BEC;text-align:left;}			
+         		.test-data-specs-main fieldset table tbody tr td {text-align:left;}			
+         	}
+         		
+      </style> 
+</head>
+
+<!--<body ng-app="myApp">-->
+<body>
+<div ng-controller="myCtrl as myCtrl">
+    <section>
+        <ul class="nav nav-tabs" ng-transclude="" ng-class="{'nav-stacked': vertical, 'nav-justified': justified}">
+	        <li ng-class="{active:myCtrl.full}"><a href="" ng-click="myCtrl.full = true">FULL</a></li>
+            <li ng-repeat="x in json.tables track by $index" ng-class="{active:myCtrl.isSet($index)}"><a href="" ng-click="myCtrl.setTab($index);myCtrl.full=false">{{ x.title }}</a></li>
+        </ul>
+		<div class="test-data-specs-main" ng-show="myCtrl.full">
+			<fieldset ng-repeat="x in json.tables">
+				<legend> {{ x.title }} </legend>
+				<div ng-show="x.elements != undefined">
+					<table>
+					  <tbody>
+						  <tr>
+							   <th>Element</th>
+								<th>Data</th>
+							 </tr>
+							  <tr ng-repeat="e in x.elements" ng-if="e.data">
+								<td>{{ e.element }}</td>
+								<td>{{ e.data }}</td>
+							 </tr>
+					   </tbody>
+					</table>
+				</div>
+				<div ng-show="x.groups != undefined">
+					<fieldset ng-repeat="t in x.groups">
+						<legend> {{ t.title }} </legend>
+						<table>
+							<tbody>
+								<tr>
+									<th>Element</th>
+									<th>Data</th>
+								</tr>
+								<tr ng-repeat="e in t.elements" ng-if="e.data">
+									<td>{{ e.element }}</td>
+									<td>{{ e.data }}</td>
+								</tr>
+							</tbody>
+						</table>
+					</fieldset>
+				</div>		
+			</fieldset>
+		</div>
+  
+	<div ng-repeat="x in json.tables track by $index" ng-show="!myCtrl.full">
+		<div ng-show="myCtrl.isSet($index)">
+			<div class="test-data-specs-main" ng-show="x.elements != undefined">
+				<fieldset>
+					<legend> {{ x.title }} </legend>
+					<table>
+						<tbody>
+							<tr>
+								<th>Element</th>
+								<th>Data</th>
+							</tr>
+							<tr ng-repeat="e in x.elements" ng-if="e.data">
+								<td>{{ e.element }}</td>
+								<td>{{ e.data }}</td>
+							</tr>
+						</tbody>
+					</table>
+				</fieldset>
+			</div>
+			<div class="test-data-specs-main" ng-show="x.groups != undefined">
+				<fieldset ng-repeat="t in x.groups">
+					<legend> {{ t.title }} </legend>
+					<table>
+						<tbody>
+							<tr>
+								<th>Element</th>
+								<th>Data</th>
+							</tr>
+							<tr ng-repeat="e in t.elements" ng-if="e.data">
+								<td>{{ e.element }}</td>
+								<td>{{ e.data }}</td>
+							</tr>
+						</tbody>
+					</table>
+				</fieldset>
+			</div>	
+		</div>
+	</div>
+	</section>
+</div>
+</body>
+</html>

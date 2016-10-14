@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TableLibrary Description="eDOS Constrained HL7 Tables – Value Sets" OrganizationName="HL7 NIST" TableLibraryVersion="V2_IG_LTCF_R2_DSTU_R1_2013NOV" Status="Active" TableLibraryIdentifier="2.16.840.1.113883.3.72.4.1.00007" Name="eDOS Constrained HL7 Tables" xmlns="http://www.nist.gov/healthcare/data">
+	<!-- HL7 TABLE 0003 – EVENT TYPE -->
+	<TableDefinition Id="eDOS_HL70003" Name="Event type" Codesys="HL7" Version="2.5.1" Type="HL7">
+		<TableElement Code="M04" DisplayName="MFN/MFK - Master files charge description" Codesys="HL70003" Source="HL7"/>
+		<TableElement Code="M08" DisplayName="MFN/MFK - Test/observation (numeric) master file" Codesys="HL70003" Source="HL7"/>
+		<TableElement Code="M10" DisplayName="MFN/MFK - Test /observation batteries master file" Codesys="HL70003" Source="HL7"/>
+	</TableDefinition>
+	<!-- HL7 TABLE 0076 – MESSAGE TYPE  -->
+	<TableDefinition Id="eDOS_HL70076" Name="Message type" Codesys="HL7" Version="2.5.1" Type="HL7">
+		<TableElement Code="ACK" DisplayName="General acknowledgment message" Codesys="HL70076" Source="HL7"/>
+		<TableElement Code="MFN" DisplayName="Master files notification" Codesys="HL70076" Source="HL7"/>
+		<!-- TODO : ADD MFK -->
+	</TableDefinition>
+	<!-- HL7 TABLE 0088 – Procedure Codes -->
+	<TableDefinition Id="eDOS_HL70088" Name="Procedure Codes" Codesys="HL7" Version="2.8" Type="HL7">
+		<Comment>This value set only contains the CPT codes used in the test tool. Please refer to the American Medical Association website (http://www.ama-assn.org/) for more information on CPT.</Comment>
+		<TableElement Code="84478" Codesys="C4" DisplayName="triglycerides" Source="SDO"/>
+		<TableElement Code="82247" Codesys="C4" DisplayName="bilirubin; total" Source="SDO"/>
+		<TableElement Code="87045" Codesys="C4" DisplayName="Enteric Pathogens Culture, Stool-with isolation and preliminary examination" Source="SDO"/>
+		<TableElement Code="86790" Codesys="C4" DisplayName="DengueFever antibody, IgG and IgM" Source="SDO"/>
+		<TableElement Code="86708" Codesys="C4" DisplayName="Qualitative; Hepatitis B Surface Antigen" Source="SDO"/>
+		<TableElement Code="86653" Codesys="C4" DisplayName="St. Louis encephalitis antibody, IgG and IgM" Source="SDO"/>
+		<TableElement Code="85014" Codesys="C4" DisplayName="blood count; hematocrit (hct)" Source="SDO"/>
+		<TableElement Code="84075" Codesys="C4" DisplayName="Phosphatase, alkaline" Source="SDO"/>
+		<TableElement Code="81003" Codesys="C4" DisplayName="URNLYSS, DP STCK OR TBLT RGNT FR BLRBN, GLCS, HMGLBN, KTNS, LKCYTS, NTRT, PH, PRTN, SPCFC GRVTY, URBLNGN, ANY NMBR OF THS CNSTTNTS ATMTD, WTHT MCRSCPY" Source="SDO"/>
+		<TableElement Code="80074" Codesys="C4" DisplayName="Acute Hepatitis panel" Source="SDO"/>
+		<TableElement Code="84132" Codesys="C4" DisplayName="potassium; serum, plasma or whole blood" Source="SDO"/>
+		<TableElement Code="87721" Codesys="C4" DisplayName="lipoprotein, direct measurement; low density cholesterol (ldl cholesterol)" Source="SDO"/>
+		<TableElement Code="81005" Codesys="C4" DisplayName="urinalysis; qualitative or semiquantitative, except immunoassays" Source="SDO"/>
+		<TableElement Code="84443" Codesys="C4" DisplayName="Thyroid Stimulating Hormone (TSH)" Source="SDO"/>
+		<TableElement Code="88305" Codesys="C4" DisplayName="Tissue exam by Pathologist" Source="SDO"/>
+		<TableElement Code="85007" Codesys="C4" DisplayName="BLOOD COUNT; BLOOD SMEAR, MICROSCOPIC EXAMINATION WITH MANUAL DIFFERENTIAL WBC COUNT" Source="SDO"/>
+		<TableElement Code="82947" Codesys="C4" DisplayName="glucose; quantitative, blood (except reagent strip)" Source="SDO"/>
+		<TableElement Code="85048" Codesys="C4" DisplayName="blood count; leukocyte (wbc), automated" Source="SDO"/>
+		<TableElement Code="88141" Codesys="C4" DisplayName="Cytopathology, cervical or vaginal (any reporting system), requiring interpretation by physician" Source="SDO"/>
+		<TableElement Code="88142" Codesys="C4" DisplayName="Cytopathology, cervical or vaginal (any reporting system), collected in preservative fluid, automated thinlayer preparation;manual screening under physician supervision." Source="SDO"/>
+		<TableElement Code="82435" Codesys="C4" DisplayName="chloride; blood" Source="SDO"/>
+		<TableElement Code="82575" Codesys="C4" DisplayName=" creatinine clearance" Source="SDO"/>
+		<TableElement Code="87522" Codesys="C4" DisplayName="Hepatitis C Viral RNA, Quantitative, Real-Time PCR" Source="SDO"/>
+		<TableElement Code="82374" Codesys="C4" DisplayName="carbon dioxide (bicarbonate)" Source="SDO"/>
+		<TableElement Code="84295" Codesys="C4" DisplayName="sodium; serum, plasma or whole blood" Source="SDO"/>
+		<TableElement Code="84450" Codesys="C4" DisplayName="transferase; aspartate amino (ast) (sgot)" Source="SDO"/>
+		<TableElement Code="83069" Codesys="C4" DisplayName="Hemoglobin; urine" Source="SDO"/>
+		<TableElement Code="82465" Codesys="C4" DisplayName="cholesterol, serum or whole blood, total" Source="SDO"/>
+		<TableElement Code="82565" Codesys="C4" DisplayName="creatinine; blood" Source="SDO"/>
+		<TableElement Code="83986" Codesys="C4" DisplayName="ph; body fluid, not otherwise specified" Source="SDO"/>
+		<TableElement Code="84155" Codesys="C4" DisplayName="protein, total, except by refractometry; serum, plasma or whole blood" Source="SDO"/>
+		<TableElement Code="80061" Codesys="C4" DisplayName="Lipid panel This panel must include the following: Cholesterol, serum, total (82465) Lipoprotein, direct measurement, high density cholesterol (HDL cholesterol) (83718) Triglycerides (84478)" Source="SDO"/>
+		<TableElement Code="84156" Codesys="C4" DisplayName="Protein, total, except by refractometry;urine" Source="SDO"/>
+		<TableElement Code="83718" Codesys="C4" DisplayName="lipoprotein, direct measurement; high density cholesterol (hdl cholesterol)" Source="SDO"/>
+		<TableElement Code="85032" Codesys="C4" DisplayName="Blood count; manual cell count (erythrocyte, leukocyte, or platelet) each" Source="SDO"/>
+		<TableElement Code="87181" Codesys="C4" DisplayName="Susceptibility per drug and per organism for drugs not in routine battery" Source="SDO"/>
+		<TableElement Code="82977" Codesys="C4" DisplayName="glutamyltransferase, gamma (ggt)" Source="SDO"/>
+		<TableElement Code="85652" Codesys="C4" DisplayName="Sedimentation rate, erythrocyte; automated" Source="SDO"/>
+		<TableElement Code="82040" Codesys="C4" DisplayName="albumin; serum, plasma or whole blood" Source="SDO"/>
+		<TableElement Code="85651" Codesys="C4" DisplayName="Sedimentation Rate, Erythrocyte; Non-Automated" Source="SDO"/>
+		<TableElement Code="82310" Codesys="C4" DisplayName="calcium; total" Source="SDO"/>
+		<TableElement Code="84460" Codesys="C4" DisplayName="transferase; alanine amino (alt) (sgpt)" Source="SDO"/>
+		<TableElement Code="85060" Codesys="C4" DisplayName="BLOOD SMEAR, PERIPHERAL, INTERPRETATION BY PHYSICIAN WITH WRITTEN REPORT" Source="SDO"/>
+		<TableElement Code="86704" Codesys="C4" DisplayName="Hepatitis A Antibody, Total" Source="SDO"/>
+		<TableElement Code="86706" Codesys="C4" DisplayName="Hepatitis B Surface Antibody" Source="SDO"/>
+		<TableElement Code="85610" Codesys="C4" DisplayName="Prothrombin Time" Source="SDO"/>
+		<TableElement Code="84520" Codesys="C4" DisplayName="urea nitrogen; quantitative" Source="SDO"/>
+		<TableElement Code="87340" Codesys="C4" DisplayName="Hepatitis C Antibody" Source="SDO"/>
+		<TableElement Code="86803" Codesys="C4" DisplayName="Hepatitis B Core Antibody, Total" Source="SDO"/>
+		<TableElement Code="86789" Codesys="C4" DisplayName="West Nile virus antibody, IgG" Source="SDO"/>
+		<TableElement Code="85025" Codesys="C4" DisplayName="blood count; complete (cbc), automated (hgb, hct, rbc, wbc and platelet count) and automated differential wbc count" Source="SDO"/>
+		<TableElement Code="86788" Codesys="C4" DisplayName="West Nile virus antibody, IgM" Source="SDO"/>
+		<TableElement Code="G0416" Codesys="C4" DisplayName="Surgical pathology, gross and micro exam for prostate needle saturation biopsy sampling 1-20 specimens" Source="SDO"/>
+		<TableElement Code="80053" Codesys="C4" DisplayName="Comprehensive metabolic panel This panel must include the following: Albumin (82040) Bilirubin, total (82247) Calcium, total (82310) Carbon dioxide (bicarbonate) (82374) Chloride (82435) Creatinine (82565) Glucose (82947) Phosphatase, alkaline (84075) Potassium (84132) Protein, total (84155) Sodium (84295) Transferase, alanine amino (ALT) (SGPT) (84460) Transferase, aspartate amino (AST) (SGOT) (84450) Urea nitrogen (BUN) (84520)" Source="SDO"/>
+
+	</TableDefinition>
+	<!-- HL7 TABLE 0104 – Version ID -->
+	<TableDefinition Id="eDOS_HL70104" Name="Version ID" Codesys="HL7" Version="2.5.1" Type="HL7">
+		<TableElement Code="2.5.1" DisplayName="Release 2.5.1" Codesys="HL70104" Source="HL7"/>
+	</TableDefinition>
+	<!-- HL7 TABLE 0125 – VALUE TYPE -->
+	<TableDefinition Id="eDOS_HL70125" Name="Value Type" Codesys="HL7" Version="2.5.1" Type="HL7">
+		<TableElement Code="CE" DisplayName="Coded Entry" Codesys="HL70125" Source="HL7"/>
+		<!-- CWE is not in v2.5.1 -->
+		<TableElement Code="CWE" DisplayName="Coded Entry" Codesys="HL70125" Source="HL7"/>
+		<TableElement Code="CX" DisplayName="Extended Composite ID With Check Digit" Codesys="HL70125" Source="HL7"/>
+		<TableElement Code="DT" DisplayName="Date" Codesys="HL70125" Source="HL7"/>
+		<TableElement Code="ED" DisplayName="Encapsulated Data" Codesys="HL70125" Source="HL7"/>
+		<TableElement Code="FT" DisplayName="Formatted Text (Display)" Codesys="HL70125" Source="HL7"/>
+		<TableElement Code="NM" DisplayName="Numeric" Codesys="HL70125" Source="HL7"/>
+		<TableElement Code="RP" DisplayName="Reference Pointer" Codesys="HL70125" Source="HL7"/>
+		<TableElement Code="SN" DisplayName="Structured Numeric" Codesys="HL70125" Source="HL7"/>
+		<TableElement Code="ST" DisplayName="String Data." Codesys="HL70125" Source="HL7"/>
+		<TableElement Code="TM" DisplayName="Time" Codesys="HL70125" Source="HL7"/>
+		<TableElement Code="TS" DisplayName="Time Stamp (Date &amp; Time)" Codesys="HL70125" Source="HL7"/>
+		<TableElement Code="TX" DisplayName="Text Data (Display)" Codesys="HL70125" Source="HL7"/>
+	</TableDefinition>
+	<!-- HL7 TABLE 0179 – Response Level -->
+	<TableDefinition Id="eDOS_HL70179" Name="Response level" Codesys="HL7" Version="2.5.1" Type="HL7">
+		<TableElement Code="NE" DisplayName="Never.  No application-level response needed" Codesys="HL70179" Source="HL7"/>
+	</TableDefinition>
+	<!-- HL7 TABLE 0180 – RECORD-LEVEL EVENT CODE -->
+	<TableDefinition Id="eDOS_HL70180" Name="Record-level event code" Codesys="HL7" Version="2.5.1" Type="HL7">
+		<TableElement Code="MAD" DisplayName="Add record to master file" Codesys="HL70180" Source="HL7"/>
+		<TableElement Code="MUP" DisplayName="Update record for master file" Codesys="HL70180"  Source="HL7"/>
+		<TableElement Code="MDC" DisplayName="Deactivate: discontinue using record in master file, but do not delete from database" Codesys="HL70180"  Source="HL7"/>
+		<TableElement Code="MAC" DisplayName="Reactivate deactivated record" Codesys="HL70180"  Source="HL7"/>
+	</TableDefinition>
+	<!-- HL7 TABLE 0301 – UNIVERSAL ID TYPE (V2.7.1) -->
+	<TableDefinition Id="eDOS_HL70301" Name="Universal ID type" Codesys="HL7" Version="2.7.1" Type="HL7">
+		<TableElement Code="CLIA" DisplayName="Clinical Laboratory Improvement Amendments." Codesys="HL70301" Source="HL7"/>
+		<TableElement Code="DNS" DisplayName="An Internet dotted name. Either in ASCII or as integers" Codesys="HL70301" Source="HL7"/>
+		<TableElement Code="GUID" DisplayName="Same as UUID." Codesys="HL70301" Source="HL7"/>
+		<TableElement Code="CEN" DisplayName="The CEN Healthcare Coding Scheme Designator. (Identifiers used in DICOM follow this assignment scheme.)" Codesys="HL70301" Source="HL7"/>
+		<TableElement Code="HL7" DisplayName="Reserved for future HL7 registration schemes" Codesys="HL70301" Source="HL7"/>
+		<TableElement Code="ISO" DisplayName="An International Standards Organization Object Identifier" Codesys="HL70301" Source="HL7"/>
+		<TableElement Code="L" DisplayName="L" Codesys="HL70301" Source="HL7"/>
+		<TableElement Code="M" DisplayName="M" Codesys="HL70301" Source="HL7"/>
+		<TableElement Code="N" DisplayName="N" Codesys="HL70301" Source="HL7"/>
+		<TableElement Code="Random" DisplayName="Usually a base64 encoded string of random bits.&lt;p>The uniqueness depends on the length of the bits. Mail systems often generate ASCII string â??unique names,&quot; from a combination of random bits and system names. Obviously, such identifiers will not be cons" Codesys="HL70301" Source="HL7"/>
+		<TableElement Code="URI" DisplayName="Uniform Resource Identifier" Codesys="HL70301" Source="HL7"/>
+		<TableElement Code="UUID" DisplayName="The DCE Universal Unique Identifier" Codesys="HL70301" Source="HL7"/>
+		<TableElement Code="x400" DisplayName="An X.400 MHS format identifier" Codesys="HL70301" Source="HL7"/>
+		<TableElement Code="x500" DisplayName="An X.500 directory name" Codesys="HL70301" Source="HL7"/>
+	</TableDefinition>
+	<!-- HL7 TABLE 0354 – MESSAGE STRUCTURE -->
+	<TableDefinition Id="eDOS_HL70354" Name="Message structure" Codesys="HL7" Version="2.5.1" Type="HL7">
+		<TableElement Code="MFK_M01" DisplayName="M01, M02, M03, M04, M05, M06, M07, M08, M09, M10, M11" Codesys="HL70354" Source="HL7"/>
+		<TableElement Code="MFN_M04" DisplayName="M04" Codesys="HL70354" Source="HL7"/>
+		<TableElement Code="MFN_M08" DisplayName="M08" Codesys="HL70354" Source="HL7"/>
+		<TableElement Code="MFN_M10" DisplayName="M10" Codesys="HL70354" Source="HL7"/>
+	</TableDefinition>
+	<!-- HL7 TABLE 0355 – PRIMARY KEY VALUE TYPE -->
+	<TableDefinition Id="eDOS_HL70355" Name="Primary key value type" Codesys="HL7" Version="2.7.1" Type="HL7">
+		<TableElement Code="CWE" DisplayName="Coded with Exceptions" Codesys="HL70355" Source="HL7"/>
+	</TableDefinition>
+	<!-- HL7 TABLE 0919 – EXCLUSIVE TEST -->
+	<TableDefinition Id="eDOS_HL70919" Name="EXCLUSIVE TEST" Codesys="HL7" Version="2.8" Type="HL7">
+		<TableElement Code="Y" DisplayName="This test should be exclusive" Codesys="HL70919" Source="HL7"/>
+		<TableElement Code="N" DisplayName="This test can be included with any number of other tests" Codesys="HL70919" Source="HL7"/>
+		<TableElement Code="D" DisplayName="In some cases, this test should be only exclusively with like tests (examples are cyto or pathology)" Codesys="HL70919" Source="HL7"/>
+	</TableDefinition>
+	<!-- HL7 TABLE 0920 – SPECIMEN PREFERENCE -->
+	<TableDefinition Id="eDOS_HL70920" Name="SPECIMEN PREFERENCE" Codesys="HL7" Version="2.5.1" Type="User">
+		<TableElement Code="P" DisplayName="Preferred" Codesys="HL70920" Source="HL7"/>
+		<TableElement Code="A" DisplayName="Alternate" Codesys="HL70920" Source="HL7"/>
+	</TableDefinition>
+
+
+
+
+
+
+</TableLibrary>

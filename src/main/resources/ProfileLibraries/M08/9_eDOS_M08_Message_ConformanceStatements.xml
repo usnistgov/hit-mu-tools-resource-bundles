@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- V2_IG_LTCF_R2_DSTU_R1_2013NOV -->
+<ConformanceStatementDocument IGVersion="V2_IG_LTCF_R2_DSTU_R1_2013NOV" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="CS.xsd">   
+ 	<ConformanceStatement Profile="Base" id="HL7-2" Context="MF_TEST.OM2.1" flavor="EDOS">
+		<EnglishDescription>OM2-1 : This field contains the same value as the sequence number of the associated OM1 segment.</EnglishDescription>
+		<Assertion>
+			<PlainText location="." locationContent="../../2/1"/>  
+		</Assertion>		
+	</ConformanceStatement>
+	<ConformanceStatement Profile="Base" id="HL7-2" Context="MF_TEST.OM2.1" flavor="HL7">
+		<EnglishDescription>OM2-1 : This field contains the same value as the sequence number of the associated OM1 segment.</EnglishDescription>
+		<Assertion>
+			<PlainText location="." locationContent="../../2/1"/>  
+		</Assertion>		
+	</ConformanceStatement>
+	
+	<ConformanceStatement Profile="Base" id="HL7-3" Context="MF_TEST.OM3.1" flavor="EDOS">
+		<EnglishDescription>OM3-1 : This field contains the same value as the sequence number of the associated OM1 segment.</EnglishDescription>
+		<Assertion>
+			<PlainText location="." locationContent="../../2/1"/>  
+		</Assertion>		
+	</ConformanceStatement>
+ 	<ConformanceStatement Profile="Base" id="HL7-4" Context="MF_TEST.OM4.1" flavor="EDOS">
+		<EnglishDescription>OM4-1 : This field contains the same value as the sequence number of the associated OM1 segment.</EnglishDescription>
+		<Assertion>
+			<PlainText location="." locationContent="../../2/1"/>  
+		</Assertion>		
+	</ConformanceStatement>
+</ConformanceStatementDocument>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- V2_IG_LTCF_R2_DSTU_R1_2013NOV -->
+<PredicateDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<!-- MFE.2 -->
+	<Predicate Context="MFE.2" PredicateTrueUsage="R" PredicateFalseUsage="O">
+		<EnglishDescription>If MFI-6 Response Level Code is any value other than 'NE'.</EnglishDescription>
+		<Condition>
+			<Custom className="gov.nist.healthcare.mu.edos.custom.MFE" id="1"/>  
+              <!-- <NOT> 
+                <PlainText location="./././3/6" value="NE"/> 
+              </NOT> -->
+		</Condition>
+	</Predicate>
+	<!-- OM1.9 -->
+	<!-- <Predicate Context="OM1.9" PredicateTrueUsage="R" PredicateFalseUsage="O">
+		<EnglishDescription>If OM1-10 and 11 are not valued.</EnglishDescription>
+		<Condition>
+			<AND>
+				<NOT>
+					<Valued location="./10"/>
+				</NOT>
+				<NOT>
+					<Valued location="./11"/>
+				</NOT>
+			</AND>
+		</Condition>
+	</Predicate> -->	 
+	<!-- OM1.10 -->
+		<Predicate Context="OM1.10" PredicateTrueUsage="R" PredicateFalseUsage="O">
+		<EnglishDescription>If OM1-9 (Preferred Report Name for the Observation) and OM1-11 (Preferred Long name for the observation are not valued.</EnglishDescription>
+		<Condition>
+			<AND>
+				<NOT>
+					<Valued location="./9"/>
+				</NOT>
+				<NOT>
+					<Valued location="./11"/>
+				</NOT>
+			</AND>
+		</Condition>
+	</Predicate>	
+	<!-- OM1.11 -->
+	<Predicate Context="OM1.11" PredicateTrueUsage="R" PredicateFalseUsage="O">
+		<EnglishDescription>If OM1-9 (Preferred Report Name for the Observation) and OM1-10 (Preferred Short Name or Mnemonic for Observation) are not valued.</EnglishDescription>
+		<Condition>
+			<AND>
+				<NOT>
+					<Valued location="./9"/>
+				</NOT>
+				<NOT>
+					<Valued location="./10"/>
+				</NOT>
+			</AND>
+		</Condition>
+	</Predicate>
+	<!-- OM1.28 -->
+	<Predicate Context="OM1.28" PredicateTrueUsage="R" PredicateFalseUsage="O">
+		<EnglishDescription>If OM1-27 is valued.</EnglishDescription>
+		<Condition>
+			<Valued location="./27"/>
+		</Condition>
+	</Predicate>
+	<!-- OM1.52 -->
+	<Predicate Context="OM1.52" PredicateTrueUsage="RE" PredicateFalseUsage="O">
+		<EnglishDescription>If MFE-1 = MDC.</EnglishDescription>
+		<Condition>
+			<PlainText location="././1/1" value="MDC"/>
+		</Condition>
+	</Predicate>
+</PredicateDocument>

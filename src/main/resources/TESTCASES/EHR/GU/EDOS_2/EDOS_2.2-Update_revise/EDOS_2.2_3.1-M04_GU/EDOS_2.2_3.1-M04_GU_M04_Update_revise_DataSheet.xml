@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<event-profiles generated="15-06-2015 10:14">
+    <test-message instance="EDOS_2.2_3.1-M04_GU">
+        <segment longId="MFN_M04" id="MSH" test-profile="3.60" display-group="MSH" display-group-instance="1"/>
+        <segment longId="MFN_M04" id="MFI" test-profile="12.0" display-group="MFI" display-group-instance="1"/>
+        <segment longId="MFN_M04/MF_CDM" id="MFE" test-profile="200.1" display-group="MFE" display-group-instance="1"/>
+        <segment longId="MFN_M04/MF_CDM" id="CDM" test-profile="200.1" display-group="CDM" display-group-instance="1"/>
+        <segment longId="MFN_M04/MF_CDM" id="NTE" test-profile="200.1" display-group="NTE" display-group-instance="1"/>
+    </test-message>
+    <test-profile-package>
+        <test-profiles segment="MFI">
+            <test-profile id="12.0" segment="MFI">
+                <element location="MFI.1[1]" displayName="Master File Identifier" relation="parent" group="MFI.1[1]"/>
+                <element location="MFI.1[1].1" displayName="Identifier" relation="child" group="MFI.1[1]" category="IG Fixed Data" data="CDM"/>
+                <element location="MFI.1[1].2" displayName="Text" relation="child" group="MFI.1[1]" category="Changeable Data" data="Charge description master file"/>
+                <element location="MFI.1[1].3" displayName="Name of Coding System" relation="child" group="MFI.1[1]" category="IG Fixed Data" data="HL70175"/>
+                <element location="MFI.1[1].7" displayName="Coding System Version ID" relation="child" group="MFI.1[1]" category="Test Case Fixed Data" data="2.5.1"/>
+                <element location="MFI.1[1].8" displayName="Alternate Coding System Version ID" relation="child" group="MFI.1[1]"/>
+                <element location="MFI.3[1]" displayName="File-Level Event Code" relation="parent" group="MFI.3[1]" category="Test Case Fixed Data" data="UPD"/>
+                <element location="MFI.6[1]" displayName="Response Level Code" relation="parent" group="MFI.6[1]" category="IG Fixed Data" data="NE"/>
+            </test-profile>
+        </test-profiles>
+        <test-profiles segment="MSH">
+            <test-profile id="3.60" segment="MSH">
+                <element location="MSH.1[1]" displayName="Field Separator" relation="parent" group="MSH.1[1]" category="IG Fixed Data" data="|"/>
+                <element location="MSH.2[1]" displayName="Encoding Characters" relation="parent" group="MSH.2[1]" category="IG Fixed Data" data="^~\&amp;#"/>
+                <element location="MSH.3[1]" displayName="Sending Application" relation="parent" group="MSH.3[1]"/>
+                <element location="MSH.3[1].1" displayName="Namespace ID" relation="child" group="MSH.3[1]" category="Configurable Data" data="NIST Test Lab APP"/>
+                <element location="MSH.3[1].2" displayName="Universal ID" relation="child" group="MSH.3[1]" category="Configurable Data" data="2.16.840.1.113883.3.72.5.20"/>
+                <element location="MSH.3[1].3" displayName="Universal ID Type" relation="child" group="MSH.3[1]" category="IG Fixed Data" data="ISO"/>
+                <element location="MSH.4[1]" displayName="Sending Facility" relation="parent" group="MSH.4[1]"/>
+                <element location="MSH.4[1].1" displayName="Namespace ID" relation="child" group="MSH.4[1]" category="Configurable Data" data="NIST Lab Facility"/>
+                <element location="MSH.4[1].2" displayName="Universal ID" relation="child" group="MSH.4[1]" category="Configurable Data" data="2.16.840.1.113883.3.72.5.21"/>
+                <element location="MSH.4[1].3" displayName="Universal ID Type" relation="child" group="MSH.4[1]" category="IG Fixed Data" data="ISO"/>
+                <element location="MSH.6[1]" displayName="Receiving Facility" relation="parent" group="MSH.6[1]"/>
+                <element location="MSH.6[1].1" displayName="Namespace ID" relation="child" group="MSH.6[1]" category="Configurable Data" data="NIST EHR Facility"/>
+                <element location="MSH.6[1].2" displayName="Universal ID" relation="child" group="MSH.6[1]" category="Configurable Data" data="2.16.840.1.113883.3.72.5.23"/>
+                <element location="MSH.6[1].3" displayName="Universal ID Type" relation="child" group="MSH.6[1]" category="IG Fixed Data" data="ISO"/>
+                <element location="MSH.7[1]" displayName="Date/Time Of Message" relation="parent" group="MSH.7[1]"/>
+                <element location="MSH.7[1].1" displayName="Time" relation="child" group="MSH.7[1]" category="System Generated" data="20130421113601-0700"/>
+                <element location="MSH.9[1]" displayName="Message Type" relation="parent" group="MSH.9[1]"/>
+                <element location="MSH.9[1].1" displayName="Message Code" relation="child" group="MSH.9[1]" category="IG Fixed Data" data="MFN"/>
+                <element location="MSH.9[1].2" displayName="Trigger Event" relation="child" group="MSH.9[1]" category="IG Fixed Data" data="M04"/>
+                <element location="MSH.9[1].3" displayName="Message Structure" relation="child" group="MSH.9[1]" category="IG Fixed Data" data="MFN_M04"/>
+                <element location="MSH.10[1]" displayName="Message Control ID" relation="parent" group="MSH.10[1]" category="System Generated" data="EDOS_2.2_3.1-M04_GU"/>
+                <element location="MSH.11[1]" displayName="Processing ID" relation="parent" group="MSH.11[1]"/>
+                <element location="MSH.11[1].1" displayName="Processing ID" relation="child" group="MSH.11[1]" category="Changeable Data" data="T"/>
+                <element location="MSH.12[1]" displayName="VersionID" relation="parent" group="MSH.12[1]"/>
+                <element location="MSH.12[1].1" displayName="Version ID" relation="child" group="MSH.12[1]" category="IG Fixed Data" data="2.5.1"/>
+                <element location="MSH.15[1]" displayName="Accept Acknowledgment Type" relation="parent" group="MSH.15[1]" category="Changeable Data" data="AL"/>
+                <element location="MSH.16[1]" displayName="Application Acknowledgment Type" relation="parent" group="MSH.16[1]" category="Changeable Data" data="NE"/>
+                <element location="MSH.21[1]" displayName="Message Profile Identifier" relation="parent" group="MSH.21[1]"/>
+                <element location="MSH.21[1].1" displayName="Entity Identifier" relation="child" group="MSH.21[1]" category="Test Case Fixed Data" data="EDOS_Common_Component"/>
+                <element location="MSH.21[1].2" displayName="Namespace ID" relation="child" group="MSH.21[1]" category="Changeable Data" data="EDOS Base Profile"/>
+                <element location="MSH.21[1].3" displayName="Universal ID" relation="child" group="MSH.21[1]" category="Test Case Fixed Data" data="2.16.840.1.113883.9.67"/>
+                <element location="MSH.21[1].4" displayName="Universal ID Type" relation="child" group="MSH.21[1]" category="IG Fixed Data" data="ISO"/>
+                <element location="MSH.21[2]" displayName="Message Profile Identifier" relation="parent" group="MSH.21[2]"/>
+                <element location="MSH.21[2].1" displayName="Entity Identifier" relation="child" group="MSH.21[2]" category="Test Case Fixed Data" data="EDOS_GU_Component"/>
+                <element location="MSH.21[2].2" displayName="Namespace ID" relation="child" group="MSH.21[2]" category="Changeable Data" data="EDOS GU Profile"/>
+                <element location="MSH.21[2].3" displayName="Universal ID" relation="child" group="MSH.21[2]" category="Test Case Fixed Data" data="2.16.840.1.113883.9.68"/>
+                <element location="MSH.21[2].4" displayName="Universal ID Type" relation="child" group="MSH.21[2]" category="IG Fixed Data" data="ISO"/>
+            </test-profile>
+        </test-profiles>
+        <test-profiles segment="MFE">
+            <test-profile id="200.1" segment="MFE">
+                <element location="MFE.1[1]" displayName="Record-Level Event Code" relation="parent" group="MFE.1[1]" category="Test Case Fixed Data" data="MUP"/>
+                <element location="MFE.2[1]" displayName="MFN Control ID" relation="parent" group="MFE.2[1]"/>
+                <element location="MFE.3[1]" displayName="Effective Date/Time" relation="parent" group="MFE.3[1]"/>
+                <element location="MFE.3[1].1" displayName="Time" relation="child" group="MFE.3[1]" category="System Generated" data="20131219145310"/>
+                <element location="MFE.4[1]" displayName="Primary Key Value - MFE" relation="parent" group="MFE.4[1]"/>
+                <element location="MFE.4[1].1" displayName="Identifier" relation="child" group="MFE.4[1]" category="Changeable Data" data="200"/>
+                <element location="MFE.4[1].2" displayName="Text" relation="child" group="MFE.4[1]" category="Changeable Data" data="CBC_diff"/>
+                <element location="MFE.4[1].3" displayName="Name of Coding System" relation="child" group="MFE.4[1]" category="Changeable Data" data="99USI"/>
+                <element location="MFE.4[1].7" displayName="Coding System Version ID" relation="child" group="MFE.4[1]" category="Changeable Data" data="20130421"/>
+                <element location="MFE.5[1]" displayName="Primary Key Value Type" relation="parent" group="MFE.5[1]" category="IG Fixed Data" data="CWE"/>
+            </test-profile>
+        </test-profiles>
+        <test-profiles segment="CDM">
+            <test-profile id="200.1" segment="CDM">
+                <element location="CDM.1[1]" displayName="Primary Key Value - CDM" relation="parent" group="CDM.1[1]"/>
+                <element location="CDM.1[1].1" displayName="Identifier" relation="child" group="CDM.1[1]" category="Test Case Fixed Data" data="200"/>
+                <element location="CDM.1[1].2" displayName="Text" relation="child" group="CDM.1[1]" category="Changeable Data" data="CBC_diff"/>
+                <element location="CDM.1[1].3" displayName="Name of Coding System" relation="child" group="CDM.1[1]" category="Changeable Data" data="99USI"/>
+                <element location="CDM.1[1].7" displayName="Coding System Version ID" relation="child" group="CDM.1[1]" category="Changeable Data" data="20130421"/>
+                <element location="CDM.3[1]" displayName="Charge Description Short" relation="parent" group="CDM.3[1]" category="Changeable Data" data="CBC_diff"/>
+                <element location="CDM.7[1]" displayName="Procedure Code" relation="parent" group="CDM.7[1]"/>
+                <element location="CDM.7[1].1" displayName="Identifier" relation="child" group="CDM.7[1]" category="Changeable Data" data="85060"/>
+                <element location="CDM.7[1].2" displayName="Text" relation="child" group="CDM.7[1]" category="Changeable Data" data="BLOOD SMEAR, PERIPHERAL, INTERPRETATION BY PHYSICIAN WITH WRITTEN REPORT"/>
+                <element location="CDM.7[1].3" displayName="Name of Coding System" relation="child" group="CDM.7[1]" category="IG Fixed Data" data="C4"/>
+                <element location="CDM.7[1].7" displayName="Coding System Version ID" relation="child" group="CDM.7[1]" category="Changeable Data" data="19.2"/>
+                <element location="CDM.7[2]" displayName="Procedure Code" relation="parent" group="CDM.7[2]"/>
+                <element location="CDM.7[2].1" displayName="Identifier" relation="child" group="CDM.7[2]" category="Changeable Data" data="85060"/>
+                <element location="CDM.7[2].2" displayName="Text" relation="child" group="CDM.7[2]" category="Changeable Data" data="BLOOD SMEAR, PERIPHERAL, INTERPRETATION BY PHYSICIAN WITH WRITTEN REPORT"/>
+                <element location="CDM.7[2].3" displayName="Name of Coding System" relation="child" group="CDM.7[2]" category="IG Fixed Data" data="C4"/>
+                <element location="CDM.7[2].7" displayName="Coding System Version ID" relation="child" group="CDM.7[2]" category="Changeable Data" data="19.2"/>
+                <element location="CDM.7[3]" displayName="Procedure Code" relation="parent" group="CDM.7[3]"/>
+                <element location="CDM.7[3].1" displayName="Identifier" relation="child" group="CDM.7[3]"/>
+                <element location="CDM.7[3].2" displayName="Text" relation="child" group="CDM.7[3]"/>
+                <element location="CDM.7[3].3" displayName="Name of Coding System" relation="child" group="CDM.7[3]"/>
+                <element location="CDM.7[3].7" displayName="Coding System Version ID" relation="child" group="CDM.7[3]"/>
+                <element location="CDM.7[4]" displayName="Procedure Code" relation="parent" group="CDM.7[4]"/>
+                <element location="CDM.7[4].1" displayName="Identifier" relation="child" group="CDM.7[4]"/>
+                <element location="CDM.7[4].2" displayName="Text" relation="child" group="CDM.7[4]"/>
+                <element location="CDM.7[4].3" displayName="Name of Coding System" relation="child" group="CDM.7[4]"/>
+                <element location="CDM.7[4].7" displayName="Coding System Version ID" relation="child" group="CDM.7[4]"/>
+                <element location="CDM.7[5]" displayName="Procedure Code" relation="parent" group="CDM.7[5]"/>
+                <element location="CDM.7[5].1" displayName="Identifier" relation="child" group="CDM.7[5]"/>
+                <element location="CDM.7[5].2" displayName="Text" relation="child" group="CDM.7[5]"/>
+                <element location="CDM.7[5].3" displayName="Name of Coding System" relation="child" group="CDM.7[5]"/>
+                <element location="CDM.7[5].7" displayName="Coding System Version ID" relation="child" group="CDM.7[5]"/>
+                <element location="CDM.7[6]" displayName="Procedure Code" relation="parent" group="CDM.7[6]"/>
+                <element location="CDM.7[6].1" displayName="Identifier" relation="child" group="CDM.7[6]"/>
+                <element location="CDM.7[6].2" displayName="Text" relation="child" group="CDM.7[6]"/>
+                <element location="CDM.7[6].3" displayName="Name of Coding System" relation="child" group="CDM.7[6]"/>
+                <element location="CDM.7[6].7" displayName="Coding System Version ID" relation="child" group="CDM.7[6]"/>
+            </test-profile>
+        </test-profiles>
+        <test-profiles segment="NTE">
+            <test-profile id="200.1" segment="NTE">
+                <element location="NTE.1[1]" displayName="Set ID - NTE" relation="parent" group="NTE.1[1]" category="Changeable Data" data="1"/>
+                <element location="NTE.2[1]" displayName="Source of comment" relation="parent" group="NTE.2[1]"/>
+                <element location="NTE.3[1]" displayName="Comment" relation="parent" group="NTE.3[1]" category="Changeable Data" data="CPT Code Information:  85060-&quot;Blood smear, peripheral, interpretation by physician with written report&quot; are billed if appropriate depending on results of CBC.   A manual differential count (85007) &quot;Blood count; blood smear, microscopic examination with manual differential WBC count&quot; will only be performed if specifically ordered."/>
+                <element location="NTE.4[1]" displayName="Comment Type" relation="parent" group="NTE.4[1]"/>
+                <element location="NTE.4[1].1" displayName="Identifier" relation="child" group="NTE.4[1]"/>
+                <element location="NTE.4[1].2" displayName="Text" relation="child" group="NTE.4[1]"/>
+                <element location="NTE.4[1].3" displayName="Name of Coding System" relation="child" group="NTE.4[1]"/>
+                <element location="NTE.4[1].4" displayName="Alternate Identifier" relation="child" group="NTE.4[1]"/>
+                <element location="NTE.4[1].5" displayName="Alternate Text" relation="child" group="NTE.4[1]"/>
+                <element location="NTE.4[1].6" displayName="Name of Alternate Coding System" relation="child" group="NTE.4[1]"/>
+            </test-profile>
+        </test-profiles>
+    </test-profile-package>
+    <message-description>
+        <properties id="EDOS_2.2_3.1-M04_GU" test-type="TO_DO" status="Valid" ack="NA" profile="MFN_M04" test-case-type="M04_Update_revise" tag="Update_revise" test-case-id="EDOS_2.2_3.1-M04_GU" description="M04_Update_revise" type="TO_DO" structure="TO_DO"/>
+    </message-description>
+</event-profiles>

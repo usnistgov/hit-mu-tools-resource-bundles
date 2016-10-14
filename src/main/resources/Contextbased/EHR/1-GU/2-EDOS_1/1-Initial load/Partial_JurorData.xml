@@ -1,0 +1,2867 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCase generated="2016-10-13 15:17:44" id="1-Initial load">
+   <Messages>
+      <Message id="MFN_M08">
+         <MFN_M08>
+            <MSH>
+               <MSH.1>|</MSH.1>
+               <MSH.2>^~\&amp;#</MSH.2>
+               <MSH.3>
+                  <MSH.3.1>NIST Test Lab APP</MSH.3.1>
+                  <MSH.3.2>2.16.840.1.113883.3.72.5.20</MSH.3.2>
+                  <MSH.3.3>ISO</MSH.3.3>
+               </MSH.3>
+               <MSH.4>
+                  <MSH.4.1>NIST Lab Facility</MSH.4.1>
+                  <MSH.4.2>2.16.840.1.113883.3.72.5.21</MSH.4.2>
+                  <MSH.4.3>ISO</MSH.4.3>
+               </MSH.4>
+               <MSH.6>
+                  <MSH.6.1>NIST EHR Facility</MSH.6.1>
+                  <MSH.6.2>2.16.840.1.113883.3.72.5.23</MSH.6.2>
+                  <MSH.6.3>ISO</MSH.6.3>
+               </MSH.6>
+               <MSH.7>
+                  <MSH.7.1>20130421113601-0700</MSH.7.1>
+               </MSH.7>
+               <MSH.9>
+                  <MSH.9.1>MFN</MSH.9.1>
+                  <MSH.9.2>M08</MSH.9.2>
+                  <MSH.9.3>MFN_M08</MSH.9.3>
+               </MSH.9>
+               <MSH.10>EDOS_1.0_1.1-M08_GU</MSH.10>
+               <MSH.11>
+                  <MSH.11.1>D</MSH.11.1>
+               </MSH.11>
+               <MSH.12>
+                  <MSH.12.1>2.5.1</MSH.12.1>
+               </MSH.12>
+               <MSH.21>
+                  <MSH.21.1>EDOS_Common_Component</MSH.21.1>
+                  <MSH.21.2>EDOS Base Profile</MSH.21.2>
+                  <MSH.21.3>2.16.840.1.113883.9.67</MSH.21.3>
+                  <MSH.21.4>ISO</MSH.21.4>
+               </MSH.21>
+               <MSH.21>
+                  <MSH.21.1>EDOS_GU_Component</MSH.21.1>
+                  <MSH.21.2>EDOS GU Profile</MSH.21.2>
+                  <MSH.21.3>2.16.840.1.113883.9.68</MSH.21.3>
+                  <MSH.21.4>ISO</MSH.21.4>
+               </MSH.21>
+            </MSH>
+            <MFI>
+               <MFI.1>
+                  <MFI.1.1>OMM</MFI.1.1>
+                  <MFI.1.2>Mixed type observation master file </MFI.1.2>
+                  <MFI.1.3>HL70175</MFI.1.3>
+                  <MFI.1.7>2.5.1</MFI.1.7>
+               </MFI.1>
+               <MFI.3>REP</MFI.3>
+               <MFI.6>NE</MFI.6>
+            </MFI>
+            <MFN_M08.MF_TEST>
+               <MFE>
+                  <MFE.1>MAD</MFE.1>
+                  <MFE.3>
+                     <MFE.3.1>20131219145310</MFE.3.1>
+                  </MFE.3>
+                  <MFE.4>
+                     <MFE.4.1>104</MFE.4.1>
+                     <MFE.4.2>Serum Glucose</MFE.4.2>
+                     <MFE.4.3>99USL</MFE.4.3>
+                     <MFE.4.7>20130421</MFE.4.7>
+                  </MFE.4>
+                  <MFE.5>CWE</MFE.5>
+               </MFE>
+               <OM1>
+                  <OM1.1>53</OM1.1>
+                  <OM1.2>
+                     <OM1.2.1>104</OM1.2.1>
+                     <OM1.2.2>Serum Glucose</OM1.2.2>
+                     <OM1.2.3>99USL</OM1.2.3>
+                     <OM1.2.7>20130421</OM1.2.7>
+                  </OM1.2>
+                  <OM1.4>Y</OM1.4>
+                  <OM1.5>
+                     <OM1.5.1>05D0669071</OM1.5.1>
+                     <OM1.5.2>Century Hospital Clinical Laboratory</OM1.5.2>
+                     <OM1.5.3>99USL</OM1.5.3>
+                     <OM1.5.7>2103</OM1.5.7>
+                  </OM1.5>
+                  <OM1.7>
+                     <OM1.7.1>2345-7</OM1.7.1>
+                     <OM1.7.2>Glucose [Mass/volume] in Serum or Plasma</OM1.7.2>
+                     <OM1.7.3>LN</OM1.7.3>
+                     <OM1.7.7>2.42</OM1.7.7>
+                  </OM1.7>
+                  <OM1.9>Serum Glucose</OM1.9>
+                  <OM1.12>Y</OM1.12>
+                  <OM1.18>A</OM1.18>
+                  <OM1.32>This blood test is used to determine...</OM1.32>
+                  <OM1.39>Insufficient specimen, Improper labeling.</OM1.39>
+                  <OM1.40>Daily</OM1.40>
+                  <OM1.48>N</OM1.48>
+                  <OM1.49>LAB</OM1.49>
+                  <OM1.56>
+                     <OM1.56.1>2345-7</OM1.56.1>
+                     <OM1.56.2>Glucose [Mass/volume] in Serum or Plasma</OM1.56.2>
+                     <OM1.56.3>LN</OM1.56.3>
+                     <OM1.56.4>104</OM1.56.4>
+                     <OM1.56.5>Serum Glucose</OM1.56.5>
+                     <OM1.56.6>99USL</OM1.56.6>
+                     <OM1.56.7>2.48</OM1.56.7>
+                     <OM1.56.8>20130421</OM1.56.8>
+                  </OM1.56>
+                  <OM1.57>
+                     <OM1.57.1>1</OM1.57.1>
+                     <OM1.57.2>
+                        <OM1.57.2.1>d</OM1.57.2.1>
+                        <OM1.57.2.2>day</OM1.57.2.2>
+                        <OM1.57.2.3>UCUM</OM1.57.2.3>
+                        <OM1.57.2.7>1.8</OM1.57.2.7>
+                     </OM1.57.2>
+                  </OM1.57>
+               </OM1>
+               <OMC>
+                  <OMC.4>
+                     <OMC.4.1>1902</OMC.4.1>
+                     <OMC.4.2>Fasting Status</OMC.4.2>
+                     <OMC.4.3>99USL</OMC.4.3>
+                     <OMC.4.4>49541-6</OMC.4.4>
+                     <OMC.4.5>Fasting Status</OMC.4.5>
+                     <OMC.4.6>LN</OMC.4.6>
+                     <OMC.4.7>20130421</OMC.4.7>
+                     <OMC.4.8>2.52</OMC.4.8>
+                  </OMC.4>
+                  <OMC.5>
+                     <OMC.5.1>DRW</OMC.5.1>
+                     <OMC.5.2>Collecting the specimen</OMC.5.2>
+                     <OMC.5.3>HL70938</OMC.5.3>
+                  </OMC.5>
+                  <OMC.6>
+                     <OMC.6.1>OBR-13</OMC.6.1>
+                     <OMC.6.2>Relevant Clinical Information</OMC.6.2>
+                     <OMC.6.3>HL70939</OMC.6.3>
+                     <OMC.6.7>2.8.2</OMC.6.7>
+                  </OMC.6>
+                  <OMC.7>Y</OMC.7>
+                  <OMC.8>Might be good to ask if fasting was more than 8 hours in order to answer as "Patient was fasting"</OMC.8>
+                  <OMC.9>CWE</OMC.9>
+                  <OMC.11>
+                     <OMC.11.1>F</OMC.11.1>
+                     <OMC.11.2>Patient was fasting prior to the procedure</OMC.11.2>
+                     <OMC.11.3>HL70916</OMC.11.3>
+                  </OMC.11>
+                  <OMC.11>
+                     <OMC.11.1>NF</OMC.11.1>
+                     <OMC.11.2>The patient indicated they did not fast prior to the procedure</OMC.11.2>
+                     <OMC.11.3>HL70916</OMC.11.3>
+                  </OMC.11>
+                  <OMC.11>
+                     <OMC.11.1>U</OMC.11.1>
+                     <OMC.11.2>Unknown</OMC.11.2>
+                     <OMC.11.3>HL70353</OMC.11.3>
+                  </OMC.11>
+               </OMC>
+               <OM2>
+                  <OM2.1>53</OM2.1>
+                  <OM2.2>
+                     <OM2.2.1>mg/dL</OM2.2.1>
+                     <OM2.2.2>milligram per deciliter</OM2.2.2>
+                     <OM2.2.3>UCUM</OM2.2.3>
+                     <OM2.2.7>1.8</OM2.2.7>
+                  </OM2.2>
+                  <OM2.6>
+                     <OM2.6.1>
+                        <OM2.6.1.1>70</OM2.6.1.1>
+                        <OM2.6.1.2>140</OM2.6.1.2>
+                     </OM2.6.1>
+                  </OM2.6>
+                  <OM2.7>
+                     <OM2.7.1>
+                        <OM2.7.1.1>40</OM2.7.1.1>
+                        <OM2.7.1.2>500</OM2.7.1.2>
+                     </OM2.7.1>
+                  </OM2.7>
+                  <OM2.8>
+                     <OM2.8.1>
+                        <OM2.8.1.1>10</OM2.8.1.1>
+                        <OM2.8.1.2>10000</OM2.8.1.2>
+                     </OM2.8.1>
+                  </OM2.8>
+               </OM2>
+               <OM4>
+                  <OM4.1>53</OM4.1>
+                  <OM4.3>Gold Serum Separator tube</OM4.3>
+                  <OM4.3>Red, No Additive tube</OM4.3>
+                  <OM4.4>5.0</OM4.4>
+                  <OM4.4>5.0</OM4.4>
+                  <OM4.5>
+                     <OM4.5.1>mL</OM4.5.1>
+                     <OM4.5.2>milliliter</OM4.5.2>
+                     <OM4.5.3>UCUM</OM4.5.3>
+                     <OM4.5.7>1.8</OM4.5.7>
+                  </OM4.5>
+                  <OM4.5>
+                     <OM4.5.1>mL</OM4.5.1>
+                     <OM4.5.2>milliliter</OM4.5.2>
+                     <OM4.5.3>UCUM</OM4.5.3>
+                     <OM4.5.7>1.8</OM4.5.7>
+                  </OM4.5>
+                  <OM4.6>
+                     <OM4.6.1>119364003</OM4.6.1>
+                     <OM4.6.2>Serum specimen</OM4.6.2>
+                     <OM4.6.3>SCT</OM4.6.3>
+                     <OM4.6.7>201509-US Ed</OM4.6.7>
+                  </OM4.6>
+                  <OM4.10>
+                     <OM4.10.1>1</OM4.10.1>
+                     <OM4.10.2>
+                        <OM4.10.2.1>mL</OM4.10.2.1>
+                        <OM4.10.2.2>milliliter</OM4.10.2.2>
+                        <OM4.10.2.3>UCUM</OM4.10.2.3>
+                     </OM4.10.2>
+                  </OM4.10>
+                  <OM4.11>
+                     <OM4.11.1>0.5</OM4.11.1>
+                     <OM4.11.2>
+                        <OM4.11.2.1>mL</OM4.11.2.1>
+                        <OM4.11.2.2>milliliter</OM4.11.2.2>
+                        <OM4.11.2.3>UCUM</OM4.11.2.3>
+                        <OM4.11.2.7>1.8</OM4.11.2.7>
+                     </OM4.11.2>
+                  </OM4.11>
+                  <OM4.12>Protect from light. Allow serum tube to clot completely at room temperature. Separate serum or plasma from cells ASAP or within 30 minutes of collection.</OM4.12>
+                  <OM4.15>
+                     <OM4.15.1>REF</OM4.15.1>
+                     <OM4.15.2>Refrigerated temperature</OM4.15.2>
+                     <OM4.15.3>HL70376</OM4.15.3>
+                     <OM4.15.7>2.5.1</OM4.15.7>
+                  </OM4.15>
+                  <OM4.16>P</OM4.16>
+               </OM4>
+            </MFN_M08.MF_TEST>
+            <MFN_M08.MF_TEST>
+               <MFE>
+                  <MFE.1>MAD</MFE.1>
+                  <MFE.3>
+                     <MFE.3.1>20131219145310</MFE.3.1>
+                  </MFE.3>
+                  <MFE.4>
+                     <MFE.4.1>110</MFE.4.1>
+                     <MFE.4.2>GFR, calculated</MFE.4.2>
+                     <MFE.4.3>99USL</MFE.4.3>
+                     <MFE.4.7>20130421</MFE.4.7>
+                  </MFE.4>
+                  <MFE.5>CWE</MFE.5>
+               </MFE>
+               <OM1>
+                  <OM1.1>57</OM1.1>
+                  <OM1.2>
+                     <OM1.2.1>110</OM1.2.1>
+                     <OM1.2.2>GFR, calculated</OM1.2.2>
+                     <OM1.2.3>99USL</OM1.2.3>
+                     <OM1.2.7>20130421</OM1.2.7>
+                  </OM1.2>
+                  <OM1.4>Y</OM1.4>
+                  <OM1.5>
+                     <OM1.5.1>05D0669071</OM1.5.1>
+                     <OM1.5.2>Century Hospital Clinical Laboratory</OM1.5.2>
+                     <OM1.5.3>99USL</OM1.5.3>
+                     <OM1.5.7>2103</OM1.5.7>
+                  </OM1.5>
+                  <OM1.7>
+                     <OM1.7.1>33914-3</OM1.7.1>
+                     <OM1.7.2>Glomerular filtration rate/1.73 sq M.predicted by Creatinine-based formula (MDRD)</OM1.7.2>
+                     <OM1.7.3>LN</OM1.7.3>
+                     <OM1.7.7>2.42</OM1.7.7>
+                  </OM1.7>
+                  <OM1.9>GFR, calculated</OM1.9>
+                  <OM1.12>Y</OM1.12>
+                  <OM1.18>A</OM1.18>
+                  <OM1.32>This blood test is used to determine...</OM1.32>
+                  <OM1.39>Insufficient specimen, Improper labeling.</OM1.39>
+                  <OM1.40>Daily</OM1.40>
+                  <OM1.48>N</OM1.48>
+                  <OM1.49>LAB</OM1.49>
+                  <OM1.56>
+                     <OM1.56.1>33914-3</OM1.56.1>
+                     <OM1.56.2>Glomerular filtration rate/1.73 sq M.predicted by Creatinine-based formula (MDRD)</OM1.56.2>
+                     <OM1.56.3>LN</OM1.56.3>
+                     <OM1.56.4>110</OM1.56.4>
+                     <OM1.56.5>GFR, calculated</OM1.56.5>
+                     <OM1.56.6>99USL</OM1.56.6>
+                     <OM1.56.7>2.48</OM1.56.7>
+                     <OM1.56.8>20130421</OM1.56.8>
+                  </OM1.56>
+                  <OM1.57>
+                     <OM1.57.1>1</OM1.57.1>
+                     <OM1.57.2>
+                        <OM1.57.2.1>d</OM1.57.2.1>
+                        <OM1.57.2.2>day</OM1.57.2.2>
+                        <OM1.57.2.3>UCUM</OM1.57.2.3>
+                        <OM1.57.2.7>1.8</OM1.57.2.7>
+                     </OM1.57.2>
+                  </OM1.57>
+               </OM1>
+               <OMC>
+                  <OMC.4>
+                     <OMC.4.1>1906</OMC.4.1>
+                     <OMC.4.2>What is the Clinically Relevant Race for eGFR?</OMC.4.2>
+                     <OMC.4.3>99USL</OMC.4.3>
+                     <OMC.4.4>32624-9</OMC.4.4>
+                     <OMC.4.5>Race</OMC.4.5>
+                     <OMC.4.6>LN</OMC.4.6>
+                     <OMC.4.7>20130421</OMC.4.7>
+                     <OMC.4.8>2.52</OMC.4.8>
+                  </OMC.4>
+                  <OMC.5>
+                     <OMC.5.1>ORD</OMC.5.1>
+                     <OMC.5.2>Placing the order</OMC.5.2>
+                     <OMC.5.3>HL70938</OMC.5.3>
+                  </OMC.5>
+                  <OMC.6>
+                     <OMC.6.1>OBR-OBX</OMC.6.1>
+                     <OMC.6.2>OBX segment following an OBR segment</OMC.6.2>
+                     <OMC.6.3>HL70939</OMC.6.3>
+                  </OMC.6>
+                  <OMC.7>Y</OMC.7>
+                  <OMC.9>CWE</OMC.9>
+                  <OMC.11>
+                     <OMC.11.1>2028-9</OMC.11.1>
+                     <OMC.11.2>Asian</OMC.11.2>
+                     <OMC.11.3>HL70005</OMC.11.3>
+                  </OMC.11>
+                  <OMC.11>
+                     <OMC.11.1>2106-3</OMC.11.1>
+                     <OMC.11.2>White</OMC.11.2>
+                     <OMC.11.3>HL70005</OMC.11.3>
+                  </OMC.11>
+                  <OMC.11>
+                     <OMC.11.1>1002-5</OMC.11.1>
+                     <OMC.11.2>American Indian or Alaska Native</OMC.11.2>
+                     <OMC.11.3>HL70005</OMC.11.3>
+                  </OMC.11>
+                  <OMC.11>
+                     <OMC.11.1>2054-5</OMC.11.1>
+                     <OMC.11.2>Black or African American</OMC.11.2>
+                     <OMC.11.3>HL70005</OMC.11.3>
+                  </OMC.11>
+                  <OMC.11>
+                     <OMC.11.1>2076-8</OMC.11.1>
+                     <OMC.11.2>Native Hawaiian or Other Pacific Islander</OMC.11.2>
+                     <OMC.11.3>HL70005</OMC.11.3>
+                  </OMC.11>
+               </OMC>
+               <OM2>
+                  <OM2.1>57</OM2.1>
+                  <OM2.2>
+                     <OM2.2.1>mL/min/{1.73_m2}</OM2.2.1>
+                     <OM2.2.2>milliliter per minute per  1.73 square meter</OM2.2.2>
+                     <OM2.2.3>UCUM</OM2.2.3>
+                     <OM2.2.7>1.8</OM2.2.7>
+                  </OM2.2>
+                  <OM2.6>
+                     <OM2.6.1>
+                        <OM2.6.1.1>60</OM2.6.1.1>
+                     </OM2.6.1>
+                     <OM2.6.6>
+                        <OM2.6.6.1>2054-5</OM2.6.6.1>
+                        <OM2.6.6.2>Black or African American</OM2.6.6.2>
+                        <OM2.6.6.3>HL70005</OM2.6.6.3>
+                        <OM2.6.6.7>2.5.1</OM2.6.6.7>
+                     </OM2.6.6>
+                  </OM2.6>
+                  <OM2.6>
+                     <OM2.6.1>
+                        <OM2.6.1.1>60</OM2.6.1.1>
+                     </OM2.6.1>
+                     <OM2.6.6>
+                        <OM2.6.6.1>NAA</OM2.6.6.1>
+                        <OM2.6.6.2>Non African American</OM2.6.6.2>
+                        <OM2.6.6.3>99USL</OM2.6.6.3>
+                        <OM2.6.6.7>2014</OM2.6.6.7>
+                     </OM2.6.6>
+                  </OM2.6>
+               </OM2>
+            </MFN_M08.MF_TEST>
+            <MFN_M08.MF_TEST>
+               <MFE>
+                  <MFE.1>MAD</MFE.1>
+                  <MFE.3>
+                     <MFE.3.1>20131219145310</MFE.3.1>
+                  </MFE.3>
+                  <MFE.4>
+                     <MFE.4.1>112</MFE.4.1>
+                     <MFE.4.2>Calcium</MFE.4.2>
+                     <MFE.4.3>99USL</MFE.4.3>
+                     <MFE.4.7>20130421</MFE.4.7>
+                  </MFE.4>
+                  <MFE.5>CWE</MFE.5>
+               </MFE>
+               <OM1>
+                  <OM1.1>58</OM1.1>
+                  <OM1.2>
+                     <OM1.2.1>112</OM1.2.1>
+                     <OM1.2.2>Calcium</OM1.2.2>
+                     <OM1.2.3>99USL</OM1.2.3>
+                     <OM1.2.7>20130421</OM1.2.7>
+                  </OM1.2>
+                  <OM1.4>Y</OM1.4>
+                  <OM1.5>
+                     <OM1.5.1>05D0669071</OM1.5.1>
+                     <OM1.5.2>Century Hospital Clinical Laboratory</OM1.5.2>
+                     <OM1.5.3>99USL</OM1.5.3>
+                     <OM1.5.7>2103</OM1.5.7>
+                  </OM1.5>
+                  <OM1.7>
+                     <OM1.7.1>17861-6</OM1.7.1>
+                     <OM1.7.2>Calcium [Mass/volume] in Serum or Plasma</OM1.7.2>
+                     <OM1.7.3>LN</OM1.7.3>
+                     <OM1.7.7>2.42</OM1.7.7>
+                  </OM1.7>
+                  <OM1.9>Calcium</OM1.9>
+                  <OM1.12>Y</OM1.12>
+                  <OM1.18>A</OM1.18>
+                  <OM1.32>This blood test is used to determine...</OM1.32>
+                  <OM1.39>Insufficient specimen, Improper labeling.</OM1.39>
+                  <OM1.40>Daily</OM1.40>
+                  <OM1.48>N</OM1.48>
+                  <OM1.49>LAB</OM1.49>
+                  <OM1.56>
+                     <OM1.56.1>17861-6</OM1.56.1>
+                     <OM1.56.2>Calcium [Mass/volume] in Serum or Plasma</OM1.56.2>
+                     <OM1.56.3>LN</OM1.56.3>
+                     <OM1.56.4>112</OM1.56.4>
+                     <OM1.56.5>Calcium</OM1.56.5>
+                     <OM1.56.6>99USL</OM1.56.6>
+                     <OM1.56.7>2.48</OM1.56.7>
+                     <OM1.56.8>20130421</OM1.56.8>
+                  </OM1.56>
+                  <OM1.57>
+                     <OM1.57.1>1</OM1.57.1>
+                     <OM1.57.2>
+                        <OM1.57.2.1>d</OM1.57.2.1>
+                        <OM1.57.2.2>day</OM1.57.2.2>
+                        <OM1.57.2.3>UCUM</OM1.57.2.3>
+                        <OM1.57.2.7>1.8</OM1.57.2.7>
+                     </OM1.57.2>
+                  </OM1.57>
+               </OM1>
+               <OM2>
+                  <OM2.1>58</OM2.1>
+                  <OM2.2>
+                     <OM2.2.1>mg/dL</OM2.2.1>
+                     <OM2.2.2>milligram per deciliter</OM2.2.2>
+                     <OM2.2.3>UCUM</OM2.2.3>
+                     <OM2.2.7>1.8</OM2.2.7>
+                  </OM2.2>
+                  <OM2.6>
+                     <OM2.6.1>
+                        <OM2.6.1.1>8.9</OM2.6.1.1>
+                        <OM2.6.1.2>10.1</OM2.6.1.2>
+                     </OM2.6.1>
+                     <OM2.6.2>
+                        <OM2.6.2.1>M</OM2.6.2.1>
+                        <OM2.6.2.2>Male</OM2.6.2.2>
+                        <OM2.6.2.3>HL70001</OM2.6.2.3>
+                     </OM2.6.2>
+                  </OM2.6>
+                  <OM2.6>
+                     <OM2.6.1>
+                        <OM2.6.1.1>8.9</OM2.6.1.1>
+                        <OM2.6.1.2>10.1</OM2.6.1.2>
+                     </OM2.6.1>
+                     <OM2.6.2>
+                        <OM2.6.2.1>F</OM2.6.2.1>
+                        <OM2.6.2.2>Female</OM2.6.2.2>
+                        <OM2.6.2.3>HL70001</OM2.6.2.3>
+                     </OM2.6.2>
+                  </OM2.6>
+                  <OM2.7>
+                     <OM2.7.1>
+                        <OM2.7.1.1>6.0</OM2.7.1.1>
+                        <OM2.7.1.2>13.0</OM2.7.1.2>
+                     </OM2.7.1>
+                     <OM2.7.2>
+                        <OM2.7.2.1>M</OM2.7.2.1>
+                        <OM2.7.2.2>Male</OM2.7.2.2>
+                        <OM2.7.2.3>HL70001</OM2.7.2.3>
+                     </OM2.7.2>
+                  </OM2.7>
+                  <OM2.7>
+                     <OM2.7.1>
+                        <OM2.7.1.1>6.0</OM2.7.1.1>
+                        <OM2.7.1.2>13.0</OM2.7.1.2>
+                     </OM2.7.1>
+                     <OM2.7.2>
+                        <OM2.7.2.1>F</OM2.7.2.1>
+                        <OM2.7.2.2>Female</OM2.7.2.2>
+                        <OM2.7.2.3>HL70001</OM2.7.2.3>
+                     </OM2.7.2>
+                  </OM2.7>
+               </OM2>
+               <OM4>
+                  <OM4.1>58</OM4.1>
+                  <OM4.3>Gold Serum Separator tube</OM4.3>
+                  <OM4.3>Red, No Additive tube</OM4.3>
+                  <OM4.4>5.0</OM4.4>
+                  <OM4.4>5.0</OM4.4>
+                  <OM4.5>
+                     <OM4.5.1>mL</OM4.5.1>
+                     <OM4.5.2>milliliter</OM4.5.2>
+                     <OM4.5.3>UCUM</OM4.5.3>
+                     <OM4.5.7>1.8</OM4.5.7>
+                  </OM4.5>
+                  <OM4.5>
+                     <OM4.5.1>mL</OM4.5.1>
+                     <OM4.5.2>milliliter</OM4.5.2>
+                     <OM4.5.3>UCUM</OM4.5.3>
+                     <OM4.5.7>1.8</OM4.5.7>
+                  </OM4.5>
+                  <OM4.6>
+                     <OM4.6.1>119364003</OM4.6.1>
+                     <OM4.6.2>Serum specimen</OM4.6.2>
+                     <OM4.6.3>SCT</OM4.6.3>
+                     <OM4.6.7>201509-US Ed</OM4.6.7>
+                  </OM4.6>
+                  <OM4.10>
+                     <OM4.10.1>1</OM4.10.1>
+                     <OM4.10.2>
+                        <OM4.10.2.1>mL</OM4.10.2.1>
+                        <OM4.10.2.2>milliliter</OM4.10.2.2>
+                        <OM4.10.2.3>UCUM</OM4.10.2.3>
+                     </OM4.10.2>
+                  </OM4.10>
+                  <OM4.11>
+                     <OM4.11.1>0.5</OM4.11.1>
+                     <OM4.11.2>
+                        <OM4.11.2.1>mL</OM4.11.2.1>
+                        <OM4.11.2.2>milliliter</OM4.11.2.2>
+                        <OM4.11.2.3>UCUM</OM4.11.2.3>
+                        <OM4.11.2.7>1.8</OM4.11.2.7>
+                     </OM4.11.2>
+                  </OM4.11>
+                  <OM4.12>Protect from light. Allow serum tube to clot completely at room temperature. Separate serum or plasma from cells ASAP or within 30 minutes of collection.</OM4.12>
+                  <OM4.15>
+                     <OM4.15.1>REF</OM4.15.1>
+                     <OM4.15.2>Refrigerated temperature</OM4.15.2>
+                     <OM4.15.3>HL70376</OM4.15.3>
+                     <OM4.15.7>2.5.1</OM4.15.7>
+                  </OM4.15>
+                  <OM4.16>P</OM4.16>
+               </OM4>
+            </MFN_M08.MF_TEST>
+            <MFN_M08.MF_TEST>
+               <MFE>
+                  <MFE.1>MAD</MFE.1>
+                  <MFE.3>
+                     <MFE.3.1>20131219145310</MFE.3.1>
+                  </MFE.3>
+                  <MFE.4>
+                     <MFE.4.1>202</MFE.4.1>
+                     <MFE.4.2>Erythrocytes, blood</MFE.4.2>
+                     <MFE.4.3>99USL</MFE.4.3>
+                     <MFE.4.7>20130421</MFE.4.7>
+                  </MFE.4>
+                  <MFE.5>CWE</MFE.5>
+               </MFE>
+               <OM1>
+                  <OM1.1>2</OM1.1>
+                  <OM1.2>
+                     <OM1.2.1>202</OM1.2.1>
+                     <OM1.2.2>Erythrocytes, blood</OM1.2.2>
+                     <OM1.2.3>99USL</OM1.2.3>
+                     <OM1.2.7>20130421</OM1.2.7>
+                  </OM1.2>
+                  <OM1.4>Y</OM1.4>
+                  <OM1.5>
+                     <OM1.5.1>05D0669071</OM1.5.1>
+                     <OM1.5.2>Century Hospital Clinical Laboratory</OM1.5.2>
+                     <OM1.5.3>99USL</OM1.5.3>
+                     <OM1.5.7>2103</OM1.5.7>
+                  </OM1.5>
+                  <OM1.7>
+                     <OM1.7.1>26453-1</OM1.7.1>
+                     <OM1.7.2>Erythrocytes [#/volume] in Blood</OM1.7.2>
+                     <OM1.7.3>LN</OM1.7.3>
+                     <OM1.7.7>2.42</OM1.7.7>
+                  </OM1.7>
+                  <OM1.9>Erythrocytes, blood</OM1.9>
+                  <OM1.12>Y</OM1.12>
+                  <OM1.18>A</OM1.18>
+                  <OM1.32>This blood test is used to determine...</OM1.32>
+                  <OM1.39>Insufficient specimen, Improper labeling., improper tube, clotted specimen, hemolyzed sample, dilution of blood.</OM1.39>
+                  <OM1.40>Daily</OM1.40>
+                  <OM1.48>N</OM1.48>
+                  <OM1.49>LAB</OM1.49>
+                  <OM1.56>
+                     <OM1.56.1>26453-1</OM1.56.1>
+                     <OM1.56.2>Erythrocytes [#/volume] in Blood</OM1.56.2>
+                     <OM1.56.3>LN</OM1.56.3>
+                     <OM1.56.4>202</OM1.56.4>
+                     <OM1.56.5>Erythrocytes, blood</OM1.56.5>
+                     <OM1.56.6>99USL</OM1.56.6>
+                     <OM1.56.7>2.48</OM1.56.7>
+                     <OM1.56.8>20130421</OM1.56.8>
+                  </OM1.56>
+                  <OM1.57>
+                     <OM1.57.1>1</OM1.57.1>
+                     <OM1.57.2>
+                        <OM1.57.2.1>d</OM1.57.2.1>
+                        <OM1.57.2.2>day</OM1.57.2.2>
+                        <OM1.57.2.3>UCUM</OM1.57.2.3>
+                        <OM1.57.2.7>1.8</OM1.57.2.7>
+                     </OM1.57.2>
+                  </OM1.57>
+               </OM1>
+               <OM2>
+                  <OM2.1>2</OM2.1>
+                  <OM2.2>
+                     <OM2.2.1>10*12/L</OM2.2.1>
+                     <OM2.2.2>trillion per liter</OM2.2.2>
+                     <OM2.2.3>UCUM</OM2.2.3>
+                     <OM2.2.7>1.8</OM2.2.7>
+                  </OM2.2>
+                  <OM2.6>
+                     <OM2.6.1>
+                        <OM2.6.1.1>3.9</OM2.6.1.1>
+                        <OM2.6.1.2>5.5</OM2.6.1.2>
+                     </OM2.6.1>
+                     <OM2.6.2>
+                        <OM2.6.2.1>M</OM2.6.2.1>
+                        <OM2.6.2.2>Male</OM2.6.2.2>
+                        <OM2.6.2.3>HL70001</OM2.6.2.3>
+                     </OM2.6.2>
+                  </OM2.6>
+                  <OM2.6>
+                     <OM2.6.1>
+                        <OM2.6.1.1>3.9</OM2.6.1.1>
+                        <OM2.6.1.2>6.0</OM2.6.1.2>
+                     </OM2.6.1>
+                     <OM2.6.2>
+                        <OM2.6.2.1>F</OM2.6.2.1>
+                        <OM2.6.2.2>Female</OM2.6.2.2>
+                        <OM2.6.2.3>HL70001</OM2.6.2.3>
+                     </OM2.6.2>
+                  </OM2.6>
+               </OM2>
+               <OM4>
+                  <OM4.1>2</OM4.1>
+                  <OM4.3>Lavender Top (EDTA) tube</OM4.3>
+                  <OM4.3>Pink Top (K2EDTA) tube</OM4.3>
+                  <OM4.4>3.0</OM4.4>
+                  <OM4.4>3.0</OM4.4>
+                  <OM4.5>
+                     <OM4.5.1>mL</OM4.5.1>
+                     <OM4.5.2>milliliters</OM4.5.2>
+                     <OM4.5.3>UCUM</OM4.5.3>
+                     <OM4.5.7>1.8</OM4.5.7>
+                  </OM4.5>
+                  <OM4.5>
+                     <OM4.5.1>mL</OM4.5.1>
+                     <OM4.5.2>milliliters</OM4.5.2>
+                     <OM4.5.3>UCUM</OM4.5.3>
+                     <OM4.5.7>1.8</OM4.5.7>
+                  </OM4.5>
+                  <OM4.6>
+                     <OM4.6.1>119297000</OM4.6.1>
+                     <OM4.6.2>Blood sample</OM4.6.2>
+                     <OM4.6.3>SCT</OM4.6.3>
+                     <OM4.6.4>WBLD</OM4.6.4>
+                     <OM4.6.5>Whole blood</OM4.6.5>
+                     <OM4.6.6>99USL</OM4.6.6>
+                     <OM4.6.7>201509-US Ed</OM4.6.7>
+                     <OM4.6.8>2014</OM4.6.8>
+                     <OM4.6.9>Whole blood</OM4.6.9>
+                  </OM4.6>
+                  <OM4.7>
+                     <OM4.7.1>EDTK</OM4.7.1>
+                     <OM4.7.2>Potassium/K EDTA</OM4.7.2>
+                     <OM4.7.3>HL70371</OM4.7.3>
+                     <OM4.7.7>2.5.1</OM4.7.7>
+                  </OM4.7>
+                  <OM4.10>
+                     <OM4.10.1>3</OM4.10.1>
+                     <OM4.10.2>
+                        <OM4.10.2.1>mL</OM4.10.2.1>
+                        <OM4.10.2.2>milliliters</OM4.10.2.2>
+                        <OM4.10.2.3>UCUM</OM4.10.2.3>
+                        <OM4.10.2.7>1.8</OM4.10.2.7>
+                     </OM4.10.2>
+                  </OM4.10>
+                  <OM4.11>
+                     <OM4.11.1>0.5</OM4.11.1>
+                     <OM4.11.2>
+                        <OM4.11.2.1>mL</OM4.11.2.1>
+                        <OM4.11.2.2>milliliters</OM4.11.2.2>
+                        <OM4.11.2.3>UCUM</OM4.11.2.3>
+                        <OM4.11.2.7>1.8</OM4.11.2.7>
+                     </OM4.11.2>
+                  </OM4.11>
+                  <OM4.12>Refrigeration is required if specimen is not brought immediately to laboratory.  Two blood smears should be prepared if sample is not delivered to the laboratory within 4 hrs.  Sample should be analyzed within 6 hours at room temperature and 24 hrs when stored at 4 degrees C.</OM4.12>
+                  <OM4.15>
+                     <OM4.15.1>CREF</OM4.15.1>
+                     <OM4.15.2>Critical refrigerated</OM4.15.2>
+                     <OM4.15.3>HL70376</OM4.15.3>
+                     <OM4.15.7>2.5.1</OM4.15.7>
+                  </OM4.15>
+                  <OM4.16>P</OM4.16>
+               </OM4>
+            </MFN_M08.MF_TEST>
+            <MFN_M08.MF_TEST>
+               <MFE>
+                  <MFE.1>MAD</MFE.1>
+                  <MFE.3>
+                     <MFE.3.1>20131219145310</MFE.3.1>
+                  </MFE.3>
+                  <MFE.4>
+                     <MFE.4.1>252</MFE.4.1>
+                     <MFE.4.2>WBC morphology</MFE.4.2>
+                     <MFE.4.3>99USL</MFE.4.3>
+                     <MFE.4.7>20130421</MFE.4.7>
+                  </MFE.4>
+                  <MFE.5>CWE</MFE.5>
+               </MFE>
+               <OM1>
+                  <OM1.1>28</OM1.1>
+                  <OM1.2>
+                     <OM1.2.1>252</OM1.2.1>
+                     <OM1.2.2>WBC morphology</OM1.2.2>
+                     <OM1.2.3>99USL</OM1.2.3>
+                     <OM1.2.7>20130421</OM1.2.7>
+                  </OM1.2>
+                  <OM1.4>Y</OM1.4>
+                  <OM1.5>
+                     <OM1.5.1>05D0669071</OM1.5.1>
+                     <OM1.5.2>Century Hospital Clinical Laboratory</OM1.5.2>
+                     <OM1.5.3>99USL</OM1.5.3>
+                     <OM1.5.7>2103</OM1.5.7>
+                  </OM1.5>
+                  <OM1.7>
+                     <OM1.7.1>11156-7</OM1.7.1>
+                     <OM1.7.2>Leukocyte morphology finding [Identifier] in Blood</OM1.7.2>
+                     <OM1.7.3>LN</OM1.7.3>
+                     <OM1.7.7>2.42</OM1.7.7>
+                  </OM1.7>
+                  <OM1.9>WBC morphology</OM1.9>
+                  <OM1.12>Y</OM1.12>
+                  <OM1.18>A</OM1.18>
+                  <OM1.32>This blood test is used to determine...</OM1.32>
+                  <OM1.39>Insufficient specimen, Improper labeling., improper tube, clotted specimen, hemolyzed sample, dilution of blood.</OM1.39>
+                  <OM1.40>Daily</OM1.40>
+                  <OM1.48>N</OM1.48>
+                  <OM1.49>LAB</OM1.49>
+                  <OM1.56>
+                     <OM1.56.1>11156-7</OM1.56.1>
+                     <OM1.56.2>Leukocyte morphology finding [Identifier] in Blood</OM1.56.2>
+                     <OM1.56.3>LN</OM1.56.3>
+                     <OM1.56.4>252</OM1.56.4>
+                     <OM1.56.5>WBC morphology</OM1.56.5>
+                     <OM1.56.6>99USL</OM1.56.6>
+                     <OM1.56.7>2.48</OM1.56.7>
+                     <OM1.56.8>20130421</OM1.56.8>
+                  </OM1.56>
+                  <OM1.57>
+                     <OM1.57.1>1</OM1.57.1>
+                     <OM1.57.2>
+                        <OM1.57.2.1>d</OM1.57.2.1>
+                        <OM1.57.2.2>day</OM1.57.2.2>
+                        <OM1.57.2.3>UCUM</OM1.57.2.3>
+                        <OM1.57.2.7>1.8</OM1.57.2.7>
+                     </OM1.57.2>
+                  </OM1.57>
+               </OM1>
+               <OM3>
+                  <OM3.1>28</OM3.1>
+                  <OM3.4>
+                     <OM3.4.1>17621005</OM3.4.1>
+                     <OM3.4.2>normal (qualifier value)</OM3.4.2>
+                     <OM3.4.3>SCT</OM3.4.3>
+                     <OM3.4.7>20130731</OM3.4.7>
+                  </OM3.4>
+                  <OM3.4>
+                     <OM3.4.1>80153006</OM3.4.1>
+                     <OM3.4.2>Segmented neutrophil (cell)</OM3.4.2>
+                     <OM3.4.3>SCT</OM3.4.3>
+                     <OM3.4.7>20130731</OM3.4.7>
+                  </OM3.4>
+                  <OM3.4>
+                     <OM3.4.1>55918008</OM3.4.1>
+                     <OM3.4.2>Monocyte (cell)</OM3.4.2>
+                     <OM3.4.3>SCT</OM3.4.3>
+                     <OM3.4.7>20130731</OM3.4.7>
+                  </OM3.4>
+                  <OM3.4>
+                     <OM3.4.1>56972008</OM3.4.1>
+                     <OM3.4.2>Lymphocyte (cell)</OM3.4.2>
+                     <OM3.4.3>SCT</OM3.4.3>
+                     <OM3.4.7>20130731</OM3.4.7>
+                  </OM3.4>
+                  <OM3.5>
+                     <OM3.5.1>87361006</OM3.5.1>
+                     <OM3.5.2>Left shifted white blood cells (finding)</OM3.5.2>
+                     <OM3.5.3>SCT</OM3.5.3>
+                     <OM3.5.7>20130731</OM3.5.7>
+                  </OM3.5>
+                  <OM3.5>
+                     <OM3.5.1>50551008</OM3.5.1>
+                     <OM3.5.2>Right shifted white blood cells (finding)</OM3.5.2>
+                     <OM3.5.3>SCT</OM3.5.3>
+                     <OM3.5.7>20130731</OM3.5.7>
+                  </OM3.5>
+                  <OM3.5>
+                     <OM3.5.1>259715006</OM3.5.1>
+                     <OM3.5.2>Dohle body (finding)</OM3.5.2>
+                     <OM3.5.3>SCT</OM3.5.3>
+                     <OM3.5.7>20130731</OM3.5.7>
+                  </OM3.5>
+                  <OM3.5>
+                     <OM3.5.1>250275007</OM3.5.1>
+                     <OM3.5.2>Hypersegmentation (finding)</OM3.5.2>
+                     <OM3.5.3>SCT</OM3.5.3>
+                     <OM3.5.7>20130731</OM3.5.7>
+                  </OM3.5>
+                  <OM3.5>
+                     <OM3.5.1>250277004</OM3.5.1>
+                     <OM3.5.2>Ring-form neutrophil (finding)</OM3.5.2>
+                     <OM3.5.3>SCT</OM3.5.3>
+                     <OM3.5.7>20130731</OM3.5.7>
+                  </OM3.5>
+                  <OM3.5>
+                     <OM3.5.1>15111002</OM3.5.1>
+                     <OM3.5.2>Pelger-Huet cell (finding)</OM3.5.2>
+                     <OM3.5.3>SCT</OM3.5.3>
+                     <OM3.5.7>20130731</OM3.5.7>
+                  </OM3.5>
+                  <OM3.5>
+                     <OM3.5.1>250282006</OM3.5.1>
+                     <OM3.5.2>Drumstick nuclear appendage (finding)</OM3.5.2>
+                     <OM3.5.3>SCT</OM3.5.3>
+                     <OM3.5.7>20130731</OM3.5.7>
+                  </OM3.5>
+                  <OM3.5>
+                     <OM3.5.1>250281004</OM3.5.1>
+                     <OM3.5.2>Cytoplasmic vacuolation (finding)</OM3.5.2>
+                     <OM3.5.3>SCT</OM3.5.3>
+                     <OM3.5.7>20130731</OM3.5.7>
+                  </OM3.5>
+                  <OM3.5>
+                     <OM3.5.1>64668006</OM3.5.1>
+                     <OM3.5.2>Sensitized leukocyte (finding)</OM3.5.2>
+                     <OM3.5.3>SCT</OM3.5.3>
+                     <OM3.5.7>20130731</OM3.5.7>
+                  </OM3.5>
+               </OM3>
+            </MFN_M08.MF_TEST>
+            <MFN_M08.MF_TEST>
+               <MFE>
+                  <MFE.1>MAD</MFE.1>
+                  <MFE.3>
+                     <MFE.3.1>20131219145310</MFE.3.1>
+                  </MFE.3>
+                  <MFE.4>
+                     <MFE.4.1>326</MFE.4.1>
+                     <MFE.4.2>Glucose, urine</MFE.4.2>
+                     <MFE.4.3>99USL</MFE.4.3>
+                     <MFE.4.7>20130421</MFE.4.7>
+                  </MFE.4>
+                  <MFE.5>CWE</MFE.5>
+               </MFE>
+               <OM1>
+                  <OM1.1>44</OM1.1>
+                  <OM1.2>
+                     <OM1.2.1>326</OM1.2.1>
+                     <OM1.2.2>Glucose, urine</OM1.2.2>
+                     <OM1.2.3>99USL</OM1.2.3>
+                     <OM1.2.7>20130421</OM1.2.7>
+                  </OM1.2>
+                  <OM1.4>Y</OM1.4>
+                  <OM1.5>
+                     <OM1.5.1>05D0669071</OM1.5.1>
+                     <OM1.5.2>Century Hospital Clinical Laboratory</OM1.5.2>
+                     <OM1.5.3>99USL</OM1.5.3>
+                     <OM1.5.7>2013</OM1.5.7>
+                  </OM1.5>
+                  <OM1.7>
+                     <OM1.7.1>2349-9</OM1.7.1>
+                     <OM1.7.2>Glucose [Presence] in Urine</OM1.7.2>
+                     <OM1.7.3>LN</OM1.7.3>
+                     <OM1.7.7>2.42</OM1.7.7>
+                  </OM1.7>
+                  <OM1.11>Glucose, Semi quantitative, Urine</OM1.11>
+                  <OM1.12>Y</OM1.12>
+                  <OM1.18>A</OM1.18>
+                  <OM1.32>Test for detection and monitoring of diabetes mellitus.</OM1.32>
+                  <OM1.37>Collect random urine in a clean plastic container. Label the urine container with the patient's full name and the date and time of collection, refrigerate after collection.</OM1.37>
+                  <OM1.39>Insufficient specimen, Improper labeling., presence of preservatives, warm sample.</OM1.39>
+                  <OM1.40>Daily</OM1.40>
+                  <OM1.48>N</OM1.48>
+                  <OM1.49>LAB</OM1.49>
+                  <OM1.56>
+                     <OM1.56.1>2349-9</OM1.56.1>
+                     <OM1.56.2>Glucose [Presence] in Urine</OM1.56.2>
+                     <OM1.56.3>LN</OM1.56.3>
+                     <OM1.56.4>326</OM1.56.4>
+                     <OM1.56.5>Glucose, urine</OM1.56.5>
+                     <OM1.56.6>99USL</OM1.56.6>
+                     <OM1.56.7>2.48</OM1.56.7>
+                     <OM1.56.8>20130421</OM1.56.8>
+                  </OM1.56>
+                  <OM1.57>
+                     <OM1.57.1>1</OM1.57.1>
+                     <OM1.57.2>
+                        <OM1.57.2.1>d</OM1.57.2.1>
+                        <OM1.57.2.2>day</OM1.57.2.2>
+                        <OM1.57.2.3>UCUM</OM1.57.2.3>
+                        <OM1.57.2.7>1.8</OM1.57.2.7>
+                     </OM1.57.2>
+                  </OM1.57>
+               </OM1>
+               <OM4>
+                  <OM4.1>44</OM4.1>
+                  <OM4.3>Sterile, plastic, leak proof container</OM4.3>
+                  <OM4.4>4</OM4.4>
+                  <OM4.5>
+                     <OM4.5.1>[foz_us]</OM4.5.1>
+                     <OM4.5.2>fluid ounce (US)</OM4.5.2>
+                     <OM4.5.3>UCUM</OM4.5.3>
+                     <OM4.5.7>1.8</OM4.5.7>
+                  </OM4.5>
+                  <OM4.6>
+                     <OM4.6.1>122575003</OM4.6.1>
+                     <OM4.6.2>Urine specimen</OM4.6.2>
+                     <OM4.6.3>SCT</OM4.6.3>
+                     <OM4.6.4>UR</OM4.6.4>
+                     <OM4.6.5>Random urine</OM4.6.5>
+                     <OM4.6.6>99USL</OM4.6.6>
+                     <OM4.6.7>201509-US Ed</OM4.6.7>
+                     <OM4.6.8>2014</OM4.6.8>
+                     <OM4.6.9>Random urine</OM4.6.9>
+                  </OM4.6>
+                  <OM4.10>
+                     <OM4.10.1>20</OM4.10.1>
+                     <OM4.10.2>
+                        <OM4.10.2.1>mL</OM4.10.2.1>
+                        <OM4.10.2.2>milliliter</OM4.10.2.2>
+                        <OM4.10.2.3>UCUM</OM4.10.2.3>
+                        <OM4.10.2.7>1.8</OM4.10.2.7>
+                     </OM4.10.2>
+                  </OM4.10>
+                  <OM4.11>
+                     <OM4.11.1>4</OM4.11.1>
+                     <OM4.11.2>
+                        <OM4.11.2.1>mL</OM4.11.2.1>
+                        <OM4.11.2.2>milliliter</OM4.11.2.2>
+                        <OM4.11.2.3>UCUM</OM4.11.2.3>
+                        <OM4.11.2.7>1.8</OM4.11.2.7>
+                     </OM4.11.2>
+                  </OM4.11>
+                  <OM4.12>Keep refrigerated</OM4.12>
+                  <OM4.15>
+                     <OM4.15.1>REF</OM4.15.1>
+                     <OM4.15.2>Refrigerated temperature</OM4.15.2>
+                     <OM4.15.3>HL70376</OM4.15.3>
+                     <OM4.15.7>2.5.1</OM4.15.7>
+                  </OM4.15>
+                  <OM4.16>P</OM4.16>
+               </OM4>
+            </MFN_M08.MF_TEST>
+            <MFN_M08.MF_TEST>
+               <MFE>
+                  <MFE.1>MAD</MFE.1>
+                  <MFE.3>
+                     <MFE.3.1>20131219145310</MFE.3.1>
+                  </MFE.3>
+                  <MFE.4>
+                     <MFE.4.1>500</MFE.4.1>
+                     <MFE.4.2>Erythrocyte sedimentation rate</MFE.4.2>
+                     <MFE.4.3>99USL</MFE.4.3>
+                     <MFE.4.7>20130421</MFE.4.7>
+                  </MFE.4>
+                  <MFE.5>CWE</MFE.5>
+               </MFE>
+               <OM1>
+                  <OM1.1>1</OM1.1>
+                  <OM1.2>
+                     <OM1.2.1>500</OM1.2.1>
+                     <OM1.2.2>Erythrocyte sedimentation rate</OM1.2.2>
+                     <OM1.2.3>99USL</OM1.2.3>
+                     <OM1.2.7>20130421</OM1.2.7>
+                  </OM1.2>
+                  <OM1.4>Y</OM1.4>
+                  <OM1.5>
+                     <OM1.5.1>05D0669071</OM1.5.1>
+                     <OM1.5.2>Century Hospital Clinical Laboratory</OM1.5.2>
+                     <OM1.5.3>99USL</OM1.5.3>
+                     <OM1.5.7>2013</OM1.5.7>
+                  </OM1.5>
+                  <OM1.7>
+                     <OM1.7.1>30341-2</OM1.7.1>
+                     <OM1.7.2>Erythrocyte sedimentation rate</OM1.7.2>
+                     <OM1.7.3>LN</OM1.7.3>
+                     <OM1.7.7>2.42</OM1.7.7>
+                  </OM1.7>
+                  <OM1.7>
+                     <OM1.7.1>416838001</OM1.7.1>
+                     <OM1.7.2>Erythrocyte sedimentation rate measurement</OM1.7.2>
+                     <OM1.7.3>SCT</OM1.7.3>
+                     <OM1.7.7>201509-US Ed</OM1.7.7>
+                  </OM1.7>
+                  <OM1.9>Erythrocyte sedimentation rate</OM1.9>
+                  <OM1.12>Y</OM1.12>
+                  <OM1.18>A</OM1.18>
+                  <OM1.32>The erythrocyte sedimentation rate is a nonspecific measure of inflammatory disease.</OM1.32>
+                  <OM1.39>Insufficient blood, Clotting, Hemolysis, Blood specimen received &gt; 12 hours after collection.</OM1.39>
+                  <OM1.40>Daily</OM1.40>
+                  <OM1.40>Continuously</OM1.40>
+                  <OM1.48>N</OM1.48>
+                  <OM1.49>LAB</OM1.49>
+                  <OM1.51>Westergren</OM1.51>
+                  <OM1.51>Sed Rate</OM1.51>
+                  <OM1.54>Please include tentative diagnosis/treatment on the request form..</OM1.54>
+                  <OM1.54>Please direct any questions regarding this test to the hematology division.</OM1.54>
+                  <OM1.55>
+                     <OM1.55.1>CP</OM1.55.1>
+                     <OM1.55.2>Clinical Pathology</OM1.55.2>
+                     <OM1.55.3>99USL</OM1.55.3>
+                     <OM1.55.7>2015</OM1.55.7>
+                  </OM1.55>
+                  <OM1.55>
+                     <OM1.55.1>HM</OM1.55.1>
+                     <OM1.55.2>Hematology</OM1.55.2>
+                     <OM1.55.3>99USL</OM1.55.3>
+                     <OM1.55.7>2015</OM1.55.7>
+                  </OM1.55>
+                  <OM1.56>
+                     <OM1.56.1>30341-2</OM1.56.1>
+                     <OM1.56.2>Erythrocyte sedimentation rate</OM1.56.2>
+                     <OM1.56.3>LN</OM1.56.3>
+                     <OM1.56.4>500</OM1.56.4>
+                     <OM1.56.5>Erythrocyte sedimentation rate</OM1.56.5>
+                     <OM1.56.6>99USL</OM1.56.6>
+                     <OM1.56.7>2.48</OM1.56.7>
+                     <OM1.56.8>20130421</OM1.56.8>
+                     <OM1.56.9>Erythrocyte sedimentation rate</OM1.56.9>
+                  </OM1.56>
+                  <OM1.57>
+                     <OM1.57.1>1</OM1.57.1>
+                     <OM1.57.2>
+                        <OM1.57.2.1>d</OM1.57.2.1>
+                        <OM1.57.2.2>day</OM1.57.2.2>
+                        <OM1.57.2.3>UCUM</OM1.57.2.3>
+                        <OM1.57.2.7>1.8</OM1.57.2.7>
+                     </OM1.57.2>
+                  </OM1.57>
+               </OM1>
+               <OM2>
+                  <OM2.1>1</OM2.1>
+                  <OM2.2>
+                     <OM2.2.1>mm/h</OM2.2.1>
+                     <OM2.2.2>millimeter per hour</OM2.2.2>
+                     <OM2.2.3>UCUM</OM2.2.3>
+                     <OM2.2.4>mm/hour</OM2.2.4>
+                     <OM2.2.5>mm/hour</OM2.2.5>
+                     <OM2.2.6>99USL</OM2.2.6>
+                     <OM2.2.7>1.8</OM2.2.7>
+                     <OM2.2.8>2014</OM2.2.8>
+                     <OM2.2.9>mm/hour</OM2.2.9>
+                  </OM2.2>
+                  <OM2.6>
+                     <OM2.6.1>
+                        <OM2.6.1.1>0</OM2.6.1.1>
+                        <OM2.6.1.2>15</OM2.6.1.2>
+                     </OM2.6.1>
+                     <OM2.6.2>
+                        <OM2.6.2.1>M</OM2.6.2.1>
+                        <OM2.6.2.2>Male</OM2.6.2.2>
+                        <OM2.6.2.3>HL70001</OM2.6.2.3>
+                        <OM2.6.2.7>2.5.1</OM2.6.2.7>
+                     </OM2.6.2>
+                  </OM2.6>
+                  <OM2.6>
+                     <OM2.6.1>
+                        <OM2.6.1.1>0</OM2.6.1.1>
+                        <OM2.6.1.2>25</OM2.6.1.2>
+                     </OM2.6.1>
+                     <OM2.6.2>
+                        <OM2.6.2.1>F</OM2.6.2.1>
+                        <OM2.6.2.2>Female</OM2.6.2.2>
+                        <OM2.6.2.3>HL70001</OM2.6.2.3>
+                     </OM2.6.2>
+                  </OM2.6>
+               </OM2>
+               <OM4>
+                  <OM4.1>1.1</OM4.1>
+                  <OM4.3>Black Top Tube (Vac-Tec)</OM4.3>
+                  <OM4.4>3.0</OM4.4>
+                  <OM4.5>
+                     <OM4.5.1>mL</OM4.5.1>
+                     <OM4.5.2>milliliters</OM4.5.2>
+                     <OM4.5.3>UCUM</OM4.5.3>
+                     <OM4.5.7>1.8</OM4.5.7>
+                  </OM4.5>
+                  <OM4.6>
+                     <OM4.6.1>119297000</OM4.6.1>
+                     <OM4.6.2>Blood sample</OM4.6.2>
+                     <OM4.6.3>SCT</OM4.6.3>
+                     <OM4.6.4>WBLD</OM4.6.4>
+                     <OM4.6.5>Whole blood</OM4.6.5>
+                     <OM4.6.6>99USL</OM4.6.6>
+                     <OM4.6.7>201509-US Ed</OM4.6.7>
+                     <OM4.6.8>2014</OM4.6.8>
+                     <OM4.6.9>Whole blood</OM4.6.9>
+                  </OM4.6>
+                  <OM4.7>
+                     <OM4.7.1>WEST</OM4.7.1>
+                     <OM4.7.2>Buffered Citrate (Westergren Sedimentation Rate)</OM4.7.2>
+                     <OM4.7.3>HL70371</OM4.7.3>
+                     <OM4.7.7>2.5.1</OM4.7.7>
+                  </OM4.7>
+                  <OM4.10>
+                     <OM4.10.1>2.4</OM4.10.1>
+                     <OM4.10.2>
+                        <OM4.10.2.1>mL</OM4.10.2.1>
+                        <OM4.10.2.2>milliliters</OM4.10.2.2>
+                        <OM4.10.2.3>UCUM</OM4.10.2.3>
+                        <OM4.10.2.7>1.8</OM4.10.2.7>
+                     </OM4.10.2>
+                  </OM4.10>
+                  <OM4.11>
+                     <OM4.11.1>2.4</OM4.11.1>
+                     <OM4.11.2>
+                        <OM4.11.2.1>mL</OM4.11.2.1>
+                        <OM4.11.2.2>milliliters</OM4.11.2.2>
+                        <OM4.11.2.3>UCUM</OM4.11.2.3>
+                        <OM4.11.2.7>1.8</OM4.11.2.7>
+                     </OM4.11.2>
+                  </OM4.11>
+                  <OM4.12>Specimen must be received and tested within 4-6 hrs of collection..</OM4.12>
+                  <OM4.15>
+                     <OM4.15.1>CREF</OM4.15.1>
+                     <OM4.15.2>Critical refrigerated</OM4.15.2>
+                     <OM4.15.3>HL70376</OM4.15.3>
+                     <OM4.15.7>2.5.1</OM4.15.7>
+                  </OM4.15>
+                  <OM4.15>
+                     <OM4.15.1>MTLF</OM4.15.1>
+                     <OM4.15.2>Metal Free</OM4.15.2>
+                     <OM4.15.3>HL70376</OM4.15.3>
+                     <OM4.15.7>2.5.1</OM4.15.7>
+                  </OM4.15>
+                  <OM4.16>P</OM4.16>
+               </OM4>
+               <OM4>
+                  <OM4.1>1.2</OM4.1>
+                  <OM4.3>Lavender Top (EDTA) tube</OM4.3>
+                  <OM4.4>3.0</OM4.4>
+                  <OM4.5>
+                     <OM4.5.1>mL</OM4.5.1>
+                     <OM4.5.2>milliliters</OM4.5.2>
+                     <OM4.5.3>UCUM</OM4.5.3>
+                     <OM4.5.7>1.8</OM4.5.7>
+                  </OM4.5>
+                  <OM4.6>
+                     <OM4.6.1>119297000</OM4.6.1>
+                     <OM4.6.2>Blood sample</OM4.6.2>
+                     <OM4.6.3>SCT</OM4.6.3>
+                     <OM4.6.4>WBLD</OM4.6.4>
+                     <OM4.6.5>Whole blood</OM4.6.5>
+                     <OM4.6.6>99USL</OM4.6.6>
+                     <OM4.6.7>201509-US Ed</OM4.6.7>
+                     <OM4.6.8>2014</OM4.6.8>
+                     <OM4.6.9>Whole blood</OM4.6.9>
+                  </OM4.6>
+                  <OM4.7>
+                     <OM4.7.1>EDTK</OM4.7.1>
+                     <OM4.7.2>Potassium/K EDTA</OM4.7.2>
+                     <OM4.7.3>HL70371</OM4.7.3>
+                     <OM4.7.7>2.5.1</OM4.7.7>
+                  </OM4.7>
+                  <OM4.10>
+                     <OM4.10.1>2.4</OM4.10.1>
+                     <OM4.10.2>
+                        <OM4.10.2.1>mL</OM4.10.2.1>
+                        <OM4.10.2.2>milliliters</OM4.10.2.2>
+                        <OM4.10.2.3>UCUM</OM4.10.2.3>
+                        <OM4.10.2.7>1.8</OM4.10.2.7>
+                     </OM4.10.2>
+                  </OM4.10>
+                  <OM4.11>
+                     <OM4.11.1>2.4</OM4.11.1>
+                     <OM4.11.2>
+                        <OM4.11.2.1>mL</OM4.11.2.1>
+                        <OM4.11.2.2>milliliters</OM4.11.2.2>
+                        <OM4.11.2.3>UCUM</OM4.11.2.3>
+                        <OM4.11.2.7>1.8</OM4.11.2.7>
+                     </OM4.11.2>
+                  </OM4.11>
+                  <OM4.12>Specimen must be received and tested within 4-6 hrs of collection.</OM4.12>
+                  <OM4.15>
+                     <OM4.15.1>CREF</OM4.15.1>
+                     <OM4.15.2>Critical refrigerated</OM4.15.2>
+                     <OM4.15.3>HL70376</OM4.15.3>
+                     <OM4.15.7>2.5.1</OM4.15.7>
+                  </OM4.15>
+                  <OM4.15>
+                     <OM4.15.1>MTLF</OM4.15.1>
+                     <OM4.15.2>Metal Free</OM4.15.2>
+                     <OM4.15.3>HL70376</OM4.15.3>
+                     <OM4.15.7>2.5.1</OM4.15.7>
+                  </OM4.15>
+                  <OM4.16>A</OM4.16>
+                  <OM4.17>1.1</OM4.17>
+               </OM4>
+            </MFN_M08.MF_TEST>
+            <MFN_M08.MF_TEST>
+               <MFE>
+                  <MFE.1>MAD</MFE.1>
+                  <MFE.3>
+                     <MFE.3.1>20131219145310</MFE.3.1>
+                  </MFE.3>
+                  <MFE.4>
+                     <MFE.4.1>600</MFE.4.1>
+                     <MFE.4.2>Prostate Biopsy Pathology Report</MFE.4.2>
+                     <MFE.4.3>99USL</MFE.4.3>
+                     <MFE.4.7>20130421</MFE.4.7>
+                  </MFE.4>
+                  <MFE.5>CWE</MFE.5>
+               </MFE>
+               <OM1>
+                  <OM1.1>73</OM1.1>
+                  <OM1.2>
+                     <OM1.2.1>600</OM1.2.1>
+                     <OM1.2.2>Prostate Biopsy Pathology Report</OM1.2.2>
+                     <OM1.2.3>99USL</OM1.2.3>
+                     <OM1.2.7>20130421</OM1.2.7>
+                  </OM1.2>
+                  <OM1.4>Y</OM1.4>
+                  <OM1.5>
+                     <OM1.5.1>05D0669071</OM1.5.1>
+                     <OM1.5.2>Century Hospital Clinical Laboratory</OM1.5.2>
+                     <OM1.5.3>99USL</OM1.5.3>
+                     <OM1.5.7>2013</OM1.5.7>
+                  </OM1.5>
+                  <OM1.7>
+                     <OM1.7.1>66117-3</OM1.7.1>
+                     <OM1.7.2>Prostate Pathology biopsy report</OM1.7.2>
+                     <OM1.7.3>LN</OM1.7.3>
+                     <OM1.7.7>2.42</OM1.7.7>
+                  </OM1.7>
+                  <OM1.9>Prostate Biopsy Pathology Report</OM1.9>
+                  <OM1.12>Y</OM1.12>
+                  <OM1.18>A</OM1.18>
+                  <OM1.32>Histologic evaluation of prostate biopsy specimens and additional prognostic information following histologic diagnosis. These tests help clinicians to diagnose prostate cancer.</OM1.32>
+                  <OM1.33>
+                     <OM1.33.2>Contraindications to prostate biopsy include acute painful perianal disorders, bleeding diathesis, acute prostatitis, and severe immunosuppression.</OM1.33.2>
+                  </OM1.33>
+                  <OM1.33>
+                     <OM1.33.1>79411002</OM1.33.1>
+                     <OM1.33.2>Acute prostatitis</OM1.33.2>
+                     <OM1.33.3>SCT</OM1.33.3>
+                     <OM1.33.7>201509-US Ed</OM1.33.7>
+                  </OM1.33>
+                  <OM1.39>Specimen submitted unfixed; improperly labeled specimen; unlabeled specimen</OM1.39>
+                  <OM1.40>Daily</OM1.40>
+                  <OM1.48>N</OM1.48>
+                  <OM1.49>OSL</OM1.49>
+                  <OM1.53>When ordering a Prostate biopsy, send prior Prostate Specific Antigen (PSA) results</OM1.53>
+                  <OM1.53>When ordering a Prostate biopsy, send prior relevant clinical findings.</OM1.53>
+                  <OM1.54>Submit Surgical Pathology Requisition and Biopsy Worksheet with specimen</OM1.54>
+                  <OM1.56>
+                     <OM1.56.1>66117-3</OM1.56.1>
+                     <OM1.56.2>Prostate Pathology biopsy report</OM1.56.2>
+                     <OM1.56.3>LN</OM1.56.3>
+                     <OM1.56.4>600</OM1.56.4>
+                     <OM1.56.5>Prostate Biopsy Pathology Report</OM1.56.5>
+                     <OM1.56.6>99USL</OM1.56.6>
+                     <OM1.56.7>2.48</OM1.56.7>
+                     <OM1.56.8>20130421</OM1.56.8>
+                  </OM1.56>
+                  <OM1.57>
+                     <OM1.57.1>3</OM1.57.1>
+                     <OM1.57.2>
+                        <OM1.57.2.1>d</OM1.57.2.1>
+                        <OM1.57.2.2>day</OM1.57.2.2>
+                        <OM1.57.2.3>UCUM</OM1.57.2.3>
+                        <OM1.57.2.7>1.8</OM1.57.2.7>
+                     </OM1.57.2>
+                  </OM1.57>
+               </OM1>
+               <OM3>
+                  <OM3.1>73</OM3.1>
+                  <OM3.4>
+                     <OM3.4.1>17621005</OM3.4.1>
+                     <OM3.4.2>normal (qualifier value)</OM3.4.2>
+                     <OM3.4.3>SCT</OM3.4.3>
+                     <OM3.4.7>20130731</OM3.4.7>
+                  </OM3.4>
+                  <OM3.5>
+                     <OM3.5.1>369775001</OM3.5.1>
+                     <OM3.5.2>Gleason Score 2-4: Well differentiated (finding)</OM3.5.2>
+                     <OM3.5.3>SCT</OM3.5.3>
+                     <OM3.5.7>20130731</OM3.5.7>
+                  </OM3.5>
+                  <OM3.5>
+                     <OM3.5.1>369776000</OM3.5.1>
+                     <OM3.5.2>Gleason Score 5-6: Moderately differentiated (finding)</OM3.5.2>
+                     <OM3.5.3>SCT</OM3.5.3>
+                     <OM3.5.7>20130731</OM3.5.7>
+                  </OM3.5>
+                  <OM3.5>
+                     <OM3.5.1>385412008</OM3.5.1>
+                     <OM3.5.2>Gleason Score 7-10: Poorly differentiated (finding)</OM3.5.2>
+                     <OM3.5.3>SCT</OM3.5.3>
+                     <OM3.5.7>20130731</OM3.5.7>
+                  </OM3.5>
+                  <OM3.5>
+                     <OM3.5.1>125556001</OM3.5.1>
+                     <OM3.5.2>Atypical proliferation (morphologic abnormality)</OM3.5.2>
+                     <OM3.5.3>SCT</OM3.5.3>
+                     <OM3.5.7>20130731</OM3.5.7>
+                  </OM3.5>
+               </OM3>
+               <OM4>
+                  <OM4.1>73</OM4.1>
+                  <OM4.3>15 ml jar containing OncoFix II</OM4.3>
+                  <OM4.6>
+                     <OM4.6.1>309132009</OM4.6.1>
+                     <OM4.6.2>Prostate biopsy sample</OM4.6.2>
+                     <OM4.6.3>SCT</OM4.6.3>
+                     <OM4.6.7>201509-US Ed</OM4.6.7>
+                  </OM4.6>
+               </OM4>
+            </MFN_M08.MF_TEST>
+            <MFN_M08.MF_TEST>
+               <MFE>
+                  <MFE.1>MAD</MFE.1>
+                  <MFE.3>
+                     <MFE.3.1>20131219145310</MFE.3.1>
+                  </MFE.3>
+                  <MFE.4>
+                     <MFE.4.1>610</MFE.4.1>
+                     <MFE.4.2>Pap Test</MFE.4.2>
+                     <MFE.4.3>99USL</MFE.4.3>
+                     <MFE.4.7>20130421</MFE.4.7>
+                  </MFE.4>
+                  <MFE.5>CWE</MFE.5>
+               </MFE>
+               <OM1>
+                  <OM1.1>75</OM1.1>
+                  <OM1.2>
+                     <OM1.2.1>610</OM1.2.1>
+                     <OM1.2.2>Pap Test</OM1.2.2>
+                     <OM1.2.3>99USL</OM1.2.3>
+                     <OM1.2.7>20130421</OM1.2.7>
+                  </OM1.2>
+                  <OM1.4>Y</OM1.4>
+                  <OM1.5>
+                     <OM1.5.1>05D0669071</OM1.5.1>
+                     <OM1.5.2>Century Hospital Clinical Laboratory</OM1.5.2>
+                     <OM1.5.3>99USL</OM1.5.3>
+                     <OM1.5.7>2013</OM1.5.7>
+                  </OM1.5>
+                  <OM1.7>
+                     <OM1.7.1>47527-7</OM1.7.1>
+                     <OM1.7.2>Cytology report of Cervical or vaginal smear or scraping Cyto stain.thin prep</OM1.7.2>
+                     <OM1.7.3>LN</OM1.7.3>
+                     <OM1.7.7>2.42</OM1.7.7>
+                  </OM1.7>
+                  <OM1.9>Pap Test</OM1.9>
+                  <OM1.12>Y</OM1.12>
+                  <OM1.18>A</OM1.18>
+                  <OM1.32>The Pap Test is for use in screening for the presence of atypical cells, cervical cancer, or precursor lesions (LSIL, HSIL) as well as other cytologic categories as defined by the Bethesda System for Reporting Cervical Cytology.</OM1.32>
+                  <OM1.37>Instruct the patient not to douche or engage in sexual intercourse within 24 hours of the procedure.  For premenopausal patients, obtain specimens during the second half of the menstrual period to avoid contamination by obscuring blood.</OM1.37>
+                  <OM1.39>Frozen specimens, Specimens not collected in a ThinPrep Pap Test collection kit or specimens submitted in an expired collection kit.</OM1.39>
+                  <OM1.40>Mon-Fri</OM1.40>
+                  <OM1.48>N</OM1.48>
+                  <OM1.49>LAB</OM1.49>
+                  <OM1.51>ThinPrep Pap Test</OM1.51>
+                  <OM1.51>Pap Smear</OM1.51>
+                  <OM1.55>
+                     <OM1.55.1>AP</OM1.55.1>
+                     <OM1.55.2>Anatomic</OM1.55.2>
+                     <OM1.55.3>99USL</OM1.55.3>
+                     <OM1.55.7>2015</OM1.55.7>
+                  </OM1.55>
+                  <OM1.56>
+                     <OM1.56.1>47527-7</OM1.56.1>
+                     <OM1.56.3>LN</OM1.56.3>
+                     <OM1.56.4>610</OM1.56.4>
+                     <OM1.56.6>99USL</OM1.56.6>
+                  </OM1.56>
+                  <OM1.57>
+                     <OM1.57.1>2</OM1.57.1>
+                     <OM1.57.2>
+                        <OM1.57.2.2>day</OM1.57.2.2>
+                     </OM1.57.2>
+                  </OM1.57>
+                  <OM1.58>
+                     <OM1.58.1>F</OM1.58.1>
+                     <OM1.58.2>Female</OM1.58.2>
+                     <OM1.58.3>HL70001</OM1.58.3>
+                     <OM1.58.7>2.5.1</OM1.58.7>
+                  </OM1.58>
+                  <OM1.58>
+                     <OM1.58.1>F</OM1.58.1>
+                     <OM1.58.2>Female</OM1.58.2>
+                     <OM1.58.3>HL70001</OM1.58.3>
+                     <OM1.58.7>2.5.1</OM1.58.7>
+                  </OM1.58>
+                  <OM1.59>
+                     <OM1.59.1>16</OM1.59.1>
+                     <OM1.59.2>85</OM1.59.2>
+                  </OM1.59>
+                  <OM1.59>
+                     <OM1.59.1>16</OM1.59.1>
+                     <OM1.59.2>85</OM1.59.2>
+                  </OM1.59>
+               </OM1>
+               <OMC>
+                  <OMC.4>
+                     <OMC.4.1>1901</OMC.4.1>
+                     <OMC.4.2>Date of Last Menstrual Period</OMC.4.2>
+                     <OMC.4.3>99USL</OMC.4.3>
+                     <OMC.4.4>8665-2</OMC.4.4>
+                     <OMC.4.5>Date last menstrual period</OMC.4.5>
+                     <OMC.4.6>LN</OMC.4.6>
+                     <OMC.4.7>20130421</OMC.4.7>
+                     <OMC.4.8>2.52</OMC.4.8>
+                  </OMC.4>
+                  <OMC.5>
+                     <OMC.5.1>ORD</OMC.5.1>
+                     <OMC.5.2>Placing the order</OMC.5.2>
+                     <OMC.5.3>HL70938</OMC.5.3>
+                     <OMC.5.7>2.8.2</OMC.5.7>
+                  </OMC.5>
+                  <OMC.5>
+                     <OMC.5.1>DRW</OMC.5.1>
+                     <OMC.5.2>Collecting the specimen</OMC.5.2>
+                     <OMC.5.3>HL70938</OMC.5.3>
+                     <OMC.5.7>2.8.2</OMC.5.7>
+                  </OMC.5>
+                  <OMC.6>
+                     <OMC.6.1>OBR-OBX</OMC.6.1>
+                     <OMC.6.2>OBX segment following an OBR segment</OMC.6.2>
+                     <OMC.6.3>HL70939</OMC.6.3>
+                     <OMC.6.7>2.8.2</OMC.6.7>
+                  </OMC.6>
+                  <OMC.7>Y</OMC.7>
+                  <OMC.9>DT</OMC.9>
+               </OMC>
+               <OMC>
+                  <OMC.4>
+                     <OMC.4.1>1905</OMC.4.1>
+                     <OMC.4.2>Did the patient have a previous abnormal Pap report, treatment, or biopsy?</OMC.4.2>
+                     <OMC.4.3>99USL</OMC.4.3>
+                     <OMC.4.4>PLT458</OMC.4.4>
+                     <OMC.4.5>Did the patient have a previous abnormal Pap report, treatment, or biopsy?</OMC.4.5>
+                     <OMC.4.6>PLT</OMC.4.6>
+                     <OMC.4.7>20130421</OMC.4.7>
+                     <OMC.4.8>1.5</OMC.4.8>
+                  </OMC.4>
+                  <OMC.5>
+                     <OMC.5.1>ORD</OMC.5.1>
+                     <OMC.5.2>Placing the order</OMC.5.2>
+                     <OMC.5.3>HL70938</OMC.5.3>
+                  </OMC.5>
+                  <OMC.6>
+                     <OMC.6.1>OBR-OBX</OMC.6.1>
+                     <OMC.6.2>OBX segment following an OBR segment</OMC.6.2>
+                     <OMC.6.3>HL70939</OMC.6.3>
+                  </OMC.6>
+                  <OMC.7>Y</OMC.7>
+                  <OMC.9>CWE</OMC.9>
+                  <OMC.11>
+                     <OMC.11.1>Y</OMC.11.1>
+                     <OMC.11.2>Yes</OMC.11.2>
+                     <OMC.11.3>HL70136</OMC.11.3>
+                  </OMC.11>
+                  <OMC.11>
+                     <OMC.11.1>N</OMC.11.1>
+                     <OMC.11.2>No</OMC.11.2>
+                     <OMC.11.3>HL70136</OMC.11.3>
+                  </OMC.11>
+                  <OMC.11>
+                     <OMC.11.1>U</OMC.11.1>
+                     <OMC.11.2>Unknown</OMC.11.2>
+                     <OMC.11.3>HL70353</OMC.11.3>
+                  </OMC.11>
+               </OMC>
+               <OM3>
+                  <OM3.1>75</OM3.1>
+                  <OM3.4>
+                     <OM3.4.1>373887005</OM3.4.1>
+                     <OM3.4.2>Negative for intraepithelial lesion or malignancy</OM3.4.2>
+                     <OM3.4.3>SCT</OM3.4.3>
+                     <OM3.4.7>20130731</OM3.4.7>
+                  </OM3.4>
+                  <OM3.7>CWE</OM3.7>
+               </OM3>
+               <OM4>
+                  <OM4.1>75</OM4.1>
+                  <OM4.3>PreservCyt Solution vial</OM4.3>
+                  <OM4.6>
+                     <OM4.6.1>110951002</OM4.6.1>
+                     <OM4.6.2>Endocervical cytologic material</OM4.6.2>
+                     <OM4.6.3>SCT</OM4.6.3>
+                     <OM4.6.4>2134</OM4.6.4>
+                     <OM4.6.5>Cervical Cytology (ThinPrep)</OM4.6.5>
+                     <OM4.6.6>99USL</OM4.6.6>
+                     <OM4.6.7>20140131</OM4.6.7>
+                     <OM4.6.8>2014</OM4.6.8>
+                     <OM4.6.9>Cervical Cytology (ThinPrep)</OM4.6.9>
+                  </OM4.6>
+                  <OM4.7>
+                     <OM4.7.2>PreservCyt Solution</OM4.7.2>
+                  </OM4.7>
+                  <OM4.12>Follow instructions per the ThinPrep Pap Test collection kit.</OM4.12>
+                  <OM4.15>
+                     <OM4.15.1>AMB</OM4.15.1>
+                     <OM4.15.2>Ambient temperature</OM4.15.2>
+                     <OM4.15.3>HL70376</OM4.15.3>
+                     <OM4.15.7>2.5.1</OM4.15.7>
+                  </OM4.15>
+                  <OM4.16>P</OM4.16>
+               </OM4>
+            </MFN_M08.MF_TEST>
+            <MFN_M08.MF_TEST>
+               <MFE>
+                  <MFE.1>MAD</MFE.1>
+                  <MFE.3>
+                     <MFE.3.1>20131219145310</MFE.3.1>
+                  </MFE.3>
+                  <MFE.4>
+                     <MFE.4.1>1305</MFE.4.1>
+                     <MFE.4.2>SLE IgG Titer Serum</MFE.4.2>
+                     <MFE.4.3>99USL</MFE.4.3>
+                     <MFE.4.7>20130421</MFE.4.7>
+                  </MFE.4>
+                  <MFE.5>CWE</MFE.5>
+               </MFE>
+               <OM1>
+                  <OM1.1>91</OM1.1>
+                  <OM1.2>
+                     <OM1.2.1>1305</OM1.2.1>
+                     <OM1.2.2>SLE IgG Titer Serum</OM1.2.2>
+                     <OM1.2.3>99USL</OM1.2.3>
+                     <OM1.2.7>20130421</OM1.2.7>
+                  </OM1.2>
+                  <OM1.4>N</OM1.4>
+                  <OM1.5>
+                     <OM1.5.1>05D0669071</OM1.5.1>
+                     <OM1.5.2>Century Hospital Clinical Laboratory</OM1.5.2>
+                     <OM1.5.3>99USL</OM1.5.3>
+                     <OM1.5.7>2013</OM1.5.7>
+                  </OM1.5>
+                  <OM1.7>
+                     <OM1.7.1>22512-8</OM1.7.1>
+                     <OM1.7.2>Saint Louis encephalitis virus IgG Ab [Titer] in Serum</OM1.7.2>
+                     <OM1.7.3>LN</OM1.7.3>
+                  </OM1.7>
+                  <OM1.9>Saint Luis Virus IgG</OM1.9>
+                  <OM1.12>Y</OM1.12>
+                  <OM1.18>A</OM1.18>
+                  <OM1.39>Insufficient specimen, Improper labeling.</OM1.39>
+                  <OM1.40>Monday through Friday</OM1.40>
+                  <OM1.48>N</OM1.48>
+                  <OM1.49>LAB</OM1.49>
+                  <OM1.56>
+                     <OM1.56.1>22512-8</OM1.56.1>
+                     <OM1.56.2>Saint Louis encephalitis virus IgG Ab [Titer] in Serum</OM1.56.2>
+                     <OM1.56.3>LN</OM1.56.3>
+                     <OM1.56.4>1305</OM1.56.4>
+                     <OM1.56.5>SLE IgG Titer Serum</OM1.56.5>
+                     <OM1.56.6>99USL</OM1.56.6>
+                  </OM1.56>
+                  <OM1.57>
+                     <OM1.57.1>2</OM1.57.1>
+                     <OM1.57.2>
+                        <OM1.57.2.2>day</OM1.57.2.2>
+                     </OM1.57.2>
+                  </OM1.57>
+               </OM1>
+               <OM4>
+                  <OM4.1>91</OM4.1>
+                  <OM4.3>Gold Serum Separator tube</OM4.3>
+                  <OM4.3>Red, No Additive tube</OM4.3>
+                  <OM4.4>5.0</OM4.4>
+                  <OM4.4>5.0</OM4.4>
+                  <OM4.5>
+                     <OM4.5.1>mL</OM4.5.1>
+                     <OM4.5.2>milliliter</OM4.5.2>
+                     <OM4.5.3>UCUM</OM4.5.3>
+                     <OM4.5.7>1.8</OM4.5.7>
+                  </OM4.5>
+                  <OM4.5>
+                     <OM4.5.1>mL</OM4.5.1>
+                     <OM4.5.2>milliliter</OM4.5.2>
+                     <OM4.5.3>UCUM</OM4.5.3>
+                     <OM4.5.7>1.8</OM4.5.7>
+                  </OM4.5>
+                  <OM4.6>
+                     <OM4.6.1>119364003</OM4.6.1>
+                     <OM4.6.2>Serum specimen</OM4.6.2>
+                     <OM4.6.3>SCT</OM4.6.3>
+                     <OM4.6.7>201509-US Ed</OM4.6.7>
+                  </OM4.6>
+                  <OM4.10>
+                     <OM4.10.1>1</OM4.10.1>
+                     <OM4.10.2>
+                        <OM4.10.2.1>mL</OM4.10.2.1>
+                        <OM4.10.2.2>milliliter</OM4.10.2.2>
+                        <OM4.10.2.3>UCUM</OM4.10.2.3>
+                     </OM4.10.2>
+                  </OM4.10>
+                  <OM4.11>
+                     <OM4.11.1>0.5</OM4.11.1>
+                     <OM4.11.2>
+                        <OM4.11.2.1>mL</OM4.11.2.1>
+                        <OM4.11.2.2>milliliter</OM4.11.2.2>
+                        <OM4.11.2.3>UCUM</OM4.11.2.3>
+                        <OM4.11.2.7>1.8</OM4.11.2.7>
+                     </OM4.11.2>
+                  </OM4.11>
+                  <OM4.12>Protect from light. Allow serum tube to clot completely at room temperature. Separate serum or plasma from cells ASAP or within 30 minutes of collection.</OM4.12>
+                  <OM4.15>
+                     <OM4.15.1>REF</OM4.15.1>
+                     <OM4.15.2>Refrigerated temperature</OM4.15.2>
+                     <OM4.15.3>HL70376</OM4.15.3>
+                     <OM4.15.7>2.5.1</OM4.15.7>
+                  </OM4.15>
+                  <OM4.16>P</OM4.16>
+               </OM4>
+            </MFN_M08.MF_TEST>
+            <MFN_M08.MF_TEST>
+               <MFE>
+                  <MFE.1>MAD</MFE.1>
+                  <MFE.3>
+                     <MFE.3.1>20131219145310</MFE.3.1>
+                  </MFE.3>
+                  <MFE.4>
+                     <MFE.4.1>1506</MFE.4.1>
+                     <MFE.4.2>Penicillin</MFE.4.2>
+                     <MFE.4.3>99USL</MFE.4.3>
+                     <MFE.4.7>20130421</MFE.4.7>
+                  </MFE.4>
+                  <MFE.5>CWE</MFE.5>
+               </MFE>
+               <OM1>
+                  <OM1.1>86</OM1.1>
+                  <OM1.2>
+                     <OM1.2.1>1506</OM1.2.1>
+                     <OM1.2.2>Penicillin</OM1.2.2>
+                     <OM1.2.3>99USL</OM1.2.3>
+                     <OM1.2.7>20130421</OM1.2.7>
+                  </OM1.2>
+                  <OM1.4>N</OM1.4>
+                  <OM1.5>
+                     <OM1.5.1>05D0669071</OM1.5.1>
+                     <OM1.5.2>Century Hospital Clinical Laboratory</OM1.5.2>
+                     <OM1.5.3>99USL</OM1.5.3>
+                     <OM1.5.7>2013</OM1.5.7>
+                  </OM1.5>
+                  <OM1.7>
+                     <OM1.7.1>18964-7</OM1.7.1>
+                     <OM1.7.2>Penicillin [Susceptibility]</OM1.7.2>
+                     <OM1.7.3>LN</OM1.7.3>
+                  </OM1.7>
+                  <OM1.9>Penicillin</OM1.9>
+                  <OM1.12>Y</OM1.12>
+                  <OM1.18>A</OM1.18>
+                  <OM1.39>Insufficient specimen, Improper labeling.</OM1.39>
+                  <OM1.40>Monday through Friday</OM1.40>
+                  <OM1.48>N</OM1.48>
+                  <OM1.49>LAB</OM1.49>
+                  <OM1.56>
+                     <OM1.56.1>18964-7</OM1.56.1>
+                     <OM1.56.2>Penicillin [Susceptibility]</OM1.56.2>
+                     <OM1.56.3>LN</OM1.56.3>
+                     <OM1.56.4>1506</OM1.56.4>
+                     <OM1.56.5>Penicillin</OM1.56.5>
+                     <OM1.56.6>99USL</OM1.56.6>
+                  </OM1.56>
+                  <OM1.57>
+                     <OM1.57.1>3</OM1.57.1>
+                     <OM1.57.2>
+                        <OM1.57.2.2>day</OM1.57.2.2>
+                     </OM1.57.2>
+                  </OM1.57>
+               </OM1>
+               <OM4>
+                  <OM4.1>86</OM4.1>
+                  <OM4.6>
+                     <OM4.6.1>429951000124103</OM4.6.1>
+                     <OM4.6.2>Bacterial isolate specimen</OM4.6.2>
+                     <OM4.6.3>SCT</OM4.6.3>
+                     <OM4.6.7>20130331</OM4.6.7>
+                  </OM4.6>
+                  <OM4.12>Organism must be in pure culture and actively growing.  Place into large infectious container and label as " Infectious substance".</OM4.12>
+                  <OM4.15>
+                     <OM4.15.1>CAMB</OM4.15.1>
+                     <OM4.15.2>Critical ambient temperature</OM4.15.2>
+                     <OM4.15.3>HL70376</OM4.15.3>
+                  </OM4.15>
+               </OM4>
+            </MFN_M08.MF_TEST>
+         </MFN_M08>
+      </Message>
+      <Message id="MFN_M10">
+         <MFN_M10>
+            <MSH>
+               <MSH.1>|</MSH.1>
+               <MSH.2>^~\&amp;#</MSH.2>
+               <MSH.3>
+                  <MSH.3.1>NIST Test Lab APP</MSH.3.1>
+                  <MSH.3.2>2.16.840.1.113883.3.72.5.20</MSH.3.2>
+                  <MSH.3.3>ISO</MSH.3.3>
+               </MSH.3>
+               <MSH.4>
+                  <MSH.4.1>NIST Lab Facility</MSH.4.1>
+                  <MSH.4.2>2.16.840.1.113883.3.72.5.21</MSH.4.2>
+                  <MSH.4.3>ISO</MSH.4.3>
+               </MSH.4>
+               <MSH.6>
+                  <MSH.6.1>NIST EHR Facility</MSH.6.1>
+                  <MSH.6.2>2.16.840.1.113883.3.72.5.23</MSH.6.2>
+                  <MSH.6.3>ISO</MSH.6.3>
+               </MSH.6>
+               <MSH.7>
+                  <MSH.7.1>20130421113601-0700</MSH.7.1>
+               </MSH.7>
+               <MSH.9>
+                  <MSH.9.1>MFN</MSH.9.1>
+                  <MSH.9.2>M10</MSH.9.2>
+                  <MSH.9.3>MFN_M10</MSH.9.3>
+               </MSH.9>
+               <MSH.10>EDOS_1.0_2.1-M10_GU</MSH.10>
+               <MSH.11>
+                  <MSH.11.1>D</MSH.11.1>
+               </MSH.11>
+               <MSH.12>
+                  <MSH.12.1>2.5.1</MSH.12.1>
+               </MSH.12>
+               <MSH.21>
+                  <MSH.21.1>EDOS_Common_Component</MSH.21.1>
+                  <MSH.21.2>EDOS Base Profile</MSH.21.2>
+                  <MSH.21.3>2.16.840.1.113883.9.67</MSH.21.3>
+                  <MSH.21.4>ISO</MSH.21.4>
+               </MSH.21>
+               <MSH.21>
+                  <MSH.21.1>EDOS_GU_Component</MSH.21.1>
+                  <MSH.21.2>EDOS GU Profile</MSH.21.2>
+                  <MSH.21.3>2.16.840.1.113883.9.68</MSH.21.3>
+                  <MSH.21.4>ISO</MSH.21.4>
+               </MSH.21>
+            </MSH>
+            <MFI>
+               <MFI.1>
+                  <MFI.1.1>OMC</MFI.1.1>
+                  <MFI.1.2>Observation batteries master file</MFI.1.2>
+                  <MFI.1.3>HL70175</MFI.1.3>
+                  <MFI.1.7>2.5.1</MFI.1.7>
+               </MFI.1>
+               <MFI.3>REP</MFI.3>
+               <MFI.6>NE</MFI.6>
+            </MFI>
+            <MFN_M10.MF_BATTERY>
+               <MFE>
+                  <MFE.1>MAD</MFE.1>
+                  <MFE.3>
+                     <MFE.3.1>20131219145310</MFE.3.1>
+                  </MFE.3>
+                  <MFE.4>
+                     <MFE.4.1>800</MFE.4.1>
+                     <MFE.4.2>GHP</MFE.4.2>
+                     <MFE.4.3>99USL</MFE.4.3>
+                     <MFE.4.7>20130421</MFE.4.7>
+                  </MFE.4>
+                  <MFE.5>CWE</MFE.5>
+               </MFE>
+               <OM1>
+                  <OM1.1>4</OM1.1>
+                  <OM1.2>
+                     <OM1.2.1>800</OM1.2.1>
+                     <OM1.2.2>GHP</OM1.2.2>
+                     <OM1.2.3>99USL</OM1.2.3>
+                     <OM1.2.7>20130421</OM1.2.7>
+                  </OM1.2>
+                  <OM1.4>Y</OM1.4>
+                  <OM1.5>
+                     <OM1.5.1>05D0669071</OM1.5.1>
+                     <OM1.5.2>Century Hospital Clinical Laboratory</OM1.5.2>
+                     <OM1.5.3>99USL</OM1.5.3>
+                     <OM1.5.7>2013</OM1.5.7>
+                  </OM1.5>
+                  <OM1.9>General Health Profile</OM1.9>
+                  <OM1.12>Y</OM1.12>
+                  <OM1.18>S</OM1.18>
+                  <OM1.32>This blood test is used to determine general health status and to screen for and monitor a variety of disorders. This profile includes a complete metabolic profile, comprehensive CBC, Urinalysis and total Thyrotropin (T4).</OM1.32>
+                  <OM1.37>Patient fasting required for 12 hours.</OM1.37>
+                  <OM1.39>Insufficient specimen, Gross hemolysis, Improper labeling...</OM1.39>
+                  <OM1.40>Daily</OM1.40>
+                  <OM1.48>N</OM1.48>
+                  <OM1.49>LAB</OM1.49>
+                  <OM1.57>
+                     <OM1.57.1>1</OM1.57.1>
+                     <OM1.57.2>
+                        <OM1.57.2.1>d</OM1.57.2.1>
+                        <OM1.57.2.2>day</OM1.57.2.2>
+                        <OM1.57.2.3>UCUM</OM1.57.2.3>
+                        <OM1.57.2.7>1.8</OM1.57.2.7>
+                     </OM1.57.2>
+                  </OM1.57>
+               </OM1>
+               <MFN_M10.MF_BATTERY.BATTERY_DETAIL>
+                  <OM5>
+                     <OM5.1>4</OM5.1>
+                     <OM5.2>
+                        <OM5.2.1>100</OM5.2.1>
+                        <OM5.2.2>CMP</OM5.2.2>
+                        <OM5.2.3>99USL</OM5.2.3>
+                        <OM5.2.4>24323-8</OM5.2.4>
+                        <OM5.2.5>Comprehensive metabolic 2000 panel - Serum or Plasma</OM5.2.5>
+                        <OM5.2.6>LN</OM5.2.6>
+                        <OM5.2.8>2.42</OM5.2.8>
+                     </OM5.2>
+                     <OM5.2>
+                        <OM5.2.1>200</OM5.2.1>
+                        <OM5.2.2>CBC_diff</OM5.2.2>
+                        <OM5.2.3>99USL</OM5.2.3>
+                        <OM5.2.4>57021-8</OM5.2.4>
+                        <OM5.2.5>CBC W Auto Differential panel in Blood</OM5.2.5>
+                        <OM5.2.6>LN</OM5.2.6>
+                        <OM5.2.8>2.42</OM5.2.8>
+                     </OM5.2>
+                     <OM5.2>
+                        <OM5.2.1>700</OM5.2.1>
+                        <OM5.2.2>TSH</OM5.2.2>
+                        <OM5.2.3>99USL</OM5.2.3>
+                        <OM5.2.4>3016-3</OM5.2.4>
+                        <OM5.2.5>Thyrotropin [Units/volume] in Serum or Plasma</OM5.2.5>
+                        <OM5.2.6>LN</OM5.2.6>
+                        <OM5.2.8>2.42</OM5.2.8>
+                     </OM5.2>
+                     <OM5.2>
+                        <OM5.2.1>300</OM5.2.1>
+                        <OM5.2.2>Comprehensive Urinalysis</OM5.2.2>
+                        <OM5.2.3>99USL</OM5.2.3>
+                        <OM5.2.4>50564-4</OM5.2.4>
+                        <OM5.2.5>Urinalysis panel - Urine by Auto</OM5.2.5>
+                        <OM5.2.6>LN</OM5.2.6>
+                        <OM5.2.8>2.42</OM5.2.8>
+                     </OM5.2>
+                  </OM5>
+                  <OM4>
+                     <OM4.1>4.1</OM4.1>
+                     <OM4.3>Gold Serum Separator tube</OM4.3>
+                     <OM4.3>Red, No Additive tube</OM4.3>
+                     <OM4.4>5.0</OM4.4>
+                     <OM4.4>5.0</OM4.4>
+                     <OM4.5>
+                        <OM4.5.1>mL</OM4.5.1>
+                        <OM4.5.2>milliliter</OM4.5.2>
+                        <OM4.5.3>UCUM</OM4.5.3>
+                        <OM4.5.7>1.8</OM4.5.7>
+                     </OM4.5>
+                     <OM4.5>
+                        <OM4.5.1>mL</OM4.5.1>
+                        <OM4.5.2>milliliter</OM4.5.2>
+                        <OM4.5.3>UCUM</OM4.5.3>
+                        <OM4.5.7>1.8</OM4.5.7>
+                     </OM4.5>
+                     <OM4.6>
+                        <OM4.6.1>119364003</OM4.6.1>
+                        <OM4.6.2>Serum specimen</OM4.6.2>
+                        <OM4.6.3>SCT</OM4.6.3>
+                        <OM4.6.7>201509-US Ed</OM4.6.7>
+                     </OM4.6>
+                     <OM4.10>
+                        <OM4.10.1>1</OM4.10.1>
+                        <OM4.10.2>
+                           <OM4.10.2.1>mL</OM4.10.2.1>
+                           <OM4.10.2.2>milliliter</OM4.10.2.2>
+                           <OM4.10.2.3>UCUM</OM4.10.2.3>
+                        </OM4.10.2>
+                     </OM4.10>
+                     <OM4.11>
+                        <OM4.11.1>0.5</OM4.11.1>
+                        <OM4.11.2>
+                           <OM4.11.2.1>mL</OM4.11.2.1>
+                           <OM4.11.2.2>milliliter</OM4.11.2.2>
+                           <OM4.11.2.3>UCUM</OM4.11.2.3>
+                           <OM4.11.2.7>1.8</OM4.11.2.7>
+                        </OM4.11.2>
+                     </OM4.11>
+                     <OM4.12>Protect from light. Allow serum tube to clot completely at room temperature. Separate serum or plasma from cells ASAP or within 30 minutes of collection.</OM4.12>
+                     <OM4.15>
+                        <OM4.15.1>REF</OM4.15.1>
+                        <OM4.15.2>Refrigerated temperature</OM4.15.2>
+                        <OM4.15.3>HL70376</OM4.15.3>
+                        <OM4.15.7>2.5.1</OM4.15.7>
+                     </OM4.15>
+                     <OM4.16>P</OM4.16>
+                  </OM4>
+                  <OM4>
+                     <OM4.1>4.2</OM4.1>
+                     <OM4.3>Lavender Top (EDTA) tube</OM4.3>
+                     <OM4.3>Pink Top (K2EDTA) tube</OM4.3>
+                     <OM4.4>3.0</OM4.4>
+                     <OM4.4>3.0</OM4.4>
+                     <OM4.5>
+                        <OM4.5.1>mL</OM4.5.1>
+                        <OM4.5.2>milliliters</OM4.5.2>
+                        <OM4.5.3>UCUM</OM4.5.3>
+                        <OM4.5.7>1.8</OM4.5.7>
+                     </OM4.5>
+                     <OM4.5>
+                        <OM4.5.1>mL</OM4.5.1>
+                        <OM4.5.2>milliliters</OM4.5.2>
+                        <OM4.5.3>UCUM</OM4.5.3>
+                        <OM4.5.7>1.8</OM4.5.7>
+                     </OM4.5>
+                     <OM4.6>
+                        <OM4.6.1>119297000</OM4.6.1>
+                        <OM4.6.2>Blood sample</OM4.6.2>
+                        <OM4.6.3>SCT</OM4.6.3>
+                        <OM4.6.4>WBLD</OM4.6.4>
+                        <OM4.6.5>Whole blood</OM4.6.5>
+                        <OM4.6.6>99USL</OM4.6.6>
+                        <OM4.6.7>201509-US Ed</OM4.6.7>
+                        <OM4.6.8>2014</OM4.6.8>
+                        <OM4.6.9>Whole blood</OM4.6.9>
+                     </OM4.6>
+                     <OM4.7>
+                        <OM4.7.1>EDTK</OM4.7.1>
+                        <OM4.7.2>Potassium/K EDTA</OM4.7.2>
+                        <OM4.7.3>HL70371</OM4.7.3>
+                        <OM4.7.7>2.5.1</OM4.7.7>
+                     </OM4.7>
+                     <OM4.10>
+                        <OM4.10.1>3</OM4.10.1>
+                        <OM4.10.2>
+                           <OM4.10.2.1>mL</OM4.10.2.1>
+                           <OM4.10.2.2>milliliters</OM4.10.2.2>
+                           <OM4.10.2.3>UCUM</OM4.10.2.3>
+                           <OM4.10.2.7>1.8</OM4.10.2.7>
+                        </OM4.10.2>
+                     </OM4.10>
+                     <OM4.11>
+                        <OM4.11.1>0.5</OM4.11.1>
+                        <OM4.11.2>
+                           <OM4.11.2.1>mL</OM4.11.2.1>
+                           <OM4.11.2.2>milliliters</OM4.11.2.2>
+                           <OM4.11.2.3>UCUM</OM4.11.2.3>
+                           <OM4.11.2.7>1.8</OM4.11.2.7>
+                        </OM4.11.2>
+                     </OM4.11>
+                     <OM4.12>Refrigeration is required if specimen is not brought immediately to laboratory.  Two blood smears should be prepared if sample is not delivered to the laboratory within 4 hrs.  Sample should be analyzed within 6 hours at room temperature and 24 hrs when stored at 4 degrees C.</OM4.12>
+                     <OM4.15>
+                        <OM4.15.1>CREF</OM4.15.1>
+                        <OM4.15.2>Critical refrigerated</OM4.15.2>
+                        <OM4.15.3>HL70376</OM4.15.3>
+                        <OM4.15.7>2.5.1</OM4.15.7>
+                     </OM4.15>
+                     <OM4.16>P</OM4.16>
+                  </OM4>
+                  <OM4>
+                     <OM4.1>4.3</OM4.1>
+                     <OM4.3>Sterile, plastic, leak proof container</OM4.3>
+                     <OM4.4>4</OM4.4>
+                     <OM4.5>
+                        <OM4.5.1>[foz_us]</OM4.5.1>
+                        <OM4.5.2>fluid ounce (US)</OM4.5.2>
+                        <OM4.5.3>UCUM</OM4.5.3>
+                        <OM4.5.7>1.8</OM4.5.7>
+                     </OM4.5>
+                     <OM4.6>
+                        <OM4.6.1>122575003</OM4.6.1>
+                        <OM4.6.2>Urine specimen</OM4.6.2>
+                        <OM4.6.3>SCT</OM4.6.3>
+                        <OM4.6.4>UR</OM4.6.4>
+                        <OM4.6.5>Random urine</OM4.6.5>
+                        <OM4.6.6>99USL</OM4.6.6>
+                        <OM4.6.7>201509-US Ed</OM4.6.7>
+                        <OM4.6.8>2014</OM4.6.8>
+                        <OM4.6.9>Random urine</OM4.6.9>
+                     </OM4.6>
+                     <OM4.10>
+                        <OM4.10.1>20</OM4.10.1>
+                        <OM4.10.2>
+                           <OM4.10.2.1>mL</OM4.10.2.1>
+                           <OM4.10.2.2>milliliter</OM4.10.2.2>
+                           <OM4.10.2.3>UCUM</OM4.10.2.3>
+                           <OM4.10.2.7>1.8</OM4.10.2.7>
+                        </OM4.10.2>
+                     </OM4.10>
+                     <OM4.11>
+                        <OM4.11.1>4</OM4.11.1>
+                        <OM4.11.2>
+                           <OM4.11.2.1>mL</OM4.11.2.1>
+                           <OM4.11.2.2>milliliter</OM4.11.2.2>
+                           <OM4.11.2.3>UCUM</OM4.11.2.3>
+                           <OM4.11.2.7>1.8</OM4.11.2.7>
+                        </OM4.11.2>
+                     </OM4.11>
+                     <OM4.12>Keep refrigerated</OM4.12>
+                     <OM4.15>
+                        <OM4.15.1>REF</OM4.15.1>
+                        <OM4.15.2>Refrigerated temperature</OM4.15.2>
+                        <OM4.15.3>HL70376</OM4.15.3>
+                        <OM4.15.7>2.5.1</OM4.15.7>
+                     </OM4.15>
+                     <OM4.16>P</OM4.16>
+                  </OM4>
+               </MFN_M10.MF_BATTERY.BATTERY_DETAIL>
+            </MFN_M10.MF_BATTERY>
+            <MFN_M10.MF_BATTERY>
+               <MFE>
+                  <MFE.1>MAD</MFE.1>
+                  <MFE.3>
+                     <MFE.3.1>20131219145310</MFE.3.1>
+                  </MFE.3>
+                  <MFE.4>
+                     <MFE.4.1>100</MFE.4.1>
+                     <MFE.4.2>CMP</MFE.4.2>
+                     <MFE.4.3>99USL</MFE.4.3>
+                     <MFE.4.7>20130421</MFE.4.7>
+                  </MFE.4>
+                  <MFE.5>CWE</MFE.5>
+               </MFE>
+               <OM1>
+                  <OM1.1>1</OM1.1>
+                  <OM1.2>
+                     <OM1.2.1>100</OM1.2.1>
+                     <OM1.2.2>CMP</OM1.2.2>
+                     <OM1.2.3>99USL</OM1.2.3>
+                     <OM1.2.7>20130421</OM1.2.7>
+                  </OM1.2>
+                  <OM1.4>Y</OM1.4>
+                  <OM1.5>
+                     <OM1.5.1>05D0669071</OM1.5.1>
+                     <OM1.5.2>Century Hospital Clinical Laboratory</OM1.5.2>
+                     <OM1.5.3>99USL</OM1.5.3>
+                     <OM1.5.7>2013</OM1.5.7>
+                  </OM1.5>
+                  <OM1.7>
+                     <OM1.7.1>24323-8</OM1.7.1>
+                     <OM1.7.2>Comprehensive metabolic 2000 panel - Serum or Plasma</OM1.7.2>
+                     <OM1.7.3>LN</OM1.7.3>
+                     <OM1.7.7>2.42</OM1.7.7>
+                  </OM1.7>
+                  <OM1.10>CMP</OM1.10>
+                  <OM1.12>Y</OM1.12>
+                  <OM1.18>P</OM1.18>
+                  <OM1.32>Test used to measure blood sugar, electrolytes and fluid balance, kidney and liver function.</OM1.32>
+                  <OM1.37>Patient fasting required for 12 hours.</OM1.37>
+                  <OM1.39>Insufficient specimen, Gross hemolysis, Improper labeling..</OM1.39>
+                  <OM1.40>Daily</OM1.40>
+                  <OM1.48>N</OM1.48>
+                  <OM1.49>LAB</OM1.49>
+                  <OM1.51>CMP</OM1.51>
+                  <OM1.57>
+                     <OM1.57.1>1</OM1.57.1>
+                     <OM1.57.2>
+                        <OM1.57.2.1>d</OM1.57.2.1>
+                        <OM1.57.2.2>day</OM1.57.2.2>
+                        <OM1.57.2.3>UCUM</OM1.57.2.3>
+                        <OM1.57.2.7>1.8</OM1.57.2.7>
+                     </OM1.57.2>
+                  </OM1.57>
+               </OM1>
+               <MFN_M10.MF_BATTERY.BATTERY_DETAIL>
+                  <OM5>
+                     <OM5.1>1</OM5.1>
+                     <OM5.2>
+                        <OM5.2.1>104</OM5.2.1>
+                        <OM5.2.2>Serum Glucose</OM5.2.2>
+                        <OM5.2.3>99USL</OM5.2.3>
+                        <OM5.2.4>2345-7</OM5.2.4>
+                        <OM5.2.5>Glucose [Mass/volume] in Serum or Plasma</OM5.2.5>
+                        <OM5.2.6>LN</OM5.2.6>
+                        <OM5.2.7>20130421</OM5.2.7>
+                        <OM5.2.8>2.42</OM5.2.8>
+                     </OM5.2>
+                     <OM5.2>
+                        <OM5.2.1>106</OM5.2.1>
+                        <OM5.2.2>Blood Urea Nitrogen (BUN)</OM5.2.2>
+                        <OM5.2.3>99USL</OM5.2.3>
+                        <OM5.2.4>3094-0</OM5.2.4>
+                        <OM5.2.5>Urea nitrogen [Mass/volume] in Serum or Plasma</OM5.2.5>
+                        <OM5.2.6>LN</OM5.2.6>
+                        <OM5.2.7>20130421</OM5.2.7>
+                        <OM5.2.8>2.42</OM5.2.8>
+                     </OM5.2>
+                     <OM5.2>
+                        <OM5.2.1>102</OM5.2.1>
+                        <OM5.2.2>Creatinine</OM5.2.2>
+                        <OM5.2.3>99USL</OM5.2.3>
+                        <OM5.2.4>2160-0</OM5.2.4>
+                        <OM5.2.5>Creatinine [Mass/volume] in Serum or Plasma</OM5.2.5>
+                        <OM5.2.6>LN</OM5.2.6>
+                        <OM5.2.7>20130421</OM5.2.7>
+                        <OM5.2.8>2.42</OM5.2.8>
+                     </OM5.2>
+                     <OM5.2>
+                        <OM5.2.1>108</OM5.2.1>
+                        <OM5.2.2>BUN/Creatinine Ratio</OM5.2.2>
+                        <OM5.2.3>99USL</OM5.2.3>
+                        <OM5.2.4>3097-3</OM5.2.4>
+                        <OM5.2.5>Urea nitrogen/Creatinine [Mass Ratio] in Serum or Plasma</OM5.2.5>
+                        <OM5.2.6>LN</OM5.2.6>
+                        <OM5.2.7>20130421</OM5.2.7>
+                        <OM5.2.8>2.42</OM5.2.8>
+                     </OM5.2>
+                     <OM5.2>
+                        <OM5.2.1>110</OM5.2.1>
+                        <OM5.2.2>GFR, calculated</OM5.2.2>
+                        <OM5.2.3>99USL</OM5.2.3>
+                        <OM5.2.4>33914-3</OM5.2.4>
+                        <OM5.2.5>Glomerular filtration rate/1.73 sq M.predicted by Creatinine-based formula (MDRD)</OM5.2.5>
+                        <OM5.2.6>LN</OM5.2.6>
+                        <OM5.2.7>20130421</OM5.2.7>
+                        <OM5.2.8>2.42</OM5.2.8>
+                     </OM5.2>
+                     <OM5.2>
+                        <OM5.2.1>112</OM5.2.1>
+                        <OM5.2.2>Calcium</OM5.2.2>
+                        <OM5.2.3>99USL</OM5.2.3>
+                        <OM5.2.4>17861-6</OM5.2.4>
+                        <OM5.2.5>Calcium [Mass/volume] in Serum or Plasma</OM5.2.5>
+                        <OM5.2.6>LN</OM5.2.6>
+                        <OM5.2.7>20130421</OM5.2.7>
+                        <OM5.2.8>2.42</OM5.2.8>
+                     </OM5.2>
+                     <OM5.2>
+                        <OM5.2.1>114</OM5.2.1>
+                        <OM5.2.2>Total protein, serum</OM5.2.2>
+                        <OM5.2.3>99USL</OM5.2.3>
+                        <OM5.2.4>2885-2</OM5.2.4>
+                        <OM5.2.5>Protein [Mass/volume] in Serum or Plasma</OM5.2.5>
+                        <OM5.2.6>LN</OM5.2.6>
+                        <OM5.2.7>20130421</OM5.2.7>
+                        <OM5.2.8>2.42</OM5.2.8>
+                     </OM5.2>
+                     <OM5.2>
+                        <OM5.2.1>116</OM5.2.1>
+                        <OM5.2.2>Albumin</OM5.2.2>
+                        <OM5.2.3>99USL</OM5.2.3>
+                        <OM5.2.4>1751-7</OM5.2.4>
+                        <OM5.2.5>Albumin [Mass/volume] in Serum or Plasma</OM5.2.5>
+                        <OM5.2.6>LN</OM5.2.6>
+                        <OM5.2.7>20130421</OM5.2.7>
+                        <OM5.2.8>2.42</OM5.2.8>
+                     </OM5.2>
+                     <OM5.2>
+                        <OM5.2.1>118</OM5.2.1>
+                        <OM5.2.2>Globulin</OM5.2.2>
+                        <OM5.2.3>99USL</OM5.2.3>
+                        <OM5.2.4>10834-0</OM5.2.4>
+                        <OM5.2.5>Globulin [Mass/volume] in Serum by calculation</OM5.2.5>
+                        <OM5.2.6>LN</OM5.2.6>
+                        <OM5.2.7>20130421</OM5.2.7>
+                        <OM5.2.8>2.42</OM5.2.8>
+                     </OM5.2>
+                     <OM5.2>
+                        <OM5.2.1>120</OM5.2.1>
+                        <OM5.2.2>Albumin/globulin ratio</OM5.2.2>
+                        <OM5.2.3>99USL</OM5.2.3>
+                        <OM5.2.4>1759-0</OM5.2.4>
+                        <OM5.2.5> Albumin/Globulin [Mass Ratio] in Serum or Plasma</OM5.2.5>
+                        <OM5.2.6>LN</OM5.2.6>
+                        <OM5.2.7>20130421</OM5.2.7>
+                        <OM5.2.8>2.42</OM5.2.8>
+                     </OM5.2>
+                     <OM5.2>
+                        <OM5.2.1>122</OM5.2.1>
+                        <OM5.2.2>Total bilirubin, serum</OM5.2.2>
+                        <OM5.2.3>99USL</OM5.2.3>
+                        <OM5.2.4>1975-2</OM5.2.4>
+                        <OM5.2.5>Bilirubin.total [Mass/volume] in Serum or Plasma</OM5.2.5>
+                        <OM5.2.6>LN</OM5.2.6>
+                        <OM5.2.7>20130421</OM5.2.7>
+                        <OM5.2.8>2.42</OM5.2.8>
+                     </OM5.2>
+                     <OM5.2>
+                        <OM5.2.1>124</OM5.2.1>
+                        <OM5.2.2>Alkaline phosphatase (ALP)</OM5.2.2>
+                        <OM5.2.3>99USL</OM5.2.3>
+                        <OM5.2.4>6768-6</OM5.2.4>
+                        <OM5.2.5>Alkaline phosphatase [Enzymatic activity/volume] in Serum or Plasma</OM5.2.5>
+                        <OM5.2.6>LN</OM5.2.6>
+                        <OM5.2.7>20130421</OM5.2.7>
+                        <OM5.2.8>2.42</OM5.2.8>
+                     </OM5.2>
+                     <OM5.2>
+                        <OM5.2.1>126</OM5.2.1>
+                        <OM5.2.2>Alanine aminotransferase (ALT)</OM5.2.2>
+                        <OM5.2.3>99USL</OM5.2.3>
+                        <OM5.2.4>1742-6</OM5.2.4>
+                        <OM5.2.5>Alanine aminotransferase [Enzymatic activity/volume] in Serum or Plasma</OM5.2.5>
+                        <OM5.2.6>LN</OM5.2.6>
+                        <OM5.2.7>20130421</OM5.2.7>
+                        <OM5.2.8>2.42</OM5.2.8>
+                     </OM5.2>
+                     <OM5.2>
+                        <OM5.2.1>128</OM5.2.1>
+                        <OM5.2.2>Aspartate aminotransferase (ASP)</OM5.2.2>
+                        <OM5.2.3>99USL</OM5.2.3>
+                        <OM5.2.4>1920-8</OM5.2.4>
+                        <OM5.2.5>Aspartate aminotransferase [Enzymatic activity/volume] in Serum or Plasma</OM5.2.5>
+                        <OM5.2.6>LN</OM5.2.6>
+                        <OM5.2.7>20130421</OM5.2.7>
+                        <OM5.2.8>2.42</OM5.2.8>
+                     </OM5.2>
+                     <OM5.2>
+                        <OM5.2.1>130</OM5.2.1>
+                        <OM5.2.2>Sodium, serum</OM5.2.2>
+                        <OM5.2.3>99USL</OM5.2.3>
+                        <OM5.2.4>2951-2</OM5.2.4>
+                        <OM5.2.5>Sodium [Moles/volume] in Serum or Plasma</OM5.2.5>
+                        <OM5.2.6>LN</OM5.2.6>
+                        <OM5.2.7>20130421</OM5.2.7>
+                        <OM5.2.8>2.42</OM5.2.8>
+                     </OM5.2>
+                     <OM5.2>
+                        <OM5.2.1>132</OM5.2.1>
+                        <OM5.2.2>Potassium, serum</OM5.2.2>
+                        <OM5.2.3>99USL</OM5.2.3>
+                        <OM5.2.4>2823-3</OM5.2.4>
+                        <OM5.2.5>Potassium [Moles/volume] in Serum or Plasma</OM5.2.5>
+                        <OM5.2.6>LN</OM5.2.6>
+                        <OM5.2.7>20130421</OM5.2.7>
+                        <OM5.2.8>2.42</OM5.2.8>
+                     </OM5.2>
+                     <OM5.2>
+                        <OM5.2.1>134</OM5.2.1>
+                        <OM5.2.2>Chloride, serum</OM5.2.2>
+                        <OM5.2.3>99USL</OM5.2.3>
+                        <OM5.2.4>2075-0</OM5.2.4>
+                        <OM5.2.5>Chloride [Moles/volume] in Serum or Plasma</OM5.2.5>
+                        <OM5.2.6>LN</OM5.2.6>
+                        <OM5.2.7>20130421</OM5.2.7>
+                        <OM5.2.8>2.42</OM5.2.8>
+                     </OM5.2>
+                     <OM5.2>
+                        <OM5.2.1>136</OM5.2.1>
+                        <OM5.2.2>Carbon dioxide, serum</OM5.2.2>
+                        <OM5.2.3>99USL</OM5.2.3>
+                        <OM5.2.4>2028-9</OM5.2.4>
+                        <OM5.2.5>Carbon dioxide, total [Moles/volume] in Serum or Plasma</OM5.2.5>
+                        <OM5.2.6>LN</OM5.2.6>
+                        <OM5.2.7>20130421</OM5.2.7>
+                        <OM5.2.8>2.42</OM5.2.8>
+                     </OM5.2>
+                     <OM5.2>
+                        <OM5.2.1>138</OM5.2.1>
+                        <OM5.2.2>Anion gap</OM5.2.2>
+                        <OM5.2.3>99USL</OM5.2.3>
+                        <OM5.2.7>20130421</OM5.2.7>
+                     </OM5.2>
+                  </OM5>
+                  <OM4>
+                     <OM4.1>1</OM4.1>
+                     <OM4.3>Gold Serum Separator tube</OM4.3>
+                     <OM4.3>Red, No Additive tube</OM4.3>
+                     <OM4.4>5.0</OM4.4>
+                     <OM4.4>5.0</OM4.4>
+                     <OM4.5>
+                        <OM4.5.1>mL</OM4.5.1>
+                        <OM4.5.2>milliliter</OM4.5.2>
+                        <OM4.5.3>UCUM</OM4.5.3>
+                        <OM4.5.7>1.8</OM4.5.7>
+                     </OM4.5>
+                     <OM4.5>
+                        <OM4.5.1>mL</OM4.5.1>
+                        <OM4.5.2>milliliter</OM4.5.2>
+                        <OM4.5.3>UCUM</OM4.5.3>
+                        <OM4.5.7>1.8</OM4.5.7>
+                     </OM4.5>
+                     <OM4.6>
+                        <OM4.6.1>119364003</OM4.6.1>
+                        <OM4.6.2>Serum specimen</OM4.6.2>
+                        <OM4.6.3>SCT</OM4.6.3>
+                        <OM4.6.7>201509-US Ed</OM4.6.7>
+                     </OM4.6>
+                     <OM4.10>
+                        <OM4.10.1>1</OM4.10.1>
+                        <OM4.10.2>
+                           <OM4.10.2.1>mL</OM4.10.2.1>
+                           <OM4.10.2.2>milliliter</OM4.10.2.2>
+                           <OM4.10.2.3>UCUM</OM4.10.2.3>
+                        </OM4.10.2>
+                     </OM4.10>
+                     <OM4.11>
+                        <OM4.11.1>0.5</OM4.11.1>
+                        <OM4.11.2>
+                           <OM4.11.2.1>mL</OM4.11.2.1>
+                           <OM4.11.2.2>milliliter</OM4.11.2.2>
+                           <OM4.11.2.3>UCUM</OM4.11.2.3>
+                           <OM4.11.2.7>1.8</OM4.11.2.7>
+                        </OM4.11.2>
+                     </OM4.11>
+                     <OM4.12>Protect from light. Allow serum tube to clot completely at room temperature. Separate serum or plasma from cells ASAP or within 30 minutes of collection.</OM4.12>
+                     <OM4.15>
+                        <OM4.15.1>REF</OM4.15.1>
+                        <OM4.15.2>Refrigerated temperature</OM4.15.2>
+                        <OM4.15.3>HL70376</OM4.15.3>
+                        <OM4.15.7>2.5.1</OM4.15.7>
+                     </OM4.15>
+                     <OM4.16>P</OM4.16>
+                  </OM4>
+               </MFN_M10.MF_BATTERY.BATTERY_DETAIL>
+            </MFN_M10.MF_BATTERY>
+         </MFN_M10>
+      </Message>
+      <Message id="MFN_M04">
+         <MFN_M04>
+            <MSH>
+               <MSH.1>|</MSH.1>
+               <MSH.2>^~\&amp;#</MSH.2>
+               <MSH.3>
+                  <MSH.3.1>NIST Test Lab APP</MSH.3.1>
+                  <MSH.3.2>2.16.840.1.113883.3.72.5.20</MSH.3.2>
+                  <MSH.3.3>ISO</MSH.3.3>
+               </MSH.3>
+               <MSH.4>
+                  <MSH.4.1>NIST Lab Facility</MSH.4.1>
+                  <MSH.4.2>2.16.840.1.113883.3.72.5.21</MSH.4.2>
+                  <MSH.4.3>ISO</MSH.4.3>
+               </MSH.4>
+               <MSH.6>
+                  <MSH.6.1>NIST EHR Facility</MSH.6.1>
+                  <MSH.6.2>2.16.840.1.113883.3.72.5.23</MSH.6.2>
+                  <MSH.6.3>ISO</MSH.6.3>
+               </MSH.6>
+               <MSH.7>
+                  <MSH.7.1>20130421113601-0700</MSH.7.1>
+               </MSH.7>
+               <MSH.9>
+                  <MSH.9.1>MFN</MSH.9.1>
+                  <MSH.9.2>M04</MSH.9.2>
+                  <MSH.9.3>MFN_M04</MSH.9.3>
+               </MSH.9>
+               <MSH.10>EDOS_1.0_3.1-M04_GU</MSH.10>
+               <MSH.11>
+                  <MSH.11.1>D</MSH.11.1>
+               </MSH.11>
+               <MSH.12>
+                  <MSH.12.1>2.5.1</MSH.12.1>
+               </MSH.12>
+               <MSH.21>
+                  <MSH.21.1>EDOS_Common_Component</MSH.21.1>
+                  <MSH.21.2>EDOS Base Profile</MSH.21.2>
+                  <MSH.21.3>2.16.840.1.113883.9.67</MSH.21.3>
+                  <MSH.21.4>ISO</MSH.21.4>
+               </MSH.21>
+               <MSH.21>
+                  <MSH.21.1>EDOS_GU_Component</MSH.21.1>
+                  <MSH.21.2>EDOS GU Profile</MSH.21.2>
+                  <MSH.21.3>2.16.840.1.113883.9.68</MSH.21.3>
+                  <MSH.21.4>ISO</MSH.21.4>
+               </MSH.21>
+            </MSH>
+            <MFI>
+               <MFI.1>
+                  <MFI.1.1>CDM</MFI.1.1>
+                  <MFI.1.2>Charge description master file</MFI.1.2>
+                  <MFI.1.3>HL70175</MFI.1.3>
+                  <MFI.1.7>2.5.1</MFI.1.7>
+               </MFI.1>
+               <MFI.3>REP</MFI.3>
+               <MFI.6>NE</MFI.6>
+            </MFI>
+            <MFN_M04.MF_CDM>
+               <MFE>
+                  <MFE.1>MAD</MFE.1>
+                  <MFE.3>
+                     <MFE.3.1>20131219145310</MFE.3.1>
+                  </MFE.3>
+                  <MFE.4>
+                     <MFE.4.1>500</MFE.4.1>
+                     <MFE.4.2>Erythrocyte sedimentation rate</MFE.4.2>
+                     <MFE.4.3>99USL</MFE.4.3>
+                     <MFE.4.7>20130421</MFE.4.7>
+                  </MFE.4>
+                  <MFE.5>CWE</MFE.5>
+               </MFE>
+               <NTE>
+                  <NTE.1>1</NTE.1>
+                  <NTE.3>Some remark</NTE.3>
+               </NTE>
+               <NTE>
+                  <NTE.1>2</NTE.1>
+                  <NTE.3>Some other remark</NTE.3>
+               </NTE>
+               <CDM>
+                  <CDM.1>
+                     <CDM.1.1>500</CDM.1.1>
+                     <CDM.1.2>Erythrocyte sedimentation rate</CDM.1.2>
+                     <CDM.1.3>99USL</CDM.1.3>
+                     <CDM.1.7>20130421</CDM.1.7>
+                  </CDM.1>
+                  <CDM.3>N/A</CDM.3>
+                  <CDM.7>
+                     <CDM.7.1>85652</CDM.7.1>
+                     <CDM.7.2>Sedimentation rate, erythrocyte; automated</CDM.7.2>
+                     <CDM.7.3>C4</CDM.7.3>
+                     <CDM.7.7>19.2</CDM.7.7>
+                  </CDM.7>
+               </CDM>
+               <NTE>
+                  <NTE.1>1</NTE.1>
+                  <NTE.3>Some remark</NTE.3>
+               </NTE>
+               <NTE>
+                  <NTE.1>2</NTE.1>
+                  <NTE.3>Some other remark</NTE.3>
+               </NTE>
+            </MFN_M04.MF_CDM>
+            <MFN_M04.MF_CDM>
+               <MFE>
+                  <MFE.1>MAD</MFE.1>
+                  <MFE.3>
+                     <MFE.3.1>20131219145310</MFE.3.1>
+                  </MFE.3>
+                  <MFE.4>
+                     <MFE.4.1>800</MFE.4.1>
+                     <MFE.4.2>GHP</MFE.4.2>
+                     <MFE.4.3>99USL</MFE.4.3>
+                     <MFE.4.7>20130421</MFE.4.7>
+                  </MFE.4>
+                  <MFE.5>CWE</MFE.5>
+               </MFE>
+               <CDM>
+                  <CDM.1>
+                     <CDM.1.1>800</CDM.1.1>
+                     <CDM.1.2>GHP</CDM.1.2>
+                     <CDM.1.3>99USL</CDM.1.3>
+                     <CDM.1.7>20130421</CDM.1.7>
+                  </CDM.1>
+                  <CDM.3>N/A</CDM.3>
+                  <CDM.7>
+                     <CDM.7.1>84443</CDM.7.1>
+                     <CDM.7.2>Thyroid Stimulating Hormone (TSH)</CDM.7.2>
+                     <CDM.7.3>C4</CDM.7.3>
+                     <CDM.7.7>19.2</CDM.7.7>
+                  </CDM.7>
+                  <CDM.7>
+                     <CDM.7.1>81003</CDM.7.1>
+                     <CDM.7.2>URNLYSS, DP STCK OR TBLT RGNT FR BLRBN, GLCS, HMGLBN, KTNS, LKCYTS, NTRT, PH, PRTN, SPCFC GRVTY, URBLNGN, ANY NMBR OF THS CNSTTNTS ATMTD, WTHT MCRSCPY</CDM.7.2>
+                     <CDM.7.3>C4</CDM.7.3>
+                     <CDM.7.7>19.2</CDM.7.7>
+                  </CDM.7>
+                  <CDM.7>
+                     <CDM.7.1>80053</CDM.7.1>
+                     <CDM.7.2>Comprehensive metabolic panel This panel must include the following: Albumin (82040) Bilirubin, total (82247) Calcium, total (82310) Carbon dioxide (bicarbonate) (82374) Chloride (82435) Creatinine (82565) Glucose (82947) Phosphatase, alkaline (84075) Potassium (84132) Protein, total (84155) Sodium (84295) Transferase, alanine amino (ALT) (SGPT) (84460) Transferase, aspartate amino (AST) (SGOT) (84450) Urea nitrogen (BUN) (84520)</CDM.7.2>
+                     <CDM.7.3>C4</CDM.7.3>
+                     <CDM.7.7>19.2</CDM.7.7>
+                  </CDM.7>
+                  <CDM.7>
+                     <CDM.7.1>85025</CDM.7.1>
+                     <CDM.7.2>blood count; complete (cbc), automated (hgb, hct, rbc, wbc and platelet count) and automated differential wbc count</CDM.7.2>
+                     <CDM.7.3>C4</CDM.7.3>
+                     <CDM.7.7>19.2</CDM.7.7>
+                  </CDM.7>
+                  <CDM.7>
+                     <CDM.7.1>85007</CDM.7.1>
+                     <CDM.7.2>BLOOD COUNT; BLOOD SMEAR, MICROSCOPIC EXAMINATION WITH MANUAL DIFFERENTIAL WBC COUNT</CDM.7.2>
+                     <CDM.7.3>C4</CDM.7.3>
+                     <CDM.7.7>19.2</CDM.7.7>
+                  </CDM.7>
+                  <CDM.7>
+                     <CDM.7.1>85060</CDM.7.1>
+                     <CDM.7.2>BLOOD SMEAR, PERIPHERAL, INTERPRETATION BY PHYSICIAN WITH WRITTEN REPORT</CDM.7.2>
+                     <CDM.7.3>C4</CDM.7.3>
+                     <CDM.7.7>19.2</CDM.7.7>
+                  </CDM.7>
+               </CDM>
+            </MFN_M04.MF_CDM>
+            <MFN_M04.MF_CDM>
+               <MFE>
+                  <MFE.1>MAD</MFE.1>
+                  <MFE.3>
+                     <MFE.3.1>20131219145310</MFE.3.1>
+                  </MFE.3>
+                  <MFE.4>
+                     <MFE.4.1>200</MFE.4.1>
+                     <MFE.4.2>CBC_diff</MFE.4.2>
+                     <MFE.4.3>99USL</MFE.4.3>
+                     <MFE.4.7>20130421</MFE.4.7>
+                  </MFE.4>
+                  <MFE.5>CWE</MFE.5>
+               </MFE>
+               <CDM>
+                  <CDM.1>
+                     <CDM.1.1>200</CDM.1.1>
+                     <CDM.1.2>CBC_diff</CDM.1.2>
+                     <CDM.1.3>99USL</CDM.1.3>
+                     <CDM.1.7>20130421</CDM.1.7>
+                  </CDM.1>
+                  <CDM.3>N/A</CDM.3>
+                  <CDM.7>
+                     <CDM.7.1>85025</CDM.7.1>
+                     <CDM.7.2>blood count; complete (cbc), automated (hgb, hct, rbc, wbc and platelet count) and automated differential wbc count</CDM.7.2>
+                     <CDM.7.3>C4</CDM.7.3>
+                     <CDM.7.7>19.2</CDM.7.7>
+                  </CDM.7>
+                  <CDM.7>
+                     <CDM.7.1>85007</CDM.7.1>
+                     <CDM.7.2>BLOOD COUNT; BLOOD SMEAR, MICROSCOPIC EXAMINATION WITH MANUAL DIFFERENTIAL WBC COUNT</CDM.7.2>
+                     <CDM.7.3>C4</CDM.7.3>
+                     <CDM.7.7>19.2</CDM.7.7>
+                  </CDM.7>
+                  <CDM.7>
+                     <CDM.7.1>85060</CDM.7.1>
+                     <CDM.7.2>BLOOD SMEAR, PERIPHERAL, INTERPRETATION BY PHYSICIAN WITH WRITTEN REPORT</CDM.7.2>
+                     <CDM.7.3>C4</CDM.7.3>
+                     <CDM.7.7>19.2</CDM.7.7>
+                  </CDM.7>
+               </CDM>
+               <NTE>
+                  <NTE.1>1</NTE.1>
+                  <NTE.3>CPT Code Information: 85007-"Blood count; blood smear, microscopic examination with manual differential WBC count" and 85060-"Blood smear, peripheral, interpretation by physician with written report" are billed if appropriate depending on results of CBC.</NTE.3>
+               </NTE>
+            </MFN_M04.MF_CDM>
+            <MFN_M04.MF_CDM>
+               <MFE>
+                  <MFE.1>MAD</MFE.1>
+                  <MFE.3>
+                     <MFE.3.1>20131219145310</MFE.3.1>
+                  </MFE.3>
+                  <MFE.4>
+                     <MFE.4.1>600</MFE.4.1>
+                     <MFE.4.2>Prostate Biopsy Pathology Report</MFE.4.2>
+                     <MFE.4.3>99USL</MFE.4.3>
+                     <MFE.4.7>20130421</MFE.4.7>
+                  </MFE.4>
+                  <MFE.5>CWE</MFE.5>
+               </MFE>
+               <CDM>
+                  <CDM.1>
+                     <CDM.1.1>600</CDM.1.1>
+                     <CDM.1.2>Prostate Biopsy Pathology Report</CDM.1.2>
+                     <CDM.1.3>99USL</CDM.1.3>
+                     <CDM.1.7>20130421</CDM.1.7>
+                  </CDM.1>
+                  <CDM.3>N/A</CDM.3>
+                  <CDM.7>
+                     <CDM.7.1>88305</CDM.7.1>
+                     <CDM.7.2>Tissue exam by Pathologist</CDM.7.2>
+                     <CDM.7.3>C4</CDM.7.3>
+                     <CDM.7.7>19.2</CDM.7.7>
+                  </CDM.7>
+               </CDM>
+               <NTE>
+                  <NTE.1>1</NTE.1>
+                  <NTE.3>88305-"Tissue exam by Pathologist" will be billed for each specimen submitted.</NTE.3>
+               </NTE>
+            </MFN_M04.MF_CDM>
+         </MFN_M04>
+      </Message>
+      <Message id="MFN_M18">
+         <MFN_M18>
+            <MSH>
+               <MSH.1>|</MSH.1>
+               <MSH.2>^~\&amp;#</MSH.2>
+               <MSH.3>
+                  <MSH.3.2>2.16.840.1.113883.3.72.5.20</MSH.3.2>
+                  <MSH.3.3>ISO</MSH.3.3>
+               </MSH.3>
+               <MSH.4>
+                  <MSH.4.2>2.16.840.1.113883.3.72.5.21</MSH.4.2>
+                  <MSH.4.3>ISO</MSH.4.3>
+               </MSH.4>
+               <MSH.6>
+                  <MSH.6.2>2.16.840.1.113883.3.72.5.23</MSH.6.2>
+                  <MSH.6.3>ISO</MSH.6.3>
+               </MSH.6>
+               <MSH.7>
+                  <MSH.7.1>20130421113601-0700</MSH.7.1>
+               </MSH.7>
+               <MSH.9>
+                  <MSH.9.1>MFN</MSH.9.1>
+                  <MSH.9.2>M18</MSH.9.2>
+                  <MSH.9.3>MFN_M18</MSH.9.3>
+               </MSH.9>
+               <MSH.10>EDOS_1.0_4.1-M18_GU</MSH.10>
+               <MSH.11>
+                  <MSH.11.1>D</MSH.11.1>
+               </MSH.11>
+               <MSH.12>
+                  <MSH.12.1>2.5.1</MSH.12.1>
+               </MSH.12>
+               <MSH.21>
+                  <MSH.21.1>EDOS_Common_Component</MSH.21.1>
+                  <MSH.21.2>EDOS Base Profile</MSH.21.2>
+                  <MSH.21.3>2.16.840.1.113883.9.67</MSH.21.3>
+                  <MSH.21.4>ISO</MSH.21.4>
+               </MSH.21>
+               <MSH.21>
+                  <MSH.21.1>EDOS_GU_Component</MSH.21.1>
+                  <MSH.21.2>EDOS GU Profile</MSH.21.2>
+                  <MSH.21.3>2.16.840.1.113883.9.68</MSH.21.3>
+                  <MSH.21.4>ISO</MSH.21.4>
+               </MSH.21>
+            </MSH>
+            <MFI>
+               <MFI.1>
+                  <MFI.1.1>MACP</MFI.1.1>
+                  <MFI.1.2>Medicare Approved Coverage Process</MFI.1.2>
+                  <MFI.1.3>HL70175</MFI.1.3>
+                  <MFI.1.7>2.8.2</MFI.1.7>
+               </MFI.1>
+               <MFI.3>REP</MFI.3>
+               <MFI.6>NE</MFI.6>
+            </MFI>
+            <MFN_M18.MF_PAYER>
+               <MFE>
+                  <MFE.1>MAD</MFE.1>
+                  <MFE.3>
+                     <MFE.3.1>20131219145310</MFE.3.1>
+                  </MFE.3>
+                  <MFE.4>
+                     <MFE.4.1>500</MFE.4.1>
+                     <MFE.4.2>Erythrocyte sedimentation rate</MFE.4.2>
+                     <MFE.4.3>99USL</MFE.4.3>
+                     <MFE.4.7>20130421</MFE.4.7>
+                  </MFE.4>
+                  <MFE.5>CWE</MFE.5>
+               </MFE>
+               <MFN_M18.MF_PAYER.PAYER_MF_Entry>
+                  <PM1>
+                     <PM1.1>
+                        <PM1.1.2>Healthplan2</PM1.1.2>
+                     </PM1.1>
+                     <PM1.2>
+                        <PM1.2.1>SMCA2</PM1.2.1>
+                        <PM1.2.4>
+                           <PM1.2.4.2>2.16.840.1.113883.3.72.5.22</PM1.2.4.2>
+                           <PM1.2.4.3>ISO</PM1.2.4.3>
+                        </PM1.2.4>
+                        <PM1.2.5>XX</PM1.2.5>
+                     </PM1.2>
+                     <PM1.2>
+                        <PM1.2.1>MR002</PM1.2.1>
+                        <PM1.2.4>
+                           <PM1.2.4.2>2.16.840.1.113883.3.249</PM1.2.4.2>
+                           <PM1.2.4.3>ISO</PM1.2.4.3>
+                        </PM1.2.4>
+                        <PM1.2.5>XX</PM1.2.5>
+                     </PM1.2>
+                  </PM1>
+                  <MFN_M18.MF_PAYER.PAYER_MF_Entry.PAYER_MF_Coverage>
+                     <MCP>
+                        <MCP.1>1</MCP.1>
+                        <MCP.2>
+                           <MCP.2.1>500</MCP.2.1>
+                           <MCP.2.2>Erythrocyte sedimentation rate</MCP.2.2>
+                           <MCP.2.3>99USL</MCP.2.3>
+                           <MCP.2.7>20130421</MCP.2.7>
+                        </MCP.2>
+                        <MCP.3>
+                           <MCP.3.1>25</MCP.3.1>
+                           <MCP.3.2>USD</MCP.3.2>
+                        </MCP.3>
+                        <MCP.4>
+                           <MCP.4.1>30</MCP.4.1>
+                           <MCP.4.2>USD</MCP.4.2>
+                        </MCP.4>
+                        <MCP.5>Some reason</MCP.5>
+                     </MCP>
+                  </MFN_M18.MF_PAYER.PAYER_MF_Entry.PAYER_MF_Coverage>
+               </MFN_M18.MF_PAYER.PAYER_MF_Entry>
+            </MFN_M18.MF_PAYER>
+            <MFN_M18.MF_PAYER>
+               <MFE>
+                  <MFE.1>MAD</MFE.1>
+                  <MFE.3>
+                     <MFE.3.1>20131219145310</MFE.3.1>
+                  </MFE.3>
+                  <MFE.4>
+                     <MFE.4.1>600</MFE.4.1>
+                     <MFE.4.2>Prostate Biopsy Pathology Report</MFE.4.2>
+                     <MFE.4.3>99USL</MFE.4.3>
+                     <MFE.4.7>20130421</MFE.4.7>
+                  </MFE.4>
+                  <MFE.5>CWE</MFE.5>
+               </MFE>
+               <MFN_M18.MF_PAYER.PAYER_MF_Entry>
+                  <PM1>
+                     <PM1.1>
+                        <PM1.1.2>Healthplan2</PM1.1.2>
+                     </PM1.1>
+                     <PM1.2>
+                        <PM1.2.1>SMCA2</PM1.2.1>
+                        <PM1.2.4>
+                           <PM1.2.4.2>2.16.840.1.113883.3.72.5.22</PM1.2.4.2>
+                           <PM1.2.4.3>ISO</PM1.2.4.3>
+                        </PM1.2.4>
+                        <PM1.2.5>XX</PM1.2.5>
+                     </PM1.2>
+                  </PM1>
+                  <MFN_M18.MF_PAYER.PAYER_MF_Entry.PAYER_MF_Coverage>
+                     <MCP>
+                        <MCP.1>1</MCP.1>
+                        <MCP.2>
+                           <MCP.2.1>600</MCP.2.1>
+                           <MCP.2.2>Prostate Biopsy Pathology Report</MCP.2.2>
+                           <MCP.2.3>99USL</MCP.2.3>
+                           <MCP.2.7>20130421</MCP.2.7>
+                        </MCP.2>
+                        <MCP.3>
+                           <MCP.3.1>25</MCP.3.1>
+                           <MCP.3.2>USD</MCP.3.2>
+                        </MCP.3>
+                        <MCP.4>
+                           <MCP.4.1>125</MCP.4.1>
+                           <MCP.4.2>USD</MCP.4.2>
+                        </MCP.4>
+                        <MCP.5>Depending on the number of biopsies submitted - max covered are 25</MCP.5>
+                     </MCP>
+                  </MFN_M18.MF_PAYER.PAYER_MF_Entry.PAYER_MF_Coverage>
+               </MFN_M18.MF_PAYER.PAYER_MF_Entry>
+            </MFN_M18.MF_PAYER>
+            <MFN_M18.MF_PAYER>
+               <MFE>
+                  <MFE.1>MAD</MFE.1>
+                  <MFE.3>
+                     <MFE.3.1>20131219145310</MFE.3.1>
+                  </MFE.3>
+                  <MFE.4>
+                     <MFE.4.1>1300</MFE.4.1>
+                     <MFE.4.2>Arbovirus IgG and IgM Panel (DNG, WNV)  in Serum</MFE.4.2>
+                     <MFE.4.3>99USL</MFE.4.3>
+                     <MFE.4.7>20130421</MFE.4.7>
+                  </MFE.4>
+                  <MFE.5>CWE</MFE.5>
+               </MFE>
+               <MFN_M18.MF_PAYER.PAYER_MF_Entry>
+                  <PM1>
+                     <PM1.1>
+                        <PM1.1.2>Healthplan2</PM1.1.2>
+                     </PM1.1>
+                     <PM1.2>
+                        <PM1.2.1>SMCA2</PM1.2.1>
+                        <PM1.2.4>
+                           <PM1.2.4.2>2.16.840.1.113883.3.72.5.22</PM1.2.4.2>
+                           <PM1.2.4.3>ISO</PM1.2.4.3>
+                        </PM1.2.4>
+                        <PM1.2.5>XX</PM1.2.5>
+                     </PM1.2>
+                  </PM1>
+                  <MFN_M18.MF_PAYER.PAYER_MF_Entry.PAYER_MF_Coverage>
+                     <MCP>
+                        <MCP.1>1</MCP.1>
+                        <MCP.2>
+                           <MCP.2.1>1300</MCP.2.1>
+                           <MCP.2.2>Arbovirus IgG and IgM Panel (DNG, WNV)  in Serum</MCP.2.2>
+                           <MCP.2.3>99USL</MCP.2.3>
+                           <MCP.2.7>20130421</MCP.2.7>
+                        </MCP.2>
+                     </MCP>
+                  </MFN_M18.MF_PAYER.PAYER_MF_Entry.PAYER_MF_Coverage>
+               </MFN_M18.MF_PAYER.PAYER_MF_Entry>
+            </MFN_M18.MF_PAYER>
+            <MFN_M18.MF_PAYER>
+               <MFE>
+                  <MFE.1>MAD</MFE.1>
+                  <MFE.3>
+                     <MFE.3.1>20131219145310</MFE.3.1>
+                  </MFE.3>
+                  <MFE.4>
+                     <MFE.4.1>1305</MFE.4.1>
+                     <MFE.4.2>SLE IgG Titer Serum</MFE.4.2>
+                     <MFE.4.3>99USL</MFE.4.3>
+                     <MFE.4.7>20130421</MFE.4.7>
+                  </MFE.4>
+                  <MFE.5>CWE</MFE.5>
+               </MFE>
+               <MFN_M18.MF_PAYER.PAYER_MF_Entry>
+                  <PM1>
+                     <PM1.1>
+                        <PM1.1.2>Healthplan2</PM1.1.2>
+                     </PM1.1>
+                     <PM1.2>
+                        <PM1.2.1>SMCA2</PM1.2.1>
+                        <PM1.2.4>
+                           <PM1.2.4.2>2.16.840.1.113883.3.72.5.22</PM1.2.4.2>
+                           <PM1.2.4.3>ISO</PM1.2.4.3>
+                        </PM1.2.4>
+                        <PM1.2.5>XX</PM1.2.5>
+                     </PM1.2>
+                  </PM1>
+                  <MFN_M18.MF_PAYER.PAYER_MF_Entry.PAYER_MF_Coverage>
+                     <MCP>
+                        <MCP.1>1</MCP.1>
+                        <MCP.2>
+                           <MCP.2.1>1305</MCP.2.1>
+                           <MCP.2.2>SLE IgG Titer Serum</MCP.2.2>
+                           <MCP.2.3>99USL</MCP.2.3>
+                           <MCP.2.7>20130421</MCP.2.7>
+                        </MCP.2>
+                     </MCP>
+                  </MFN_M18.MF_PAYER.PAYER_MF_Entry.PAYER_MF_Coverage>
+               </MFN_M18.MF_PAYER.PAYER_MF_Entry>
+            </MFN_M18.MF_PAYER>
+         </MFN_M18>
+      </Message>
+      <Message id="MFN_M18">
+         <MFN_M18>
+            <MSH>
+               <MSH.1>|</MSH.1>
+               <MSH.2>^~\&amp;#</MSH.2>
+               <MSH.3>
+                  <MSH.3.2>2.16.840.1.113883.3.72.5.20</MSH.3.2>
+                  <MSH.3.3>ISO</MSH.3.3>
+               </MSH.3>
+               <MSH.4>
+                  <MSH.4.2>2.16.840.1.113883.3.72.5.21</MSH.4.2>
+                  <MSH.4.3>ISO</MSH.4.3>
+               </MSH.4>
+               <MSH.6>
+                  <MSH.6.2>2.16.840.1.113883.3.72.5.23</MSH.6.2>
+                  <MSH.6.3>ISO</MSH.6.3>
+               </MSH.6>
+               <MSH.7>
+                  <MSH.7.1>20130421113601-0700</MSH.7.1>
+               </MSH.7>
+               <MSH.9>
+                  <MSH.9.1>MFN</MSH.9.1>
+                  <MSH.9.2>M18</MSH.9.2>
+                  <MSH.9.3>MFN_M18</MSH.9.3>
+               </MSH.9>
+               <MSH.10>EDOS_1.0_4.1-M18_GU</MSH.10>
+               <MSH.11>
+                  <MSH.11.1>D</MSH.11.1>
+               </MSH.11>
+               <MSH.12>
+                  <MSH.12.1>2.5.1</MSH.12.1>
+               </MSH.12>
+               <MSH.21>
+                  <MSH.21.1>EDOS_Common_Component</MSH.21.1>
+                  <MSH.21.2>EDOS Base Profile</MSH.21.2>
+                  <MSH.21.3>2.16.840.1.113883.9.67</MSH.21.3>
+                  <MSH.21.4>ISO</MSH.21.4>
+               </MSH.21>
+               <MSH.21>
+                  <MSH.21.1>EDOS_GU_Component</MSH.21.1>
+                  <MSH.21.2>EDOS GU Profile</MSH.21.2>
+                  <MSH.21.3>2.16.840.1.113883.9.68</MSH.21.3>
+                  <MSH.21.4>ISO</MSH.21.4>
+               </MSH.21>
+            </MSH>
+            <MFI>
+               <MFI.1>
+                  <MFI.1.1>MLCP</MFI.1.1>
+                  <MFI.1.2>Medicare Limited Coverage Process</MFI.1.2>
+                  <MFI.1.3>HL70175</MFI.1.3>
+                  <MFI.1.7>2.8.2</MFI.1.7>
+               </MFI.1>
+               <MFI.3>REP</MFI.3>
+               <MFI.6>NE</MFI.6>
+            </MFI>
+         </MFN_M18>
+      </Message>
+   </Messages>
+</TestCase>
