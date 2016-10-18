@@ -16,8 +16,8 @@
 		</snapshotRepository>
 	</distributionManagement>
 	<scm>
-		<connection>scm:svn:https://svn.code.sf.net/p/mu-nist/code/trunk/resource-bundle/eDOS</connection>
-		<developerConnection>scm:svn:https://svn.code.sf.net/p/mu-nist/code/trunk/resource-bundle/eDOS</developerConnection>
+		<connection>scm:git:https://github.com/usnistgov/hit-mu-tools-resource-bundles.git</connection>
+		<developerConnection>scm:git:https://github.com/usnistgov/hit-mu-tools-resource-bundles.git</developerConnection>
 	</scm>
 	<build>
 		<!-- we want to filter the maven.properties files to be able to have access to the project version -->
@@ -207,7 +207,7 @@
 		<dependency>
 			<groupId>gov.nist.healthcare.mu</groupId>
 			<artifactId>resource-bundle-generator</artifactId>
-			<version>0.0.3-SNAPSHOT</version>
+			<version>0.0.3</version>
 			<optional>true</optional>
 		</dependency>
 		<dependency>
