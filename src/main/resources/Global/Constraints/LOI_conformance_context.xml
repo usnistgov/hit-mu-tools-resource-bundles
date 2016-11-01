@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ConformanceContext xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" UUID="LOI_default" xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/Jungyubw/NIST_healthcare_hl7_v2_profile_schema/master/Schema/NIST%20Validation%20Schema/ConformanceContext.xsd">
-	<MetaData Name="LOI conformance context" OrgName="NIST" Version="1.0" Date="09232016"/>
+	<MetaData Name="LOI conformance context" OrgName="NIST" Version="1.0" Date="10062016"/>
 	<Predicates>
 		<Datatype>
 			<!-- <ByID ID="CWE_GEN">
@@ -291,7 +291,7 @@
 			</ByID>
 			<!-- SN -->
 			<ByID ID="SN_LOI">
-				<!-- SN_LOI3 -->
+				<!-- SN_LOI.3 -->
 				<Predicate Target="3[1]" TrueUsage="RE" FalseUsage="O" ID="[SN_LOI]3[1]">
 					<Description>If SN.2 (Num1) and SN.4 (Num2) are valued.</Description>
 					<Condition>
@@ -1306,7 +1306,7 @@
 					</Condition>
 				</Predicate>
 				<!-- NK1-32 -->
-				<Predicate Target="30[1]" TrueUsage="RE" FalseUsage="X" ID="[NK1_LOI_GU_PH]30[1]">
+				<Predicate Target="32[1]" TrueUsage="RE" FalseUsage="X" ID="[NK1_LOI_GU_PH]32[1]">
 					<Description>If NK1-13 (Organization Name - NK1) is valued.</Description>
 					<Condition>
 						<Presence Path="13[1]"/>
@@ -1350,7 +1350,7 @@
 					</Condition>
 				</Predicate>
 				<!-- NK1-32 -->
-				<Predicate Target="30[1]" TrueUsage="RE" FalseUsage="X" ID="[NK1_LOI_NG_PH]30[1]">
+				<Predicate Target="32[1]" TrueUsage="RE" FalseUsage="X" ID="[NK1_LOI_NG_PH]32[1]">
 					<Description>If NK1-13 (Organization Name - NK1) is valued.</Description>
 					<Condition>
 						<Presence Path="13[1]"/>
@@ -1513,8 +1513,14 @@
 					<Description>If SPM-4.3 (Specimen Type.Name of Coding System) or SPM-4.6 (Specimen Type.Name of Alternate Coding System) is valued 'SCT'</Description>
 					<Condition>
 						<OR>
-							<PlainText Path="4[1].3[1]" Text="SCT" IgnoreCase="false"/>
-							<PlainText Path="4[1].6[1]" Text="SCT" IgnoreCase="false"/>
+							<AND>
+								<Presence Path="4[1].3[1]"/>
+								<PlainText Path="4[1].3[1]" Text="SCT" IgnoreCase="false"/>
+							</AND>
+							<AND>
+								<Presence Path="4[1].6[1]"/>
+								<PlainText Path="4[1].6[1]" Text="SCT" IgnoreCase="false"/>
+							</AND>
 						</OR>
 					</Condition>
 				</Predicate>
@@ -1523,8 +1529,14 @@
 					<Description>If SPM-8.3 (Name of Coding System ) or SPM-8.6 (Alternate Coding System ID) is valued 'SCT'</Description>
 					<Condition>
 						<OR>
-							<PlainText Path="8[1].3[1]" Text="SCT" IgnoreCase="false"/>
-							<PlainText Path="8[1].6[1]" Text="SCT" IgnoreCase="false"/>
+							<AND>
+								<Presence Path="8[1].3[1]"/>
+								<PlainText Path="8[1].3[1]" Text="SCT" IgnoreCase="false"/>
+							</AND>
+							<AND>
+								<Presence Path="8[1].6[1]"/>
+								<PlainText Path="8[1].6[1]" Text="SCT" IgnoreCase="false"/>
+							</AND>
 						</OR>
 					</Condition>
 				</Predicate>
@@ -1535,8 +1547,14 @@
 					<Description>If SPM-4.3 (Specimen Type.Name of Coding System) or SPM-4.6 (Specimen Type.Name of Alternate Coding System) is valued 'SCT'</Description>
 					<Condition>
 						<OR>
-							<PlainText Path="4[1].3[1]" Text="SCT" IgnoreCase="false"/>
-							<PlainText Path="4[1].6[1]" Text="SCT" IgnoreCase="false"/>
+							<AND>
+								<Presence Path="4[1].3[1]"/>
+								<PlainText Path="4[1].3[1]" Text="SCT" IgnoreCase="false"/>
+							</AND>
+							<AND>
+								<Presence Path="4[1].6[1]"/>
+								<PlainText Path="4[1].6[1]" Text="SCT" IgnoreCase="false"/>
+							</AND>
 						</OR>
 					</Condition>
 				</Predicate>
@@ -1545,8 +1563,14 @@
 					<Description>If SPM-8.3 (Name of Coding System ) or SPM-8.6 (Alternate Coding System ID) is valued 'SCT'</Description>
 					<Condition>
 						<OR>
-							<PlainText Path="8[1].3[1]" Text="SCT" IgnoreCase="false"/>
-							<PlainText Path="8[1].6[1]" Text="SCT" IgnoreCase="false"/>
+							<AND>
+								<Presence Path="8[1].3[1]"/>
+								<PlainText Path="8[1].3[1]" Text="SCT" IgnoreCase="false"/>
+							</AND>
+							<AND>
+								<Presence Path="8[1].6[1]"/>
+								<PlainText Path="8[1].6[1]" Text="SCT" IgnoreCase="false"/>
+							</AND>
 						</OR>
 					</Condition>
 				</Predicate>
@@ -1599,61 +1623,61 @@
 				</Predicate>
 				<!-- DG1 -->
 				<Predicate Target="3[1].5[*]" TrueUsage="X" FalseUsage="O" ID="[ORDER_LOI_CANCEL]3[1].5[*]">
-					<Description>If ORC-2 (Order Control Code) is valued 'CA' or 'OC'.</Description>
+					<Description>If ORC-1 (Order Control Code) is valued 'CA' or 'OC'.</Description>
 					<Condition>
 						<AND>
-							<Presence Path="1[1].2[1]"/>
-							<StringList Path="1[1].2[1]" CSV="CA,OC"/>
+							<Presence Path="1[1].1[1]"/>
+							<StringList Path="1[1].1[1]" CSV="CA,OC"/>
 						</AND>
 					</Condition>
 				</Predicate>
 				<!-- OBSERVATION -->
 				<Predicate Target="3[1].6[*]" TrueUsage="X" FalseUsage="O" ID="[ORDER_LOI_CANCEL]3[1].6[*]">
-					<Description>If ORC-2 (Order Control Code) is valued 'CA' or 'OC'.</Description>
+					<Description>If ORC-1 (Order Control Code) is valued 'CA' or 'OC'.</Description>
 					<Condition>
 						<AND>
-							<Presence Path="1[1].2[1]"/>
-							<StringList Path="1[1].2[1]" CSV="CA,OC"/>
+							<Presence Path="1[1].1[1]"/>
+							<StringList Path="1[1].1[1]" CSV="CA,OC"/>
 						</AND>
 					</Condition>
 				</Predicate>
 				<!-- SPECIMEN -->
 				<Predicate Target="3[1].7[*]" TrueUsage="X" FalseUsage="O" ID="[ORDER_LOI_CANCEL]3[1].7[*]">
-					<Description>If ORC-2 (Order Control Code) is valued 'CA' or 'OC'.</Description>
+					<Description>If ORC-1 (Order Control Code) is valued 'CA' or 'OC'.</Description>
 					<Condition>
 						<AND>
-							<Presence Path="1[1].2[1]"/>
-							<StringList Path="1[1].2[1]" CSV="CA,OC"/>
+							<Presence Path="1[1].1[1]"/>
+							<StringList Path="1[1].1[1]" CSV="CA,OC"/>
 						</AND>
 					</Condition>
 				</Predicate>
 				<!-- PRIOR_RESULT -->
 				<Predicate Target="3[1].8[*]" TrueUsage="X" FalseUsage="O" ID="[ORDER_LOI_CANCEL]3[1].8[*]">
-					<Description>If ORC-2 (Order Control Code) is valued 'CA' or 'OC'.</Description>
+					<Description>If ORC-1 (Order Control Code) is valued 'CA' or 'OC'.</Description>
 					<Condition>
 						<AND>
-							<Presence Path="1[1].2[1]"/>
-							<StringList Path="1[1].2[1]" CSV="CA,OC"/>
+							<Presence Path="1[1].1[1]"/>
+							<StringList Path="1[1].1[1]" CSV="CA,OC"/>
 						</AND>
 					</Condition>
 				</Predicate>
 				<!-- FT1 -->
 				<Predicate Target="4[*]" TrueUsage="X" FalseUsage="O" ID="[ORDER_LOI_CANCEL]4[*]">
-					<Description>If ORC-2 (Order Control Code) is valued 'CA' or 'OC'.</Description>
+					<Description>If ORC-1 (Order Control Code) is valued 'CA' or 'OC'.</Description>
 					<Condition>
 						<AND>
-							<Presence Path="1[1].2[1]"/>
-							<StringList Path="1[1].2[1]" CSV="CA,OC"/>
+							<Presence Path="1[1].1[1]"/>
+							<StringList Path="1[1].1[1]" CSV="CA,OC"/>
 						</AND>
 					</Condition>
 				</Predicate>
 				<!-- BLG -->
 				<Predicate Target="6[*]" TrueUsage="X" FalseUsage="O" ID="[ORDER_LOI_CANCEL]6[*]">
-					<Description>If ORC-2 (Order Control Code) is valued 'CA' or 'OC'.</Description>
+					<Description>If ORC-1 (Order Control Code) is valued 'CA' or 'OC'.</Description>
 					<Condition>
 						<AND>
-							<Presence Path="1[1].2[1]"/>
-							<StringList Path="1[1].2[1]" CSV="CA,OC"/>
+							<Presence Path="1[1].1[1]"/>
+							<StringList Path="1[1].1[1]" CSV="CA,OC"/>
 						</AND>
 					</Condition>
 				</Predicate>
@@ -1673,9 +1697,39 @@
 					</Condition>
 				</Predicate>
 			</ByName>
+			<!--  <ByName Name="ORL_O22">
+				<Predicate Target="3[1]" TrueUsage="R" FalseUsage="O">
+					<Description>If ORC-1 (Order Control) is valued 'UC' or 'UA'.</Description>
+					<Condition/>
+				</Predicate>
+			</ByName> -->
 			<ByID ID="OML_O21:LOI_GU_FI">
 				<!-- INSURANCE -->
-				<Predicate Target="5[1]" TrueUsage="R" FalseUsage="O" ID="[OML_O21:LOI_GU_FI]5[1]">
+				<Predicate Target="4[1].6[1]" TrueUsage="R" FalseUsage="O" ID="[OML_O21:LOI_GU_FI]4[1].6[1]">
+					<Description>If PV1-20.1 (Financial Class.Financial Class Code) is valued 'T' (third party).</Description>
+					<Condition>
+						<AND>
+							<Presence Path="4[1].5[1].1[1].20[1].1[1]"/>
+							<PlainText Path="4[1].5[1].1[1].20[1].1[1]" Text="T" IgnoreCase="true"/>
+						</AND>
+					</Condition>
+				</Predicate>
+			</ByID>
+			<ByID ID="OML_O21:LOI_GU_PRN_FI">
+				<!-- INSURANCE -->
+				<Predicate Target="4[1].6[1]" TrueUsage="R" FalseUsage="O" ID="[OML_O21:LOI_GU_PRN_FI]4[1].6[1]">
+					<Description>If PV1-20.1 (Financial Class.Financial Class Code) is valued 'T' (third party).</Description>
+					<Condition>
+						<AND>
+							<Presence Path="4[1].5[1].1[1].20[1].1[1]"/>
+							<PlainText Path="4[1].5[1].1[1].20[1].1[1]" Text="T" IgnoreCase="true"/>
+						</AND>
+					</Condition>
+				</Predicate>
+			</ByID>
+			<ByID ID="OML_O21:LOI_GU_PRU_FI">
+				<!-- INSURANCE -->
+				<Predicate Target="4[1].6[1]" TrueUsage="R" FalseUsage="O" ID="[OML_O21:LOI_GU_PRU_FI]4[1].6[1]">
 					<Description>If PV1-20.1 (Financial Class.Financial Class Code) is valued 'T' (third party).</Description>
 					<Condition>
 						<AND>
@@ -1687,7 +1741,31 @@
 			</ByID>
 			<ByID ID="OML_O21:LOI_NG_FI">
 				<!-- INSURANCE -->
-				<Predicate Target="5[1]" TrueUsage="R" FalseUsage="O" ID="[OML_O21:LOI_NG_FI]5[1]">
+				<Predicate Target="4[1].6[1]" TrueUsage="R" FalseUsage="O" ID="[OML_O21:LOI_NG_FI]4[1].6[1]">
+					<Description>If PV1-20.1 (Financial Class.Financial Class Code) is valued 'T' (third party).</Description>
+					<Condition>
+						<AND>
+							<Presence Path="4[1].5[1].1[1].20[1].1[1]"/>
+							<PlainText Path="4[1].5[1].1[1].20[1].1[1]" Text="T" IgnoreCase="true"/>
+						</AND>
+					</Condition>
+				</Predicate>
+			</ByID>
+			<ByID ID="OML_O21:LOI_NG_PRU_FI">
+				<!-- INSURANCE -->
+				<Predicate Target="4[1].6[1]" TrueUsage="R" FalseUsage="O" ID="[OML_O21:LOI_NG_PRU_FI]4[1].6[1]">
+					<Description>If PV1-20.1 (Financial Class.Financial Class Code) is valued 'T' (third party).</Description>
+					<Condition>
+						<AND>
+							<Presence Path="4[1].5[1].1[1].20[1].1[1]"/>
+							<PlainText Path="4[1].5[1].1[1].20[1].1[1]" Text="T" IgnoreCase="true"/>
+						</AND>
+					</Condition>
+				</Predicate>
+			</ByID>
+			<ByID ID="OML_O21:LOI_NG_PRN_FI">
+				<!-- INSURANCE -->
+				<Predicate Target="4[1].6[1]" TrueUsage="R" FalseUsage="O" ID="[OML_O21:LOI_NG_PRN_FI]4[1].6[1]">
 					<Description>If PV1-20.1 (Financial Class.Financial Class Code) is valued 'T' (third party).</Description>
 					<Condition>
 						<AND>
@@ -1998,33 +2076,33 @@
 	LOI-36: If PV1-20.1 (Financial Class.Financial Class Code) is 'T' (Third Party) or 'P' (Patient) then PID-11 (Patient Address) SHALL include an address with type 'H'.
 	LOI-37: If PV1-20.1 (Financial Class.Financial Class Code) is valued 'T' (Third Party) or 'P' (Patient), PID-5.7 (Name Type Code) SHALL be valued 'L'.
 
-	LOI-38: NK1-1 (Set ID – NK1) SHALL be valued sequentially with the starting value '1'.
+	LOI-38: NK1-1 (Set ID - NK1) SHALL be valued sequentially with the starting value '1'.
 	
-	LOI-39: PV1-1 (Set ID – PV1) SHALL be valued with the constant value '1'.
+	LOI-39: PV1-1 (Set ID - PV1) SHALL be valued with the constant value '1'.
 
-	LOI-78: IN1-1 (Set ID – IN1) SHALL be valued with the constant value '1'.
+	LOI-78: IN1-1 (Set ID - IN1) SHALL be valued with the constant value '1'.
 	
-	LOI-40: GT1-1 (Set ID – GT1) SHALL be valued with the constant value '1'.
+	LOI-40: GT1-1 (Set ID - GT1) SHALL be valued with the constant value '1'.
 	LOI-41: If GT1-3 (Guarantor Name) is ' "" ' then GT1-21 (Guarantor Organizational Name) SHALL be valued with any other string except ' "" '.
 	LOI-42: If GT1-21 (Guarantor Organization Name) is valued ' "" ' then GT1-3 (Guarantor Name) SHALL be valued with any other string except ' "" '.
 
 	LOI-44: The value of ORC-2 (Placer Order Number) SHALL be identical to the value of OBR-2 (Placer Order Number) within the same Order Group.
 	LOI-45: ORC-3 (Filler Order Number) SHALL be identical to the value of OBR-3 (Filler Order Number) within the same Order Group.
 	LOI-46: The value of ORC-12 (Ordering Provider) SHALL be identical to the value of OBR-16 (Ordering Provider) within the same Order Group.
-	LOI-51: The value of OBR-1 (Set ID – OBR) SHALL start at '1' and be incremented sequentially across the Order groups.
+	LOI-51: The value of OBR-1 (Set ID - OBR) SHALL start at '1' and be incremented sequentially across the Order groups.
 	
-	LOI-49: The value of TQ1-1 (Set ID – TQ1) SHALL be valued '1'.
+	LOI-49: The value of TQ1-1 (Set ID - TQ1) SHALL be valued '1'.
 
-	LOI-59: The value of DG1-1 (Set ID – DG1) SHALL be valued sequentially starting the value '1' within a given OBSERVATION_REQUEST segment group.
+	LOI-59: The value of DG1-1 (Set ID - DG1) SHALL be valued sequentially starting the value '1' within a given OBSERVATION_REQUEST segment group.
 	LOI-60: Only one instance of DG1-15 (Diagnosis Priority) in the Observation_Request_group SHALL contain the value '1'.
 
-	LOI-55: NTE-1 (Set ID – NTE) SHALL be sequentially numbered starting with the value '1' within a given segment group.
+	LOI-55: NTE-1 (Set ID - NTE) SHALL be sequentially numbered starting with the value '1' within a given segment group.
 
 	LOI-56: PRT-2 (Action Code) SHALL be valued with 'AD' drawn from code system HL70287.
 	LOI-57: For each value in OBR-28 (Result Copies To) a corresponding PRT (Participant Information) SHALL be present with PRT-4.1 (Participation Identifier) valued 'RCT'.
 	LOI-58: For each PRT (Participant Information) where PRT-4.1 (Participation.Identifier) is valued 'RCT' there must be a corresponding value in OBR-28 (Result Copies To) equal to PRT-5 (Participation Person).
 
-	LOI-62: The value of OBX-1 (Set ID – OBX) SHALL be valued sequentially starting the value '1' within a given segment group.
+	LOI-62: The value of OBX-1 (Set ID - OBX) SHALL be valued sequentially starting the value '1' within a given segment group.
 	LOI-63: If there are multiple OBX segments associated with the same OBR segment that have the same OBX-3 (Observation Identifier) values for (OBX-3.1 (Observation Identifier.Identifier) and OBX-3.3 (Observation Identifier.Name of Coding System) or (OBX-3.4 (Observation Identifier.Alternate Identifier) and OBX-3.6 (Observation Identifier.Name of Alternate Coding System)), a combination of (OBX-3.1 and OBX3.3) or (OBX-3.4 and OBX-3.6) and OBX-4 (Observation Sub-ID) SHALL create a unique identification under a single OBR.
 
 	[LOI_GU_PRN_Profile] LOI-14: An occurrence of MSH-21 (Message Profile Identifier) SHALL be valued with '2.16.840.1.113883.9.86' (LOI_GU_PRN_Profile) or three occurrences SHALL be valued with '2.16.840.1.113883.9.66' (LOI_Common_Component), '2.16.840.1.113883.9.78' (LOI_GU_Component) and '2.16.840.1.113883.9.81' (LAB_PRN_Component) in any order.
@@ -2045,7 +2123,7 @@
 
 	LOI-79-b: If any of OBR-7 (Observation Date/Time), OBR-8 (Observation End Date/Time), SPM-17.1 (Range Start Date/Time) or SPM-17.2 (Range End Date/Time) contain a time zone offset then all SHALL contain a time zone offset.
 	LOI-50: If present, OBR-8 (Observation End Date/Time) SHALL be equal to or later than OBR-7 (Observation Date/Time).
-	LOI-64: The value of SPM-1 (Set ID – SPM) SHALL start at '1' and be incremented sequentially within the Order Group.
+	LOI-64: The value of SPM-1 (Set ID - SPM) SHALL start at '1' and be incremented sequentially within the Order Group.
 
 	
 	** NOT Implemented **
@@ -2098,9 +2176,12 @@
 				<Constraint ID="LOI-6" Target="7[1]">
 					<Description>XPN_1-7 (Name Type Code) SHALL NOT be valued 'U'.</Description>
 					<Assertion>
-						<NOT>
-							<PlainText Path="7[1]" Text="U" IgnoreCase="false"/>
-						</NOT>
+						<IMPLY>
+							<Presence Path="7[1]"/>
+							<NOT>
+								<PlainText Path="7[1]" Text="U" IgnoreCase="false"/>
+							</NOT>
+						</IMPLY>
 					</Assertion>
 				</Constraint>
 			</ByID>
@@ -2108,9 +2189,12 @@
 				<Constraint ID="LOI-6" Target="7[1]">
 					<Description>XPN_1-7 (Name Type Code) SHALL NOT be valued 'U'.</Description>
 					<Assertion>
-						<NOT>
-							<PlainText Path="7[1]" Text="U" IgnoreCase="false"/>
-						</NOT>
+						<IMPLY>
+							<Presence Path="7[1]"/>
+							<NOT>
+								<PlainText Path="7[1]" Text="U" IgnoreCase="false"/>
+							</NOT>
+						</IMPLY>
 					</Assertion>
 				</Constraint>
 			</ByID>
@@ -2118,9 +2202,12 @@
 				<Constraint ID="LOI-6" Target="7[1]">
 					<Description>XPN_1-7 (Name Type Code) SHALL NOT be valued 'U'.</Description>
 					<Assertion>
-						<NOT>
-							<PlainText Path="7[1]" Text="U" IgnoreCase="false"/>
-						</NOT>
+						<IMPLY>
+							<Presence Path="7[1]"/>
+							<NOT>
+								<PlainText Path="7[1]" Text="U" IgnoreCase="false"/>
+							</NOT>
+						</IMPLY>
 					</Assertion>
 				</Constraint>
 			</ByID>
@@ -2128,9 +2215,12 @@
 				<Constraint ID="LOI-6" Target="7[1]">
 					<Description>XPN_1-7 (Name Type Code) SHALL NOT be valued 'U'.</Description>
 					<Assertion>
-						<NOT>
-							<PlainText Path="7[1]" Text="U" IgnoreCase="false"/>
-						</NOT>
+						<IMPLY>
+							<Presence Path="7[1]"/>
+							<NOT>
+								<PlainText Path="7[1]" Text="U" IgnoreCase="false"/>
+							</NOT>
+						</IMPLY>
 					</Assertion>
 				</Constraint>
 			</ByID>
@@ -2681,8 +2771,7 @@
 					</Assertion>
 				</Constraint>
 				<Constraint ID="LOI-20" Target="9[1].1[1]">
-					<!-- [TODO] fix text typo -->
-					<Description>MSH-9 (Message Type) SHALL contain the value 'ACK'ACK' drawn from the code system HL70076.</Description>
+					<Description>MSH-9 (Message Type) SHALL contain the value 'ACK' drawn from the code system HL70076.</Description>
 					<Assertion>
 						<AND>
 							<Presence Path="9[1].1[1]"/>
@@ -2764,8 +2853,7 @@
 					</Assertion>
 				</Constraint>
 				<Constraint ID="LOI-20" Target="9[1].1[1]">
-					<!-- [TODO] fix text typo -->
-					<Description>MSH-9 (Message Type) SHALL contain the value 'ACK'ACK' drawn from the code system HL70076.</Description>
+					<Description>MSH-9 (Message Type) SHALL contain the value 'ACK' drawn from the code system HL70076.</Description>
 					<Assertion>
 						<AND>
 							<Presence Path="9[1].1[1]"/>
@@ -2923,7 +3011,7 @@
 			<ByID ID="IN1_LOI_GU">
 				<!-- LOI_Common_Component -->
 				<Constraint ID="LOI-78" Target="1[1]">
-					<Description>IN1-1 (Set ID – IN1) SHALL be valued with the constant value '1'.</Description>
+					<Description>IN1-1 (Set ID - IN1) SHALL be valued with the constant value '1'.</Description>
 					<Assertion>
 						<AND>
 							<Presence Path="1[1]"/>
@@ -2935,7 +3023,7 @@
 			<ByID ID="IN1_LOI_NG">
 				<!-- LOI_Common_Component -->
 				<Constraint ID="LOI-78" Target="1[1]">
-					<Description>IN1-1 (Set ID – IN1) SHALL be valued with the constant value '1'.</Description>
+					<Description>IN1-1 (Set ID - IN1) SHALL be valued with the constant value '1'.</Description>
 					<Assertion>
 						<AND>
 							<Presence Path="1[1]"/>
@@ -3159,12 +3247,12 @@
 					<Assertion>
 						<OR>
 							<AND>
-								<Presence Path="3[1]"/>
-								<StringList Path="3[1]" CSV="I9C,I10C"/>
+								<Presence Path="3[1].3[1]"/>
+								<StringList Path="3[1].3[1]" CSV="I9C,I10C"/>
 							</AND>
 							<AND>
-								<Presence Path="6[1]"/>
-								<StringList Path="6[1]" CSV="I9C,I10C"/>
+								<Presence Path="3[1].6[1]"/>
+								<StringList Path="3[1].6[1]" CSV="I9C,I10C"/>
 							</AND>
 						</OR>
 					</Assertion>
@@ -3346,6 +3434,30 @@
 						</EXIST>
 					</Assertion>
 				</Constraint>
+				<Constraint ID="NIST-xxx" Target="4[1].1[1]">
+					<Description>If SPM-4.3 (Name of Coding system) is valued 'HL70487', SPM-4.1 (Identifier) SHALL be a valid code identifier drawn from the HL70487_USL.2 value set.</Description>
+					<Assertion>
+						<IMPLY>
+							<AND>
+								<Presence Path="4[1].3[1]"/>
+								<PlainText Path="4[1].3[1]" IgnoreCase="false" Text="HL70487"/>
+							</AND>
+							<ValueSet Path="4[1]" ValueSetID="HL70487_USL.2" BindingStrength="R" BindingLocation="1"/>
+						</IMPLY>
+					</Assertion>
+				</Constraint>
+				<Constraint ID="NIST-xxx" Target="4[1].4[1]">
+					<Description>If SPM-4.6 (Name of Alternate Coding System) is valued 'HL70487', SPM-4.4 (Alternate Identifier) SHALL be a valid code identifier drawn from the HL70487_USL.2 value set.</Description>
+					<Assertion>
+						<IMPLY>
+							<AND>
+								<Presence Path="4[1].6[1]"/>
+								<PlainText Path="4[1].6[1]" IgnoreCase="false" Text="HL70487"/>
+							</AND>
+							<ValueSet Path="4[1]" ValueSetID="HL70487_USL.2" BindingStrength="R" BindingLocation="4"/>
+						</IMPLY>
+					</Assertion>
+				</Constraint>
 			</ByID>
 			<ByID ID="SPM_LOI_NG">
 				<Constraint ID="NIST-14" Target="4[1].1[1]">
@@ -3392,6 +3504,30 @@
 						</EXIST>
 					</Assertion>
 				</Constraint>
+				<Constraint ID="NIST-xxx" Target="4[1].1[1]">
+					<Description>If SPM-4.3 (Name of Coding system) is valued 'HL70487', SPM-4.1 (Identifier) SHALL be a valid code identifier drawn from the HL70487_USL.2 value set.</Description>
+					<Assertion>
+						<IMPLY>
+							<AND>
+								<Presence Path="4[1].3[1]"/>
+								<PlainText Path="4[1].3[1]" IgnoreCase="false" Text="HL70487"/>
+							</AND>
+							<ValueSet Path="4[1]" ValueSetID="HL70487_USL.2" BindingStrength="R" BindingLocation="1"/>
+						</IMPLY>
+					</Assertion>
+				</Constraint>
+				<Constraint ID="NIST-xxx" Target="4[1].4[1]">
+					<Description>If SPM-4.6 (Name of Alternate Coding System) is valued 'HL70487', SPM-4.4 (Alternate Identifier) SHALL be a valid code identifier drawn from the HL70487_USL.2 value set.</Description>
+					<Assertion>
+						<IMPLY>
+							<AND>
+								<Presence Path="4[1].6[1]"/>
+								<PlainText Path="4[1].6[1]" IgnoreCase="false" Text="HL70487"/>
+							</AND>
+							<ValueSet Path="4[1]" ValueSetID="HL70487_USL.2" BindingStrength="R" BindingLocation="4"/>
+						</IMPLY>
+					</Assertion>
+				</Constraint>
 			</ByID>
 			<ByID ID="SPM_LOI_GU_PH">
 				<Constraint ID="NIST-14" Target="4[1].1[1]">
@@ -3401,7 +3537,7 @@
 					</Assertion>
 				</Constraint>
 				<Constraint ID="NIST-15" Target="4[1].4[1]">
-					<Description>: If SPM-4.6 (Name of Alternate Coding System) is valued 'SCT', SPM-4.4 (Alternate Identifier) SHALL be a valid SNOMED CT code identifier format.</Description>
+					<Description>If SPM-4.6 (Name of Alternate Coding System) is valued 'SCT', SPM-4.4 (Alternate Identifier) SHALL be a valid SNOMED CT code identifier format.</Description>
 					<Assertion>
 						<Plugin QualifiedClassName="gov.nist.healthcare.mu.loi.custom.SPM_4b"/>
 					</Assertion>
@@ -3419,6 +3555,30 @@
 								<StringList Path="6[1]" CSV="SCT,HL70487"/>
 							</AND>
 						</OR>
+					</Assertion>
+				</Constraint>
+				<Constraint ID="NIST-xxx" Target="4[1].1[1]">
+					<Description>If SPM-4.3 (Name of Coding system) is valued 'HL70487', SPM-4.1 (Identifier) SHALL be a valid code identifier drawn from the HL70487_USL.2 value set.</Description>
+					<Assertion>
+						<IMPLY>
+							<AND>
+								<Presence Path="4[1].3[1]"/>
+								<PlainText Path="4[1].3[1]" IgnoreCase="false" Text="HL70487"/>
+							</AND>
+							<ValueSet Path="4[1]" ValueSetID="HL70487_USL.2" BindingStrength="R" BindingLocation="1"/>
+						</IMPLY>
+					</Assertion>
+				</Constraint>
+				<Constraint ID="NIST-xxx" Target="4[1].4[1]">
+					<Description>If SPM-4.6 (Name of Alternate Coding System) is valued 'HL70487', SPM-4.4 (Alternate Identifier) SHALL be a valid code identifier drawn from the HL70487_USL.2 value set.</Description>
+					<Assertion>
+						<IMPLY>
+							<AND>
+								<Presence Path="4[1].6[1]"/>
+								<PlainText Path="4[1].6[1]" IgnoreCase="false" Text="HL70487"/>
+							</AND>
+							<ValueSet Path="4[1]" ValueSetID="HL70487_USL.2" BindingStrength="R" BindingLocation="4"/>
+						</IMPLY>
 					</Assertion>
 				</Constraint>
 				<Constraint ID="NIST-17" Target="5[1].1[1]">
@@ -3442,7 +3602,7 @@
 					</Assertion>
 				</Constraint>
 				<Constraint ID="NIST-15" Target="4[1].4[1]">
-					<Description>: If SPM-4.6 (Name of Alternate Coding System) is valued 'SCT', SPM-4.4 (Alternate Identifier) SHALL be a valid SNOMED CT code identifier format.</Description>
+					<Description>If SPM-4.6 (Name of Alternate Coding System) is valued 'SCT', SPM-4.4 (Alternate Identifier) SHALL be a valid SNOMED CT code identifier format.</Description>
 					<Assertion>
 						<Plugin QualifiedClassName="gov.nist.healthcare.mu.loi.custom.SPM_4b"/>
 					</Assertion>
@@ -3460,6 +3620,30 @@
 								<StringList Path="6[1]" CSV="SCT,HL70487"/>
 							</AND>
 						</OR>
+					</Assertion>
+				</Constraint>
+				<Constraint ID="NIST-xxx" Target="4[1].1[1]">
+					<Description>If SPM-4.3 (Name of Coding system) is valued 'HL70487', SPM-4.1 (Identifier) SHALL be a valid code identifier drawn from the HL70487_USL.2 value set.</Description>
+					<Assertion>
+						<IMPLY>
+							<AND>
+								<Presence Path="4[1].3[1]"/>
+								<PlainText Path="4[1].3[1]" IgnoreCase="false" Text="HL70487"/>
+							</AND>
+							<ValueSet Path="4[1]" ValueSetID="HL70487_USL.2" BindingStrength="R" BindingLocation="1"/>
+						</IMPLY>
+					</Assertion>
+				</Constraint>
+				<Constraint ID="NIST-xxx" Target="4[1].4[1]">
+					<Description>If SPM-4.6 (Name of Alternate Coding System) is valued 'HL70487', SPM-4.4 (Alternate Identifier) SHALL be a valid code identifier drawn from the HL70487_USL.2 value set.</Description>
+					<Assertion>
+						<IMPLY>
+							<AND>
+								<Presence Path="4[1].6[1]"/>
+								<PlainText Path="4[1].6[1]" IgnoreCase="false" Text="HL70487"/>
+							</AND>
+							<ValueSet Path="4[1]" ValueSetID="HL70487_USL.2" BindingStrength="R" BindingLocation="4"/>
+						</IMPLY>
 					</Assertion>
 				</Constraint>
 				<Constraint ID="NIST-17" Target="5[1].1[1]">
@@ -3671,16 +3855,16 @@
 								<!-- SPM-17.1 is not present OR it contains TZ offset -->
 								<OR>
 									<NOT>
-										<Presence Path="8[1].17[1].1[1].1[1]"/>
+										<Presence Path="8[1].1[1].17[1].1[1].1[1]"/>
 									</NOT>
-									<Format Path="8[1].17[1].1[1].1[1]" Regex=".*(-|\+).*"/>
+									<Format Path="8[1].1[1].17[1].1[1].1[1]" Regex=".*(-|\+).*"/>
 								</OR>
 								<!-- SPM-17.2 is not present OR it contains TZ offset -->
 								<OR>
 									<NOT>
-										<Presence Path="8[1].17[1].2[1].1[1]"/>
+										<Presence Path="8[1].1[1].17[1].2[1].1[1]"/>
 									</NOT>
-									<Format Path="8[1].17[1].2[1].1[1]" Regex=".*(-|\+).*"/>
+									<Format Path="8[1].1[1].17[1].2[1].1[1]" Regex=".*(-|\+).*"/>
 								</OR>
 							</FORALL>
 							<FORALL>
@@ -3701,16 +3885,16 @@
 								<!-- SPM-17.1 is not present OR it does not contains TZ offset -->
 								<OR>
 									<NOT>
-										<Presence Path="8[1].17[1].1[1].1[1]"/>
+										<Presence Path="8[1].1[1].17[1].1[1].1[1]"/>
 									</NOT>
-									<Format Path="8[1].17[1].1[1].1[1]" Regex="[^-+]*"/>
+									<Format Path="8[1].1[1].17[1].1[1].1[1]" Regex="[^-+]*"/>
 								</OR>
 								<!-- SPM-17.2 is not present OR it does not contains TZ offset -->
 								<OR>
 									<NOT>
-										<Presence Path="8[1].17[1].2[1].1[1]"/>
+										<Presence Path="8[1].1[1].17[1].2[1].1[1]"/>
 									</NOT>
-									<Format Path="8[1].17[1].2[1].1[1]" Regex="[^-+]*"/>
+									<Format Path="8[1].1[1].17[1].2[1].1[1]" Regex="[^-+]*"/>
 								</OR>
 							</FORALL>
 						</OR>

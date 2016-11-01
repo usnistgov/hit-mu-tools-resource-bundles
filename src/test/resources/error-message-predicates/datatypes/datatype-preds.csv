@@ -1,0 +1,122 @@
+element,testmessage context,pred,true usage,file name,false usage,file name
+[CWE_CR]6[1],OBR-4,If CWE_CR.4 (Alternate Identifier) is valued.,R,CWE_CR_6_1a,X,CWE_CR_6_1b
+[CWE_CR]7[1],OBR-4,If CWE_CR.3 (Name of Coding System) is not an HL7 defined table or user defined.,RE,never errors,O,never errors
+[CWE_CR1]6[1],PID-10,If CWE_CR1.4 (Alternate Identifier) is valued.,R,CWE_CR1_6_1a,X,CWE_CR1_6_1b
+[CWE_CR1]7[1],PID-10,If CWE_CR1.3 (Name of Coding System) is not an HL7 defined table or user defined.,RE,never errors,O,never errors
+[CWE_CRE]2[1],SPM-4,If CWE_CRE.1 (Identifier) is valued.,RE,never errors,X,CWE_CRE_2_1b
+[CWE_CRE]3[1],SPM-4,If CWE_CRE.1 (Identifier) is valued.,R,CWE_CRE_3_1a,X,CWE_CRE_3_1b
+[CWE_CRE]4[1],SPM-4,If CWE_CRE.1 (Identifier) is valued.,RE,never errors,X,CWE_CRE_4_1b
+[CWE_CRE]5[1],SPM-4,If CWE_CRE.4 (Alternate Identifier) is valued.,RE,never errors,X,CWE_CRE_5_1b
+[CWE_CRE]6[1],SPM-4,If CWE_CRE.4 (Alternate Identifier) is valued.,R,CWE_CRE_6_1a,X,CWE_CRE_6_1b
+[CWE_CRE]7[1],SPM-4,If CWE_CRE.3 (Name of Coding System) is not an HL7 defined table or user defined,RE,never errors,O,never errors
+[CWE_CRE]9[1],SPM-4,If CWE_CRE.1 (Identifier) and CWE.4_CRE (alternate identifier) are not valued.,R,CWE_CRE_9_1a,RE,never errors
+[CWE_CRE1]2[1],SPM-8,If CWE_CRE1.1 (Identifier) is valued.,RE,never errors,X,CWE_CRE1_2_1b
+[CWE_CRE1]3[1],SPM-8,If CWE_CRE1.1 (Identifier) is valued.,R,CWE_CRE1_3_1a,X,CWE_CRE1_3_1b
+[CWE_CRE1]5[1],SPM-8,If CWE_CRE1.4 (Alternate Identifier) is valued.,RE,never errors,X,CWE_CRE1_5_1b
+[CWE_CRE1]6[1],SPM-8,If CWE_CRE1.4 (Alternate Identifier) is valued.,R,CWE_CRE1_6_1a,X,CWE_CRE1_6_1b
+[CWE_CRE1]7[1],SPM-8,If CWE_CRE1.3 (Name of Coding System) is not an HL7 defined table or user defined.,RE,never errors,O,never errors
+[CWE_CRE1]9[1],SPM-8,If CWE_CRE1.1 (Identifier) and CWE.4_CRE (alternate identifier) are not valued.,R,CWE_CRE1_9_1a,RE,never errors
+[EI_NG]2[1],ORC-2,If EI_NG.3 (Universal ID) is not valued.,R,EI_NG_2_1a,O,never errors
+[EI_NG]3[1],ORC-2,If EI_NG.2 (Namespace ID) is not valued.,R,EI_NG_3_1a,O,never errors
+[EI_NG]4[1],ORC-2,If EI_NG.3 (Universal ID) is valued.,R,EI_NG_4_1a,X,EI_NG_4_1b
+[EIP_GU]2[1],SPM-2,If EIP_GU.1 is not valued.,R,never errors (RE element),RE,never errors
+[EIP_NG]2[1],SPM-2,If EIP_NG.1 is not valued.,R,never errors (RE element),RE,never errors
+[HD_NG]1[1],MSH-4,If HD_NG.2 (Universal ID) is not valued.,R,HD_NG_1_1a,O,never errors
+[HD_NG]2[1],MSH-4,If HD_NG.1 (Namespace ID) is not valued.,R,HD_NG_2_1a,O,never errors
+[HD_NG]3[1],MSH-4,If HD_NG.2 (Universal ID) is valued.,R,HD_NG_3_1a,X,HD_NG_3_1b
+[SN_LOI]3[1],?,If SN.2 (Num1) and SN.4 (Num2) are valued.,RE,never errors,O,never errors
+[XCN_GU_ORC]2[1],ORC-12,If XCN_GU.1 (ID Number) is not valued.,R,XCN_GU_ORC_2_1a,RE,never errors
+[XCN_GU_ORC]9[1],ORC-12,If XCN_GU.1 (ID Number) is valued.,R,XCN_GU_ORC_9_1a,X,XCN_GU_ORC_9_1b
+[XCN_GU_ORC]12[1],ORC-12,If XCN_GU.11 is valued.,O,never errors,X,not done
+[XCN_GU_ORC]13[1],ORC-12,If XCN_GU.1 (ID Number) is valued.,R,XCN_GU_ORC_13_1a,X,XCN_GU_ORC_13_1b
+[XCN_GU_OBR_16]2[1],OBR-16,If XCN_GU.1 (ID Number) is not valued.,R,XCN_GU_OBR_16_2_1a,RE,never errors
+[XCN_GU_OBR_16]9[1],OBR-16,If XCN_GU.1 (ID Number) is valued.,R,XCN_GU_OBR_16_9_1a,X,XCN_GU_OBR_16_9_1b
+[XCN_GU_OBR_16]12[1],OBR-16,If XCN_GU.11 is valued.,O,never errors,X,not done
+[XCN_GU_OBR_16]13[1],OBR-16,If XCN_GU.1 (ID Number) is valued.,R,XCN_GU_OBR_16_13_1a,X,XCN_GU_OBR_16_13_1b
+[XCN_GU_OBR_28]2[1],OBR-28,If XCN_GU.1 (ID Number) is not valued.,R,XCN_GU_OBR_28_2_1a,RE,never errors
+[XCN_GU_OBR_28]9[1],OBR-28,If XCN_GU.1 (ID Number) is valued.,R,XCN_GU_OBR_28_9_1a,X,XCN_GU_OBR_28_9_1b
+[XCN_GU_OBR_28]12[1],OBR-28,If XCN_GU.11 is valued.,O,never errors,X,not done
+[XCN_GU_OBR_28]13[1],OBR-28,If XCN_GU.1 (ID Number) is valued.,R,XCN_GU_OBR_28_13_1a,X,XCN_GU_OBR_28_13_1b
+[XCN_GU_OBX]2[1],?,If XCN_GU.1 (ID Number) is not valued.,R,not done,RE,not done
+[XCN_GU_OBX]9[1],?,If XCN_GU.1 (ID Number) is valued.,R,not done,X,not done
+[XCN_GU_OBX]12[1],?,If XCN_GU.11 is valued.,O,not done,X,not done
+[XCN_GU_OBX]13[1],?,If XCN_GU.1 (ID Number) is valued.,R,not done,X,not done
+[XCN_GU_PRT]2[1],PRT-5,If XCN_GU.1 (ID Number) is not valued.,R,XCN_GU_PRT_2_1a,RE,never errors
+[XCN_GU_PRT]9[1],PRT-5,If XCN_GU.1 (ID Number) is valued.,R,XCN_GU_PRT_9_1a,X,XCN_GU_PRT_9_1b
+[XCN_GU_PRT]12[1],PRT-5,If XCN_GU.11 is valued.,O,never errors,X,not done
+[XCN_GU_PRT]13[1],PRT-5,If XCN_GU.1 (ID Number) is valued.,R,XCN_GU_PRT_13_1a,X,XCN_GU_PRT_13_1b
+[XCN_NG_ORC]9[1],ORC-12,If XCN_NG.1 (ID Number) is valued,R,XCN_NG_ORC_9_1a,X,XCN_NG_ORC_9_1b
+[XCN_NG_ORC]12[1],ORC-12,If XCN_NG.11 is valued.,O,never errors,X,not done
+[XCN_NG_ORC]13[1],ORC-12,If XCN_NG.1 (ID Number) is valued.,R,XCN_NG_ORC_13_1a,X,XCN_NG_ORC_13_1b
+[XCN_NG_OBR_16]9[1],OBR-16,If XCN_NG.1 (ID Number) is valued,R,XCN_NG_OBR_16_9_1a,X,XCN_NG_OBR_16_9_1b
+[XCN_NG_OBR_16]12[1],OBR-16,If XCN_NG.11 is valued.,O,never errors,X,not done
+[XCN_NG_OBR_16]13[1],OBR-16,If XCN_NG.1 (ID Number) is valued.,R,XCN_NG_OBR_16_13_1a,X,XCN_NG_OBR_16_13_1b
+[XCN_NG_OBR_28]9[1],OBR-28,If XCN_NG.1 (ID Number) is valued,R,XCN_NG_OBR_28_9_1a,X,XCN_NG_OBR_28_9_1b
+[XCN_NG_OBR_28]12[1],OBR-28,If XCN_NG.11 is valued.,O,never errors,X,not done
+[XCN_NG_OBR_28]13[1],OBR-28,If XCN_NG.1 (ID Number) is valued.,R,XCN_NG_OBR_28_13_1a,X,XCN_NG_OBR_28_13_1b
+[XCN_NG_OBX]9[1],?,If XCN_NG.1 (ID Number) is valued,R,not done,X,not done
+[XCN_NG_OBX]12[1],?,If XCN_NG.11 is valued.,O,not done,X,not done
+[XCN_NG_OBX]13[1],?,If XCN_NG.1 (ID Number) is valued.,R,not done,X,not done
+[XCN_NG_PRT]9[1],PRT-5,If XCN_NG.1 (ID Number) is valued,R,XCN_NG_PRT_9_1a,X,XCN_NG_PRT_9_1b
+[XCN_NG_PRT]12[1],PRT-5,If XCN_NG.11 is valued.,O,never errors,X,not done
+[XCN_NG_PRT]13[1],PRT-5,If XCN_NG.1 (ID Number) is valued.,R,XCN_NG_PRT_13_1a,X,XCN_NG_PRT_13_1b
+[XON_GU_ORC]5[1],ORC-21(PH),If XON_GU.4 (Check Digit) is valued.,O,never errors,X,not done
+[XON_GU_ORC]6[1],ORC-21(PH),If XON_GU.10 (Organization Identifier) is valued.,R,XON_GU_ORC_6_1a,X,XON_GU_ORC_6_1b
+[XON_GU_ORC]7[1],ORC-21(PH),If XON_GU.10 (Organization Identifier) is valued.,R,XON_GU_ORC_7_1a,X,XON_GU_ORC_7_1b
+[XON_GU_ORC]10[1],ORC-21(PH),If XON_GU.1 (Organization Name) is not valued.,R,XON_GU_ORC_10_1a,RE,never errors
+[XON_GU_OBX]5[1],?,If XON_GU.4 (Check Digit) is valued.,O,not done,X,not done
+[XON_GU_OBX]6[1],?,If XON_GU.10 (Organization Identifier) is valued.,R,not done,X,not done
+[XON_GU_OBX]7[1],?,If XON_GU.10 (Organization Identifier) is valued.,R,not done,X,not done
+[XON_GU_OBX]10[1],?,If XON_GU.1 (Organization Name) is not valued.,R,not done,RE,never errors
+[XON_GU_NK1]5[1],?,If XON_GU.4 (Check Digit) is valued.,O,not done,X,not done
+[XON_GU_NK1]6[1],?,If XON_GU.10 (Organization Identifier) is valued.,R,not done,X,not done
+[XON_GU_NK1]7[1],?,If XON_GU.10 (Organization Identifier) is valued.,R,not done,X,not done
+[XON_GU_NK1]10[1],?,If XON_GU.1 (Organization Name) is not valued.,R,not done,RE,not done
+[XON_GU_IN1]5[1],?,If XON_GU.4 (Check Digit) is valued.,O,not done,X,not done
+[XON_GU_IN1]6[1],?,If XON_GU.10 (Organization Identifier) is valued.,R,not done,X,not done
+[XON_GU_IN1]7[1],?,If XON_GU.10 (Organization Identifier) is valued.,R,not done,X,not done
+[XON_GU_IN1]10[1],?,If XON_GU.1 (Organization Name) is not valued.,R,not done,RE,not done
+[XON_GU_GT1]5[1],?,If XON_GU.4 (Check Digit) is valued.,O,not done,X,not done
+[XON_GU_GT1]6[1],?,If XON_GU.10 (Organization Identifier) is valued.,R,not done,X,not done
+[XON_GU_GT1]7[1],?,If XON_GU.10 (Organization Identifier) is valued.,R,not done,X,?
+[XON_GU_GT1]10[1],?,If XON_GU.1 (Organization Name) is not valued.,R,?,RE,not done
+[XON_NG_ORC]5[1],ORC-21(PH),If XON_NG.4 is valued,O,never errors,X,not done
+[XON_NG_ORC]6[1],ORC-21(PH),If XON_NG.10 (Organization Identifier) is valued.,R,XON_NG_ORC_6_1a,X,XON_NG_ORC_6_1b
+[XON_NG_ORC]7[1],ORC-21(PH),If XON_NG.10 (Organization Identifier) is valued.,R,XON_NG_ORC_7_1a,X,XON_NG_ORC_7_1b
+[XON_NG_ORC]10[1],ORC-21(PH),If XON_NG.1 (Organization Name) is not valued.,R,XON_NG_ORC_10_1a,RE,never errors
+[XON_NG_OBX]5[1],?,If XON_NG.4 is valued,O,not done,X,not done
+[XON_NG_OBX]6[1],?,If XON_NG.10 (Organization Identifier) is valued.,R,not done,X,not done
+[XON_NG_OBX]7[1],?,If XON_NG.10 (Organization Identifier) is valued.,R,not done,X,not done
+[XON_NG_OBX]10[1],?,If XON_NG.1 (Organization Name) is not valued.,R,not done,RE,not done
+[XON_NG_NK1]5[1],?,If XON_NG.4 is valued,O,not done,X,not done
+[XON_NG_NK1]6[1],?,If XON_NG.10 (Organization Identifier) is valued.,R,not done,X,not done
+[XON_NG_NK1]7[1],?,If XON_NG.10 (Organization Identifier) is valued.,R,not done,X,not done
+[XON_NG_NK1]10[1],?,If XON_NG.1 (Organization Name) is not valued.,R,not done,RE,not done
+[XON_NG_IN1]5[1],?,If XON_NG.4 is valued,O,not done,X,not done
+[XON_NG_IN1]6[1],?,If XON_NG.10 (Organization Identifier) is valued.,R,not done,X,not done
+[XON_NG_IN1]7[1],?,If XON_NG.10 (Organization Identifier) is valued.,R,not done,X,not done
+[XON_NG_IN1]10[1],?,If XON_NG.1 (Organization Name) is not valued.,R,not done,RE,not done
+[XON_NG_GT1]5[1],?,If XON_NG.4 is valued,O,not done,X,not done
+[XON_NG_GT1]6[1],?,If XON_NG.10 (Organization Identifier) is valued.,R,not done,X,not done
+[XON_NG_GT1]7[1],?,If XON_NG.10 (Organization Identifier) is valued.,R,not done,X,not done
+[XON_NG_GT1]10[1],?,If XON_NG.1 (Organization Name) is not valued.,R,not done,RE,not done
+[XPN_LOI_PID_5]3[1],PID-5,If XPN-1 (Family Name) or XPN-2 (Given Name) is valued.,RE,never errors,X,XPN_LOI_PID_5_3_1b
+[XPN_LOI_PID_5]4[1],PID-5,If XPN-1 (Family Name) or XPN-2 (Given Name) is valued.,RE,never errors,X,XPN_LOI_PID_5_4_1b
+[XPN_LOI_PID_6]3[1],?,If XPN-1 (Family Name) or XPN-2 (Given Name) is valued.,RE,not done,X,not done
+[XPN_LOI_PID_6]4[1],?,If XPN-1 (Family Name) or XPN-2 (Given Name) is valued.,RE,not done,X,not done
+[XPN_LOI_OBX]3[1],?,If XPN-1 (Family Name) or XPN-2 (Given Name) is valued.,RE,not done,X,not done
+[XPN_LOI_OBX]4[1],?,If XPN-1 (Family Name) or XPN-2 (Given Name) is valued.,RE,not done,X,not done
+[XPN_1_NK1_2]2[1],?,"If XPN_1.1 (Family Name) is not valued ' """" '.",R,not done,X,not done
+[XPN_1_NK1_2]7[1],?,"If XPN_1.1 (Family Name) is not valued ' """" '.",R,not done,X,not done
+[XPN_1_NK1_30]2[1],NK1-30,"If XPN_1.1 (Family Name) is not valued ' """" '.",R,XPN_1_NK1_30_2_1a,X,XPN_1_NK1_30_2_1b
+[XPN_1_NK1_30]7[1],NK1-30,"If XPN_1.1 (Family Name) is not valued ' """" '.",R,XPN_1_NK1_30_7_1a,X,XPN_1_NK1_30_7_1b
+[XPN_1_IN1]2[1],?,"If XPN_1.1 (Family Name) is not valued ' """" '.",R,not done,X,not done
+[XPN_1_IN1]7[1],?,"If XPN_1.1 (Family Name) is not valued ' """" '.",R,not done,X,not done
+[XPN_1_GT1]2[1],?,"If XPN_1.1 (Family Name) is not valued ' """" '.",R,not done,X,not done
+[XPN_1_GT1]7[1],?,"If XPN_1.1 (Family Name) is not valued ' """" '.",R,not done,X,not done
+[XTN_LOI]4[1],PID-14,If XTN-3 (Telecommunication Equipment Type) is valued 'X.400' or 'Internet'.,R,XTN_LOI_4_1a,X,XTN_LOI_4_1b
+[XTN_LOI]6[1],PID-13,"If XTN-3 (Telecommunication Equipment Type) is valued 'PH', 'CP', 'SAT', 'FX', or 'TDD'.",R,XTN_LOI_6_1a,X,XTN_LOI_6_1b
+[XTN_LOI]7[1],PID-13,"If XTN-3 (Telecommunication Equipment Type) is valued 'PH', 'CP', 'SAT', 'FX', or 'TDD'.",R,XTN_LOI_7_1a,X,XTN_LOI_7_1b
+[XTN_LOI]8[1],PID-13,"If XTN-3 (Telecommunication Equipment Type) is valued 'PH', 'CP', 'SAT', 'FX', or 'TDD'.",RE,never errors,X,XTN_LOI_8_1b
+[XTN_LOI]12[1],PID-13,"If XTN-3 (Telecommunication Equipment Type) is valued 'PH', 'CP', 'SAT', 'FX', or 'TDD'.",O,never errors,X,XTN_LOI_12_1b
+,,,,a,,b

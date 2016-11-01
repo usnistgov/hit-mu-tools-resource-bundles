@@ -1,0 +1,11 @@
+element,Context,pred,true usage,filename,false usage,filename
+[PATIENT_LOI]1[1].11[*],PID-11,If PV1-20.1 (Financial Class.Financial Class Code) is valued 'T' (third party).,R,PATIENT_LOI_1_1_.11a,RE,never errors
+[OBSERVATION_REQUEST_LOI]4[*],PRT,If OBR-28 (Result Copies To) is valued.,R,OBSERVATION_REQUEST_LOI_4a,O,never errors
+[OBSERVATION_REQUEST_LOI]8[*],SPM,If OBR-7 (Observation Date/Time) in the same Observation Request group is valued.,RE,never errors,O,never errors
+[ORDER_LOI_CANCEL]3[1].4[*],CTD,If ORC-1 (Order Control Code) is valued 'CA' or 'OC'.,X,ORDER_LOI_CANCEL_3_1_.4a,O,never errors
+[ORDER_LOI_CANCEL]3[1].5[*],DG1,If ORC-2 (Order Control Code) is valued 'CA' or 'OC'.,X,ORDER_LOI_CANCEL_3_1_.5a,O,never errors
+[ORDER_LOI_CANCEL]3[1].6[*],Observation,If ORC-2 (Order Control Code) is valued 'CA' or 'OC'.,X,ORDER_LOI_CANCEL_3_1_.6a,O,never errors
+[ORDER_LOI_CANCEL]3[1].7[*],Specimen,If ORC-2 (Order Control Code) is valued 'CA' or 'OC'.,X,ORDER_LOI_CANCEL_3_1_.7a,O,never errors
+[ORDER_LOI_CANCEL]3[1].8[*],Prior-Result,If ORC-2 (Order Control Code) is valued 'CA' or 'OC'.,X,not done,O,never errors
+[ORDER_LOI_CANCEL]4[*],FT1,If ORC-2 (Order Control Code) is valued 'CA' or 'OC'.,X,ORDER_LOI_CANCEL_4a,O,never errors
+[ORDER_LOI_CANCEL]6[*],BLG,If ORC-2 (Order Control Code) is valued 'CA' or 'OC'.,X,ORDER_LOI_CANCEL_6a,O,never errors

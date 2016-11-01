@@ -1,0 +1,35 @@
+element,context,pred,true usage,filename,false usage,filename
+[ERR_LOI]5[1],ERR-5,If ERR-3.1 (Identifier) is valued '999',RE,never errors,O,never errors
+[PID_LOI_GU]29[1],PID-29,If PID-30 (Patient Death Indicator) is valued 'Y'.,RE,never errors,O,never errors
+[PID_LOI_NG]29[1],PID-29,If PID-30 (Patient Death Indicator) is valued 'Y'.,RE,never errors,O,never errors
+[PID_LOI_GU_PH]29[1],PID-29,If PID-30 (Patient Death Indicator) is valued 'Y'.,RE,never errors,O,never errors
+[PID_LOI_NG_PH]29[1],PID-29,If PID-30 (Patient Death Indicator) is valued 'Y'.,RE,never errors,O,never errors
+[NK1_LOI_GU]2[1],NK1-2,If NK1-13 (Organization Name - NK1) is not valued.,R,NK1_LOI_GU_2_1a,X,NK1_LOI_GU_2_1b
+[NK1_LOI_GU]11[1],NK1-11,If NK1-7.1 (Contact Role.Identifier) is 'E' (employer).,R,NK1_LOI_GU_11_1a,O,never errors
+[NK1_LOI_GU]13[1],NK1-13,If NK1-2 (Name) is not valued.,R,NK1_LOI_GU_13_1a,X,NK1_LOI_GU_13_1b
+[NK1_LOI_NG]2[1],NK1-2,If NK1-13 (Organization Name - NK1) is not valued.,R,not done,X,not done
+[NK1_LOI_NG]11[1],NK1-11,If NK1-7.1 (Contact Role.Identifier) is 'E' (employer).,R,not done,O,never errors
+[NK1_LOI_NG]13[1],NK1-13,If NK1-2 (Name) is not valued.,R,not done,X,not done
+[NK1_LOI_GU_PH]2[1],NK1-2,If NK1-13 (Organization Name - NK1) is not valued.,R,not done,X,not done
+[NK1_LOI_GU_PH]11[1],NK1-11,If NK1-7.1 (Contact Role.Identifier) is 'E' (employer).,R,not done,O,never errors
+[NK1_LOI_GU_PH]13[1],NK1-13,If NK1-2 (Name) is not valued.,R,not done,X,not done
+[NK1_LOI_GU_PH]30[1],NK1-30,If NK1-13 (Organization Name - NK1) is valued.,RE,never errors,X,NK1_LOI_GU_PH_30_1b
+[NK1_LOI_NG_PH]2[1],NK1-2,If NK1-13 (Organization Name - NK1) is not valued.,R,not done,X,not done
+[NK1_LOI_NG_PH]11[1],NK1-11,If NK1-7.1 (Contact Role.Identifier) is 'E' (employer).,R,not done,O,never errors
+[NK1_LOI_NG_PH]13[1],NK1-13,If NK1-2 (Name) is not valued.,R,not done,X,not done
+[NK1_LOI_NG_PH]30[1],NK1-30,If NK1-13 (Organization Name - NK1) is valued.,RE,never errors,X,not done
+[PV1_LOI]22[1],PV1-22,If PV1-20.1 (Financial Class.class code) is not valued 'T' (Third Party).,RE,never errors,O,never errors
+[IN1_LOI_GU]11[1],IN1-11,If IN1-31 (Type of Agreement Code) is valued 'W' (Workman's Comp).,R,IN1_LOI_GU_11_1a,O,never errors
+[IN1_LOI_NG]11[1],IN1-11,If IN1-31 (Type of Agreement Code) is valued 'W' (Workman's Comp).,R,not done,O,never errors
+[OBR_LOI_GU]8[1],OBR-8,If OBR-7 (Observation Date/Time) is valued,RE,never errors,X,OBR_LOI_GU_8_1b
+[OBR_LOI_NG]8[1],OBR-8,If OBR-7 (Observation Date/Time) is valued,RE,never errors,X,not done
+[PRT_LOI_GU]14[1],PRT-14,If PRT-15 is not valued.,R,PRT_LOI_GU_14_1a,RE,never errors
+[PRT_LOI_NG]14[1],PRT-14,If PRT-15 is not valued.,R,not done,RE,never errors
+[OBX_LOI_GU]2[1],OBX-2,If OBX-5 (Observation Value) is valued.,R,OBX_LOI_GU_2_1a,X,OBX_LOI_GU_2_1b
+[OBX_LOI_GU]14[1],OBX-14,If OBX-5 is valued.,R,OBX_LOI_GU_14_1a,O,never errors
+[OBX_LOI_NG]2[1],OBX-2,If OBX-5 (Observation Value) is valued.,R,not done,X,SPM-5
+[OBX_LOI_NG]14[1],OBX-14,If OBX-5 is valued.,R,not done,O,SPM-9
+[SPM_LOI_GU_PH]5[1],SPM-5,If SPM-4.3 (Specimen Type.Name of Coding System) or SPM-4.6 (Specimen Type.Name of Alternate Coding System) is valued 'SCT',RE,never errors,X,SPM_LOI_GU_PH_5_1b
+[SPM_LOI_GU_PH]9[1],SPM-9,If SPM-8.3 (Name of Coding System ) or SPM-8.6 (Alternate Coding System ID) is valued 'SCT',RE,never errors,X,SPM_LOI_GU_PH_9_1b
+[SPM_LOI_NG_PH]5[1],SPM-5,If SPM-4.3 (Specimen Type.Name of Coding System) or SPM-4.6 (Specimen Type.Name of Alternate Coding System) is valued 'SCT',RE,never errors,X,not done
+[SPM_LOI_NG_PH]9[1],SPM-9,If SPM-8.3 (Name of Coding System ) or SPM-8.6 (Alternate Coding System ID) is valued 'SCT',RE,never errors,X,not done
