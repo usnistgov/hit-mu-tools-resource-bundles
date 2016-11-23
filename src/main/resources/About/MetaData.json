@@ -1,0 +1,16 @@
+{
+     	"rsbVersion"	:"${project.version}-${ts}",
+    	"version"		: "1.0-beta",
+    	"igVersion"		:"V251_IG_SIF_LABRESULTS_R1_DSTU2_2015SEP",
+    	"name"			:"Lab Results Interface",
+		"domain"		:"NIST HL7 V2 Validation tool - Laboratory Results Interface, Release 2 - US Realm",
+		"adminEmail"	:"robert.snelick@nist.gov",
+		"description"	:"(LRI)",
+		"header" 		:"Lab Results Interface Tool @ NIST",
+		"homeTitle"		:"Welcome to the NIST Lab Results Interface Validation Suite",
+		"homeContent"	:"<p>The NIST Lab Results Interface Validation Suite is intended for use by LRI pilots. The validation suite provides functionality to test LRI senders.</p><p>NOTE: The tool is in development stage and will be updated frequently and without notice. The developers will periodically update the tool to match the state of the implementation guide. The tool at this point is to help pilots test their system and to identify issues in the LRI implementation guide.</p><p style='color:red'>The following browsers are supported: Internet Explorer versions 8 and 9, Firefox, and Chrome. Recommended browsers are Internet Explorer 9, Firefox and Chrome.</p>",
+		"fileUpload"	:{
+		  					"contentTypes" : "application/xml,text/xml,text/plain",
+		  					"maxSize": "10MB"
+						}
+}

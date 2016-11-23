@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseMetaData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="LRI_4.0_1.1-NG" date="11/02/2016" name="preliminary result" version="20161102">
+		<Description>Mr. William A. Jones is a 51 year old white male who presented with a complaint of diarrhea times 3 days. Dr. Nicholas Radon ordered a stool culture test to be performed. A stool specimen for the microbiology test was collected from the patient and sent to the clinical lab at Century Hospital, 2070 Test Park, Los Angeles, CA, 90067, for processing.  The stool specimen was analyzed and preliminary result are sent 24 hours later, identifying E. coli O157:H7, Salmonella and Shigella flexneri.</Description>
+		<PreCondition>Patient information is pre-loaded in the EHR-S.
+No other Pre-Condition.</PreCondition>
+		<PostCondition>The test message information received by the EHR-S has been incorporated with the patient's record.</PostCondition>
+		<TestObjectives>Determine if the EHR-S can correctly incorporate a valid typically populated message for a preliminary Stool Culture microbiology test report.
+</TestObjectives>
+		<Notes>This test case requires display verification only.
+Concentrate on the following areas:
+Result Report Status (OBR-25) is P 
+3 different results (OBX-5) and their interpretations (OBX-8) for the same test are properly displayed with a Result Status (OBX-11) of P</Notes>
+		<Comments>This test case is evaluating the proper use of OBR-22 to establish chronological order of reports and correct use of the status codes in OBR-25 and OBX-11.</Comments>
+	</TestCaseMetaData>

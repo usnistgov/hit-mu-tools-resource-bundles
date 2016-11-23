@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseMetaData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="LRI_5.1_1.1-NG_FRN" date="11/02/2016" name="Reflex" version="20161102">
+		<Description>A patient is hospitalized for substance abuse. The physician orders a hepatitis panel through the hospital's EHR system to test for Hepatitis A, B and C antibodies/antigens. The serum specimen is collected the same day at in the morning and submitted to the hospital lab for testing via their LIS right after it was drawn. A few hours later the patient's test results are as follows:
+ (1)Hepatitis A IgM antibodies (IgM anti-HAV) "Negative"
+ (2)Hepatitis A antibodies (anti-HAV) "Negative"
+ (3)Hepatitis B core antibodies (anti-HBVc) "Negative"
+ (4)Hepatitis B core antibodies (anti-HBVc) quantitative 0.40 IU/mL (reference range: &lt;0.50 IU/mL)
+ (5)Hepatitis B virus e antibodies (anti-HBVe) "Negative"
+ (6)Hepatitis B surface antigen (HBVsAg) "Negative"
+ (7)Hepatitis B surface antibody (anti-HBVs) "Negative"
+ (8)Hepatitis C antibody screen (anti-HCV) "Positive"
+ (9)Hepatitis C antibodies Signal to Cut-off Ratio 10.8 s/co (reference range: 0.0-0.9 s/co)
+The hospital LIS sends an LRI message containing these results to the EHR-S. </Description>
+		<PreCondition>Patient information is pre-loaded in the EHR-S.
+No other Pre-Condition.</PreCondition>
+		<PostCondition>The test message information received by the EHR-S has been incorporated with the patient's record.</PostCondition>
+		<TestObjectives>Demonstrate the capability to import and incorporate a typically populated Hepatitis Panel lab result message.
+Tests support for multiple comments for one test result.</TestObjectives>
+		<Notes>For display verification focus on these areas:
+Proper display of the results (OBX-5) with structured numeric format (#4 and 9) with interpretations (OBX-8) 
+Comments for result of the lab result identified as "Hepatitis C virus Ab Signal/Cutoff in Serum or Plasma by Immunoassay" is properly grouped with its result.
+Results for the Reflex test are properly associated with the result that spawned its creation, which is the detection of Hepatitis C virus Antibody in Serum, as part of the Hepatitis A B C Panel screen.
+</Notes>
+		<Comments>This is the parent message.</Comments>
+	</TestCaseMetaData>

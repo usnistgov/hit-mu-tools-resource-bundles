@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html>
+   <head>
+      <style type="text/css">@media screen { 
+                                maskByMediaType {display:table;} 
+                                fieldset table tbody tr th {font-size:90%} 
+                                fieldset table tbody tr td {font-size:90%;} 
+                                fieldset table tbody tr th {text-align:left;background:#C6DEFF} 
+                                fieldset table thead tr th {text-align:center;}
+                                fieldset table thead tr th:first-child {width:15%;} 
+                                fieldset table thead tr th:nth-child(2) {width:35%;} 
+                                fieldset table thead tr th:nth-child(3) {width:35%;}
+                                fieldset table thead tr th:last-child {width:10%;} 
+                                fieldset {text-align:center;}
+                                fieldset table { width:98%;border: 1px groove;table-layout: fixed; margin:0 auto;border-collapse: collapse;} 
+                                fieldset table tr { border: 3px groove; } 
+                                fieldset table th { border: 2px groove;} 
+                                fieldset table td { border: 2px groove; } 
+                                fieldset table thead {border: 1px groove;background:#446BEC;text-align:left;} 
+                                fieldset table tbody tr td {text-align:left} .embSpace {padding-left:15px;} .embSubSpace {padding-left:25px;} .childField {background:#B8B8B8;} } 
+                                fieldset table tbody tr td div ul {padding-left:60px}
+                                @media print { maskByMediaType {display:table;} 
+                                fieldset table tbody tr th {font-size:70%} 
+                                fieldset table tbody tr td {font-size:70%;} 
+                                fieldset table tbody tr th {text-align:left;background:#C6DEFF}
+                                fieldset table thead tr th {text-align:center;font-size:70%;}
+                                fieldset legend {text-align:center;font-size:70%;}
+                                fieldset table thead tr th:first-child {width:15%;}
+                                fieldset table thead tr th:nth-child(2) {width:35%;}
+                                fieldset table thead tr th:nth-child(3) {width:35%;} 
+                                fieldset table thead tr th:last-child {width:10%;} 
+                                fieldset {text-align:center;page-break-inside: avoid;} 
+                                fieldset table { width:98%;border: 1px groove;table-layout: fixed; margin:0 auto;border-collapse: collapse;page-break-inside: avoid;} fieldset table tr { border: 3px groove; } 
+                                fieldset table th { border: 2px groove;}
+                                fieldset table td { border: 2px groove; } 
+                                fieldset table thead {border: 1px groove;background:#446BEC;text-align:left;} 
+                                fieldset table tbody tr td {text-align:left} .embSpace {padding-left:10px;} .embSubSpace {padding-left:20px;} .childField {background:#B8B8B8;} } @page { counter-increment: page; @bottom-center { content: "Page " counter(page); } } @page :left { margin-left: 5%; margin-right: 5%; } @page :right { margin-left: 5%; margin-right: 5%; }
+                                fieldset table tbody tr td div ul {padding-left:60px}
+                    </style>
+   </head>
+   <body>
+      <fieldset>
+         <legend>Description</legend>
+         <table>
+            <thead>
+               <tr>
+                  <th colspan="1" style="height:20px"/>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td>A patient is hospitalized for substance abuse. The physician orders a hepatitis panel through the hospital's EHR system to test for Hepatitis A, B and C antibodies/antigens. The serum specimen is collected the same day at in the morning and submitted to the hospital lab for testing via their LIS right after it was drawn. A few hours later the patient's test results are as follows:<br/> (1)Hepatitis A IgM antibodies (IgM anti-HAV) "Negative"<br/> (2)Hepatitis A antibodies (anti-HAV) "Negative"<br/> (3)Hepatitis B core antibodies (anti-HBVc) "Negative"<br/> (4)Hepatitis B core antibodies (anti-HBVc) quantitative 0.40 IU/mL (reference range: &lt;0.50 IU/mL)<br/> (5)Hepatitis B virus e antibodies (anti-HBVe) "Negative"<br/> (6)Hepatitis B surface antigen (HBVsAg) "Negative"<br/> (7)Hepatitis B surface antibody (anti-HBVs) "Negative"<br/> (8)Hepatitis C antibody screen (anti-HCV) "Positive"<br/> (9)Hepatitis C antibodies Signal to Cut-off Ratio 10.8 s/co (reference range: 0.0-0.9 s/co)<br/>
+                     <br/>Per CDC recommendations, a confirmatory Hepatitis C RNA PCR test is performed because of the positive Anti-HCV findings. The next day, the Hepatitis C RNA PCR test results confirm the patient is positive for hepatitis, with a value of 761120 IU/ml (reference range: &lt; 43). The Hepatitis C results trigger an Abnormal Flag or "High", as well as the comment:<br/> "Negative: &lt; 0.8, Indeterminate 0.8 - 0.9, Positive: &gt; 0.9. In order to reduce the incidence of a false positive result, the CDC recommends that all s/co ratios between 1.0 and 10.9 be confirmed with additional Verification or PCR testing."<br/>The final report is completed on that day and sent to the ordering provider.</td>
+               </tr>
+            </tbody>
+         </table>
+      </fieldset>
+      <fieldset>
+         <legend>Comments</legend>
+         <table>
+            <thead>
+               <tr>
+                  <th colspan="1" style="height:20px"/>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td>This is the reflex message and  this test case is evaluating correct use of the status codes in OBR-25 and OBX-11.<br/>Special case test aspects include ensuring that the system can correctly populate the data elements for linking parent/child results in accordance with the requirements specified in the implementation guide for the FRN and FRU profiles.</td>
+               </tr>
+            </tbody>
+         </table>
+      </fieldset>
+      <fieldset>
+         <legend>PreCondition</legend>
+         <table>
+            <thead>
+               <tr>
+                  <th colspan="1" style="height:20px"/>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td>LRI_5.1_1.1-NG_FRN  has been previously sent.</td>
+               </tr>
+            </tbody>
+         </table>
+      </fieldset>
+      <fieldset>
+         <legend>PostCondition</legend>
+         <table>
+            <thead>
+               <tr>
+                  <th colspan="1" style="height:20px"/>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td>No Post Condition.</td>
+               </tr>
+            </tbody>
+         </table>
+      </fieldset>
+      <fieldset>
+         <legend>TestObjectives</legend>
+         <table>
+            <thead>
+               <tr>
+                  <th colspan="1" style="height:20px"/>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td>
+                     <ul style="padding-left: 20px;">
+                        <li>Demonstrate the capability to create a valid Parent-Child message for a Hepatitis-Reflex lab result message.</li>
+                        <li>Tests support for multiple comments for one test result.</li>
+                     </ul>
+                  </td>
+               </tr>
+            </tbody>
+         </table>
+      </fieldset>
+   </body>
+</html>

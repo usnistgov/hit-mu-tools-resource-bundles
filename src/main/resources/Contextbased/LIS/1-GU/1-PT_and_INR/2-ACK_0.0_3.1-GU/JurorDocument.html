@@ -1,0 +1,279 @@
+<style xmlns:fo="http://www.w3.org/1999/XSL/Format" type="text/css">
+            @media screen{
+                .jurorContainer fieldset{
+                    font-size:100%;
+                }
+                .jurorContainer fieldset table tbody tr th{
+                    font-size:90%
+                }
+                .jurorContainer fieldset table tbody tr td{
+                    font-size:90%;
+                }
+            }
+            @media print{
+                .jurorContainer fieldset{
+                    font-size:small;
+                }
+                .jurorContainer fieldset table th{
+                    font-size:x-small;
+                }
+                .jurorContainer fieldset table td{
+                    font-size:xx-small
+                }
+                * [type = text]{
+                    width:98%;
+                    height:15px;
+                    margin:2px;
+                    padding:0px;
+                    background:1px #ccc;
+                }
+            
+                .jurorContainer * [type = checkbox]{
+                    width:10px;
+                    height:10px;
+                    margin:2px;
+                    padding:0px;
+                    background:1px #ccc;
+                }
+                
+                
+            }
+            
+             .jurorContainer fieldset table tr {
+            page-break-inside: avoid;
+            }
+            
+            .jurorContainer * [type = text]{
+                width:95%;
+            }
+            
+            .jurorContainer fieldset{
+                page-break-inside:avoid;
+            }
+            .jurorContainer fieldset table{
+                width:98%;
+                border:1px black groove;
+                margin:0 auto;
+                page-break-inside:avoid;
+            }
+            .jurorContainer fieldset table tr{
+                border:1px black groove;
+            }
+            .jurorContainer fieldset table th{
+                border:1px black groove;
+            }
+            .jurorContainer fieldset table td{
+                border:1px black groove;
+                empty-cells:show;
+            }
+            .jurorContainer fieldset table[id = inspectionStatus] thead tr th:last-child{
+                width:2%;
+                color:black;
+            }
+            .jurorContainer fieldset table[id = inspectionStatus] thead tr th:nth-last-child(2){
+                width:2%;
+                color:black;
+            }
+            .jurorContainer fieldset table[id = inspectionStatus] thead tr th:nth-last-child(3){
+                width:45%;
+            }
+            .jurorContainer fieldset table thead{
+                border:1px groove;
+                background:#446BEC;
+                text-align:center;
+                color:white;
+            }
+            .jurorContainer fieldset table thead tr td{
+                text-align:left;
+                color:black;
+                background:white;
+            }
+            .jurorContainer fieldset table tbody tr th{
+                text-align:left;
+                background:#C6DEFF;
+            }
+            .jurorContainer fieldset table tbody tr td{
+                text-align:left
+            }
+            .jurorContainer fieldset table tbody tr td [type = text]{
+                text-align:left;
+                margin-left:1%
+            }
+            .jurorContainer fieldset table caption{
+                font-weight:bold;
+                color:#0840F8;
+            }
+            .jurorContainer fieldset legend{
+                font-weight:bold;
+            }
+            .jurorContainer fieldset pre{
+                font-family:Times New Roman;
+            }
+            .jurorContainer fieldset p{
+                text-align:left;
+            }
+            .jurorContainer fieldset{
+                width:98%;
+                border:1px solid #446BEC;
+            }
+            .jurorContainer .embSpace{
+                padding-left:25px;
+            }
+            .jurorContainer .noData{
+                background:#B8B8B8;
+            }
+            .jurorContainer .boldItalic{
+                font-style:italic;
+                font-weight:bold;
+                color:black;
+            }
+            .jurorContainer .bold{
+                font-weight:bold;
+                color:red;
+            }
+            .jurorContainer .normal{
+                font-weight:normal;
+            }
+            .addSpace{
+                height:20px;
+            }
+            }</style><script xmlns:fo="http://www.w3.org/1999/XSL/Format" type="text/javascript">
+            
+            
+            function comment(){
+            
+            $("textarea").on("keyup",function (){
+            var h=$(this);
+            h.height(20).height(h[0].scrollHeight);
+            });
+            
+            } 
+      
+            if(typeof jQuery =='undefined') {
+            var headTag = document.getElementsByTagName("head")[0];
+            var jqTag = document.createElement('script');
+            jqTag.type = 'text/javascript';
+            jqTag.src = 'http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js';
+            jqTag.onload = comment;
+            
+            headTag.appendChild(jqTag);
+            }
+            else {  
+            $(document).ready(function (){
+            
+            comment();
+            
+            
+            });
+            
+            }
+        </script><div class="jurorContainer "><tabset><tab heading="FULL"><div class="panel-body"><h3></h3>
+<div style="display:none">	 
+   			Version 1.0: Code transfer to sriniadhi.work@gmail.com - restructuring with imports and comments; no change of functionality.
+   						1.1: Updates changing the Parent/Child order and other updates from the latest template.
+   						1.2: added nte after orc, fixed "Parent Information" in the title not being included in the Order contd
+   						1.3: Dropped the S-MA references, and added the media print formatting regarding line breaks.
+   						1.4: Fixed a bug in parent child.
+   						1.5: 	- added Race (PID-10) in Patient Information - Display Verification 
+   								- removed Results Report Status header row  in Lab Results – Display Verification
+   								- removed “(Note 2)” for OBR-28 in Order Information - Incorporate Verification 
+   								- removed “Note 2” and associated verbiage at the end of the Order Information - Incorporate Verification
+   						1.6:	- fixed C&amp;S and Hepatatatis parent-child incorporsate display
+   								- removed references to $generate-plain-html
+   						2.0: 	- change to the Parent/Child templates
+   								- added TQ1-9.2 to Order Information - Display Verification
+   								- added TQ1-9.1, .2, .3, and .9 elements to the Timing/Quantity Information - Incorporate 
+   								- added ED Data Type for OBX-2 in the Incorporate Verification
+   
+   		
+</div>
+<fieldset>
+   <table id="headerTable">
+      <thead>
+         <tr>
+            <th colspan="2">HL7 v2.5 ORU^R01^ORU_R01 Message: Incorporation of
+               Laboratory Results
+            </th>
+         </tr>
+      </thead>
+      <tbody>
+         <tr>
+            <th>Test Case ID</th>
+            <td>ACK_0.0_3.1-GU</td>
+         </tr>
+         <tr>
+            <th>Juror ID</th>
+            <td><input style="background: 1px  #E2E2E2;" type="text" maxlength="50" value=""></td>
+         </tr>
+         <tr>
+            <th>Juror Name</th>
+            <td><input style="background: 1px  #E2E2E2;" type="text" maxlength="50" value=""></td>
+         </tr>
+         <tr>
+            <th>HIT System Tested</th>
+            <td><input style="background: 1px  #E2E2E2;" type="text" maxlength="50" value=""></td>
+         </tr>
+         <tr>
+            <th>Inspection Date/Time</th>
+            <td><input style="background: 1px  #E2E2E2;" type="text" maxlength="50" value=""></td>
+         </tr>
+         <tr>
+            <th>Inspection Settlement (Pass/Fail)</th>
+            <td>
+               <table id="inspectionStatus">
+                  <thead>
+                     <tr>
+                        <th>Pass</th>
+                        <th>Fail</th>
+                     </tr>
+                  </thead>
+                  <tbody>
+                     <tr>
+                        <td><input type="checkbox" value=""></td>
+                        <td><input type="checkbox" value=""></td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+         </tr>
+         <tr>
+            <th>Reason Failed</th>
+            <td><input style="background: 1px  #E2E2E2;" type="text" maxlength="50" value=""></td>
+         </tr>
+         <tr>
+            <th>Juror Comments</th>
+            <td><input style="background: 1px  #E2E2E2;" type="text" maxlength="50" value=""></td>
+         </tr>
+      </tbody>
+   </table>
+</fieldset><br><fieldset>
+   <p>This Test Case-specific Juror Document provides a checklist for the Tester to use
+      during certification testing for assessing the health information
+      technology's ability to receive and process an Acknowledgement message
+      related to laboratory result messaging in which NO Error is returned in the ACK
+      message. 
+   </p>
+   <p>The exact wording and format of the display in the health information technology
+      (HIT) is not in-scope for this test.
+   </p>
+</fieldset><br><fieldset>
+   <table>
+      <thead>
+         <tr>
+            <th>Process an Acknowledgement</th>
+         </tr>
+      </thead>
+      <tbody>
+         <tr>
+            <td>
+               <p>The receiving HIT system being tested shall process the ACK
+                  message correctly; a positive notification indicating that the
+                  ACK message was processed correctly <u>need not be made
+                     visible</u> in the system.
+               </p>
+            </td>
+         </tr>
+      </tbody>
+   </table>
+</fieldset>
+<h3></h3></div></tab></tabset></div>

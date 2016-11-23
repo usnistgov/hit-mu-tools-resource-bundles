@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseMetaData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="LRI_5.1_2.1-NG-FRN" date="11/02/2016" name="Reflex" version="20161102">
+		<Description>A patient is hospitalized for substance abuse. The physician orders a hepatitis panel through the hospital's EHR system to test for Hepatitis A, B and C antibodies/antigens. The serum specimen is collected the same day at in the morning and submitted to the hospital lab for testing via their LIS right after it was drawn. A few hours later the patient's test results are as follows:
+ (1)Hepatitis A IgM antibodies (IgM anti-HAV) "Negative"
+ (2)Hepatitis A antibodies (anti-HAV) "Negative"
+ (3)Hepatitis B core antibodies (anti-HBVc) "Negative"
+ (4)Hepatitis B core antibodies (anti-HBVc) quantitative 0.40 IU/mL (reference range: &lt;0.50 IU/mL)
+ (5)Hepatitis B virus e antibodies (anti-HBVe) "Negative"
+ (6)Hepatitis B surface antigen (HBVsAg) "Negative"
+ (7)Hepatitis B surface antibody (anti-HBVs) "Negative"
+ (8)Hepatitis C antibody screen (anti-HCV) "Positive"
+ (9)Hepatitis C antibodies Signal to Cut-off Ratio 10.8 s/co (reference range: 0.0-0.9 s/co)
+
+Per CDC recommendations, a confirmatory Hepatitis C RNA PCR test is performed because of the positive Anti-HCV findings. The next day, the Hepatitis C RNA PCR test results confirm the patient is positive for hepatitis, with a value of 761120 IU/ml (reference range: &lt; 43). The Hepatitis C results trigger an Abnormal Flag or "High", as well as the comment:
+ "Negative: &lt; 0.8, Indeterminate 0.8 - 0.9, Positive: &gt; 0.9. In order to reduce the incidence of a false positive result, the CDC recommends that all s/co ratios between 1.0 and 10.9 be confirmed with additional Verification or PCR testing."
+The final report is completed on that day and sent to the ordering provider.</Description>
+		<PreCondition>Patient information is pre-loaded in the EHR-S.
+and LRI_5.1_1.1-NG_FRN  message has been received and incorporated.</PreCondition>
+		<PostCondition>The test message information received by the EHR-S has been incorporated with the patient's record.</PostCondition>
+		<TestObjectives>Demonstrate the capability of the EHR-S to import and incorporate Parent-Child Reflex results.
+Tests support for multiple comments for one test result.
+</TestObjectives>
+		<Notes>For display verification focus on these areas:
+Proper display of the results (OBX-5) with structured numeric format (#4 and 9) with interpretations (OBX-8) 
+Comments for result of the lab result identified as "Hepatitis C virus Ab Signal/Cutoff in Serum or Plasma by Immunoassay" is properly grouped with its result.
+Results for the Reflex test are properly associated with the result that spawned its creation, which is the detection of Hepatitis C virus Antibody in Serum, as part of the Hepatitis A B C Panel screen.
+</Notes>
+		<Comments>This is the reflex message.
+Special case test aspects include ensuring that the system can correctly process the data elements for linking parent/child results in accordance with the requirements specified in the implementation guide for the FRN and FRU profiles.</Comments>
+	</TestCaseMetaData>

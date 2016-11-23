@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<HL7v2xConformanceProfile HL7Version="2.5.1" ProfileType="HL7">
+	<MetaData Name="" OrgName="NIST" Version="V251_IG_SIF_LABRESULTS_DSTUR2_D1_2014SEP" Status="" Topics="confsig--2.5.1-profile-accNE_accAL-Deferred"/>
+	<Encodings>
+		<Encoding>ER7</Encoding>
+	</Encodings>
+	<DynamicDef AccAck="NE" AppAck="AL" MsgAckMode="Deferred"/>
+   <HL7v2xStaticDef MsgType="ORU" EventType="R01" MsgStructID="ORU_R01" OrderControl="RE" EventDesc="HL7 Version 2.5.1 Implementation Guide: Laboratory Results Interface for US Realm, Release 1" Role="Sender">
+      <MetaData Name="Laboratory Results Interface" OrgName="HL7 Orders&amp;Observations WG and Health and Human Services" Version="1 - draft 0.9" Status="Informative" Topics="confsig-HL7 Orders&amp;Observations WG and Health and Human Services-2.5.1-static-ACK-R01-null-ACK_ALL-1 - draft 0.9-Informative-Sender"/>
+		<Segment Name="MSH" flavor="LRI_NG" LongName="Message Header" Usage="R" Min="1" Max="1"/>
+		<Segment Name="SFT" flavor="HL7" LongName="Software Segment" Usage="O" Min="0" Max="*"/>
+		<SegGroup Name="PATIENT_RESULT" LongName="PATIENT_RESULT" Usage="R" Min="1" Max="1">
+			<SegGroup Name="PATIENT" LongName="PATIENT_RESULT.PATIENT" Usage="R" Min="1" Max="1">
+				<Segment Name="PID" flavor="LRI_NG" LongName="Patient Identification" Usage="R" Min="1" Max="1"/>
+				<Segment Name="PD1" flavor="HL7" LongName="Patient Additional Demographic" Usage="O" Min="0" Max="1"/>
+				<Segment Name="NTE" flavor="HL7" LongName="Notes and Comments" Usage="O" Min="0" Max="*"/>
+				<Segment Name="NK1" flavor="HL7" LongName="Next of Kin / Associated Parties" Usage="O" Min="0" Max="*"/>
+				<SegGroup Name="VISIT" LongName="VISIT" Usage="O" Min="0" Max="1">
+					<Segment Name="PV1" flavor="HL7" LongName="Patient Visit" Usage="R" Min="1" Max="1"/>
+					<Segment Name="PV2" flavor="HL7" LongName="Patient Visit - Additional Information" Usage="O" Min="0" Max="1"/>
+				</SegGroup>
+			</SegGroup>
+			<SegGroup Name="ORDER_OBSERVATION" LongName="ORDER_OBSERVATION" Usage="R" Min="1" Max="*">
+				<ConformanceStatement id="LRI-53">
+					<EnglishDescription>[NOT YET IMPLEMENTED] If one or more SPM segments are present for the same OBR, then the earliest SPM-17.1 (Range Start Date/Time) SHALL be equal to or before OBR-7 (Observation Date/Time) and OBR-7 (Observation Date/Time) SHALL be equal to or before the latest SPM-17.2 (Range End Date/Time).</EnglishDescription>
+					<!-- this will always fail -->
+					<Assertion>
+						<AND>
+							<Valued location="."/>
+							<NOT>
+								<Valued location="."/>
+							</NOT>
+						</AND>
+					</Assertion>
+				</ConformanceStatement>
+				<ConformanceStatement id="LRI-54">
+					<EnglishDescription>[NOT YET IMPLEMENTED] If one or more SPM segments are present for the same OBR and if OBR-8 (Observation End Date/Time) is present, OBR-8 (Observation End Date/Time) SHALL be equal to or before the latest SPM-17.2 (Range End Date/Time).</EnglishDescription>
+					<!-- this will always fail -->
+					<Assertion>
+						<AND>
+							<Valued location="."/>
+							<NOT>
+								<Valued location="."/>
+							</NOT>
+						</AND>
+					</Assertion>
+				</ConformanceStatement>
+				<Segment Name="ORC" flavor="LRI_NG" LongName="Common Order" Usage="R" Min="1" Max="1"/>
+				<Segment Name="OBR" flavor="LRI_NG" LongName="Observation Request" Usage="R" Min="1" Max="1"/>
+				<Segment Name="NTE" flavor="LRI" LongName="Notes and Comments for OBR" Usage="RE" Min="0" Max="*"/>
+				<SegGroup Name="TIMING_QTY" LongName="ORDER_OBSERVATION.TIMING_QTY" Usage="RE" Min="0" Max="1">
+					<Segment Name="TQ1" flavor="LRI" LongName="Timing/Quantity" Usage="R" Min="1" Max="1"/>
+					<Segment Name="TQ2" flavor="HL7" LongName="Timing/Quantity Relationship" Usage="O" Min="0" Max="*"/>
+				</SegGroup>
+				<Segment Name="CTD" flavor="HL7" LongName="Contact Data" Usage="O" Min="0" Max="1"/>
+				<SegGroup Name="OBSERVATION" LongName="PATIENT_RESULT.ORDER_OBSERVATION.OBSERVATION" Usage="C" Min="0" Max="*" PredicateTrueUsage="R" PredicateFalseUsage="X">
+					<Segment Name="OBX" flavor="LRI_NG" LongName="Observation/Result" Usage="R" Min="1" Max="1"/>
+					<Segment Name="NTE" flavor="LRI" LongName="Notes and Comments for OBX" Usage="RE" Min="0" Max="*"/>
+				</SegGroup>
+				<Segment Name="FT1" flavor="HL7" LongName="Financial Transaction" Usage="O" Min="0" Max="*"/>
+				<Segment Name="CTI" flavor="HL7" LongName="Clinical Trial Identification" Usage="O" Min="0" Max="*"/>
+				<SegGroup Name="SPECIMEN" LongName="PATIENT_RESULT.ORDER_OBSERVATION.SPECIMEN" Usage="RE" Min="0" Max="*">
+					<Segment Name="SPM" flavor="LRI_NG" LongName="Specimen" Usage="R" Min="1" Max="1"/>
+					<Segment Name="OBX" flavor="HL7" LongName="Observation/Result" Usage="O" Min="0" Max="*"/>
+				</SegGroup>
+			</SegGroup>
+		</SegGroup>
+		<Segment Name="DSC" flavor="HL7" LongName="Continuation Pointer" Usage="X" Min="0" Max="0"/>
+	</HL7v2xStaticDef>
+</HL7v2xConformanceProfile>

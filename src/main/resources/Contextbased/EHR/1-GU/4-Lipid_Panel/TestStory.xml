@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseMetaData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="Lipid Panel - GU" date="11/02/2016" name="Lipid Panel Header" version="20161102">
+		<Description>The LIS system creates and delivers an electronic lab result message to the EHR-S.  These test plan are designed to test the system's capability to process reports containing fasting status information and handle receipt of duplicate messages.</Description>
+		<PreCondition>Patient information is pre-loaded in the EHR-S.
+No other Pre-Condition.</PreCondition>
+		<PostCondition>The test message information received by the EHR-S has been incorporated with the patient's record.</PostCondition>
+		<TestObjectives>Demonstrate ability to import and incorporate a message that contains fasting status information and demonstrate the proper handling of receipt of duplicate reports.</TestObjectives>
+	</TestCaseMetaData>

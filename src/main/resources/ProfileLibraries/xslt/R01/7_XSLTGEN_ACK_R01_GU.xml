@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<HL7v2xConformanceProfile HL7Version="2.5.1" ProfileType="Constrainable">
+   <MetaData Name="Laboratory Results Interface" OrgName="HL7 Orders&amp;Observations WG and Health and Human Services" Status="Informative" Topics="confsig-HL7 Orders&amp;Observations WG and Health and Human Services-2.5.1-profile-accNE_accAL-Immediate" Date="November 20, 2013" Version="LRI ACK GU 2014 1.0"/>
+   <ImpNote>Note that this specification focuses on the Laboratory Information System message. </ImpNote>
+   <Encodings>
+      <Encoding>ER7</Encoding>
+   </Encodings>
+   <DynamicDef AccAck="NE" AppAck="AL" MsgAckMode="Immediate"/>
+   <HL7v2xStaticDef MsgType="ACK" EventType="R01" MsgStructID="ACK" OrderControl="RE" EventDesc="ACK for Laboratory Results Interface for US Realm, Release 1 (HL7 Version 2.5.1 Implementation Guide)" Role="Sender">
+      <MetaData Name="Laboratory Results Interface" OrgName="HL7 Orders&amp;Observations WG and Health and Human Services" Version="1 - draft 0.9" Status="Informative" Topics="confsig-HL7 Orders&amp;Observations WG and Health and Human Services-2.5.1-static-ACK-R01-null-ACK_ALL-1 - draft 0.9-Informative-Sender"/>
+      <Segment Name="MSH" flavor="LRI_GU_ACK" LongName="Message Header" Usage="R" Min="1" Max="1"></Segment>
+      <Segment Name="SFT" flavor="HL7" LongName="Software Segment." Usage="O" Min="0" Max="*"></Segment>
+      <Segment Name="MSA" flavor="LRI" LongName="Message Acknowledgment" Usage="R" Min="1" Max="1"></Segment>
+      <Segment Name="ERR" flavor="LRI" LongName="Error" Usage="C" Min="0" Max="*" PredicateTrueUsage="R" PredicateFalseUsage="O">
+         <Predicate>
+            <EnglishDescription>If MSA.1 (Message Acknowledgement) is not valued AA or CA </EnglishDescription>
+            <Condition>
+               <NOT>
+                  <AND>
+                     <PlainText location="./3/1" value="AA"/>
+                     <PlainText location="./3/1" value="CA"/>
+                  </AND>
+               </NOT>
+            </Condition>
+         </Predicate>
+      </Segment>
+   </HL7v2xStaticDef>
+</HL7v2xConformanceProfile>

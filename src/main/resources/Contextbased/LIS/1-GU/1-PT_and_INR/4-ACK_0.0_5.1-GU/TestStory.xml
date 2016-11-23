@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseMetaData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="ACK_0.0_5.1-GU" date="11/02/2016" name="Smoke test ACK to AppACK" version="20161102">
+		<Description>Century Hospital's LIS transmits an accept acknowledgement message to Dr Radon's EHR-S which indicates the Application Acknowledgement message has been successfully received.</Description>
+		<PreCondition>Test case ACK_0.0_4.1-GU message has been received by the LIS.</PreCondition>
+		<PostCondition>No Post Condition.</PostCondition>
+		<TestObjectives>Minimally populated message.
+Demonstrate capability to support creating a positive acknowledgment Message in response to successful receipt of the Application Acknowledgment ( ACK )  message:
+Minimally populated MSH Segment - Demonstrate the capability to support the minimally required data elements in the MSH segment.
+Minimally populated MSA Segment - Demonstrate the capability to support the minimally required data elements in the MSA segment.</TestObjectives>
+		<Notes>No Notes.</Notes>
+		<Comments>This is the initial "smoke testing" to reveal simple failures of the acknowledgment message severe enough to preclude further testing.</Comments>
+	</TestCaseMetaData>

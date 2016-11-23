@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseMetaData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="EHR Test Plan" date="11/02/2016" name="EHR Test Plan" version="20161102">
+		<PreCondition>Patient information is pre-loaded in the EHR-S.</PreCondition>
+		<PostCondition>The test message information received by the EHR-S has been incorporated with the patient's record.</PostCondition>
+		<Notes>To support real-time dynamic testing, the Tester at their discretion, may selectively modify result report data prior to importing the test message into the EHR technology.
+The test data for MSH.21 demonstrates the use of profile components; the system-under-test may alternatively use the post or pre-coordinated profile identifier(s).</Notes>
+		<Comments>This is the EHR test plan.  It involves display and incorporation verification at different levels (see juror document for details). </Comments>
+	</TestCaseMetaData>

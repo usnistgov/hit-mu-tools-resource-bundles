@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseMetaData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="LRI_6.0_1.1-NG" date="11/2/2016" name="final" version="20161102">
+		<Description>Mrs. Delores Lopez is a 30 year old Hispanic female who presents to Dr. Radon's clinic for a routine gynecological examination. A pap smear sample is collected after confirming with Ms. Lopez that her last menstrual period was two weeks ago.  A pap smear is ordered from Century Hospital's clinical lab through the Clinic's EHR and the specimen is sent to the lab for testing along with the response to the ask on order (AOE) question "Date of last menstrual period". Century Hospital's clinical lab forwarded this order to Pacific Anatomic Pathology Services which performed the test. 
+The final results were sent from Century Hospital's clinical lab's LIS to the Provider's EHR.</Description>
+		<PreCondition>Patient information is pre-loaded in the EHR-S.
+No other Pre-Condition.</PreCondition>
+		<PostCondition>The test message information received by the EHR-S has been incorporated with the patient's record.</PostCondition>
+		<TestObjectives>Determine if the system can correctly import and incorporate a valid typically populated message for anatomic pathology report for a PAP smear.
+Demonstrate ability to support Ask at Order Entry Questions.
+Demonstrate the ability to consume an embedded (ED) data datatype - in this case a pdf.
+</TestObjectives>
+		<Notes>For display verification focus on these areas:
+Answers for Ask at Order Entry questions (OBX-5) are distinguished from the results for the same order.
+Notes are related to the coded result of the Pap report
+Display of pdf document sent this message.
+The provided example message does not contain the full base64 encoded content of the expected pdf document for readability reasons, but the tool will properly validate the full version in both context-based and context-free validation.</Notes>
+		<Comments>This test case  is evaluating the handling of an Anatomic Pathology report, including sending a pdf, and Ask at Order Questions responses.</Comments>
+	</TestCaseMetaData>

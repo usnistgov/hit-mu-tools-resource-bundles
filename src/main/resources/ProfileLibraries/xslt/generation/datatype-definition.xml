@@ -1,0 +1,2415 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--2015-05-22T16:10:10.462-04:00--><HL7v2xConformanceProfile HL7Version="2.5.1" ProfileType="HL7">
+   <Encodings>
+      <Encoding>ER7</Encoding>
+   </Encodings>
+   <HL7v2xStaticDef EventDesc="" EventType="DTP" MsgStructID="" MsgType="DTP" Role="Sender">
+      <Segment Max="1" MaxLength="1" Min="0" MinLength="0" Name="DTLibBASE_LOI-Receiver-Usage"
+               Usage="O">
+	<!-- V251_IG_SIF_LABRESULTS_DSTUR2_D1_2014SEP -->
+	<!-- LRI_CE -->
+	<Field Datatype="LRI_CE" Max="1" MaxLength="1" Min="0" MinLength="0" Name="LRI_CE"
+                Usage="O">
+		          <ImpNote>The sender shall always populate the first triplet before populating other triplets; the receiver shall examine all triplets to find relevant values.</ImpNote>
+		          <ConformanceStatement id="LRI-1">
+			            <EnglishDescription>If data is available for only one Coded Element then the triplet of CE.1 (Identifier), CE.2 (Text), and CE.3 (Name of Coding System) SHALL be valued in accordance with the rules given for CE.1, CE.2, and CE.3.</EnglishDescription>
+			            <Assertion>
+				              <OR>
+					                <NOT>
+						                  <OR>
+							                    <Valued location="./4"/>
+							                    <OR>
+								                      <Valued location="./5"/>
+								                      <Valued location="./6"/>
+							                    </OR>
+						                  </OR>
+					                </NOT>
+					                <OR>
+						                  <Valued location="./1"/>
+						                  <OR>
+							                    <Valued location="./2"/>
+							                    <Valued location="./3"/>
+						                  </OR>
+					                </OR>
+				              </OR>
+			            </Assertion>
+		          </ConformanceStatement>
+		          <Component Name="Identifier" Usage="RE" Datatype="LRI_ST" MaxLength="20" MinLength="1">
+			            <ConformanceStatement id="LN-001">
+				              <EnglishDescription>If CE.3 (Name of Coding System) is valued "LN" then CE.1 SHALL be a valid LOINC code identifier format.</EnglishDescription>
+				              <Assertion>
+					                <Custom className="gov.nist.healthcare.mu.lri.custom.Loinc" id="1"/>
+				              </Assertion>
+			            </ConformanceStatement>
+			            <ImpNote>Length 1..20 LRI-CE-1: If data is available for only one Coded Element then the triplet of CE.1 (Identifier), CE.2 (Text), and CE.3 (Name of Coding System) shall be valued in accordance with the rules given for CE.1, CE.2, and CE.3. </ImpNote>
+			            <Reference>LRI-CE-1: If data is available for only one Coded Element then the triplet of CE.1 (Identifier), CE.2 (Text), and CE.3 (Name of Coding System) shall be valued in accordance with the rules given for CE.1, CE.2, and CE.3.</Reference>
+		          </Component>
+		          <Component Name="Text" Usage="C" Datatype="LRI_ST" MaxLength="199" MinLength="1"
+                       PredicateTrueUsage="R"
+                       PredicateFalseUsage="RE">
+			            <Predicate>
+				              <EnglishDescription> If CE.1 (Identifier) is not valued</EnglishDescription>
+				              <Condition>
+					                <NOT>
+						                  <Valued location="./1"/>
+					                </NOT>
+				              </Condition>
+			            </Predicate>
+			            <ImpNote>Length 1..199 C(R/RE) It is strongly recommended that text be sent to accompany any identifier. When a coded value is not known, text can still be sent, in which case no coding system should be identified. </ImpNote>
+			            <Reference>LRI-CE-2: If CE.1 (Identifier) is not valued, then CE.2 (Text) SHALL be valued.</Reference>
+		          </Component>
+		          <Component Name="Name of Coding System" Usage="C" Datatype="LRI_ID" Table="US_LAB_HL70396"
+                       MaxLength="12"
+                       MinLength="1"
+                       PredicateTrueUsage="R"
+                       PredicateFalseUsage="X">
+			            <Predicate>
+				              <EnglishDescription> If CE.1 (Identifier) is valued</EnglishDescription>
+				              <Condition>
+					                <Valued location="./1"/>
+				              </Condition>
+			            </Predicate>
+			            <ImpNote>Length 1..12 C(R/X) </ImpNote>
+		          </Component>
+		          <Component Name="Alternate Identifier" Usage="RE" Datatype="LRI_ST" MaxLength="20"
+                       MinLength="1">
+			            <ConformanceStatement id="LN-001">
+				              <EnglishDescription>If CE.6 (Name of AlternateCoding System) is valued "LN" then CE.4 SHALL be a valid LOINC code identifier format.</EnglishDescription>
+				              <Assertion>
+					                <Custom className="gov.nist.healthcare.mu.lri.custom.Loinc" id="2"/>
+				              </Assertion>
+			            </ConformanceStatement>
+			            <ImpNote>Length 1..20 The alternate identifier (from the alternate coding system) should be the closest match for the identifier found in component 1. </ImpNote>
+		          </Component>
+		          <Component Name="Alternate Text" Usage="RE" Datatype="LRI_ST" MaxLength="199"
+                       MinLength="1">
+			            <ImpNote>Length 1..199 ISSUE: It should be conditional and the predicate is based on the presence of CE.4: LRI-CE-4: If CE.4 (Alternate Identifier) is valued, then CE.6 (Name of Alternate Coding System) SHALL be valued. It is strongly recommended that alternate text be sent to accompany any alternate identifier. </ImpNote>
+			            <Reference>LRI-CE-4: If CE.4 (Alternate Identifier) is valued, then CE.6 (Name of Alternate Coding System) SHALL be valued.</Reference>
+		          </Component>
+		          <Component Name="Name of Alternate Coding System" Usage="C" Datatype="LRI_ID"
+                       Table="US_LAB_HL70396"
+                       MaxLength="12"
+                       MinLength="1"
+                       PredicateTrueUsage="R"
+                       PredicateFalseUsage="X">
+			            <Predicate>
+				              <EnglishDescription> If CE.4 (Alternate Identifier) is valued</EnglishDescription>
+				              <Condition>
+					                <Valued location="./4"/>
+				              </Condition>
+			            </Predicate>
+			            <ImpNote>Length 1..12 C(R/X) Lab to EHR Condition predicate: Required if an alternate identifier is provided in component 4. </ImpNote>
+			            <Reference>.</Reference>
+		          </Component>
+	        </Field>
+	        <!-- LRI_CWE_CRE -->
+	<Field Datatype="LRI_CWE_CRE" Max="1" MaxLength="1" Min="0" MinLength="0"
+                Name="LRI_CWE_CRE"
+                Usage="O">
+		          <ImpNote>Pre-adoption from V2.72.7.1 of Components 10-22 </ImpNote>
+		          <Component Name="Identifier" Usage="RE" Datatype="LRI_ST" MaxLength="20" MinLength="1">
+			            <ConformanceStatement id="LN-001">
+				              <EnglishDescription>If CWE.3 (Name of Coding System) is valued "LN" then CWE.1 SHALL be a valid LOINC code identifier format.</EnglishDescription>
+				              <Assertion>
+					                <Custom className="gov.nist.healthcare.mu.lri.custom.Loinc" id="1"/>
+				              </Assertion>
+			            </ConformanceStatement>
+			            <ImpNote>Length 1..20 LRI-CWE.a-1: If data is available for only one Coded Element then the triplet of CWE.1 (Identifier), CWE.2 (Text), and CWE.3 (Name of Coding System) shall be valued in accordance with the rules given for CE.1, CE.2, and CE.3. </ImpNote>
+		          </Component>
+		          <Component Name="Text" Usage="C" Datatype="LRI_ST" MaxLength="199" MinLength="1"
+                       PredicateTrueUsage="RE"
+                       PredicateFalseUsage="X">
+			            <Predicate>
+				              <EnglishDescription> If CWE_CRE.1 (Identifier) is valued</EnglishDescription>
+				              <Condition>
+					                <Valued location="./1"/>
+				              </Condition>
+			            </Predicate>
+			            <ImpNote>Length 1..199, C(RE/X) LRI-CWE.a-2: If CWE.1 (Identifier) is empty then CWE.2 (Text) SHALL NOT be valued. </ImpNote>
+		          </Component>
+		          <Component Name="Name of Coding System" Usage="C" Datatype="LRI_ID" Table="US_LAB_HL70396"
+                       MaxLength="12"
+                       MinLength="1"
+                       PredicateTrueUsage="R"
+                       PredicateFalseUsage="X">
+			            <Predicate>
+				              <EnglishDescription> If CWE_CRE.1 (Identifier) is valued</EnglishDescription>
+				              <Condition>
+					                <Valued location="./1"/>
+				              </Condition>
+			            </Predicate>
+			            <ImpNote>Length 1..12, C(R/X) LRI-CWE.a-3: If CWE.1 (Identifier) is populated then CWE.3 (Name of Coding System) SHALL be valued. </ImpNote>
+		          </Component>
+		          <Component Name="Alternate Identifier" Usage="C" Datatype="LRI_ST" MaxLength="20"
+                       MinLength="1"
+                       PredicateTrueUsage="RE"
+                       PredicateFalseUsage="X">
+			            <Predicate>
+				              <EnglishDescription> If CWE_CRE.1 (Identifier) is valued</EnglishDescription>
+				              <Condition>
+					                <Valued location="./1"/>
+				              </Condition>
+			            </Predicate>
+			            <ConformanceStatement id="LN-001">
+				              <EnglishDescription>If CWE.6 (Name of AlternateCoding System) is valued "LN" then CWE.4 SHALL be a valid LOINC code identifier format.</EnglishDescription>
+				              <Assertion>
+					                <Custom className="gov.nist.healthcare.mu.lri.custom.Loinc" id="2"/>
+				              </Assertion>
+			            </ConformanceStatement>
+			            <ImpNote>Length 1..20, C(RE/X) The alternate identifier (from the alternate coding system) should be the closest match for the identifier found in component 1. LRI-CWE.a-4: If CWE.4 (Alternate Identifier) is populated then CWE.6 (Name of Alternate Coding System) SHALL be valued. </ImpNote>
+		          </Component>
+		          <Component Name="Alternate Text" Usage="C" Datatype="LRI_ST" MaxLength="199" MinLength="1"
+                       PredicateTrueUsage="RE"
+                       PredicateFalseUsage="X">
+			            <Predicate>
+				              <EnglishDescription> If CWE_CRE.4 (Alternate Identifier) is valued</EnglishDescription>
+				              <Condition>
+					                <Valued location="./4"/>
+				              </Condition>
+			            </Predicate>
+			            <ImpNote>Length 1..199 C(RE/X) </ImpNote>
+		          </Component>
+		          <Component Name="Name of Alternate Coding System" Usage="C" Datatype="LRI_ID"
+                       Table="US_LAB_HL70396"
+                       MaxLength="12"
+                       MinLength="1"
+                       PredicateTrueUsage="R"
+                       PredicateFalseUsage="X">
+			            <Predicate>
+				              <EnglishDescription> If CWE_CRE.4 (Alternate Identifier) is valued</EnglishDescription>
+				              <Condition>
+					                <Valued location="./4"/>
+				              </Condition>
+			            </Predicate>
+			            <ImpNote>Length 1..12 C(R/X) </ImpNote>
+		          </Component>
+		          <Component Name="Coding System Version ID" Usage="C" Datatype="LRI_ST" MaxLength="10"
+                       MinLength="1"
+                       PredicateTrueUsage="R"
+                       PredicateFalseUsage="O">
+			            <Predicate>
+				              <EnglishDescription>If CWE_CR.3 (Name of Coding System) is not an HL7 defined table.</EnglishDescription>
+				              <Condition>
+					                <NOT>
+						                  <Regex location="./3" regex="HL7.*"/>
+					                </NOT>
+				              </Condition>
+			            </Predicate>
+		          </Component>
+		          <Component Name="Alternate Coding System Version ID" Usage="O" Datatype="ST"
+                       MaxLength="10"
+                       MinLength="1"/>
+		          <Component Name="Original Text" Usage="C" Datatype="LRI_ST" MaxLength="199" MinLength="1"
+                       PredicateTrueUsage="R"
+                       PredicateFalseUsage="RE">
+			            <Predicate>
+				              <EnglishDescription> If CWE_CRE.1 (Identifier) is not valued</EnglishDescription>
+				              <Condition>
+					                <NOT>
+						                  <Valued location="./1"/>
+					                </NOT>
+				              </Condition>
+			            </Predicate>
+			            <ImpNote>Length 1..199, C(R/RE) 	Note : Original Text is used to convey the text that was the basis for coding.	If neither the first or second triplet has values, this contains the text of the field.	LRI-CWE.a-6: If CWE.1 (Identifier) and CWE.4 (Alternate Identifier) are not populated, then CWE.9 (Original Text) SHALL be valued. 	LRI-CWE.a-7: If the triplets identified by elements CWE.1 (Identifier), CWE.2 (Text) and CWE.3 (Name of Coding System) and CWE.4 (Alternate Identifier), CWE.5 (Alternate Text), and CWE.6 (Name of Alternate Coding System) are not valued then CWE.9 (Original Text) shall be valued. </ImpNote>
+		          </Component>
+		          <Component Name="Second Alternate Identifier" Usage="O" Datatype="ST" MaxLength="20"
+                       MinLength="1"/>
+		          <Component Name="Second Alternate Text" Usage="O" Datatype="ST" MaxLength="199"
+                       MinLength="1"/>
+		          <Component Name="Second Name of Alternate Coding System" Usage="O" Datatype="ID"
+                       MaxLength="12"
+                       MinLength="1">
+			            <ImpNote>WARNING: the table should be specified for an ID type. </ImpNote>
+		          </Component>
+		          <Component Name="Second Alternate Coding System Version ID" Usage="O" Datatype="ST"
+                       MaxLength="10"
+                       MinLength="1"/>
+		          <Component Name="Coding System OID" Usage="O" Datatype="ST" MaxLength="199" MinLength="1"/>
+		          <Component Name="Value Set OID" Usage="O" Datatype="ST" MaxLength="199" MinLength="1">
+			            <ImpNote>Length 1...199 </ImpNote>
+		          </Component>
+		          <Component Name="Value Set Version ID" Usage="O" Datatype="DTM" MaxLength="8"
+                       MinLength="1"/>
+		          <Component Name="Alternate Coding System OID" Usage="O" Datatype="ST" MaxLength="199"
+                       MinLength="1"/>
+		          <Component Name="Alternate Value Set OID" Usage="O" Datatype="ST" MaxLength="199"
+                       MinLength="1"/>
+		          <Component Name="Alternate Value Set Version ID" Usage="O" Datatype="DTM" MaxLength="8"
+                       MinLength="1">
+			            <ImpNote>Length 1...8 </ImpNote>
+		          </Component>
+		          <Component Name="Second Alternate Coding System OID" Usage="O" Datatype="ST"
+                       MaxLength="199"
+                       MinLength="1"/>
+		          <Component Name="Second Alternate Value Set OID" Usage="O" Datatype="ST" MaxLength="199"
+                       MinLength="1"/>
+		          <Component Name="Second Alternate Value Set Version ID" Usage="O" Datatype="DTM"
+                       MaxLength="8"
+                       MinLength="1"/>
+	        </Field>
+	        <!-- LRI_CWE_CR -->
+	<Field Datatype="LRI_CWE_CR" Max="1" MaxLength="1" Min="0" MinLength="0"
+                Name="LRI_CWE_CR"
+                Usage="O">
+		          <ImpNote>Pre-adoption of Components 10-22 from V2.7.1</ImpNote>
+		          <Component Name="Identifier" Usage="R" Datatype="LRI_ST" MaxLength="20" MinLength="1">
+			            <ConformanceStatement id="LN-001">
+				              <EnglishDescription>If CWE.3 (Name of Coding System) is valued "LN" then CWE.1 SHALL be a valid LOINC code identifier format.</EnglishDescription>
+				              <Assertion>
+					                <Custom className="gov.nist.healthcare.mu.lri.custom.Loinc" id="1"/>
+				              </Assertion>
+			            </ConformanceStatement>
+			            <ImpNote>Length 1..20</ImpNote>
+		          </Component>
+		          <Component Name="Text" Usage="RE" Datatype="LRI_ST" MaxLength="199" MinLength="1">
+			            <ImpNote>Length 1..199 	Note : It is strongly recommended that text be sent to accompany any identifier.</ImpNote>
+		          </Component>
+		          <Component Name="Name of Coding System" Usage="R" Datatype="LRI_ID" Table="US_LAB_HL70396"
+                       MaxLength="12"
+                       MinLength="1">
+			            <ImpNote>Length 1..12 </ImpNote>
+		          </Component>
+		          <Component Name="Alternate Identifier" Usage="RE" Datatype="LRI_ST" MaxLength="20"
+                       MinLength="1">
+			            <ConformanceStatement id="LN-001">
+				              <EnglishDescription>If CWE.6 (Name of AlternateCoding System) is valued "LN" then CWE.4 SHALL be a valid LOINC code identifier format.</EnglishDescription>
+				              <Assertion>
+					                <Custom className="gov.nist.healthcare.mu.lri.custom.Loinc" id="2"/>
+				              </Assertion>
+			            </ConformanceStatement>
+			            <ImpNote>Length 1..20 	Note : The alternate identifier (from the alternate coding system) should be the closest match for the identifier found in CWE_CR.1.</ImpNote>
+		          </Component>
+		          <Component Name="Alternate Text" Usage="RE" Datatype="LRI_ST" MaxLength="199"
+                       MinLength="1">
+			            <ImpNote>Length 1..199 	Note : It is strongly recommended that alternate text be sent to accompany any alternate identifier.</ImpNote>
+		          </Component>
+		          <Component Name="Name of Alternate Coding System" Usage="C" Datatype="LRI_ID"
+                       Table="US_LAB_HL70396"
+                       MaxLength="12"
+                       MinLength="1"
+                       PredicateTrueUsage="R"
+                       PredicateFalseUsage="X">
+			            <Predicate>
+				              <EnglishDescription> If CWE_CR.4 (Alternate Identifier) is valued</EnglishDescription>
+				              <Condition>
+					                <Valued location="./4"/>
+				              </Condition>
+			            </Predicate>
+			            <ImpNote>Length 1..12 C(R/X) Required if an alternate identifier is provided in component 4. </ImpNote>
+		          </Component>
+		          <Component Name="Coding System Version ID" Usage="C" Datatype="LRI_ST" MaxLength="10"
+                       MinLength="1"
+                       PredicateTrueUsage="R"
+                       PredicateFalseUsage="O">
+			            <Predicate>
+				              <EnglishDescription>If CWE_CR.3 (Name of Coding System) is not an HL7 defined table.</EnglishDescription>
+				              <Condition>
+					                <NOT>
+						                  <Regex location="./3" regex="HL7.+"/>
+					                </NOT>
+				              </Condition>
+			            </Predicate>
+		          </Component>
+		          <Component Name="Alternate Coding System Version ID" Usage="O" Datatype="ST"
+                       MaxLength="10"
+                       MinLength="1">
+			            <ImpNote>Length 1..10 ISSUE: It should be conditional- Required if an alternate coding system is identified in component 6. However, the particular coding system indicates versioning should be handled will be appropriate here. The length has been increased to handle longer versioning strings. </ImpNote>
+		          </Component>
+		          <Component Name="Original Text" Usage="RE" Datatype="LRI_ST" MaxLength="199" MinLength="1">
+			            <ImpNote>Length 1..199 	Note : Original Text is used to convey the text that was the basis for coding. </ImpNote>
+		          </Component>
+		          <Component Name="Second Alternate Identifier" Usage="O" Datatype="ST" MaxLength="20"
+                       MinLength="1"/>
+		          <Component Name="Second Alternate Text" Usage="O" Datatype="ST" MaxLength="199"
+                       MinLength="1"/>
+		          <Component Name="Second Name of Alternate Coding System" Usage="O" Datatype="ID"
+                       Table="0396"
+                       MaxLength="12"
+                       MinLength="1">
+			            <ImpNote>1..12 </ImpNote>
+		          </Component>
+		          <Component Name="Second Alternate Coding System Version ID" Usage="O" Datatype="ST"
+                       MaxLength="10"
+                       MinLength="1"/>
+		          <Component Name="Coding System OID" Usage="O" Datatype="ST" MaxLength="199" MinLength="1"/>
+		          <Component Name="Value Set OID" Usage="O" Datatype="ST" MaxLength="199" MinLength="1"/>
+		          <Component Name="Value Set Version ID" Usage="O" Datatype="DTM" MaxLength="8"
+                       MinLength="1"/>
+		          <Component Name="Alternate Coding System OID" Usage="O" Datatype="ST" MaxLength="199"
+                       MinLength="1"/>
+		          <Component Name="Alternate Value Set OID" Usage="O" Datatype="ST" MaxLength="199"
+                       MinLength="1"/>
+		          <Component Name="Alternate Value Set Version ID" Usage="O" Datatype="DTM" MaxLength="8"
+                       MinLength="1"/>
+		          <Component Name="Second Alternate Coding System OID" Usage="O" Datatype="ST"
+                       MaxLength="199"
+                       MinLength="1"/>
+		          <Component Name="Second Alternate Value Set OID" Usage="O" Datatype="ST" MaxLength="199"
+                       MinLength="1"/>
+		          <Component Name="Second Alternate Value Set Version ID" Usage="O" Datatype="DTM"
+                       MaxLength="8"
+                       MinLength="1"/>
+	        </Field>
+	        <!-- LRI_CWE_CR1 -->
+	<Field Datatype="LRI_CWE_CR1" Max="1" MaxLength="1" Min="0" MinLength="0"
+                Name="LRI_CWE_CR1"
+                Usage="O">
+		          <ImpNote>Components 10-22 are pre-adopted from V2.7.1 CWE.</ImpNote>
+		          <Component Name="Identifier" Usage="R" Datatype="LRI_ST" MaxLength="20" MinLength="1">
+			            <ConformanceStatement id="LN-001">
+				              <EnglishDescription>If CWE.3 (Name of Coding System) is valued "LN" then CWE.1 SHALL be a valid LOINC code identifier format.</EnglishDescription>
+				              <Assertion>
+					                <Custom className="gov.nist.healthcare.mu.lri.custom.Loinc" id="1"/>
+				              </Assertion>
+			            </ConformanceStatement>
+			            <ImpNote>Length 1..20</ImpNote>
+		          </Component>
+		          <Component Name="Text" Usage="RE" Datatype="LRI_ST" MaxLength="199" MinLength="1">
+			            <ImpNote>Length 1..199 	Note : It is strongly recommended that text be sent to accompany any identifier.</ImpNote>
+		          </Component>
+		          <Component Name="Name of Coding System" Usage="R" Datatype="LRI_ID" Table="US_LAB_HL70396"
+                       MaxLength="12"
+                       MinLength="1">
+			            <ImpNote>Length 1..12 </ImpNote>
+		          </Component>
+		          <Component Name="Alternate Identifier" Usage="O" Datatype="ST" MaxLength="20"
+                       MinLength="1"/>
+		          <Component Name="Alternate Text" Usage="O" Datatype="ST" MaxLength="199" MinLength="1"/>
+		          <Component Name="Name of Alternate Coding System" Usage="C" Datatype="LRI_ID"
+                       Table="US_LAB_HL70396"
+                       MaxLength="12"
+                       MinLength="1"
+                       PredicateTrueUsage="R"
+                       PredicateFalseUsage="X">
+			            <Predicate>
+				              <EnglishDescription>If CWE_CR1.4 (Alternate Identifier) is valued.</EnglishDescription>
+				              <Condition>
+					                <Valued location="./4"/>
+				              </Condition>
+			            </Predicate>
+			            <ImpNote>Length 1..12 C(R/X)</ImpNote>
+		          </Component>
+		          <Component Name="Coding System Version ID" Usage="C" Datatype="LRI_ST" MaxLength="10"
+                       MinLength="1"
+                       PredicateTrueUsage="R"
+                       PredicateFalseUsage="O">
+			            <Predicate>
+				              <EnglishDescription>If CWE_CR1.3 (Name of Coding System) is not an HL7 defined table.</EnglishDescription>
+				              <Condition>
+					                <NOT>
+						                  <Regex location="./3" regex="HL7.+"/>
+					                </NOT>
+				              </Condition>
+			            </Predicate>
+		          </Component>
+		          <Component Name="Alternate Coding System Version ID" Usage="O" Datatype="ST"
+                       MaxLength="10"
+                       MinLength="1">
+			            <ImpNote>Length 1..10 ISSUE: It should be conditional- Required if an alternate coding system is identified in component 6. However, the particular coding system indicates versioning should be handled will be appropriate here. The length has been increased to handle longer versioning strings. </ImpNote>
+		          </Component>
+		          <Component Name="Original Text" Usage="RE" Datatype="LRI_ST" MaxLength="199" MinLength="1">
+			            <ImpNote>Length 1..199 	Note : Original Text is used to convey the text that was the basis for coding. </ImpNote>
+		          </Component>
+		          <Component Name="Second Alternate Identifier" Usage="O" Datatype="ST" MaxLength="20"
+                       MinLength="1"/>
+		          <Component Name="Second Alternate Text" Usage="O" Datatype="ST" MaxLength="199"
+                       MinLength="1"/>
+		          <Component Name="Second Name of Alternate Coding System" Usage="O" Datatype="ID"
+                       Table="0396"
+                       MaxLength="12"
+                       MinLength="1">
+			            <ImpNote>1..12 </ImpNote>
+		          </Component>
+		          <Component Name="Second Alternate Coding System Version ID" Usage="O" Datatype="ST"
+                       MaxLength="10"
+                       MinLength="1"/>
+		          <Component Name="Coding System OID" Usage="O" Datatype="ST" MaxLength="199" MinLength="1"/>
+		          <Component Name="Value Set OID" Usage="O" Datatype="ST" MaxLength="199" MinLength="1"/>
+		          <Component Name="Value Set Version ID" Usage="O" Datatype="DTM" MaxLength="8"
+                       MinLength="1"/>
+		          <Component Name="Alternate Coding System OID" Usage="O" Datatype="ST" MaxLength="199"
+                       MinLength="1"/>
+		          <Component Name="Alternate Value Set OID" Usage="O" Datatype="ST" MaxLength="199"
+                       MinLength="1"/>
+		          <Component Name="Alternate Value Set Version ID" Usage="O" Datatype="DTM" MaxLength="8"
+                       MinLength="1"/>
+		          <Component Name="Second Alternate Coding System OID" Usage="O" Datatype="ST"
+                       MaxLength="199"
+                       MinLength="1"/>
+		          <Component Name="Second Alternate Value Set OID" Usage="O" Datatype="ST" MaxLength="199"
+                       MinLength="1"/>
+		          <Component Name="Second Alternate Value Set Version ID" Usage="O" Datatype="DTM"
+                       MaxLength="8"
+                       MinLength="1"/>
+	        </Field>
+	        <!-- LRI_CWE_CRO -->
+	<Field Datatype="LRI_CWE_CRO" Max="1" MaxLength="1" Min="0" MinLength="0"
+                Name="LRI_CWE_CRO"
+                Usage="O">
+		          <ImpNote>Pre-adoption of Components 10-22 from V2.7.1</ImpNote>
+		          <Component Name="Identifier" Usage="R" Datatype="LRI_ST" MaxLength="20" MinLength="1">
+			            <ConformanceStatement id="LN-001">
+				              <EnglishDescription>If CWE.3 (Name of Coding System) is valued "LN" then CWE.1 SHALL be a valid LOINC code identifier format.</EnglishDescription>
+				              <Assertion>
+					                <Custom className="gov.nist.healthcare.mu.lri.custom.Loinc" id="1"/>
+				              </Assertion>
+			            </ConformanceStatement>
+			            <ImpNote>Length 1..20</ImpNote>
+		          </Component>
+		          <Component Name="Text" Usage="RE" Datatype="LRI_ST" MaxLength="199" MinLength="1">
+			            <ImpNote>Length 1..199 	Note : It is strongly recommended that text be sent to accompany any identifier.</ImpNote>
+		          </Component>
+		          <Component Name="Name of Coding System" Usage="R" Datatype="LRI_ID" Table="US_LAB_HL70396"
+                       MaxLength="12"
+                       MinLength="1">
+			            <ImpNote>Length 1..12 </ImpNote>
+		          </Component>
+		          <Component Name="Alternate Identifier" Usage="RE" Datatype="LRI_ST" MaxLength="20"
+                       MinLength="1">
+			            <ConformanceStatement id="LN-001">
+				              <EnglishDescription>If CWE.6 (Name of AlternateCoding System) is valued "LN" then CWE.4 SHALL be a valid LOINC code identifier format.</EnglishDescription>
+				              <Assertion>
+					                <Custom className="gov.nist.healthcare.mu.lri.custom.Loinc" id="2"/>
+				              </Assertion>
+			            </ConformanceStatement>
+			            <ImpNote>Length 1..20 	Note : The alternate identifier (from the alternate coding system) should be the closest match for the identifier found in CWE_CRO.1.</ImpNote>
+		          </Component>
+		          <Component Name="Alternate Text" Usage="RE" Datatype="LRI_ST" MaxLength="199"
+                       MinLength="1">
+			            <ImpNote>Length 1..199 	Note : It is strongly recommended that alternate text be sent to accompany any alternate identifier.</ImpNote>
+		          </Component>
+		          <Component Name="Name of Alternate Coding System" Usage="C" Datatype="LRI_ID"
+                       Table="US_LAB_HL70396"
+                       MaxLength="12"
+                       MinLength="1"
+                       PredicateTrueUsage="R"
+                       PredicateFalseUsage="X">
+			            <Predicate>
+				              <EnglishDescription>If CWE_CRO.4 (Alternate Identifier) is valued.</EnglishDescription>
+				              <Condition>
+					                <Valued location="./4"/>
+				              </Condition>
+			            </Predicate>
+			            <ImpNote>Length 1..12 C(R/X)</ImpNote>
+		          </Component>
+		          <Component Name="Coding System Version ID" Usage="C" Datatype="LRI_ST" MaxLength="10"
+                       MinLength="1"
+                       PredicateTrueUsage="R"
+                       PredicateFalseUsage="O">
+			            <Predicate>
+				              <EnglishDescription>If CWE_CRO.3 (Name of Coding System) is not an HL7 defined table.</EnglishDescription>
+				              <Condition>
+					                <NOT>
+						                  <Regex location="./3" regex="HL7.+"/>
+					                </NOT>
+				              </Condition>
+			            </Predicate>
+		          </Component>
+		          <Component Name="Alternate Coding System Version ID" Usage="O" Datatype="ST"
+                       MaxLength="10"
+                       MinLength="1">
+			            <ImpNote>Length 1..10 ISSUE: It should be conditional- Required if an alternate coding system is identified in component 6. However, the particular coding system indicates versioning should be handled will be appropriate here. The length has been increased to handle longer versioning strings. </ImpNote>
+		          </Component>
+		          <Component Name="Original Text" Usage="R" Datatype="LRI_ST" MaxLength="199" MinLength="1">
+			            <ImpNote>Length 1..199 	Note : Original Text is used to convey the text that was the basis for coding. </ImpNote>
+		          </Component>
+		          <Component Name="Second Alternate Identifier" Usage="O" Datatype="ST" MaxLength="20"
+                       MinLength="1"/>
+		          <Component Name="Second Alternate Text" Usage="O" Datatype="ST" MaxLength="199"
+                       MinLength="1"/>
+		          <Component Name="Second Name of Alternate Coding System" Usage="O" Datatype="ID"
+                       Table="0396"
+                       MaxLength="12"
+                       MinLength="1">
+			            <ImpNote>1..12 </ImpNote>
+		          </Component>
+		          <Component Name="Second Alternate Coding System Version ID" Usage="O" Datatype="ST"
+                       MaxLength="10"
+                       MinLength="1"/>
+		          <Component Name="Coding System OID" Usage="O" Datatype="ST" MaxLength="199" MinLength="1"/>
+		          <Component Name="Value Set OID" Usage="O" Datatype="ST" MaxLength="199" MinLength="1"/>
+		          <Component Name="Value Set Version ID" Usage="O" Datatype="DTM" MaxLength="8"
+                       MinLength="1"/>
+		          <Component Name="Alternate Coding System OID" Usage="O" Datatype="ST" MaxLength="199"
+                       MinLength="1"/>
+		          <Component Name="Alternate Value Set OID" Usage="O" Datatype="ST" MaxLength="199"
+                       MinLength="1"/>
+		          <Component Name="Alternate Value Set Version ID" Usage="O" Datatype="DTM" MaxLength="8"
+                       MinLength="1"/>
+		          <Component Name="Second Alternate Coding System OID" Usage="O" Datatype="ST"
+                       MaxLength="199"
+                       MinLength="1"/>
+		          <Component Name="Second Alternate Value Set OID" Usage="O" Datatype="ST" MaxLength="199"
+                       MinLength="1"/>
+		          <Component Name="Second Alternate Value Set Version ID" Usage="O" Datatype="DTM"
+                       MaxLength="8"
+                       MinLength="1"/>
+	        </Field>
+	        <!-- LRI_CX_GU -->
+	<Field Datatype="LRI_CX_GU" Max="1" MaxLength="1" Min="0" MinLength="0"
+                Name="LRI_CX_GU"
+                Usage="O">
+		          <Component Name="ID Number" Usage="R" Datatype="LRI_ST" MaxLength="15" MinLength="1">
+			            <ImpNote>ILength 1..15 </ImpNote>
+		          </Component>
+		          <Component Name="Check Digit" Usage="O" Datatype="ST" MaxLength="4" MinLength="1">
+			            <ImpNote>Length 1..4= </ImpNote>
+		          </Component>
+		          <Component Name="Check Digit Scheme" Usage="C" Datatype="ID" MaxLength="3" MinLength="3"
+                       PredicateTrueUsage="O"
+                       PredicateFalseUsage="X">
+			            <ImpNote>Length 3..3 C(O/X) ISSUE: The table is missing. The predicate is missing.</ImpNote>
+		          </Component>
+		          <Component Name="Assigning Authority" Usage="R" Datatype="LRI_HD_GU" MaxLength="227"
+                       MinLength="1">
+			            <ImpNote>The Assigning Authority component is used to identify the system, application, organization, etc. that assigned the ID Number in component 1. </ImpNote>
+			            <Reference>LRI-CX.a-1: The CX.4 (Assigning Authority) SHALL use the HD-GU datatype definition.</Reference>
+		          </Component>
+		          <Component Name="Identifier Type Code" Usage="R" Datatype="LRI_ID" Table="US_LAB_HL70203"
+                       MaxLength="5"
+                       MinLength="1">
+			            <ImpNote>Length 2..5 </ImpNote>
+		          </Component>
+		          <Component Name="Assigning Facility" Usage="O" Datatype="HD" MaxLength="227" MinLength="1"/>
+		          <Component Name="Effective Date" Usage="O" Datatype="DT" MaxLength="8" MinLength="1"/>
+		          <Component Name="Expiration Date" Usage="O" Datatype="DT" MaxLength="8" MinLength="1"/>
+		          <Component Name="Assigning Jurisdiction" Usage="O" Datatype="CWE" MaxLength="705"
+                       MinLength="1"/>
+		          <Component Name="Assigning Agency or Department" Usage="O" Datatype="CWE" MaxLength="705"
+                       MinLength="1"/>
+	        </Field>
+	        <!-- LRI_CX_NG -->
+	<Field Datatype="LRI_CX_NG" Max="1" MaxLength="1" Min="0" MinLength="0"
+                Name="LRI_CX_NG"
+                Usage="O">
+		          <Component Name="ID Number" Usage="R" Datatype="LRI_ST" MaxLength="15" MinLength="1">
+			            <ImpNote>Length 1..15 The ID Number component combined with the Assigning Authority component must uniquely identify the associated object, i.e., any object with which the field is associated. Note - despite the component being named _ID Number_ this component is an ST string data type, not numeric, so the component is not limited to just numbers. </ImpNote>
+		          </Component>
+		          <Component Name="Check Digit" Usage="O" Datatype="ST" MaxLength="4" MinLength="1">
+			            <ImpNote>Length 1..4 </ImpNote>
+		          </Component>
+		          <Component Name="Check Digit Scheme" Usage="C" Datatype="ID" MaxLength="3" MinLength="3"
+                       PredicateTrueUsage="O"
+                       PredicateFalseUsage="X">
+			            <ImpNote>Length 3..3 C(O/X) ISSUE: The table should be specified. The predicate is missing.</ImpNote>
+		          </Component>
+		          <Component Name="Assigning Authority" Usage="RE" Datatype="LRI_HD_NG" MaxLength="227"
+                       MinLength="1">
+			            <Reference>LRI-CX-1: The CX.4 (Assigning Authority) SHALL use the HD-NG datatype definition.</Reference>
+		          </Component>
+		          <Component Name="Identifier Type Code" Usage="R" Datatype="LRI_ID" Table="US_LAB_HL70203"
+                       MaxLength="5"
+                       MinLength="1">
+			            <ImpNote>Length 2..5 </ImpNote>
+		          </Component>
+		          <Component Name="Assigning Facility" Usage="O" Datatype="HD" MaxLength="227" MinLength="1"/>
+		          <Component Name="Effective Date" Usage="O" Datatype="DT" MaxLength="8" MinLength="1"/>
+		          <Component Name="Expiration Date" Usage="O" Datatype="DT" MaxLength="8" MinLength="1"/>
+		          <Component Name="Assigning Jurisdiction" Usage="O" Datatype="CWE" MaxLength="705"
+                       MinLength="1"/>
+		          <Component Name="Assigning Agency or Department" Usage="O" Datatype="CWE" MaxLength="705"
+                       MinLength="1"/>
+	        </Field>
+	        <!-- LRI_DR -->
+	<Field Datatype="LRI_DR" Max="1" MaxLength="1" Min="0" MinLength="0" Name="LRI_DR"
+                Usage="O">
+		          <Component Name="Range Start Date/Time" Usage="RE" Datatype="LRI_TS_4" MaxLength="24"
+                       MinLength="1"/>
+		          <Component Name="Range End Date/Time" Usage="RE" Datatype="LRI_TS_5" MaxLength="24"
+                       MinLength="1"/>
+	        </Field>
+	        <!-- LRI_DT -->
+	<Field Datatype="LRI_DT" Max="1" MaxLength="1" Min="0" MinLength="0" Name="LRI_DT"
+                Usage="O"/>
+	        <!-- LRI_DTM -->
+	<Field Datatype="LRI_DTM" Max="1" MaxLength="1" Min="0" MinLength="0" Name="LRI_DTM"
+                Usage="O"/>
+	        <!-- LRI_ED -->
+	<Field Datatype="LRI_ED" Max="1" MaxLength="1" Min="0" MinLength="0" Name="LRI_ED"
+                Usage="O">
+		          <Component Name="Source Application" Usage="O" Datatype="HD" MinLength="1" MaxLength="227"/>
+		          <Component Name="Type of Data" Usage="R" Datatype="LRI_ID" MinLength="1" MaxLength="9"
+                       Table="US_LAB_HL70191"/>
+		          <Component Name="Data Subtype" Usage="RE" Datatype="LRI_ID" MinLength="1" MaxLength="18"
+                       Table="US_LAB_HL70291"/>
+		          <Component Name="Encoding" Usage="R" Datatype="LRI_ID" MinLength="1" MaxLength="6"
+                       Table="US_LAB_HL70299"/>
+		          <Component Name="Data" Usage="R" Datatype="LRI_TX" MinLength="1" MaxLength="65536"/>
+	        </Field>
+	        <!-- LRI_EI_GU -->
+	<Field Datatype="LRI_EI_GU" Max="1" MaxLength="1" Min="0" MinLength="0"
+                Name="LRI_EI_GU"
+                Usage="O">
+		          <Component Name="Entity Identifier" Usage="R" Datatype="LRI_ST" MaxLength="199"
+                       MinLength="1">
+			            <ImpNote>Length 1..199 </ImpNote>
+		          </Component>
+		          <Component Name="Namespace ID" Usage="RE" Datatype="LRI_IS" MaxLength="20" MinLength="1">
+			            <ImpNote>Length 1..20</ImpNote>
+			            <Reference>LRI-EI.a-2: CE.2 (Namespace ID) SHALL be valued with an ISO-compliant OID.</Reference>
+		          </Component>
+		          <Component Name="Universal ID" Usage="R" Datatype="LRI_ST" MaxLength="199" MinLength="1">
+			            <ConformanceStatement id="LRI-2">
+				              <EnglishDescription>EI_GU.3 (Universal ID) SHALL be valued with an ISO-compliant OID.</EnglishDescription>
+				              <Assertion>
+					                <Regex location="." regex="[0-2](\.(0|[1-9][0-9]*))*"/>
+				              </Assertion>
+			            </ConformanceStatement>
+			            <ImpNote>Length 1..199. LRI-EI.a-2: EI.3 (Namespace Universal ID) SHALL be valued with an ISO-compliant OID. </ImpNote>
+		          </Component>
+		          <Component Name="Universal ID Type" Usage="R" Datatype="LRI_ID" MaxLength="3"
+                       MinLength="3">
+			            <ConformanceStatement id="LRI-3">
+				              <EnglishDescription>EI_GU.4 (Universal ID Type) SHALL contain the value "ISO".</EnglishDescription>
+				              <Assertion>
+					                <PlainText location="." value="ISO"/>
+				              </Assertion>
+			            </ConformanceStatement>
+			            <ImpNote>Length 1..6 Fixed to "ISO".</ImpNote>
+			            <Reference>LRI-EI.a-1: CE.4 (Universal ID Type) SHALL contain the value _ISO_.</Reference>
+		          </Component>
+	        </Field>
+	        <!-- LRI_EI_NG -->
+	<Field Datatype="LRI_EI_NG" Max="1" MaxLength="1" Min="0" MinLength="0"
+                Name="LRI_EI_NG"
+                Usage="O">
+		          <Component Name="Entity Identifier" Usage="R" Datatype="LRI_ST" MaxLength="199"
+                       MinLength="1">
+			            <ImpNote>Length 1..199. </ImpNote>
+		          </Component>
+		          <Component Name="Namespace ID" Usage="C" Datatype="LRI_IS" MaxLength="20" MinLength="1"
+                       PredicateTrueUsage="R"
+                       PredicateFalseUsage="O">
+			            <Predicate>
+				              <EnglishDescription>If EI_NG.3 (Universal ID) is not valued.</EnglishDescription>
+				              <Condition>
+					                <NOT>
+						                  <Valued location="./3"/>
+					                </NOT>
+				              </Condition>
+			            </Predicate>
+		          </Component>
+		          <Component Name="Universal ID" Usage="C" Datatype="LRI_ST" MaxLength="199" MinLength="1"
+                       PredicateTrueUsage="R"
+                       PredicateFalseUsage="O">
+			            <Predicate>
+				              <EnglishDescription>If EI_NG.2 (Namespace ID) is not valued.</EnglishDescription>
+				              <Condition>
+					                <NOT>
+						                  <Valued location="./2"/>
+					                </NOT>
+				              </Condition>
+			            </Predicate>
+			            <ImpNote>Length 1..199. C(R/O) </ImpNote>
+		          </Component>
+		          <Component Name="Universal ID Type" Usage="C" Datatype="LRI_ID" Table="US_LAB_HL70301"
+                       MaxLength="6"
+                       MinLength="1"
+                       PredicateTrueUsage="R"
+                       PredicateFalseUsage="X">
+			            <Predicate>
+				              <EnglishDescription>If EI_NG.3 (Universal ID) is valued.</EnglishDescription>
+				              <Condition>
+					                <Valued location="./3"/>
+				              </Condition>
+			            </Predicate>
+			            <ImpNote>Length 1..6. C(R/X) </ImpNote>
+		          </Component>
+	        </Field>
+	        <!-- LRI_EIP_GU -->
+	<Field Datatype="LRI_EIP_GU" Max="1" MaxLength="1" Min="0" MinLength="0"
+                Name="LRI_EIP_GU"
+                Usage="O">
+		          <Component Name="Placer Assigned Identifier" Usage="RE" Datatype="LRI_EI_GU"
+                       MaxLength="427"
+                       MinLength="1">
+			            <Reference>LRI-EIP.a-1: The datatype EI-GU SHALL be used for EIP.1 (Placer Assigned Identifier) and EIP.2 (Filler Assigned Identifier).</Reference>
+		          </Component>
+		          <Component Name="Filler Assigned Identifier" Usage="C" Datatype="LRI_EI_GU"
+                       MaxLength="427"
+                       MinLength="1"
+                       PredicateTrueUsage="R"
+                       PredicateFalseUsage="RE">
+			            <Predicate>
+				              <EnglishDescription>If EIP_GU.1 is not valued</EnglishDescription>
+				              <Condition>
+					                <NOT>
+						                  <Valued location="./1"/>
+					                </NOT>
+				              </Condition>
+			            </Predicate>
+			            <ImpNote>C(R/RE) </ImpNote>
+			            <Reference>LRI-EIP.a-1: The datatype EI-GU SHALL be used for EIP.1 (Placer Assigned Identifier) and EIP.2 (Filler Assigned Identifier).</Reference>
+		          </Component>
+	        </Field>
+	        <!-- LRI_EIP_NG -->
+	<Field Datatype="LRI_EIP_NG" Max="1" MaxLength="1" Min="0" MinLength="0"
+                Name="LRI_EIP_NG"
+                Usage="O">
+		          <Component Name="Placer Assigned Identifier" Usage="RE" Datatype="LRI_EI_NG"
+                       MaxLength="427"
+                       MinLength="1">
+			            <Reference>LRI-EIP.b-1: The datatype EI-NG SHALL be used for EIP.1 (Placer Assigned Identifier) and EIP.2 (Filler Assigned Identifier).</Reference>
+		          </Component>
+		          <Component Name="Filler Assigned Identifier" Usage="C" Datatype="LRI_EI_NG"
+                       MaxLength="427"
+                       MinLength="1"
+                       PredicateTrueUsage="R"
+                       PredicateFalseUsage="RE">
+			            <Predicate>
+				              <EnglishDescription>If EIP_NG.1 is not valued</EnglishDescription>
+				              <Condition>
+					                <NOT>
+						                  <Valued location="./1"/>
+					                </NOT>
+				              </Condition>
+			            </Predicate>
+			            <ImpNote>C(R/RE) </ImpNote>
+			            <Reference>LRI-EIP.b-1: The datatype EI-NG SHALL be used for EIP.1 (Placer Assigned Identifier) and EIP.2 (Filler Assigned Identifier).</Reference>
+		          </Component>
+	        </Field>
+	        <!-- LRI_ERL -->
+	<Field Datatype="LRI_ERL" Max="1" MaxLength="1" Min="0" MinLength="0" Name="LRI_ERL"
+                Usage="O">
+		          <Component Name="Segment ID" Usage="R" Datatype="LRI_ST" MinLength="1" MaxLength="3"/>
+		          <Component Name="Segment Sequence" Usage="R" Datatype="LRI_NM" MinLength="1" MaxLength="2"/>
+		          <Component Name="Field Position" Usage="RE" Datatype="LRI_NM" MinLength="1" MaxLength="2"/>
+		          <Component Name="Field Repetition" Usage="RE" Datatype="LRI_NM" MinLength="1"
+                       MaxLength="2"/>
+		          <Component Name="Component Number" Usage="RE" Datatype="LRI_NM" MinLength="1"
+                       MaxLength="2"/>
+		          <Component Name="Sub-Component Number" Usage="RE" Datatype="LRI_NM" MinLength="1"
+                       MaxLength="2"/>
+	        </Field>
+	        <!-- LRI_FN -->
+	<Field Datatype="LRI_FN" Max="1" MaxLength="1" Min="0" MinLength="0" Name="LRI_FN"
+                Usage="O">
+		          <Component Name="Surname" Usage="R" Datatype="LRI_ST" MaxLength="65536" MinLength="1"/>
+		          <Component Name="Own Surname Prefix" Usage="O" Datatype="ST" MaxLength="20" MinLength="1"/>
+		          <Component Name="Own Surname" Usage="O" Datatype="ST" MaxLength="50" MinLength="1"/>
+		          <Component Name="Surname Prefix From Partner/Spouse" Usage="O" Datatype="ST"
+                       MaxLength="20"
+                       MinLength="1"/>
+		          <Component Name="Surname From Partner/Spouse" Usage="O" Datatype="ST" MaxLength="50"
+                       MinLength="1"/>
+	        </Field>
+	        <!-- LRI_FT -->
+	<Field Datatype="LRI_FT" Max="1" MaxLength="1" Min="0" MinLength="0" Name="LRI_FT"
+                Usage="O">
+		          <ImpNote>Length 1..65536 </ImpNote>
+	        </Field>
+	        <!-- LRI_HD_GU -->
+	<Field Datatype="LRI_HD_GU" Max="1" MaxLength="1" Min="0" MinLength="0"
+                Name="LRI_HD_GU"
+                Usage="O">
+		          <Component Name="Namespace ID" Usage="RE" Datatype="LRI_IS" MaxLength="20" MinLength="1">
+			            <ImpNote>Length 1..20 The value of HD_GU.1 reflects a local code that represents the combination of HD_GU.2 and HD_GU.3.</ImpNote>
+		          </Component>
+		          <Component Name="Universal ID" Usage="R" Datatype="LRI_ST" MaxLength="199" MinLength="1">
+			            <ConformanceStatement id="LRI-4">
+				              <EnglishDescription>HD_GU.2 (Universal ID) SHALL be valued with an ISO-compliant OID.</EnglishDescription>
+				              <Assertion>
+					                <Regex location="." regex="[0-2](\.(0|[1-9][0-9]*))*"/>
+				              </Assertion>
+			            </ConformanceStatement>
+			            <ImpNote>Length 1..199</ImpNote>
+			            <Reference>LRI-HD.a-1: HD.2 (Universal ID) SHALL be valued with an ISO-compliant OID.</Reference>
+		          </Component>
+		          <Component Name="Universal ID Type" Usage="R" Datatype="LRI_ID" MaxLength="3"
+                       MinLength="3">
+			            <ConformanceStatement id="LRI-5">
+				              <EnglishDescription>HD_GU.3 (Universal ID Type) SHALL contain the value "ISO".</EnglishDescription>
+				              <Assertion>
+					                <PlainText location="." value="ISO"/>
+				              </Assertion>
+			            </ConformanceStatement>
+			            <ImpNote>Length 1..6 Fixed to "ISO".</ImpNote>
+			            <Reference>LRI-HD.a-2: HD.3 (Universal ID Type) SHALL contain the value "ISO".</Reference>
+		          </Component>
+	        </Field>
+	        <!-- LRI_HD_NG -->
+	<Field Datatype="LRI_HD_NG" Max="1" MaxLength="1" Min="0" MinLength="0"
+                Name="LRI_HD_NG"
+                Usage="O">
+		          <Component Name="Namespace ID" Usage="C" Datatype="LRI_IS" MaxLength="20" MinLength="1"
+                       PredicateTrueUsage="R"
+                       PredicateFalseUsage="O">
+			            <Predicate>
+				              <EnglishDescription>if HD_NG.2 (Universal ID) is not valued</EnglishDescription>
+				              <Condition>
+					                <NOT>
+						                  <Valued location="./2"/>
+					                </NOT>
+				              </Condition>
+			            </Predicate>
+			            <ImpNote>Length 1..20. </ImpNote>
+		          </Component>
+		          <Component Name="Universal ID" Usage="C" Datatype="LRI_ST" MaxLength="199" MinLength="1"
+                       PredicateTrueUsage="R"
+                       PredicateFalseUsage="O">
+			            <Predicate>
+				              <EnglishDescription>If HD_NG.1 (Namespace ID) is not valued</EnglishDescription>
+				              <Condition>
+					                <NOT>
+						                  <Valued location="./1"/>
+					                </NOT>
+				              </Condition>
+			            </Predicate>
+			            <ImpNote>Length 1..199. C(R/O) </ImpNote>
+		          </Component>
+		          <Component Name="Universal ID Type" Usage="C" Datatype="LRI_ID" Table="US_LAB_HL70301"
+                       MaxLength="6"
+                       MinLength="1"
+                       PredicateTrueUsage="R"
+                       PredicateFalseUsage="X">
+			            <Predicate>
+				              <EnglishDescription>If HD_NG.2 (Universal ID) is valued</EnglishDescription>
+				              <Condition>
+					                <Valued location="./2"/>
+				              </Condition>
+			            </Predicate>
+			            <ImpNote>Length 1..6. C(R/X) </ImpNote>
+		          </Component>
+	        </Field>
+	        <!-- LRI_ID -->
+	<Field Datatype="LRI_ID" Max="1" MaxLength="1" Min="0" MinLength="0" Name="LRI_ID"
+                Usage="O"/>
+	        <!-- LRI_IS -->
+	<Field Datatype="LRI_IS" Max="1" MaxLength="1" Min="0" MinLength="0" Name="LRI_IS"
+                Usage="O"/>
+	        <!-- LRI_MSG -->
+	<Field Datatype="LRI_MSG" Max="1" MaxLength="1" Min="0" MinLength="0" Name="LRI_MSG"
+                Usage="O">
+		          <Component Name="Message Code" Usage="R" Datatype="LRI_ID" Table="US_LAB_HL70076"
+                       MaxLength="3"
+                       MinLength="3">
+			            <ImpNote>Length 3..3 </ImpNote>
+		          </Component>
+		          <Component Name="Trigger Event" Usage="R" Datatype="LRI_ID" Table="US_LAB_HL70003"
+                       MaxLength="3"
+                       MinLength="3">
+			            <ImpNote>Length 3..3 </ImpNote>
+		          </Component>
+		          <Component Name="Message Structure" Usage="R" Datatype="LRI_ID" Table="US_LAB_HL70354"
+                       MaxLength="7"
+                       MinLength="3">
+			            <ImpNote>Length 3...7 </ImpNote>
+		          </Component>
+	        </Field>
+	        <!-- LRI_NM -->
+	<Field Datatype="LRI_NM" Max="1" MaxLength="1" Min="0" MinLength="0" Name="LRI_NM"
+                Usage="O"/>
+	        <!-- LRI_PRL -->
+	<Field Datatype="LRI_PRL" Max="1" MaxLength="1" Min="0" MinLength="0" Name="LRI_PRL"
+                Usage="O">
+		          <Component Name="Parent Observation Identifier" Usage="R" Datatype="LRI_CWE_CR"
+                       MaxLength="2161"
+                       MinLength="1"/>
+		          <Component Name="Parent Observation Sub-identifier" Usage="RE" Datatype="LRI_ST"
+                       MaxLength="20"
+                       MinLength="1">
+			            <ImpNote>Length 1..20</ImpNote>
+		          </Component>
+		          <Component Name="Parent Observation Value Descriptor" Usage="O" Datatype="TX"
+                       MaxLength="250"
+                       MinLength="1"/>
+	        </Field>
+	        <!-- LRI_PT -->
+	<Field Datatype="LRI_PT" Max="1" MaxLength="1" Min="0" MinLength="0" Name="LRI_PT"
+                Usage="O">
+		          <Component Name="Processing ID" Usage="R" Datatype="LRI_ID" Table="US_LAB_HL70103"
+                       MaxLength="1"
+                       MinLength="1"/>
+		          <Component Name="Processing Mode" Usage="O" Datatype="ID" MaxLength="1" MinLength="1"/>
+	        </Field>
+	        <!-- LRI_SAD -->
+	<Field Datatype="LRI_SAD" Max="1" MaxLength="1" Min="0" MinLength="0" Name="LRI_SAD"
+                Usage="O">
+		          <Component Name="Street or Mailing Address" Usage="R" Datatype="LRI_ST" MaxLength="65536"
+                       MinLength="1">
+			            <ImpNote>Length 1..120 </ImpNote>
+		          </Component>
+		          <Component Name="Street Name" Usage="O" Datatype="ST" MaxLength="50" MinLength="1">
+			            <ImpNote>Length 1..50 </ImpNote>
+		          </Component>
+		          <Component Name="Dwelling Number" Usage="O" Datatype="ST" MaxLength="12" MinLength="1">
+			            <ImpNote>Length 1..12 </ImpNote>
+		          </Component>
+	        </Field>
+	        <!-- LRI_SI -->
+	<Field Datatype="LRI_SI" Max="1" MaxLength="1" Min="0" MinLength="0" Name="LRI_SI"
+                Usage="O"/>
+	        <!-- LRI_SN -->
+	<Field Datatype="LRI_SN" Max="1" MaxLength="1" Min="0" MinLength="0" Name="LRI_SN"
+                Usage="O">
+		          <Component Name="Comparator" Usage="RE" Datatype="LRI_ST" MinLength="1" MaxLength="2"/>
+		          <Component Name="Num1" Usage="RE" Datatype="LRI_NM" MinLength="1" MaxLength="15"/>
+		          <Component Name="Separator/Suffix" Usage="RE" Datatype="LRI_ST" MinLength="1"
+                       MaxLength="1"/>
+		          <Component Name="Num2" Usage="RE" Datatype="LRI_NM" MinLength="1" MaxLength="15"/>
+	        </Field>
+	        <!-- LRI_ST -->
+	<Field Datatype="LRI_ST" Max="1" MaxLength="1" Min="0" MinLength="0" Name="LRI_ST"
+                Usage="O"/>
+	        <!-- LRI_TM -->
+	<!-- LRI_TS_0 -->
+	<Field Datatype="LRI_TS_0" Max="1" MaxLength="1" Min="0" MinLength="0" Name="LRI_TS_0"
+                Usage="O">
+		          <Component Name="Time" Usage="R" Datatype="LRI_DTM" MaxLength="24" MinLength="4">
+			            <ConformanceStatement id="LRI-TS_0">
+				              <EnglishDescription> Format : YYYY[MM[DD[HH[MM[SS[.S[S[S[S]]]]]]]]]+/-ZZZZ WITH 	YYYY = R, 	MM = O, 	DD = O, 	HH = O, 	MM = O, 	SS = O, 	[.S[S[S[S]]]] = O, 	+/-ZZZZ = C(R/O) If TimeZone Offset Profile </EnglishDescription>
+				              <Assertion Description="Failed Assertion : Format : YYYY[MM[DD[HH[MM[SS[.S[S[S[S]]]]]]]]][+/-ZZZZ]">
+					                <Regex location="." regex="\d{4}.*"/>
+				              </Assertion>
+			            </ConformanceStatement>
+		          </Component>
+		          <Component Name="Degree of Precision" Usage="X" Datatype="ID" Table="0529"/>
+	        </Field>
+	        <!-- LRI_TS_1 -->
+	<Field Datatype="LRI_TS_1" Max="1" MaxLength="1" Min="0" MinLength="0" Name="LRI_TS_1"
+                Usage="O">
+		          <Component Name="Time" Usage="R" Datatype="LRI_DTM" MaxLength="24" MinLength="4">
+			            <ConformanceStatement id="LRI-TS_1">
+				              <EnglishDescription> Format : YYYY[MM[DD[HH[MM[SS[.S[S[S[S]]]]]]]]]+/-ZZZZ WITH 	YYYY = R, 	MM = R, 	DD = R, 	HH = R, 	MM = R, 	SS = R, 	[.S[S[S[S]]]] = O, 	+/-ZZZZ = C(R/O) If TimeZone Offset Profile </EnglishDescription>
+				              <!-- No need to test for the whole format - this will be taken care of by the datatype validation. We only need to check that  the required elements are present -->
+				<Assertion Description="Failed Assertion : Format : YYYYMMDDHHMMSS[.S[S[S[S]]]][+/-ZZZZ]">
+					                <Regex location="." regex="\d{14}.*"/>
+					                <!-- <Regex location="." regex="([0-9]{4})((0[1-9])|(1[0-2]))((0[1-9])|([1-2][0-9])|(3[0-1]))(([0-1][0-9])|(2[0-3]))([0-5][0-9])([0-5][0-9](\.[0-9]{1,4}){0,1})((\+|\-)[0-9]{4}){0,1}"/>-->
+				</Assertion>
+			            </ConformanceStatement>
+		          </Component>
+		          <Component Name="Degree of Precision" Usage="X" Datatype="ID" Table="0529"/>
+	        </Field>
+	        <!-- LRI_TS_2 -->
+	<Field Datatype="LRI_TS_2" Max="1" MaxLength="1" Min="0" MinLength="0" Name="LRI_TS_2"
+                Usage="O">
+		          <Component Name="Time" Usage="R" Datatype="LRI_DTM" MaxLength="24" MinLength="4">
+			            <ConformanceStatement id="LRI-TS_2">
+				              <EnglishDescription> Format : YYYY[MM[DD[HH[MM[SS[.S[S[S[S]]]]]]]]]+/-ZZZZ WITH 	YYYY = R, 	MM = RE, 	DD = RE, 	HH = O, 	MM = O, 	[SS[.S[S[S[S]]]]] = O, 	+/-ZZZZ = C(RE/O) If TimeZone Offset Profile</EnglishDescription>
+				              <!-- No need to test for the whole format - this will be taken care of by the datatype validation. We only need to check that  the required elements are present -->
+				<Assertion Description="Failed Assertion : Format : YYYY[MM[DD[HH[MM[SS[.S[S[S[S]]]]]]]]][+/-ZZZZ]">
+					                <Regex location="." regex="\d{4}.*"/>
+					                <!-- <Regex location="." regex="([0-9]{4})(((0[1-9])|(1[0-2]))(((0[1-9])|([1-2][0-9])|(3[0-1]))((([0-1][0-9])|(2[0-3]))(([0-5][0-9])(([0-5][0-9](\.[0-9]{1,4}){0,1})){0,1}){0,1}){0,1}){0,1}){0,1}((\+|\-)[0-9]{4}){0,1}"/> -->
+				</Assertion>
+			            </ConformanceStatement>
+		          </Component>
+		          <Component Name="Degree of Precision" Usage="X" Datatype="ID" Table="0529"/>
+	        </Field>
+	        <!-- LRI_TS_3 -->
+	<Field Datatype="LRI_TS_3" Max="1" MaxLength="1" Min="0" MinLength="0" Name="LRI_TS_3"
+                Usage="O">
+		          <Component Name="Time" Usage="R" Datatype="LRI_DTM" MaxLength="24" MinLength="4">
+			            <ConformanceStatement id="LRI-TS_3">
+				              <EnglishDescription> Format : YYYY[MM[DD[HH[MM[SS[.S[S[S[S]]]]]]]]]+/-ZZZZ WITH 	YYYY = R, 	MM = RE, 	DD = RE, 	HH = RE, 	MM = RE, 	[SS[.S[S[S[S]]]]] = O, 	+/-ZZZZ = C(RE/O) If TimeZone Offset Profile</EnglishDescription>
+				              <!-- No need to test for the whole format - this will be taken care of by the datatype validation. We only need to check that  the required elements are present -->
+				<Assertion Description="Failed Assertion : Format : YYYY[MM[DD[HH[MM[SS[.S[S[S[S]]]]]]]]][+/-ZZZZ]">
+					                <Regex location="." regex="\d{4}.*"/>
+					                <!-- <Regex location="." regex="([0-9]{4})(((0[1-9])|(1[0-2]))(((0[1-9])|([1-2][0-9])|(3[0-1]))((([0-1][0-9])|(2[0-3]))(([0-5][0-9])(([0-5][0-9](\.[0-9]{1,4}){0,1})){0,1}){0,1}){0,1}){0,1}){0,1}((\+|\-)[0-9]{4}){0,1}"/>-->
+				</Assertion>
+			            </ConformanceStatement>
+		          </Component>
+		          <Component Name="Degree of Precision" Usage="X" Datatype="ID" Table="0529"/>
+	        </Field>
+	        <!-- LRI_TS_4 -->
+	<Field Datatype="LRI_TS_4" Max="1" MaxLength="1" Min="0" MinLength="0" Name="LRI_TS_4"
+                Usage="O">
+		          <Component Name="Time" Usage="R" Datatype="LRI_DTM" MaxLength="24" MinLength="4">
+			            <ConformanceStatement id="LRI-TS_4">
+				              <EnglishDescription> Format : YYYY[MM[DD[HH[MM[SS[.S[S[S[S]]]]]]]]]+/-ZZZZ WITH 	YYYY = R, 	MM = C(R/X) If TS.4 (YYYY) is not valued '0000', 	DD = C(R/X) If TS.4 (YYYY) is not valued '0000', 	HH = C(RE/X) If TS.4 (YYYY) is not valued '0000', 	MM = C(RE/X) If TS.4 (YYYY) is not valued '0000', 	SS[.S[S[S[S]]]] = C(O/X) If TS.4 (YYYY) is not valued '0000', 	+/-ZZZZ = C(RE/O) If TimeZone Offset Profile</EnglishDescription>
+				              <!-- No need to test for the whole format - this will be taken care of by the datatype validation. We only need to check that  the required elements are present -->
+				<Assertion Description="Failed Assertion : Format : YYYYMMDD[HH[MM[SS[.S[S[S[S]]]]]]][+/-ZZZZ] OR '0000'">
+					                <OR>
+						                  <PlainText location="." value="0000"/>
+						                  <Regex location="." regex="(?!0000)\d{8}.*"/>
+					                </OR>
+					                <!-- <OR><Regex location="." regex="0000((\+|\-)[0-9]{4}){0,1}"/><AND><NOT><Regex location="." regex="^\s*0000.*"/></NOT><Regex location="." regex="([0-9]{4})((0[1-9])|(1[0-2]))((0[1-9])|([1-2][0-9])|(3[0-1]))((([0-1][0-9])|(2[0-3]))(([0-5][0-9])(([0-5][0-9](\.[0-9]{1,4}){0,1})){0,1}){0,1}){0,1}((\+|\-)[0-9]{4}){0,1}"/></AND></OR> -->
+				</Assertion>
+			            </ConformanceStatement>
+		          </Component>
+		          <Component Name="Degree of Precision" Usage="X" Datatype="ID" Table="0529"/>
+	        </Field>
+	        <!-- LRI_TS_5 -->
+	<Field Datatype="LRI_TS_5" Max="1" MaxLength="1" Min="0" MinLength="0" Name="LRI_TS_5"
+                Usage="O">
+		          <Component Name="Time" Usage="R" Datatype="LRI_DTM" MaxLength="24" MinLength="4">
+			            <ConformanceStatement id="LRI-TS_5">
+				              <EnglishDescription> Format : YYYY[MM[DD[HH[MM[SS[.S[S[S[S]]]]]]]]]+/-ZZZZ WITH 	YYYY = R, 	MM = R, 	DD = R, 	HH = RE, 	MM = RE, 	[SS[.S[S[S[S]]]]] = O, 	+/-ZZZZ = C(RE/O) If TimeZone Offset Profile </EnglishDescription>
+				              <Assertion>
+					                <Regex location="."
+                            regex="([0-9]{4})((0[1-9])|(1[0-2]))((0[1-9])|([1-2][0-9])|(3[0-1]))((([0-1][0-9])|(2[0-3]))(([0-5][0-9])(([0-5][0-9](\.[0-9]{1,4}){0,1})){0,1}){0,1}){0,1}((\+|\-)[0-9]{4}){0,1}"/>
+				              </Assertion>
+			            </ConformanceStatement>
+		          </Component>
+		          <Component Name="Degree of Precision" Usage="X" Datatype="ID" Table="0529"/>
+	        </Field>
+	        <!-- LRI_TS_6 -->
+	<Field Datatype="LRI_TS_6" Max="1" MaxLength="1" Min="0" MinLength="0" Name="LRI_TS_6"
+                Usage="O">
+		          <Component Name="Time" Usage="R" Datatype="LRI_DTM" MaxLength="24" MinLength="4">
+			            <ConformanceStatement id="LRI-TS_6">
+				              <EnglishDescription> Format : YYYY[MM[DD[HH[MM[SS[.S[S[S[S]]]]]]]]]+/-ZZZZ WITH 	YYYY = R, 	MM = R, 	DD = R, 	HH = R, 	MM = R, 	SS = R,	[.S[S[S[S]]]] = O, 	+/-ZZZZ = C(RE/O) If TimeZone Offset Profile </EnglishDescription>
+				              <!-- No need to test for the whole format - this will be taken care of by the datatype validation. We only need to check that  the required elements are present -->
+				<Assertion Description="Failed Assertion : Format : YYYYMMDDHHMMSS[.S[S[S[S]]]][+/-ZZZZ]">
+					                <Regex location="." regex="\d{14}.*"/>
+				              </Assertion>
+			            </ConformanceStatement>
+		          </Component>
+		          <Component Name="Degree of Precision" Usage="X" Datatype="ID" Table="0529"/>
+	        </Field>
+	        <!-- LRI_TS_7 -->
+	<Field Datatype="LRI_TS_7" Max="1" MaxLength="1" Min="0" MinLength="0" Name="LRI_TS_7"
+                Usage="O">
+		          <Component Name="Time" Usage="R" Datatype="LRI_DTM" MaxLength="24" MinLength="4">
+			            <ConformanceStatement id="LRI-TS_7">
+				              <EnglishDescription> Format : YYYY[MM[DD[HH[MM[SS[.S[S[S[S]]]]]]]]]+/-ZZZZ WITH 	YYYY = R, 	MM = R, 	DD = R, 	HH = R, 	MM = R, 	[SS[.S[S[S[S]]]]] = O, 	+/-ZZZZ = C(RE/O) If TimeZone Offset Profile </EnglishDescription>
+				              <!-- No need to test for the whole format - this will be taken care of by the datatype validation. We only need to check that  the required elements are present -->
+				<Assertion Description="Failed Assertion : Format : YYYYMMDDHHMMSS[.S[S[S[S]]]][+/-ZZZZ]">
+					                <Regex location="." regex="\d{12}.*"/>
+				              </Assertion>
+			            </ConformanceStatement>
+		          </Component>
+		          <Component Name="Degree of Precision" Usage="X" Datatype="ID" Table="0529"/>
+	        </Field>
+	        <!-- LRI_TX -->
+	<Field Datatype="LRI_TX" Max="1" MaxLength="1" Min="0" MinLength="0" Name="LRI_TX"
+                Usage="O"/>
+	        <!-- LRI_VID -->
+	<Field Datatype="LRI_VID" Max="1" MaxLength="1" Min="0" MinLength="0" Name="LRI_VID"
+                Usage="O">
+		          <Component Name="Version ID" Usage="R" Datatype="LRI_ID" Table="US_LAB_HL70104"
+                       MaxLength="5"
+                       MinLength="5">
+			            <ImpNote>Length 3..5 Restricted to 2.5.1 in this guide. Literal value: 2.5.1' </ImpNote>
+			            <DataValues ExValue="2.5.1"/>
+		          </Component>
+		          <Component Name="Internationalization Code" Usage="O" Datatype="CE" MaxLength="705"
+                       MinLength="1"/>
+		          <Component Name="International Version ID" Usage="O" Datatype="CE" MaxLength="705"
+                       MinLength="1"/>
+	        </Field>
+	        <!-- LRI_XAD -->
+	<Field Datatype="LRI_XAD" Max="1" MaxLength="1" Min="0" MinLength="0" Name="LRI_XAD"
+                Usage="O">
+		          <Component Name="Street Address" Usage="RE" Datatype="LRI_SAD" MaxLength="184"
+                       MinLength="1"/>
+		          <Component Name="Other Designation" Usage="RE" Datatype="LRI_ST" MaxLength="120"
+                       MinLength="1">
+			            <ImpNote>Example: Suite 555 </ImpNote>
+		          </Component>
+		          <Component Name="City" Usage="RE" Datatype="LRI_ST" MaxLength="50" MinLength="1"/>
+		          <Component Name="State or Province" Usage="RE" Datatype="LRI_ST"
+                       Table="USPS Alpha State Codes"
+                       MaxLength="50"
+                       MinLength="1">
+			            <ImpNote>State Value Set The 2 letter (alpha) codes should be used here. ISSUE: Length should be constrained accordingly. </ImpNote>
+		          </Component>
+		          <Component Name="Zip or Postal Code" Usage="RE" Datatype="LRI_ST" MaxLength="12"
+                       MinLength="1">
+			<!-- <ImpNote>In the US, the zip code takes the form 99999[-9999], while the Canadian postal code takes the form A9A9A9. </ImpNote> -->
+		</Component>
+		          <Component Name="Country" Usage="RE" Datatype="LRI_ID" Table="US_LAB_HL70399"
+                       MaxLength="3"
+                       MinLength="3">
+			            <ImpNote>Length = 3..3 Use 3-character (alphabetic) form of ISO 3166 for HL7 Table 0399 as defined in HL7 Chapter 2, Section 2.15.9.17.</ImpNote>
+		          </Component>
+		          <Component Name="Address Type" Usage="RE" Datatype="LRI_ID" Table="US_LAB_HL70190"
+                       MaxLength="3"
+                       MinLength="1"/>
+		          <Component Name="Other Geographic Designation" Usage="O" Datatype="ST" MaxLength="50"
+                       MinLength="1"/>
+		          <Component Name="County/Parish Code" Usage="RE" Datatype="LRI_IS" Table="FIPS6_4"
+                       MaxLength="20"
+                       MinLength="1">
+			            <ImpNote>Table: PHVS_County_FIPS_6-4 </ImpNote>
+		          </Component>
+		          <Component Name="Census Tract" Usage="O" Datatype="IS" MaxLength="20" MinLength="1"/>
+		          <Component Name="Address Representation Code" Usage="O" Datatype="ID" MaxLength="1"
+                       MinLength="1"/>
+		          <Component Name="Address Validity Range" Usage="X" Datatype="DR">
+			            <ImpNote>Deprecated as of HL7 Version 2.5. See XAD-13 Effective Date and XAD-14 Expiration Date components.</ImpNote>
+		          </Component>
+		          <Component Name="Effective Date" Usage="O" Datatype="TS" MaxLength="24" MinLength="1"/>
+		          <Component Name="Expiration Date" Usage="O" Datatype="TS" MaxLength="24" MinLength="1"/>
+	        </Field>
+	        <!-- LRI_XCN_GU -->
+	<Field Datatype="LRI_XCN_GU" Max="1" MaxLength="1" Min="0" MinLength="0"
+                Name="LRI_XCN_GU"
+                Usage="O">
+		          <Component Name="ID Number" Usage="RE" Datatype="LRI_ST" MaxLength="15" MinLength="1">
+			            <ImpNote>Length 1..15. The ID Number component combined with the Assigning Authority component (component 9) must uniquely identify the associated person. Note - despite the component being named _ID Number_ this component is an ST string data type, not numeric, so the component is not limited to just numbers. </ImpNote>
+			            <Reference>LRI-XCN-1: If XCN.1 (ID Number) is valued, XCN.13 (Identifier Type Code) SHALL be valued.</Reference>
+		          </Component>
+		          <Component Name="Family Name" Usage="RE" Datatype="LRI_FN" MaxLength="194" MinLength="1"/>
+		          <Component Name="Given Name" Usage="RE" Datatype="LRI_ST" MaxLength="30" MinLength="1">
+			            <ImpNote>Length 1..30. i.e., first name. </ImpNote>
+		          </Component>
+		          <Component Name="Second and Further Given Names or Initials Thereof" Usage="RE"
+                       Datatype="LRI_ST"
+                       MaxLength="30"
+                       MinLength="1">
+			            <ImpNote>Length 1..30. </ImpNote>
+		          </Component>
+		          <Component Name="Suffix (e.g., JR or III)" Usage="RE" Datatype="LRI_ST" MaxLength="20"
+                       MinLength="1">
+			            <ImpNote>Length 1..20. </ImpNote>
+		          </Component>
+		          <Component Name="Prefix (e.g., DR)" Usage="RE" Datatype="LRI_ST" MaxLength="20"
+                       MinLength="1">
+			            <ImpNote>Length 1..20. </ImpNote>
+		          </Component>
+		          <Component Name="Degree (e.g., MD)" Usage="X" Datatype="IS">
+			            <ImpNote>Length 1..20. </ImpNote>
+		          </Component>
+		          <Component Name="Source Table" Usage="O" Datatype="IS" MaxLength="4" MinLength="1">
+			            <ImpNote>Length 1..20. </ImpNote>
+		          </Component>
+		          <Component Name="Assigning Authority" Usage="C" Datatype="LRI_HD_GU" MaxLength="227"
+                       MinLength="1"
+                       PredicateTrueUsage="R"
+                       PredicateFalseUsage="X">
+			            <Predicate>
+				              <EnglishDescription>If XCN_GU.1 (ID Number) is valued</EnglishDescription>
+				              <Condition>
+					                <Valued location="./1"/>
+				              </Condition>
+			            </Predicate>
+			            <ImpNote>The Assigning Authority component is used to identify the system, application, organization, etc. that assigned the ID Number in component 1. C(R/X) </ImpNote>
+			            <Reference>LRI-XCN-4: If XCN.1 (ID Number) is valued, XCN.9 (Assigning Authority) MAY be valued.</Reference>
+		          </Component>
+		          <Component Name="Name Type Code" Usage="RE" Datatype="LRI_ID" Table="US_LAB_HL70200"
+                       MaxLength="5"
+                       MinLength="1">
+			            <ImpNote>Length 1..5. </ImpNote>
+		          </Component>
+		          <Component Name="Identifier Check Digit" Usage="O" Datatype="ST" MaxLength="4"
+                       MinLength="1">
+			            <ImpNote>Length 1..4 </ImpNote>
+		          </Component>
+		          <Component Name="Check Digit Scheme" Usage="C" Datatype="LRI_ID" MaxLength="3"
+                       MinLength="1"
+                       PredicateTrueUsage="O"
+                       PredicateFalseUsage="X">
+			            <ImpNote>Length 3..3 C(O/X) The condition predicate is missing.</ImpNote>
+		          </Component>
+		          <Component Name="Identifier Type Code" Usage="C" Datatype="LRI_ID" Table="US_LAB_HL70203"
+                       MaxLength="5"
+                       MinLength="1"
+                       PredicateTrueUsage="R"
+                       PredicateFalseUsage="X">
+			            <Predicate>
+				              <EnglishDescription>If XCN_GU.1 (ID Number) is valued</EnglishDescription>
+				              <Condition>
+					                <Valued location="./1"/>
+				              </Condition>
+			            </Predicate>
+			            <ImpNote>Length 2..5. C(R/X) </ImpNote>
+		          </Component>
+		          <Component Name="Assigning Facility" Usage="O" Datatype="HD" MaxLength="227" MinLength="1"/>
+		          <Component Name="Name Representation Code" Usage="O" Datatype="ID" Table="0465"
+                       MaxLength="1"
+                       MinLength="1">
+			            <ImpNote>Length 1..1 </ImpNote>
+		          </Component>
+		          <Component Name="Name Context" Usage="O" Datatype="CE" Table="0448" MaxLength="483"
+                       MinLength="1"/>
+		          <Component Name="Name Validity Range" Usage="X" Datatype="DR"/>
+		          <Component Name="Name Assembly Order" Usage="O" Datatype="ID" Table="0444" MaxLength="1"
+                       MinLength="1">
+			            <ImpNote>Length 1..1 </ImpNote>
+		          </Component>
+		          <Component Name="Effective Date" Usage="O" Datatype="TS" MaxLength="24" MinLength="1">
+			            <ImpNote>Length 1..8 </ImpNote>
+		          </Component>
+		          <Component Name="Expiration Date" Usage="O" Datatype="TS" MaxLength="24" MinLength="1">
+			            <ImpNote>Length 1..8 </ImpNote>
+		          </Component>
+		          <Component Name="Professional Suffix" Usage="O" Datatype="ST" MaxLength="199"
+                       MinLength="1">
+			            <ImpNote>Length 1..199. Suggest using values from HL7 table 360. </ImpNote>
+		          </Component>
+		          <Component Name="Assigning Jurisdiction" Usage="O" Datatype="CWE" MaxLength="705"
+                       MinLength="1"/>
+		          <Component Name="Assigning Agency or Department" Usage="O" Datatype="CWE" MaxLength="705"
+                       MinLength="1"/>
+	        </Field>
+	        <!-- LRI_XCN_NG -->
+	<Field Datatype="LRI_XCN_NG" Max="1" MaxLength="1" Min="0" MinLength="0"
+                Name="LRI_XCN_NG"
+                Usage="O">
+		          <Component Name="ID Number" Usage="RE" Datatype="LRI_ST" MaxLength="15" MinLength="1">
+			            <ImpNote>Length 1..15. The ID Number component combined with the Assigning Authority component (component 9) must uniquely identify the associated person. Note - despite the component being named _ID Number_ this component is an ST string data type, not numeric, so the component is not limited to just numbers. </ImpNote>
+			            <Reference>LRI-XCN-1: If XCN.1 (ID Number) is valued, XCN.13 (Identifier Type Code) SHALL be valued.</Reference>
+		          </Component>
+		          <Component Name="Family Name" Usage="RE" Datatype="LRI_FN" MaxLength="194" MinLength="1"/>
+		          <Component Name="Given Name" Usage="RE" Datatype="LRI_ST" MaxLength="30" MinLength="1">
+			            <ImpNote>Length 1..30. I.e., first name. </ImpNote>
+		          </Component>
+		          <Component Name="Second and Further Given Names or Initials Thereof" Usage="RE"
+                       Datatype="LRI_ST"
+                       MaxLength="30"
+                       MinLength="1">
+			            <ImpNote>Length 1..30. </ImpNote>
+		          </Component>
+		          <Component Name="Suffix (e.g., JR or III)" Usage="RE" Datatype="LRI_ST" MaxLength="20"
+                       MinLength="1">
+			            <ImpNote>Length 1..20. </ImpNote>
+		          </Component>
+		          <Component Name="Prefix (e.g., DR)" Usage="RE" Datatype="LRI_ST" MaxLength="20"
+                       MinLength="1">
+			            <ImpNote>Length 1..20. </ImpNote>
+		          </Component>
+		          <Component Name="Degree (e.g., MD)" Usage="X" Datatype="IS">
+			            <ImpNote>Length 1..20. </ImpNote>
+		          </Component>
+		          <Component Name="Source Table" Usage="O" Datatype="IS" MaxLength="4" MinLength="1">
+			            <ImpNote>Length 1..20. </ImpNote>
+		          </Component>
+		          <Component Name="Assigning Authority" Usage="C" Datatype="LRI_HD_NG" MaxLength="227"
+                       MinLength="1"
+                       PredicateTrueUsage="RE"
+                       PredicateFalseUsage="X">
+			            <Predicate>
+				              <EnglishDescription>If XCN_NG.1 (ID Number) is valued</EnglishDescription>
+				              <Condition>
+					                <Valued location="./1"/>
+				              </Condition>
+			            </Predicate>
+			            <ImpNote>The Assigning Authority component is used to identify the system, application, organization, etc. that assigned the ID Number in component 1. C(RE/X) </ImpNote>
+			            <Reference>LRI-XCN-4: If XCN.1 (ID Number) is valued, XCN.9 (Assigning Authority) MAY be valued.</Reference>
+		          </Component>
+		          <Component Name="Name Type Code" Usage="RE" Datatype="LRI_ID" Table="US_LAB_HL70200"
+                       MaxLength="5"
+                       MinLength="1">
+			            <ImpNote>Length 1..5. </ImpNote>
+		          </Component>
+		          <Component Name="Identifier Check Digit" Usage="O" Datatype="ST" MaxLength="1"
+                       MinLength="1">
+			            <ImpNote>Length 1..4 </ImpNote>
+		          </Component>
+		          <Component Name="Check Digit Scheme" Usage="C" Datatype="LRI_ID" MaxLength="3"
+                       MinLength="1"
+                       PredicateTrueUsage="O"
+                       PredicateFalseUsage="X">
+			            <ImpNote>Length 3..3 C(O/X) The condition predicate is missing</ImpNote>
+		          </Component>
+		          <Component Name="Identifier Type Code" Usage="C" Datatype="LRI_ID" Table="US_LAB_HL70203"
+                       MaxLength="5"
+                       MinLength="1"
+                       PredicateTrueUsage="R"
+                       PredicateFalseUsage="X">
+			            <Predicate>
+				              <EnglishDescription>If XCN_NG.1 (ID Number) is valued</EnglishDescription>
+				              <Condition>
+					                <Valued location="./1"/>
+				              </Condition>
+			            </Predicate>
+			            <ImpNote>Length 2..5. C(R/X) </ImpNote>
+		          </Component>
+		          <Component Name="Assigning Facility" Usage="O" Datatype="HD" MaxLength="227" MinLength="1"/>
+		          <Component Name="Name Representation Code" Usage="O" Datatype="ID" MaxLength="1"
+                       MinLength="1">
+			            <ImpNote>Length 1..1 </ImpNote>
+		          </Component>
+		          <Component Name="Name Context" Usage="O" Datatype="CE" MaxLength="483" MinLength="1"/>
+		          <Component Name="Name Validity Range" Usage="X" Datatype="DR"/>
+		          <Component Name="Name Assembly Order" Usage="O" Datatype="ID" MaxLength="1" MinLength="1">
+			            <ImpNote>Length 1..1 </ImpNote>
+		          </Component>
+		          <Component Name="Effective Date" Usage="O" Datatype="TS" MaxLength="24" MinLength="1">
+			            <ImpNote>Length 1..8. </ImpNote>
+		          </Component>
+		          <Component Name="Expiration Date" Usage="O" Datatype="TS" MaxLength="24" MinLength="1">
+			            <ImpNote>Length 1..8. </ImpNote>
+		          </Component>
+		          <Component Name="Professional Suffix" Usage="O" Datatype="ST" MaxLength="199"
+                       MinLength="1"/>
+		          <Component Name="Assigning Jurisdiction" Usage="O" Datatype="CWE" MaxLength="705"
+                       MinLength="1"/>
+		          <Component Name="Assigning Agency or Department" Usage="O" Datatype="CWE" MaxLength="705"
+                       MinLength="1"/>
+	        </Field>
+	        <!-- LRI_XON_GU -->
+	<Field Datatype="LRI_XON_GU" Max="1" MaxLength="1" Min="0" MinLength="0"
+                Name="LRI_XON_GU"
+                Usage="O">
+		          <Component Name="Organization Name" Usage="RE" Datatype="LRI_ST" MaxLength="50"
+                       MinLength="1">
+			            <ImpNote>Length 1..50. </ImpNote>
+			            <Reference>LRI-XON.a-1: XON.1 (Organization Name) or XON.10 (Organization Identifier) SHALL be valued.</Reference>
+		          </Component>
+		          <Component Name="Organization Name Type Code" Usage="O" Datatype="IS" MaxLength="20"
+                       MinLength="1">
+			            <ImpNote>Length 1..20. </ImpNote>
+		          </Component>
+		          <Component Name="ID Number" Usage="X" Datatype="NM">
+			            <ImpNote>(Deprecated as of HL7 Version 2.5.) Use XON-10 Organization Identifier. </ImpNote>
+		          </Component>
+		          <Component Name="Check Digit" Usage="O" Datatype="NM" MaxLength="4" MinLength="1">
+			            <ImpNote>Length 1..4. </ImpNote>
+		          </Component>
+		          <Component Name="Check Digit Scheme" Usage="C" Datatype="LRI_ID" MaxLength="3"
+                       MinLength="1"
+                       PredicateTrueUsage="O"
+                       PredicateFalseUsage="X">
+			            <ImpNote>Length 3..3. C(O/X) The condition predicate is missing</ImpNote>
+		          </Component>
+		          <Component Name="Assigning Authority" Usage="C" Datatype="LRI_HD_GU" MaxLength="227"
+                       MinLength="1"
+                       PredicateTrueUsage="R"
+                       PredicateFalseUsage="X">
+			            <Predicate>
+				              <EnglishDescription>If XON_GU.10 (Organization Identifier) is valued</EnglishDescription>
+				              <Condition>
+					                <Valued location="./10"/>
+				              </Condition>
+			            </Predicate>
+			            <ImpNote>The Assigning Authority component is used to identify the system, application, organization, etc. that assigned the ID in component 10. C(R/X) </ImpNote>
+			            <Reference>LRI-XON.a-3: XON.6 (Assigning Authority) and XCN.8 (Assigning Facility) and SHALL use datatype HD-GU.</Reference>
+		          </Component>
+		          <Component Name="Identifier Type Code" Usage="C" Datatype="LRI_ID" Table="US_LAB_HL70203"
+                       MaxLength="5"
+                       MinLength="1"
+                       PredicateTrueUsage="R"
+                       PredicateFalseUsage="X">
+			            <Predicate>
+				              <EnglishDescription>If XON_GU.10 (Organization Identifier) is valued</EnglishDescription>
+				              <Condition>
+					                <Valued location="./10"/>
+				              </Condition>
+			            </Predicate>
+			            <ImpNote>Length 2..5. C(R/X) </ImpNote>
+		          </Component>
+		          <Component Name="Assigning Facility" Usage="O" Datatype="HD" MaxLength="227" MinLength="1"/>
+		          <Component Name="Name Representation Code" Usage="O" Datatype="ID" Table="0465"
+                       MaxLength="1"
+                       MinLength="1">
+			            <ImpNote>Length 1..1 </ImpNote>
+		          </Component>
+		          <Component Name="Organization Identifier" Usage="C" Datatype="LRI_ST" MaxLength="20"
+                       MinLength="1"
+                       PredicateTrueUsage="R"
+                       PredicateFalseUsage="RE">
+			            <Predicate>
+				              <EnglishDescription>If XON_GU.1 (Organization Name) is not valued</EnglishDescription>
+				              <Condition>
+					                <NOT>
+						                  <Valued location="./1"/>
+					                </NOT>
+				              </Condition>
+			            </Predicate>
+			            <ImpNote>Length 1..20 C(R/RE) ISSUE: Select either XON.1 to XON.10 to simplify unnecessary complexity. </ImpNote>
+		          </Component>
+	        </Field>
+	        <!-- LRI_XON_NG -->
+	<Field Datatype="LRI_XON_NG" Max="1" MaxLength="1" Min="0" MinLength="0"
+                Name="LRI_XON_NG"
+                Usage="O">
+		          <Component Name="Organization Name" Usage="RE" Datatype="LRI_ST" MaxLength="50"
+                       MinLength="1">
+			            <ImpNote>Length 1..50. </ImpNote>
+			            <Reference>LRI-XON.b-1: XON.1 (Organization Name) or XON.10 (Organization Identifier) SHALL be valued.</Reference>
+		          </Component>
+		          <Component Name="Organization Name Type Code" Usage="O" Datatype="IS" MaxLength="20"
+                       MinLength="1">
+			            <ImpNote>Length 1..20. </ImpNote>
+		          </Component>
+		          <Component Name="ID Number" Usage="X" Datatype="NM">
+			            <ImpNote>(Deprecated as of HL7 Version 2.5.) Use XON-10 Organization Identifier. </ImpNote>
+		          </Component>
+		          <Component Name="Check Digit" Usage="O" Datatype="NM" MaxLength="4" MinLength="1">
+			            <ImpNote>Length 1..4. </ImpNote>
+		          </Component>
+		          <Component Name="Check Digit Scheme" Usage="C" Datatype="LRI_ID" PredicateTrueUsage="O"
+                       PredicateFalseUsage="X">
+			            <ImpNote>Length 3..3 C(O/X) </ImpNote>
+		          </Component>
+		          <Component Name="Assigning Authority" Usage="C" Datatype="LRI_HD_NG" MaxLength="227"
+                       MinLength="1"
+                       PredicateTrueUsage="RE"
+                       PredicateFalseUsage="X">
+			            <Predicate>
+				              <EnglishDescription>If XON_NG.10 (Organization Identifier) is valued</EnglishDescription>
+				              <Condition>
+					                <Valued location="./10"/>
+				              </Condition>
+			            </Predicate>
+		          </Component>
+		          <Component Name="Identifier Type Code" Usage="C" Datatype="LRI_ID" Table="US_LAB_HL70203"
+                       MaxLength="5"
+                       MinLength="1"
+                       PredicateTrueUsage="R"
+                       PredicateFalseUsage="X">
+			            <Predicate>
+				              <EnglishDescription>If XON_NG.10 (Organization Identifier) is valued</EnglishDescription>
+				              <Condition>
+					                <Valued location="./10"/>
+				              </Condition>
+			            </Predicate>
+			            <ImpNote>Length 2..5 C(R/X) </ImpNote>
+		          </Component>
+		          <Component Name="Assigning Facility" Usage="O" Datatype="HD" MaxLength="227" MinLength="1"/>
+		          <Component Name="Name Representation Code" Usage="O" Datatype="ID" Table="0465"
+                       MaxLength="1"
+                       MinLength="1">
+			            <ImpNote>Length 1..1 </ImpNote>
+		          </Component>
+		          <Component Name="Organization Identifier" Usage="C" Datatype="LRI_ST" MaxLength="20"
+                       MinLength="1"
+                       PredicateTrueUsage="R"
+                       PredicateFalseUsage="RE">
+			            <Predicate>
+				              <EnglishDescription>If XON_NG.1 (Organization Name) is not valued</EnglishDescription>
+				              <Condition>
+					                <NOT>
+						                  <Valued location="./1"/>
+					                </NOT>
+				              </Condition>
+			            </Predicate>
+			            <ImpNote>Length 1..20. ISSUE: Select either XON.1 to XON.10 to simplify unnecessary complexity. </ImpNote>
+		          </Component>
+	        </Field>
+	        <!-- LRI_XPN -->
+	<Field Datatype="LRI_XPN" Max="1" MaxLength="1" Min="0" MinLength="0" Name="LRI_XPN"
+                Usage="O">
+		          <Component Name="Family Name" Usage="RE" Datatype="LRI_FN" MaxLength="194" MinLength="1">
+			            <ImpNote>ISSUE: Is pseudomized data supported? </ImpNote>
+		          </Component>
+		          <Component Name="Given Name" Usage="RE" Datatype="LRI_ST" MaxLength="30" MinLength="1">
+			            <ImpNote>Length 1..30 I.e., first name. </ImpNote>
+		          </Component>
+		          <Component Name="Second and Further Given Names or Initials Thereof" Usage="RE"
+                       Datatype="LRI_ST"
+                       MaxLength="30"
+                       MinLength="1"/>
+		          <Component Name="Suffix (e.g., JR or III)" Usage="RE" Datatype="LRI_ST" MaxLength="20"
+                       MinLength="1">
+			            <ImpNote>Length 1..20. </ImpNote>
+		          </Component>
+		          <Component Name="Prefix (e.g., DR)" Usage="O" Datatype="LRI_ST" MaxLength="20"
+                       MinLength="1">
+			            <ImpNote>Length 1..20. </ImpNote>
+		          </Component>
+		          <Component Name="Degree (e.g., MD)" Usage="X" Datatype="IS" Table="0360">
+			            <ImpNote>Length 1..20. </ImpNote>
+		          </Component>
+		          <Component Name="Name Type Code" Usage="RE" Datatype="LRI_ID" Table="US_LAB_HL70200"
+                       MaxLength="5"
+                       MinLength="1">
+			            <ImpNote>Length 1..5 </ImpNote>
+		          </Component>
+		          <Component Name="Name Representation Code" Usage="O" Datatype="ID" MaxLength="1"
+                       MinLength="1">
+			            <ImpNote>Length 1..1 </ImpNote>
+		          </Component>
+		          <Component Name="Name Context" Usage="O" Datatype="CE" MaxLength="705" MinLength="1"/>
+		          <Component Name="Name Validity Range" Usage="X" Datatype="DR">
+			            <ImpNote>Deprecated as of HL7 Version 2.5. See XPN-12 Effective Date and XPN-13 Expiration Date components. </ImpNote>
+		          </Component>
+		          <Component Name="Name Assembly Order" Usage="O" Datatype="ID" MaxLength="1" MinLength="1">
+			            <ImpNote>Length 1..1 </ImpNote>
+		          </Component>
+		          <Component Name="Effective Date" Usage="O" Datatype="TS" MaxLength="24" MinLength="1"/>
+		          <Component Name="Expiration Date" Usage="O" Datatype="TS" MaxLength="24" MinLength="1"/>
+		          <Component Name="Professional Suffix" Usage="O" Datatype="ST" Table="0360" MaxLength="199"
+                       MinLength="1"/>
+	        </Field>
+	        <!-- default HL7 v2.5.1 library -->
+	<Field Datatype="AD" Max="1" MaxLength="1" Min="0" MinLength="0" Name="AD" Usage="O">
+		          <Component Name="Street Address" Usage="O" Datatype="ST" MinLength="1" MaxLength="120"/>
+		          <Component Name="Other Designation" Usage="O" Datatype="ST" MinLength="1" MaxLength="120"/>
+		          <Component Name="City" Usage="O" Datatype="ST" MinLength="1" MaxLength="50"/>
+		          <Component Name="State or Province" Usage="O" Datatype="ST" MinLength="1" MaxLength="50"/>
+		          <Component Name="Zip or Postal Code" Usage="O" Datatype="ST" MinLength="1" MaxLength="12"/>
+		          <Component Name="Country" Usage="O" Datatype="ID" MinLength="1" MaxLength="3" Table="0399"/>
+		          <Component Name="Address Type" Usage="O" Datatype="ID" MinLength="1" MaxLength="3"
+                       Table="0190"/>
+		          <Component Name="Other Geographic Designation" Usage="O" Datatype="ST" MinLength="1"
+                       MaxLength="50"/>
+	        </Field>
+	        <Field Datatype="AUI" Max="1" MaxLength="1" Min="0" MinLength="0" Name="AUI" Usage="O">
+		          <Component Name="Authorization Number" Usage="O" Datatype="ST" MinLength="1"
+                       MaxLength="30"/>
+		          <Component Name="Date" Usage="O" Datatype="DT" MinLength="1" MaxLength="8"/>
+		          <Component Name="Source" Usage="O" Datatype="ST" MinLength="1" MaxLength="199"/>
+	        </Field>
+	        <Field Datatype="CCD" Max="1" MaxLength="1" Min="0" MinLength="0" Name="CCD" Usage="O">
+		          <Component Name="Invocation Event" Usage="R" Datatype="ID" MinLength="1" MaxLength="1"
+                       Table="0100"/>
+		          <Component Name="Date/time" Usage="O" Datatype="TS" MinLength="1" MaxLength="26"/>
+	        </Field>
+	        <Field Datatype="CCP" Max="1" MaxLength="1" Min="0" MinLength="0" Name="CCP" Usage="O">
+		          <Component Name="Channel Calibration Sensitivity Correction Factor" Usage="O"
+                       Datatype="NM"
+                       MinLength="1"
+                       MaxLength="6"/>
+		          <Component Name="Channel Calibration Baseline" Usage="O" Datatype="NM" MinLength="1"
+                       MaxLength="6"/>
+		          <Component Name="Channel Calibration Time Skew" Usage="O" Datatype="NM" MinLength="1"
+                       MaxLength="6"/>
+	        </Field>
+	        <Field Datatype="CD" Max="1" MaxLength="1" Min="0" MinLength="0" Name="CD" Usage="O">
+		          <Component Name="Channel Identifier" Usage="O" Datatype="WVI" MinLength="1" MaxLength="22"/>
+		          <Component Name="Waveform Source" Usage="O" Datatype="WVS" MinLength="1" MaxLength="17"/>
+		          <Component Name="Channel Sensitivity/Units" Usage="O" Datatype="CSU" MinLength="1"
+                       MaxLength="478"/>
+		          <Component Name="Channel Calibration Parameters" Usage="O" Datatype="CCP" MinLength="1"
+                       MaxLength="20"/>
+		          <Component Name="Channel Sampling Frequency" Usage="O" Datatype="NM" MinLength="1"
+                       MaxLength="6"/>
+		          <Component Name="Minimum/Maximum Data Values" Usage="O" Datatype="NR" MinLength="1"
+                       MaxLength="33"/>
+	        </Field>
+	        <Field Datatype="CE" Max="1" MaxLength="1" Min="0" MinLength="0" Name="CE" Usage="O">
+		          <Component Name="Identifier" Usage="O" Datatype="ST" MinLength="1" MaxLength="20"/>
+		          <Component Name="Text" Usage="O" Datatype="ST" MinLength="1" MaxLength="199"/>
+		          <Component Name="Name of Coding System" Usage="O" Datatype="ID" MinLength="1"
+                       MaxLength="20"
+                       Table="0396"/>
+		          <Component Name="Alternate Identifier" Usage="O" Datatype="ST" MinLength="1"
+                       MaxLength="20"/>
+		          <Component Name="Alternate Text" Usage="O" Datatype="ST" MinLength="1" MaxLength="199"/>
+		          <Component Name="Name of Alternate Coding System" Usage="O" Datatype="ID" MinLength="1"
+                       MaxLength="20"
+                       Table="0396"/>
+	        </Field>
+	        <Field Datatype="CF" Max="1" MaxLength="1" Min="0" MinLength="0" Name="CF" Usage="O">
+		          <Component Name="Identifier" Usage="O" Datatype="ST" MinLength="1" MaxLength="20"/>
+		          <Component Name="Formatted Text" Usage="O" Datatype="FT" MinLength="1" MaxLength="65536"/>
+		          <Component Name="Name of Coding System" Usage="O" Datatype="ID" MinLength="1"
+                       MaxLength="20"
+                       Table="0396"/>
+		          <Component Name="Alternate Identifier" Usage="O" Datatype="ST" MinLength="1"
+                       MaxLength="20"/>
+		          <Component Name="Alternate Formatted Text" Usage="O" Datatype="FT" MinLength="1"
+                       MaxLength="65536"/>
+		          <Component Name="Name of Alternate Coding System" Usage="O" Datatype="ID" MinLength="1"
+                       MaxLength="20"
+                       Table="0396"/>
+	        </Field>
+	        <Field Datatype="CNE" Max="1" MaxLength="1" Min="0" MinLength="0" Name="CNE" Usage="O">
+		          <Component Name="Identifier" Usage="R" Datatype="ST" MinLength="1" MaxLength="20"/>
+		          <Component Name="Text" Usage="O" Datatype="ST" MinLength="1" MaxLength="199"/>
+		          <Component Name="Name of Coding System" Usage="O" Datatype="ID" MinLength="1"
+                       MaxLength="20"
+                       Table="0396"/>
+		          <Component Name="Alternate Identifier" Usage="O" Datatype="ST" MinLength="1"
+                       MaxLength="20"/>
+		          <Component Name="Alternate Text" Usage="O" Datatype="ST" MinLength="1" MaxLength="199"/>
+		          <Component Name="Name of Alternate Coding System" Usage="O" Datatype="ID" MinLength="1"
+                       MaxLength="20"
+                       Table="0396"/>
+		          <Component Name="Coding System Version ID" Usage="C" Datatype="ST" MinLength="1"
+                       MaxLength="10"/>
+		          <Component Name="Alternate Coding System Version ID" Usage="O" Datatype="ST" MinLength="1"
+                       MaxLength="10"/>
+		          <Component Name="Original Text" Usage="O" Datatype="ST" MinLength="1" MaxLength="199"/>
+	        </Field>
+	        <Field Datatype="CNN" Max="1" MaxLength="1" Min="0" MinLength="0" Name="CNN" Usage="O">
+		          <Component Name="ID Number" Usage="O" Datatype="ST" MinLength="1" MaxLength="15"/>
+		          <Component Name="Family Name" Usage="O" Datatype="ST" MinLength="1" MaxLength="50"/>
+		          <Component Name="Given Name" Usage="O" Datatype="ST" MinLength="1" MaxLength="30"/>
+		          <Component Name="Second and Further Given Names or Initials Thereof" Usage="O"
+                       Datatype="ST"
+                       MinLength="1"
+                       MaxLength="30"/>
+		          <Component Name="Suffix (e.g., JR or III)" Usage="O" Datatype="ST" MinLength="1"
+                       MaxLength="20"/>
+		          <Component Name="Prefix (e.g., DR)" Usage="O" Datatype="ST" MinLength="1" MaxLength="20"/>
+		          <Component Name="Degree (e.g., MD" Usage="O" Datatype="IS" MinLength="1" MaxLength="5"
+                       Table="0360"/>
+		          <Component Name="Source Table" Usage="C" Datatype="IS" MinLength="1" MaxLength="4"
+                       Table="0297"/>
+		          <Component Name="Assigning Authority - Namespace ID" Usage="C" Datatype="IS" MinLength="1"
+                       MaxLength="20"
+                       Table="0363"/>
+		          <Component Name="Assigning Authority - Universal ID" Usage="C" Datatype="ST" MinLength="1"
+                       MaxLength="199"/>
+		          <Component Name="Assigning Authority - Universal ID Type" Usage="C" Datatype="ID"
+                       MinLength="1"
+                       MaxLength="6"
+                       Table="0301"/>
+	        </Field>
+	        <Field Datatype="CP" Max="1" MaxLength="1" Min="0" MinLength="0" Name="CP" Usage="O">
+		          <Component Name="Price" Usage="R" Datatype="MO" MinLength="1" MaxLength="20"/>
+		          <Component Name="Price Type" Usage="O" Datatype="ID" MinLength="1" MaxLength="2"
+                       Table="0205"/>
+		          <Component Name="From Value" Usage="O" Datatype="NM" MinLength="1" MaxLength="16"/>
+		          <Component Name="To Value" Usage="O" Datatype="NM" MinLength="1" MaxLength="16"/>
+		          <Component Name="Range Units" Usage="O" Datatype="CE" MinLength="1" MaxLength="483"/>
+		          <Component Name="Range Type" Usage="O" Datatype="ID" MinLength="1" MaxLength="1"
+                       Table="0298"/>
+	        </Field>
+	        <Field Datatype="CQ" Max="1" MaxLength="1" Min="0" MinLength="0" Name="CQ" Usage="O">
+		          <Component Name="Quantity" Usage="O" Datatype="NM" MinLength="1" MaxLength="16"/>
+		          <Component Name="Units" Usage="O" Datatype="CE" MinLength="1" MaxLength="483"/>
+	        </Field>
+	        <Field Datatype="CSU" Max="1" MaxLength="1" Min="0" MinLength="0" Name="CSU" Usage="O">
+		          <Component Name="Channel Sensitivity" Usage="R" Datatype="NM" MinLength="1" MaxLength="60"/>
+		          <Component Name="Unit of Measure Identifier" Usage="C" Datatype="ST" MinLength="1"
+                       MaxLength="20"/>
+		          <Component Name="Unit of Measure Description" Usage="C" Datatype="ST" MinLength="1"
+                       MaxLength="199"/>
+		          <Component Name="Unit of Measure Coding System" Usage="C" Datatype="ID" MinLength="1"
+                       MaxLength="20"
+                       Table="0396"/>
+		          <Component Name="Alternate Unit of Measure Identifier" Usage="O" Datatype="ST"
+                       MinLength="1"
+                       MaxLength="20"/>
+		          <Component Name="Alternate Unit of Measure Description" Usage="O" Datatype="ST"
+                       MinLength="1"
+                       MaxLength="199"/>
+		          <Component Name="Alternate Unit of Measure Coding System" Usage="O" Datatype="ID"
+                       MinLength="1"
+                       MaxLength="20"
+                       Table="0396"/>
+	        </Field>
+	        <Field Datatype="CWE" Max="1" MaxLength="1" Min="0" MinLength="0" Name="CWE" Usage="O">
+		          <Component Name="Identifier" Usage="O" Datatype="ST" MinLength="1" MaxLength="20"/>
+		          <Component Name="Text" Usage="O" Datatype="ST" MinLength="1" MaxLength="199"/>
+		          <Component Name="Name of Coding System" Usage="O" Datatype="ID" MinLength="1"
+                       MaxLength="20"
+                       Table="0396"/>
+		          <Component Name="Alternate Identifier" Usage="O" Datatype="ST" MinLength="1"
+                       MaxLength="20"/>
+		          <Component Name="Alternate Text" Usage="O" Datatype="ST" MinLength="1" MaxLength="199"/>
+		          <Component Name="Name of Alternate Coding System" Usage="O" Datatype="ID" MinLength="1"
+                       MaxLength="20"
+                       Table="0396"/>
+		          <Component Name="Coding System Version ID" Usage="C" Datatype="ST" MinLength="1"
+                       MaxLength="10"/>
+		          <Component Name="Alternate Coding System Version ID" Usage="O" Datatype="ST" MinLength="1"
+                       MaxLength="10"/>
+		          <Component Name="Original Text" Usage="O" Datatype="ST" MinLength="1" MaxLength="199"/>
+	        </Field>
+	        <Field Datatype="CX" Max="1" MaxLength="1" Min="0" MinLength="0" Name="CX" Usage="O">
+		          <Component Name="ID Number" Usage="R" Datatype="ST" MinLength="1" MaxLength="15"/>
+		          <Component Name="Check Digit" Usage="O" Datatype="ST" MinLength="1" MaxLength="1"/>
+		          <Component Name="Check Digit Scheme" Usage="O" Datatype="ID" MinLength="1" MaxLength="3"
+                       Table="0061"/>
+		          <Component Name="Assigning Authority" Usage="O" Datatype="HD" MinLength="1"
+                       MaxLength="227"
+                       Table="0363"/>
+		          <Component Name="Identifier Type Code" Usage="O" Datatype="ID" MinLength="1" MaxLength="5"
+                       Table="0203"/>
+		          <Component Name="Assigning Facility" Usage="O" Datatype="HD" MinLength="1" MaxLength="227"/>
+		          <Component Name="Effective Date" Usage="O" Datatype="DT" MinLength="1" MaxLength="8"/>
+		          <Component Name="Expiration Date" Usage="O" Datatype="DT" MinLength="1" MaxLength="8"/>
+		          <Component Name="Assigning Jurisdiction" Usage="O" Datatype="CWE" MinLength="1"
+                       MaxLength="705"/>
+		          <Component Name="Assigning Agency or Department" Usage="O" Datatype="CWE" MinLength="1"
+                       MaxLength="705"/>
+	        </Field>
+	        <Field Datatype="DDI" Max="1" MaxLength="1" Min="0" MinLength="0" Name="DDI" Usage="O">
+		          <Component Name="Delay Days" Usage="O" Datatype="NM" MinLength="1" MaxLength="3"/>
+		          <Component Name="Monetary Amount" Usage="R" Datatype="MO" MinLength="1" MaxLength="16"/>
+		          <Component Name="Number of Days" Usage="O" Datatype="NM" MinLength="1" MaxLength="4"/>
+	        </Field>
+	        <Field Datatype="DIN" Max="1" MaxLength="1" Min="0" MinLength="0" Name="DIN" Usage="O">
+		          <Component Name="Date" Usage="R" Datatype="TS" MinLength="1" MaxLength="26"/>
+		          <Component Name="Institution Name" Usage="R" Datatype="CE" MinLength="1" MaxLength="483"
+                       Table="0531"/>
+	        </Field>
+	        <Field Datatype="DLD" Max="1" MaxLength="1" Min="0" MinLength="0" Name="DLD" Usage="O">
+		          <Component Name="Discharge Location" Usage="R" Datatype="IS" MinLength="1" MaxLength="20"
+                       Table="0113"/>
+		          <Component Name="Effective Date" Usage="O" Datatype="TS" MinLength="1" MaxLength="26"/>
+	        </Field>
+	        <Field Datatype="DLN" Max="1" MaxLength="1" Min="0" MinLength="0" Name="DLN" Usage="O">
+		          <Component Name="License Number" Usage="R" Datatype="ST" MinLength="1" MaxLength="20"/>
+		          <Component Name="Issuing State, Province, Country" Usage="O" Datatype="IS" MinLength="1"
+                       MaxLength="20"
+                       Table="0333"/>
+		          <Component Name="Expiration Date" Usage="O" Datatype="DT" MinLength="1" MaxLength="24"/>
+	        </Field>
+	        <Field Datatype="DLT" Max="1" MaxLength="1" Min="0" MinLength="0" Name="DLT" Usage="O">
+		          <Component Name="Normal Range" Usage="O" Datatype="NR" MinLength="1" MaxLength="33"/>
+		          <Component Name="Numeric Threshold" Usage="O" Datatype="NM" MinLength="1" MaxLength="4"/>
+		          <Component Name="Change Computation" Usage="O" Datatype="ID" MinLength="1" MaxLength="1"
+                       Table="0523"/>
+		          <Component Name="Days Retained" Usage="O" Datatype="NM" MinLength="1" MaxLength="4"/>
+	        </Field>
+	        <Field Datatype="DR" Max="1" MaxLength="1" Min="0" MinLength="0" Name="DR" Usage="O">
+		          <Component Name="Range Start Date/Time" Usage="O" Datatype="TS" MinLength="1"
+                       MaxLength="26"/>
+		          <Component Name="Range End Date/Time" Usage="O" Datatype="TS" MinLength="1" MaxLength="26"/>
+	        </Field>
+	        <Field Datatype="DT" Max="1" MaxLength="1" Min="0" MinLength="0" Name="DT" Usage="O"/>
+	        <Field Datatype="DTM" Max="1" MaxLength="1" Min="0" MinLength="0" Name="DTM" Usage="O"/>
+	        <Field Datatype="DTN" Max="1" MaxLength="1" Min="0" MinLength="0" Name="DTN" Usage="O">
+		          <Component Name="Day Type" Usage="R" Datatype="IS" MinLength="1" MaxLength="2"
+                       Table="0149"/>
+		          <Component Name="Number of Days" Usage="R" Datatype="NM" MinLength="1" MaxLength="3"/>
+	        </Field>
+	        <Field Datatype="ED" Max="1" MaxLength="1" Min="0" MinLength="0" Name="ED" Usage="O">
+		          <Component Name="Source Application" Usage="O" Datatype="HD" MinLength="1" MaxLength="227"/>
+		          <Component Name="Type of Data" Usage="R" Datatype="ID" MinLength="1" MaxLength="9"
+                       Table="0191"/>
+		          <Component Name="Data Subtype" Usage="O" Datatype="ID" MinLength="1" MaxLength="18"
+                       Table="0291"/>
+		          <Component Name="Encoding" Usage="R" Datatype="ID" MinLength="1" MaxLength="6"
+                       Table="0299"/>
+		          <Component Name="Data" Usage="R" Datatype="TX" MinLength="1" MaxLength="65536"/>
+	        </Field>
+	        <Field Datatype="EI" Max="1" MaxLength="1" Min="0" MinLength="0" Name="EI" Usage="O">
+		          <Component Name="Entity Identifier" Usage="O" Datatype="ST" MinLength="1" MaxLength="199"/>
+		          <Component Name="Namespace ID" Usage="O" Datatype="IS" MinLength="1" MaxLength="20"
+                       Table="0363"/>
+		          <Component Name="Universal ID" Usage="C" Datatype="ST" MinLength="1" MaxLength="199"/>
+		          <Component Name="Universal ID Type" Usage="C" Datatype="ID" MinLength="1" MaxLength="6"
+                       Table="0301"/>
+	        </Field>
+	        <Field Datatype="EIP" Max="1" MaxLength="1" Min="0" MinLength="0" Name="EIP" Usage="O">
+		          <Component Name="Placer Assigned Identifier" Usage="O" Datatype="EI" MinLength="1"
+                       MaxLength="427"/>
+		          <Component Name="Filler Assigned Identifier" Usage="O" Datatype="EI" MinLength="1"
+                       MaxLength="427"/>
+	        </Field>
+	        <Field Datatype="ELD" Max="1" MaxLength="1" Min="0" MinLength="0" Name="ELD" Usage="O">
+		          <Component Name="Segment ID" Usage="O" Datatype="ST" MinLength="1" MaxLength="3"/>
+		          <Component Name="Segment Sequence" Usage="O" Datatype="NM" MinLength="1" MaxLength="2"/>
+		          <Component Name="Field Position" Usage="O" Datatype="NM" MinLength="1" MaxLength="2"/>
+		          <Component Name="Code Identifying Error" Usage="O" Datatype="CE" MinLength="1"
+                       MaxLength="483"
+                       Table="0357"/>
+	        </Field>
+	        <Field Datatype="ERL" Max="1" MaxLength="1" Min="0" MinLength="0" Name="ERL" Usage="O">
+		          <Component Name="Segment ID" Usage="R" Datatype="ST" MinLength="1" MaxLength="3"/>
+		          <Component Name="Segment Sequence" Usage="R" Datatype="NM" MinLength="1" MaxLength="2"/>
+		          <Component Name="Field Position" Usage="O" Datatype="NM" MinLength="1" MaxLength="2"/>
+		          <Component Name="Field Repetition" Usage="O" Datatype="NM" MinLength="1" MaxLength="2"/>
+		          <Component Name="Component Number" Usage="O" Datatype="NM" MinLength="1" MaxLength="2"/>
+		          <Component Name="Sub-Component Number" Usage="O" Datatype="NM" MinLength="1" MaxLength="2"/>
+	        </Field>
+	        <Field Datatype="FC" Max="1" MaxLength="1" Min="0" MinLength="0" Name="FC" Usage="O">
+		          <Component Name="Financial Class Code" Usage="R" Datatype="IS" MinLength="1"
+                       MaxLength="20"
+                       Table="0064"/>
+		          <Component Name="Effective Date" Usage="O" Datatype="TS" MinLength="1" MaxLength="26"/>
+	        </Field>
+	        <Field Datatype="FN" Max="1" MaxLength="1" Min="0" MinLength="0" Name="FN" Usage="O">
+		          <Component Name="Surname" Usage="R" Datatype="ST" MinLength="1" MaxLength="50"/>
+		          <Component Name="Own Surname Prefix" Usage="O" Datatype="ST" MinLength="1" MaxLength="20"/>
+		          <Component Name="Own Surname" Usage="O" Datatype="ST" MinLength="1" MaxLength="50"/>
+		          <Component Name="Surname Prefix From Partner/Spouse" Usage="O" Datatype="ST" MinLength="1"
+                       MaxLength="20"/>
+		          <Component Name="Surname From Partner/Spouse" Usage="O" Datatype="ST" MinLength="1"
+                       MaxLength="50"/>
+	        </Field>
+	        <Field Datatype="FT" Max="1" MaxLength="1" Min="0" MinLength="0" Name="FT" Usage="O"/>
+	        <Field Datatype="GTS" Max="1" MaxLength="1" Min="0" MinLength="0" Name="GTS" Usage="O"/>
+	        <Field Datatype="HD" Max="1" MaxLength="1" Min="0" MinLength="0" Name="HD" Usage="O">
+		          <Component Name="Namespace ID" Usage="O" Datatype="IS" MinLength="1" MaxLength="20"
+                       Table="0300"/>
+		          <Component Name="Universal ID" Usage="C" Datatype="ST" MinLength="1" MaxLength="199"/>
+		          <Component Name="Universal ID Type" Usage="C" Datatype="ID" MinLength="1" MaxLength="6"
+                       Table="0301"/>
+	        </Field>
+	        <Field Datatype="ICD" Max="1" MaxLength="1" Min="0" MinLength="0" Name="ICD" Usage="O">
+		          <Component Name="Certification Patient Type" Usage="O" Datatype="IS" MinLength="1"
+                       MaxLength="11"
+                       Table="0150"/>
+		          <Component Name="Certification Required" Usage="R" Datatype="ID" MinLength="1"
+                       MaxLength="1"
+                       Table="0136"/>
+		          <Component Name="Date/Time Certification Required" Usage="O" Datatype="TS" MinLength="1"
+                       MaxLength="26"/>
+	        </Field>
+	        <Field Datatype="ID" Max="1" MaxLength="1" Min="0" MinLength="0" Name="ID" Usage="O"/>
+	        <Field Datatype="IS" Max="1" MaxLength="1" Min="0" MinLength="0" Name="IS" Usage="O"/>
+	        <Field Datatype="JCC" Max="1" MaxLength="1" Min="0" MinLength="0" Name="JCC" Usage="O">
+		          <Component Name="Job Code" Usage="O" Datatype="IS" MinLength="1" MaxLength="20"
+                       Table="0327"/>
+		          <Component Name="Job Class" Usage="O" Datatype="IS" MinLength="1" MaxLength="20"
+                       Table="0328"/>
+		          <Component Name="Job Description Text" Usage="O" Datatype="TX" MinLength="1"
+                       MaxLength="250"/>
+	        </Field>
+	        <Field Datatype="LA1" Max="1" MaxLength="1" Min="0" MinLength="0" Name="LA1" Usage="O">
+		          <Component Name="Point of Care" Usage="O" Datatype="IS" MinLength="1" MaxLength="20"
+                       Table="0302"/>
+		          <Component Name="Room" Usage="O" Datatype="IS" MinLength="1" MaxLength="20" Table="0303"/>
+		          <Component Name="Bed" Usage="O" Datatype="IS" MinLength="1" MaxLength="20" Table="0304"/>
+		          <Component Name="Facility" Usage="O" Datatype="HD" MinLength="1" MaxLength="227"/>
+		          <Component Name="Location Status" Usage="O" Datatype="IS" MinLength="1" MaxLength="20"
+                       Table="0306"/>
+		          <Component Name="Patient Location Type" Usage="O" Datatype="IS" MinLength="1"
+                       MaxLength="20"
+                       Table="0305"/>
+		          <Component Name="Building" Usage="O" Datatype="IS" MinLength="1" MaxLength="20"
+                       Table="0307"/>
+		          <Component Name="Floor" Usage="O" Datatype="IS" MinLength="1" MaxLength="20" Table="0308"/>
+		          <Component Name="Address" Usage="O" Datatype="AD" MinLength="1" MaxLength="415"/>
+	        </Field>
+	        <Field Datatype="LA2" Max="1" MaxLength="1" Min="0" MinLength="0" Name="LA2" Usage="O">
+		          <Component Name="Point of Care" Usage="O" Datatype="IS" MinLength="1" MaxLength="20"
+                       Table="0302"/>
+		          <Component Name="Room" Usage="O" Datatype="IS" MinLength="1" MaxLength="20" Table="0303"/>
+		          <Component Name="Bed" Usage="O" Datatype="IS" MinLength="1" MaxLength="20" Table="0304"/>
+		          <Component Name="Facility" Usage="O" Datatype="HD" MinLength="1" MaxLength="227"/>
+		          <Component Name="Location Status" Usage="O" Datatype="IS" MinLength="1" MaxLength="20"
+                       Table="0306"/>
+		          <Component Name="Patient Location Type" Usage="O" Datatype="IS" MinLength="1"
+                       MaxLength="20"
+                       Table="0305"/>
+		          <Component Name="Building" Usage="O" Datatype="IS" MinLength="1" MaxLength="20"
+                       Table="0307"/>
+		          <Component Name="Floor" Usage="O" Datatype="IS" MinLength="1" MaxLength="20" Table="0308"/>
+		          <Component Name="Street Address" Usage="O" Datatype="ST" MinLength="1" MaxLength="120"/>
+		          <Component Name="Other Designation" Usage="O" Datatype="ST" MinLength="1" MaxLength="120"/>
+		          <Component Name="City" Usage="O" Datatype="ST" MinLength="1" MaxLength="50"/>
+		          <Component Name="State or Province" Usage="O" Datatype="ST" MinLength="1" MaxLength="50"/>
+		          <Component Name="Zip or Postal Code" Usage="O" Datatype="ST" MinLength="1" MaxLength="12"/>
+		          <Component Name="Country" Usage="O" Datatype="ID" MinLength="1" MaxLength="3" Table="0399"/>
+		          <Component Name="Address Type" Usage="O" Datatype="ID" MinLength="1" MaxLength="3"
+                       Table="0190"/>
+		          <Component Name="Other Geographic Designation" Usage="O" Datatype="ST" MinLength="1"
+                       MaxLength="50"/>
+	        </Field>
+	        <Field Datatype="MA" Max="1" MaxLength="1" Min="0" MinLength="0" Name="MA" Usage="O">
+		          <Component Name="Sample 1 From Channel 1" Usage="O" Datatype="NM" MinLength="1"
+                       MaxLength="16"/>
+		          <Component Name="Sample 1 From Channel 2" Usage="O" Datatype="NM" MinLength="1"
+                       MaxLength="16"/>
+		          <Component Name="Sample 1 From Channel N" Usage="O" Datatype="NM" MinLength="1"
+                       MaxLength="16"/>
+		          <Component Name="Sample 2 From Channel 1" Usage="O" Datatype="NM" MinLength="1"
+                       MaxLength="16"/>
+		          <Component Name="Sample 2 From Channel N" Usage="O" Datatype="NM" MinLength="1"
+                       MaxLength="16"/>
+		          <Component Name="Sample N From Channel N" Usage="O" Datatype="NM" MinLength="1"
+                       MaxLength="16"/>
+	        </Field>
+	        <Field Datatype="MO" Max="1" MaxLength="1" Min="0" MinLength="0" Name="MO" Usage="O">
+		          <Component Name="Quantity" Usage="O" Datatype="NM" MinLength="1" MaxLength="16"/>
+		          <Component Name="Denomination" Usage="O" Datatype="ID" MinLength="1" MaxLength="3"/>
+	        </Field>
+	        <Field Datatype="MOC" Max="1" MaxLength="1" Min="0" MinLength="0" Name="MOC" Usage="O">
+		          <Component Name="Monetary Amount" Usage="O" Datatype="MO" MinLength="1" MaxLength="20"/>
+		          <Component Name="Charge Code" Usage="O" Datatype="CE" MinLength="1" MaxLength="483"/>
+	        </Field>
+	        <Field Datatype="MOP" Max="1" MaxLength="1" Min="0" MinLength="0" Name="MOP" Usage="O">
+		          <Component Name="Money or Percentage Indicator" Usage="R" Datatype="ID" MinLength="1"
+                       MaxLength="2"
+                       Table="0148"/>
+		          <Component Name="Money or Percentage Quantity" Usage="R" Datatype="NM" MinLength="1"
+                       MaxLength="16"/>
+		          <Component Name="Currency Denomination" Usage="O" Datatype="ID" MinLength="1"
+                       MaxLength="3"/>
+	        </Field>
+	        <Field Datatype="MSG" Max="1" MaxLength="1" Min="0" MinLength="0" Name="MSG" Usage="O">
+		          <Component Name="Message Code" Usage="R" Datatype="ID" MinLength="1" MaxLength="3"
+                       Table="0076"/>
+		          <Component Name="Trigger Event" Usage="R" Datatype="ID" MinLength="1" MaxLength="3"
+                       Table="0003"/>
+		          <Component Name="Message Structure" Usage="R" Datatype="ID" MinLength="1" MaxLength="7"
+                       Table="0354"/>
+	        </Field>
+	        <Field Datatype="NA" Max="1" MaxLength="1" Min="0" MinLength="0" Name="NA" Usage="O">
+		          <Component Name="Value1" Usage="R" Datatype="NM" MinLength="1" MaxLength="16"/>
+		          <Component Name="Value2" Usage="O" Datatype="NM" MinLength="1" MaxLength="16"/>
+		          <Component Name="Value3" Usage="O" Datatype="NM" MinLength="1" MaxLength="16"/>
+		          <Component Name="Value4" Usage="O" Datatype="NM" MinLength="1" MaxLength="16"/>
+	        </Field>
+	        <Field Datatype="NDL" Max="1" MaxLength="1" Min="0" MinLength="0" Name="NDL" Usage="O">
+		          <Component Name="Name" Usage="O" Datatype="CNN" MinLength="1" MaxLength="406"/>
+		          <Component Name="Start Date/time" Usage="O" Datatype="TS" MinLength="1" MaxLength="26"/>
+		          <Component Name="End Date/time" Usage="O" Datatype="TS" MinLength="1" MaxLength="26"/>
+		          <Component Name="Point of Care" Usage="O" Datatype="IS" MinLength="1" MaxLength="20"
+                       Table="0302"/>
+		          <Component Name="Room" Usage="O" Datatype="IS" MinLength="1" MaxLength="20" Table="0303"/>
+		          <Component Name="Bed" Usage="O" Datatype="IS" MinLength="1" MaxLength="20" Table="0304"/>
+		          <Component Name="Facility" Usage="O" Datatype="HD" MinLength="1" MaxLength="227"/>
+		          <Component Name="Location Status" Usage="O" Datatype="IS" MinLength="1" MaxLength="20"
+                       Table="0306"/>
+		          <Component Name="Patient Location Type" Usage="O" Datatype="IS" MinLength="1"
+                       MaxLength="20"
+                       Table="0305"/>
+		          <Component Name="Building" Usage="O" Datatype="IS" MinLength="1" MaxLength="20"
+                       Table="0307"/>
+		          <Component Name="Floor" Usage="O" Datatype="IS" MinLength="1" MaxLength="20" Table="0308"/>
+	        </Field>
+	        <Field Datatype="NM" Max="1" MaxLength="1" Min="0" MinLength="0" Name="NM" Usage="O"/>
+	        <Field Datatype="NR" Max="1" MaxLength="1" Min="0" MinLength="0" Name="NR" Usage="O">
+		          <Component Name="Low Value" Usage="O" Datatype="NM" MinLength="1" MaxLength="16"/>
+		          <Component Name="High Value" Usage="O" Datatype="NM" MinLength="1" MaxLength="16"/>
+	        </Field>
+	        <Field Datatype="NUL" Max="1" MaxLength="1" Min="0" MinLength="0" Name="NUL" Usage="O"/>
+	        <Field Datatype="OCD" Max="1" MaxLength="1" Min="0" MinLength="0" Name="OCD" Usage="O">
+		          <Component Name="Occurrence Code" Usage="R" Datatype="CNE" MinLength="1" MaxLength="705"
+                       Table="0350"/>
+		          <Component Name="Occurrence Date" Usage="R" Datatype="DT" MinLength="1" MaxLength="8"/>
+	        </Field>
+	        <Field Datatype="OSD" Max="1" MaxLength="1" Min="0" MinLength="0" Name="OSD" Usage="O">
+		          <Component Name="Sequence/Results Flag" Usage="R" Datatype="ID" MinLength="1"
+                       MaxLength="1"
+                       Table="0524"/>
+		          <Component Name="Placer Order Number: Entity Identifier" Usage="R" Datatype="ST"
+                       MinLength="1"
+                       MaxLength="15"/>
+		          <Component Name="Placer Order Number: Namespace ID" Usage="O" Datatype="IS" MinLength="1"
+                       MaxLength="6"
+                       Table="0363"/>
+		          <Component Name="Filler Order Number: Entity Identifier" Usage="R" Datatype="ST"
+                       MinLength="1"
+                       MaxLength="15"/>
+		          <Component Name="Filler Order Number: Namespace ID" Usage="O" Datatype="IS" MinLength="1"
+                       MaxLength="6"
+                       Table="0363"/>
+		          <Component Name="Sequence Condition Value" Usage="O" Datatype="ST" MinLength="1"
+                       MaxLength="12"/>
+		          <Component Name="Maximum Number of Repeats" Usage="O" Datatype="NM" MinLength="1"
+                       MaxLength="3"/>
+		          <Component Name="Placer Order Number: Universal ID" Usage="R" Datatype="ST" MinLength="1"
+                       MaxLength="15"/>
+		          <Component Name="Placer Order Number: Universal ID Type" Usage="O" Datatype="ID"
+                       MinLength="1"
+                       MaxLength="6"
+                       Table="0301"/>
+		          <Component Name="Filler Order Number: Universal ID" Usage="R" Datatype="ST" MinLength="1"
+                       MaxLength="15"/>
+		          <Component Name="Filler Order Number: Universal ID Type" Usage="O" Datatype="ID"
+                       MinLength="1"
+                       MaxLength="6"
+                       Table="0301"/>
+	        </Field>
+	        <Field Datatype="OSP" Max="1" MaxLength="1" Min="0" MinLength="0" Name="OSP" Usage="O">
+		          <Component Name="Occurrence Span Code" Usage="R" Datatype="CNE" MinLength="1"
+                       MaxLength="705"
+                       Table="0351"/>
+		          <Component Name="Occurrence Span Start Date" Usage="C" Datatype="DT" MinLength="1"
+                       MaxLength="8"/>
+		          <Component Name="Occurrence Span Stop Date" Usage="C" Datatype="DT" MinLength="1"
+                       MaxLength="8"/>
+	        </Field>
+	        <Field Datatype="PIP" Max="1" MaxLength="1" Min="0" MinLength="0" Name="PIP" Usage="O">
+		          <Component Name="Privilege" Usage="R" Datatype="CE" MinLength="1" MaxLength="483"
+                       Table="0525"/>
+		          <Component Name="Privilege Class" Usage="O" Datatype="CE" MinLength="1" MaxLength="483"
+                       Table="0526"/>
+		          <Component Name="Expiration Date" Usage="O" Datatype="DT" MinLength="1" MaxLength="8"/>
+		          <Component Name="Activation Date" Usage="O" Datatype="DT" MinLength="1" MaxLength="8"/>
+		          <Component Name="Facility" Usage="O" Datatype="EI" MinLength="1" MaxLength="427"/>
+	        </Field>
+	        <Field Datatype="PL" Max="1" MaxLength="1" Min="0" MinLength="0" Name="PL" Usage="O">
+		          <Component Name="Point of Care" Usage="O" Datatype="IS" MinLength="1" MaxLength="20"
+                       Table="0302"/>
+		          <Component Name="Room" Usage="O" Datatype="IS" MinLength="1" MaxLength="20" Table="0303"/>
+		          <Component Name="Bed" Usage="O" Datatype="IS" MinLength="1" MaxLength="20" Table="0304"/>
+		          <Component Name="Facility" Usage="O" Datatype="HD" MinLength="1" MaxLength="227"/>
+		          <Component Name="Location Status" Usage="O" Datatype="IS" MinLength="1" MaxLength="20"
+                       Table="0306"/>
+		          <Component Name="Person Location Type" Usage="C" Datatype="IS" MinLength="1"
+                       MaxLength="20"
+                       Table="0305"/>
+		          <Component Name="Building" Usage="O" Datatype="IS" MinLength="1" MaxLength="20"
+                       Table="0307"/>
+		          <Component Name="Floor" Usage="O" Datatype="IS" MinLength="1" MaxLength="20" Table="0308"/>
+		          <Component Name="Location Description" Usage="O" Datatype="ST" MinLength="1"
+                       MaxLength="199"/>
+		          <Component Name="Comprehensive Location Identifier" Usage="O" Datatype="EI" MinLength="1"
+                       MaxLength="427"/>
+		          <Component Name="Assigning Authority for Location" Usage="O" Datatype="HD" MinLength="1"
+                       MaxLength="227"/>
+	        </Field>
+	        <Field Datatype="PLN" Max="1" MaxLength="1" Min="0" MinLength="0" Name="PLN" Usage="O">
+		          <Component Name="ID Number" Usage="R" Datatype="ST" MinLength="1" MaxLength="20"/>
+		          <Component Name="Type of ID Number" Usage="R" Datatype="IS" MinLength="1" MaxLength="8"
+                       Table="0338"/>
+		          <Component Name="State/other Qualifying Information" Usage="O" Datatype="ST" MinLength="1"
+                       MaxLength="62"/>
+		          <Component Name="Expiration Date" Usage="O" Datatype="DT" MinLength="1" MaxLength="8"/>
+	        </Field>
+	        <Field Datatype="PPN" Max="1" MaxLength="1" Min="0" MinLength="0" Name="PPN" Usage="O">
+		          <Component Name="ID Number" Usage="O" Datatype="ST" MinLength="1" MaxLength="15"/>
+		          <Component Name="Family Name" Usage="O" Datatype="FN" MinLength="1" MaxLength="194"/>
+		          <Component Name="Given Name" Usage="O" Datatype="ST" MinLength="1" MaxLength="30"/>
+		          <Component Name="Second and Further Given Names or Initials Thereof" Usage="O"
+                       Datatype="ST"
+                       MinLength="1"
+                       MaxLength="30"/>
+		          <Component Name="Suffix (e.g., JR or III)" Usage="O" Datatype="ST" MinLength="1"
+                       MaxLength="20"/>
+		          <Component Name="Prefix (e.g., DR)" Usage="O" Datatype="ST" MinLength="1" MaxLength="20"/>
+		          <Component Name="Degree (e.g., MD)" Usage="B" Datatype="IS" MinLength="1" MaxLength="5"
+                       Table="0360"/>
+		          <Component Name="Source Table" Usage="C" Datatype="IS" MinLength="1" MaxLength="4"
+                       Table="0297"/>
+		          <Component Name="Assigning Authority" Usage="O" Datatype="HD" MinLength="1"
+                       MaxLength="227"
+                       Table="0363"/>
+		          <Component Name="Name Type Code" Usage="O" Datatype="ID" MinLength="1" MaxLength="1"
+                       Table="0200"/>
+		          <Component Name="Identifier Check Digit" Usage="O" Datatype="ST" MinLength="1"
+                       MaxLength="1"/>
+		          <Component Name="Check Digit Scheme" Usage="C" Datatype="ID" MinLength="1" MaxLength="3"
+                       Table="0061"/>
+		          <Component Name="Identifier Type Code" Usage="O" Datatype="ID" MinLength="1" MaxLength="5"
+                       Table="0203"/>
+		          <Component Name="Assigning Facility" Usage="O" Datatype="HD" MinLength="1" MaxLength="227"/>
+		          <Component Name="Date/Time Action Performed" Usage="O" Datatype="TS" MinLength="1"
+                       MaxLength="26"/>
+		          <Component Name="Name Representation Code" Usage="O" Datatype="ID" MinLength="1"
+                       MaxLength="1"
+                       Table="0465"/>
+		          <Component Name="Name Context" Usage="O" Datatype="CE" MinLength="1" MaxLength="483"
+                       Table="0448"/>
+		          <Component Name="Name Validity Range" Usage="B" Datatype="DR" MinLength="1" MaxLength="17"/>
+		          <Component Name="Name Assembly Order" Usage="O" Datatype="ID" MinLength="1" MaxLength="1"
+                       Table="0444"/>
+		          <Component Name="Effective Date" Usage="O" Datatype="TS" MinLength="1" MaxLength="26"/>
+		          <Component Name="Expiration Date" Usage="O" Datatype="TS" MinLength="1" MaxLength="26"/>
+		          <Component Name="Professional Suffix" Usage="O" Datatype="ST" MinLength="1"
+                       MaxLength="199"/>
+		          <Component Name="Assigning Jurisdiction" Usage="O" Datatype="CWE" MinLength="1"
+                       MaxLength="705"/>
+		          <Component Name="Assigning Agency or Department" Usage="O" Datatype="CWE" MinLength="1"
+                       MaxLength="705"/>
+	        </Field>
+	        <Field Datatype="PRL" Max="1" MaxLength="1" Min="0" MinLength="0" Name="PRL" Usage="O">
+		          <Component Name="Parent Observation Identifier" Usage="R" Datatype="CE" MinLength="1"
+                       MaxLength="483"/>
+		          <Component Name="Parent Observation Sub-identifier" Usage="O" Datatype="ST" MinLength="1"
+                       MaxLength="20"/>
+		          <Component Name="Parent Observation Value Descriptor" Usage="O" Datatype="TX"
+                       MinLength="1"
+                       MaxLength="250"/>
+	        </Field>
+	        <Field Datatype="PT" Max="1" MaxLength="1" Min="0" MinLength="0" Name="PT" Usage="O">
+		          <Component Name="Processing ID" Usage="O" Datatype="ID" MinLength="1" MaxLength="1"
+                       Table="0103"/>
+		          <Component Name="Processing Mode" Usage="O" Datatype="ID" MinLength="1" MaxLength="1"
+                       Table="0207"/>
+	        </Field>
+	        <Field Datatype="PTA" Max="1" MaxLength="1" Min="0" MinLength="0" Name="PTA" Usage="O">
+		          <Component Name="Policy Type" Usage="R" Datatype="IS" MinLength="1" MaxLength="5"
+                       Table="0147"/>
+		          <Component Name="Amount Class" Usage="O" Datatype="IS" MinLength="1" MaxLength="9"
+                       Table="0193"/>
+		          <Component Name="Money or Percentage Quantity" Usage="B" Datatype="NM" MinLength="1"
+                       MaxLength="16"/>
+		          <Component Name="Money or Percentage" Usage="R" Datatype="MOP" MinLength="1"
+                       MaxLength="23"/>
+	        </Field>
+	        <Field Datatype="QIP" Max="1" MaxLength="1" Min="0" MinLength="0" Name="QIP" Usage="O">
+		          <Component Name="Segment Field Datatype" Usage="R" Datatype="ST" MinLength="1"
+                       MaxLength="12"/>
+		          <Component Name="Values" Usage="R" Datatype="ST" MinLength="1" MaxLength="199"/>
+	        </Field>
+	        <Field Datatype="QSC" Max="1" MaxLength="1" Min="0" MinLength="0" Name="QSC" Usage="O">
+		          <Component Name="Segment Field Datatype" Usage="R" Datatype="ST" MinLength="1"
+                       MaxLength="12"/>
+		          <Component Name="Relational Operator" Usage="O" Datatype="ID" MinLength="1" MaxLength="2"
+                       Table="0209"/>
+		          <Component Name="Value" Usage="O" Datatype="ST" MinLength="1" MaxLength="199"/>
+		          <Component Name="Relational Conjunction" Usage="O" Datatype="ID" MinLength="1"
+                       MaxLength="3"
+                       Table="0210"/>
+	        </Field>
+	        <Field Datatype="RCD" Max="1" MaxLength="1" Min="0" MinLength="0" Name="RCD" Usage="O">
+		          <Component Name="Segment Field Datatype" Usage="O" Datatype="ST" MinLength="1"
+                       MaxLength="12"/>
+		          <Component Name="HL7 Data Type" Usage="O" Datatype="ID" MinLength="1" MaxLength="3"
+                       Table="0440"/>
+		          <Component Name="Maximum Column Width" Usage="O" Datatype="NM" MinLength="1" MaxLength="2"/>
+	        </Field>
+	        <Field Datatype="RFR" Max="1" MaxLength="1" Min="0" MinLength="0" Name="RFR" Usage="O">
+		          <Component Name="Numeric Range" Usage="R" Datatype="NR" MinLength="1" MaxLength="33"/>
+		          <Component Name="Administrative Sex" Usage="O" Datatype="IS" MinLength="1" MaxLength="8"
+                       Table="0001"/>
+		          <Component Name="Age Range" Usage="O" Datatype="NR" MinLength="1" MaxLength="33"/>
+		          <Component Name="Gestational Age Range" Usage="O" Datatype="NR" MinLength="1"
+                       MaxLength="33"/>
+		          <Component Name="Species" Usage="O" Datatype="ST" MinLength="1" MaxLength="20"/>
+		          <Component Name="Race/subspecies" Usage="O" Datatype="ST" MinLength="1" MaxLength="20"/>
+		          <Component Name="Conditions" Usage="O" Datatype="TX" MinLength="1" MaxLength="199"/>
+	        </Field>
+	        <Field Datatype="RI" Max="1" MaxLength="1" Min="0" MinLength="0" Name="RI" Usage="O">
+		          <Component Name="Repeat Pattern" Usage="O" Datatype="IS" MinLength="1" MaxLength="6"
+                       Table="0335"/>
+		          <Component Name="Explicit Time Interval" Usage="O" Datatype="ST" MinLength="1"
+                       MaxLength="199"/>
+	        </Field>
+	        <Field Datatype="RMC" Max="1" MaxLength="1" Min="0" MinLength="0" Name="RMC" Usage="O">
+		          <Component Name="Room Type" Usage="R" Datatype="IS" MinLength="1" MaxLength="20"
+                       Table="0145"/>
+		          <Component Name="Amount Type" Usage="O" Datatype="IS" MinLength="1" MaxLength="20"
+                       Table="0146"/>
+		          <Component Name="Coverage Amount" Usage="B" Datatype="NM" MinLength="1" MaxLength="16"/>
+		          <Component Name="Money or Percentage" Usage="R" Datatype="MOP" MinLength="1"
+                       MaxLength="23"/>
+	        </Field>
+	        <Field Datatype="RP" Max="1" MaxLength="1" Min="0" MinLength="0" Name="RP" Usage="O">
+		          <Component Name="Pointer" Usage="O" Datatype="ST" MinLength="1" MaxLength="15"/>
+		          <Component Name="Application ID" Usage="O" Datatype="HD" MinLength="1" MaxLength="227"/>
+		          <Component Name="Type of Data" Usage="O" Datatype="ID" MinLength="1" MaxLength="9"
+                       Table="0191"/>
+		          <Component Name="Subtype" Usage="O" Datatype="ID" MinLength="1" MaxLength="19"
+                       Table="0291"/>
+	        </Field>
+	        <Field Datatype="RPT" Max="1" MaxLength="1" Min="0" MinLength="0" Name="RPT" Usage="O">
+		          <Component Name="Repeat Pattern Code" Usage="R" Datatype="CWE" MinLength="1"
+                       MaxLength="705"
+                       Table="0335"/>
+		          <Component Name="Calendar Alignment" Usage="O" Datatype="ID" MinLength="1" MaxLength="2"
+                       Table="0527"/>
+		          <Component Name="Phase Range Begin Value" Usage="O" Datatype="NM" MinLength="1"
+                       MaxLength="10"/>
+		          <Component Name="Phase Range End Value" Usage="O" Datatype="NM" MinLength="1"
+                       MaxLength="10"/>
+		          <Component Name="Period Quantity" Usage="O" Datatype="NM" MinLength="1" MaxLength="10"/>
+		          <Component Name="Period Units" Usage="C" Datatype="IS" MinLength="1" MaxLength="10"/>
+		          <Component Name="Institution Specified Time" Usage="O" Datatype="ID" MinLength="1"
+                       MaxLength="1"
+                       Table="0136"/>
+		          <Component Name="Event" Usage="O" Datatype="ID" MinLength="1" MaxLength="6" Table="0528"/>
+		          <Component Name="Event Offset Quantity" Usage="O" Datatype="NM" MinLength="1"
+                       MaxLength="10"/>
+		          <Component Name="Event Offset Units" Usage="C" Datatype="IS" MinLength="1" MaxLength="10"/>
+		          <Component Name="General Timing Specification" Usage="O" Datatype="GTS" MinLength="1"
+                       MaxLength="200"/>
+	        </Field>
+	        <Field Datatype="SAD" Max="1" MaxLength="1" Min="0" MinLength="0" Name="SAD" Usage="O">
+		          <Component Name="Street or Mailing Address" Usage="O" Datatype="ST" MinLength="1"
+                       MaxLength="120"/>
+		          <Component Name="Street Name" Usage="O" Datatype="ST" MinLength="1" MaxLength="50"/>
+		          <Component Name="Dwelling Number" Usage="O" Datatype="ST" MinLength="1" MaxLength="12"/>
+	        </Field>
+	        <Field Datatype="SCV" Max="1" MaxLength="1" Min="0" MinLength="0" Name="SCV" Usage="O">
+		          <Component Name="Parameter Class" Usage="O" Datatype="CWE" MinLength="1" MaxLength="20"/>
+		          <Component Name="Parameter Value" Usage="O" Datatype="ST" MinLength="1" MaxLength="20"/>
+	        </Field>
+	        <Field Datatype="SI" Max="1" MaxLength="1" Min="0" MinLength="0" Name="SI" Usage="O"/>
+	        <Field Datatype="SN" Max="1" MaxLength="1" Min="0" MinLength="0" Name="SN" Usage="O">
+		          <Component Name="Comparator" Usage="O" Datatype="ST" MinLength="1" MaxLength="2"/>
+		          <Component Name="Num1" Usage="O" Datatype="NM" MinLength="1" MaxLength="15"/>
+		          <Component Name="Separator/Suffix" Usage="O" Datatype="ST" MinLength="1" MaxLength="1"/>
+		          <Component Name="Num2" Usage="O" Datatype="NM" MinLength="1" MaxLength="15"/>
+	        </Field>
+	        <Field Datatype="SPD" Max="1" MaxLength="1" Min="0" MinLength="0" Name="SPD" Usage="O">
+		          <Component Name="Specialty Name" Usage="R" Datatype="ST" MinLength="1" MaxLength="50"/>
+		          <Component Name="Governing Board" Usage="O" Datatype="ST" MinLength="1" MaxLength="50"/>
+		          <Component Name="Eligible or Certified" Usage="O" Datatype="ID" MinLength="1"
+                       MaxLength="1"
+                       Table="0337"/>
+		          <Component Name="Date of Certification" Usage="O" Datatype="DT" MinLength="1"
+                       MaxLength="8"/>
+	        </Field>
+	        <Field Datatype="SPS" Max="1" MaxLength="1" Min="0" MinLength="0" Name="SPS" Usage="O">
+		          <Component Name="Specimen Source Name or Code" Usage="O" Datatype="CWE" MinLength="1"
+                       MaxLength="705"/>
+		          <Component Name="Additives" Usage="O" Datatype="CWE" MinLength="1" MaxLength="705"
+                       Table="0371"/>
+		          <Component Name="Specimen Collection Method" Usage="O" Datatype="TX" MinLength="1"
+                       MaxLength="200"/>
+		          <Component Name="Body Site" Usage="O" Datatype="CWE" MinLength="1" MaxLength="705"
+                       Table="0163"/>
+		          <Component Name="Site Modifier" Usage="O" Datatype="CWE" MinLength="1" MaxLength="705"
+                       Table="0495"/>
+		          <Component Name="Collection Method Modifier Code" Usage="O" Datatype="CWE" MinLength="1"
+                       MaxLength="705"/>
+		          <Component Name="Specimen Role" Usage="O" Datatype="CWE" MinLength="1" MaxLength="705"
+                       Table="0369"/>
+	        </Field>
+	        <Field Datatype="SRT" Max="1" MaxLength="1" Min="0" MinLength="0" Name="SRT" Usage="O">
+		          <Component Name="Sort-by Field" Usage="R" Datatype="ST" MinLength="1" MaxLength="12"/>
+		          <Component Name="Sequencing" Usage="O" Datatype="ID" MinLength="1" MaxLength="2"
+                       Table="0397"/>
+	        </Field>
+	        <Field Datatype="ST" Max="1" MaxLength="1" Min="0" MinLength="0" Name="ST" Usage="O"/>
+	        <Field Datatype="TM" Max="1" MaxLength="1" Min="0" MinLength="0" Name="TM" Usage="O"/>
+	        <Field Datatype="TQ" Max="1" MaxLength="1" Min="0" MinLength="0" Name="TQ" Usage="O">
+		          <Component Name="Quantity" Usage="O" Datatype="CQ" MinLength="1" MaxLength="267"/>
+		          <Component Name="Interval" Usage="O" Datatype="RI" MinLength="1" MaxLength="206"/>
+		          <Component Name="Duration" Usage="O" Datatype="ST" MinLength="1" MaxLength="6"/>
+		          <Component Name="Start Date/Time" Usage="O" Datatype="TS" MinLength="1" MaxLength="26"/>
+		          <Component Name="End Date/Time" Usage="O" Datatype="TS" MinLength="1" MaxLength="26"/>
+		          <Component Name="Priority" Usage="O" Datatype="ST" MinLength="1" MaxLength="6"/>
+		          <Component Name="Condition" Usage="O" Datatype="ST" MinLength="1" MaxLength="199"/>
+		          <Component Name="Text" Usage="O" Datatype="TX" MinLength="1" MaxLength="200"/>
+		          <Component Name="Conjunction" Usage="O" Datatype="ID" MinLength="1" MaxLength="1"
+                       Table="0472"/>
+		          <Component Name="Order Sequencing" Usage="O" Datatype="OSD" MinLength="1" MaxLength="110"/>
+		          <Component Name="Occurrence Duration" Usage="O" Datatype="CE" MinLength="1"
+                       MaxLength="483"/>
+		          <Component Name="Total Occurrences" Usage="O" Datatype="NM" MinLength="1" MaxLength="4"/>
+	        </Field>
+	        <Field Datatype="TS" Max="1" MaxLength="1" Min="0" MinLength="0" Name="TS" Usage="O">
+		          <Component Name="Time" Usage="R" Datatype="DTM" MinLength="1" MaxLength="24"/>
+		          <Component Name="Degree of Precision" Usage="B" Datatype="ID" MinLength="1" MaxLength="1"
+                       Table="0529"/>
+	        </Field>
+	        <Field Datatype="TX" Max="1" MaxLength="1" Min="0" MinLength="0" Name="TX" Usage="O"/>
+	        <Field Datatype="UVC" Max="1" MaxLength="1" Min="0" MinLength="0" Name="UVC" Usage="O">
+		          <Component Name="Value Code" Usage="R" Datatype="CNE" MinLength="1" MaxLength="20"
+                       Table="0153"/>
+		          <Component Name="Value Amount" Usage="O" Datatype="MO" MinLength="1" MaxLength="20"/>
+	        </Field>
+	        <Field Datatype="varies" Max="1" MaxLength="1" Min="0" MinLength="0" Name="varies"
+                Usage="O"/>
+	        <Field Datatype="VH" Max="1" MaxLength="1" Min="0" MinLength="0" Name="VH" Usage="O">
+		          <Component Name="Start Day Range" Usage="O" Datatype="ID" MinLength="1" MaxLength="3"
+                       Table="0267"/>
+		          <Component Name="End Day Range" Usage="O" Datatype="ID" MinLength="1" MaxLength="3"
+                       Table="0267"/>
+		          <Component Name="Start Hour Range" Usage="O" Datatype="TM" MinLength="1" MaxLength="16"/>
+		          <Component Name="End Hour Range" Usage="O" Datatype="TM" MinLength="1" MaxLength="16"/>
+	        </Field>
+	        <Field Datatype="VID" Max="1" MaxLength="1" Min="0" MinLength="0" Name="VID" Usage="O">
+		          <Component Name="Version ID" Usage="O" Datatype="ID" MinLength="1" MaxLength="5"
+                       Table="0104"/>
+		          <Component Name="Internationalization Code" Usage="O" Datatype="CE" MinLength="1"
+                       MaxLength="483"
+                       Table="0399"/>
+		          <Component Name="International Version ID" Usage="O" Datatype="CE" MinLength="1"
+                       MaxLength="483"/>
+	        </Field>
+	        <Field Datatype="VR" Max="1" MaxLength="1" Min="0" MinLength="0" Name="VR" Usage="O">
+		          <Component Name="First Data Code Value" Usage="O" Datatype="ST" MinLength="1"
+                       MaxLength="6"/>
+		          <Component Name="Last Data Code Value" Usage="O" Datatype="ST" MinLength="1" MaxLength="6"/>
+	        </Field>
+	        <Field Datatype="WVI" Max="1" MaxLength="1" Min="0" MinLength="0" Name="WVI" Usage="O">
+		          <Component Name="Channel Number" Usage="R" Datatype="NM" MinLength="1" MaxLength="4"/>
+		          <Component Name="Channel Name" Usage="O" Datatype="ST" MinLength="1" MaxLength="17"/>
+	        </Field>
+	        <Field Datatype="WVS" Max="1" MaxLength="1" Min="0" MinLength="0" Name="WVS" Usage="O">
+		          <Component Name="Source One Name" Usage="R" Datatype="ST" MinLength="1" MaxLength="8"/>
+		          <Component Name="Source Two Name" Usage="O" Datatype="ST" MinLength="1" MaxLength="8"/>
+	        </Field>
+	        <Field Datatype="XAD" Max="1" MaxLength="1" Min="0" MinLength="0" Name="XAD" Usage="O">
+		          <Component Name="Street Address" Usage="O" Datatype="SAD" MinLength="1" MaxLength="184"/>
+		          <Component Name="Other Designation" Usage="O" Datatype="ST" MinLength="1" MaxLength="120"/>
+		          <Component Name="City" Usage="O" Datatype="ST" MinLength="1" MaxLength="50"/>
+		          <Component Name="State or Province" Usage="O" Datatype="ST" MinLength="1" MaxLength="50"/>
+		          <Component Name="Zip or Postal Code" Usage="O" Datatype="ST" MinLength="1" MaxLength="12"/>
+		          <Component Name="Country" Usage="O" Datatype="ID" MinLength="1" MaxLength="3" Table="0399"/>
+		          <Component Name="Address Type" Usage="O" Datatype="ID" MinLength="1" MaxLength="3"
+                       Table="0190"/>
+		          <Component Name="Other Geographic Designation" Usage="O" Datatype="ST" MinLength="1"
+                       MaxLength="50"/>
+		          <Component Name="County/Parish Code" Usage="O" Datatype="IS" MinLength="1" MaxLength="20"
+                       Table="0289"/>
+		          <Component Name="Census Tract" Usage="O" Datatype="IS" MinLength="1" MaxLength="20"
+                       Table="0288"/>
+		          <Component Name="Address Representation Code" Usage="O" Datatype="ID" MinLength="1"
+                       MaxLength="1"
+                       Table="0465"/>
+		          <Component Name="Address Validity Range" Usage="B" Datatype="DR" MinLength="1"
+                       MaxLength="53"/>
+		          <Component Name="Effective Date" Usage="O" Datatype="TS" MinLength="1" MaxLength="26"/>
+		          <Component Name="Expiration Date" Usage="O" Datatype="TS" MinLength="1" MaxLength="26"/>
+	        </Field>
+	        <Field Datatype="XCN" Max="1" MaxLength="1" Min="0" MinLength="0" Name="XCN" Usage="O">
+		          <Component Name="ID Number" Usage="O" Datatype="ST" MinLength="1" MaxLength="15"/>
+		          <Component Name="Family Name" Usage="O" Datatype="FN" MinLength="1" MaxLength="194"/>
+		          <Component Name="Given Name" Usage="O" Datatype="ST" MinLength="1" MaxLength="30"/>
+		          <Component Name="Second and Further Given Names or Initials Thereof" Usage="O"
+                       Datatype="ST"
+                       MinLength="1"
+                       MaxLength="30"/>
+		          <Component Name="Suffix (e.g., JR or III)" Usage="O" Datatype="ST" MinLength="1"
+                       MaxLength="20"/>
+		          <Component Name="Prefix (e.g., DR)" Usage="O" Datatype="ST" MinLength="1" MaxLength="20"/>
+		          <Component Name="Degree (e.g., MD)" Usage="B" Datatype="IS" MinLength="1" MaxLength="5"
+                       Table="0360"/>
+		          <Component Name="Source Table" Usage="C" Datatype="IS" MinLength="1" MaxLength="4"
+                       Table="0297"/>
+		          <Component Name="Assigning Authority" Usage="O" Datatype="HD" MinLength="1"
+                       MaxLength="227"
+                       Table="0363"/>
+		          <Component Name="Name Type Code" Usage="O" Datatype="ID" MinLength="1" MaxLength="1"
+                       Table="0200"/>
+		          <Component Name="Identifier Check Digit" Usage="O" Datatype="ST" MinLength="1"
+                       MaxLength="1"/>
+		          <Component Name="Check Digit Scheme" Usage="C" Datatype="ID" MinLength="1" MaxLength="3"
+                       Table="0061"/>
+		          <Component Name="Identifier Type Code" Usage="O" Datatype="ID" MinLength="1" MaxLength="5"
+                       Table="0203"/>
+		          <Component Name="Assigning Facility" Usage="O" Datatype="HD" MinLength="1" MaxLength="227"/>
+		          <Component Name="Name Representation Code" Usage="O" Datatype="ID" MinLength="1"
+                       MaxLength="1"
+                       Table="0465"/>
+		          <Component Name="Name Context" Usage="O" Datatype="CE" MinLength="1" MaxLength="483"
+                       Table="0448"/>
+		          <Component Name="Name Validity Range" Usage="B" Datatype="DR" MinLength="1" MaxLength="53"/>
+		          <Component Name="Name Assembly Order" Usage="O" Datatype="ID" MinLength="1" MaxLength="1"
+                       Table="0444"/>
+		          <Component Name="Effective Date" Usage="O" Datatype="TS" MinLength="1" MaxLength="26"/>
+		          <Component Name="Expiration Date" Usage="O" Datatype="TS" MinLength="1" MaxLength="26"/>
+		          <Component Name="Professional Suffix" Usage="O" Datatype="ST" MinLength="1"
+                       MaxLength="199"/>
+		          <Component Name="Assigning Jurisdiction" Usage="O" Datatype="CWE" MinLength="1"
+                       MaxLength="705"/>
+		          <Component Name="Assigning Agency or Department" Usage="O" Datatype="CWE" MinLength="1"
+                       MaxLength="705"/>
+	        </Field>
+	        <Field Datatype="XON" Max="1" MaxLength="1" Min="0" MinLength="0" Name="XON" Usage="O">
+		          <Component Name="Organization Name" Usage="O" Datatype="ST" MinLength="1" MaxLength="50"/>
+		          <Component Name="Organization Name Type Code" Usage="O" Datatype="IS" MinLength="1"
+                       MaxLength="20"
+                       Table="0204"/>
+		          <Component Name="ID Number" Usage="B" Datatype="NM" MinLength="1" MaxLength="4"/>
+		          <Component Name="Check Digit" Usage="O" Datatype="NM" MinLength="1" MaxLength="1"/>
+		          <Component Name="Check Digit Scheme" Usage="O" Datatype="ID" MinLength="1" MaxLength="3"
+                       Table="0061"/>
+		          <Component Name="Assigning Authority" Usage="O" Datatype="HD" MinLength="1"
+                       MaxLength="227"
+                       Table="0363"/>
+		          <Component Name="Identifier Type Code" Usage="O" Datatype="ID" MinLength="1" MaxLength="5"
+                       Table="0203"/>
+		          <Component Name="Assigning Facility" Usage="O" Datatype="HD" MinLength="1" MaxLength="227"/>
+		          <Component Name="Name Representation Code" Usage="O" Datatype="ID" MinLength="1"
+                       MaxLength="1"
+                       Table="0465"/>
+		          <Component Name="Organization Identifier" Usage="O" Datatype="ST" MinLength="1"
+                       MaxLength="20"/>
+	        </Field>
+	        <Field Datatype="XPN" Max="1" MaxLength="1" Min="0" MinLength="0" Name="XPN" Usage="O">
+		          <Component Name="Family Name" Usage="O" Datatype="FN" MinLength="1" MaxLength="194"/>
+		          <Component Name="Given Name" Usage="O" Datatype="ST" MinLength="1" MaxLength="30"/>
+		          <Component Name="Second and Further Given Names or Initials Thereof" Usage="O"
+                       Datatype="ST"
+                       MinLength="1"
+                       MaxLength="30"/>
+		          <Component Name="Suffix (e.g., JR or III)" Usage="O" Datatype="ST" MinLength="1"
+                       MaxLength="20"/>
+		          <Component Name="Prefix (e.g., DR)" Usage="O" Datatype="ST" MinLength="1" MaxLength="20"/>
+		          <Component Name="Degree (e.g., MD)" Usage="B" Datatype="IS" MinLength="1" MaxLength="6"
+                       Table="0360"/>
+		          <Component Name="Name Type Code" Usage="O" Datatype="ID" MinLength="1" MaxLength="1"
+                       Table="0200"/>
+		          <Component Name="Name Representation Code" Usage="O" Datatype="ID" MinLength="1"
+                       MaxLength="1"
+                       Table="0465"/>
+		          <Component Name="Name Context" Usage="O" Datatype="CE" MinLength="1" MaxLength="483"
+                       Table="0448"/>
+		          <Component Name="Name Validity Range" Usage="B" Datatype="DR" MinLength="1" MaxLength="53"/>
+		          <Component Name="Name Assembly Order" Usage="O" Datatype="ID" MinLength="1" MaxLength="1"
+                       Table="0444"/>
+		          <Component Name="Effective Date" Usage="O" Datatype="TS" MinLength="1" MaxLength="26"/>
+		          <Component Name="Expiration Date" Usage="O" Datatype="TS" MinLength="1" MaxLength="26"/>
+		          <Component Name="Professional Suffix" Usage="O" Datatype="ST" MinLength="1"
+                       MaxLength="199"/>
+	        </Field>
+	        <Field Datatype="XTN" Max="1" MaxLength="1" Min="0" MinLength="0" Name="XTN" Usage="O">
+		          <Component Name="Telephone Number" Usage="B" Datatype="ST" MinLength="1" MaxLength="199"/>
+		          <Component Name="Telecommunication Use Code" Usage="O" Datatype="ID" MinLength="1"
+                       MaxLength="3"
+                       Table="0201"/>
+		          <Component Name="Telecommunication Equipment Type" Usage="O" Datatype="ID" MinLength="1"
+                       MaxLength="8"
+                       Table="0202"/>
+		          <Component Name="Email Address" Usage="O" Datatype="ST" MinLength="1" MaxLength="199"/>
+		          <Component Name="Country Code" Usage="O" Datatype="NM" MinLength="1" MaxLength="3"/>
+		          <Component Name="Area/City Code" Usage="O" Datatype="NM" MinLength="1" MaxLength="5"/>
+		          <Component Name="Local Number" Usage="O" Datatype="NM" MinLength="1" MaxLength="9"/>
+		          <Component Name="Extension" Usage="O" Datatype="NM" MinLength="1" MaxLength="5"/>
+		          <Component Name="Any Text" Usage="O" Datatype="ST" MinLength="1" MaxLength="199"/>
+		          <Component Name="Extension Prefix" Usage="O" Datatype="ST" MinLength="1" MaxLength="4"/>
+		          <Component Name="Speed Dial Code" Usage="O" Datatype="ST" MinLength="1" MaxLength="6"/>
+		          <Component Name="Unformatted Telephone number" Usage="C" Datatype="ST" MinLength="1"
+                       MaxLength="199"/>
+	        </Field>
+      </Segment>
+   </HL7v2xStaticDef>
+</HL7v2xConformanceProfile>

@@ -1,0 +1,1527 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ConformanceContext UUID="EHR-LRI_3.0_2.1-GU">
+    <MetaData Name="Conformance context for LRI_3.0_2.1-GU" OrgName="NIST" Version="2016-11-21" Date="2016-11-21"/>
+    <Predicates>
+        <Datatype/>
+        <Segment/>
+        <Group/>
+    </Predicates>
+    <Constraints>
+        <Message>
+            <ByID ID="ORU_R01:LRI_GU_FRU">
+                <Constraint ID="LRI_3.0_2.1-GU::1">
+                    <Description>Location 'MSH[1].3[1].2[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="1[1].3[1].2[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::2">
+                    <Description>Location 'MSH[1].4[1].2[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="1[1].4[1].2[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::3">
+                    <Description>Location 'MSH[1].6[1].2[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="1[1].6[1].2[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::4">
+                    <Description>Location 'MSH[1].7[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="1[1].7[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::5">
+                    <Description>Location 'MSH[1].10[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="1[1].10[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::6">
+                    <Description>Location 'MSH[1].11[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="1[1].11[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::7">
+                    <Description>Location 'PATIENT_RESULT[1].PATIENT[1].PID[1].3[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].1[1].1[1].3[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::8">
+                    <Description>Location 'PATIENT_RESULT[1].PATIENT[1].PID[1].3[1].4[1].2[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].1[1].1[1].3[1].4[1].2[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::9">
+                    <Description>Location 'PATIENT_RESULT[1].PATIENT[1].PID[1].3[1].5[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].1[1].1[1].3[1].5[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::10">
+                    <Description>Location 'PATIENT_RESULT[1].PATIENT[1].PID[1].5[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].1[1].1[1].5[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::11">
+                    <Description>Location 'PATIENT_RESULT[1].PATIENT[1].PID[1].5[1].1[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].1[1].1[1].5[1].1[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::12">
+                    <Description>Location 'PATIENT_RESULT[1].PATIENT[1].PID[1].5[1].2[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].1[1].1[1].5[1].2[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::13">
+                    <Description>Location 'PATIENT_RESULT[1].PATIENT[1].PID[1].5[1].3[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].1[1].1[1].5[1].3[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::14">
+                    <Description>Location 'PATIENT_RESULT[1].PATIENT[1].PID[1].5[1].7[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].1[1].1[1].5[1].7[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::15">
+                    <Description>Location 'PATIENT_RESULT[1].PATIENT[1].PID[1].7[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].1[1].1[1].7[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::16">
+                    <Description>Location 'PATIENT_RESULT[1].PATIENT[1].PID[1].8[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].1[1].1[1].8[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::17">
+                    <Description>Location 'PATIENT_RESULT[1].PATIENT[1].PID[1].10[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].1[1].1[1].10[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::18">
+                    <Description>Location 'PATIENT_RESULT[1].PATIENT[1].PID[1].10[1].2[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].1[1].1[1].10[1].2[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::19">
+                    <Description>Location 'PATIENT_RESULT[1].PATIENT[1].PID[1].10[1].3[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].1[1].1[1].10[1].3[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::20">
+                    <Description>Location 'PATIENT_RESULT[1].PATIENT[1].PID[1].18[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].1[1].1[1].18[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::21">
+                    <Description>Location 'PATIENT_RESULT[1].PATIENT[1].PID[1].18[1].4[1].2[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].1[1].1[1].18[1].4[1].2[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::22">
+                    <Description>Location 'PATIENT_RESULT[1].PATIENT[1].PID[1].18[1].5[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].1[1].1[1].18[1].5[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::23">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].ORC[1].1[1]' is expected to be present and valued 'RE'</Description>
+                    <Assertion>
+                        <AND>
+                            <Presence Path="3[1].2[1].1[1].1[1]"/>
+                            <PlainText Path="3[1].2[1].1[1].1[1]" Text="RE" IgnoreCase="false"/>
+                        </AND>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::24">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].ORC[1].2[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].1[1].2[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::25">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].ORC[1].2[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].1[1].2[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::26">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].ORC[1].2[1].3[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].1[1].2[1].3[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::27">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].ORC[1].2[1].4[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].1[1].2[1].4[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::28">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].ORC[1].3[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].1[1].3[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::29">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].ORC[1].3[1].3[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].1[1].3[1].3[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::30">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].ORC[1].3[1].4[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].1[1].3[1].4[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::31">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].ORC[1].4[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].1[1].4[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::32">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].ORC[1].4[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].1[1].4[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::33">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].ORC[1].4[1].3[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].1[1].4[1].3[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::34">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].ORC[1].4[1].4[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].1[1].4[1].4[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::35">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].ORC[1].12[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].1[1].12[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::36">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].ORC[1].12[1].2[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].1[1].12[1].2[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::37">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].ORC[1].12[1].2[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].1[1].12[1].2[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::38">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].ORC[1].12[1].3[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].1[1].12[1].3[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::39">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].ORC[1].12[1].9[1].2[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].1[1].12[1].9[1].2[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::40">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].ORC[1].12[1].9[1].3[1]' is expected to be present and valued 'ISO'</Description>
+                    <Assertion>
+                        <AND>
+                            <Presence Path="3[1].2[1].1[1].12[1].9[1].3[1]"/>
+                            <PlainText Path="3[1].2[1].1[1].12[1].9[1].3[1]" Text="ISO" IgnoreCase="false"/>
+                        </AND>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::41">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].ORC[1].12[1].10[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].1[1].12[1].10[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::42">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].ORC[1].12[1].13[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].1[1].12[1].13[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::43">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBR[1].2[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].2[1].2[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::44">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBR[1].2[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].2[1].2[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::45">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBR[1].2[1].3[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].2[1].2[1].3[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::46">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBR[1].2[1].4[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].2[1].2[1].4[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::47">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBR[1].3[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].2[1].3[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::48">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBR[1].3[1].3[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].2[1].3[1].3[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::49">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBR[1].4[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].2[1].4[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::50">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBR[1].4[1].2[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].2[1].4[1].2[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::51">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBR[1].4[1].3[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].2[1].4[1].3[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::52">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBR[1].4[1].4[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].2[1].4[1].4[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::53">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBR[1].4[1].5[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].2[1].4[1].5[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::54">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBR[1].4[1].6[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].2[1].4[1].6[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::55">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBR[1].4[1].7[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].2[1].4[1].7[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::56">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBR[1].4[1].9[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].2[1].4[1].9[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::57">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBR[1].7[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].2[1].7[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::58">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBR[1].13[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].2[1].13[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::59">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBR[1].13[1].2[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].2[1].13[1].2[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::60">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBR[1].13[1].3[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].2[1].13[1].3[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::61">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBR[1].13[1].7[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].2[1].13[1].7[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::62">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBR[1].13[1].9[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].2[1].13[1].9[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::63">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBR[1].16[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].2[1].16[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::64">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBR[1].16[1].2[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].2[1].16[1].2[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::65">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBR[1].16[1].2[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].2[1].16[1].2[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::66">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBR[1].16[1].3[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].2[1].16[1].3[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::67">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBR[1].16[1].9[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].2[1].16[1].9[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::68">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBR[1].16[1].9[1].2[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].2[1].16[1].9[1].2[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::69">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBR[1].16[1].9[1].3[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].2[1].16[1].9[1].3[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::70">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBR[1].16[1].10[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].2[1].16[1].10[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::71">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBR[1].16[1].13[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].2[1].16[1].13[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::72">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBR[1].22[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].2[1].22[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::73">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBR[1].25[1]' is expected to be present and valued 'F'</Description>
+                    <Assertion>
+                        <AND>
+                            <Presence Path="3[1].2[1].2[1].25[1]"/>
+                            <PlainText Path="3[1].2[1].2[1].25[1]" Text="F" IgnoreCase="false"/>
+                        </AND>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::74">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBR[1].28[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].2[1].28[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::75">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBR[1].28[1].2[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].2[1].28[1].2[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::76">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBR[1].28[1].3[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].2[1].28[1].3[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::77">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBR[1].28[1].9[1].2[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].2[1].28[1].9[1].2[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::78">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBR[1].28[1].9[1].3[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].2[1].28[1].9[1].3[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::79">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBR[1].28[1].10[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].2[1].28[1].10[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::80">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBR[1].28[1].13[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].2[1].28[1].13[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::81">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBR[1].49[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].2[1].49[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::82">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBR[1].49[1].2[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].2[1].49[1].2[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::83">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBR[1].49[1].3[1]' is expected to be present and valued 'HL70507'</Description>
+                    <Assertion>
+                        <AND>
+                            <Presence Path="3[1].2[1].2[1].49[1].3[1]"/>
+                            <PlainText Path="3[1].2[1].2[1].49[1].3[1]" Text="HL70507" IgnoreCase="false"/>
+                        </AND>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::84">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBSERVATION[1].OBX[1].2[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].6[1].1[1].2[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::85">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBSERVATION[1].OBX[1].3[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].6[1].1[1].3[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::86">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBSERVATION[1].OBX[1].3[1].2[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].6[1].1[1].3[1].2[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::87">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBSERVATION[1].OBX[1].3[1].3[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].6[1].1[1].3[1].3[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::88">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBSERVATION[1].OBX[1].3[1].7[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].6[1].1[1].3[1].7[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::89">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBSERVATION[1].OBX[1].3[1].9[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].6[1].1[1].3[1].9[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::90">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBSERVATION[1].OBX[1].5[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].6[1].1[1].5[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::91">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBSERVATION[1].OBX[1].6[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].6[1].1[1].6[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::92">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBSERVATION[1].OBX[1].6[1].2[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].6[1].1[1].6[1].2[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::93">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBSERVATION[1].OBX[1].6[1].3[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].6[1].1[1].6[1].3[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::94">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBSERVATION[1].OBX[1].6[1].7[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].6[1].1[1].6[1].7[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::95">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBSERVATION[1].OBX[1].7[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].6[1].1[1].7[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::96">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBSERVATION[1].OBX[1].8[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].6[1].1[1].8[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::97">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBSERVATION[1].OBX[1].11[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].6[1].1[1].11[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::98">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBSERVATION[1].OBX[1].14[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].6[1].1[1].14[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::99">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBSERVATION[1].OBX[1].14[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].6[1].1[1].14[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::100">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBSERVATION[1].OBX[1].19[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].6[1].1[1].19[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::101">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBSERVATION[1].OBX[1].19[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].6[1].1[1].19[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::102">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBSERVATION[1].OBX[1].23[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].6[1].1[1].23[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::103">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBSERVATION[1].OBX[1].23[1].6[1].2[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].6[1].1[1].23[1].6[1].2[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::104">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBSERVATION[1].OBX[1].23[1].7[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].6[1].1[1].23[1].7[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::105">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBSERVATION[1].OBX[1].23[1].10[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].6[1].1[1].23[1].10[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::106">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBSERVATION[1].OBX[1].24[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].6[1].1[1].24[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::107">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBSERVATION[1].OBX[1].24[1].1[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].6[1].1[1].24[1].1[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::108">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBSERVATION[1].OBX[1].24[1].3[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].6[1].1[1].24[1].3[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::109">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBSERVATION[1].OBX[1].24[1].4[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].6[1].1[1].24[1].4[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::110">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBSERVATION[1].OBX[1].24[1].5[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].6[1].1[1].24[1].5[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::111">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBSERVATION[1].OBX[1].24[1].7[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].6[1].1[1].24[1].7[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::112">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBSERVATION[1].OBX[1].25[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].6[1].1[1].25[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::113">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBSERVATION[1].OBX[1].25[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].6[1].1[1].25[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::114">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBSERVATION[1].OBX[1].25[1].2[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].6[1].1[1].25[1].2[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::115">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBSERVATION[1].OBX[1].25[1].3[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].6[1].1[1].25[1].3[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::116">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBSERVATION[1].OBX[1].25[1].6[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].6[1].1[1].25[1].6[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::117">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBSERVATION[1].OBX[1].25[1].9[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].6[1].1[1].25[1].9[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::118">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBSERVATION[1].OBX[1].25[1].9[1].2[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].6[1].1[1].25[1].9[1].2[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::119">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBSERVATION[1].OBX[1].25[1].10[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].6[1].1[1].25[1].10[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::120">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBSERVATION[1].OBX[1].25[1].13[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].6[1].1[1].25[1].13[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::121">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBSERVATION[1].OBX[1].29[1]' is expected to be present and valued 'RSLT'</Description>
+                    <Assertion>
+                        <AND>
+                            <Presence Path="3[1].2[1].6[1].1[1].29[1]"/>
+                            <PlainText Path="3[1].2[1].6[1].1[1].29[1]" Text="RSLT" IgnoreCase="false"/>
+                        </AND>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::122">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBSERVATION[2].OBX[1].2[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].6[2].1[1].2[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::123">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBSERVATION[2].OBX[1].3[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].6[2].1[1].3[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::124">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBSERVATION[2].OBX[1].3[1].2[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].6[2].1[1].3[1].2[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::125">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBSERVATION[2].OBX[1].3[1].3[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].6[2].1[1].3[1].3[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::126">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBSERVATION[2].OBX[1].3[1].7[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].6[2].1[1].3[1].7[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::127">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBSERVATION[2].OBX[1].3[1].9[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].6[2].1[1].3[1].9[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::128">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBSERVATION[2].OBX[1].5[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].6[2].1[1].5[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::129">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBSERVATION[2].OBX[1].6[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].6[2].1[1].6[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::130">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBSERVATION[2].OBX[1].6[1].2[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].6[2].1[1].6[1].2[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::131">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBSERVATION[2].OBX[1].6[1].3[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].6[2].1[1].6[1].3[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::132">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBSERVATION[2].OBX[1].6[1].7[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].6[2].1[1].6[1].7[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::133">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBSERVATION[2].OBX[1].7[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].6[2].1[1].7[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::134">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBSERVATION[2].OBX[1].8[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].6[2].1[1].8[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::135">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBSERVATION[2].OBX[1].11[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].6[2].1[1].11[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::136">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBSERVATION[2].OBX[1].14[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].6[2].1[1].14[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::137">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBSERVATION[2].OBX[1].14[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].6[2].1[1].14[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::138">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBSERVATION[2].OBX[1].19[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].6[2].1[1].19[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::139">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBSERVATION[2].OBX[1].19[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].6[2].1[1].19[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::140">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBSERVATION[2].OBX[1].23[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].6[2].1[1].23[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::141">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBSERVATION[2].OBX[1].23[1].6[1].2[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].6[2].1[1].23[1].6[1].2[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::142">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBSERVATION[2].OBX[1].23[1].7[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].6[2].1[1].23[1].7[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::143">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBSERVATION[2].OBX[1].23[1].10[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].6[2].1[1].23[1].10[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::144">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBSERVATION[2].OBX[1].24[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].6[2].1[1].24[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::145">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBSERVATION[2].OBX[1].24[1].1[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].6[2].1[1].24[1].1[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::146">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBSERVATION[2].OBX[1].24[1].3[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].6[2].1[1].24[1].3[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::147">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBSERVATION[2].OBX[1].24[1].4[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].6[2].1[1].24[1].4[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::148">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBSERVATION[2].OBX[1].24[1].5[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].6[2].1[1].24[1].5[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::149">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBSERVATION[2].OBX[1].24[1].7[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].6[2].1[1].24[1].7[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::150">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBSERVATION[2].OBX[1].25[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].6[2].1[1].25[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::151">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBSERVATION[2].OBX[1].25[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].6[2].1[1].25[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::152">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBSERVATION[2].OBX[1].25[1].2[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].6[2].1[1].25[1].2[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::153">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBSERVATION[2].OBX[1].25[1].3[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].6[2].1[1].25[1].3[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::154">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBSERVATION[2].OBX[1].25[1].6[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].6[2].1[1].25[1].6[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::155">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBSERVATION[2].OBX[1].25[1].9[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].6[2].1[1].25[1].9[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::156">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBSERVATION[2].OBX[1].25[1].9[1].2[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].6[2].1[1].25[1].9[1].2[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::157">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBSERVATION[2].OBX[1].25[1].10[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].6[2].1[1].25[1].10[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::158">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBSERVATION[2].OBX[1].25[1].13[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].6[2].1[1].25[1].13[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::159">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBSERVATION[2].OBX[1].29[1]' is expected to be present and valued 'RSLT'</Description>
+                    <Assertion>
+                        <AND>
+                            <Presence Path="3[1].2[1].6[2].1[1].29[1]"/>
+                            <PlainText Path="3[1].2[1].6[2].1[1].29[1]" Text="RSLT" IgnoreCase="false"/>
+                        </AND>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::160">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBSERVATION[3].OBX[1].2[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].6[3].1[1].2[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::161">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBSERVATION[3].OBX[1].3[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].6[3].1[1].3[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::162">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBSERVATION[3].OBX[1].3[1].2[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].6[3].1[1].3[1].2[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::163">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBSERVATION[3].OBX[1].3[1].3[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].6[3].1[1].3[1].3[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::164">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBSERVATION[3].OBX[1].3[1].7[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].6[3].1[1].3[1].7[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::165">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBSERVATION[3].OBX[1].3[1].9[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].6[3].1[1].3[1].9[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::166">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBSERVATION[3].OBX[1].5[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].6[3].1[1].5[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::167">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBSERVATION[3].OBX[1].6[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].6[3].1[1].6[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::168">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBSERVATION[3].OBX[1].6[1].2[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].6[3].1[1].6[1].2[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::169">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBSERVATION[3].OBX[1].6[1].3[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].6[3].1[1].6[1].3[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::170">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBSERVATION[3].OBX[1].6[1].7[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].6[3].1[1].6[1].7[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::171">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBSERVATION[3].OBX[1].7[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].6[3].1[1].7[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::172">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBSERVATION[3].OBX[1].8[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].6[3].1[1].8[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::173">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBSERVATION[3].OBX[1].11[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].6[3].1[1].11[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::174">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBSERVATION[3].OBX[1].14[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].6[3].1[1].14[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::175">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBSERVATION[3].OBX[1].14[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].6[3].1[1].14[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::176">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBSERVATION[3].OBX[1].19[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].6[3].1[1].19[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::177">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBSERVATION[3].OBX[1].19[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].6[3].1[1].19[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::178">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBSERVATION[3].OBX[1].23[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].6[3].1[1].23[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::179">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBSERVATION[3].OBX[1].23[1].6[1].2[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].6[3].1[1].23[1].6[1].2[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::180">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBSERVATION[3].OBX[1].23[1].7[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].6[3].1[1].23[1].7[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::181">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBSERVATION[3].OBX[1].23[1].10[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].6[3].1[1].23[1].10[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::182">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBSERVATION[3].OBX[1].24[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].6[3].1[1].24[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::183">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBSERVATION[3].OBX[1].24[1].1[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].6[3].1[1].24[1].1[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::184">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBSERVATION[3].OBX[1].24[1].3[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].6[3].1[1].24[1].3[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::185">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBSERVATION[3].OBX[1].24[1].4[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].6[3].1[1].24[1].4[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::186">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBSERVATION[3].OBX[1].24[1].5[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].6[3].1[1].24[1].5[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::187">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBSERVATION[3].OBX[1].24[1].7[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].6[3].1[1].24[1].7[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::188">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBSERVATION[3].OBX[1].25[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].6[3].1[1].25[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::189">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBSERVATION[3].OBX[1].25[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].6[3].1[1].25[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::190">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBSERVATION[3].OBX[1].25[1].2[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].6[3].1[1].25[1].2[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::191">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBSERVATION[3].OBX[1].25[1].3[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].6[3].1[1].25[1].3[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::192">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBSERVATION[3].OBX[1].25[1].6[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].6[3].1[1].25[1].6[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::193">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBSERVATION[3].OBX[1].25[1].9[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].6[3].1[1].25[1].9[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::194">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBSERVATION[3].OBX[1].25[1].9[1].2[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].6[3].1[1].25[1].9[1].2[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::195">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBSERVATION[3].OBX[1].25[1].10[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].6[3].1[1].25[1].10[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::196">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBSERVATION[3].OBX[1].25[1].13[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].6[3].1[1].25[1].13[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::197">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBSERVATION[3].OBX[1].29[1]' is expected to be present and valued 'RSLT'</Description>
+                    <Assertion>
+                        <AND>
+                            <Presence Path="3[1].2[1].6[3].1[1].29[1]"/>
+                            <PlainText Path="3[1].2[1].6[3].1[1].29[1]" Text="RSLT" IgnoreCase="false"/>
+                        </AND>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::198">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBSERVATION[4].OBX[1].2[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].6[4].1[1].2[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::199">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBSERVATION[4].OBX[1].3[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].6[4].1[1].3[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::200">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBSERVATION[4].OBX[1].3[1].2[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].6[4].1[1].3[1].2[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::201">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBSERVATION[4].OBX[1].3[1].3[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].6[4].1[1].3[1].3[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::202">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBSERVATION[4].OBX[1].3[1].7[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].6[4].1[1].3[1].7[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::203">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBSERVATION[4].OBX[1].3[1].9[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].6[4].1[1].3[1].9[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::204">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBSERVATION[4].OBX[1].5[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].6[4].1[1].5[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::205">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBSERVATION[4].OBX[1].6[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].6[4].1[1].6[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::206">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBSERVATION[4].OBX[1].6[1].2[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].6[4].1[1].6[1].2[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::207">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBSERVATION[4].OBX[1].6[1].3[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].6[4].1[1].6[1].3[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::208">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBSERVATION[4].OBX[1].6[1].7[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].6[4].1[1].6[1].7[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::209">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBSERVATION[4].OBX[1].7[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].6[4].1[1].7[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::210">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBSERVATION[4].OBX[1].8[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].6[4].1[1].8[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::211">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBSERVATION[4].OBX[1].11[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].6[4].1[1].11[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::212">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBSERVATION[4].OBX[1].14[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].6[4].1[1].14[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::213">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBSERVATION[4].OBX[1].14[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].6[4].1[1].14[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::214">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBSERVATION[4].OBX[1].19[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].6[4].1[1].19[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::215">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBSERVATION[4].OBX[1].19[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].6[4].1[1].19[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::216">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBSERVATION[4].OBX[1].23[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].6[4].1[1].23[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::217">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBSERVATION[4].OBX[1].23[1].6[1].2[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].6[4].1[1].23[1].6[1].2[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::218">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBSERVATION[4].OBX[1].23[1].7[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].6[4].1[1].23[1].7[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::219">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBSERVATION[4].OBX[1].23[1].10[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].6[4].1[1].23[1].10[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::220">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBSERVATION[4].OBX[1].24[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].6[4].1[1].24[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::221">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBSERVATION[4].OBX[1].24[1].1[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].6[4].1[1].24[1].1[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::222">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBSERVATION[4].OBX[1].24[1].3[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].6[4].1[1].24[1].3[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::223">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBSERVATION[4].OBX[1].24[1].4[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].6[4].1[1].24[1].4[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::224">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBSERVATION[4].OBX[1].24[1].5[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].6[4].1[1].24[1].5[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::225">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBSERVATION[4].OBX[1].24[1].7[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].6[4].1[1].24[1].7[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::226">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBSERVATION[4].OBX[1].25[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].6[4].1[1].25[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::227">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBSERVATION[4].OBX[1].25[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].6[4].1[1].25[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::228">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBSERVATION[4].OBX[1].25[1].2[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].6[4].1[1].25[1].2[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::229">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBSERVATION[4].OBX[1].25[1].3[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].6[4].1[1].25[1].3[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::230">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBSERVATION[4].OBX[1].25[1].6[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].6[4].1[1].25[1].6[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::231">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBSERVATION[4].OBX[1].25[1].9[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].6[4].1[1].25[1].9[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::232">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBSERVATION[4].OBX[1].25[1].9[1].2[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].6[4].1[1].25[1].9[1].2[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::233">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBSERVATION[4].OBX[1].25[1].10[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].6[4].1[1].25[1].10[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::234">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBSERVATION[4].OBX[1].25[1].13[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].6[4].1[1].25[1].13[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::235">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].OBSERVATION[4].OBX[1].29[1]' is expected to be present and valued 'RSLT'</Description>
+                    <Assertion>
+                        <AND>
+                            <Presence Path="3[1].2[1].6[4].1[1].29[1]"/>
+                            <PlainText Path="3[1].2[1].6[4].1[1].29[1]" Text="RSLT" IgnoreCase="false"/>
+                        </AND>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::236">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].SPECIMEN[1].SPM[1].2[1].1[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].9[1].1[1].2[1].1[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::237">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].SPECIMEN[1].SPM[1].2[1].1[1].3[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].9[1].1[1].2[1].1[1].3[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::238">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].SPECIMEN[1].SPM[1].2[1].1[1].4[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].9[1].1[1].2[1].1[1].4[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::239">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].SPECIMEN[1].SPM[1].2[1].2[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].9[1].1[1].2[1].2[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::240">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].SPECIMEN[1].SPM[1].2[1].2[1].3[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].9[1].1[1].2[1].2[1].3[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::241">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].SPECIMEN[1].SPM[1].4[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].9[1].1[1].4[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::242">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].SPECIMEN[1].SPM[1].4[1].2[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].9[1].1[1].4[1].2[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::243">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].SPECIMEN[1].SPM[1].4[1].3[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].9[1].1[1].4[1].3[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::244">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].SPECIMEN[1].SPM[1].4[1].7[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].9[1].1[1].4[1].7[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::245">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].SPECIMEN[1].SPM[1].4[1].9[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].9[1].1[1].4[1].9[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::246">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].SPECIMEN[1].SPM[1].17[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].9[1].1[1].17[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::247">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].SPECIMEN[1].SPM[1].17[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].9[1].1[1].17[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="LRI_3.0_2.1-GU::248">
+                    <Description>Location 'PATIENT_RESULT[1].ORDER_OBSERVATION[1].SPECIMEN[1].SPM[1].17[1].1[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="3[1].2[1].9[1].1[1].17[1].1[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+            </ByID>
+        </Message>
+    </Constraints>
+</ConformanceContext>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseMetaData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="Final result to corrected (FRU) - GU" date="11/02/2016" name="Final result to corrected (FRU) Header" version="20161102">
+		<Description>The EHR system receives and incorporates an electronic lab result message.    This test plan and the previous test plan are designed to test the EHR-S' capability to process the progression from a "preliminary" to "final" to "corrected" microbiology Culture and Sensitivity reports.</Description>
+		<PreCondition>Patient information is pre-loaded in the EHR-S.
+No other Pre-Condition.</PreCondition>
+		<PostCondition>The test message information received by the EHR-S has been incorporated with the patient's record.</PostCondition>
+		<TestObjectives>Demonstrate ability to import and incorporate a final and corrected result microbiology message when the filler order number uniquely identifies the test ordered. (FRU profiles).</TestObjectives>
+	</TestCaseMetaData>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseMetaData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="ACK_0.0_4.1-GU" date="11/02/2016" name="Smoke test App ACK" version="20161102">
+		<Description>Dr Radon's EHR-S  transmits an application acknowledgement message to Century Hospital's LIS which indicates the ORU message Prothrombin Time (PT + INR) test results has been successfully parsed and incorporated.</Description>
+		<PreCondition>No Pre-Condition.</PreCondition>
+		<PostCondition>The ACK_0.0_4.1-GU test message information is incorporated into the LIS system.</PostCondition>
+		<TestObjectives>Minimally populated message.
+Demonstrate ability to import and incorporate all required data elements for the application acknowledgement test case:
+Minimally populated MSH Segment - Demonstrate the capability to support the minimally required data elements in the MSH segment.
+Minimally populated MSA Segment - Demonstrate the capability to support the minimally required data elements in the MSA segment.</TestObjectives>
+		<Notes>To support real-time dynamic testing, the Tester at their discretion, may selectively modify result acknowledgement data prior to importing the test message into the EHR technology.</Notes>
+		<Comments>This is the initial "smoke testing" to reveal simple failures of the application acknowledgment message severe enough to preclude further testing.</Comments>
+	</TestCaseMetaData>

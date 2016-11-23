@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseMetaData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="PT and INR - NG" date="11/02/2016" name="PT and INR Header" version="20161102">
+		<Description>The LIS system creates and delivers a simple electronic lab result message to the EHR-S.  The EHR-S receives and incorporates the messages, and creates and sends an acknowledgement message.  The LIS system receives the acknowledgement message.</Description>
+		<PreCondition>Patient information is pre-loaded in the EHR-S.
+No other Pre-Condition.</PreCondition>
+		<PostCondition>The test message information received by the EHR-S has been incorporated with the patient's record.</PostCondition>
+		<TestObjectives>Demonstrate capability to support minimally populated messages (single occurrences of all required ("R") elements).</TestObjectives>
+		<Comments>The initial test plan is a "smoke test" to reveal simple failures  severe enough to preclude further testing.</Comments>
+	</TestCaseMetaData>

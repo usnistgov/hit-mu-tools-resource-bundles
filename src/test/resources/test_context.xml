@@ -1,0 +1,1596 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ConformanceContext xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" UUID="LRI_default" xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/Jungyubw/NIST_healthcare_hl7_v2_profile_schema/master/Schema/ConformanceContext.xsd">
+	<MetaData Name="LRI R2 conformance context" OrgName="NIST" Version="1.0.0" Date="02192016"/>
+	<Predicates>
+		<Datatype>
+			<!-- CWE_CRE -->
+			<ByID ID="LRI_CWE_CRE">
+				<!-- CWE_CRE.2 -->
+				<Predicate Target="2[1]" TrueUsage="RE" FalseUsage="X" ID="[LRI_CWE_CRE]2[1]">
+					<Description>If CWE_CRE.1 (Identifier) is valued.</Description>
+					<Condition>
+						<Presence Path="1[1]"/>
+					</Condition>
+				</Predicate>
+				<!-- CWE_CRE.3 -->
+				<Predicate Target="3[1]" TrueUsage="R" FalseUsage="X" ID="[LRI_CWE_CRE]3[1]">
+					<Description>If CWE_CRE.1 (Identifier) is valued.</Description>
+					<Condition>
+						<Presence Path="1[1]"/>
+					</Condition>
+				</Predicate>
+				<!-- CWE_CRE.4 -->
+				<Predicate Target="4[1]" TrueUsage="RE" FalseUsage="X" ID="[LRI_CWE_CRE]4[1]">
+					<Description>If CWE_CRE.1 (Identifier) is valued.</Description>
+					<Condition>
+						<Presence Path="1[1]"/>
+					</Condition>
+				</Predicate>
+				<!-- CWE_CRE.5 -->
+				<Predicate Target="5[1]" TrueUsage="RE" FalseUsage="X" ID="[LRI_CWE_CRE]5[1]">
+					<Description>If CWE_CRE.4 (Alternate Identifier) is valued.</Description>
+					<Condition>
+						<Presence Path="4[1]"/>
+					</Condition>
+				</Predicate>
+				<!-- CWE_CRE.6 -->
+				<Predicate Target="6[1]" TrueUsage="R" FalseUsage="X" ID="[LRI_CWE_CRE]6[1]">
+					<Description>If CWE_CRE.4 (Alternate Identifier) is valued.</Description>
+					<Condition>
+						<Presence Path="4[1]"/>
+					</Condition>
+				</Predicate>
+				<!-- CWE_CRE.7 -->
+				<Predicate Target="7[1]" TrueUsage="RE" FalseUsage="O" ID="[LRI_CWE_CRE]7[1]">
+					<Description>If CWE_CRE.3 (Name of Coding System) is not an HL7 defined table or user defined</Description>
+					<!-- If CWE_CRE.3 is NOT L, 99zzz or HL7nnnn, then must be RE. -->
+					<Condition>
+						<FORALL>
+							<NOT>
+								<PlainText Path="3[1]" Text="L" IgnoreCase="false"/>
+							</NOT>
+							<NOT>
+								<Format Path="3[1]" Regex="99[A-Za-z0-9]{3}"/>
+							</NOT>
+							<NOT>
+								<Format Path="3[1]" Regex="HL7[0-9]{4}"/>
+							</NOT>
+						</FORALL>
+					</Condition>
+				</Predicate>
+				<!-- CWE_CRE.9 -->
+				<Predicate Target="9[1]" TrueUsage="R" FalseUsage="RE" ID="[LRI_CWE_CRE]9[1]">
+					<Description>If CWE_CRE.1 (Identifier) and CWE.4_CRE (alternate identifier) are not valued.</Description>
+					<Condition>
+						<AND>
+							<NOT>
+								<Presence Path="1[1]"/>
+							</NOT>
+							<NOT>
+								<Presence Path="4[1]"/>
+							</NOT>
+						</AND>
+					</Condition>
+				</Predicate>
+			</ByID>
+			<!-- CWE_CRE1 -->
+			<ByID ID="LRI_CWE_CRE1">
+				<!-- CWE_CRE1.2 -->
+				<Predicate Target="2[1]" TrueUsage="RE" FalseUsage="X" ID="[LRI_CWE_CRE1]2[1]">
+					<Description>If CWE_CRE1.1 (Identifier) is valued.</Description>
+					<Condition>
+						<Presence Path="1[1]"/>
+					</Condition>
+				</Predicate>
+				<!-- CWE_CRE1.3 -->
+				<Predicate Target="3[1]" TrueUsage="R" FalseUsage="X" ID="[LRI_CWE_CRE1]3[1]">
+					<Description>If CWE_CRE1.1 (Identifier) is valued.</Description>
+					<Condition>
+						<Presence Path="1[1]"/>
+					</Condition>
+				</Predicate>
+				<!-- CWE_CRE1.5 -->
+				<Predicate Target="5[1]" TrueUsage="RE" FalseUsage="X" ID="[LRI_CWE_CRE1]5[1]">
+					<Description>If CWE_CRE1.4 (Alternate Identifier) is valued.</Description>
+					<Condition>
+						<Presence Path="4[1]"/>
+					</Condition>
+				</Predicate>
+				<!-- CWE_CRE1.6 -->
+				<Predicate Target="6[1]" TrueUsage="R" FalseUsage="X" ID="[LRI_CWE_CRE1]6[1]">
+					<Description>If CWE_CRE1.4 (Alternate Identifier) is valued.</Description>
+					<Condition>
+						<Presence Path="4[1]"/>
+					</Condition>
+				</Predicate>
+				<!-- CWE_CRE1.7 -->
+				<Predicate Target="7[1]" TrueUsage="RE" FalseUsage="O" ID="[LRI_CWE_CRE1]7[1]">
+					<Description>If CWE_CRE1.3 (Name of Coding System) is not an HL7 defined table or user defined.</Description>
+					<!-- If CWE_CRE1.3 is NOT L, 99zzz or HL7nnnn, then must be RE. -->
+					<Condition>
+						<FORALL>
+							<NOT>
+								<PlainText Path="3[1]" Text="L" IgnoreCase="false"/>
+							</NOT>
+							<NOT>
+								<Format Path="3[1]" Regex="99[A-Za-z0-9]{3}"/>
+							</NOT>
+							<NOT>
+								<Format Path="3[1]" Regex="HL7[0-9]{4}"/>
+							</NOT>
+						</FORALL>
+					</Condition>
+				</Predicate>
+				<!--CWE_CRE1.9 -->
+				<Predicate Target="9[1]" TrueUsage="R" FalseUsage="RE" ID="[LRI_CWE_CRE1]9[1]">
+					<Description>If CWE_CRE1.1 (Identifier) and CWE.4_CRE (alternate identifier) are not valued.</Description>
+					<Condition>
+						<AND>
+							<NOT>
+								<Presence Path="1[1]"/>
+							</NOT>
+							<NOT>
+								<Presence Path="4[1]"/>
+							</NOT>
+						</AND>
+					</Condition>
+				</Predicate>
+			</ByID>
+			<!-- CWE_CR -->
+			<ByID ID="LRI_CWE_CR">
+				<!-- CWE_CR.6 -->
+				<Predicate Target="6[1]" TrueUsage="R" FalseUsage="X" ID="[LRI_CWE_CR]6[1]">
+					<Description>If CWE_CR.4 (Alternate Identifier) is valued.</Description>
+					<Condition>
+						<Presence Path="4[1]"/>
+					</Condition>
+				</Predicate>
+				<!-- CWE_CR.7 -->
+				<Predicate Target="7[1]" TrueUsage="RE" FalseUsage="O" ID="[LRI_CWE_CR]7[1]">
+					<Description>If CWE_CR.3 (Name of Coding System) is not an HL7 defined table or user defined.</Description>
+					<!-- If CWE_CR.3 is NOT L, 99zzz or HL7nnnn, then must be RE. -->
+					<Condition>
+						<FORALL>
+							<NOT>
+								<PlainText Path="3[1]" Text="L" IgnoreCase="false"/>
+							</NOT>
+							<NOT>
+								<Format Path="3[1]" Regex="99[A-Za-z0-9]{3}"/>
+							</NOT>
+							<NOT>
+								<Format Path="3[1]" Regex="HL7[0-9]{4}"/>
+							</NOT>
+						</FORALL>
+					</Condition>
+				</Predicate>
+			</ByID>
+			<!-- CWE_CR1 -->
+			<ByID ID="LRI_CWE_CR1">
+				<!-- CWE_CR1.6 -->
+				<Predicate Target="6[1]" TrueUsage="R" FalseUsage="X" ID="[LRI_CWE_CR1]6[1]">
+					<Description>If CWE_CR1.4 (Alternate Identifier) is valued.</Description>
+					<Condition>
+						<Presence Path="4[1]"/>
+					</Condition>
+				</Predicate>
+				<!-- CWE_CR1.7 -->
+				<Predicate Target="7[1]" TrueUsage="RE" FalseUsage="O" ID="[LRI_CWE_CR1]7[1]">
+					<Description>If CWE_CR1.3 (Name of Coding System) is not an HL7 defined table or user defined.</Description>
+					<!-- If CWE_CR1.3 is NOT L, 99zzz or HL7nnnn, then must be RE. -->
+					<Condition>
+						<FORALL>
+							<NOT>
+								<PlainText Path="3[1]" Text="L" IgnoreCase="false"/>
+							</NOT>
+							<NOT>
+								<Format Path="3[1]" Regex="99[A-Za-z0-9]{3}"/>
+							</NOT>
+							<NOT>
+								<Format Path="3[1]" Regex="HL7[0-9]{4}"/>
+							</NOT>
+						</FORALL>
+					</Condition>
+				</Predicate>
+			</ByID>
+			<!-- EI_NG -->
+			<ByID ID="LRI_EI_NG">
+				<!-- EI_NG.2 -->
+				<Predicate Target="2[1]" TrueUsage="R" FalseUsage="O" ID="[LRI_EI_NG]2[1]">
+					<Description>If EI_NG.3 (Universal ID) is not valued.</Description>
+					<Condition>
+						<NOT>
+							<Presence Path="3[1]"/>
+						</NOT>
+					</Condition>
+				</Predicate>
+				<!-- EI_NG.3 -->
+				<Predicate Target="3[1]" TrueUsage="R" FalseUsage="O" ID="[LRI_EI_NG]3[1]">
+					<Description>If EI_NG.2 (Namespace ID) is not valued.</Description>
+					<Condition>
+						<NOT>
+							<Presence Path="2[1]"/>
+						</NOT>
+					</Condition>
+				</Predicate>
+				<!-- EI_NG.4 -->
+				<Predicate Target="4[1]" TrueUsage="R" FalseUsage="X" ID="[LRI_EI_NG]4[1]">
+					<Description>If EI_NG.3 (Universal ID) is valued.</Description>
+					<Condition>
+						<Presence Path="3[1]"/>
+					</Condition>
+				</Predicate>
+			</ByID>
+			<!-- EIP_GU -->
+			<ByID ID="LRI_EIP_GU">
+				<!-- EIP_GU.2 -->
+				<Predicate Target="2[1]" TrueUsage="R" FalseUsage="RE" ID="[LRI_EIP_GU]2[1]">
+					<Description>If EIP_GU.1 is not valued.</Description>
+					<Condition>
+						<NOT>
+							<Presence Path="1[1]"/>
+						</NOT>
+					</Condition>
+				</Predicate>
+			</ByID>
+			<!-- EIP_NG -->
+			<ByID ID="LRI_EIP_NG">
+				<!-- EIP_NG.2 -->
+				<Predicate Target="2[1]" TrueUsage="R" FalseUsage="RE" ID="[LRI_EIP_NG]2[1]">
+					<Description>If EIP_NG.1 is not valued.</Description>
+					<Condition>
+						<NOT>
+							<Presence Path="1[1]"/>
+						</NOT>
+					</Condition>
+				</Predicate>
+			</ByID>
+			<!-- HD_NG -->
+			<ByID ID="LRI_HD_NG">
+				<!-- HD_NG.1 -->
+				<Predicate Target="1[1]" TrueUsage="R" FalseUsage="O" ID="[LRI_HD_NG]1[1]">
+					<Description>If HD_NG.2 (Universal ID) is not valued.</Description>
+					<Condition>
+						<NOT>
+							<Presence Path="2[1]"/>
+						</NOT>
+					</Condition>
+				</Predicate>
+				<!-- HD_NG.2 -->
+				<Predicate Target="2[1]" TrueUsage="R" FalseUsage="O" ID="[LRI_HD_NG]2[1]">
+					<Description>If HD_NG.1 (Namespace ID) is not valued.</Description>
+					<Condition>
+						<NOT>
+							<Presence Path="1[1]"/>
+						</NOT>
+					</Condition>
+				</Predicate>
+				<!-- HD_NG.3 -->
+				<Predicate Target="3[1]" TrueUsage="R" FalseUsage="X" ID="[LRI_HD_NG]3[1]">
+					<Description>If HD_NG.2 (Universal ID) is valued.</Description>
+					<Condition>
+						<Presence Path="2[1]"/>
+					</Condition>
+				</Predicate>
+			</ByID>
+			<!-- XCN_GU -->
+			<ByID ID="LRI_XCN_GU">
+				<!-- XCN_GU.9 -->
+				<Predicate Target="9[1]" TrueUsage="R" FalseUsage="X" ID="[LRI_XCN_GU]9[1]">
+					<Description>If XCN_GU.1 (ID Number) is valued.</Description>
+					<Condition>
+						<Presence Path="1[1]"/>
+					</Condition>
+				</Predicate>
+				<!-- XCN_GU.12 -->
+				<!-- <Predicate Target="12[1]" TrueUsage="O" FalseUsage="X">
+					<Description>Note that the condition predicate will be established when this profile is constrained further.</Description>
+					<Condition>
+					</Condition>
+				</Predicate> -->
+				<!-- XCN_GU.13 -->
+				<Predicate Target="13[1]" TrueUsage="R" FalseUsage="X" ID="[LRI_XCN_GU]13[1]">
+					<Description>If XCN_GU.1 (ID Number) is valued.</Description>
+					<Condition>
+						<Presence Path="1[1]"/>
+					</Condition>
+				</Predicate>
+			</ByID>
+			<!-- XCN_NG -->
+			<ByID ID="LRI_XCN_NG">
+				<!-- XCN_NG.9 -->
+				<Predicate Target="9[1]" TrueUsage="RE" FalseUsage="X" ID="[LRI_XCN_NG]9[1]">
+					<Description>If XCN_NG.1 (ID Number) is valued</Description>
+					<Condition>
+						<Presence Path="1[1]"/>
+					</Condition>
+				</Predicate>
+				<!-- XCN_GU.12 -->
+				<!-- <Predicate Target="12[1]" TrueUsage="O" FalseUsage="X">
+					<Description>Note that the condition predicate will be established when this profile is constrained further.</Description>
+					<Condition>
+					</Condition>
+				</Predicate> -->
+				<!-- XCN_NG.13 -->
+				<Predicate Target="13[1]" TrueUsage="R" FalseUsage="X" ID="[LRI_XCN_NG]13[1]">
+					<Description>If XCN_NG.1 (ID Number) is valued.</Description>
+					<Condition>
+						<Presence Path="1[1]"/>
+					</Condition>
+				</Predicate>
+			</ByID>
+			<!-- XON_GU -->
+			<ByID ID="LRI_XON_GU">
+				<!-- XON_GU.5 -->
+				<!-- <Predicate Target="5[1]" TrueUsage="O" FalseUsage="X">
+					<Description>No predicate in IG</Description>
+					<Condition>
+					</Condition>
+				</Predicate> -->
+				<!-- XON_GU.6 -->
+				<Predicate Target="6[1]" TrueUsage="R" FalseUsage="X" ID="[LRI_XON_GU]6[1]">
+					<Description>If XON_GU.10 (Organization Identifier) is valued.</Description>
+					<Condition>
+						<Presence Path="10[1]"/>
+					</Condition>
+				</Predicate>
+				<!-- XON_GU.7 -->
+				<Predicate Target="7[1]" TrueUsage="R" FalseUsage="X" ID="[LRI_XON_GU]7[1]">
+					<Description>If XON_GU.10 (Organization Identifier) is valued.</Description>
+					<Condition>
+						<Presence Path="10[1]"/>
+					</Condition>
+				</Predicate>
+				<!-- XON_GU.10 -->
+				<Predicate Target="10[1]" TrueUsage="R" FalseUsage="RE" ID="[LRI_XON_GU]10[1]">
+					<Description>If XON_GU.1 (Organization Name) is not valued.</Description>
+					<Condition>
+						<NOT>
+							<Presence Path="1[1]"/>
+						</NOT>
+					</Condition>
+				</Predicate>
+			</ByID>
+			<!-- XON_NG -->
+			<ByID ID="LRI_XON_NG">
+				<!-- XON_GU.5 -->
+				<!-- <Predicate Target="5[1]" TrueUsage="O" FalseUsage="X">
+					<Description>Note that the condition predicate will be established when this profile is constrained further</Description>
+					<Condition>
+					</Condition>
+				</Predicate> -->
+				<!-- XON_NG.6 -->
+				<Predicate Target="6[1]" TrueUsage="RE" FalseUsage="X" ID="[LRI_XON_NG]6[1]">
+					<Description>If XON_NG.10 (Organization Identifier) is valued.</Description>
+					<Condition>
+						<Presence Path="10[1]"/>
+					</Condition>
+				</Predicate>
+				<!--XON_NG.7 -->
+				<Predicate Target="7[1]" TrueUsage="R" FalseUsage="X" ID="[LRI_XON_NG]7[1]">
+					<Description>If XON_NG.10 (Organization Identifier) is valued.</Description>
+					<Condition>
+						<Presence Path="10[1]"/>
+					</Condition>
+				</Predicate>
+				<!-- XON_NG.10 -->
+				<Predicate Target="10[1]" TrueUsage="R" FalseUsage="RE" ID="[LRI_XON_NG]10[1]">
+					<Description>If XON_NG.1 (Organization Name) is not valued.</Description>
+					<Condition>
+						<NOT>
+							<Presence Path="1[1]"/>
+						</NOT>
+					</Condition>
+				</Predicate>
+			</ByID>
+		</Datatype>
+		<Segment>
+			<ByID ID="ERR_LRI">
+				<!-- ERR.5 -->
+				<Predicate Target="5[1]" TrueUsage="R" FalseUsage="O" ID="[ERR_LRI]5[1]">
+					<Description>If ERR-3.1 (Identifier) is valued '999'</Description>
+					<Condition>
+						<AND>
+							<Presence Path="3[1].1[1]"/>
+							<PlainText Path="3[1].1[1]" Text="999" IgnoreCase="false"/>
+						</AND>
+					</Condition>
+				</Predicate>
+			</ByID>
+			<ByID ID="OBR_GU_FRU">
+				<!-- OBR-26 -->
+				<Predicate Target="26[1]" TrueUsage="R" FalseUsage="RE" ID="[OBR_GU_FRU]26[1]">
+					<Description>If OBR-11 (Specimen Action Code) is valued "G".</Description>
+					<Condition>
+						<AND>
+							<Presence Path="11[1]"/>
+							<PlainText Path="11[1]" Text="G" IgnoreCase="false"/>
+						</AND>
+					</Condition>
+				</Predicate>
+				<!-- OBR.28 -->
+				<Predicate Target="28[1]" TrueUsage="R" FalseUsage="X" ID="[OBR_GU_FRU]28[1]">
+					<Description>If CWE_CRE.1 (Identifier) or CWE_CRE.4 (Alternate Identifier) of at least one occurrence of OBR-49 (Result Handling) is valued 'CC' or 'BCC'</Description>
+					<Condition>
+						<AND>
+							<!-- either OBR-49.1 or OBR-49.4 have to be present -->
+							<OR>
+								<Presence Path="49[*].1[1]"/>
+								<Presence Path="49[*].4[1]"/>
+							</OR>
+							<!-- at least one occurrence of  OBR-49.1 must be valued 'CC' OR
+									at least one occurrence of  OBR-49.1 must be valued 'BCC' OR
+									at least one occurrence of  OBR-49.4 must be valued 'CC' OR
+									at least one occurrence of  OBR-49.4 must be valued 'CC' OR-->
+							<EXIST>
+								<PlainText Path="49[*].1[1]" Text="CC" IgnoreCase="false" AtLeastOnce="true"/>
+								<PlainText Path="49[*].4[1]" Text="CC" IgnoreCase="false" AtLeastOnce="true"/>
+								<PlainText Path="49[*].1[1]" Text="BCC" IgnoreCase="false" AtLeastOnce="true"/>
+								<PlainText Path="49[*].4[1]" Text="BCC" IgnoreCase="false" AtLeastOnce="true"/>
+							</EXIST>
+						</AND>
+					</Condition>
+				</Predicate>
+				<!-- OBR-29 -->
+				<Predicate Target="29[1]" TrueUsage="R" FalseUsage="RE" ID="[OBR_GU_FRU]29[1]">
+					<Description>: If OBR-11 (Specimen Action Code) is valued "G".</Description>
+					<Condition>
+						<AND>
+							<Presence Path="11[1]"/>
+							<PlainText Path="11[1]" Text="G" IgnoreCase="false"/>
+						</AND>
+					</Condition>
+				</Predicate>
+			</ByID>
+			<ByID ID="OBR_NG_FRU">
+				<!-- OBR-26 -->
+				<Predicate Target="26[1]" TrueUsage="R" FalseUsage="RE" ID="[OBR_NG_FRU]26[1]">
+					<Description>If OBR-11 (Specimen Action Code) is valued "G".</Description>
+					<Condition>
+						<AND>
+							<Presence Path="11[1]"/>
+							<PlainText Path="11[1]" Text="G" IgnoreCase="false"/>
+						</AND>
+					</Condition>
+				</Predicate>
+				<!-- OBR.28 -->
+				<Predicate Target="28[1]" TrueUsage="R" FalseUsage="X" ID="[OBR_NG_FRU]28[1]">
+					<Description>If CWE_CRE.1 (Identifier) or CWE_CRE.4 (Alternate Identifier) of at least one occurrence of OBR-49 (Result Handling) is valued 'CC' or 'BCC'</Description>
+					<Condition>
+						<AND>
+							<!-- either OBR-49.1 or OBR-49.4 have to be present -->
+							<OR>
+								<Presence Path="49[*].1[1]"/>
+								<Presence Path="49[*].4[1]"/>
+							</OR>
+							<!-- at least one occurrence of  OBR-49.1 must be valued 'CC' OR
+									at least one occurrence of  OBR-49.1 must be valued 'BCC' OR
+									at least one occurrence of  OBR-49.4 must be valued 'CC' OR
+									at least one occurrence of  OBR-49.4 must be valued 'CC' OR-->
+							<EXIST>
+								<PlainText Path="49[*].1[1]" Text="CC" IgnoreCase="false" AtLeastOnce="true"/>
+								<PlainText Path="49[*].4[1]" Text="CC" IgnoreCase="false" AtLeastOnce="true"/>
+								<PlainText Path="49[*].1[1]" Text="BCC" IgnoreCase="false" AtLeastOnce="true"/>
+								<PlainText Path="49[*].4[1]" Text="BCC" IgnoreCase="false" AtLeastOnce="true"/>
+							</EXIST>
+						</AND>
+					</Condition>
+				</Predicate>
+				<!-- OBR-29 -->
+				<Predicate Target="29[1]" TrueUsage="R" FalseUsage="RE" ID="[OBR_NG_FRU]29[1]">
+					<Description>: If OBR-11 (Specimen Action Code) is valued "G".</Description>
+					<Condition>
+						<AND>
+							<Presence Path="11[1]"/>
+							<PlainText Path="11[1]" Text="G" IgnoreCase="false"/>
+						</AND>
+					</Condition>
+				</Predicate>
+			</ByID>
+			<ByID ID="OBR_GU_FRN">
+				<!-- OBR-26 -->
+				<Predicate Target="26[1]" TrueUsage="R" FalseUsage="RE" ID="[OBR_GU_FRN]26[1]">
+					<Description>If OBR-11 (Specimen Action Code) is valued "G".</Description>
+					<Condition>
+						<AND>
+							<Presence Path="11[1]"/>
+							<PlainText Path="11[1]" Text="G" IgnoreCase="false"/>
+						</AND>
+					</Condition>
+				</Predicate>
+				<!-- OBR.28 -->
+				<Predicate Target="28[1]" TrueUsage="R" FalseUsage="X" ID="[OBR_GU_FRN]28[1]">
+					<Description>If CWE_CRE.1 (Identifier) or CWE_CRE.4 (Alternate Identifier) of at least one occurrence of OBR-49 (Result Handling) is valued 'CC' or 'BCC'</Description>
+					<Condition>
+						<AND>
+							<!-- either OBR-49.1 or OBR-49.4 have to be present -->
+							<OR>
+								<Presence Path="49[*].1[1]"/>
+								<Presence Path="49[*].4[1]"/>
+							</OR>
+							<!-- at least one occurrence of  OBR-49.1 must be valued 'CC' OR
+									at least one occurrence of  OBR-49.1 must be valued 'BCC' OR
+									at least one occurrence of  OBR-49.4 must be valued 'CC' OR
+									at least one occurrence of  OBR-49.4 must be valued 'CC' OR-->
+							<EXIST>
+								<PlainText Path="49[*].1[1]" Text="CC" IgnoreCase="false" AtLeastOnce="true"/>
+								<PlainText Path="49[*].4[1]" Text="CC" IgnoreCase="false" AtLeastOnce="true"/>
+								<PlainText Path="49[*].1[1]" Text="BCC" IgnoreCase="false" AtLeastOnce="true"/>
+								<PlainText Path="49[*].4[1]" Text="BCC" IgnoreCase="false" AtLeastOnce="true"/>
+							</EXIST>
+						</AND>
+					</Condition>
+				</Predicate>
+				<!-- OBR-29 -->
+				<Predicate Target="29[1]" TrueUsage="R" FalseUsage="RE" ID="[OBR_GU_FRN]29[1]">
+					<Description>: If OBR-11 (Specimen Action Code) is valued "G".</Description>
+					<Condition>
+						<AND>
+							<Presence Path="11[1]"/>
+							<PlainText Path="11[1]" Text="G" IgnoreCase="false"/>
+						</AND>
+					</Condition>
+				</Predicate>
+				<!-- OBR.50 -->
+				<Predicate Target="50[1]" TrueUsage="R" FalseUsage="X" ID="[OBR_GU_FRN]50[1]">
+					<Description>If OBR-29 (Parent) is valued</Description>
+					<Condition>
+						<Presence Path="29[1]"/>
+					</Condition>
+				</Predicate>
+			</ByID>
+			<ByID ID="OBR_NG_FRN">
+				<!-- OBR-26 -->
+				<Predicate Target="26[1]" TrueUsage="R" FalseUsage="RE" ID="[OBR_NG_FRN]26[1]">
+					<Description>If OBR-11 (Specimen Action Code) is valued "G".</Description>
+					<Condition>
+						<AND>
+							<Presence Path="11[1]"/>
+							<PlainText Path="11[1]" Text="G" IgnoreCase="false"/>
+						</AND>
+					</Condition>
+				</Predicate>
+				<!-- OBR.28 -->
+				<Predicate Target="28[1]" TrueUsage="R" FalseUsage="X" ID="[OBR_NG_FRN]28[1]">
+					<Description>If CWE_CRE.1 (Identifier) or CWE_CRE.4 (Alternate Identifier) of at least one occurrence of OBR-49 (Result Handling) is valued 'CC' or 'BCC'</Description>
+					<Condition>
+						<AND>
+							<!-- either OBR-49.1 or OBR-49.4 have to be present -->
+							<OR>
+								<Presence Path="49[*].1[1]"/>
+								<Presence Path="49[*].4[1]"/>
+							</OR>
+							<!-- at least one occurrence of  OBR-49.1 must be valued 'CC' OR
+									at least one occurrence of  OBR-49.1 must be valued 'BCC' OR
+									at least one occurrence of  OBR-49.4 must be valued 'CC' OR
+									at least one occurrence of  OBR-49.4 must be valued 'CC' OR-->
+							<EXIST>
+								<PlainText Path="49[*].1[1]" Text="CC" IgnoreCase="false" AtLeastOnce="true"/>
+								<PlainText Path="49[*].4[1]" Text="CC" IgnoreCase="false" AtLeastOnce="true"/>
+								<PlainText Path="49[*].1[1]" Text="BCC" IgnoreCase="false" AtLeastOnce="true"/>
+								<PlainText Path="49[*].4[1]" Text="BCC" IgnoreCase="false" AtLeastOnce="true"/>
+							</EXIST>
+						</AND>
+					</Condition>
+				</Predicate>
+				<!-- OBR-29 -->
+				<Predicate Target="29[1]" TrueUsage="R" FalseUsage="RE" ID="[OBR_NG_FRN]29[1]">
+					<Description>: If OBR-11 (Specimen Action Code) is valued "G".</Description>
+					<Condition>
+						<AND>
+							<Presence Path="11[1]"/>
+							<PlainText Path="11[1]" Text="G" IgnoreCase="false"/>
+						</AND>
+					</Condition>
+				</Predicate>
+				<!-- OBR.50 -->
+				<Predicate Target="50[1]" TrueUsage="R" FalseUsage="X" ID="[OBR_NG_FRN]50[1]">
+					<Description>If OBR-29 (Parent) is valued</Description>
+					<Condition>
+						<Presence Path="29[1]"/>
+					</Condition>
+				</Predicate>
+			</ByID>
+			<ByID ID="OBX_GU">
+				<!-- OBX.2 -->
+				<Predicate Target="2[1]" TrueUsage="R" FalseUsage="X" ID="[OBX_GU]2[1]">
+					<Description>If OBX-5 (Observation Value) is valued</Description>
+					<Condition>
+						<Presence Path="5[1]"/>
+					</Condition>
+				</Predicate>
+				<!-- OBX-4 -->
+				<!-- TODO -->
+				<!-- <Predicate Target="4[1]" TrueUsage="R" FalseUsage="RE">
+			<Description>If there are multiple OBX segments associated with the same OBR segment that have the same OBX-3 values for (OBX-3.1 and OBX-3.3) or (OBX-3.4 and OBX-3.6).</Description>
+			<Condition>
+			</Condition>
+		</Predicate> -->
+			</ByID>
+			<ByID ID="OBX_NG">
+				<!-- OBX.2 -->
+				<Predicate Target="2[1]" TrueUsage="R" FalseUsage="X" ID="[OBX_NG]2[1]">
+					<Description>If OBX-5 (Observation Value) is valued</Description>
+					<Condition>
+						<Presence Path="5[1]"/>
+					</Condition>
+				</Predicate>
+				<!-- OBX-4 -->
+				<!-- TODO -->
+				<!-- <Predicate Target="4[1]" TrueUsage="R" FalseUsage="RE">
+			<Description>If there are multiple OBX segments associated with the same OBR segment that have the same OBX-3 values for (OBX-3.1 and OBX-3.3) or (OBX-3.4 and OBX-3.6).</Description>
+			<Condition>
+			</Condition>
+		</Predicate> -->
+			</ByID>
+		</Segment>
+		<Group>
+			<ByName Name="ORDER_OBSERVATION">
+				<Predicate Target="6[1]" TrueUsage="R" FalseUsage="O" ID="[ORDER_OBSERVATION]6[1]">
+					<Description>If OBR-25 (Result Status) is valued 'A', 'C', 'F', 'P', or 'M'.</Description>
+					<Condition>
+						<AND>
+							<Presence Path="2[1].25[1]"/>
+							<StringList Path="2[1].25[1]" CSV="A,C,F,P,M"/>
+						</AND>
+					</Condition>
+				</Predicate>
+			</ByName>
+			<ByID ID="ORDER_OBSERVATION_FRN">
+				<!-- ORC-29 -->
+				<Predicate Target="1[1].31[1]" TrueUsage="R" FalseUsage="X" ID="[ORDER_OBSERVATION_FRN]1[1].31[1]">
+					<Description>If OBR-29 (Parent) is valued.</Description>
+					<Condition>
+						<Presence Path="2[1].29[1]"/>
+					</Condition>
+				</Predicate>
+			</ByID>
+		</Group>
+		<Message>
+			<ByName Name="ACK">
+				<Predicate TrueUsage="R" FalseUsage="O" Target="4[1]" ID="[ACK]4[1]">
+					<Description>If MSA-1 (Message Acknowledgement) is not valued 'AA' or 'CA'.</Description>
+					<Condition>
+						<NOT>
+							<OR>
+								<PlainText Path="3[1].1[1]" Text="AA" IgnoreCase="false"/>
+								<PlainText Path="3[1].1[1]" Text="CA" IgnoreCase="false"/>
+							</OR>
+						</NOT>
+					</Condition>
+				</Predicate>
+			</ByName>
+		</Message>
+	</Predicates>
+	<Constraints>
+		<!-- not implemented :
+	LRI-29 : For linking Parent/Child results OBR-26.1 (Parent Observation Identifier) of a child observation SHALL be valued with the parent OBX-3 (Observation Identifier).
+	LRI-30 : For linking Parent/Child results OBR-26.2 (Parent Observation Sub-identifier) of a child observation SHALL be valued with the parent OBX-4 (Observation Sub-ID).
+	LRI-31 : For linking Parent/Child results OBR-29.1 (Placer Assigned Identifier) in a child observation SHALL be valued with the parent OBR-2 (Placer Order Number), if OBR-2 is populated.
+	LRI-32 : For linking Parent/Child results OBR-29.2 (Filler Assigned Identifier) in a child observation SHALL be valued with the parent OBR-3 (Filler Order Number).
+	LRI-42 : For linking Parent/Child results OBR-50 (Parent Universal Service Identifier) in a child observation SHALL be valued with the parent OBR-4 (Universal Service Identifier).
+	
+	LRI-45: The value of OBX-5 (Observation Value) SHALL NOT be truncated.
+	LRI-48: If OBX-2 (Value Type) is valued, then the data type format for OBX-5 (Observation Value) SHALL conform to the corresponding constrained data type identified in the "comment" column of HL70125_USL.
+	
+	LRI- 58: Any OBR-25 valued 'I' with any related OBX-11 not valued 'I'or 'D' SHALL be a hard error
+	LRI- 59: Any OBR-25 valued 'A' without any related OBX-11 valued 'F', 'N' or 'X' SHALL be a hard error.
+	LRI- 60: Any OBR-25 valued 'A' without any related OBX-11 valued 'I' SHALL be a hard error.
+	LRI- 61: Any OBR-25 valued 'A' with any related OBX-11 valued 'P', 'C', 'A', 'B' or 'W' SHALL be a hard error.
+	LRI- 62: Any OBR-25 valued 'P' without any related OBX-11 valued 'P' SHALL be a hard error.
+	LRI- 63: Any OBR-25 valued 'P' with any related OBX-11 valued 'C', 'A', 'B' or 'W' SHALL be a hard error.
+	LRI- 64: Any OBR-25 valued 'F' without any related OBX-11 valued 'F' SHALL be a hard error.
+	LRI- 65: Any OBR-25 valued 'F' with any related OBX-11 valued 'I', 'P', 'C', 'A', 'B' or 'W' SHALL be a hard error.
+	LRI- 66: Any OBR-25 valued 'M' without any related OBX-11 valued 'C', 'A', 'B', or 'W' SHALL be a hard error.
+	LRI- 67: Any OBR-25 valued 'M' without any related OBX-11 valued 'I' or 'P SHALL be a hard error.
+	LRI- 68: Any OBR-25 valued 'C' without any related OBX-11 valued 'C', 'A', 'B' or 'W' SHALL be a hard error.
+	LRI- 69: Any OBR-25 valued 'C' with any related OBX-11 valued 'I' or 'P' SHALL be a hard error.
+	LRI- 70: Any OBR-25 valued 'X' with any related OBX-11 value except for 'D', 'N' or 'X' SHALL be a hard error.
+	-->
+		<Datatype>
+			<!-- EI_GU-->
+			<ByID ID="LRI_EI_GU">
+				<Constraint ID="LRI-2" Target="3[1]">
+					<Description>EI_GU.3 (Universal ID) SHALL be valued with an ISO-compliant OID.</Description>
+					<Assertion>
+						<Format Path="3[1]" Regex="[0-2](\.(0|[1-9][0-9]*))*"/>
+					</Assertion>
+				</Constraint>
+				<Constraint ID="LRI-3" Target="4[1]">
+					<Description>EI_GU.4 (Universal ID Type) SHALL contain the value "ISO" drawn from the code system HL70301.</Description>
+					<Assertion>
+						<PlainText Path="4[1]" Text="ISO" IgnoreCase="false"/>
+					</Assertion>
+				</Constraint>
+			</ByID>
+			<!-- HD_GU-->
+			<ByID ID="LRI_HD_GU">
+				<Constraint ID="LRI-4" Target="2[1]">
+					<Description>HD_GU.2 (Universal ID) SHALL be valued with an ISO-compliant OID.</Description>
+					<Assertion>
+						<Format Path="2[1]" Regex="[0-2](\.(0|[1-9][0-9]*))*"/>
+					</Assertion>
+				</Constraint>
+				<Constraint ID="LRI-5" Target="3[1]">
+					<Description>HD_GU.3 (Universal ID Type) SHALL contain the value "ISO" drawn from the code system HL70301.</Description>
+					<Assertion>
+						<PlainText Path="3[1]" Text="ISO" IgnoreCase="false"/>
+					</Assertion>
+				</Constraint>
+			</ByID>
+			<!-- LRI_TS_0 -->
+			<ByID ID="LRI_TS_0">
+				<Constraint ID="NIST-001" Target="1[1]">
+					<Description>TS_0 SHALL be precise to the year</Description>
+					<Assertion>
+						<Format Regex="\d{4}.*" Path="1[1]"/>
+					</Assertion>
+				</Constraint>
+			</ByID>
+			<!-- LRI_TS_1 -->
+			<ByID ID="LRI_TS_1">
+				<Constraint ID="NIST-002" Target="1[1]">
+					<Description>TS_1 SHALL be precise to the second</Description>
+					<Assertion>
+						<Format Regex="\d{14}.*" Path="1[1]"/>
+					</Assertion>
+				</Constraint>
+			</ByID>
+			<!-- LRI_TS_2 -->
+			<ByID ID="LRI_TS_2">
+				<Constraint ID="NIST-003" Target="1[1]">
+					<Description>TS_2 SHALL be precise to the year</Description>
+					<Assertion>
+						<Format Regex="\d{4}.*" Path="1[1]"/>
+					</Assertion>
+				</Constraint>
+			</ByID>
+			<!-- LRI_TS_3 -->
+			<ByID ID="LRI_TS_3">
+				<Constraint ID="NIST-004" Target="1[1]">
+					<Description>TS_3 SHALL be precise to the year</Description>
+					<Assertion>
+						<Format Regex="\d{4}.*" Path="1[1]"/>
+					</Assertion>
+				</Constraint>
+			</ByID>
+			<!-- LRI_TS_4 -->
+			<ByID ID="LRI_TS_4">
+				<Constraint ID="NIST-005" Target="1[1]">
+					<Description>TS_4 SHALL be valued "0000" OR be precise to the day</Description>
+					<Assertion>
+						<OR>
+							<PlainText Path="1[1]" Text="0000" IgnoreCase="false"/>
+							<AND>
+								<NOT>
+									<Format Regex="0{4}.*" Path="1[1]"/>
+								</NOT>
+								<Format Regex="\d{8}.*" Path="1[1]"/>
+							</AND>
+						</OR>
+					</Assertion>
+				</Constraint>
+			</ByID>
+			<!-- LRI_TS_5 -->
+			<ByID ID="LRI_TS_5">
+				<Constraint ID="NIST-006" Target="1[1]">
+					<Description>TS_5 SHALL be precise to the day</Description>
+					<Assertion>
+						<Format Regex="\d{8}.*" Path="1[1]"/>
+					</Assertion>
+				</Constraint>
+			</ByID>
+			<ByID ID="LRI_TS_6">
+				<Constraint ID="NIST-007" Target="1[1]">
+					<Description>TS_6 SHALL be precise to the minute</Description>
+					<Assertion>
+						<Format Regex="\d{12}.*" Path="1[1]"/>
+					</Assertion>
+				</Constraint>
+			</ByID>
+			<ByID ID="LRI_XAD">
+				<Constraint ID="NIST-008" Target="9[1]">
+					<Description>XAD.9 (County/Parish Code) SHALL be a five-digit code.</Description>
+					<Assertion>
+						<Format Regex="\d{5}" Path="9[1]"/>
+					</Assertion>
+				</Constraint>
+			</ByID>
+		</Datatype>
+		<Segment>
+			<ByID ID="MSH_GU">
+				<Constraint ID="LRI-6" Target="1[1]">
+					<Description>MSH-1 (Field Separator) SHALL contain the constant value '|'.</Description>
+					<Assertion>
+						<AND>
+							<Presence Path="1[1]"/>
+							<PlainText Path="1[1]" Text="|" IgnoreCase="false"/>
+						</AND>
+					</Assertion>
+				</Constraint>
+				<Constraint ID="LRI-7" Target="2[1]">
+					<Description>MSH-2 (Encoding Characters) SHALL contain the constant value '^~\&amp;' or the constant value '^~\&amp;#'.</Description>
+					<Assertion>
+						<AND>
+							<Presence Path="2[1]"/>
+							<OR>
+								<PlainText Path="2[1]" Text="^~\&amp;" IgnoreCase="false"/>
+								<PlainText Path="2[1]" Text="^~\&amp;#" IgnoreCase="false"/>
+							</OR>
+						</AND>
+					</Assertion>
+				</Constraint>
+				<Constraint ID="LRI-72" Target="9[1].1[1]">
+					<Description>MSH-9.1 (Message Type.Message Code) SHALL contain the constant value 'ORU' drawn from the code systems HL70076.</Description>
+					<Assertion>
+						<FORALL>
+							<Presence Path="9[1].1[1]"/>
+							<PlainText Path="9[1].1[1]" Text="ORU" IgnoreCase="false"/>
+						</FORALL>
+					</Assertion>
+				</Constraint>
+				<Constraint ID="LRI-73" Target="9[1].2[1]">
+					<Description>MSH-9.2 (Message Type.Event Trigger) SHALL contain the constant value 'R01' drawn from the code systems HL70003.</Description>
+					<Assertion>
+						<FORALL>
+							<Presence Path="9[1].2[1]"/>
+							<PlainText Path="9[1].2[1]" Text="R01" IgnoreCase="false"/>
+						</FORALL>
+					</Assertion>
+				</Constraint>
+				<Constraint ID="LRI-8" Target="9[1].3[1]">
+					<Description>MSH-9.3 (Message Type.Message Structure) SHALL contain the constant value 'ORU_R01' drawn from the code system HL70354.</Description>
+					<Assertion>
+						<FORALL>
+							<Presence Path="9[1].3[1]"/>
+							<PlainText Path="9[1].3[1]" Text="ORU_R01" IgnoreCase="false"/>
+						</FORALL>
+					</Assertion>
+				</Constraint>
+				<Constraint ID="LRI-9" Target="12[1].1[1]">
+					<Description>MSH-12.1 (Version ID.Version ID) SHALL contain the constant value '2.5.1' drawn from code system HL70104.</Description>
+					<Assertion>
+						<AND>
+							<Presence Path="12[1].1[1]"/>
+							<PlainText Path="12[1].1[1]" Text="2.5.1" IgnoreCase="false"/>
+						</AND>
+					</Assertion>
+				</Constraint>
+			</ByID>
+			<ByID ID="MSH_NG">
+				<Constraint ID="LRI-6" Target="1[1]">
+					<Description>MSH-1 (Field Separator) SHALL contain the constant value '|'.</Description>
+					<Assertion>
+						<AND>
+							<Presence Path="1[1]"/>
+							<PlainText Path="1[1]" Text="|" IgnoreCase="false"/>
+						</AND>
+					</Assertion>
+				</Constraint>
+				<Constraint ID="LRI-7" Target="2[1]">
+					<Description>MSH-2 (Encoding Characters) SHALL contain the constant value '^~\&amp;' or the constant value '^~\&amp;#'.</Description>
+					<Assertion>
+						<AND>
+							<Presence Path="2[1]"/>
+							<OR>
+								<PlainText Path="2[1]" Text="^~\&amp;" IgnoreCase="false"/>
+								<PlainText Path="2[1]" Text="^~\&amp;#" IgnoreCase="false"/>
+							</OR>
+						</AND>
+					</Assertion>
+				</Constraint>
+				<Constraint ID="LRI-72" Target="9[1].1[1]">
+					<Description>MSH-9.1 (Message Type.Message Code) SHALL contain the constant value 'ORU' drawn from the code systems HL70076.</Description>
+					<Assertion>
+						<FORALL>
+							<Presence Path="9[1].1[1]"/>
+							<PlainText Path="9[1].1[1]" Text="ORU" IgnoreCase="false"/>
+						</FORALL>
+					</Assertion>
+				</Constraint>
+				<Constraint ID="LRI-73" Target="9[1].2[1]">
+					<Description>MSH-9.2 (Message Type.Event Trigger) SHALL contain the constant value 'R01' drawn from the code systems HL70003.</Description>
+					<Assertion>
+						<FORALL>
+							<Presence Path="9[1].2[1]"/>
+							<PlainText Path="9[1].2[1]" Text="R01" IgnoreCase="false"/>
+						</FORALL>
+					</Assertion>
+				</Constraint>
+				<Constraint ID="LRI-8" Target="9[1].3[1]">
+					<Description>MSH-9.3 (Message Type.Message Structure) SHALL contain the constant value 'ORU_R01' drawn from the code system HL70354.</Description>
+					<Assertion>
+						<FORALL>
+							<Presence Path="9[1].3[1]"/>
+							<PlainText Path="9[1].3[1]" Text="ORU_R01" IgnoreCase="false"/>
+						</FORALL>
+					</Assertion>
+				</Constraint>
+				<Constraint ID="LRI-9" Target="12[1].1[1]">
+					<Description>MSH-12.1 (Version ID.Version ID) SHALL contain the constant value '2.5.1' drawn from code system HL70104.</Description>
+					<Assertion>
+						<AND>
+							<Presence Path="12[1].1[1]"/>
+							<PlainText Path="12[1].1[1]" Text="2.5.1" IgnoreCase="false"/>
+						</AND>
+					</Assertion>
+				</Constraint>
+			</ByID>
+			<ByID ID="MSH_ACK_GU">
+				<Constraint ID="LRI-13" Target="1[1]">
+					<Description>MSH-1 (Field Separator) SHALL contain the constant value '|'.</Description>
+					<Assertion>
+						<AND>
+							<Presence Path="1[1]"/>
+							<PlainText Path="1[1]" Text="|" IgnoreCase="false"/>
+						</AND>
+					</Assertion>
+				</Constraint>
+				<Constraint ID="LRI-14" Target="2[1]">
+					<Description>MSH-2 (Encoding Characters) SHALL contain the constant value '^~\&amp;' or the constant value '^~\&amp;#'.</Description>
+					<Assertion>
+						<AND>
+							<Presence Path="2[1]"/>
+							<OR>
+								<PlainText Path="2[1]" Text="^~\&amp;" IgnoreCase="false"/>
+								<PlainText Path="2[1]" Text="^~\&amp;#" IgnoreCase="false"/>
+							</OR>
+						</AND>
+					</Assertion>
+				</Constraint>
+				<Constraint ID="LRI-15" Target="9[1]">
+					<Description>MSH-9 (Message Type) SHALL contain the constant value 'ACK^R01^ACK'.</Description>
+					<Assertion>
+						<FORALL>
+							<Presence Path="9[1].1[1]"/>
+							<Presence Path="9[1].2[1]"/>
+							<Presence Path="9[1].3[1]"/>
+							<PlainText Path="9[1].1[1]" Text="ACK" IgnoreCase="false"/>
+							<PlainText Path="9[1].2[1]" Text="R01" IgnoreCase="false"/>
+							<PlainText Path="9[1].3[1]" Text="ACK" IgnoreCase="false"/>
+						</FORALL>
+					</Assertion>
+				</Constraint>
+				<Constraint ID="LRI-16" Target="12[1].1[1]">
+					<Description>MSH-12.1 (Version ID) SHALL contain the constant value '2.5.1'.</Description>
+					<Assertion>
+						<AND>
+							<Presence Path="12[1].1[1]"/>
+							<PlainText Path="12[1].1[1]" Text="2.5.1" IgnoreCase="false"/>
+						</AND>
+					</Assertion>
+				</Constraint>
+			</ByID>
+			<ByID ID="MSH_ACK_NG">
+				<Constraint ID="LRI-13" Target="1[1]">
+					<Description>MSH-1 (Field Separator) SHALL contain the constant value '|'.</Description>
+					<Assertion>
+						<AND>
+							<Presence Path="1[1]"/>
+							<PlainText Path="1[1]" Text="|" IgnoreCase="false"/>
+						</AND>
+					</Assertion>
+				</Constraint>
+				<Constraint ID="LRI-14" Target="2[1]">
+					<Description>MSH-2 (Encoding Characters) SHALL contain the constant value '^~\&amp;' or the constant value '^~\&amp;#'.</Description>
+					<Assertion>
+						<AND>
+							<Presence Path="2[1]"/>
+							<OR>
+								<PlainText Path="2[1]" Text="^~\&amp;" IgnoreCase="false"/>
+								<PlainText Path="2[1]" Text="^~\&amp;#" IgnoreCase="false"/>
+							</OR>
+						</AND>
+					</Assertion>
+				</Constraint>
+				<Constraint ID="LRI-15" Target="9[1]">
+					<Description>MSH-9 (Message Type) SHALL contain the constant value 'ACK^R01^ACK'.</Description>
+					<Assertion>
+						<FORALL>
+							<Presence Path="9[1].1[1]"/>
+							<Presence Path="9[1].2[1]"/>
+							<Presence Path="9[1].3[1]"/>
+							<PlainText Path="9[1].1[1]" Text="ACK" IgnoreCase="false"/>
+							<PlainText Path="9[1].2[1]" Text="R01" IgnoreCase="false"/>
+							<PlainText Path="9[1].3[1]" Text="ACK" IgnoreCase="false"/>
+						</FORALL>
+					</Assertion>
+				</Constraint>
+				<Constraint ID="LRI-16" Target="12[1].1[1]">
+					<Description>MSH-12.1 (Version ID) SHALL contain the constant value '2.5.1'.</Description>
+					<Assertion>
+						<AND>
+							<Presence Path="12[1].1[1]"/>
+							<PlainText Path="12[1].1[1]" Text="2.5.1" IgnoreCase="false"/>
+						</AND>
+					</Assertion>
+				</Constraint>
+			</ByID>
+			<ByID ID="MSH_GU_ACK_APP">
+				<Constraint ID="LRI-13" Target="1[1]">
+					<Description>MSH-1 (Field Separator) SHALL contain the constant value '|'.</Description>
+					<Assertion>
+						<AND>
+							<Presence Path="1[1]"/>
+							<PlainText Path="1[1]" Text="|" IgnoreCase="false"/>
+						</AND>
+					</Assertion>
+				</Constraint>
+				<Constraint ID="LRI-14" Target="2[1]">
+					<Description>MSH-2 (Encoding Characters) SHALL contain the constant value '^~\&amp;' or the constant value '^~\&amp;#'.</Description>
+					<Assertion>
+						<AND>
+							<Presence Path="2[1]"/>
+							<OR>
+								<PlainText Path="2[1]" Text="^~\&amp;" IgnoreCase="false"/>
+								<PlainText Path="2[1]" Text="^~\&amp;#" IgnoreCase="false"/>
+							</OR>
+						</AND>
+					</Assertion>
+				</Constraint>
+				<Constraint ID="LRI-15" Target="9[1]">
+					<Description>MSH-9 (Message Type) SHALL contain the constant value 'ACK^R01^ACK'.</Description>
+					<Assertion>
+						<FORALL>
+							<Presence Path="9[1].1[1]"/>
+							<Presence Path="9[1].2[1]"/>
+							<Presence Path="9[1].3[1]"/>
+							<PlainText Path="9[1].1[1]" Text="ACK" IgnoreCase="false"/>
+							<PlainText Path="9[1].2[1]" Text="R01" IgnoreCase="false"/>
+							<PlainText Path="9[1].3[1]" Text="ACK" IgnoreCase="false"/>
+						</FORALL>
+					</Assertion>
+				</Constraint>
+				<Constraint ID="LRI-16" Target="12[1].1[1]">
+					<Description>MSH-12.1 (Version ID) SHALL contain the constant value '2.5.1'.</Description>
+					<Assertion>
+						<AND>
+							<Presence Path="12[1].1[1]"/>
+							<PlainText Path="12[1].1[1]" Text="2.5.1" IgnoreCase="false"/>
+						</AND>
+					</Assertion>
+				</Constraint>
+			</ByID>
+			<ByID ID="MSH_NG_ACK_APP">
+				<Constraint ID="LRI-13" Target="1[1]">
+					<Description>MSH-1 (Field Separator) SHALL contain the constant value '|'.</Description>
+					<Assertion>
+						<AND>
+							<Presence Path="1[1]"/>
+							<PlainText Path="1[1]" Text="|" IgnoreCase="false"/>
+						</AND>
+					</Assertion>
+				</Constraint>
+				<Constraint ID="LRI-14" Target="2[1]">
+					<Description>MSH-2 (Encoding Characters) SHALL contain the constant value '^~\&amp;' or the constant value '^~\&amp;#'.</Description>
+					<Assertion>
+						<AND>
+							<Presence Path="2[1]"/>
+							<OR>
+								<PlainText Path="2[1]" Text="^~\&amp;" IgnoreCase="false"/>
+								<PlainText Path="2[1]" Text="^~\&amp;#" IgnoreCase="false"/>
+							</OR>
+						</AND>
+					</Assertion>
+				</Constraint>
+				<Constraint ID="LRI-15" Target="9[1]">
+					<Description>MSH-9 (Message Type) SHALL contain the constant value 'ACK^R01^ACK'.</Description>
+					<Assertion>
+						<FORALL>
+							<Presence Path="9[1].1[1]"/>
+							<Presence Path="9[1].2[1]"/>
+							<Presence Path="9[1].3[1]"/>
+							<PlainText Path="9[1].1[1]" Text="ACK" IgnoreCase="false"/>
+							<PlainText Path="9[1].2[1]" Text="R01" IgnoreCase="false"/>
+							<PlainText Path="9[1].3[1]" Text="ACK" IgnoreCase="false"/>
+						</FORALL>
+					</Assertion>
+				</Constraint>
+				<Constraint ID="LRI-16" Target="12[1].1[1]">
+					<Description>MSH-12.1 (Version ID) SHALL contain the constant value '2.5.1'.</Description>
+					<Assertion>
+						<AND>
+							<Presence Path="12[1].1[1]"/>
+							<PlainText Path="12[1].1[1]" Text="2.5.1" IgnoreCase="false"/>
+						</AND>
+					</Assertion>
+				</Constraint>
+			</ByID>
+			<ByID ID="PID_GU">
+				<Constraint ID="LRI-20" Target="1[1]">
+					<Description>PID-1 (Set ID - PID) SHALL be valued with the constant value '1'.</Description>
+					<Assertion>
+						<AND>
+							<Presence Path="1[1]"/>
+							<PlainText Path="1[1]" Text="1" IgnoreCase="false"/>
+						</AND>
+					</Assertion>
+				</Constraint>
+			</ByID>
+			<ByID ID="PID_NG">
+				<Constraint ID="LRI-20" Target="1[1]">
+					<Description>PID-1 (Set ID - PID) SHALL be valued with the constant value '1'.</Description>
+					<Assertion>
+						<AND>
+							<Presence Path="1[1]"/>
+							<PlainText Path="1[1]" Text="1" IgnoreCase="false"/>
+						</AND>
+					</Assertion>
+				</Constraint>
+			</ByID>
+			<ByID ID="OBR_GU_FRU">
+				<Constraint ID="LRI-33" Target="8[1]">
+					<Description>If present, OBR-8 (Observation End Date/Time) SHALL be equal to or later than OBR-7 (Observation Date/Time).</Description>
+					<Assertion>
+						<Plugin QualifiedClassName="gov.nist.healthcare.mu.lri.custom.LRI_33"/>
+					</Assertion>
+				</Constraint>
+				<!-- OBR-4 -->
+				<Constraint ID="NIST-009" Target="4[1].1[1]">
+					<Description>If OBR-4.3(Name of Coding System) is valued 'LN', OBR-4.1 (Identifier) SHALL be a valid LOINC code identifier format.</Description>
+					<Assertion>
+						<Plugin QualifiedClassName="gov.nist.healthcare.mu.lri.custom.OBR_4a"/>
+					</Assertion>
+				</Constraint>
+				<Constraint ID="NIST-010" Target="4[1].4[1]">
+					<Description>If OBR-4.6 (Name of Alternate Coding System) is valued 'LN', OBR-4.4 (Alternate Identifier) SHALL be a valid LOINC code identifier format.</Description>
+					<Assertion>
+						<Plugin QualifiedClassName="gov.nist.healthcare.mu.lri.custom.OBR_4b"/>
+					</Assertion>
+				</Constraint>
+			</ByID>
+			<ByID ID="OBR_GU_FRN">
+				<Constraint ID="LRI-33" Target="8[1]">
+					<Description>If present, OBR-8 (Observation End Date/Time) SHALL be equal to or later than OBR-7 (Observation Date/Time).</Description>
+					<Assertion>
+						<Plugin QualifiedClassName="gov.nist.healthcare.mu.lri.custom.LRI_33"/>
+					</Assertion>
+				</Constraint>
+				<!-- OBR-4 -->
+				<Constraint ID="NIST-009" Target="4[1].1[1]">
+					<Description>If OBR-4.3(Name of Coding System) is valued 'LN', OBR-4.1 (Identifier) SHALL be a valid LOINC code identifier format.</Description>
+					<Assertion>
+						<Plugin QualifiedClassName="gov.nist.healthcare.mu.lri.custom.OBR_4a"/>
+					</Assertion>
+				</Constraint>
+				<Constraint ID="NIST-010" Target="4[1].4[1]">
+					<Description>If OBR-4.6 (Name of Alternate Coding System) is valued 'LN', OBR-4.4 (Alternate Identifier) SHALL be a valid LOINC code identifier format.</Description>
+					<Assertion>
+						<Plugin QualifiedClassName="gov.nist.healthcare.mu.lri.custom.OBR_4b"/>
+					</Assertion>
+				</Constraint>
+			</ByID>
+			<ByID ID="OBR_NG_FRU">
+				<Constraint ID="LRI-33" Target="8[1]">
+					<Description>If present, OBR-8 (Observation End Date/Time) SHALL be equal to or later than OBR-7 (Observation Date/Time).</Description>
+					<Assertion>
+						<Plugin QualifiedClassName="gov.nist.healthcare.mu.lri.custom.LRI_33"/>
+					</Assertion>
+				</Constraint>
+				<!-- OBR-4 -->
+				<Constraint ID="NIST-009" Target="4[1].1[1]">
+					<Description>If OBR-4.3(Name of Coding System) is valued 'LN', OBR-4.1 (Identifier) SHALL be a valid LOINC code identifier format.</Description>
+					<Assertion>
+						<Plugin QualifiedClassName="gov.nist.healthcare.mu.lri.custom.OBR_4a"/>
+					</Assertion>
+				</Constraint>
+				<Constraint ID="NIST-010" Target="4[1].4[1]">
+					<Description>If OBR-4.6 (Name of Alternate Coding System) is valued 'LN', OBR-4.4 (Alternate Identifier) SHALL be a valid LOINC code identifier format.</Description>
+					<Assertion>
+						<Plugin QualifiedClassName="gov.nist.healthcare.mu.lri.custom.OBR_4b"/>
+					</Assertion>
+				</Constraint>
+			</ByID>
+			<ByID ID="OBR_NG_FRN">
+				<Constraint ID="LRI-33" Target="8[1]">
+					<Description>If present, OBR-8 (Observation End Date/Time) SHALL be equal to or later than OBR-7 (Observation Date/Time).</Description>
+					<Assertion>
+						<Plugin QualifiedClassName="gov.nist.healthcare.mu.lri.custom.LRI_33"/>
+					</Assertion>
+				</Constraint>
+				<!-- OBR-4 -->
+				<Constraint ID="NIST-009" Target="4[1].1[1]">
+					<Description>If OBR-4.3(Name of Coding System) is valued 'LN', OBR-4.1 (Identifier) SHALL be a valid LOINC code identifier format.</Description>
+					<Assertion>
+						<Plugin QualifiedClassName="gov.nist.healthcare.mu.lri.custom.OBR_4a"/>
+					</Assertion>
+				</Constraint>
+				<Constraint ID="NIST-010" Target="4[1].4[1]">
+					<Description>If OBR-4.6 (Name of Alternate Coding System) is valued 'LN', OBR-4.4 (Alternate Identifier) SHALL be a valid LOINC code identifier format.</Description>
+					<Assertion>
+						<Plugin QualifiedClassName="gov.nist.healthcare.mu.lri.custom.OBR_4b"/>
+					</Assertion>
+				</Constraint>
+			</ByID>
+			<ByID ID="TQ1_LRI">
+				<Constraint ID="LRI-44" Target="1[1]">
+					<Description>The value of TQ1-1 (Set ID - TQ1) SHALL be valued '1'.</Description>
+					<Assertion>
+						<PlainText Path="1[1]" Text="1" IgnoreCase="false"/>
+					</Assertion>
+				</Constraint>
+			</ByID>
+			<ByID ID="OBX_GU">
+				<!-- OBX-3 -->
+				<Constraint ID="NIST-011" Target="3[1].1[1]">
+					<Description>If OBX-3.3 (Name of Coding System) is valued 'LN', OBX-3.1 (Identifier) SHALL be a valid LOINC code identifier format.</Description>
+					<Assertion>
+						<Plugin QualifiedClassName="gov.nist.healthcare.mu.lri.custom.OBX_3a"/>
+					</Assertion>
+				</Constraint>
+				<Constraint ID="NIST-012" Target="3[1].4[1]">
+					<Description>If OBX-3.6 (Name of Alternate coding System) is valued 'LN', OBX-3.4 (Alternate Identifier) SHALL be a valid LOINC code identifier format.</Description>
+					<Assertion>
+						<Plugin QualifiedClassName="gov.nist.healthcare.mu.lri.custom.OBX_3b"/>
+					</Assertion>
+				</Constraint>
+				<!-- OBX-5 -->
+				<Constraint ID="NIST-013" Target="5[1]">
+					<Description>If OBX-2 is valued 'CWE' and OBX-5.3 (Name of Coding System) is valued 'SCT', OBX-5.1 (Identifier) SHALL be a valid SNOMED CT code identifier format.</Description>
+					<Assertion>
+						<IMPLY>
+							<PlainText Path="2[1]" Text="CWE" IgnoreCase="false"/>
+							<Plugin QualifiedClassName="gov.nist.healthcare.mu.lri.custom.OBX_5a"/>
+						</IMPLY>
+					</Assertion>
+				</Constraint>
+				<Constraint ID="NIST-014" Target="5[1]">
+					<Description>If OBX-2 is value 'CWE' and OBX-5.6 (Name of Alternate Coding System) is valued 'SCT', OBX-5.4 (Alternate Identifier) SHALL be a valid SNOMED CT code identifier format.</Description>
+					<Assertion>
+						<IMPLY>
+							<PlainText Path="2[1]" Text="CWE" IgnoreCase="false"/>
+							<Plugin QualifiedClassName="gov.nist.healthcare.mu.lri.custom.OBX_5b"/>
+						</IMPLY>
+					</Assertion>
+				</Constraint>
+				<Constraint ID="NIST-TEST" Target="5[1]">
+					<Description>TEST</Description>
+					<Assertion>
+						<IMPLY>
+							<PlainText Path="2[1]" Text="CWE" IgnoreCase="false"/>
+							<AND>		
+								<PlainText Path="11[1]" Text="2.5.1" IgnoreCase="true"/>
+								<Presence Path="11[1]"/>
+							</AND>
+						</IMPLY>
+					</Assertion>
+				</Constraint>
+			</ByID>
+			<ByID ID="OBX_NG">
+				<!-- OBX-3 -->
+				<Constraint ID="NIST-011" Target="3[1].1[1]">
+					<Description>If OBX-3.3 (Name of Coding System) is valued 'LN', OBX-3.1 (Identifier) SHALL be a valid LOINC code identifier format.</Description>
+					<Assertion>
+						<Plugin QualifiedClassName="gov.nist.healthcare.mu.lri.custom.OBX_3a"/>
+					</Assertion>
+				</Constraint>
+				<Constraint ID="NIST-012" Target="3[1].4[1]">
+					<Description>If OBX-3.6 (Name of Alternate coding System) is valued 'LN', OBX-3.4 (Alternate Identifier) SHALL be a valid LOINC code identifier format.</Description>
+					<Assertion>
+						<Plugin QualifiedClassName="gov.nist.healthcare.mu.lri.custom.OBX_3b"/>
+					</Assertion>
+				</Constraint>
+				<!-- OBX-5 -->
+				<Constraint ID="NIST-013" Target="5[1]">
+					<Description>If OBX-2 is valued 'CWE' and OBX-5.3 (Name of Coding System) is valued 'SCT', OBX-5.1 (Identifier) SHALL be a valid SNOMED CT code identifier format.</Description>
+					<Assertion>
+						<IMPLY>
+							<PlainText Path="2[1]" Text="CWE" IgnoreCase="false"/>
+							<Plugin QualifiedClassName="gov.nist.healthcare.mu.lri.custom.OBX_5a"/>
+						</IMPLY>
+					</Assertion>
+				</Constraint>
+				<Constraint ID="NIST-014" Target="5[1]">
+					<Description>If OBX-2 is value 'CWE' and OBX-5.6 (Name of Alternate Coding System) is valued 'SCT', OBX-5.4 (Alternate Identifier) SHALL be a valid SNOMED CT code identifier format.</Description>
+					<Assertion>
+						<IMPLY>
+							<PlainText Path="2[1]" Text="CWE" IgnoreCase="false"/>
+							<Plugin QualifiedClassName="gov.nist.healthcare.mu.lri.custom.OBX_5b"/>
+						</IMPLY>
+					</Assertion>
+				</Constraint>
+			</ByID>
+			<ByID ID="NTE_LRI">
+				<Constraint ID="LRI-55" Target="1[1]">
+					<Description>NTE.1 (Set ID - NTE) SHALL be valued sequentially starting with the value '1' within a given segment group.</Description>
+					<Assertion>
+						<SetID Path="1[1]"/>
+					</Assertion>
+				</Constraint>
+			</ByID>
+			<ByID ID="SPM_GU">
+				<!-- SPM-4 -->
+				<Constraint ID="NIST-015" Target="4[1].1[1]">
+					<Description>If SPM-4.3 (Name of Coding System) is valued 'SCT', SPM-4.1 (Identifier) SHALL be a valid SNOMED CT code identifier format.</Description>
+					<Assertion>
+						<Plugin QualifiedClassName="gov.nist.healthcare.mu.lri.custom.SPM_4a"/>
+					</Assertion>
+				</Constraint>
+				<Constraint ID="NIST-016" Target="4[1].4[1]">
+					<Description>If SPM-4.6 (Name of Alternate Coding System) is valued 'SCT', SPM-4.4 (Alternate Identifier) SHALL be a valid SNOMED CT code identifier format.</Description>
+					<Assertion>
+						<Plugin QualifiedClassName="gov.nist.healthcare.mu.lri.custom.SPM_4b"/>
+					</Assertion>
+				</Constraint>
+			</ByID>
+			<ByID ID="SPM_NG">
+				<!-- SPM-4 -->
+				<Constraint ID="NIST-015" Target="4[1].1[1]">
+					<Description>If SPM-4.3 (Name of Coding System) is valued 'SCT', SPM-4.1 (Identifier) SHALL be a valid SNOMED CT code identifier format.</Description>
+					<Assertion>
+						<Plugin QualifiedClassName="gov.nist.healthcare.mu.lri.custom.SPM_4a"/>
+					</Assertion>
+				</Constraint>
+				<Constraint ID="NIST-016" Target="4[1].4[1]">
+					<Description>If SPM-4.6 (Name of Alternate Coding System) is valued 'SCT', SPM-4.4 (Alternate Identifier) SHALL be a valid SNOMED CT code identifier format.</Description>
+					<Assertion>
+						<Plugin QualifiedClassName="gov.nist.healthcare.mu.lri.custom.SPM_4b"/>
+					</Assertion>
+				</Constraint>
+			</ByID>
+		</Segment>
+		<Group>
+			<ByID ID="PATIENT_RESULT_FRU">
+				<Constraint ID="LRI-43" Target="3[1].2[1].2[1]">
+					<Description>Results with a Parent/Child relationship (as defined in Section 8.1 Parent/Child Reporting for Reflex and Culture/Susceptibility Testing), such as Microbiology and Reflex Results MUST provide proper linking from the Child result to the Parent OBR and OBX.</Description>
+					<Assertion>
+						<Plugin QualifiedClassName="gov.nist.healthcare.mu.lri.custom.LRI_43"/>
+					</Assertion>
+				</Constraint>
+				<Constraint ID="NIST-017" Target="3[1].2[1].2[1]">
+					<Description>If OBR-26 (Parent Result) is valued, then there SHALL be at least one OBX in the message where OBX-3 (Observation Identifier) = OBR-26.1 (Parent Observation Identifier) AND OBX-4 (Observation Sub-ID) = OBR-26.2 (Parent Observation Sub-identifier)</Description>
+					<Assertion>
+						<Plugin QualifiedClassName="gov.nist.healthcare.mu.lri.custom.NIST_017"/>
+					</Assertion>
+				</Constraint>
+				<Constraint ID="NIST-018" Target="3[1].2[1].2[1]">
+					<Description>If OBR-29 (Parent) is valued, then there SHALL be at least one other OBR in the message where OBR-2 (Placer Order Number) = OBR-29.1 (Placer Assigned Identifier) AND OBR-3 (Filler Order Number) = OBR-29.2 (Filler Assigned Identifier)</Description>
+					<Assertion>
+						<Plugin QualifiedClassName="gov.nist.healthcare.mu.lri.custom.NIST_018"/>
+					</Assertion>
+				</Constraint>
+			</ByID>
+			<ByID ID="PATIENT_RESULT_FRN">
+				<Constraint ID="LRI-57" Target="3[1].2[1].2[1]">
+					<Description>Results with a Parent/Child relationship (as defined in section 6.1.1), such as Microbiology and Reflex Results must provide proper linking from the Child result to the Parent OBR and OBX.</Description>
+					<Assertion>
+						<Plugin QualifiedClassName="gov.nist.healthcare.mu.lri.custom.LRI_57"/>
+					</Assertion>
+				</Constraint>
+				<Constraint ID="NIST-017" Target="3[1].2[1].2[1]">
+					<Description>If OBR-26 (Parent Result) is valued, then there SHALL be at least one OBX in the message where OBX-3 (Observation Identifier) = OBR-26.1 (Parent Observation Identifier) AND OBX-4 (Observation Sub-ID) = OBR-26.2 (Parent Observation Sub-identifier)</Description>
+					<Assertion>
+						<Plugin QualifiedClassName="gov.nist.healthcare.mu.lri.custom.NIST_017"/>
+					</Assertion>
+				</Constraint>
+				<Constraint ID="NIST-018" Target="3[1].2[1].2[1]">
+					<Description>If OBR-29 (Parent) is valued, then there SHALL be at least one other OBR in the message where OBR-2 (Placer Order Number) = OBR-29.1 (Placer Assigned Identifier) AND OBR-3 (Filler Order Number) = OBR-29.2 (Filler Assigned Identifier)</Description>
+					<Assertion>
+						<Plugin QualifiedClassName="gov.nist.healthcare.mu.lri.custom.NIST_018"/>
+					</Assertion>
+				</Constraint>
+				<Constraint ID="NIST-019" Target="3[1].2[1].2[1]">
+					<Description>If OBR-50 (Parent Universal Service Identifier) is valued, then there SHALL be at least one other OBR in the message where OBR-4 (Universal Service Identifier) = OBR-50 (Parent Universal Service Identifier)</Description>
+					<Assertion>
+						<Plugin QualifiedClassName="gov.nist.healthcare.mu.lri.custom.NIST_019"/>
+					</Assertion>
+				</Constraint>
+			</ByID>
+			<ByID ID="SPECIMEN_LRI">
+				<Constraint ID="LRI-50" Target="1[1].1[1]">
+					<Description>The value of SPM-1 (Set ID - SPM) SHALL be valued sequentially starting the value '1' within a given segment group.</Description>
+					<Assertion>
+						<SetID Path="1[1].1[1]"/>
+					</Assertion>
+				</Constraint>
+			</ByID>
+			<ByID ID="OBSERVATION_LRI">
+				<Constraint ID="LRI-46" Target="1[1].1[1]">
+					<Description>The value of OBX-1 (Set ID - OBX) SHALL be valued sequentially starting the value '1' within a given segment group.</Description>
+					<Assertion>
+						<SetID Path="1[1].1[1]"/>
+					</Assertion>
+				</Constraint>
+			</ByID>
+			<ByName Name="ORDER_OBSERVATION">
+				<Constraint ID="LRI-23" Target="1[1].2[1]">
+					<Description>The value of ORC-2 (Placer Order Number) SHALL be identical to the value of OBR-2 (Placer Order Number) within the same Order_Observation Group instance.</Description>
+					<Assertion>
+						<FORALL>
+							<PathValue Path1="1[1].2[1].1[1]" Operator="EQ" Path2="2[1].2[1].1[1]"/>
+							<PathValue Path1="1[1].2[1].2[1]" Operator="EQ" Path2="2[1].2[1].2[1]"/>
+							<PathValue Path1="1[1].2[1].3[1]" Operator="EQ" Path2="2[1].2[1].3[1]"/>
+							<PathValue Path1="1[1].2[1].4[1]" Operator="EQ" Path2="2[1].2[1].4[1]"/>
+						</FORALL>
+					</Assertion>
+				</Constraint>
+				<Constraint ID="LRI-24" Target="1[1].3[1]">
+					<Description>The value of ORC-3 (Filler Order Number) SHALL be identical to the value of OBR-3 (Filler Order Number) within the same Order_Observation Group instance.</Description>
+					<Assertion>
+						<FORALL>
+							<PathValue Path1="1[1].3[1].1[1]" Operator="EQ" Path2="2[1].3[1].1[1]"/>
+							<PathValue Path1="1[1].3[1].2[1]" Operator="EQ" Path2="2[1].3[1].2[1]"/>
+							<PathValue Path1="1[1].3[1].3[1]" Operator="EQ" Path2="2[1].3[1].3[1]"/>
+							<PathValue Path1="1[1].3[1].4[1]" Operator="EQ" Path2="2[1].3[1].4[1]"/>
+						</FORALL>
+					</Assertion>
+				</Constraint>
+				<Constraint ID="LRI-25" Target="1[1].12[1]">
+					<Description>The value of ORC-12 (Ordering Provider) SHALL be identical to the value of OBR-16 (Ordering Provider) within the same Order_Observation Group instance.</Description>
+					<Assertion>
+						<FORALL>
+							<PathValue Path1="1[1].12[1].1[1]" Operator="EQ" Path2="2[1].16[1].1[1]"/>
+							<PathValue Path1="1[1].12[1].2[1].1[1]" Operator="EQ" Path2="2[1].16[1].2[1].1[1]"/>
+							<PathValue Path1="1[1].12[1].3[1]" Operator="EQ" Path2="2[1].16[1].3[1]"/>
+							<PathValue Path1="1[1].12[1].4[1]" Operator="EQ" Path2="2[1].16[1].4[1]"/>
+							<PathValue Path1="1[1].12[1].5[1]" Operator="EQ" Path2="2[1].16[1].5[1]"/>
+							<PathValue Path1="1[1].12[1].6[1]" Operator="EQ" Path2="2[1].16[1].6[1]"/>
+							<PathValue Path1="1[1].12[1].9[1].1[1]" Operator="EQ" Path2="2[1].16[1].9[1].1[1]"/>
+							<PathValue Path1="1[1].12[1].9[1].2[1]" Operator="EQ" Path2="2[1].16[1].9[1].2[1]"/>
+							<PathValue Path1="1[1].12[1].9[1].3[1]" Operator="EQ" Path2="2[1].16[1].9[1].3[1]"/>
+							<PathValue Path1="1[1].12[1].10[1]" Operator="EQ" Path2="2[1].16[1].10[1]"/>
+							<PathValue Path1="1[1].12[1].13[1]" Operator="EQ" Path2="2[1].16[1].13[1]"/>
+						</FORALL>
+					</Assertion>
+				</Constraint>
+				<Constraint ID="LRI-34" Target="2[1].1[1]">
+					<Description>The value of OBR-1 (Set ID - OBR) SHALL be valued sequentially starting with the value '1' across the Order_Observation Groups.</Description>
+					<Assertion>
+						<SetID Path="2[1].1[1]"/>
+					</Assertion>
+				</Constraint>
+				<Constraint ID="LRI-47" Target="6[1].1[1].3[1]">
+					<Description>If there are multiple OBX segments associated with the same OBR segment that have the same OBX-3 (Observation Identifier) values for (OBX-3.1 (Identifier) + OBX-3.3 (Name of Coding System)) or (OBX-3.4 (Alternate Identifier) + OBX-3.6 (Name of Alternate Coding System)), a combination of (OBX-3.1 + OBX3.3) or (OBX-3.4 + OBX-3.6) and OBX-4 SHALL create a unique identification under a single OBR.</Description>
+					<Assertion>
+						<Plugin QualifiedClassName="gov.nist.healthcare.mu.lri.custom.LRI_47"/>
+					</Assertion>
+				</Constraint>
+				<Constraint ID="LRI-53" Target="9[1].1[1].17[1]">
+					<Description>If one or more SPM segments are present for the same OBR, then the earliest SPM-17.1 (Range Start Date/Time) SHALL be equal to or before OBR-7 (Observation Date/Time) and OBR-7 (Observation Date/Time) SHALL be equal to or before the latest SPM-17.2 (Range End Date/Time).</Description>
+					<Assertion>
+						<Plugin QualifiedClassName="gov.nist.healthcare.mu.lri.custom.LRI_53"/>
+					</Assertion>
+				</Constraint>
+				<Constraint ID="LRI-54" Target="9[1].1[1].17[1]">
+					<Description>If one or more SPM segments are present for the same OBR and if OBR-8 (Observation End Date/Time) is present, OBR-8 (Observation End Date/Time) SHALL be equal to or before the latest SPM-17.2 (Range End Date/Time).</Description>
+					<Assertion>
+						<Plugin QualifiedClassName="gov.nist.healthcare.mu.lri.custom.LRI_54"/>
+					</Assertion>
+				</Constraint>
+			</ByName>
+			<ByID ID="ORDER_OBSERVATION_FRN">
+				<Constraint ID="LRI-26" Target="1[1].31[1]">
+					<Description>The value of ORC-31 (Parent Universal Service Identifier) SHALL be identical to the value of OBR-50 (Parent Universal Service Identifier).</Description>
+					<Assertion>
+						<FORALL>
+							<PathValue Path1="1[1].31[1].1[1]" Operator="EQ" Path2="2[1].50[1].1[1]"/>
+							<PathValue Path1="1[1].31[1].2[1]" Operator="EQ" Path2="2[1].50[1].2[1]"/>
+							<PathValue Path1="1[1].31[1].3[1]" Operator="EQ" Path2="2[1].50[1].3[1]"/>
+							<PathValue Path1="1[1].31[1].4[1]" Operator="EQ" Path2="2[1].50[1].4[1]"/>
+							<PathValue Path1="1[1].31[1].5[1]" Operator="EQ" Path2="2[1].50[1].5[1]"/>
+							<PathValue Path1="1[1].31[1].6[1]" Operator="EQ" Path2="2[1].50[1].6[1]"/>
+							<PathValue Path1="1[1].31[1].7[1]" Operator="EQ" Path2="2[1].50[1].7[1]"/>
+							<PathValue Path1="1[1].31[1].9[1]" Operator="EQ" Path2="2[1].50[1].9[1]"/>
+						</FORALL>
+					</Assertion>
+				</Constraint>
+				<Constraint ID="LRI-41" Target="2[1].50[1]">
+					<Description>The value of OBR-50 (Parent Universal Service Identifier) SHALL be identical to the value of ORC-31 (Parent Universal Service Identifier). </Description>
+					<Assertion>
+						<FORALL>
+							<PathValue Path1="2[1].50[1].1[1]" Operator="EQ" Path2="1[1].31[1].1[1]"/>
+							<PathValue Path1="2[1].50[1].2[1]" Operator="EQ" Path2="1[1].31[1].2[1]"/>
+							<PathValue Path1="2[1].50[1].3[1]" Operator="EQ" Path2="1[1].31[1].3[1]"/>
+							<PathValue Path1="2[1].50[1].4[1]" Operator="EQ" Path2="1[1].31[1].4[1]"/>
+							<PathValue Path1="2[1].50[1].5[1]" Operator="EQ" Path2="1[1].31[1].5[1]"/>
+							<PathValue Path1="2[1].50[1].6[1]" Operator="EQ" Path2="1[1].31[1].6[1]"/>
+							<PathValue Path1="2[1].50[1].7[1]" Operator="EQ" Path2="1[1].31[1].7[1]"/>
+							<PathValue Path1="2[1].50[1].9[1]" Operator="EQ" Path2="1[1].31[1].9[1]"/>
+						</FORALL>
+					</Assertion>
+				</Constraint>
+			</ByID>
+		</Group>
+		<Message>
+			<ByID ID="ORU_R01:LRI_GU_FRU">
+				<Constraint ID="LRI-10" Target="1[1].21[1]">
+					<Description>An occurrence of MSH-21 (Message Profile Identifier) SHALL be valued with '2.16.840.1.113883.9.195.3.1' (LRI_GU_FRU_Profile) or three occurrences SHALL be valued with '2.16.840.1.113883.9.16 (LRI_Common_Component), '2.16.840.1.113883.9.12' (LRI_GU_Component) and '2.16.840.1.113883.9.83' (LAB_FRU_Component) in any order.</Description>
+					<Assertion>
+						<OR>
+							<PlainText Path="1[1].21[*].3[1]" Text="2.16.840.1.113883.9.195.3.1" IgnoreCase="false" AtLeastOnce="true"/>
+							<FORALL>
+								<PlainText Path="1[1].21[*].3[1]" Text="2.16.840.1.113883.9.16" IgnoreCase="false" AtLeastOnce="true"/>
+								<PlainText Path="1[1].21[*].3[1]" Text="2.16.840.1.113883.9.12" IgnoreCase="false" AtLeastOnce="true"/>
+								<PlainText Path="1[1].21[*].3[1]" Text="2.16.840.1.113883.9.83" IgnoreCase="false" AtLeastOnce="true"/>
+							</FORALL>
+						</OR>
+					</Assertion>
+				</Constraint>
+				<Constraint ID="LRI-28" Target="3[1].2[1].1[1].3[1]">
+					<Description>The value of ORC-3 (Filler Order Number) SHALL NOT be valued identical to another instance of ORC-3 (Filler Order Number) in the same message excluding the Prior Result group(s).</Description>
+					<Assertion>
+						<Plugin QualifiedClassName="gov.nist.healthcare.mu.lri.custom.LRI_28"/>
+					</Assertion>
+				</Constraint>
+				<Constraint ID="LRI-40" Target="3[1].2[1].2[1].3[1]">
+					<Description>The value of OBR-3 (Filler Order Number) SHALL NOT be valued identical to another instance of OBR-3 (Filler Order Number) in the message.</Description>
+					<Assertion>
+						<Plugin QualifiedClassName="gov.nist.healthcare.mu.lri.custom.LRI_40"/>
+					</Assertion>
+				</Constraint>
+			</ByID>
+			<ByID ID="ORU_R01:LRI_GU_FRN">
+				<Constraint ID="LRI-56" Target="1[1].21[1]">
+					<Description>An occurrence of MSH-21 (Message Profile Identifier) SHALL be valued with '2.16.840.1.113883.9.195.3.2' (LRI_GU_FRN_Profile) or three occurrences SHALL be valued with '2.16.840.1.113883.9.16 (LRI_Common_Component), '2.16.840.1.113883.9.12' (LRI_GU_Component) and '2.16.840.1.113883.9.84' (LAB_FRN_Component) in any order.</Description>
+					<Assertion>
+						<OR>
+							<PlainText Path="1[1].21[*].3[1]" Text="2.16.840.1.113883.9.195.3.2" IgnoreCase="false" AtLeastOnce="true"/>
+							<FORALL>
+								<PlainText Path="1[1].21[*].3[1]" Text="2.16.840.1.113883.9.16" IgnoreCase="false" AtLeastOnce="true"/>
+								<PlainText Path="1[1].21[*].3[1]" Text="2.16.840.1.113883.9.12" IgnoreCase="false" AtLeastOnce="true"/>
+								<PlainText Path="1[1].21[*].3[1]" Text="2.16.840.1.113883.9.84" IgnoreCase="false" AtLeastOnce="true"/>
+							</FORALL>
+						</OR>
+					</Assertion>
+				</Constraint>
+			</ByID>
+			<ByID ID="ORU_R01:LRI_NG_FRU">
+				<Constraint ID="LRI-11" Target="1[1].21[1]">
+					<Description>An occurrence of MSH-21 (Message Profile Identifier) SHALL be valued with '2.16.840.1.113883.9.195.3.3' (LRI_NG_FRU_Profile) or three occurrences SHALL be valued with '2.16.840.1.113883.9.16' (LRI_Common_Component), '2.16.840.1.113883.9.13' (LRI_NG_Component) and '2.16.840.1.113883.9.83' (LAB_FRU_Component) in any order.</Description>
+					<Assertion>
+						<OR>
+							<PlainText Path="1[1].21[*].3[1]" Text="2.16.840.1.113883.9.195.3.3" IgnoreCase="false" AtLeastOnce="true"/>
+							<FORALL>
+								<PlainText Path="1[1].21[*].3[1]" Text="2.16.840.1.113883.9.16" IgnoreCase="false" AtLeastOnce="true"/>
+								<PlainText Path="1[1].21[*].3[1]" Text="2.16.840.1.113883.9.13" IgnoreCase="false" AtLeastOnce="true"/>
+								<PlainText Path="1[1].21[*].3[1]" Text="2.16.840.1.113883.9.83" IgnoreCase="false" AtLeastOnce="true"/>
+							</FORALL>
+						</OR>
+					</Assertion>
+				</Constraint>
+				<Constraint ID="LRI-28" Target="3[1].2[1].1[1].3[1]">
+					<Description>The value of ORC-3 (Filler Order Number) SHALL NOT be valued identical to another instance of ORC-3 (Filler Order Number) in the same message excluding the Prior Result group(s).</Description>
+					<Assertion>
+						<Plugin QualifiedClassName="gov.nist.healthcare.mu.lri.custom.LRI_28"/>
+					</Assertion>
+				</Constraint>
+				<Constraint ID="LRI-40" Target="3[1].2[1].2[1].3[1]">
+					<Description>The value of OBR-3 (Filler Order Number) SHALL NOT be valued identical to another instance of OBR-3 (Filler Order Number) in the message.</Description>
+					<Assertion>
+						<Plugin QualifiedClassName="gov.nist.healthcare.mu.lri.custom.LRI_40"/>
+					</Assertion>
+				</Constraint>
+			</ByID>
+			<ByID ID="ORU_R01:LRI_NG_FRN">
+				<Constraint ID="LRI-12" Target="1[1].21[1]">
+					<Description>An occurrence of MSH-21 (Message Profile Identifier) SHALL be valued with '2.16.840.1.113883.9.195.3.4' (LRI_NG_FRN_Profile) or three occurrences SHALL be valued with '2.16.840.1.113883.9.16' (LRI_Common_Component), '2.16.840.1.113883.9.13' (LRI_NG_Component) and '2.16.840.1.113883.9.84' (LAB_FRN_Component) in any order. </Description>
+					<Assertion>
+						<OR>
+							<PlainText Path="1[1].21[*].3[1]" Text="2.16.840.1.113883.9.195.3.4" IgnoreCase="false" AtLeastOnce="true"/>
+							<FORALL>
+								<PlainText Path="1[1].21[*].3[1]" Text="2.16.840.1.113883.9.16" IgnoreCase="false" AtLeastOnce="true"/>
+								<PlainText Path="1[1].21[*].3[1]" Text="2.16.840.1.113883.9.13" IgnoreCase="false" AtLeastOnce="true"/>
+								<PlainText Path="1[1].21[*].3[1]" Text="2.16.840.1.113883.9.84" IgnoreCase="false" AtLeastOnce="true"/>
+							</FORALL>
+						</OR>
+					</Assertion>
+				</Constraint>
+			</ByID>
+			<ByID ID="ACK:LRI_GU">
+				<Constraint ID="LRI-18" Target="1[1].21[1]">
+					<Description>MSH-21 (Message Profile Identifier) SHALL be valued with '2.16.840.1.113883.9.21' (GU_Acknowledgment_Profile) when acknowledging ORU GU Profiles where MSH-21 contains '2.16.840.1.113883.9.195.3.1' (LRI_GU_FRU_Profile), or '2.16.840.1.113883.9.195.3.2' (LRI_GU_FRN_Profile), or '2.16.840.1.113883.9.12' (LRI_GU_Component).</Description>
+					<Assertion>
+						<PlainText Path="1[1].21[*].3[1]" Text="2.16.840.1.113883.9.21" IgnoreCase="false" AtLeastOnce="true"/>
+					</Assertion>
+				</Constraint>
+			</ByID>
+			<ByID ID="ACK:LRI_NG">
+				<Constraint ID="LRI-19" Target="1[1].21[1]">
+					<Description>MSH-21 (Message Profile Identifier) SHALL be valued with '2.16.840.1.113883.9.25' (NG_Acknowledgment_Profile) when acknowledging LRI IG conformant results messages ORU NG Profiles where MSH-21 contains '2.16.840.1.113883.9.195.3.3' (LRI_NG_FRU_Profile), or '2.16.840.1.113883.9.195.3.4' (LRI_NG_FRN_Profile), or '2.16.840.1.113883.9.13' (LRI_NG_Component).</Description>
+					<Assertion>
+						<PlainText Path="1[1].21[*].3[1]" Text="2.16.840.1.113883.9.25" IgnoreCase="false" AtLeastOnce="true"/>
+					</Assertion>
+				</Constraint>
+			</ByID>
+		</Message>
+	</Constraints>
+</ConformanceContext>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseMetaData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="ACK_0.0_5.1-NG" date="11/02/2016" name="Smoke test ACK to AppACK" version="20161102">
+		<Description>Century Hospital's LIS transmits an accept acknowledgement message to Dr Radon's EHR-S which indicates the Application Acknowledgement message has been successfully received.</Description>
+		<PreCondition>Patient information is pre-loaded in the EHR-S.
+No other Pre-Condition.</PreCondition>
+		<PostCondition>No Post-Condition.</PostCondition>
+		<TestObjectives>Minimally populated message.
+Demonstrate ability to import and incorporate all required data elements for the accept acknowledgement test case:
+Minimally populated MSH Segment - Demonstrate the capability to support the minimally required data elements in the MSH segment.
+Minimally populated MSA Segment - Demonstrate the capability to support the minimally required data elements in the MSA segment.</TestObjectives>
+		<Notes>To support real-time dynamic testing, the Tester at their discretion, may selectively modify result acknowledgement data prior to importing the test message into the EHR technology.</Notes>
+		<Comments>This is the initial "smoke testing" to reveal simple failures of the acknowledgment message severe enough to preclude further testing.</Comments>
+	</TestCaseMetaData>

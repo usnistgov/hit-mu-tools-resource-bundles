@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ConformanceContext UUID="EHR-ACK_0.0_4.1-GU">
+    <MetaData Name="Conformance context for ACK_0.0_4.1-GU" OrgName="NIST" Version="2016-11-21" Date="2016-11-21"/>
+    <Predicates>
+        <Datatype/>
+        <Segment/>
+        <Group/>
+    </Predicates>
+    <Constraints>
+        <Message>
+            <ByID ID="ACK_APP:LRI_GU">
+                <Constraint ID="ACK_0.0_4.1-GU::1">
+                    <Description>Location 'MSH[1].4[1].2[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="1[1].4[1].2[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="ACK_0.0_4.1-GU::2">
+                    <Description>Location 'MSH[1].7[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="1[1].7[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="ACK_0.0_4.1-GU::3">
+                    <Description>Location 'MSH[1].10[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="1[1].10[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="ACK_0.0_4.1-GU::4">
+                    <Description>Location 'MSH[1].11[1].1[1]' is expected to be valued.</Description>
+                    <Assertion>
+                        <Presence Path="1[1].11[1].1[1]"/>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="ACK_0.0_4.1-GU::5">
+                    <Description>Location 'MSA[1].1[1]' is expected to be present and valued 'AA'</Description>
+                    <Assertion>
+                        <AND>
+                            <Presence Path="3[1].1[1]"/>
+                            <PlainText Path="3[1].1[1]" Text="AA" IgnoreCase="false"/>
+                        </AND>
+                    </Assertion>
+                </Constraint>
+                <Constraint ID="ACK_0.0_4.1-GU::6">
+                    <Description>Location 'MSA[1].2[1]' is expected to be present and valued 'LRI_0.0_1.1-GU'</Description>
+                    <Assertion>
+                        <AND>
+                            <Presence Path="3[1].2[1]"/>
+                            <PlainText Path="3[1].2[1]" Text="LRI_0.0_1.1-GU" IgnoreCase="false"/>
+                        </AND>
+                    </Assertion>
+                </Constraint>
+            </ByID>
+        </Message>
+    </Constraints>
+</ConformanceContext>
