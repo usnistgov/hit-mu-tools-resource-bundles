@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ConformanceContext xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" UUID="LRI_default" xsi:noNamespaceSchemaLocation="file:///D:/sourceforge/lri-nist/mu-nist/resource-bundle-generator/src/main/resources/schema/ConformanceContext.xsd">
-	<MetaData Name="LRI R2 conformance context" OrgName="NIST" Version="1.0" Date="11142016"/>
+	<MetaData Name="LRI R2 conformance context" OrgName="NIST" Version="1.0" Date="11282016"/>
 	<Predicates>
 		<Datatype>
 			<!-- CWE_CRE -->
@@ -60,16 +60,11 @@
 				</Predicate>
 				<!-- CWE_CRE.9 -->
 				<Predicate Target="9[1]" TrueUsage="R" FalseUsage="RE" ID="[LRI_CWE_CRE]9[1]">
-					<Description>If CWE_CRE.1 (Identifier) and CWE.4_CRE (alternate identifier) are not valued.</Description>
+					<Description>If CWE_CRE.1 (Identifier) is not valued.</Description>
 					<Condition>
-						<AND>
-							<NOT>
-								<Presence Path="1[1]"/>
-							</NOT>
-							<NOT>
-								<Presence Path="4[1]"/>
-							</NOT>
-						</AND>
+						<NOT>
+							<Presence Path="1[1]"/>
+						</NOT>
 					</Condition>
 				</Predicate>
 			</ByID>
@@ -123,7 +118,7 @@
 				</Predicate>
 				<!--CWE_CRE1.9 -->
 				<Predicate Target="9[1]" TrueUsage="R" FalseUsage="RE" ID="[LRI_CWE_CRE1]9[1]">
-					<Description>If CWE_CRE1.1 (Identifier) and CWE.4_CRE (alternate identifier) are not valued.</Description>
+					<Description>If CWE_CRE1.1 (Identifier) and CWE_CRE1.4 (alternate identifier) are not valued.</Description>
 					<Condition>
 						<AND>
 							<NOT>
@@ -175,20 +170,20 @@
 				</Predicate>
 				<!-- CWE_CR1.7 -->
 				<Predicate Target="7[1]" TrueUsage="RE" FalseUsage="O" ID="[LRI_CWE_CR1]7[1]">
-					<Description>If CWE_CR1.3 (Name of Coding System) is not an HL7 defined table or user defined.</Description>
-					<!-- If CWE_CR1.3 is NOT L, 99zzz or HL7nnnn, then must be RE. -->
+					<Description>If CWE_CR1.3 (Name of Coding System) is not an HL7 defined table.</Description>
+					<!-- If CWE_CR1.3 is HL7nnnn, then must be RE. -->
 					<Condition>
-						<FORALL>
-							<NOT>
+						<!-- <FORALL> -->
+						<!--	<NOT>
 								<PlainText Path="3[1]" Text="L" IgnoreCase="false"/>
-							</NOT>
-							<NOT>
+							</NOT>-->
+						<!--<NOT>
 								<Format Path="3[1]" Regex="99[A-Za-z0-9]{3}"/>
-							</NOT>
-							<NOT>
-								<Format Path="3[1]" Regex="HL7[0-9]{4}"/>
-							</NOT>
-						</FORALL>
+							</NOT>-->
+						<NOT>
+							<Format Path="3[1]" Regex="HL7[0-9]{4}"/>
+						</NOT>
+						<!--</FORALL>-->
 					</Condition>
 				</Predicate>
 			</ByID>
@@ -636,7 +631,7 @@
 				</Predicate>
 			</ByName>
 			<ByID ID="ORDER_OBSERVATION_FRN">
-				<!-- ORC-29 -->
+				<!-- ORC-31 -->
 				<Predicate Target="1[1].31[1]" TrueUsage="R" FalseUsage="X" ID="[ORDER_OBSERVATION_FRN]1[1].31[1]">
 					<Description>If OBR-29 (Parent) is valued.</Description>
 					<Condition>
@@ -647,6 +642,7 @@
 		</Group>
 		<Message>
 			<ByName Name="ACK">
+				<!-- ERR -->
 				<Predicate TrueUsage="R" FalseUsage="O" Target="4[1]" ID="[ACK]4[1]">
 					<Description>If MSA-1 (Message Acknowledgement) is not valued 'AA' or 'CA'.</Description>
 					<Condition>
@@ -685,6 +681,8 @@
 	LRI- 68: Any OBR-25 valued 'C' without any related OBX-11 valued 'C', 'A', 'B' or 'W' SHALL be a hard error.
 	LRI- 69: Any OBR-25 valued 'C' with any related OBX-11 valued 'I' or 'P' SHALL be a hard error.
 	LRI- 70: Any OBR-25 valued 'X' with any related OBX-11 value except for 'D', 'N' or 'X' SHALL be a hard error.
+	
+	LRI-71: SPM-2 shall not repeat with in a given order group.
 	-->
 		<Datatype>
 			<!-- EI_GU-->
@@ -779,6 +777,7 @@
 					</Assertion>
 				</Constraint>
 			</ByID>
+			<!-- LRI_TS_6 -->
 			<ByID ID="LRI_TS_6">
 				<Constraint ID="NIST-007" Target="1[1]">
 					<Description>TS_6 SHALL be precise to the minute</Description>
