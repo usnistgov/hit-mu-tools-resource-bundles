@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- edited with XMLSpy v2014 rel. 2 sp1 (http://www.altova.com) by Caroline Rosin (NIST) -->
 <ConformanceProfile ID="EIV2_IG_LTCF_R2_DSTU_R2_2015JAN" Type="Constrainable" HL7Version="2.5.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/Jungyubw/NIST_healthcare_hl7_v2_profile_schema/master/Schema/NIST%20Validation%20Schema/Profile.xsd">
-	<MetaData Name="eDOS integration profile" OrgName="NIST" Version="1.0.0" Date="09142016">
+	<MetaData Name="eDOS integration profile" OrgName="NIST" Version="1.0.0" Date="11222016">
 		<Authors>
 			<Author FirstName="Caroline" LastName="Rosin"/>
 		</Authors>
 	</MetaData>	
 	<Messages>
 		<!-- MFN M04 -->
-		<Message Description="MFN/MFK - Charge Description Master File Message" Event="M04" ID="MFN_M04_GU" StructID="MFN_M04" Type="MFN">
+		<Message Identifier="MFN_M04-GU" Name="Charge Description Master File (GU)" Description="MFN/MFK - Charge Description Master File Message" Event="M04" ID="MFN_M04_GU" StructID="MFN_M04" Type="MFN">
 			<Segment Ref="MSH_EDOS_GU" Usage="R" Min="1" Max="1"/>
 			<Segment Ref="SFT_HL7" Usage="O" Min="0" Max="*"/>
 			<Segment Ref="MFI_EDOS" Usage="R" Min="1" Max="1"/>
@@ -21,7 +21,7 @@
 				<Segment Ref="PRC_HL7" Usage="O" Min="0" Max="*"/>
 			</Group>
 		</Message>
-		<Message Description="MFN/MFK - Charge Description Master File Message" Event="M04" ID="MFN_M04_NG" StructID="MFN_M04" Type="MFN">
+		<Message Identifier="MFN_M04-NG" Name="Charge Description Master File (NG)" Description="MFN/MFK - Charge Description Master File Message" Event="M04" ID="MFN_M04_NG" StructID="MFN_M04" Type="MFN">
 			<Segment Ref="MSH_EDOS_NG" Usage="R" Min="1" Max="1"/>
 			<Segment Ref="SFT_HL7" Usage="O" Min="0" Max="*"/>
 			<Segment Ref="MFI_EDOS" Usage="R" Min="1" Max="1"/>
@@ -35,7 +35,7 @@
 			</Group>
 		</Message>
 		<!-- MFN M08 -->
-		<Message Description="MFN/MFK - Master File Notification - Test/Observation (Numeric)" Event="M08" ID="MFN_M08_GU" StructID="MFN_M08" Type="MFN">
+		<Message Identifier="MFN_M08-GU" Name="Master File Notification - Test/Observation (Numeric) (GU)" Description="MFN/MFK - Master File Notification - Test/Observation (Numeric)" Event="M08" ID="MFN_M08_GU" StructID="MFN_M08" Type="MFN">
 			<Segment Ref="MSH_EDOS_GU" Usage="R" Min="1" Max="1"/>
 			<Segment Ref="SFT_HL7" Usage="O" Min="0" Max="*"/>
 			<Segment Ref="MFI_EDOS" Usage="R" Min="1" Max="1"/>
@@ -49,7 +49,7 @@
 				<Segment Ref="OM4_EDOS" Usage="RE" Min="0" Max="*"/>
 			</Group>
 		</Message>
-		<Message Description="MFN/MFK - Master File Notification - Test/Observation (Numeric)" Event="M08" ID="MFN_M08_NG" StructID="MFN_M08" Type="MFN">
+		<Message Identifier="MFN_M08-NG" Name="Master File Notification - Test/Observation (Numeric) (NG)" Description="MFN/MFK - Master File Notification - Test/Observation (Numeric)" Event="M08" ID="MFN_M08_NG" StructID="MFN_M08" Type="MFN">
 			<Segment Ref="MSH_EDOS_NG" Usage="R" Min="1" Max="1"/>
 			<Segment Ref="SFT_HL7" Usage="O" Min="0" Max="*"/>
 			<Segment Ref="MFI_EDOS" Usage="R" Min="1" Max="1"/>
@@ -64,7 +64,7 @@
 			</Group>
 		</Message>
 		<!-- MFN M10 -->
-		<Message Description="MFN/MFK - Master File Notification - Test/Observation Batteries" Event="M10" ID="MFN_M10_GU" StructID="MFN_M10" Type="MFN">
+		<Message Identifier="MFN_M10-GU" Name="Master File Notification - Test/Observation Batteries (GU)" Description="MFN/MFK - Master File Notification - Test/Observation Batteries" Event="M10" ID="MFN_M10_GU" StructID="MFN_M10" Type="MFN">
 			<Segment Ref="MSH_EDOS_GU" Usage="R" Min="1" Max="1"/>
 			<Segment Ref="SFT_HL7" Usage="O" Min="0" Max="*"/>
 			<Segment Ref="MFI_EDOS" Usage="R" Min="1" Max="1"/>
@@ -78,7 +78,7 @@
 				</Group>
 			</Group>
 		</Message>
-		<Message Description="MFN/MFK - Master File Notification - Test/Observation Batteries" Event="M10" ID="MFN_M10_NG" StructID="MFN_M10" Type="MFN">
+		<Message Identifier="MFN_M10-NG" Name="Master File Notification - Test/Observation Batteries (NG)" Description="MFN/MFK - Master File Notification - Test/Observation Batteries" Event="M10" ID="MFN_M10_NG" StructID="MFN_M10" Type="MFN">
 			<Segment Ref="MSH_EDOS_NG" Usage="R" Min="1" Max="1"/>
 			<Segment Ref="SFT_HL7" Usage="O" Min="0" Max="*"/>
 			<Segment Ref="MFI_EDOS" Usage="R" Min="1" Max="1"/>
@@ -93,7 +93,7 @@
 			</Group>
 		</Message>
 		<!-- MFN M18 -->
-		<Message Description="MFN/MFK - Master File Notification - Test/Observation (Payer)" Event="M18" ID="MFN_M18_GU" StructID="MFN_M18" Type="MFN">
+		<Message Identifier="MFN_M18-GU" Name="Master File Notification - Test/Observation (Payer) (GU)" Description="MFN/MFK - Master File Notification - Test/Observation (Payer)" Event="M18" ID="MFN_M18_GU" StructID="MFN_M18" Type="MFN">
 			<Segment Ref="MSH_EDOS_GU" Usage="R" Min="1" Max="1"/>
 			<Segment Ref="SFT_HL7" Usage="O" Min="0" Max="*"/>
 			<Segment Ref="UAC_HL7" Usage="O" Min="0" Max="1"/>
@@ -109,7 +109,7 @@
 				</Group>
 			</Group>
 		</Message>
-		<Message Description="MFN/MFK - Master File Notification - Test/Observation (Payer)" Event="M18" ID="MFN_M18_NG" StructID="MFN_M18" Type="MFN">
+		<Message Identifier="MFN_M18-NG" Name="Master File Notification - Test/Observation (Payer) (NG)" Description="MFN/MFK - Master File Notification - Test/Observation (Payer)" Event="M18" ID="MFN_M18_NG" StructID="MFN_M18" Type="MFN">
 			<Segment Ref="MSH_EDOS_NG" Usage="R" Min="1" Max="1"/>
 			<Segment Ref="SFT_HL7" Usage="O" Min="0" Max="*"/>
 			<Segment Ref="UAC_HL7" Usage="O" Min="0" Max="1"/>
@@ -126,7 +126,7 @@
 			</Group>
 		</Message>
 		<!-- MFK -->
-		<Message Description="MFN/MFK - Charge Description Master File Message" Event="M04" ID="MFK_M04_GU" StructID="MFK_M01" Type="MFK">
+		<Message Identifier="MFK_M04-GU" Name="Application Acknowledgement (M04/GU)" Description="MFN/MFK - Charge Description Master File Message" Event="M04" ID="MFK_M04_GU" StructID="MFK_M01" Type="MFK">
 			<Segment Ref="MSH_MFK_GU" Usage="R" Min="1" Max="1"/>
 			<Segment Ref="SFT_HL7" Usage="O" Min="0" Max="*"/>
 			<Segment Ref="MSA_EDOS" Usage="R" Min="1" Max="1"/>
@@ -134,7 +134,7 @@
 			<Segment Ref="MFI_EDOS" Usage="R" Min="1" Max="1"/>
 			<Segment Ref="MFA_HL7" Usage="O" Min="0" Max="*"/>
 		</Message>
-		<Message Description="MFN/MFK - Charge Description Master File Message" Event="M04" ID="MFK_M04_NG" StructID="MFK_M01" Type="MFK">
+		<Message Identifier="MFK_M04-NG" Name="Application Acknowledgement (M04/NG)" Description="MFN/MFK - Charge Description Master File Message" Event="M04" ID="MFK_M04_NG" StructID="MFK_M01" Type="MFK">
 			<Segment Ref="MSH_MFK_NG" Usage="R" Min="1" Max="1"/>
 			<Segment Ref="SFT_HL7" Usage="O" Min="0" Max="*"/>
 			<Segment Ref="MSA_EDOS" Usage="R" Min="1" Max="1"/>
@@ -142,7 +142,7 @@
 			<Segment Ref="MFI_EDOS" Usage="R" Min="1" Max="1"/>
 			<Segment Ref="MFA_HL7" Usage="O" Min="0" Max="*"/>
 		</Message>
-		<Message Description="MFN/MFK - Master File Notification - Test/Observation (Numeric)" Event="M08" ID="MFK_M08_GU" StructID="MFK_M01" Type="MFK">
+		<Message Identifier="MFK_M08-GU" Name="Application Acknowledgement (M08/GU)" Description="MFN/MFK - Master File Notification - Test/Observation (Numeric)" Event="M08" ID="MFK_M08_GU" StructID="MFK_M01" Type="MFK">
 			<Segment Ref="MSH_MFK_GU" Usage="R" Min="1" Max="1"/>
 			<Segment Ref="SFT_HL7" Usage="O" Min="0" Max="*"/>
 			<Segment Ref="MSA_EDOS" Usage="R" Min="1" Max="1"/>
@@ -150,7 +150,7 @@
 			<Segment Ref="MFI_EDOS" Usage="R" Min="1" Max="1"/>
 			<Segment Ref="MFA_HL7" Usage="O" Min="0" Max="*"/>
 		</Message>
-		<Message Description="MFN/MFK - Master File Notification - Test/Observation (Numeric)" Event="M08" ID="MFK_M08_NG" StructID="MFK_M01" Type="MFK">
+		<Message Identifier="MFK_M08-NG" Name="Application Acknowledgement (M08/NG)" Description="MFN/MFK - Master File Notification - Test/Observation (Numeric)" Event="M08" ID="MFK_M08_NG" StructID="MFK_M01" Type="MFK">
 			<Segment Ref="MSH_MFK_NG" Usage="R" Min="1" Max="1"/>
 			<Segment Ref="SFT_HL7" Usage="O" Min="0" Max="*"/>
 			<Segment Ref="MSA_EDOS" Usage="R" Min="1" Max="1"/>
@@ -158,7 +158,7 @@
 			<Segment Ref="MFI_EDOS" Usage="R" Min="1" Max="1"/>
 			<Segment Ref="MFA_HL7" Usage="O" Min="0" Max="*"/>
 		</Message>
-		<Message Description="MFN/MFK - Master File Notification - Test/Observation Batteries" Event="M10" ID="MFK_M10_GU" StructID="MFK_M01" Type="MFK">
+		<Message Identifier="MFK_M10-GU" Name="Application Acknowledgement (M10/GU)" Description="MFN/MFK - Master File Notification - Test/Observation Batteries" Event="M10" ID="MFK_M10_GU" StructID="MFK_M01" Type="MFK">
 			<Segment Ref="MSH_MFK_GU" Usage="R" Min="1" Max="1"/>
 			<Segment Ref="SFT_HL7" Usage="O" Min="0" Max="*"/>
 			<Segment Ref="MSA_EDOS" Usage="R" Min="1" Max="1"/>
@@ -166,7 +166,7 @@
 			<Segment Ref="MFI_EDOS" Usage="R" Min="1" Max="1"/>
 			<Segment Ref="MFA_HL7" Usage="O" Min="0" Max="*"/>
 		</Message>
-		<Message Description="MFN/MFK - Master File Notification - Test/Observation Batteries" Event="M10" ID="MFK_M10_NG" StructID="MFK_M01" Type="MFK">
+		<Message Identifier="MFK_M10-NG" Name="Application Acknowledgement (M10/NG)" Description="MFN/MFK - Master File Notification - Test/Observation Batteries" Event="M10" ID="MFK_M10_NG" StructID="MFK_M01" Type="MFK">
 			<Segment Ref="MSH_MFK_NG" Usage="R" Min="1" Max="1"/>
 			<Segment Ref="SFT_HL7" Usage="O" Min="0" Max="*"/>
 			<Segment Ref="MSA_EDOS" Usage="R" Min="1" Max="1"/>
@@ -174,7 +174,7 @@
 			<Segment Ref="MFI_EDOS" Usage="R" Min="1" Max="1"/>
 			<Segment Ref="MFA_HL7" Usage="O" Min="0" Max="*"/>
 		</Message>
-		<Message Description="MFN/MFK - Master File Notification - Test/Observation (Payer)" Event="M18" ID="MFK_M18_GU" StructID="MFK_M01" Type="MFK">
+		<Message Identifier="MFK_M18-GU" Name="Application Acknowledgement (M18/GU)" Description="MFN/MFK - Master File Notification - Test/Observation (Payer)" Event="M18" ID="MFK_M18_GU" StructID="MFK_M01" Type="MFK">
 			<Segment Ref="MSH_MFK_GU" Usage="R" Min="1" Max="1"/>
 			<Segment Ref="SFT_HL7" Usage="O" Min="0" Max="*"/>
 			<Segment Ref="MSA_EDOS" Usage="R" Min="1" Max="1"/>
@@ -182,7 +182,7 @@
 			<Segment Ref="MFI_EDOS" Usage="R" Min="1" Max="1"/>
 			<Segment Ref="MFA_HL7" Usage="O" Min="0" Max="*"/>
 		</Message>
-		<Message Description="MFN/MFK - Master File Notification - Test/Observation (Payer)" Event="M18" ID="MFK_M18_NG" StructID="MFK_M01" Type="MFK">
+		<Message Identifier="MFK_M18-NG" Name="Application Acknowledgement (M18/NG)" Description="MFN/MFK - Master File Notification - Test/Observation (Payer)" Event="M18" ID="MFK_M18_NG" StructID="MFK_M01" Type="MFK">
 			<Segment Ref="MSH_MFK_NG" Usage="R" Min="1" Max="1"/>
 			<Segment Ref="SFT_HL7" Usage="O" Min="0" Max="*"/>
 			<Segment Ref="MSA_EDOS" Usage="R" Min="1" Max="1"/>
