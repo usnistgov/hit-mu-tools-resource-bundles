@@ -16,8 +16,9 @@
 		</snapshotRepository>
 	</distributionManagement>
 	<scm>
-		<connection>scm:svn:https://svn.code.sf.net/p/mu-nist/code/trunk/resource-bundle/lri-r2</connection>
-		<developerConnection>scm:svn:https://svn.code.sf.net/p/mu-nist/code/trunk/resource-bundle/lri-r2</developerConnection>
+		<connection>scm:git:https://github.com/usnistgov/hit-mu-tools-resource-bundles.git</connection>
+		<developerConnection>scm:git:https://github.com/usnistgov/hit-mu-tools-resource-bundles.git</developerConnection>
+
 	</scm>
 	<build>
 		<!-- we want to filter the maven.properties files to be able to have access to the project version -->
@@ -44,6 +45,11 @@
 		</resources>
 		<pluginManagement>
 			<plugins>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-release-plugin</artifactId>
+					<version>2.5.2</version>
+				</plugin>
 				<plugin>
 					<artifactId>maven-assembly-plugin</artifactId>
 					<version>2.4</version>
@@ -131,6 +137,7 @@
 				<executions>
 					<execution>
 						<!-- 						<phase>generate-resources</phase> --><goals>
+
 							<goal>exec</goal>
 						</goals>
 					</execution>
@@ -148,6 +155,21 @@
 			</plugin>
 			<!-- assembly plugin used to build zip files -->
 			<!--<plugin><artifactId>maven-assembly-plugin</artifactId><executions><!{1}** build the TestData zip file **{1}><execution><id>test-data</id><phase>package</phase><goals><goal>single</goal></goals><configuration><finalName>LRI</finalName><outputDirectory>src/main/resources/Documentation/LRI_Test_Plan</outputDirectory><attach>false</attach><descriptors><descriptor>src/assemble/test_data_assembly.xml</descriptor></descriptors></configuration></execution><execution><!{1}** build the ExampleMessages zip file **{1}><id>messages</id><phase>package</phase><goals><goal>single</goal></goals><configuration><finalName>LOI</finalName><outputDirectory>src/main/resources/Documentation/LRI_Test_Plan</outputDirectory><attach>false</attach><descriptors><descriptor>src/assemble/messages_assembly.xml</descriptor></descriptors></configuration></execution></executions></plugin>--><!-- jar plugin used to exclude some files from the result jar -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-jar-plugin</artifactId>
@@ -190,6 +212,14 @@
 					</excludes>
 					</configuration>
 			</plugin>
+
+
+
+
+
+
+
+
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-plugin</artifactId>
@@ -205,9 +235,15 @@
 		<dependency>
 			<groupId>gov.nist.healthcare.mu</groupId>
 			<artifactId>resource-bundle-generator</artifactId>
-			<version>0.0.4-SNAPSHOT</version>
+			<version>0.0.4</version>
 			<optional>true</optional>
 		</dependency>
+
+
+
+
+
+
 		<!-- junit -->
 		<dependency>
 			<groupId>junit</groupId>
@@ -218,7 +254,7 @@
 		<dependency>
 			<groupId>gov.nist.healthcare.mu.lri-r2</groupId>
 			<artifactId>lri-r2-message-validation</artifactId>
-			<version>0.0.5</version>
+			<version>1.0.0</version>
 			<scope>test</scope>
 		</dependency>
 		<dependency>
@@ -233,5 +269,6 @@
 		<skipTests>true</skipTests>
 		<maven.build.timestamp.format>yyyyMMddHHmm</maven.build.timestamp.format>
     	<ts>${maven.build.timestamp}</ts>
+    	<project.scm.id>git</project.scm.id>
 	</properties>
 </project>
