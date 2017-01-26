@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- edited with XMLSpy v2014 rel. 2 sp1 (http://www.altova.com) by Caroline Rosin (NIST) -->
 <!-- [Caroline] [TODO] do we want to add BindingStrength="U" to X & B usages ? -->
-<ConformanceProfile ID="51c61ea8-3424-49bd-b05c-b5c58c55c329" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/Jungyubw/NIST_healthcare_hl7_v2_profile_schema/master/Schema/Profile.xsd">
+<ConformanceProfile ID="51c61ea8-3424-49bd-b05c-b5c58c55c329" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/Jungyubw/NIST_healthcare_hl7_v2_profile_schema/master/Schema/NIST%20Validation%20Schema/Profile.xsd">
 	<!--   Added by Nicolas 9/11 -->
 	<MetaData Name="SS integration profile" OrgName="NIST" Version="1.0.0" Date="20160224"/>
 	<Messages>
@@ -1011,7 +1011,7 @@
 			<Field Name="Insured's Birth Place" Usage="O" Min="0" Max="1" Datatype="ST" MinLength="1" MaxLength="250" ItemNo="01899"/>
 			<Field Name="VIP Indicator" Usage="O" Min="0" Max="1" Datatype="IS" MinLength="1" MaxLength="2" Binding="HL70099" ItemNo="01852"/>
 		</Segment>
-		<Segment ID="IN1_SS" Name="IN1" Label="IN1_SS" Description="Insurance">
+		<!-- <Segment ID="IN1_SS" Name="IN1" Label="IN1_SS" Description="Insurance">
 			<Field Name="Set ID - IN1" Usage="R" Min="1" Max="1" Datatype="SI_SS" MinLength="1" MaxLength="4" ItemNo="00426"/>
 			<Field Name="Insurance Plan ID" Usage="R" Min="1" Max="1" Datatype="CE_SS" MinLength="1" MaxLength="478" Binding="HL70072" BindingStrength="R" BindingLocation="1" ItemNo="00368"/>
 			<Field Name="Insurance Company ID" Usage="R" Min="1" Max="*" Datatype="CX_SS" MinLength="1" MaxLength="250" ItemNo="00428"/>
@@ -1065,7 +1065,7 @@
 			<Field Name="Signature Code Date" Usage="X" Min="0" Max="1" Datatype="DT" MinLength="1" MaxLength="8" ItemNo="01855"/>
 			<Field Name="Insured's Birth Place" Usage="X" Min="0" Max="1" Datatype="ST" MinLength="1" MaxLength="250" ItemNo="01899"/>
 			<Field Name="VIP Indicator" Usage="X" Min="0" Max="1" Datatype="IS" MinLength="1" MaxLength="2" Binding="HL70099" ItemNo="01852"/>
-		</Segment>
+		</Segment> -->
 		<Segment ID="MSA_SS" Name="MSA" Label="MSA_SS" Description="Acknowledgement">
 			<Field Name="Acknowledgment Code" Usage="R" Min="1" Max="1" Datatype="ID_SS" Binding="PHVS_AcknowledgementCode_HL7_2x" MaxLength="2" MinLength="2"/>
 			<Field Name="Message Control ID" Usage="R" Min="1" Max="1" Datatype="ST_SS" MaxLength="20" MinLength="1"/>
@@ -1874,20 +1874,20 @@
 			<Component Name="Organization Identifier" Usage="O" Datatype="ST" MinLength="1" MaxLength="20"/>
 		</Datatype>
 		<Datatype ID="XPN" Name="XPN" Label="XPN" Description="Extended Person Name">
-			<Component Name="Family Name" Usage="X" Datatype="FN" MinLength="1" MaxLength="194"/>
-			<Component Name="Given Name" Usage="X" Datatype="ST" MinLength="1" MaxLength="30"/>
-			<Component Name="Second and Further Given Names or Initials Thereof" Usage="X" Datatype="ST" MinLength="1" MaxLength="30"/>
-			<Component Name="Suffix (e.g., JR or III)" Usage="X" Datatype="ST" MinLength="1" MaxLength="20"/>
-			<Component Name="Prefix (e.g., DR)" Usage="X" Datatype="ST" MinLength="1" MaxLength="20"/>
-			<Component Name="Degree (e.g., MD)" Usage="X" Datatype="IS" MinLength="1" MaxLength="6" Binding="HL70360"/>
-			<Component Name="Name Type Code" Usage="C" Datatype="ID" MinLength="1" MaxLength="1" Binding="HL70200" BindingStrength="R"/>
-			<Component Name="Name Representation Code" Usage="X" Datatype="ID" MinLength="1" MaxLength="1" Binding="HL70465"/>
-			<Component Name="Name Context" Usage="X" Datatype="CE" MinLength="1" MaxLength="483" BindingLocation="1:4" Binding="HL70448"/>
-			<Component Name="Name Validity Range" Usage="X" Datatype="DR_DTM" MinLength="1" MaxLength="53"/>
-			<Component Name="Name Assembly Order" Usage="X" Datatype="ID" MinLength="1" MaxLength="1" Binding="HL70444"/>
-			<Component Name="Effective Date" Usage="X" Datatype="TS" MinLength="1" MaxLength="26"/>
-			<Component Name="Expiration Date" Usage="X" Datatype="TS" MinLength="1" MaxLength="26"/>
-			<Component Name="Professional Suffix" Usage="X" Datatype="ST" MinLength="1" MaxLength="199"/>
+			<Component Name="Family Name" Usage="O" Datatype="FN" MinLength="1" MaxLength="194"/>
+			<Component Name="Given Name" Usage="O" Datatype="ST" MinLength="1" MaxLength="30"/>
+			<Component Name="Second and Further Given Names or Initials Thereof" Usage="O" Datatype="ST" MinLength="1" MaxLength="30"/>
+			<Component Name="Suffix (e.g., JR or III)" Usage="O" Datatype="ST" MinLength="1" MaxLength="20"/>
+			<Component Name="Prefix (e.g., DR)" Usage="O" Datatype="ST" MinLength="1" MaxLength="20"/>
+			<Component Name="Degree (e.g., MD)" Usage="B" Datatype="IS" MinLength="1" MaxLength="6" Binding="HL70360"/>
+			<Component Name="Name Type Code" Usage="O" Datatype="ID" MinLength="1" MaxLength="1" Binding="HL70200" BindingStrength="R"/>
+			<Component Name="Name Representation Code" Usage="O" Datatype="ID" MinLength="1" MaxLength="1" Binding="HL70465"/>
+			<Component Name="Name Context" Usage="O" Datatype="CE" MinLength="1" MaxLength="483" BindingLocation="1:4" Binding="HL70448"/>
+			<Component Name="Name Validity Range" Usage="B" Datatype="DR_DTM" MinLength="1" MaxLength="53"/>
+			<Component Name="Name Assembly Order" Usage="O" Datatype="ID" MinLength="1" MaxLength="1" Binding="HL70444"/>
+			<Component Name="Effective Date" Usage="O" Datatype="TS" MinLength="1" MaxLength="26"/>
+			<Component Name="Expiration Date" Usage="O" Datatype="TS" MinLength="1" MaxLength="26"/>
+			<Component Name="Professional Suffix" Usage="O" Datatype="ST" MinLength="1" MaxLength="199"/>
 		</Datatype>
 		<Datatype ID="XTN" Name="XTN" Label="XTN" Description="Extended Telecommunication Number">
 			<Component Name="Telephone Number" Usage="B" Datatype="ST" MinLength="1" MaxLength="199"/>
