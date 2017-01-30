@@ -25,7 +25,7 @@ public class ProfileSplitter {
 		try {
 			InputStream stream = ProfileSplitter.class.getClassLoader().getResourceAsStream("Global/Profiles/Profile.full");
 			String s;
-			File parentDirectory = new File("C:/Users/crouzier/workspace/mu/hit-ss-r2-resource-bundle/src/main/resources/Global/Profiles");
+			File parentDirectory = new File("src/main/resources/Global/Profiles");
 			
 			s = IOUtils.toString(stream, "UTF-8");
 			HashMap<String,String> map = ProfileExtractor.split(s);

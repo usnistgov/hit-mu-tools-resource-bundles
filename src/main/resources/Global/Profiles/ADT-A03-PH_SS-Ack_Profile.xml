@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <ConformanceProfile ID="52f1dab8-d538-4c7e-b71b-39619b94c3bf">
-    <MetaData Name="SS integration profile" OrgName="NIST" Version="1.0.0" Date="20160224"/>
+    <MetaData Name="SS integration profile" OrgName="NIST" Version="1.0.1" Date="20170126"/>
     <Messages>
         <Message ID="52f1dab8-d538-4c7e-b71b-39619b94c3bf" Type="ADT" Event="A03" StructID="ADT_A03" Description="ADT-A03-PH_SS-Ack">
             <Segment Ref="MSH_SS_A03_ACK" Usage="R" Min="1" Max="1"/>
@@ -984,20 +984,20 @@
             <Component Name="Organization Identifier" Usage="O" Datatype="ST" MinLength="1" MaxLength="20"/>
         </Datatype>
         <Datatype ID="XPN" Name="XPN" Label="XPN" Description="Extended Person Name">
-            <Component Name="Family Name" Usage="X" Datatype="FN" MinLength="1" MaxLength="194"/>
-            <Component Name="Given Name" Usage="X" Datatype="ST" MinLength="1" MaxLength="30"/>
-            <Component Name="Second and Further Given Names or Initials Thereof" Usage="X" Datatype="ST" MinLength="1" MaxLength="30"/>
-            <Component Name="Suffix (e.g., JR or III)" Usage="X" Datatype="ST" MinLength="1" MaxLength="20"/>
-            <Component Name="Prefix (e.g., DR)" Usage="X" Datatype="ST" MinLength="1" MaxLength="20"/>
-            <Component Name="Degree (e.g., MD)" Usage="X" Datatype="IS" MinLength="1" MaxLength="6" Binding="HL70360"/>
-            <Component Name="Name Type Code" Usage="C" Datatype="ID" MinLength="1" MaxLength="1" Binding="HL70200" BindingStrength="R"/>
-            <Component Name="Name Representation Code" Usage="X" Datatype="ID" MinLength="1" MaxLength="1" Binding="HL70465"/>
-            <Component Name="Name Context" Usage="X" Datatype="CE" MinLength="1" MaxLength="483" Binding="HL70448" BindingLocation="1:4"/>
-            <Component Name="Name Validity Range" Usage="X" Datatype="DR_DTM" MinLength="1" MaxLength="53"/>
-            <Component Name="Name Assembly Order" Usage="X" Datatype="ID" MinLength="1" MaxLength="1" Binding="HL70444"/>
-            <Component Name="Effective Date" Usage="X" Datatype="TS" MinLength="1" MaxLength="26"/>
-            <Component Name="Expiration Date" Usage="X" Datatype="TS" MinLength="1" MaxLength="26"/>
-            <Component Name="Professional Suffix" Usage="X" Datatype="ST" MinLength="1" MaxLength="199"/>
+            <Component Name="Family Name" Usage="O" Datatype="FN" MinLength="1" MaxLength="194"/>
+            <Component Name="Given Name" Usage="O" Datatype="ST" MinLength="1" MaxLength="30"/>
+            <Component Name="Second and Further Given Names or Initials Thereof" Usage="O" Datatype="ST" MinLength="1" MaxLength="30"/>
+            <Component Name="Suffix (e.g., JR or III)" Usage="O" Datatype="ST" MinLength="1" MaxLength="20"/>
+            <Component Name="Prefix (e.g., DR)" Usage="O" Datatype="ST" MinLength="1" MaxLength="20"/>
+            <Component Name="Degree (e.g., MD)" Usage="B" Datatype="IS" MinLength="1" MaxLength="6" Binding="HL70360"/>
+            <Component Name="Name Type Code" Usage="O" Datatype="ID" MinLength="1" MaxLength="1" Binding="HL70200" BindingStrength="R"/>
+            <Component Name="Name Representation Code" Usage="O" Datatype="ID" MinLength="1" MaxLength="1" Binding="HL70465"/>
+            <Component Name="Name Context" Usage="O" Datatype="CE" MinLength="1" MaxLength="483" Binding="HL70448" BindingLocation="1:4"/>
+            <Component Name="Name Validity Range" Usage="B" Datatype="DR_DTM" MinLength="1" MaxLength="53"/>
+            <Component Name="Name Assembly Order" Usage="O" Datatype="ID" MinLength="1" MaxLength="1" Binding="HL70444"/>
+            <Component Name="Effective Date" Usage="O" Datatype="TS" MinLength="1" MaxLength="26"/>
+            <Component Name="Expiration Date" Usage="O" Datatype="TS" MinLength="1" MaxLength="26"/>
+            <Component Name="Professional Suffix" Usage="O" Datatype="ST" MinLength="1" MaxLength="199"/>
         </Datatype>
         <Datatype ID="XTN" Name="XTN" Label="XTN" Description="Extended Telecommunication Number">
             <Component Name="Telephone Number" Usage="B" Datatype="ST" MinLength="1" MaxLength="199"/>
