@@ -26,6 +26,10 @@ public class LOIContext implements BundleContext {
     private static final String TESTCASE_DIR = "/Contextbased";
     private static final String TESTCASE_DIR_F = RESOURCE_DIR_F + TESTCASE_DIR;
 
+    private static final String CONTEXT_FREE_DIR = "/Contextfree";
+    private static final String CONTEXT_FREE_DIR_F = RESOURCE_DIR_F
+            + CONTEXT_FREE_DIR;
+
     // spreadsheet-processing related
     private static final String SPREADSHEET_DIR = "/OLD_Documentation/Test_Case_Spreadsheet";
     private static final String SPREADSHEET = SPREADSHEET_DIR
@@ -64,7 +68,7 @@ public class LOIContext implements BundleContext {
     private static final String PACKAGE_AGGREGATOR_XSLT = "/Global/xslt/package-aggregator.xslt";
     private static final String ER7_XSLT = "/Global/xslt/er7.xslt";
 
-    private static final String TESTDATASPEC_XSLT = "/Global/xslt/testdata-specification-2.xsl";
+    private static final String TESTDATASPEC_XSLT = "/Global/xslt/loi-tds.xsl";
 
     private static final Map<String, String> GROUP_STRUCTURE;
     private static final Map<String, String> GROUP_TRIGGER;
@@ -166,6 +170,10 @@ public class LOIContext implements BundleContext {
 
     public String getTESTCASE_DIR_F() {
         return TESTCASE_DIR_F;
+    }
+
+    public String getCONTEXT_FREE_DIR_F() {
+        return CONTEXT_FREE_DIR_F;
     }
 
     public String getSPREADSHEET() {

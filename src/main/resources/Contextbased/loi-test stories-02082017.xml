@@ -1,0 +1,454 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<TestCases xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<!--*********************Template******************-->
+	<TestCaseMetaData id="New test case names - message IDs in template" date="02/08/2017" name="Short Name">
+		<Description>Initial Story /Condition</Description>
+		<PreCondition>Pre-Condition</PreCondition>
+		<PostCondition>Post-Condition</PostCondition>
+		<TestObjectives>Nist tool Published test objective</TestObjectives>
+		<Notes>Notes to Tester</Notes>
+		<Comments>Comment</Comments>
+	</TestCaseMetaData>
+	<!--	**************************LOI-EHR Test Plan************************-->
+	<TestCaseMetaData id="LOI-EHR Test Plan" date="02/08/2017" name="EHR Test Plan">
+		<Description>
+		The EHR system creates and delivers an electronic lab order message to the LIS.. 
+		</Description>
+		<PreCondition>
+	Patient information is pre-loaded in the EHR-S.  NIST provided test order codes - LOINC, local or both - will be used in the order messages.
+		</PreCondition>
+		<PostCondition>
+		Where applicable in the test cases below, the test message information received by the EHR-S has been incorporated with the patient's record.
+		</PostCondition>
+		<TestObjectives>
+Demonstrate the capability of generating the specified LOI message or, where appropriate, importing and incorporating a LOI message.	
+		
+		</TestObjectives>
+		<Notes>
+	The test data for MSH.21 demonstrates the use of profile components; the system-under-test may alternatively use the post or pre-coordinated profile identifier(s).
+		</Notes>
+		<Comments>
+This is the EHR test plan. Where applicable, it involves display and incorporation verification at different levels (see juror document for details).
+		</Comments>
+	</TestCaseMetaData>
+	<!--	**************************GU***********************-->
+	<TestCaseMetaData id="GU" date="02/08/2017" name="GU">
+		
+		
+
+
+
+		<Comments>
+		This is the Globally Unique Profile Component (GU) test case group - all identifiers in these test cases use OIDs to identify the assigning authority.
+		</Comments>
+	</TestCaseMetaData>
+	<!--	**************************NG***********************-->
+	<TestCaseMetaData id="NG" date="02/08/2017" name="NG">
+		
+		
+
+
+
+		<Comments>
+		
+This is the Non-Globally Unique Profile Component (NG) test case group - identifiers in these test cases may use OIDs, other identifiers or just the namespaceID to identify the assigning authority.
+		</Comments>
+	</TestCaseMetaData>
+	<!--	**************************PT and INR************************-->
+	<TestCaseMetaData id="PT and INR" date="02/08/2017" name="PT and INR">
+		<Description>
+	The EHR-S creates and delivers a simple electronic lab order message to the LIS. The LIS receives the messages and creates and sends a system level and application level acknowledgement messages back to the EHR-S. The EHR-S receives the acknowledgement messages and sends a system level acknowledgement message back to the LIS in response to the application level acknowledgement message.
+		</Description>
+		<PreCondition>
+	Patient information is pre-loaded in the EHR-S.
+		</PreCondition>
+
+		<TestObjectives>
+Demonstrate capability to support minimally populated messages (single occurrences of all required ("R") elements).
+		</TestObjectives>
+
+		<Comments>
+		The initial test plan is a "smoke test" to reveal simple failures severe enough to preclude further testing.
+		</Comments>
+	</TestCaseMetaData>
+	<!--	**************************"LOI_0.0_1.1-GU"************************-->
+	<TestCaseMetaData id="LOI_0.0_1.1-GU" date="02/08/2017" name="PT">
+		<Description>Mr. Hector Ramos is a 81 year old Hispanic male who is on warfarin therapy. Mr Ramos presents to Good Health Clinic to see Dr. Radon for a routine check up. The doctor orders a Prothrombin Time (PT + INR) test using the clinic's EHR system and instructs Mr Ramos to go to the laboratory's patient service center to have the blood sample collected.
+</Description>
+		<PreCondition>No Pre Condition.</PreCondition>
+		<PostCondition>No Post Condition.</PostCondition>
+		<TestObjectives>Minimally populated message.
+Demonstrate ability to generate a base LOI OML message, populating all the all required data elements for the test case.
+Minimally populated MSH Segment - Demonstrate the capability to support minimally required data elements in the MSH segment.
+Minimally populated PID Segment - Demonstrate the capability to support minimally required data elements in the PID segment.
+Minimally populated ORC Segment - Demonstrate the capability to support minimally required data elements in the ORC segment.
+Minimally populated OBR Segment - Demonstrate the capability to support minimally required data elements in the OBR segment.
+Minimally populated DG1 Segment - Demonstrate the capability to support minimally required data elements in the DG1 segment.
+</TestObjectives>
+		<Notes>No Notes</Notes>
+		<Comments>This is the "smoke test" - testing basic functionality and support for all Required elements per the LOI IG to reveal simple failures severe enough to preclude further testing.</Comments>
+	</TestCaseMetaData>
+	<!--*****************ACK_0.0_1.1-GU******************************-->
+	<TestCaseMetaData id="ACK_0.0_1.1-GU" date="02/08/2017" name="OML Commit Accept">
+		<Description>Century Hospital's LIS transmits an 'Accept Acknowledgement' message to Dr Ernst's EHR-S which indicates the LOI order message has been successfully received.</Description>
+		<PreCondition>The OML message has been sent by the EHR-S</PreCondition>
+		<PostCondition>No Post Condition.</PostCondition>
+		<TestObjectives>
+Minimally populated message.
+Demonstrate ability to process all required data elements for the accept acknowledgement test case:
+Minimally populated MSH Segment - Demonstrate the capability to support the minimally required data elements in the MSH segment.
+Minimally populated MSA Segment - Demonstrate the capability to support the minimally required data elements in the MSA segment.
+</TestObjectives>
+		<Notes>No Notes.</Notes>
+		<Comments>This is the initial "smoke testing" to reveal simple failures of the acknowledgment message severe enough to preclude further testing.</Comments>
+	</TestCaseMetaData>
+	<!--*****************ORL_0.0_1.1-GU******************************-->
+	<TestCaseMetaData id="ORL_0.0_1.1-GU" date="02/08/2017" name="OML Application Ack Accept">
+		<Description>Century Hospital's LIS transmits an 'Application Acknowledgement' message to Dr Ernst's EHR-S which indicates the OML message has been accepted.</Description>
+		<PreCondition>The OML message has been sent by the EHR-S</PreCondition>
+		<PostCondition>No Post Condition.</PostCondition>
+		<TestObjectives>Minimally populated message.
+Demonstrate ability to process all required data elements for the application acknowledgement test case:
+Minimally populated MSH Segment - Demonstrate the capability to support the minimally required data elements in the MSH segment.
+Minimally populated MSA Segment - Demonstrate the capability to support the minimally required data elements in the MSA segment.
+Minimally populated PID Segment - Demonstrate the capability to support minimally required data elements in the PID segment.
+Minimally populated ORC Segment - Demonstrate the capability to support minimally required data elements in the ORC segment.
+Minimally populated OBR Segment - Demonstrate the capability to support minimally required data elements in the OBR segment.
+</TestObjectives>
+		<Notes>No Notes.</Notes>
+		<Comments>This is the initial "smoke testing" to reveal simple failures of the acknowledgment message severe enough to preclude further testing.</Comments>
+	</TestCaseMetaData>
+	<!--*****************ACK_0.0_2.1-GU******************************-->
+	<TestCaseMetaData id="ACK_0.0_2.1-GU" date="02/08/2017" name="ORL Commit Accept">
+		<Description>The EHR-S transmits an accept acknowledgement message to Century Hospital's LIS which indicates the Application Acknowledgement message has been successfully received..</Description>
+		<PreCondition>The ORL message has been received by the EHR-S</PreCondition>
+		<PostCondition>No Post Condition.</PostCondition>
+		<TestObjectives>
+		
+Minimally populated message.
+Demonstrate capability to support creating a positive accept acknowledgment Message in response to successful receipt of the ORL message:
+Minimally populated MSH Segment - Demonstrate the capability to support the minimally required data elements in the MSH segment.
+Minimally populated MSA Segment - Demonstrate the capability to support the minimally required data elements in the MSA segment.
+		
+		</TestObjectives>
+		<Notes>No Notes.</Notes>
+		<Comments>This is the initial "smoke testing" to reveal simple failures of the acknowledgment message severe enough to preclude further testing.</Comments>
+	</TestCaseMetaData>
+	<!--*******************Sed Rate********************-->
+	<TestCaseMetaData id="Sed Rate" date="02/08/2017" name="Sed Rate">
+		<Description>These test plans are designed to test the EHR-S capability to: a) create a maximally populated messages segments (all the R, RE, C(a/b) elements defined in the implementation guide), and  b) create a provider initiated request to cancel message (Scenario 3 in the Use Case section of the guide).</Description>
+
+
+
+	</TestCaseMetaData>
+	<!--*****************LOI_1.0_1.1-GU******************************-->
+	<TestCaseMetaData id="LOI_1.0_1.1-GU" date="02/08/2017" name="Sed_Rate_Initial">
+		<Description>Mr. William A. Jones is a 51 year old white male who presented with pain, swelling, and redness in several joints including his elbows, wrists, knees, and hips on March 31, 2011 at 2:05 PM PST. In order to screen for rheumatoid diseases, Dr. Nicholas Radon ordered an erythrocyte sedimentation rate (ESR or Sed Rate) blood test using the GoodHealth Clinic's EHR system, specifying that the laboratory's patient service center was to draw the blood specimen from the patient who was scheduled to arrive at 3:00 PM PST. Dr Radon also requests that the results be CC'd to Dr Pafford M. Hamlin Sr, a specialist to which he is referring Mr Jones as well as Dr. Daniel Davison who is Mr Jones' regular doctor.</Description>
+		<PreCondition>No Pre Condition.</PreCondition>
+		<PostCondition>No Post Condition.</PostCondition>
+		<TestObjectives>Demonstrate ability to create a message that contains all  the supported relevant (R,RE,C(a/b)) data elements for the test case, including multiple occurrences for the following segments:
+		
+MSH, 
+
+ORC, 
+
+OBR, 
+
+PRT,  
+
+and NTE. 
+
+ (Exceptions are ORC.3 - Filler Order Number, OBR.3 - Filler Order Number and OBR.8 - Observation End Date/Time  See test cases, 'LOI_7.0_2.1-GU' (GHP_Addon_fT4) and 'LOI_9.0_1.1-GU_PRN/PRU' (Creatinine_Clearance_Update) 
+ 
+ Demonstrate the capability to create a message containing the multiple occurances of Notes and Comments Segment (NTE) that following the Observation Request Segment (OBR).
+
+Demonstrate the capability to create a message containing multiple occurances of PRT segments for result copy request to multiple recipients.
+
+</TestObjectives>
+	</TestCaseMetaData>
+	<!--*****************LOI_1.0_2.1-GU_CP******************************-->
+	<TestCaseMetaData id="LOI_1.0_2.1-GU_CP" date="02/08/2017" name="Sed_Cancel_OP">
+		<Description>
+		Mr. William A. Jones is a 51 year old white male who presented with pain, swelling, and redness in several joints including his elbows, wrists, knees, and hips on March 31, 2011 at 2:05 PM PST. In order to screen for rheumatoid diseases, Dr. Nicholas Radon ordered an erythrocyte sedimentation rate (ESR or Sed Rate) blood test using the GoodHealth Clinic's EHR system, specifying that the laboratory's patient service center was to draw the blood specimen from the patient who was scheduled to arrive at 3:00 PM PST. Dr Radon also requests that the results be CC'd to Dr Pafford M. Hamlin Sr, a specialist to which he is referring Mr Jones as well as Dr. Daniel Davison who is Mr Jones' regular doctor.
+
+After further consultation with the patient,  Dr Radon decides to cancel this test and continue to monitor the patient for further signs and symptoms.   The cancellation request is ordered through Dr Radon's EHR and the patient is instructed that there is no need to have a blood sample taken at this time. 
+</Description>
+		<PreCondition>
+
+		
+'LOI_1.0_1.1-GU' (Sed_Rate_Initial) has been ordered.
+</PreCondition>
+		<PostCondition>No Post Condition.</PostCondition>
+		<TestObjectives>Demonstrate the capability to create a Cancel order OML message when the order is cancelled by the Ordering Provider
+</TestObjectives>
+		<Notes>Upon receiving a Laboratory Order Cancellation Request,  the laboratory staff determine they are able to cancel the order and either a Confirmation for Order Cancel Notification Message (ORL^O22^ORL_O22) or a LRI Result message may be sent by the Laboratory's Information System.  These transaction are not being tested a part of this test scenario.</Notes>
+		<Comments>
+This test case is evaluating the proper use of the OML^O21^OML_O21: Laboratory Order Message - Cancel Order</Comments>
+	</TestCaseMetaData>
+	<!--*******************CBC********************-->
+	<TestCaseMetaData id="CBC" date="02/08/2017" name="CBC">
+		<Description>This test plan is designed to test the EHR-S capability to: a) create typical orders and b) process a message for laboratory initiated cancellation of a previously placed order (Scenario 4 in the Use Case section of the guide).</Description>
+
+
+
+	</TestCaseMetaData>
+	<!--*****************LOI_2.0_1.1-GU******************************-->
+	<TestCaseMetaData id="LOI_2.0_1.1-GU" date="02/08/2017" name="CBC">
+		<Description>
+		
+
+Mr. William A. Jones is a 51 year old white male who presented with a history of high fever, fatigue, and shortness of breath on exertion. Dr. Nicholas Radon ordered a complete blood count (CBC) test to be performed. A blood specimen for the CBC test was collected from the patient and sent to the clinical lab at Century Hospital for processing. The order instructs that a copy of the test result report to be sent to Dr. Naddy Deluca.
+
+</Description>
+		<PreCondition>
+
+No Pre Condition.
+		</PreCondition>
+		<PostCondition>No Post Condition.</PostCondition>
+		<TestObjectives>Test for typically populated order for a CBC</TestObjectives>
+	</TestCaseMetaData>
+	<!--*****************LOI_2.0_2.1-GU_CL******************************-->
+	<TestCaseMetaData id="LOI_2.0_2.1-GU_CL" date="02/08/2017" name="CBC_Cancel_Lab">
+		<Description>
+		
+Mr. William A. Jones is a 51 year old white male who presented with a history of high fever, fatigue, and shortness of breath on exertion. Dr. Nicholas Radon ordered a complete blood count (CBC) test to be performed. A blood specimen for the CBC test was collected from the patient and sent to the clinical lab at Century Hospital for processing. The order instructs that a copy of the test result report to be sent to Dr. Naddy Deluca.
+
+Century Hospital's clinical laboratory receives the patient's specimen later the next day, but the specimen collection tubes are broken and the sample has leaked out. The laboratory staff enters this information into their system and an electronic Order Cancellation Notification message is sent to GoodHealth Clinic's EHR using the LOI message to cancel the test and state the reason for the cancellation.
+  
+</Description>
+		<PreCondition>
+
+		
+'LOI_2.0_1.1-GU' (CBC) has been ordered.
+</PreCondition>
+		<PostCondition>No Post Condition.</PostCondition>
+		<TestObjectives>
+		
+Demonstrate the capability of the EHR-S to process a valid Laboratory Cancel Order Message.
+</TestObjectives>
+		<Notes>No Notes</Notes>
+		<Comments>
+This test case is evaluating the proper use of the OML^O21^OML_O21: Laboratory Order Message - Cancel Order.
+</Comments>
+	</TestCaseMetaData>
+	<!--*******************Lipid Panel********************-->
+	<TestCaseMetaData id="Lipid Panel" date="02/08/2017" name="Lipid Panel">
+		<Description>These test plans are designed to test the EHR-S capability to create orders containing "Ask at Order Entry Questions (AOE).  Additionally a test plan is provided to test the EHR-S capability to create orders using the Financial Information (FI) profile.</Description>
+
+
+
+	</TestCaseMetaData>
+	<!--****************"LOI_3.0_1.1-GU"******************************-->
+	<TestCaseMetaData id="LOI_3.0_1.1-GU" date="02/08/2017" name="Lipid_Panel">
+		<Description>Mr. William A. Jones is a 51 year old white male who presented for a cardiology exam. Dr. Nicholas Radon ordered a lipid panel test to be performed to check for hyperlipidemia. A blood specimen for the lipid panel test was collected from the patient by Dr Radon's nurse and the order submitted electronically using the LOI message to the clinical lab at Century Hospital for processing. As part of the order submission, an ask-at-order-entry (AOE) question regarding the fasting status of the patient was answered "Yes" since Mr Jones had indeed fasted prior to the exam as previously instructed. Additionally, the order includes a request to send a copy of the test results to Dr. Pafford M. Hamlin, Sr.
+</Description>
+		<PreCondition>No Pre Condition.</PreCondition>
+		<PostCondition>No Post Condition.</PostCondition>
+		<TestObjectives>
+Demonstrate capability to support Ask at Order Entry (AOE) questions.
+</TestObjectives>
+	</TestCaseMetaData>
+	<!--****************"LOI_3.1_1.1-GU_FI"******************************-->
+	<TestCaseMetaData id="LOI_3.1_1.1-GU_FI" date="02/08/2017" name="Lipid_Panel Financial Profile">
+		<Description>Mr. William A. Jones is a 51 year old white male who presented for a cardiology exam. Dr. Nicholas Radon ordered a lipid panel test to be performed to check for hyperlipidemia. A blood specimen for the lipid panel test was collected from the patient by Dr Radon's nurse and the order submitted electronically using the LOI message to the clinical lab at Century Hospital for processing. As part of the order submission, an ask-at-order-entry (AOE) question regarding the fasting status of the patient was answered "Yes" since Mr Jones had indeed fasted prior to the exam as previously instructed. Additionally, the order includes a request to send a copy of the test results to Dr. Pafford M. Hamlin, Sr.
+</Description>
+		<PreCondition>No Pre Condition.</PreCondition>
+		<PostCondition>No Post Condition.</PostCondition>
+		<TestObjectives>
+Demonstrate capability to support Ask at Order Entry (AOE) questions.
+Demonstrate capability to support Financial Information Profile (FI) which includes all  the supported relevant (R,RE,C(a/b)) data elements for the test case for the following segments: PV1, IN1, and GT1.
+</TestObjectives>
+		<Comments>This is testing the EHR-S capability to support the Financial Information Profile. </Comments>
+	</TestCaseMetaData>
+	<!--*******************Culture_and_Suscep*******************-->
+	<TestCaseMetaData id="Culture_and_Suscep" date="02/08/2017" name="Culture_and_Suscep">
+		<Description>This test plan is designed to test the EHR-S capability to create typical order for a culture and sensitivity.</Description>
+
+
+
+	</TestCaseMetaData>
+	<!--****************"LOI_4.0_1.1-GU"******************************-->
+	<TestCaseMetaData id="LOI_4.0_1.1-GU" date="02/08/2017" name="Culture_and_Suscep">
+		<Description>Mr. William A. Jones is a 51 year old white male who presented with a complaint of bloody diarrhea over the last 3 days. Dr. Nicholas Radon ordered a stool culture test to be performed using the LOI message. Dr Radon also requested that the results be CC'd to Dr Pafford M. Hamlin. A stool specimen for the microbiology test was collected from the patient and sent to the clinical lab at Century Hospital for processing.
+</Description>
+		<PreCondition>No Pre Condition.</PreCondition>
+		<PostCondition>No Post Condition.</PostCondition>
+		<!--	make similiar changes in other cases-->
+		<TestObjectives>Test for typically populated order for culture and susceptibility</TestObjectives>
+
+	</TestCaseMetaData>
+	<!--*******************Reflex Hepatitis******************-->
+	<TestCaseMetaData id="Reflex_Hepatitis" date="02/08/2017" name="Reflex_Hepatitis">
+		<Description>These test plans are designed to test the EHR-S capability to create orders containing "Ask at Order Entry Questions (AOE)".  Additionally a test plan is provided to test the EHR-S capability to create orders using the Public Health (PH) profile.</Description>
+
+
+
+	</TestCaseMetaData>
+	<!--****************"LOI_5.0_1.1-GU"******************************-->
+	<TestCaseMetaData id="LOI_5.0_1.1-GU" date="02/08/2017" name="Reflex_Hepatitis">
+		<Description>A female prisoner from the local correctional facility is seen at the Good Health Clinic By Dr Radon. She has a history of substance abuse is tested for Hepatitis A, B and C.  Dr Radon orders a hepatitis panel from Century Hospital Clinical Laboratory. The order is transmitted electronically through the clinic's EHR system using the LOI message. The serum specimen is collected by the Good Health Clinic Staff and sent to the hospital lab for testing.</Description>
+		<PreCondition>No Pre Condition.</PreCondition>
+		<PostCondition>No Post Condition.</PostCondition>
+		<TestObjectives>Demonstrate the capability to support an organization as Guardian/Associated Party in the Next Of Kin Segment (NK1).
+Demonstrate capability to support Ask at Order Entry (AOE) questions.
+</TestObjectives>
+
+	</TestCaseMetaData>
+	<!--****************"LOI_5.1_1.1-GU-PH"******************************-->
+	<TestCaseMetaData id="LOI_5.1_1.1-GU-PH" date="02/08/2017" name="Reflex_Hepatitis PH">
+		<Description>A female prisoner from the local correctional facility is seen at the Good Health Clinic By Dr Radon. She has a history of substance abuse is tested for Hepatitis A, B and C.  Dr Radon orders a hepatitis panel from Century Hospital Clinical Laboratory. The order is transmitted electronically through the clinic's EHR system using the LOI message. The serum specimen is collected by the Good Health Clinic Staff and sent to the hospital lab for testing.</Description>
+		<PreCondition>No Pre Condition.</PreCondition>
+		<PostCondition>No Post Condition.</PostCondition>
+		<TestObjectives>Demonstrate the capability to support an organization as Guardian/Associated Party in the Next Of Kin Segment (NK1).
+Demonstrate capability to support Ask at Order Entry (AOE) questions.
+Demonstrate the capability to support all the required additional constraints ( including repeats ) for the optional public health profile.</TestObjectives>
+
+	</TestCaseMetaData>
+	<!--*******************Pap Smear********************-->
+	<TestCaseMetaData id="Pap_Smear" date="02/08/2017" name="Pap Smear">
+		<Description>This test plan is designed to test the system's capability to produce a typically populated order for a common cytology test.</Description>
+
+	</TestCaseMetaData>
+	<!--***************************************-->
+	<TestCaseMetaData id="LOI_6.0_1.1-GU" date="02/08/2017" name="Pap_Smear">
+		<Description>Mrs. Delores Lopez is a 30 year old hispanic female who presents to the Women's Clinic And Family Counseling Center for a routine gynecological examination. A pap smear sample is collected after confirming with Ms Lopez that her last menstrual period was two weeks ago.  A pap smear is ordered from Century Hospital's clinical lab through the Clinic's EHR and the specimen is sent to the lab for testing. 
+</Description>
+		<PreCondition>No Pre Condition</PreCondition>
+		<PostCondition>No Post Condition</PostCondition>
+		<TestObjectives>Demonstrate capability to support Ask at Order Entry (AOE) questions.</TestObjectives>
+	</TestCaseMetaData>
+	<!--***************************************-->
+	<TestCaseMetaData id="GHP_Header" date="02/08/2017" name="GHP">
+		<Description>This test plan is designed to test the system's capability to: a) produce a typically populated order for a two panels and a single test on a patient who is a minor with guardian information and b) produce a typically populated order for an add-on laboratory test (Scenario 2 in the Use Case section of the guide). </Description>
+
+	</TestCaseMetaData>
+	<!--***************************************-->
+	<TestCaseMetaData id="GHP_PRU_Header" date="02/08/2017" name="GHP PRU Profile">
+		<Description>This test plan section is designed to test the system's capability to produce a typically populated order using the PRU Profile.</Description>
+
+		<Notes>The system under test may choose either the PRU or the PRN section depedning upon their system cabability.</Notes>
+	</TestCaseMetaData>
+	<!--***************************************-->
+	<TestCaseMetaData id="LOI_7.0_1.1-GU_PRU" date="02/08/2017" name="GHP initial order - PRU">
+		<Description>Ms Hettie Nguyen is a 17 year old Asian-American female patient accompanied by her mother who presents to her pediatrician, Dr Ellen Yu for weakness, wt loss, and fatigue.    Dr Yu orders a Complete Metabolic Profile (CMP), a Comprehencive Blood Count ( CBC) and a TSH test from Century Hospital's clinical laboratory as part of her basic work up for her patient.  The laboratory tests are ordered through Dr Yu's EHR and the patient is instructed to visit the laboratory's patient service center the next day after fasting overnight.
+</Description>
+		<PreCondition>No Pre Condition</PreCondition>
+		<PostCondition>No Post Condition</PostCondition>
+		<TestObjectives>Demonstrate cability support the PRU Profiile to create unique identifiers in OBR-2 and ORC-2 (Placer Order Number) that do not require additional information such as OBR-4 (Universal Service Identifier) to identify the order.
+Demonstrate the capability to support an individual as Guardian/Associated Party in the Next Of Kin Segment (NK1).
+Demonstrate the capability to support Timing_Qty Group and Timing/Quantity Segment (TQ1).
+Demonstrate the capability to correctly populate TQ1 for future order.
+Maximally populated PID Segment - Demonstrate the capability of the EHR to support all supported data elements including repeating elements in the PID segment  (PID-29 and PID-30 are exceptions.  There are currently no test stories that support these elements).
+Maximally populated NK1 Segment - Demonstrate the capability of the EHR to support all supported data elements including repeating elements in the NK1 segment  (NK1-11 and NK1-13 are exceptions, NK1-13 is maximally populated in Test case LOI_5, NK1-11 is not tested) - tested to upper limit of cardinality.
+Maximally populated TQ1 Segment - Demonstrate the capability of the EHR to support all supported data elements including repeating elements in the TQ1 segment.
+</TestObjectives>
+	</TestCaseMetaData>
+	<!--***************************************-->
+	<TestCaseMetaData id="LOI_7.0_2.1-GU_PRU" date="02/08/2017" name="Confirmation of Add on order to GHP">
+		<Description>Ms Hettie Nguyen is a 17 year old Asian-American female patient accompanied by her mother who presents to her pediatrician, Dr Ellen Yu for weakness, wt loss, and fatigue.    Dr Yu orders a Complete Metabolic Profile (CMP), a Comprehencive Blood Count ( CBC) and a TSH test from Century Hospital's clinical laboratory as part of her basic work up for her patient.  The laboratory tests are ordered through Dr Yu's EHR and the patient is instructed to visit the laboratory's patient service center the next day after fasting overnight.
+
+The laboratory results are transmitted to Dr Yu's office the next day.  After reviewing the results and noting a borderline low TSH,  Dr Yu calls the lab to add a confirmatory Free T4 test to her earlier requisition.     She confims that this test can be performed on the same sample collected earlier that day.   Dr Yu's staff then confirms this order through the practice EHR-S by sending a confirmation to a verbal add-on order.</Description>
+		<PreCondition>No Pre Condition</PreCondition>
+		<PostCondition>No Post Condition</PostCondition>
+		<TestObjectives>Demonstrate capability to support sending a confirmatory order for use case of a oral order.
+Demonstrate the capability to support an individual as Guardian/Associated Party in the Next Of Kin Segment (NK1).
+Maximally populated ORC.3 fields - Demonstrate the capability of the EHR to support all supported data elements in  ORC.3 - Filler Order Number, ORC.15 - Order Effective Date/Time, ORC.16 - Order Control Code Reason.
+Maximally populated OBR.3 Filler Order Number field - Demonstrate the capability of the EHR to support all supported data elements in  OBR.3 - Filler Order Number.</TestObjectives>
+	</TestCaseMetaData>
+	<!--***************************************-->
+	<TestCaseMetaData id="GHP_PRN_Header" date="02/08/2017" name="GHP PRN Profile">
+		<Description>This test plan section is designed to test the system's capability to produce a typically populated order using the PRN Profile.</Description>
+
+		<Notes>The system under test may choose either the PRU or the PRN section depedning upon their system cabability.</Notes>
+	</TestCaseMetaData>
+	<!--***************************************-->
+	<TestCaseMetaData id="LOI_7.0_1.1-GU_PRN" date="02/08/2017" name="GHP initial order - PRU">
+		<Description>Ms Hettie Nguyen is a 17 year old Asian-American female patient accompanied by her mother who presents to her pediatrician, Dr Ellen Yu for weakness, wt loss, and fatigue.    Dr Yu orders a Complete Metabolic Profile (CMP), a Comprehencive Blood Count ( CBC) and a TSH test from Century Hospital's clinical laboratory as part of her basic work up for her patient.  The laboratory tests are ordered through Dr Yu's EHR and the patient is instructed to visit the laboratory's patient service center the next day after fasting overnight.
+</Description>
+		<PreCondition>No Pre Condition</PreCondition>
+		<PostCondition>No Post Condition</PostCondition>
+		<TestObjectives>Demonstrate cability support the PRN Profiile to create identifiers in OBR-2 and ORC-2 (Placer Order Number) that along with the OBR-4 (Universal Service Identifier) uniquely identify the order.  
+Demonstrate the capability to support an individual as Guardian/Associated Party in the Next Of Kin Segment (NK1).
+Demonstrate the capability to support Timing_Qty Group and Timing/Quantity Segment (TQ1).
+Demonstrate the capability to correctly populate TQ1 for future order.
+Maximally populated PID Segment - Demonstrate the capability of the EHR to support all supported data elements including repeating elements in the PID segment  (PID-29 and PID-30 are exceptions.  There are currently no test stories that support these elements).
+Maximally populated NK1 Segment - Demonstrate the capability of the EHR to support all supported data elements including repeating elements in the NK1 segment  (NK1-11 and NK1-13 are exceptions, NK1-13 is maximally populated in Test case LOI_5, NK1-11 is not tested) - tested to upper limit of cardinality.
+Maximally populated TQ1 Segment - Demonstrate the capability of the EHR to support all supported data elements including repeating elements in the TQ1 segment.
+</TestObjectives>
+	</TestCaseMetaData>
+	<!--***************************************-->
+	<TestCaseMetaData id="LOI_7.0_2.1-GU_PRN" date="02/08/2017" name="Confirmation of Add on order to GHP">
+		<Description>Ms Hettie Nguyen is a 17 year old Asian-American female patient accompanied by her mother who presents to her pediatrician, Dr Ellen Yu for weakness, wt loss, and fatigue.    Dr Yu orders a Complete Metabolic Profile (CMP), a Comprehencive Blood Count ( CBC) and a TSH test from Century Hospital's clinical laboratory as part of her basic work up for her patient.  The laboratory tests are ordered through Dr Yu's EHR and the patient is instructed to visit the laboratory's patient service center the next day after fasting overnight.
+
+The laboratory results are transmitted to Dr Yu's office the next day.  After reviewing the results and noting a borderline low TSH,  Dr Yu calls the lab to add a confirmatory Free T4 test to her earlier requisition.     She confims that this test can be performed on the same sample collected earlier that day.   Dr Yu's staff then confirms this order through the practice EHR-S by sending a confirmation to a verbal add-on order.</Description>
+		<PreCondition>No Pre Condition</PreCondition>
+		<PostCondition>No Post Condition</PostCondition>
+		<TestObjectives>Demonstrate capability to support sending a confirmatory order for use case of a oral order.
+Demonstrate the capability to support an individual as Guardian/Associated Party in the Next Of Kin Segment (NK1).
+Maximally populated ORC.3 fields - Demonstrate the capability of the EHR to support all supported data elements in  ORC.3 - Filler Order Number, ORC.15 - Order Effective Date/Time, ORC.16 - Order Control Code Reason.
+Maximally populated OBR.3 Filler Order Number field - Demonstrate the capability of the EHR to support all supported data elements in  OBR.3 - Filler Order Number.</TestObjectives>
+	</TestCaseMetaData>
+	<!--***************************************-->
+	<TestCaseMetaData id="Creatinine_Clearance_Header" date="02/08/2017" name="Creatinine Clearance">
+		<Description>This test plan is designed to test the system's capability to produce a typically populated order for a test that requires multiple specimen and "Ask at Order Entry Questions (AOEs)".</Description>
+
+	</TestCaseMetaData>
+		<!--***************************************-->
+	<TestCaseMetaData id="Creatinine_Clearance_PRU_Header" date="02/08/2017" name="Creatinine Clearance">
+		<Description>This test plan section is designed to test the system's capability to produce a typically populated order using the PRU Profile.</Description>
+
+	</TestCaseMetaData>
+		<!--***************************************-->
+	<TestCaseMetaData id="Creatinine_Clearance_PRN_Header" date="02/08/2017" name="Creatinine Clearance">
+		<Description>This test plan section is designed to test the system's capability to produce a typically populated order using the PRN Profile.</Description>
+
+	</TestCaseMetaData>
+	<!--***************************************-->
+	<TestCaseMetaData id="LOI_9.0_1.1-GU_PRU" date="02/08/2017" name="Creatinine_Clearance&#xA;">
+		<Description>Maria Hernandez, a 24 year old African-American, Hispanic patient, is seen by her obstetrician Dr. John Feller at the Los Angeles Clinic where a point of service pregnancy test confirmed that Maria is pregnant. Because Maria has chronic hypertension, along with  the regular early pregnancy workup, Dr. Feller requests that Maria collect her urine for a 24 hour period and then return to the clinic the next day, so Dr. Feller can collect the required serum sample in for a Creatinine Clearance lab test request, which he forwards to the to the clinical lab at Century Hospital.  He also orders a 24 hour urine protein test.</Description>
+		<PreCondition>No Pre Condition</PreCondition>
+		<PostCondition>No Post Condition</PostCondition>
+		<TestObjectives>Demonstrate capability to support Ask at Order Entry (AOE) questions.
+Maximally populated DG1 Segment - Demonstrate the capability of the EHR to support all supported data elements 
+Repeating DG1 Segment - Demonstrate the capability of the EHR to support repeating DG1 segments.
+Demonstrate the capability to support repeating Specimen Group and Segment (SPM).
+Maximally populated OBR.8 Observation End Date/Time field - Demonstrate the capability of the EHR to support all supported data elements in OBR.8 - Observation End Date/Time field.
+Maximally populated OBX Segment - Demonstrate the capability of the EHR to support all supported data elements including repeating elements in the OBX segment.
+Repeating OBX Segment - Demonstrate the capability of the EHR to support repeating OBX segments.
+Maximally populated SPM Segment - Demonstrate the capability of the EHR to support all supported in other test cases 'LOI_6_Pap_Smear' and 'LOI_3ed data elements including repeating elements in the SPM segment  (SPM-2.2 and SPM-4.9  are exceptions.  These elements are maximally populat_Lipid_Panel' respectively).
+Demonstrate capability to support reporting date range for specimen collection.</TestObjectives>
+	</TestCaseMetaData>
+	<!--***************************************-->
+	<TestCaseMetaData id="LOI_9.0_1.1-GU_PRN" date="02/08/2017" name="Creatinine_Clearance&#xA;">
+		<Description>Maria Hernandez, a 24 year old African-American, Hispanic patient, is seen by her obstetrician Dr. John Feller at the Los Angeles Clinic where a point of service pregnancy test confirmed that Maria is pregnant. Because Maria has chronic hypertension, along with  the regular early pregnancy workup, Dr. Feller requests that Maria collect her urine for a 24 hour period and then return to the clinic the next day, so Dr. Feller can collect the required serum sample in for a Creatinine Clearance lab test request, which he forwards to the to the clinical lab at Century Hospital.  He also orders a 24 hour urine protein test.</Description>
+		<PreCondition>No Pre Condition</PreCondition>
+		<PostCondition>No Post Condition</PostCondition>
+		<TestObjectives>Demonstrate capability to support Ask at Order Entry (AOE) questions.
+Maximally populated DG1 Segment - Demonstrate the capability of the EHR to support all supported data elements 
+Repeating DG1 Segment - Demonstrate the capability of the EHR to support repeating DG1 segments.
+Demonstrate the capability to support repeating Specimen Group and Segment (SPM).
+Maximally populated OBR.8 Observation End Date/Time field - Demonstrate the capability of the EHR to support all supported data elements in OBR.8 - Observation End Date/Time field.
+Maximally populated OBX Segment - Demonstrate the capability of the EHR to support all supported data elements including repeating elements in the OBX segment.
+Repeating OBX Segment - Demonstrate the capability of the EHR to support repeating OBX segments.
+Maximally populated SPM Segment - Demonstrate the capability of the EHR to support all supported in other test cases 'LOI_6_Pap_Smear' and 'LOI_3ed data elements including repeating elements in the SPM segment  (SPM-2.2 and SPM-4.9  are exceptions.  These elements are maximally populat_Lipid_Panel' respectively).
+Demonstrate capability to support reporting date range for specimen collection.</TestObjectives>
+	</TestCaseMetaData>	
+	<!--***************************************-->
+	<TestCaseMetaData id="Prostate_Biopsy_Header" date="02/08/2017" name="Prostate Biopsy Header">
+		<Description>This test plan is designed to test the system's capability to produce a minimally populated order for an anatomic pathology test with multiple specimens and "Ask at Order Entry Questions (AOEs)".</Description>
+
+	</TestCaseMetaData>
+	<!--***************************************-->
+	<TestCaseMetaData id="LOI_10.0_1.1-GU" date="02/08/2017" name="Prostate_biopsy (AP)">
+		<Description>Geronimo Alto, a 78 year old patient, is seen by Dr. Ramirez at the Los Angeles Clinic for a prostate biopsy, due to trouble urinating to rule out Prostate Cancer.  Dr. Ramirez collects 10 biopsy samples via a transrectal needle biopsy procedure, places them into their respective containers with 10% Formalin and sends them off immediately to the clinical lab at Century Hospital.</Description>
+		<PreCondition>No Pre Condition</PreCondition>
+		<PostCondition>No Post Condition</PostCondition>
+		<TestObjectives>Demonstrate the capability to support repeating Specimen Group and Segment (SPM).
+Minimally populated MSH Segment - Demonstrate the capability to support only minimally required data elements in the MSH segment.
+Minimally populated ORC Segment - Demonstrate the capability to support only minimally required data elements in the ORC segment.
+Minimally populated OBR Segment - Demonstrate the capability to support only minimally required data elements in the OBR segment.
+Minimally populated DG1 Segment - Demonstrate the capability to support only minimally required data elements in the DG1 segment.
+Minimally populated SPM Segment - Demonstrate the capability to support only minimally required data elements in the SPM segment.
+</TestObjectives>
+	</TestCaseMetaData>
+</TestCases>

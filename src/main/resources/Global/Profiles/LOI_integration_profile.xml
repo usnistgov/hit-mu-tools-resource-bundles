@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- edited with XMLSpy v2014 rel. 2 sp1 (http://www.altova.com) by Caroline Rosin (NIST) -->
 <ConformanceProfile ID="V251_IG_SIF_LABORDERS_DSTUR2_D1_2014SEP" Type="Constrainable" HL7Version="2.5.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/Jungyubw/NIST_healthcare_hl7_v2_profile_schema/master/Schema/NIST%20Validation%20Schema/Profile.xsd">
-	<MetaData Name="LOI integration profile" OrgName="NIST" Version="1.0" Date="02112016"/>
+	<MetaData Name="LOI integration profile" OrgName="NIST" Version="1.0" Date="11162016"/>
 	<Messages>
 		<!-- New and Append Order -->
 		<!-- GU -->
-		<Message Description="OML - Laboratory order" Event="O21" ID="OML_O21:LOI_GU" StructID="OML_O21" Type="OML">
+		<Message Description="OML - Laboratory order" Event="O21" ID="OML_O21:LOI_GU" StructID="OML_O21" Type="OML" Name="New and Append Order" Identifier="OML_O21-GU">
 			<Segment Max="1" Min="1" Ref="MSH_LOI_GU" Usage="R"/>
 			<!-- <Segment Max="1" Min="1" Ref="dummy" Usage="R"/> -->
 			<Segment Max="*" Min="0" Ref="SFT_HL7" Usage="O"/>
@@ -85,7 +85,7 @@
 				<Segment Max="1" Min="0" Ref="BLG_HL7" Usage="O"/>
 			</Group>
 		</Message>
-		<Message Description="OML - Laboratory order" Event="O21" ID="OML_O21:LOI_GU_PRU" StructID="OML_O21" Type="OML">
+		<Message Description="OML - Laboratory order" Event="O21" ID="OML_O21:LOI_GU_PRU" StructID="OML_O21" Type="OML" Name="New and Append Order" Identifier="OML_O21-GU_PRU">
 			<Segment Max="1" Min="1" Ref="MSH_LOI_GU" Usage="R"/>
 			<Segment Max="*" Min="0" Ref="SFT_HL7" Usage="O"/>
 			<Segment Max="*" Min="0" Ref="NTE_HL7" Usage="O"/>
@@ -164,7 +164,7 @@
 				<Segment Max="1" Min="0" Ref="BLG_HL7" Usage="O"/>
 			</Group>
 		</Message>
-		<Message Description="OML - Laboratory order" Event="O21" ID="OML_O21:LOI_GU_PRN" StructID="OML_O21" Type="OML">
+		<Message Description="OML - Laboratory order" Event="O21" ID="OML_O21:LOI_GU_PRN" StructID="OML_O21" Type="OML" Name="New and Append Order" Identifier="OML_O21-GU_PRN">
 			<Segment Max="1" Min="1" Ref="MSH_LOI_GU" Usage="R"/>
 			<Segment Max="*" Min="0" Ref="SFT_HL7" Usage="O"/>
 			<Segment Max="*" Min="0" Ref="NTE_HL7" Usage="O"/>
@@ -243,7 +243,7 @@
 				<Segment Max="1" Min="0" Ref="BLG_HL7" Usage="O"/>
 			</Group>
 		</Message>
-		<Message Description="OML - Laboratory order" Event="O21" ID="OML_O21:LOI_GU_FI" StructID="OML_O21" Type="OML">
+		<Message Description="OML - Laboratory order" Event="O21" ID="OML_O21:LOI_GU_FI" StructID="OML_O21" Type="OML" Name="New and Append Order" Identifier="OML_O21-GU_FI">
 			<Segment Max="1" Min="1" Ref="MSH_LOI_GU" Usage="R"/>
 			<Segment Max="*" Min="0" Ref="SFT_HL7" Usage="O"/>
 			<Segment Max="*" Min="0" Ref="NTE_HL7" Usage="X"/>
@@ -322,7 +322,7 @@
 				<Segment Max="1" Min="0" Ref="BLG_HL7" Usage="O"/>
 			</Group>
 		</Message>
-		<Message Description="OML - Laboratory order" Event="O21" ID="OML_O21:LOI_GU_PRN_FI" StructID="OML_O21" Type="OML">
+		<Message Description="OML - Laboratory order" Event="O21" ID="OML_O21:LOI_GU_PRN_FI" StructID="OML_O21" Type="OML" Name="New and Append Order" Identifier="OML_O21-GU_PRN_FI">
 			<Segment Max="1" Min="1" Ref="MSH_LOI_GU" Usage="R"/>
 			<Segment Max="*" Min="0" Ref="SFT_HL7" Usage="O"/>
 			<Segment Max="*" Min="0" Ref="NTE_HL7" Usage="X"/>
@@ -401,7 +401,7 @@
 				<Segment Max="1" Min="0" Ref="BLG_HL7" Usage="O"/>
 			</Group>
 		</Message>
-		<Message Description="OML - Laboratory order" Event="O21" ID="OML_O21:LOI_GU_PRU_FI" StructID="OML_O21" Type="OML">
+		<Message Description="OML - Laboratory order" Event="O21" ID="OML_O21:LOI_GU_PRU_FI" StructID="OML_O21" Type="OML" Name="New and Append Order" Identifier="OML_O21-GU_PRU_FI">
 			<Segment Max="1" Min="1" Ref="MSH_LOI_GU" Usage="R"/>
 			<Segment Max="*" Min="0" Ref="SFT_HL7" Usage="O"/>
 			<Segment Max="*" Min="0" Ref="NTE_HL7" Usage="X"/>
@@ -480,7 +480,7 @@
 				<Segment Max="1" Min="0" Ref="BLG_HL7" Usage="O"/>
 			</Group>
 		</Message>
-		<Message Description="OML - Laboratory order" Event="O21" ID="OML_O21:LOI_GU_PH" StructID="OML_O21" Type="OML">
+		<Message Description="OML - Laboratory order" Event="O21" ID="OML_O21:LOI_GU_PH" StructID="OML_O21" Type="OML" Name="New and Append Order" Identifier="OML_O21-GU_PH">
 			<Segment Max="1" Min="1" Ref="MSH_LOI_GU" Usage="R"/>
 			<Segment Max="*" Min="0" Ref="SFT_HL7" Usage="O"/>
 			<Segment Max="*" Min="0" Ref="NTE_HL7" Usage="X"/>
@@ -559,7 +559,7 @@
 				<Segment Max="1" Min="0" Ref="BLG_HL7" Usage="O"/>
 			</Group>
 		</Message>
-		<Message Description="OML - Laboratory order" Event="O21" ID="OML_O21:LOI_GU_PRN_PH" StructID="OML_O21" Type="OML">
+		<Message Description="OML - Laboratory order" Event="O21" ID="OML_O21:LOI_GU_PRN_PH" StructID="OML_O21" Type="OML" Name="New and Append Order" Identifier="OML_O21-GU_PRN_PH">
 			<Segment Max="1" Min="1" Ref="MSH_LOI_GU" Usage="R"/>
 			<Segment Max="*" Min="0" Ref="SFT_HL7" Usage="O"/>
 			<Segment Max="*" Min="0" Ref="NTE_HL7" Usage="X"/>
@@ -638,7 +638,7 @@
 				<Segment Max="1" Min="0" Ref="BLG_HL7" Usage="O"/>
 			</Group>
 		</Message>
-		<Message Description="OML - Laboratory order" Event="O21" ID="OML_O21:LOI_GU_PRU_PH" StructID="OML_O21" Type="OML">
+		<Message Description="OML - Laboratory order" Event="O21" ID="OML_O21:LOI_GU_PRU_PH" StructID="OML_O21" Type="OML" Name="New and Append Order" Identifier="OML_O21-GU_PRU_PH">
 			<Segment Max="1" Min="1" Ref="MSH_LOI_GU" Usage="R"/>
 			<Segment Max="*" Min="0" Ref="SFT_HL7" Usage="O"/>
 			<Segment Max="*" Min="0" Ref="NTE_HL7" Usage="X"/>
@@ -718,7 +718,7 @@
 			</Group>
 		</Message>
 		<!--NG -->
-		<Message Description="OML - Laboratory order" Event="O21" ID="OML_O21:LOI_NG" StructID="OML_O21" Type="OML">
+		<Message Description="OML - Laboratory order" Event="O21" ID="OML_O21:LOI_NG" StructID="OML_O21" Type="OML" Name="New and Append Order" Identifier="OML_O21-NG">
 			<Segment Max="1" Min="1" Ref="MSH_LOI_NG" Usage="R"/>
 			<Segment Max="*" Min="0" Ref="SFT_HL7" Usage="O"/>
 			<Segment Max="*" Min="0" Ref="NTE_HL7" Usage="O"/>
@@ -797,7 +797,7 @@
 				<Segment Max="1" Min="0" Ref="BLG_HL7" Usage="O"/>
 			</Group>
 		</Message>
-		<Message Description="OML - Laboratory order" Event="O21" ID="OML_O21:LOI_NG_PRU" StructID="OML_O21" Type="OML">
+		<Message Description="OML - Laboratory order" Event="O21" ID="OML_O21:LOI_NG_PRU" StructID="OML_O21" Type="OML" Name="New and Append Order" Identifier="OML_O21-NG_PRU">
 			<Segment Max="1" Min="1" Ref="MSH_LOI_NG" Usage="R"/>
 			<Segment Max="*" Min="0" Ref="SFT_HL7" Usage="O"/>
 			<Segment Max="*" Min="0" Ref="NTE_HL7" Usage="O"/>
@@ -876,7 +876,7 @@
 				<Segment Max="1" Min="0" Ref="BLG_HL7" Usage="O"/>
 			</Group>
 		</Message>
-		<Message Description="OML - Laboratory order" Event="O21" ID="OML_O21:LOI_NG_PRN" StructID="OML_O21" Type="OML">
+		<Message Description="OML - Laboratory order" Event="O21" ID="OML_O21:LOI_NG_PRN" StructID="OML_O21" Type="OML" Name="New and Append Order" Identifier="OML_O21-NG_PRN">
 			<Segment Max="1" Min="1" Ref="MSH_LOI_NG" Usage="R"/>
 			<Segment Max="*" Min="0" Ref="SFT_HL7" Usage="O"/>
 			<Segment Max="*" Min="0" Ref="NTE_HL7" Usage="O"/>
@@ -955,7 +955,7 @@
 				<Segment Max="1" Min="0" Ref="BLG_HL7" Usage="O"/>
 			</Group>
 		</Message>
-		<Message Description="OML - Laboratory order" Event="O21" ID="OML_O21:LOI_NG_PH" StructID="OML_O21" Type="OML">
+		<Message Description="OML - Laboratory order" Event="O21" ID="OML_O21:LOI_NG_PH" StructID="OML_O21" Type="OML" Name="New and Append Order" Identifier="OML_O21-NG_PH">
 			<Segment Max="1" Min="1" Ref="MSH_LOI_NG" Usage="R"/>
 			<Segment Max="*" Min="0" Ref="SFT_HL7" Usage="O"/>
 			<Segment Max="*" Min="0" Ref="NTE_HL7" Usage="X"/>
@@ -1034,7 +1034,7 @@
 				<Segment Max="1" Min="0" Ref="BLG_HL7" Usage="O"/>
 			</Group>
 		</Message>
-		<Message Description="OML - Laboratory order" Event="O21" ID="OML_O21:LOI_NG_PRU_PH" StructID="OML_O21" Type="OML">
+		<Message Description="OML - Laboratory order" Event="O21" ID="OML_O21:LOI_NG_PRU_PH" StructID="OML_O21" Type="OML" Name="New and Append Order" Identifier="OML_O21-NG_PRU_PH">
 			<Segment Max="1" Min="1" Ref="MSH_LOI_NG" Usage="R"/>
 			<Segment Max="*" Min="0" Ref="SFT_HL7" Usage="O"/>
 			<Segment Max="*" Min="0" Ref="NTE_HL7" Usage="X"/>
@@ -1113,7 +1113,7 @@
 				<Segment Max="1" Min="0" Ref="BLG_HL7" Usage="O"/>
 			</Group>
 		</Message>
-		<Message Description="OML - Laboratory order" Event="O21" ID="OML_O21:LOI_NG_PRN_PH" StructID="OML_O21" Type="OML">
+		<Message Description="OML - Laboratory order" Event="O21" ID="OML_O21:LOI_NG_PRN_PH" StructID="OML_O21" Type="OML" Name="New and Append Order" Identifier="OML_O21-NG_PRN_PH">
 			<Segment Max="1" Min="1" Ref="MSH_LOI_NG" Usage="R"/>
 			<Segment Max="*" Min="0" Ref="SFT_HL7" Usage="O"/>
 			<Segment Max="*" Min="0" Ref="NTE_HL7" Usage="X"/>
@@ -1192,7 +1192,7 @@
 				<Segment Max="1" Min="0" Ref="BLG_HL7" Usage="O"/>
 			</Group>
 		</Message>
-		<Message Description="OML - Laboratory order" Event="O21" ID="OML_O21:LOI_NG_FI" StructID="OML_O21" Type="OML">
+		<Message Description="OML - Laboratory order" Event="O21" ID="OML_O21:LOI_NG_FI" StructID="OML_O21" Type="OML" Name="New and Append Order" Identifier="OML_O21-NG_FI">
 			<Segment Max="1" Min="1" Ref="MSH_LOI_NG" Usage="R"/>
 			<Segment Max="*" Min="0" Ref="SFT_HL7" Usage="O"/>
 			<Segment Max="*" Min="0" Ref="NTE_HL7" Usage="X"/>
@@ -1210,7 +1210,7 @@
 					<Segment Max="1" Min="0" Ref="IN2_HL7" Usage="O"/>
 					<Segment Max="1" Min="0" Ref="IN3_HL7" Usage="O"/>
 				</Group>
-				<Segment Max="1" Min="0" Ref="GT1_LOI_NG" Usage="O"/>
+				<Segment Max="1" Min="0" Ref="GT1_LOI_NG" Usage="RE"/>
 				<Segment Max="*" Min="0" Ref="AL1_HL7" Usage="O"/>
 			</Group>
 			<Group Max="*" Min="1" Name="ORDER" ID="ORDER_LOI" Usage="R">
@@ -1271,7 +1271,7 @@
 				<Segment Max="1" Min="0" Ref="BLG_HL7" Usage="O"/>
 			</Group>
 		</Message>
-		<Message Description="OML - Laboratory order" Event="O21" ID="OML_O21:LOI_NG_PRU_FI" StructID="OML_O21" Type="OML">
+		<Message Description="OML - Laboratory order" Event="O21" ID="OML_O21:LOI_NG_PRU_FI" StructID="OML_O21" Type="OML" Name="New and Append Order" Identifier="OML_O21-NG_PRU_FI">
 			<Segment Max="1" Min="1" Ref="MSH_LOI_NG" Usage="R"/>
 			<Segment Max="*" Min="0" Ref="SFT_HL7" Usage="O"/>
 			<Segment Max="*" Min="0" Ref="NTE_HL7" Usage="X"/>
@@ -1289,7 +1289,7 @@
 					<Segment Max="1" Min="0" Ref="IN2_HL7" Usage="O"/>
 					<Segment Max="1" Min="0" Ref="IN3_HL7" Usage="O"/>
 				</Group>
-				<Segment Max="1" Min="0" Ref="GT1_LOI_NG" Usage="O"/>
+				<Segment Max="1" Min="0" Ref="GT1_LOI_NG" Usage="RE"/>
 				<Segment Max="*" Min="0" Ref="AL1_HL7" Usage="O"/>
 			</Group>
 			<Group Max="*" Min="1" Name="ORDER" ID="ORDER_LOI" Usage="R">
@@ -1350,7 +1350,7 @@
 				<Segment Max="1" Min="0" Ref="BLG_HL7" Usage="O"/>
 			</Group>
 		</Message>
-		<Message Description="OML - Laboratory order" Event="O21" ID="OML_O21:LOI_NG_PRN_FI" StructID="OML_O21" Type="OML">
+		<Message Description="OML - Laboratory order" Event="O21" ID="OML_O21:LOI_NG_PRN_FI" StructID="OML_O21" Type="OML" Name="New and Append Order" Identifier="OML_O21-NG_PRN_FI">
 			<Segment Max="1" Min="1" Ref="MSH_LOI_NG" Usage="R"/>
 			<Segment Max="*" Min="0" Ref="SFT_HL7" Usage="O"/>
 			<Segment Max="*" Min="0" Ref="NTE_HL7" Usage="X"/>
@@ -1368,7 +1368,7 @@
 					<Segment Max="1" Min="0" Ref="IN2_HL7" Usage="O"/>
 					<Segment Max="1" Min="0" Ref="IN3_HL7" Usage="O"/>
 				</Group>
-				<Segment Max="1" Min="0" Ref="GT1_LOI_NG" Usage="O"/>
+				<Segment Max="1" Min="0" Ref="GT1_LOI_NG" Usage="RE"/>
 				<Segment Max="*" Min="0" Ref="AL1_HL7" Usage="O"/>
 			</Group>
 			<Group Max="*" Min="1" Name="ORDER" ID="ORDER_LOI" Usage="R">
@@ -1431,7 +1431,7 @@
 		</Message>
 		<!-- Cancel Order -->
 		<!-- GU -->
-		<Message Description="OML - Laboratory order" Event="O21" ID="OML_O21:LOI_GU_C" StructID="OML_O21" Type="OML">
+		<Message Description="OML - Laboratory order" Event="O21" ID="OML_O21:LOI_GU_C" StructID="OML_O21" Type="OML" Name="Cancel Order" Identifier="OML_O21-CANCEL-GU">
 			<Segment Max="1" Min="1" Ref="MSH_LOI_GU" Usage="R"/>
 			<Segment Max="*" Min="0" Ref="SFT_HL7" Usage="O"/>
 			<Segment Max="*" Min="0" Ref="NTE_HL7" Usage="O"/>
@@ -1507,7 +1507,7 @@
 				<Segment Max="1" Min="0" Ref="BLG_HL7" Usage="C"/>
 			</Group>
 		</Message>
-		<Message Description="OML - Laboratory order" Event="O21" ID="OML_O21:LOI_GU_PRN_C" StructID="OML_O21" Type="OML">
+		<Message Description="OML - Laboratory order" Event="O21" ID="OML_O21:LOI_GU_PRN_C" StructID="OML_O21" Type="OML" Name="Cancel Order" Identifier="OML_O21-CANCEL-GU_PRN">
 			<Segment Max="1" Min="1" Ref="MSH_LOI_GU" Usage="R"/>
 			<Segment Max="*" Min="0" Ref="SFT_HL7" Usage="O"/>
 			<Segment Max="*" Min="0" Ref="NTE_HL7" Usage="O"/>
@@ -1583,7 +1583,7 @@
 				<Segment Max="1" Min="0" Ref="BLG_HL7" Usage="C"/>
 			</Group>
 		</Message>
-		<Message Description="OML - Laboratory order" Event="O21" ID="OML_O21:LOI_GU_PRU_C" StructID="OML_O21" Type="OML">
+		<Message Description="OML - Laboratory order" Event="O21" ID="OML_O21:LOI_GU_PRU_C" StructID="OML_O21" Type="OML" Name="Cancel Order" Identifier="OML_O21-CANCEL-GU_PRU">
 			<Segment Max="1" Min="1" Ref="MSH_LOI_GU" Usage="R"/>
 			<Segment Max="*" Min="0" Ref="SFT_HL7" Usage="O"/>
 			<Segment Max="*" Min="0" Ref="NTE_HL7" Usage="O"/>
@@ -1660,7 +1660,7 @@
 			</Group>
 		</Message>
 		<!-- NG -->
-		<Message Description="OML - Laboratory order" Event="O21" ID="OML_O21:LOI_NG_C" StructID="OML_O21" Type="OML">
+		<Message Description="OML - Laboratory order" Event="O21" ID="OML_O21:LOI_NG_C" StructID="OML_O21" Type="OML" Name="Cancel Order" Identifier="OML_O21-CANCEL-NG">
 			<Segment Max="1" Min="1" Ref="MSH_LOI_NG" Usage="R"/>
 			<Segment Max="*" Min="0" Ref="SFT_HL7" Usage="O"/>
 			<Segment Max="*" Min="0" Ref="NTE_HL7" Usage="O"/>
@@ -1736,7 +1736,7 @@
 				<Segment Max="1" Min="0" Ref="BLG_HL7" Usage="C"/>
 			</Group>
 		</Message>
-		<Message Description="OML - Laboratory order" Event="O21" ID="OML_O21:LOI_NG_PRU_C" StructID="OML_O21" Type="OML">
+		<Message Description="OML - Laboratory order" Event="O21" ID="OML_O21:LOI_NG_PRU_C" StructID="OML_O21" Type="OML" Name="Cancel Order" Identifier="OML_O21-CANCEL-NG_PRU">
 			<Segment Max="1" Min="1" Ref="MSH_LOI_NG" Usage="R"/>
 			<Segment Max="*" Min="0" Ref="SFT_HL7" Usage="O"/>
 			<Segment Max="*" Min="0" Ref="NTE_HL7" Usage="O"/>
@@ -1812,7 +1812,7 @@
 				<Segment Max="1" Min="0" Ref="BLG_HL7" Usage="C"/>
 			</Group>
 		</Message>
-		<Message Description="OML - Laboratory order" Event="O21" ID="OML_O21:LOI_NG_PRN_C" StructID="OML_O21" Type="OML">
+		<Message Description="OML - Laboratory order" Event="O21" ID="OML_O21:LOI_NG_PRN_C" StructID="OML_O21" Type="OML" Name="Cancel Order" Identifier="OML_O21-CANCEL-NG_PRN">
 			<Segment Max="1" Min="1" Ref="MSH_LOI_NG" Usage="R"/>
 			<Segment Max="*" Min="0" Ref="SFT_HL7" Usage="O"/>
 			<Segment Max="*" Min="0" Ref="NTE_HL7" Usage="O"/>
@@ -1890,7 +1890,7 @@
 		</Message>
 		<!-- Application Ack ORL^O22 -->
 		<!-- GU -->
-		<Message Description="Laboratory Order Message - Application Level Acknowledgement" Event="O22" ID="ORL_O22:LOI_GU" StructID="ORL_O22" Type="ORL">
+		<Message Description="Laboratory Order Message - Application Level Acknowledgement" Event="O22" ID="ORL_O22:LOI_GU" StructID="ORL_O22" Type="ORL" Name="Application Level Acknowledgement" Identifier="ORL_O22-GU">
 			<Segment Ref="MSH_ORL_GU" Usage="R" Min="1" Max="1"/>
 			<Segment Ref="MSA_LOI" Usage="R" Min="1" Max="1"/>
 			<Segment Ref="ERR_LOI" Usage="C" Min="0" Max="*"/>
@@ -1943,7 +1943,7 @@
 			</Group>
 		</Message> -->
 		<!-- NG -->
-		<Message Description="Laboratory Order Message - Application Level Acknowledgement" Event="O22" ID="ORL_O22:LOI_NG" StructID="ORL_O22" Type="ORL">
+		<Message Description="Laboratory Order Message - Application Level Acknowledgement" Event="O22" ID="ORL_O22:LOI_NG" StructID="ORL_O22" Type="ORL" Name="Application Level Acknowledgement" Identifier="ORL_O22-NG">
 			<Segment Ref="MSH_ORL_NG" Usage="R" Min="1" Max="1"/>
 			<Segment Ref="MSA_LOI" Usage="R" Min="1" Max="1"/>
 			<Segment Ref="ERR_LOI" Usage="C" Min="0" Max="*"/>
@@ -1997,29 +1997,29 @@
 		</Message> -->
 		<!-- System Ack : ACK^O21 -->
 		<!-- GU -->
-		<Message Description="Laboratory Order Message - Application Level Acknowledgement" Event="O21" ID="ACK_O21:LOI_GU" StructID="ACK" Type="ACK">
+		<Message Description="Laboratory Order Message – Access Acknowledgement" Event="O21" ID="ACK_O21:LOI_GU" StructID="ACK" Type="ACK" Name="Access Acknowledgement" Identifier="ACK_O21-GU">
 			<Segment Ref="MSH_ACK_GU" Usage="R" Min="1" Max="1"/>
 			<Segment Ref="SFT_HL7" Usage="O" Min="0" Max="*"/>
 			<Segment Ref="MSA_LOI" Usage="R" Min="1" Max="1"/>
 			<Segment Ref="ERR_LOI" Usage="C" Min="0" Max="*"/>
 		</Message>
 		<!-- NG -->
-		<Message Description="Laboratory Order Message - Application Level Acknowledgement" Event="O21" ID="ACK_O21:LOI_NG" StructID="ACK" Type="ACK">
+		<Message Description="Laboratory Order Message – Access Acknowledgement" Event="O21" ID="ACK_O21:LOI_NG" StructID="ACK" Type="ACK" Name="Access Acknowledgement" Identifier="ACK_O21-NG">
 			<Segment Ref="MSH_ACK_NG" Usage="R" Min="1" Max="1"/>
 			<Segment Ref="SFT_HL7" Usage="O" Min="0" Max="*"/>
 			<Segment Ref="MSA_LOI" Usage="R" Min="1" Max="1"/>
 			<Segment Ref="ERR_LOI" Usage="C" Min="0" Max="*"/>
 		</Message>
 		<!-- System Ack : ACK^O22 -->
-				<!-- GU -->
-		<Message Description="Laboratory Order Message - Application Level Acknowledgement" Event="O21" ID="ACK_O22:LOI_GU" StructID="ACK" Type="ACK">
+		<!-- GU -->
+		<Message Description="Laboratory Order Message – Access Acknowledgement" Event="O22" ID="ACK_O22:LOI_GU" StructID="ACK" Type="ACK" Name="Access Acknowledgement" Identifier="ACK_O22-GU">
 			<Segment Ref="MSH_ACK_GU" Usage="R" Min="1" Max="1"/>
 			<Segment Ref="SFT_HL7" Usage="O" Min="0" Max="*"/>
 			<Segment Ref="MSA_LOI" Usage="R" Min="1" Max="1"/>
 			<Segment Ref="ERR_LOI" Usage="C" Min="0" Max="*"/>
 		</Message>
 		<!-- NG -->
-		<Message Description="Laboratory Order Message - Application Level Acknowledgement" Event="O21" ID="ACK_O22:LOI_NG" StructID="ACK" Type="ACK">
+		<Message Description="Laboratory Order Message – Access Acknowledgement" Event="O22" ID="ACK_O22:LOI_NG" StructID="ACK" Type="ACK" Name="Access Acknowledgement" Identifier="ACK_O22-NG">
 			<Segment Ref="MSH_ACK_NG" Usage="R" Min="1" Max="1"/>
 			<Segment Ref="SFT_HL7" Usage="O" Min="0" Max="*"/>
 			<Segment Ref="MSA_LOI" Usage="R" Min="1" Max="1"/>

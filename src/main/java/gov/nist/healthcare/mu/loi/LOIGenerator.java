@@ -26,6 +26,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Properties;
+import java.util.Random;
 import java.util.Set;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipOutputStream;
@@ -39,6 +40,10 @@ import org.apache.commons.io.filefilter.PrefixFileFilter;
 import org.apache.commons.io.filefilter.SuffixFileFilter;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.log4j.Logger;
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.SerializationFeature;
+import com.fasterxml.jackson.databind.node.ObjectNode;
 
 /**
  * LOI resource bundle generator
@@ -136,88 +141,457 @@ public class LOIGenerator extends BundleGenerator {
 
         long startTime = System.currentTimeMillis();
         LOIGenerator generator = new LOIGenerator();
-        String dir = generator.getContext().getTESTCASE_DIR_F();
-        File f = new File(dir);
+
+        File contextBased = new File(generator.getContext().getTESTCASE_DIR_F());
+        File contextFree = new File(
+                generator.getContext().getCONTEXT_FREE_DIR_F());
+
         String[] loi = { "LOI" };
         String[] orl = { "ORL" };
         String[] ack = { "ACK" };
 
-        deleteFiles("TestDataSpecification", ".html", f);
-        deleteFiles("TestDataSpecification", ".pdf", f);
+        // deleteFiles("TestDataSpecification", ".html", contextBased);
+        // deleteFiles("TestDataSpecification", ".pdf", contextBased);
 
-        copyFile("JurorDocument_", "JurorDocument.html", f);
-        deleteFiles("JurorDocument_", ".html", f);
+        // copyFile("JurorDocument_", "JurorDocument.html", f);
+        // deleteFiles("JurorDocument_", ".html", f);
         // deleteFiles("Juror", ".xml", f);
         // deleteFiles("JurorDocument", ".html", f);
         // deleteFiles("JurorDocument", ".pdf", f);
 
-        deleteFiles("TestStory", ".html", f);
-        deleteFiles("TestStory", ".pdf", f);
-        deleteFiles("TestStory", ".json", f);
-        copyFile("TestStory_", "TestStory.xml", f);
-        deleteFiles("TestStory_", ".xml", f);
+        deleteFiles("TestStory", ".html", contextBased);
+        deleteFiles("TestStory", ".pdf", contextBased);
+        deleteFiles("TestStory", ".json", contextBased);
 
-        deleteFiles("Constraints.", ".json", f);
-        deleteFiles("Constraints.", ".xml", f);
+        sortStories(contextBased);
+        copyFile("TestStory_", "TestStory.xml", contextBased);
+        deleteFiles("TestStory_", ".xml", contextBased);
 
-        deleteFiles("Message.", ".txt", f);
-        deleteFiles("Message.", ".xml", f);
-        deleteFiles("Message.", ".html", f);
+        // deleteFiles("Constraints.", ".json", f);
+        // deleteFiles("Constraints.", ".xml", f);
 
-        deleteFiles("MessageContent", ".xml", f);
-        deleteFiles("MessageContent", ".html", f);
-        deleteFiles("MessageContent", ".pdf", f);
+        // deleteFiles("Message.", ".txt", f);
+        // deleteFiles("Message.", ".xml", f);
+        // deleteFiles("Message.", ".html", f);
 
-        generator.init(loi, "LOI-EHR");
-        generator.init(orl, "LOI-EHR");
-        generator.init(ack, "LOI-EHR");
+        // deleteFiles("MessageContent", ".xml", f);
+        // deleteFiles("MessageContent", ".html", f);
+        // deleteFiles("MessageContent", ".pdf", f);
 
-        // XML MESSAGES //
-        generator.generateMessageXML(f);
-        generator.generateMessage_HTML(f);
+        // generator.init(loi, "LOI-EHR");
+        // generator.init(orl, "LOI-EHR");
+        // generator.init(ack, "LOI-EHR");
 
-        // MESSAGE CONTENT //
-        generator.generateMessageContent_HTML(f);
+        /* XML MESSAGES */
+        // generator.generateMessageXML(f);
+        // generator.generateMessage_HTML(f);
 
-        // TEST DATA SPECIFICATION //
+        /* MESSAGE CONTENT */
+        // generator.generateMessageContent_HTML(f);
+
+        /* TEST DATA SPECIFICATION */
         // String[] ehrsToLis = { "*LOI*" };
-        // String[] lisToEhrs = { "" };
-        // IOFileFilter autoTds = new WildcardFileFilter(ehrsToLis);
-        // IOFileFilter genericTds = new WildcardFileFilter(lisToEhrs);
-        // generator.generateTDS(f, autoTds, genericTds);
+        // String[] lisToEhrs = { "*ORL*", "*ACK*" };
+        //
+        // List<String> all = new ArrayList<String>();
+        // String[] none = { "" };
+        //
+        // all.addAll(Arrays.asList(ehrsToLis));
+        // all.addAll(Arrays.asList(lisToEhrs));
+        //
+        // IOFileFilter autoTds = new WildcardFileFilter(all);
+        // IOFileFilter genericTds = new WildcardFileFilter(none);
+        // generator.generateTDS(contextBased, autoTds, genericTds);
 
-        // JUROR DOCUMENTS //
+        /* JUROR DOCUMENTS */
 
-        // TEST STORIES //
-        generator.generateTestStory_HTML(f);
+        /* TEST STORIES */
+        generator.generateTestStory_HTML(contextBased);
 
         // generate PDFs
         IOFileFilter tdsFilter = new NameFileFilter(
-                "TestDataSpecification.html");
-        generator.generatePDFs(f, tdsFilter);
+                "TestDataSpecification_pdf.html");
+        generator.generatePDFs(contextBased, tdsFilter);
 
         IOFileFilter messageContentFilter = new NameFileFilter(
                 "MessageContent.html");
-        generator.generatePDFs(f, messageContentFilter);
+        generator.generatePDFs(contextBased, messageContentFilter);
 
         IOFileFilter jurorDocumentFilter = new NameFileFilter(
                 "JurorDocument.html");
-        generator.generatePDFs(f, jurorDocumentFilter);
+        generator.generatePDFs(contextBased, jurorDocumentFilter);
 
         IOFileFilter testStory = new NameFileFilter("TestStory.html");
-        generator.generatePDFs(f, testStory);
+        generator.generatePDFs(contextBased, testStory);
 
-        generator.update(f);
+        // generator.update(f);
+        generator.setIds(contextFree, contextBased);
 
         long endTime = System.currentTimeMillis();
         logger.info("total time : " + (endTime - startTime) / 1000 + " seconds");
 
         File zip = new File("loi-xml-messages.zip");
-        zip("Message.xml", zip, f);
+        zip("Message.xml", zip, contextBased);
     }
 
     public LOIGenerator() {
         context = new LOIContext();
+    }
+
+    private static void sortStories(File contextBased) throws IOException {
+
+        // GU
+        File GU = new File(contextBased, "GU");
+
+        moveIfExists(FileUtils.getFile(GU, "TestStory_GU.xml"),
+                FileUtils.getFile(contextBased, "LOI-EHR", "1-GU"));
+
+        moveIfExists(FileUtils.getFile(GU, "TestStory_LOI-EHR Test Plan.xml"),
+                FileUtils.getFile(contextBased, "LOI-EHR"));
+
+        // PT INR
+        moveIfExists(FileUtils.getFile(GU, "TestStory_PT and INR.xml"),
+                FileUtils.getFile(contextBased, "LOI-EHR", "1-GU", "1-PT"));
+        moveIfExists(FileUtils.getFile(GU, "TestStory_LOI_0.0_1.1-GU.xml"),
+                FileUtils.getFile(contextBased, "LOI-EHR", "1-GU", "1-PT",
+                        "1-LOI_0.0_1.1-GU"));
+        moveIfExists(FileUtils.getFile(GU, "TestStory_ACK_0.0_1.1-GU.xml"),
+                FileUtils.getFile(contextBased, "LOI-EHR", "1-GU", "1-PT",
+                        "2-ACK_0.0_1.1-GU"));
+        moveIfExists(FileUtils.getFile(GU, "TestStory_ORL_0.0_1.1-GU.xml"),
+                FileUtils.getFile(contextBased, "LOI-EHR", "1-GU", "1-PT",
+                        "3-ORL_0.0_1.1-GU"));
+        moveIfExists(FileUtils.getFile(GU, "TestStory_ACK_0.0_2.1-GU.xml"),
+                FileUtils.getFile(contextBased, "LOI-EHR", "1-GU", "1-PT",
+                        "4-ACK_0.0_2.1-GU"));
+
+        // Sed rate
+        moveIfExists(
+                FileUtils.getFile(GU, "TestStory_Sed Rate.xml"),
+                FileUtils.getFile(contextBased, "LOI-EHR", "1-GU", "2-Sed Rate"));
+        moveIfExists(FileUtils.getFile(GU, "TestStory_LOI_1.0_1.1-GU.xml"),
+                FileUtils.getFile(contextBased, "LOI-EHR", "1-GU",
+                        "2-Sed Rate", "1-LOI_1.0_1.1-GU"));
+
+        moveIfExists(FileUtils.getFile(GU, "TestStory_LOI_1.0_2.1-GU_CP.xml"),
+                FileUtils.getFile(contextBased, "LOI-EHR", "1-GU",
+                        "2-Sed Rate", "2-LOI_1.0_2.1-GU_CP"));
+
+        // CBC
+        moveIfExists(FileUtils.getFile(GU, "TestStory_CBC.xml"),
+                FileUtils.getFile(contextBased, "LOI-EHR", "1-GU", "3-CBC"));
+        moveIfExists(FileUtils.getFile(GU, "TestStory_LOI_2.0_1.1-GU.xml"),
+                FileUtils.getFile(contextBased, "LOI-EHR", "1-GU", "3-CBC",
+                        "1-LOI_2.0_1.1-GU"));
+
+        moveIfExists(FileUtils.getFile(GU, "TestStory_LOI_2.0_2.1-GU_CL.xml"),
+                FileUtils.getFile(contextBased, "LOI-EHR", "1-GU", "3-CBC",
+                        "2-LOI_2.0_2.1-GU_CL"));
+
+        // LipidPanel
+        moveIfExists(FileUtils.getFile(GU, "TestStory_Lipid Panel.xml"),
+                FileUtils.getFile(contextBased, "LOI-EHR", "1-GU",
+                        "4-Lipid Panel"));
+        moveIfExists(FileUtils.getFile(GU, "TestStory_LOI_3.0_1.1-GU.xml"),
+                FileUtils.getFile(contextBased, "LOI-EHR", "1-GU",
+                        "4-Lipid Panel", "1-LOI_3.0_1.1-GU"));
+
+        moveIfExists(FileUtils.getFile(GU, "TestStory_LOI_3.1_1.1-GU_FI.xml"),
+                FileUtils.getFile(contextBased, "LOI-EHR", "1-GU",
+                        "4-Lipid Panel", "2-LOI_3.1_1.1-GU_FI"));
+
+        // Culture and Suscep
+        moveIfExists(FileUtils.getFile(GU, "TestStory_Culture_and_Suscep.xml"),
+                FileUtils.getFile(contextBased, "LOI-EHR", "1-GU",
+                        "5-Culture and Suscep"));
+        moveIfExists(FileUtils.getFile(GU, "TestStory_LOI_4.0_1.1-GU.xml"),
+                FileUtils.getFile(contextBased, "LOI-EHR", "1-GU",
+                        "5-Culture and Suscep", "1-LOI_4.0_1.1-GU"));
+
+        // Reflex Hepatitis
+        moveIfExists(FileUtils.getFile(GU, "TestStory_Reflex_Hepatitis.xml"),
+                FileUtils.getFile(contextBased, "LOI-EHR", "1-GU",
+                        "6-Reflex Hepatitis"));
+
+        moveIfExists(FileUtils.getFile(GU, "TestStory_LOI_5.0_1.1-GU.xml"),
+                FileUtils.getFile(contextBased, "LOI-EHR", "1-GU",
+                        "6-Reflex Hepatitis", "1-LOI_5.0_1.1-GU"));
+
+        moveIfExists(FileUtils.getFile(GU, "TestStory_LOI_5.1_1.1-GU-PH.xml"),
+                FileUtils.getFile(contextBased, "LOI-EHR", "1-GU",
+                        "6-Reflex Hepatitis", "2-LOI_5.1_1.1-GU_PH"));
+
+        // Pap Smear
+        moveIfExists(FileUtils.getFile(GU, "TestStory_Pap_Smear.xml"),
+                FileUtils.getFile(contextBased, "LOI-EHR", "1-GU",
+                        "7-Pap Smear"));
+        moveIfExists(FileUtils.getFile(GU, "TestStory_LOI_6.0_1.1-GU.xml"),
+                FileUtils.getFile(contextBased, "LOI-EHR", "1-GU",
+                        "7-Pap Smear", "1-LOI_6.0_1.1-GU"));
+
+        // GHP
+        moveIfExists(FileUtils.getFile(GU, "TestStory_GHP_Header.xml"),
+                FileUtils.getFile(contextBased, "LOI-EHR", "1-GU", "8-GHP"));
+        moveIfExists(FileUtils.getFile(GU, "TestStory_GHP_PRU_Header.xml"),
+                FileUtils.getFile(contextBased, "LOI-EHR", "1-GU", "8-GHP",
+                        "1-PRU"));
+        moveIfExists(FileUtils.getFile(GU, "TestStory_GHP_PRN_Header.xml"),
+                FileUtils.getFile(contextBased, "LOI-EHR", "1-GU", "8-GHP",
+                        "2-PRN"));
+
+        moveIfExists(FileUtils.getFile(GU, "TestStory_LOI_7.0_1.1-GU_PRU.xml"),
+                FileUtils.getFile(contextBased, "LOI-EHR", "1-GU", "8-GHP",
+                        "1-PRU", "1-LOI_7.0_1.1-GU_PRU"));
+
+        moveIfExists(FileUtils.getFile(GU, "TestStory_LOI_7.0_2.1-GU_PRU.xml"),
+                FileUtils.getFile(contextBased, "LOI-EHR", "1-GU", "8-GHP",
+                        "1-PRU", "2-LOI_7.0_2.1-GU_PRU"));
+
+        moveIfExists(FileUtils.getFile(GU, "TestStory_LOI_7.0_1.1-GU_PRN.xml"),
+                FileUtils.getFile(contextBased, "LOI-EHR", "1-GU", "8-GHP",
+                        "2-PRN", "1-LOI_7.0_1.1-GU_PRN"));
+
+        moveIfExists(FileUtils.getFile(GU, "TestStory_LOI_7.0_2.1-GU_PRN.xml"),
+                FileUtils.getFile(contextBased, "LOI-EHR", "1-GU", "8-GHP",
+                        "2-PRN", "2-LOI_7.0_2.1-GU_PRN"));
+
+        // Creatinine Clearance
+        moveIfExists(FileUtils.getFile(GU,
+                "TestStory_Creatinine_Clearance_Header.xml"),
+                FileUtils.getFile(contextBased, "LOI-EHR", "1-GU",
+                        "10-Creatinine Clearance"));
+
+        moveIfExists(FileUtils.getFile(GU,
+                "TestStory_Creatinine_Clearance_PRU_Header.xml"),
+                FileUtils.getFile(contextBased, "LOI-EHR", "1-GU",
+                        "10-Creatinine Clearance", "1-PRU"));
+
+        moveIfExists(FileUtils.getFile(GU,
+                "TestStory_Creatinine_Clearance_PRN_Header.xml"),
+                FileUtils.getFile(contextBased, "LOI-EHR", "1-GU",
+                        "10-Creatinine Clearance", "2-PRN"));
+
+        moveIfExists(FileUtils.getFile(GU, "TestStory_LOI_9.0_1.1-GU_PRU.xml"),
+                FileUtils.getFile(contextBased, "LOI-EHR", "1-GU",
+                        "10-Creatinine Clearance", "1-PRU",
+                        "1-LOI_9.0_1.1-GU_PRU"));
+
+        moveIfExists(FileUtils.getFile(GU, "TestStory_LOI_9.0_1.1-GU_PRN.xml"),
+                FileUtils.getFile(contextBased, "LOI-EHR", "1-GU",
+                        "10-Creatinine Clearance", "2-PRN",
+                        "1-LOI_9.0_1.1-GU_PRN"));
+
+        // Prostate Biopsy
+        moveIfExists(FileUtils.getFile(GU,
+                "TestStory_Prostate_Biopsy_Header.xml"), FileUtils.getFile(
+                contextBased, "LOI-EHR", "1-GU", "11-Prostate Biopsy"));
+        moveIfExists(FileUtils.getFile(GU, "TestStory_LOI_10.0_1.1-GU.xml"),
+                FileUtils.getFile(contextBased, "LOI-EHR", "1-GU",
+                        "11-Prostate Biopsy", "1-LOI_10.0_1.1-GU"));
+
+        if (GU.exists()) {
+            deleteFiles(
+                    "TestStory_New test case names - message IDs in template",
+                    "xml", GU);
+            deleteFiles("TestStory_NG", "xml", GU);
+            if (GU.list().length == 0) {
+                FileUtils.deleteDirectory(GU);
+
+            }
+        }
+
+        // NG
+        File NG = new File(contextBased, "NG");
+
+        moveIfExists(FileUtils.getFile(NG, "TestStory_NG.xml"),
+                FileUtils.getFile(contextBased, "LOI-EHR", "2-NG"));
+
+        moveIfExists(FileUtils.getFile(NG, "TestStory_LOI-EHR Test Plan.xml"),
+                FileUtils.getFile(contextBased, "LOI-EHR"));
+
+        // PT INR
+        moveIfExists(FileUtils.getFile(NG, "TestStory_PT and INR.xml"),
+                FileUtils.getFile(contextBased, "LOI-EHR", "2-NG", "1-PT"));
+        moveIfExists(FileUtils.getFile(NG, "TestStory_LOI_0.0_1.1-NG.xml"),
+                FileUtils.getFile(contextBased, "LOI-EHR", "2-NG", "1-PT",
+                        "1-LOI_0.0_1.1-NG"));
+        moveIfExists(FileUtils.getFile(NG, "TestStory_ACK_0.0_1.1-NG.xml"),
+                FileUtils.getFile(contextBased, "LOI-EHR", "2-NG", "1-PT",
+                        "2-ACK_0.0_1.1-NG"));
+        moveIfExists(FileUtils.getFile(NG, "TestStory_ORL_0.0_1.1-NG.xml"),
+                FileUtils.getFile(contextBased, "LOI-EHR", "2-NG", "1-PT",
+                        "3-ORL_0.0_1.1-NG"));
+        moveIfExists(FileUtils.getFile(NG, "TestStory_ACK_0.0_2.1-NG.xml"),
+                FileUtils.getFile(contextBased, "LOI-EHR", "2-NG", "1-PT",
+                        "4-ACK_0.0_2.1-NG"));
+
+        // Sed rate
+        moveIfExists(
+                FileUtils.getFile(NG, "TestStory_Sed Rate.xml"),
+                FileUtils.getFile(contextBased, "LOI-EHR", "2-NG", "2-Sed Rate"));
+        moveIfExists(FileUtils.getFile(NG, "TestStory_LOI_1.0_1.1-NG.xml"),
+                FileUtils.getFile(contextBased, "LOI-EHR", "2-NG",
+                        "2-Sed Rate", "1-LOI_1.0_1.1-NG"));
+
+        moveIfExists(FileUtils.getFile(NG, "TestStory_LOI_1.0_2.1-NG_CP.xml"),
+                FileUtils.getFile(contextBased, "LOI-EHR", "2-NG",
+                        "2-Sed Rate", "2-LOI_1.0_2.1-NG_CP"));
+
+        // CBC
+        moveIfExists(FileUtils.getFile(NG, "TestStory_CBC.xml"),
+                FileUtils.getFile(contextBased, "LOI-EHR", "2-NG", "3-CBC"));
+        moveIfExists(FileUtils.getFile(NG, "TestStory_LOI_2.0_1.1-NG.xml"),
+                FileUtils.getFile(contextBased, "LOI-EHR", "2-NG", "3-CBC",
+                        "1-LOI_2.0_1.1-NG"));
+
+        moveIfExists(FileUtils.getFile(NG, "TestStory_LOI_2.0_2.1-NG_CL.xml"),
+                FileUtils.getFile(contextBased, "LOI-EHR", "2-NG", "3-CBC",
+                        "2-LOI_2.0_2.1-NG_CL"));
+
+        // LipidPanel
+        moveIfExists(FileUtils.getFile(NG, "TestStory_Lipid Panel.xml"),
+                FileUtils.getFile(contextBased, "LOI-EHR", "2-NG",
+                        "4-Lipid Panel"));
+        moveIfExists(FileUtils.getFile(NG, "TestStory_LOI_3.0_1.1-NG.xml"),
+                FileUtils.getFile(contextBased, "LOI-EHR", "2-NG",
+                        "4-Lipid Panel", "1-LOI_3.0_1.1-NG"));
+
+        moveIfExists(FileUtils.getFile(NG, "TestStory_LOI_3.1_1.1-NG_FI.xml"),
+                FileUtils.getFile(contextBased, "LOI-EHR", "2-NG",
+                        "4-Lipid Panel", "2-LOI_3.1_1.1-NG_FI"));
+
+        // Culture and Suscep
+        moveIfExists(FileUtils.getFile(NG, "TestStory_Culture_and_Suscep.xml"),
+                FileUtils.getFile(contextBased, "LOI-EHR", "2-NG",
+                        "5-Culture and Suscep"));
+        moveIfExists(FileUtils.getFile(NG, "TestStory_LOI_4.0_1.1-NG.xml"),
+                FileUtils.getFile(contextBased, "LOI-EHR", "2-NG",
+                        "5-Culture and Suscep", "1-LOI_4.0_1.1-NG"));
+
+        // Reflex Hepatitis
+        moveIfExists(FileUtils.getFile(NG, "TestStory_Reflex_Hepatitis.xml"),
+                FileUtils.getFile(contextBased, "LOI-EHR", "2-NG",
+                        "6-Reflex Hepatitis"));
+
+        moveIfExists(FileUtils.getFile(NG, "TestStory_LOI_5.0_1.1-NG.xml"),
+                FileUtils.getFile(contextBased, "LOI-EHR", "2-NG",
+                        "6-Reflex Hepatitis", "1-LOI_5.0_1.1-NG"));
+
+        moveIfExists(FileUtils.getFile(NG, "TestStory_LOI_5.1_1.1-NG-PH.xml"),
+                FileUtils.getFile(contextBased, "LOI-EHR", "2-NG",
+                        "6-Reflex Hepatitis", "2-LOI_5.1_1.1-NG_PH"));
+
+        // Pap Smear
+        moveIfExists(FileUtils.getFile(NG, "TestStory_Pap_Smear.xml"),
+                FileUtils.getFile(contextBased, "LOI-EHR", "2-NG",
+                        "7-Pap Smear"));
+        moveIfExists(FileUtils.getFile(NG, "TestStory_LOI_6.0_1.1-NG.xml"),
+                FileUtils.getFile(contextBased, "LOI-EHR", "2-NG",
+                        "7-Pap Smear", "1-LOI_6.0_1.1-NG"));
+
+        // GHP
+        moveIfExists(FileUtils.getFile(NG, "TestStory_GHP_Header.xml"),
+                FileUtils.getFile(contextBased, "LOI-EHR", "2-NG", "8-GHP"));
+        moveIfExists(FileUtils.getFile(NG, "TestStory_GHP_PRU_Header.xml"),
+                FileUtils.getFile(contextBased, "LOI-EHR", "2-NG", "8-GHP",
+                        "1-PRU"));
+        moveIfExists(FileUtils.getFile(NG, "TestStory_GHP_PRN_Header.xml"),
+                FileUtils.getFile(contextBased, "LOI-EHR", "2-NG", "8-GHP",
+                        "2-PRN"));
+
+        moveIfExists(FileUtils.getFile(NG, "TestStory_LOI_7.0_1.1-NG_PRU.xml"),
+                FileUtils.getFile(contextBased, "LOI-EHR", "2-NG", "8-GHP",
+                        "1-PRU", "1-LOI_7.0_1.1-NG_PRU"));
+
+        moveIfExists(FileUtils.getFile(NG, "TestStory_LOI_7.0_2.1-NG_PRU.xml"),
+                FileUtils.getFile(contextBased, "LOI-EHR", "2-NG", "8-GHP",
+                        "1-PRU", "2-LOI_7.0_2.1-NG_PRU"));
+
+        moveIfExists(FileUtils.getFile(NG, "TestStory_LOI_7.0_1.1-NG_PRN.xml"),
+                FileUtils.getFile(contextBased, "LOI-EHR", "2-NG", "8-GHP",
+                        "2-PRN", "1-LOI_7.0_1.1-NG_PRN"));
+
+        moveIfExists(FileUtils.getFile(NG, "TestStory_LOI_7.0_2.1-NG_PRN.xml"),
+                FileUtils.getFile(contextBased, "LOI-EHR", "2-NG", "8-GHP",
+                        "2-PRN", "2-LOI_7.0_2.1-NG_PRN"));
+
+        // Creatinine Clearance
+        moveIfExists(FileUtils.getFile(NG,
+                "TestStory_Creatinine_Clearance_Header.xml"),
+                FileUtils.getFile(contextBased, "LOI-EHR", "2-NG",
+                        "10-Creatinine Clearance"));
+
+        moveIfExists(FileUtils.getFile(NG,
+                "TestStory_Creatinine_Clearance_PRU_Header.xml"),
+                FileUtils.getFile(contextBased, "LOI-EHR", "2-NG",
+                        "10-Creatinine Clearance", "1-PRU"));
+
+        moveIfExists(FileUtils.getFile(NG,
+                "TestStory_Creatinine_Clearance_PRN_Header.xml"),
+                FileUtils.getFile(contextBased, "LOI-EHR", "2-NG",
+                        "10-Creatinine Clearance", "2-PRN"));
+
+        moveIfExists(FileUtils.getFile(NG, "TestStory_LOI_9.0_1.1-NG_PRU.xml"),
+                FileUtils.getFile(contextBased, "LOI-EHR", "2-NG",
+                        "10-Creatinine Clearance", "1-PRU",
+                        "1-LOI_9.0_1.1-NG_PRU"));
+
+        moveIfExists(FileUtils.getFile(NG, "TestStory_LOI_9.0_1.1-NG_PRN.xml"),
+                FileUtils.getFile(contextBased, "LOI-EHR", "2-NG",
+                        "10-Creatinine Clearance", "2-PRN",
+                        "1-LOI_9.0_1.1-NG_PRN"));
+
+        // Prostate Biopsy
+        moveIfExists(FileUtils.getFile(NG,
+                "TestStory_Prostate_Biopsy_Header.xml"), FileUtils.getFile(
+                contextBased, "LOI-EHR", "2-NG", "11-Prostate Biopsy"));
+        moveIfExists(FileUtils.getFile(NG, "TestStory_LOI_10.0_1.1-NG.xml"),
+                FileUtils.getFile(contextBased, "LOI-EHR", "2-NG",
+                        "11-Prostate Biopsy", "1-LOI_10.0_1.1-NG"));
+
+        if (NG.exists()) {
+            deleteFiles(
+                    "TestStory_New test case names - message IDs in template",
+                    "xml", NG);
+            deleteFiles("TestStory_GU", "xml", NG);
+            if (NG.list().length == 0) {
+                FileUtils.deleteDirectory(NG);
+
+            }
+        }
+
+    }
+
+    private static void moveIfExists(File source, File destDir)
+            throws IOException {
+        if (source.exists()) {
+            File f = new File(destDir, source.getName());
+            if (f.exists()) {
+                FileUtils.deleteQuietly(f);
+            }
+            FileUtils.moveFileToDirectory(source, destDir, false);
+        }
+    }
+
+    private void setIds(File contextFree, File contextBased) throws IOException {
+        List<String> names = Arrays.asList("TestObject.json", "TestPlan.json",
+                "TestCaseGroup.json", "TestCase.json", "TestStep.json");
+        NameFileFilter filter = new NameFileFilter(names);
+
+        Collection<File> files = FileUtils.listFiles(contextFree, filter,
+                FileFilterUtils.trueFileFilter());
+        files.addAll(FileUtils.listFiles(contextBased, filter,
+                FileFilterUtils.trueFileFilter()));
+
+        ObjectMapper mapper = new ObjectMapper();
+        mapper.enable(SerializationFeature.INDENT_OUTPUT);
+        Random r = new Random();
+        for (File file : files) {
+            JsonNode root = mapper.readTree(file);
+            long l = r.nextLong();
+            ((ObjectNode) root).put("id", l);
+            mapper.writeValue(file, root);
+        }
     }
 
     private static void copyFile(String prefixFilter, String name,
