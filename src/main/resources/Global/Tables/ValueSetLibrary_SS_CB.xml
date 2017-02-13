@@ -14115,8 +14115,8 @@
 			<ValueElement Value="A18" DisplayName="ADT/ACK -  Merge patient information (for backward compatibility only)" CodeSystem="HL70003"/>
 			<ValueElement Value="A19" DisplayName="QRY/ADR -  Patient query" CodeSystem="HL70003"/>
 			<ValueElement Value="A20" DisplayName="ADT/ACK -  Bed status update" CodeSystem="HL70003"/>
-			<ValueElement Value="A21" DisplayName="ADT/ACK -  Patient goes on a â??leave of absenceâ??" CodeSystem="HL70003"/>
-			<ValueElement Value="A22" DisplayName="ADT/ACK -  Patient returns from a â??leave of absenceâ??" CodeSystem="HL70003"/>
+			<ValueElement Value="A21" DisplayName="ADT/ACK -  Patient goes on a &quot;leave of absence&quot;" CodeSystem="HL70003"/>
+			<ValueElement Value="A22" DisplayName="ADT/ACK -  Patient returns from a &quot;leave of absence&quot;" CodeSystem="HL70003"/>
 			<ValueElement Value="A23" DisplayName="ADT/ACK -  Delete a patient record" CodeSystem="HL70003"/>
 			<ValueElement Value="A24" DisplayName="ADT/ACK -  Link patient information" CodeSystem="HL70003"/>
 			<ValueElement Value="A25" DisplayName="ADT/ACK -  Cancel pending discharge" CodeSystem="HL70003"/>
@@ -14348,7 +14348,7 @@
 			<ValueElement Value="S21" DisplayName="SIU/ACK - Notification of discontinuation of service/resource on appointment" CodeSystem="HL70003"/>
 			<ValueElement Value="S22" DisplayName="SIU/ACK - Notification of deletion of service/resource on appointment" CodeSystem="HL70003"/>
 			<ValueElement Value="S23" DisplayName="SIU/ACK - Notification of blocked schedule time slot(s)" CodeSystem="HL70003"/>
-			<ValueElement Value="S24" DisplayName="SIU/ACK - Notification of opened (â??unblockedâ??) schedule time slot(s)" CodeSystem="HL70003"/>
+			<ValueElement Value="S24" DisplayName="SIU/ACK - Notification of opened (&quot;unblocked&quot;) schedule time slot(s)" CodeSystem="HL70003"/>
 			<ValueElement Value="S25" DisplayName="SQM/SQR - Schedule query message and response" CodeSystem="HL70003"/>
 			<ValueElement Value="S26" DisplayName="SIU/ACK Notification that patient did not show up for schedule appointment" CodeSystem="HL70003"/>
 			<ValueElement Value="T01" DisplayName="MDM/ACK - Original document notification" CodeSystem="HL70003"/>
@@ -14777,7 +14777,7 @@
 			<ValueElement Value="R" DisplayName="Results entered -- not verified" CodeSystem="HL70085"/>
 			<ValueElement Value="S" DisplayName="Partial results" CodeSystem="HL70085"/>
 			<ValueElement Value="X" DisplayName="Results cannot be obtained for this observation" CodeSystem="HL70085"/>
-			<ValueElement Value="U" DisplayName="Results status change to final without retransmitting results already sent as â??preliminary.'  E.g., radiology changes status from preliminary to final" CodeSystem="HL70085"/>
+			<ValueElement Value="U" DisplayName="Results status change to final without retransmitting results already sent as 'preliminary.'  E.g., radiology changes status from preliminary to final" CodeSystem="HL70085"/>
 			<ValueElement Value="W" DisplayName="Post original as wrong, e.g., transmitted for wrong patient" CodeSystem="HL70085"/>
 		</ValueSetDefinition>
 		<ValueSetDefinition BindingIdentifier="HL70091" Name="Query priority" Version="2.5.1">
@@ -15907,7 +15907,7 @@
 			<ValueElement Value="HCD" DisplayName="The CEN Healthcare Coding Scheme Designator. (Identifiers used in DICOM follow this assignment scheme.)" CodeSystem="HL70301"/>
 			<ValueElement Value="HL7" DisplayName="Reserved for future HL7 registration schemes" CodeSystem="HL70301"/>
 			<ValueElement Value="ISO" DisplayName="An International Standards Organization Object Identifier" CodeSystem="HL70301"/>
-			<ValueElement Value="Random" DisplayName="Usually a base64 encoded string of random bits.&lt;p&gt;The uniqueness depends on the length of the bits. Mail systems often generate ASCII string â??unique names,&quot; from a combination of random bits and system names. Obviously, such identifiers will not be cons" CodeSystem="HL70301"/>
+			<ValueElement Value="Random" DisplayName="Usually a base64 encoded string of random bits.&lt;p&gt;The uniqueness depends on the length of the bits. Mail systems often generate ASCII string &quot;unique names,&quot; from a combination of random bits and system names. Obviously, such identifiers will not be cons" CodeSystem="HL70301"/>
 			<ValueElement Value="URI" DisplayName="Uniform Resource Identifier" CodeSystem="HL70301"/>
 			<ValueElement Value="UUID" DisplayName="The DCE Universal Unique Identifier" CodeSystem="HL70301"/>
 			<ValueElement Value="x400" DisplayName="An X.400 MHS format identifier" CodeSystem="HL70301"/>
@@ -16176,7 +16176,7 @@
 		</ValueSetDefinition>
 		<ValueSetDefinition BindingIdentifier="HL70356" Name="Alternate character set handling scheme" Version="2.5.1">
 			<ValueElement Value="ISO 2022-1994" DisplayName="This standard is titled &quot;Information Technology - Character Code Structure and Extension Technique&quot;. ." CodeSystem="HL70356"/>
-			<ValueElement Value="2.3" DisplayName="The character set switching mode specified in HL7 2.5, section 2.7.2, â??Escape sequences supporting multiple character setsâ?? and section 2.A.46, &quot;XPN - extended person name&quot;." CodeSystem="HL70356"/>
+			<ValueElement Value="2.3" DisplayName="The character set switching mode specified in HL7 2.5, section 2.7.2, &quot;Escape sequences supporting multiple character sets&quot; and section 2.A.46, &quot;XPN - extended person name&quot;." CodeSystem="HL70356"/>
 			<ValueElement Value="&lt;null&gt;" DisplayName="This is the default, indicating that there is no character set switching occurring in this message." CodeSystem="HL70356"/>
 		</ValueSetDefinition>
 		<ValueSetDefinition BindingIdentifier="HL70357" Name="Message error condition codes" Version="2.5.1">
@@ -19128,7 +19128,7 @@
 			<ValueElement Value="BID" DisplayName="twice a day at institution-specified times" CodeSystem="HL70335"/>
 			<ValueElement Value="TID" DisplayName="three times a day at institution-specified times" CodeSystem="HL70335"/>
 			<ValueElement Value="QID" DisplayName="four times a day at institution-specified times" CodeSystem="HL70335"/>
-			<ValueElement Value="xID" DisplayName="â??Xâ?? times per day at institution-specified times, where X is a numeral 5 or greater." CodeSystem="HL70335"/>
+			<ValueElement Value="xID" DisplayName="&quot;X&quot; times per day at institution-specified times, where X is a numeral 5 or greater." CodeSystem="HL70335"/>
 			<ValueElement Value="QAM" DisplayName="in the morning at institution-specified time" CodeSystem="HL70335"/>
 			<ValueElement Value="QSHIFT" DisplayName="during each of three eight-hour shifts at institution-specified times" CodeSystem="HL70335"/>
 			<ValueElement Value="QOD" DisplayName="every other day" CodeSystem="HL70335"/>
@@ -19139,7 +19139,7 @@
 			<ValueElement Value="PRN" DisplayName="given as needed" CodeSystem="HL70335"/>
 			<ValueElement Value="PRNxxx" DisplayName="where xxx is some frequency code" CodeSystem="HL70335"/>
 			<ValueElement Value="Once" DisplayName="one time only." CodeSystem="HL70335"/>
-			<ValueElement Value="Meal Related Timings" DisplayName="&lt;timing&gt;C (â??cumâ??)&lt;meal&gt;" CodeSystem="HL70335"/>
+			<ValueElement Value="Meal Related Timings" DisplayName="&lt;timing&gt;C (&quot;cum&quot;)&lt;meal&gt;" CodeSystem="HL70335"/>
 			<ValueElement Value="A" DisplayName="Ante (before)" CodeSystem="HL70335"/>
 			<ValueElement Value="P" DisplayName="Post (after)" CodeSystem="HL70335"/>
 			<ValueElement Value="I" DisplayName="Inter" CodeSystem="HL70335"/>
@@ -19552,7 +19552,7 @@
 			<ValueElement Value="C" DisplayName="Confused" CodeSystem="HL70433"/>
 			<ValueElement Value="D" DisplayName="Deaf" CodeSystem="HL70433"/>
 			<ValueElement Value="I" DisplayName="On IV" CodeSystem="HL70433"/>
-			<ValueElement Value="N" DisplayName="â??No-codeâ?? (i.e. Do not resuscitate)" CodeSystem="HL70433"/>
+			<ValueElement Value="N" DisplayName="&quot;No-code&quot; (i.e. Do not resuscitate)" CodeSystem="HL70433"/>
 			<ValueElement Value="P" DisplayName="Paraplegic" CodeSystem="HL70433"/>
 			<ValueElement Value="O" DisplayName="Other" CodeSystem="HL70433"/>
 			<ValueElement Value="U" DisplayName="Unknown" CodeSystem="HL70433"/>
