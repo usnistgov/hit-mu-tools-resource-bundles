@@ -13,6 +13,7 @@ import gov.nist.healthcare.mu.bundle.documentation.model.json.JTestCase;
 import gov.nist.healthcare.mu.bundle.documentation.model.json.JTestCaseGroup;
 import gov.nist.healthcare.mu.bundle.documentation.model.json.JTestPlan;
 import gov.nist.healthcare.mu.bundle.documentation.model.json.JTestStep;
+import gov.nist.healthcare.mu.bundle.util.PDFUtil;
 import gov.nist.healthcare.mu.spreadsheet.model.TestCaseMetadata;
 import java.io.File;
 import java.io.FileInputStream;
@@ -232,6 +233,41 @@ public class LOIGenerator extends BundleGenerator {
 
         File zip = new File("loi-xml-messages.zip");
         zip("Message.xml", zip, contextBased);
+
+        /* Generate test package at test step level */
+        IOFileFilter testCaseFilter = new NameFileFilter("TestStep.json");
+        Collection<File> testSteps = FileUtils.listFiles(contextBased,
+                testCaseFilter, FileFilterUtils.trueFileFilter());
+
+        for (File testStep : testSteps) {
+            File stepDir = testStep.getParentFile();
+            File pdfFile = new File(stepDir, "TestPackage.pdf");
+            List<File> files = new ArrayList<File>();
+            File ts = new File(stepDir, "TestStory.html");
+            File mc = new File(stepDir, "MessageContent.html");
+            File tds = new File(stepDir, "TestDataSpecification_pdf.html");
+            File jd = new File(stepDir, "JurorDocument.html");
+            File m = new File(stepDir, "Message.html");
+
+            if (ts.exists()) {
+                files.add(ts);
+            }
+            if (mc.exists()) {
+                files.add(mc);
+            }
+            if (tds.exists()) {
+                files.add(tds);
+            }
+            if (jd.exists()) {
+                files.add(jd);
+            }
+            if (m.exists()) {
+                files.add(m);
+            }
+            if (files.size() > 0) {
+                PDFUtil.genPDF(files, pdfFile);
+            }
+        }
     }
 
     public LOIGenerator() {
