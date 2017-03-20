@@ -3,7 +3,7 @@
 	<groupId>gov.nist.healthcare.mu.loi-r1</groupId>
 	<artifactId>loi-resource-bundle</artifactId>
 	<packaging>jar</packaging>
-	<version>1.0.1-SNAPSHOT</version>
+	<version>1.1.0-SNAPSHOT</version>
 	<distributionManagement>
 		<repository>
 			<id>releases</id>
@@ -29,7 +29,9 @@
 				<filtering>true</filtering>
 				<includes>
 					<include>maven.properties</include>
-					<include>About/MetaData.json</include>
+					<!-- <include>About/MetaData.json</include> -->
+					<include>About/*.json</include>
+					<include>Documentation/**/*.json</include>
 				</includes>
 			</resource>
 			<resource>
@@ -38,7 +40,9 @@
 				<filtering>false</filtering>
 				<excludes>
 					<exclude>maven.properties</exclude>
-					<exclude>About/MetaData.json</exclude>
+					<!-- <exclude>About/MetaData.json</exclude> -->
+					<exclude>About/*.json</exclude>
+					<exclude>Documentation/**/*.json</exclude>
 				</excludes>
 			</resource>
 		</resources>
@@ -242,5 +246,10 @@
 		<maven.build.timestamp.format>yyyyMMddHHmm</maven.build.timestamp.format>
     	<ts>${maven.build.timestamp}</ts>
     	<project.scm.id>git</project.scm.id>
-    </properties>
+    	<!-- metadata version text -->
+    	<metadata.version>1.1.0</metadata.version>
+    	<!-- release dates -->
+    	<release-date-1.0.0>2017/02/21</release-date-1.0.0>
+    	<release-date-1.1.0>2017/03/20</release-date-1.1.0>
+	</properties>
 </project>
