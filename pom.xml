@@ -3,7 +3,7 @@
 	<groupId>gov.nist.healthcare.mu.lri-r2</groupId>
 	<artifactId>lri-r2-resource-bundle</artifactId>
 	<packaging>jar</packaging>
-	<version>1.0.1-SNAPSHOT</version>
+	<version>1.1.0-SNAPSHOT</version>
 	<distributionManagement>
 		<repository>
 			<id>releases</id>
@@ -31,7 +31,8 @@
 				<filtering>true</filtering>
 				<includes>
 					<include>maven.properties</include>
-					<include>About/MetaData.json</include>
+					<include>About/*.json</include>
+					<include>Documentation/**/*.json</include>
 				</includes>
 			</resource>
 			<resource>
@@ -40,7 +41,8 @@
 				<filtering>false</filtering>
 				<excludes>
 					<exclude>maven.properties</exclude>
-					<exclude>About/MetaData.json</exclude>
+					<exclude>About/*.json</exclude>
+					<exclude>Documentation/**/*.json</exclude>
 				</excludes>
 			</resource>
 		</resources>
@@ -191,6 +193,8 @@
 						<include>maven.properties</include>
 					</includes>
 					<excludes>
+						<exclude>Global/**/*empty_conformance_context.xml</exclude>
+					
 						<exclude>Contextbased/**/*MessageContent.xml</exclude>
 						
 						<exclude>Contextbased/**/*TestPackage.xml</exclude>
@@ -239,12 +243,6 @@
 			<version>0.0.4</version>
 			<optional>true</optional>
 		</dependency>
-
-
-
-
-
-
 		<!-- junit -->
 		<dependency>
 			<groupId>junit</groupId>
@@ -271,5 +269,10 @@
 		<maven.build.timestamp.format>yyyyMMddHHmm</maven.build.timestamp.format>
     	<ts>${maven.build.timestamp}</ts>
     	<project.scm.id>git</project.scm.id>
+    	<!-- metadata version text -->
+    	<metadata.version>1.1.0</metadata.version>
+    	<!-- release dates -->
+    	<release-date-1.0.0>2016/12/01</release-date-1.0.0>
+    	<release-date-1.1.0>2017/03/20</release-date-1.1.0>
 	</properties>
 </project>
