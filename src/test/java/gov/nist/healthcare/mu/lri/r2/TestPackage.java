@@ -29,9 +29,9 @@ import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.filefilter.IOFileFilter;
 import org.apache.commons.io.filefilter.SuffixFileFilter;
 import org.apache.commons.io.filefilter.TrueFileFilter;
+import org.apache.commons.lang3.StringUtils;
 import org.apache.log4j.Logger;
 import org.junit.BeforeClass;
-import org.junit.Ignore;
 import org.junit.Test;
 
 /**
@@ -43,10 +43,22 @@ public class TestPackage {
     private static Logger logger = Logger.getLogger(TestPackage.class.getName());
 
     private static LRIContext lriContext;
+    private static String globalFolder = "/Global";
+
+    private static String profiles;
+    private static String constraints;
+    private static String valueSets;
 
     @BeforeClass
     public static void setUp() {
         lriContext = new LRIContext();
+
+        profiles = StringUtils.join(globalFolder, "/Profiles",
+                "/LRI_integration_profile.xml");
+        constraints = StringUtils.join(globalFolder, "/Constraints",
+                "/LRI_Constraints.xml");
+        valueSets = StringUtils.join(globalFolder, "/Tables",
+                "/LRI_ValueSet_Library.xml");
     }
 
     @Test
@@ -54,62 +66,50 @@ public class TestPackage {
         File f = new File(lriContext.getTESTCASE_DIR_F());
 
         File ehr = new File(f, "EHR");
-        File ehrGU = new File(ehr, "1-GU");
-        File ehrGU_LRI_0 = new File(ehrGU, "1-PT_and_INR");
-
+        // File ehrGU = new File(ehr, "1-GU");
+        // File ehrGU_LRI_0 = new File(ehrGU, "1-PT_and_INR");
         // File ehrNG = new File(ehr, "2-NG");
         // File lis = new File(f, "LIS");
         // File lisGU = new File(lis, "1-GU");
         // File lisNG = new File(lis, "2-NG");
 
         IOFileFilter msgFilter = new SuffixFileFilter("Message.txt");
-        IOFileFilter conformanceContextFilter = new SuffixFileFilter(
-                "Constraints.xml");
 
         Collection<File> messages = FileUtils.listFiles(ehr, msgFilter,
                 TrueFileFilter.INSTANCE);
-
         for (File message : messages) {
             String folderName = message.getParentFile().getName();
             String messageString = FileUtils.readFileToString(message);
 
             // get conformance context
-            Collection<File> confCtxts = FileUtils.listFiles(
-                    message.getParentFile(), conformanceContextFilter,
-                    TrueFileFilter.INSTANCE);
+            File confCtxt = new File(message.getParentFile(), "Constraints.xml");
 
             File json = new File(message.getParentFile(), "TestStep.json");
-            // read profile
+
+            // read profile ID from json
             String jsonSt = FileUtils.readFileToString(json);
             JTestStep js = JTestStep.fromJson(jsonSt);
             String profile = js.getMessageId();
             if (profile != null) {
-                for (File confCtxt : confCtxts) {
-                    // System.err.println(confCtxt.getName());
-                    FileInputStream fis = new FileInputStream(confCtxt);
-                    SyncHL7Validator validator = createValidator(
-                            "/Global/Profiles/LRI_Integration_Profile.xml",
-                            fis, "/Global/Tables/LRI_ValueSet_Library.xml");
+                // create validator
+                SyncHL7Validator validator = createValidator(profiles,
+                        constraints, confCtxt, valueSets);
 
-                    System.out.println("Validating " + folderName);
-                    Report report = validator.check(messageString, profile);
-                    System.out.println(messageString);
-                    // System.out.println(report.toText());
+                System.out.println("Validating " + folderName);
+                System.out.println(messageString);
 
-                    Set<String> keys = report.getEntries().keySet();
-                    for (String key : keys) {
-                        List<Entry> entries = report.getEntries().get(key);
-                        if (entries != null && entries.size() > 0) {
-                            System.out.println("*** " + key + " ***");
-                            for (Entry entry : entries) {
+                Report report = validator.check(messageString, profile);
 
-                                if (entry.getClassification().equals("Error")) {
-                                    printEntry(entry);
-
-                                }
-                                if (entry.getClassification().equals("Alert")) {
-                                    printEntry(entry);
-                                }
+                Set<String> keys = report.getEntries().keySet();
+                for (String key : keys) {
+                    List<Entry> entries = report.getEntries().get(key);
+                    if (entries != null && entries.size() > 0) {
+                        System.out.println("*** " + key + " ***");
+                        for (Entry entry : entries) {
+                            switch (entry.getClassification()) {
+                            case "Error":
+                            case "Alert":
+                                printEntry(entry);
                             }
                         }
                     }
@@ -126,65 +126,37 @@ public class TestPackage {
         }
     }
 
-    private static SyncHL7Validator createValidator(String profileFileName,
-            InputStream constraints, String valueSetLibFileName)
+    private static SyncHL7Validator createValidator(
+            String globalProfileFileName, String globalConstraintsFileName,
+            File specificConstraintsFile, String globalValueSetLibFileName)
             throws Exception {
 
         // The profile in XML
-        InputStream profileXML = TestPackage.class.getResourceAsStream(profileFileName);
+        InputStream profileXML = TestPackage.class.getResourceAsStream(globalProfileFileName);
 
-        // ### [Update]
-        // The conformance context file XML
+        // The default conformance context file XML
+        InputStream contextXML = TestPackage.class.getResourceAsStream(globalConstraintsFileName);
 
-        // default constraint file
-        InputStream contextXML2 = TestPackage.class.getResourceAsStream(lriContext.getCONFORMANCE_CONTEXT());
-        // List<InputStream> confContexts = Arrays.asList(constraints,
-        // contextXML2);
-        List<InputStream> confContexts = Arrays.asList(contextXML2, constraints);
-        // List<InputStream> confContexts = Arrays.asList(constraints);
-        // List<InputStream> confContexts = Arrays.asList(contextXML2);
+        // The test case specific conformance context file XML
+        InputStream specificContextXML = new FileInputStream(
+                specificConstraintsFile);
 
+        List<InputStream> confContexts = Arrays.asList(contextXML,
+                specificContextXML);
         ConformanceContext context = DefaultConformanceContext.apply(
                 confContexts).get();
 
+        // The value set library file XML
+        InputStream vsLibXML = TestPackage.class.getResourceAsStream(globalValueSetLibFileName);
+
         // The get() at the end will throw an exception if something goes wrong
         hl7.v2.profile.Profile profile = XMLDeserializer.deserialize(profileXML).get();
-
-        InputStream vsLibXML = TestPackage.class.getResourceAsStream(valueSetLibFileName);
         ValueSetLibrary valueSetLibrary = ValueSetLibraryImpl.apply(vsLibXML).get();
 
         // A java friendly version of an HL7 validator
         // This should be a singleton for a specific tool. We create it once and
         // reuse it across validations
         return new SyncHL7Validator(profile, valueSetLibrary, context);
-    }
-
-    @Test
-    @Ignore
-    public void testSimple() throws Exception {
-        // The profile in XML
-        ClassLoader classLoader = getClass().getClassLoader();
-
-        InputStream profileXML = classLoader.getResourceAsStream("test_profile.xml");
-        hl7.v2.profile.Profile profile = XMLDeserializer.deserialize(profileXML).get();
-
-        InputStream vsLibXML = classLoader.getResourceAsStream("test_vs.xml");
-        ValueSetLibrary valueSetLibrary = ValueSetLibraryImpl.apply(vsLibXML).get();
-
-        InputStream contextXML = classLoader.getResourceAsStream("test_context.xml");
-        List<InputStream> confContexts = Arrays.asList(contextXML);
-        ConformanceContext context = DefaultConformanceContext.apply(
-                confContexts).get();
-
-        String messageString = FileUtils.readFileToString(new File(
-                classLoader.getResource("test_message.txt").toURI()));
-
-        SyncHL7Validator val = new SyncHL7Validator(profile, valueSetLibrary,
-                context);
-        System.out.println("Validating ...");
-        Report report = val.check(messageString, "ORU_R01:LRI_GU_FRU");
-        System.out.println(messageString);
-        System.out.println(report.toText());
     }
 
 }
