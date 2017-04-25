@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- edited with XMLSpy v2014 rel. 2 sp1 (http://www.altova.com) by Caroline Rosin (NIST) -->
 <ConformanceProfile ID="V251_IG_SIF_LABORDERS_DSTUR2_D1_2014SEP" Type="Constrainable" HL7Version="2.5.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/Jungyubw/NIST_healthcare_hl7_v2_profile_schema/master/Schema/NIST%20Validation%20Schema/Profile.xsd">
-	<MetaData Name="LOI integration profile" OrgName="NIST" Version="1.0" Date="11162016"/>
+	<MetaData Name="LOI integration profile" OrgName="NIST" Version="1.0" Date="04252017"/>
 	<Messages>
 		<!-- New and Append Order -->
 		<!-- GU -->
 		<Message Description="OML - Laboratory order" Event="O21" ID="OML_O21:LOI_GU" StructID="OML_O21" Type="OML" Name="New and Append Order" Identifier="OML_O21-GU">
 			<Segment Max="1" Min="1" Ref="MSH_LOI_GU" Usage="R"/>
-			<!-- <Segment Max="1" Min="1" Ref="dummy" Usage="R"/> -->
 			<Segment Max="*" Min="0" Ref="SFT_HL7" Usage="O"/>
 			<Segment Max="*" Min="0" Ref="NTE_HL7" Usage="O"/>
 			<Group Max="1" Min="1" Name="PATIENT" ID="PATIENT_LOI" Usage="R">
@@ -5696,7 +5695,7 @@
 		<Datatype Description="String Data" ID="ST" Label="ST" Name="ST"/>
 		<Datatype Description="Time" ID="TM" Label="TM" Name="TM"/>
 		<Datatype Description="Timing Quantity" ID="TQ" Label="TQ" Name="TQ">
-			<Component Datatype="CQ" MaxLength="267" MinLength="1" Name="Quantity" Usage="O"/>
+			<Component Datatype="CQ_TQ" MaxLength="267" MinLength="1" Name="Quantity" Usage="O"/>
 			<Component Datatype="RI" MaxLength="206" MinLength="1" Name="Interval" Usage="O"/>
 			<Component Datatype="ST" MaxLength="6" MinLength="1" Name="Duration" Usage="O"/>
 			<Component Datatype="TS" MaxLength="26" MinLength="1" Name="Start Date/Time" Usage="O"/>
@@ -5833,6 +5832,18 @@
 		<Datatype Description="Date/time Range" ID="DR_DTM" Label="DR_DTM" Name="DR">
 			<Component Datatype="DTM" MaxLength="26" MinLength="1" Name="Range Start Date/Time" Usage="O"/>
 			<Component Datatype="DTM" MaxLength="26" MinLength="1" Name="Range End Date/Time" Usage="O"/>
+		</Datatype>
+		<!-- CQ_TQ created to avoid issues of "sub-subcomponents in the TQ datatype -->
+		<Datatype Description="Composite Quantity With Units " ID="CQ_TQ" Label="CQ_TQ" Name="CQ">
+			<Component Datatype="NM" MaxLength="16" MinLength="1" Name="Quantity" Usage="O"/>
+			<!-- <Component Datatype="CE" MaxLength="483" MinLength="1" Name="Units" Usage="O"/> -->
+			<!-- The original Units component with CE datatype is replaced by the components of the CE datatype -->
+			<Component Datatype="ST" MaxLength="20" MinLength="1" Name="Identifier" Usage="O"/>
+			<Component Datatype="ST" MaxLength="199" MinLength="1" Name="Text" Usage="O"/>
+			<Component Datatype="ID" MaxLength="20" MinLength="1" Name="Name of Coding System" Binding="HL70396" Usage="O"/>
+			<Component Datatype="ST" MaxLength="20" MinLength="1" Name="Alternate Identifier" Usage="O"/>
+			<Component Datatype="ST" MaxLength="199" MinLength="1" Name="Alternate Text" Usage="O"/>
+			<Component Datatype="ID" MaxLength="20" MinLength="1" Name="Name of Alternate Coding System" Binding="HL70396" Usage="O"/>
 		</Datatype>
 	</Datatypes>
 </ConformanceProfile>
