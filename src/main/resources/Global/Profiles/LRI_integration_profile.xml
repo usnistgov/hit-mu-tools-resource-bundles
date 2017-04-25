@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- edited with XMLSpy v2014 rel. 2 sp1 (http://www.altova.com) by Caroline Rosin (NIST) -->
 <ConformanceProfile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="V251_IG_SIF_LABORDERS_DSTUR2_D1_2014SEP" Type="Constrainable" HL7Version="2.5.1" xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/Jungyubw/NIST_healthcare_hl7_v2_profile_schema/master/Schema/NIST%20Validation%20Schema/Profile.xsd">
-	<MetaData Name="LRI integration profile" OrgName="NIST" Version="1.0.0" Date="11142016"/>
+	<MetaData Name="LRI integration profile" OrgName="NIST" Version="1.0.0" Date="04252017"/>
 	<Messages>
 		<!-- GU FRU -->
 		<Message ID="ORU_R01:LRI_GU_FRU" Name="LRI Result Message (GU/FRU)" Type="ORU" Event="R01" StructID="ORU_R01" Description="Laboratory Results Interface" Identifier="ORU_R01-GU_FRU">
@@ -2418,7 +2418,7 @@
 		<Datatype Description="String Data" ID="ST" Label="ST" Name="ST"/>
 		<Datatype Description="Time" ID="TM" Label="TM" Name="TM"/>
 		<Datatype Description="Timing Quantity" ID="TQ" Label="TQ" Name="TQ">
-			<Component Datatype="CQ" MaxLength="267" MinLength="1" Name="Quantity" Usage="O"/>
+			<Component Datatype="CQ_TQ" MaxLength="267" MinLength="1" Name="Quantity" Usage="O"/>
 			<Component Datatype="RI" MaxLength="206" MinLength="1" Name="Interval" Usage="O"/>
 			<Component Datatype="ST" MaxLength="6" MinLength="1" Name="Duration" Usage="O"/>
 			<Component Datatype="TS" MaxLength="26" MinLength="1" Name="Start Date/Time" Usage="O"/>
@@ -2561,6 +2561,18 @@
 			<Component Name="Group" Usage="O" Datatype="NM" MaxLength="9999" MinLength="1"/>
 			<Component Name="Sequence" Usage="O" Datatype="NM" MaxLength="9999" MinLength="1"/>
 			<Component Name="Identifier" Usage="O" Datatype="ST" MaxLength="9999" MinLength="1"/>
+		</Datatype>
+		<!-- CQ_TQ created to avoid issues of "sub-subcomponents in the TQ datatype -->
+		<Datatype Description="Composite Quantity With Units " ID="CQ_TQ" Label="CQ_TQ" Name="CQ">
+			<Component Datatype="NM" MaxLength="16" MinLength="1" Name="Quantity" Usage="O"/>
+			<!-- <Component Datatype="CE" MaxLength="483" MinLength="1" Name="Units" Usage="O"/> -->
+			<!-- The original Units component with CE datatype is replaced by the components of the CE datatype -->
+			<Component Datatype="ST" MaxLength="20" MinLength="1" Name="Identifier" Usage="O"/>
+			<Component Datatype="ST" MaxLength="199" MinLength="1" Name="Text" Usage="O"/>
+			<Component Datatype="ID" MaxLength="20" MinLength="1" Name="Name of Coding System" Binding="HL70396" Usage="O"/>
+			<Component Datatype="ST" MaxLength="20" MinLength="1" Name="Alternate Identifier" Usage="O"/>
+			<Component Datatype="ST" MaxLength="199" MinLength="1" Name="Alternate Text" Usage="O"/>
+			<Component Datatype="ID" MaxLength="20" MinLength="1" Name="Name of Alternate Coding System" Binding="HL70396" Usage="O"/>
 		</Datatype>
 	</Datatypes>
 </ConformanceProfile>
