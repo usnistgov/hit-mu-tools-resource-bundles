@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- edited with XMLSpy v2014 rel. 2 sp1 (http://www.altova.com) by Caroline Rosin (NIST) -->
 <ConformanceProfile ID="EIV2_IG_LTCF_R2_DSTU_R2_2015JAN" Type="Constrainable" HL7Version="2.5.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/Jungyubw/NIST_healthcare_hl7_v2_profile_schema/master/Schema/NIST%20Validation%20Schema/Profile.xsd">
-	<MetaData Name="eDOS integration profile" OrgName="NIST" Version="1.0.0" Date="11222016">
-		<Authors>
-			<Author FirstName="Caroline" LastName="Rosin"/>
-		</Authors>
-	</MetaData>	
+	<MetaData Name="eDOS integration profile" OrgName="NIST" Version="1.0.0" Date="04252017"/>	
 	<Messages>
 		<!-- MFN M04 -->
 		<Message Identifier="MFN_M04-GU" Name="Charge Description Master File (GU)" Description="MFN/MFK - Charge Description Master File Message" Event="M04" ID="MFN_M04_GU" StructID="MFN_M04" Type="MFN">
@@ -1472,7 +1468,7 @@
 		<Datatype Description="String Data" ID="ST" Name="ST"/>
 		<Datatype Description="Time" ID="TM" Name="TM"/>
 		<Datatype Description="Timing Quantity" ID="TQ" Name="TQ">
-			<Component Datatype="CQ" MaxLength="267" MinLength="1" Name="Quantity" Usage="O"/>
+			<Component Datatype="CQ_TQ" MaxLength="267" MinLength="1" Name="Quantity" Usage="O"/>
 			<Component Datatype="RI" MaxLength="206" MinLength="1" Name="Interval" Usage="O"/>
 			<Component Datatype="ST" MaxLength="6" MinLength="1" Name="Duration" Usage="O"/>
 			<Component Datatype="TS" MaxLength="26" MinLength="1" Name="Start Date/Time" Usage="O"/>
@@ -1609,6 +1605,18 @@
 		<Datatype Description="Date/time Range" ID="DR_DTM" Name="DR">
 			<Component Datatype="DTM" MaxLength="26" MinLength="1" Name="Range Start Date/Time" Usage="O"/>
 			<Component Datatype="DTM" MaxLength="26" MinLength="1" Name="Range End Date/Time" Usage="O"/>
+		</Datatype>
+		<!-- CQ_TQ created to avoid issues of "sub-subcomponents in the TQ datatype -->
+		<Datatype Description="Composite Quantity With Units " ID="CQ_TQ" Label="CQ_TQ" Name="CQ">
+			<Component Datatype="NM" MaxLength="16" MinLength="1" Name="Quantity" Usage="O"/>
+			<!-- <Component Datatype="CE" MaxLength="483" MinLength="1" Name="Units" Usage="O"/> -->
+			<!-- The original Units component with CE datatype is replaced by the components of the CE datatype -->
+			<Component Datatype="ST" MaxLength="20" MinLength="1" Name="Identifier" Usage="O"/>
+			<Component Datatype="ST" MaxLength="199" MinLength="1" Name="Text" Usage="O"/>
+			<Component Datatype="ID" MaxLength="20" MinLength="1" Name="Name of Coding System" Binding="HL70396" Usage="O"/>
+			<Component Datatype="ST" MaxLength="20" MinLength="1" Name="Alternate Identifier" Usage="O"/>
+			<Component Datatype="ST" MaxLength="199" MinLength="1" Name="Alternate Text" Usage="O"/>
+			<Component Datatype="ID" MaxLength="20" MinLength="1" Name="Name of Alternate Coding System" Binding="HL70396" Usage="O"/>
 		</Datatype>
 	</Datatypes>
 </ConformanceProfile>
