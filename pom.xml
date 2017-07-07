@@ -1,27 +1,30 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>gov.nist.healthcare.mu.loi-r1</groupId>
 	<artifactId>loi-resource-bundle</artifactId>
 	<packaging>jar</packaging>
-	<version>1.1.1-SNAPSHOT</version>
+	<version>1.2.0-SNAPSHOT</version>
 	<distributionManagement>
 		<repository>
 			<id>releases</id>
-			<url>http://vm-070.nist.gov:8081/nexus/content/repositories/releases</url>
-		</repository>
+			<url>${releases.url}</url>
+		</repository> 
 		<snapshotRepository>
 			<id>snapshots</id>
 			<name>Internal Snapshots</name>
-			<url>http://vm-070.nist.gov:8081/nexus/content/repositories/snapshots</url>
+			<url>${snapshots.url}</url> 
 		</snapshotRepository>
 	</distributionManagement>
+
 	<scm>
 		<connection>scm:git:https://github.com/usnistgov/hit-mu-tools-resource-bundles.git</connection>
 		<developerConnection>scm:git:https://github.com/usnistgov/hit-mu-tools-resource-bundles.git</developerConnection>
-    <tag>HEAD</tag>
-  </scm>
+		<tag>HEAD</tag>
+	</scm>
 	<build>
-		<!-- we want to filter the maven.properties files to be able to have access to the project version -->
+		<!-- we want to filter the maven.properties files to be able to have access 
+			to the project version -->
 		<resources>
 			<resource>
 				<!-- enable filtering for maven.properties -->
@@ -56,8 +59,8 @@
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-compiler-plugin</artifactId>
 					<configuration>
-						<source>1.6</source>
-						<target>1.6</target>
+						<source>1.7</source>
+						<target>1.7</target>
 					</configuration>
 				</plugin>
 				<plugin>
@@ -115,7 +118,8 @@
 					<skipTests>${skipTests}</skipTests>
 				</configuration>
 			</plugin>
-			<!-- maven-dependency-plugin : unpack the xslt folder to include in the jar -->
+			<!-- maven-dependency-plugin : unpack the xslt folder to include in the 
+				jar -->
 			<plugin>
 				<!-- copy the xslt folder -->
 				<groupId>org.apache.maven.plugins</groupId>
@@ -192,39 +196,41 @@
 						<exclude>Contextbased/**/*TestDataSpecification_pdf.html</exclude>
 						<exclude>Contextbased/ORL</exclude>
 						<exclude>Contextbased/ORL/**</exclude>
-						<!-- exclude Diabetic_Profile-->
+						<!-- exclude Diabetic_Profile -->
 						<exclude>**/9-Diabetic Profile</exclude>
 						<exclude>**/9-Diabetic Profile/**</exclude>
-						
+
 					</excludes>
-					<!-- 					<excludes> --><!-- 						exclude the java code -->
-					<!-- 						<exclude>gov/**</exclude> --><!-- 						<exclude>gov</exclude> --><!-- 						exclude log4j configuration file -->
-					<!-- 						<exclude>log4j.properties</exclude> --><!-- 						exclude html files -->
-					<!-- 						<exclude>**/*DataSheet.html</exclude> --><!-- 						<exclude>**/*Message.html</exclude> --><!-- 						<exclude>**/*TestPackage.html</exclude> --><!-- 						<exclude>**/*DataSheet.html</exclude> --><!-- 						exclude TestPackage.xml -->
-					<!-- 						<exclude>**/*TestPackage.xml</exclude> --><!-- 						exclude old spreadsheets -->
-					<!-- 						<exclude>Documentation/Test_Case_Spreadsheet/old</exclude> --><!-- 						<exclude>Documentation/Test_Case_Spreadsheet/old/**</exclude> --><!-- 						exclude profile generation artifacts -->
-					<!-- 						<exclude>ProfileLibraries</exclude> --><!-- 						<exclude>ProfileLibraries/**</exclude> --><!-- 						exclude LOI implementation choice Excel file -->
-					<!-- 						<exclude>Documentation/Users_Guide/LOI_implementation_decisions.xlsx</exclude> --><!-- 						exclude Known issue Excel file -->
-					<!-- 						<exclude>Documentation/ChangeLog/KnownIssues.xlsx</exclude> --><!-- 						EXCLUSION OF TEST CASES -->
-					<!-- 						exclude LOI_8 for the moment -->
-					<!-- 						<exclude>TESTCASES/LOI/**/LOI_8_Diabetic_Profile</exclude> --><!-- 						<exclude>TESTCASES/LOI/**/LOI_8_Diabetic_Profile/**</exclude> --><!-- 						exclude LOI_5.2 (PH) for the moment -->
-					<!-- 						<exclude>TESTCASES/LOI/**/LOI_5_Reflex_Hepatitis/LOI_5.2-**</exclude> --><!-- 						<exclude>TESTCASES/LOI/**/LOI_5_Reflex_Hepatitis/LOI_5.2-**/**</exclude> --><!-- 						exclude LOI_3.1_1.1 (FI) for the moment -->
-					<!-- 						<exclude>TESTCASES/LOI/**/LOI_3_Lipid_Panel/LOI_3.1_1.1-**</exclude> --><!-- 						<exclude>TESTCASES/LOI/**/LOI_3_Lipid_Panel/LOI_3.1_1.1-**/**</exclude> --><!-- 					</excludes> --></configuration>
+					<!-- <excludes> --><!-- exclude the java code -->
+					<!-- <exclude>gov/**</exclude> --><!-- <exclude>gov</exclude> --><!-- exclude log4j configuration file -->
+					<!-- <exclude>log4j.properties</exclude> --><!-- exclude html files -->
+					<!-- <exclude>**/*DataSheet.html</exclude> --><!-- <exclude>**/*Message.html</exclude> --><!-- <exclude>**/*TestPackage.html</exclude> --><!-- <exclude>**/*DataSheet.html</exclude> --><!-- exclude TestPackage.xml -->
+					<!-- <exclude>**/*TestPackage.xml</exclude> --><!-- exclude old spreadsheets -->
+					<!-- <exclude>Documentation/Test_Case_Spreadsheet/old</exclude> --><!-- <exclude>Documentation/Test_Case_Spreadsheet/old/**</exclude> --><!-- exclude profile generation artifacts -->
+					<!-- <exclude>ProfileLibraries</exclude> --><!-- <exclude>ProfileLibraries/**</exclude> --><!-- exclude LOI implementation choice Excel file -->
+					<!-- <exclude>Documentation/Users_Guide/LOI_implementation_decisions.xlsx</exclude> --><!-- exclude Known issue Excel file -->
+					<!-- <exclude>Documentation/ChangeLog/KnownIssues.xlsx</exclude> --><!-- EXCLUSION OF TEST CASES -->
+					<!-- exclude LOI_8 for the moment -->
+					<!-- <exclude>TESTCASES/LOI/**/LOI_8_Diabetic_Profile</exclude> --><!-- <exclude>TESTCASES/LOI/**/LOI_8_Diabetic_Profile/**</exclude> --><!-- exclude LOI_5.2 (PH) for the moment -->
+					<!-- <exclude>TESTCASES/LOI/**/LOI_5_Reflex_Hepatitis/LOI_5.2-**</exclude> --><!-- <exclude>TESTCASES/LOI/**/LOI_5_Reflex_Hepatitis/LOI_5.2-**/**</exclude> --><!-- exclude LOI_3.1_1.1 (FI) for the moment -->
+					<!-- <exclude>TESTCASES/LOI/**/LOI_3_Lipid_Panel/LOI_3.1_1.1-**</exclude> --><!-- <exclude>TESTCASES/LOI/**/LOI_3_Lipid_Panel/LOI_3.1_1.1-**/**</exclude> --><!-- </excludes> -->
+				</configuration>
 			</plugin>
-			<!--			<plugin><groupId>org.apache.maven.plugins</groupId><artifactId>maven-release-plugin</artifactId><version>2.5.1</version><configuration><preparationGoals>assembly:single</preparationGoals></configuration></plugin>--></plugins>
+			<!-- <plugin><groupId>org.apache.maven.plugins</groupId><artifactId>maven-release-plugin</artifactId><version>2.5.1</version><configuration><preparationGoals>assembly:single</preparationGoals></configuration></plugin> -->
+		</plugins>
 	</build>
 	<dependencies>
 		<!-- used for resource-bundle generation -->
 		<dependency>
 			<groupId>gov.nist.healthcare.mu</groupId>
 			<artifactId>resource-bundle-generator</artifactId>
-			<version>0.0.5</version>
+			<version>0.0.6</version>
 			<optional>true</optional>
 		</dependency>
 		<dependency>
 			<groupId>gov.nist</groupId>
 			<artifactId>hl7-v2-validation</artifactId>
-			<version>1.1.5</version>
+			<version>1.1.18</version>
 			<optional>true</optional>
 		</dependency>
 		<!-- junit -->
@@ -237,7 +243,7 @@
 		<dependency>
 			<groupId>gov.nist.healthcare.mu.loi-r1</groupId>
 			<artifactId>loi-message-validation</artifactId>
-			<version>1.0.0</version>
+			<version>1.0.1</version>
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
@@ -245,12 +251,13 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<skipTests>true</skipTests>
 		<maven.build.timestamp.format>yyyyMMddHHmm</maven.build.timestamp.format>
-    	<ts>${maven.build.timestamp}</ts>
-    	<project.scm.id>git</project.scm.id>
-    	<!-- metadata version text -->
-    	<metadata.version>1.1.0</metadata.version>
-    	<!-- release dates -->
-    	<release-date-1.0.0>2017/02/21</release-date-1.0.0>
-    	<release-date-1.1.0>2017/03/20</release-date-1.1.0>
+		<ts>${maven.build.timestamp}</ts>
+		<project.scm.id>git</project.scm.id>
+		<!-- metadata version text -->
+		<metadata.version>1.2.0-beta</metadata.version>
+		<!-- release dates -->
+		<release-date-1.0.0>2017/02/21</release-date-1.0.0>
+		<release-date-1.1.0>2017/03/20</release-date-1.1.0>
+		<release-date-1.2.0>2017/07/07</release-date-1.2.0>
 	</properties>
 </project>

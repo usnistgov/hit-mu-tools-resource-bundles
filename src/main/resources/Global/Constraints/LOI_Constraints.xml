@@ -3434,7 +3434,7 @@
 						</EXIST>
 					</Assertion>
 				</Constraint>
-				<Constraint ID="NIST-xxx" Target="4[1].1[1]">
+				<Constraint ID="NIST-19" Target="4[1].1[1]">
 					<Description>If SPM-4.3 (Name of Coding system) is valued 'HL70487', SPM-4.1 (Identifier) SHALL be a valid code identifier drawn from the HL70487_USL.2 value set.</Description>
 					<Assertion>
 						<IMPLY>
@@ -3446,7 +3446,7 @@
 						</IMPLY>
 					</Assertion>
 				</Constraint>
-				<Constraint ID="NIST-xxx" Target="4[1].4[1]">
+				<Constraint ID="NIST-20" Target="4[1].4[1]">
 					<Description>If SPM-4.6 (Name of Alternate Coding System) is valued 'HL70487', SPM-4.4 (Alternate Identifier) SHALL be a valid code identifier drawn from the HL70487_USL.2 value set.</Description>
 					<Assertion>
 						<IMPLY>
@@ -3504,7 +3504,7 @@
 						</EXIST>
 					</Assertion>
 				</Constraint>
-				<Constraint ID="NIST-xxx" Target="4[1].1[1]">
+				<Constraint ID="NIST-19" Target="4[1].1[1]">
 					<Description>If SPM-4.3 (Name of Coding system) is valued 'HL70487', SPM-4.1 (Identifier) SHALL be a valid code identifier drawn from the HL70487_USL.2 value set.</Description>
 					<Assertion>
 						<IMPLY>
@@ -3516,7 +3516,7 @@
 						</IMPLY>
 					</Assertion>
 				</Constraint>
-				<Constraint ID="NIST-xxx" Target="4[1].4[1]">
+				<Constraint ID="NIST-20" Target="4[1].4[1]">
 					<Description>If SPM-4.6 (Name of Alternate Coding System) is valued 'HL70487', SPM-4.4 (Alternate Identifier) SHALL be a valid code identifier drawn from the HL70487_USL.2 value set.</Description>
 					<Assertion>
 						<IMPLY>
@@ -3557,7 +3557,7 @@
 						</OR>
 					</Assertion>
 				</Constraint>
-				<Constraint ID="NIST-xxx" Target="4[1].1[1]">
+				<Constraint ID="NIST-19" Target="4[1].1[1]">
 					<Description>If SPM-4.3 (Name of Coding system) is valued 'HL70487', SPM-4.1 (Identifier) SHALL be a valid code identifier drawn from the HL70487_USL.2 value set.</Description>
 					<Assertion>
 						<IMPLY>
@@ -3569,7 +3569,7 @@
 						</IMPLY>
 					</Assertion>
 				</Constraint>
-				<Constraint ID="NIST-xxx" Target="4[1].4[1]">
+				<Constraint ID="NIST-20" Target="4[1].4[1]">
 					<Description>If SPM-4.6 (Name of Alternate Coding System) is valued 'HL70487', SPM-4.4 (Alternate Identifier) SHALL be a valid code identifier drawn from the HL70487_USL.2 value set.</Description>
 					<Assertion>
 						<IMPLY>
@@ -3622,7 +3622,7 @@
 						</OR>
 					</Assertion>
 				</Constraint>
-				<Constraint ID="NIST-xxx" Target="4[1].1[1]">
+				<Constraint ID="NIST-19" Target="4[1].1[1]">
 					<Description>If SPM-4.3 (Name of Coding system) is valued 'HL70487', SPM-4.1 (Identifier) SHALL be a valid code identifier drawn from the HL70487_USL.2 value set.</Description>
 					<Assertion>
 						<IMPLY>
@@ -3634,7 +3634,7 @@
 						</IMPLY>
 					</Assertion>
 				</Constraint>
-				<Constraint ID="NIST-xxx" Target="4[1].4[1]">
+				<Constraint ID="NIST-20" Target="4[1].4[1]">
 					<Description>If SPM-4.6 (Name of Alternate Coding System) is valued 'HL70487', SPM-4.4 (Alternate Identifier) SHALL be a valid code identifier drawn from the HL70487_USL.2 value set.</Description>
 					<Assertion>
 						<IMPLY>
@@ -4012,12 +4012,12 @@
 						<Plugin QualifiedClassName="gov.nist.healthcare.mu.loi.custom.LOI_47"/>
 					</Assertion>
 				</Constraint>
-				<Constraint ID="LOI-53" Target="5[1].3[1].1[1].2[1]">
+				<!-- <Constraint ID="LOI-53" Target="5[1].3[1].1[1].2[1]">
 					<Description>The value of OBR-2 (Placer Order Number) SHALL NOT be valued identical to another instance of OBR-2 (Placer Order Number) in the message.</Description>
 					<Assertion>
 						<Plugin QualifiedClassName="gov.nist.healthcare.mu.loi.custom.LOI_53"/>
 					</Assertion>
-				</Constraint>
+				</Constraint> -->
 			</ByID>
 			<ByID ID="OML_O21:LOI_GU_PRN">
 				<Constraint ID="LOI-14" Target="1[1].21[1]">

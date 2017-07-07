@@ -1477,6 +1477,7 @@
 						</Group>
 					</Group>
 					<Group Max="*" Min="0" Name="PRIOR_RESULT" ID="PRIOR_RESULT_HL7" Usage="C">
+						<Segment Max="1" Min="1" Ref="SGH_HL7" Usage="R"/>
 						<Group Max="1" Min="0" Name="PATIENT_PRIOR" ID="PATIENT_PRIOR_HL7" Usage="O">
 							<Segment Max="1" Min="1" Ref="PID_HL7" Usage="R"/>
 							<Segment Max="1" Min="0" Ref="PD1_HL7" Usage="O"/>
@@ -1499,6 +1500,7 @@
 								<Segment Max="*" Min="0" Ref="NTE_HL7" Usage="O"/>
 							</Group>
 						</Group>
+						<Segment Max="1" Min="1" Ref="SGT_HL7" Usage="R"/>
 					</Group>
 				</Group>
 				<Segment Max="*" Min="0" Ref="FT1_HL7" Usage="C"/>
@@ -1553,6 +1555,7 @@
 						</Group>
 					</Group>
 					<Group Max="*" Min="0" Name="PRIOR_RESULT" ID="PRIOR_RESULT_HL7" Usage="C">
+						<Segment Max="1" Min="1" Ref="SGH_HL7" Usage="R"/>
 						<Group Max="1" Min="0" Name="PATIENT_PRIOR" ID="PATIENT_PRIOR_HL7" Usage="O">
 							<Segment Max="1" Min="1" Ref="PID_HL7" Usage="R"/>
 							<Segment Max="1" Min="0" Ref="PD1_HL7" Usage="O"/>
@@ -1575,6 +1578,7 @@
 								<Segment Max="*" Min="0" Ref="NTE_HL7" Usage="O"/>
 							</Group>
 						</Group>
+						<Segment Max="1" Min="1" Ref="SGT_HL7" Usage="R"/>
 					</Group>
 				</Group>
 				<Segment Max="*" Min="0" Ref="FT1_HL7" Usage="C"/>
@@ -1629,6 +1633,7 @@
 						</Group>
 					</Group>
 					<Group Max="*" Min="0" Name="PRIOR_RESULT" ID="PRIOR_RESULT_HL7" Usage="C">
+						<Segment Max="1" Min="1" Ref="SGH_HL7" Usage="R"/>
 						<Group Max="1" Min="0" Name="PATIENT_PRIOR" ID="PATIENT_PRIOR_HL7" Usage="O">
 							<Segment Max="1" Min="1" Ref="PID_HL7" Usage="R"/>
 							<Segment Max="1" Min="0" Ref="PD1_HL7" Usage="O"/>
@@ -1651,6 +1656,7 @@
 								<Segment Max="*" Min="0" Ref="NTE_HL7" Usage="O"/>
 							</Group>
 						</Group>
+						<Segment Max="1" Min="1" Ref="SGT_HL7" Usage="R"/>
 					</Group>
 				</Group>
 				<Segment Max="*" Min="0" Ref="FT1_HL7" Usage="C"/>
@@ -1706,6 +1712,7 @@
 						</Group>
 					</Group>
 					<Group Max="*" Min="0" Name="PRIOR_RESULT" ID="PRIOR_RESULT_HL7" Usage="C">
+						<Segment Max="1" Min="1" Ref="SGH_HL7" Usage="R"/>
 						<Group Max="1" Min="0" Name="PATIENT_PRIOR" ID="PATIENT_PRIOR_HL7" Usage="O">
 							<Segment Max="1" Min="1" Ref="PID_HL7" Usage="R"/>
 							<Segment Max="1" Min="0" Ref="PD1_HL7" Usage="O"/>
@@ -1728,6 +1735,7 @@
 								<Segment Max="*" Min="0" Ref="NTE_HL7" Usage="O"/>
 							</Group>
 						</Group>
+						<Segment Max="1" Min="1" Ref="SGT_HL7" Usage="R"/>
 					</Group>
 				</Group>
 				<Segment Max="*" Min="0" Ref="FT1_HL7" Usage="C"/>
@@ -1782,6 +1790,7 @@
 						</Group>
 					</Group>
 					<Group Max="*" Min="0" Name="PRIOR_RESULT" ID="PRIOR_RESULT_HL7" Usage="C">
+						<Segment Max="1" Min="1" Ref="SGH_HL7" Usage="R"/>
 						<Group Max="1" Min="0" Name="PATIENT_PRIOR" ID="PATIENT_PRIOR_HL7" Usage="O">
 							<Segment Max="1" Min="1" Ref="PID_HL7" Usage="R"/>
 							<Segment Max="1" Min="0" Ref="PD1_HL7" Usage="O"/>
@@ -1804,6 +1813,7 @@
 								<Segment Max="*" Min="0" Ref="NTE_HL7" Usage="O"/>
 							</Group>
 						</Group>
+						<Segment Max="1" Min="1" Ref="SGT_HL7" Usage="R"/>
 					</Group>
 				</Group>
 				<Segment Max="*" Min="0" Ref="FT1_HL7" Usage="C"/>
@@ -1858,6 +1868,7 @@
 						</Group>
 					</Group>
 					<Group Max="*" Min="0" Name="PRIOR_RESULT" ID="PRIOR_RESULT_HL7" Usage="X">
+						<Segment Max="1" Min="1" Ref="SGH_HL7" Usage="R"/>
 						<Group Max="1" Min="0" Name="PATIENT_PRIOR" ID="PATIENT_PRIOR_HL7" Usage="X">
 							<Segment Max="1" Min="1" Ref="PID_HL7" Usage="R"/>
 							<Segment Max="1" Min="0" Ref="PD1_HL7" Usage="O"/>
@@ -1880,6 +1891,7 @@
 								<Segment Max="*" Min="0" Ref="NTE_HL7" Usage="O"/>
 							</Group>
 						</Group>
+						<Segment Max="1" Min="1" Ref="SGT_HL7" Usage="R"/>
 					</Group>
 				</Group>
 				<Segment Max="*" Min="0" Ref="FT1_HL7" Usage="X"/>
@@ -1895,16 +1907,16 @@
 			<Segment Ref="ERR_LOI" Usage="C" Min="0" Max="*"/>
 			<Segment Ref="SFT_HL7" Usage="O" Min="0" Max="*"/>
 			<Segment Ref="NTE_HL7" Usage="O" Min="0" Max="*"/>
-			<Group ID="ORL_RESPONSE " Name="RESPONSE" Usage="R" Min="1" Max="1">
-				<Group ID="ORL_PATIENT " Name="PATIENT" Usage="R" Min="1" Max="1">
+			<Group ID="ORL_RESPONSE" Name="RESPONSE" Usage="R" Min="1" Max="1">
+				<Group ID="ORL_PATIENT" Name="PATIENT" Usage="R" Min="1" Max="1">
 					<Segment Ref="PID_ORL_GU" Usage="R" Min="1" Max="1"/>
 					<Group ID="ORL_ORDER" Name="ORDER" Usage="R" Min="1" Max="1">
 						<Segment Ref="ORC_ORL_GU" Usage="R" Min="1" Max="1"/>
-						<Group ID="ORL_TIMING " Name="TIMING " Usage="O" Min="0" Max="*">
+						<Group ID="ORL_TIMING" Name="TIMING" Usage="O" Min="0" Max="*">
 							<Segment Ref="TQ1_HL7" Usage="R" Min="1" Max="1"/>
 							<Segment Ref="TQ2_HL7" Usage="O" Min="0" Max="*"/>
 						</Group>
-						<Group ID="ORL_OBSERVATION_REQUEST " Name="OBSERVATION_REQUEST " Usage="R" Min="1" Max="1">
+						<Group ID="ORL_OBSERVATION_REQUEST" Name="OBSERVATION_REQUEST" Usage="R" Min="1" Max="1">
 							<Segment Ref="OBR_LOI_GU" Usage="R" Min="1" Max="1"/>
 							<Group ID="ORL_SPECIMEN" Name="SPECIMEN" Usage="O" Min="0" Max="*">
 								<Segment Ref="SPM_HL7" Usage="R" Min="1" Max="1"/>
@@ -1921,16 +1933,16 @@
 			<Segment Ref="ERR_LOI" Usage="C" Min="0" Max="*"/>
 			<Segment Ref="SFT_HL7" Usage="O" Min="0" Max="*"/>
 			<Segment Ref="NTE_HL7" Usage="O" Min="0" Max="*"/>
-			<Group ID="ORL_RESPONSE " Name="RESPONSE" Usage="R" Min="1" Max="1">
-				<Group ID="ORL_PATIENT " Name="PATIENT" Usage="R" Min="1" Max="1">
+			<Group ID="ORL_RESPONSE" Name="RESPONSE" Usage="R" Min="1" Max="1">
+				<Group ID="ORL_PATIENT" Name="PATIENT" Usage="R" Min="1" Max="1">
 					<Segment Ref="PID_ORL_GU" Usage="R" Min="1" Max="1"/>
 					<Group ID="ORL_ORDER" Name="ORDER" Usage="R" Min="1" Max="1">
 						<Segment Ref="ORC_LOI_GU" Usage="R" Min="1" Max="1"/>
-						<Group ID="ORL_TIMING " Name="TIMING " Usage="O" Min="0" Max="*">
+						<Group ID="ORL_TIMING" Name="TIMING" Usage="O" Min="0" Max="*">
 							<Segment Ref="TQ1_HL7" Usage="R" Min="1" Max="1"/>
 							<Segment Ref="TQ2_HL7" Usage="O" Min="0" Max="*"/>
 						</Group>
-						<Group ID="ORL_OBSERVATION_REQUEST " Name="OBSERVATION_REQUEST " Usage="R" Min="1" Max="1">
+						<Group ID="ORL_OBSERVATION_REQUEST" Name="OBSERVATION_REQUEST" Usage="R" Min="1" Max="1">
 							<Segment Ref="OBR_LOI_GU" Usage="R" Min="1" Max="1"/>
 							<Group ID="ORL_SPECIMEN" Name="SPECIMEN" Usage="O" Min="0" Max="*">
 								<Segment Ref="SPM_HL7" Usage="R" Min="1" Max="1"/>
@@ -1948,16 +1960,16 @@
 			<Segment Ref="ERR_LOI" Usage="C" Min="0" Max="*"/>
 			<Segment Ref="SFT_HL7" Usage="O" Min="0" Max="*"/>
 			<Segment Ref="NTE_HL7" Usage="O" Min="0" Max="*"/>
-			<Group ID="ORL_RESPONSE " Name="RESPONSE" Usage="R" Min="1" Max="1">
-				<Group ID="ORL_PATIENT " Name="PATIENT" Usage="R" Min="1" Max="1">
+			<Group ID="ORL_RESPONSE" Name="RESPONSE" Usage="R" Min="1" Max="1">
+				<Group ID="ORL_PATIENT" Name="PATIENT" Usage="R" Min="1" Max="1">
 					<Segment Ref="PID_ORL_NG" Usage="R" Min="1" Max="1"/>
 					<Group ID="ORL_ORDER" Name="ORDER" Usage="R" Min="1" Max="1">
 						<Segment Ref="ORC_ORL_NG" Usage="R" Min="1" Max="1"/>
-						<Group ID="ORL_TIMING " Name="TIMING " Usage="O" Min="0" Max="*">
+						<Group ID="ORL_TIMING" Name="TIMING" Usage="O" Min="0" Max="*">
 							<Segment Ref="TQ1_HL7" Usage="R" Min="1" Max="1"/>
 							<Segment Ref="TQ2_HL7" Usage="O" Min="0" Max="*"/>
 						</Group>
-						<Group ID="ORL_OBSERVATION_REQUEST " Name="OBSERVATION_REQUEST " Usage="R" Min="1" Max="1">
+						<Group ID="ORL_OBSERVATION_REQUEST" Name="OBSERVATION_REQUEST" Usage="R" Min="1" Max="1">
 							<Segment Ref="OBR_LOI_NG" Usage="R" Min="1" Max="1"/>
 							<Group ID="ORL_SPECIMEN" Name="SPECIMEN" Usage="O" Min="0" Max="*">
 								<Segment Ref="SPM_HL7" Usage="R" Min="1" Max="1"/>
@@ -1974,16 +1986,16 @@
 			<Segment Ref="ERR_LOI" Usage="C" Min="0" Max="*"/>
 			<Segment Ref="SFT_HL7" Usage="O" Min="0" Max="*"/>
 			<Segment Ref="NTE_HL7" Usage="O" Min="0" Max="*"/>
-			<Group ID="ORL_RESPONSE " Name="RESPONSE" Usage="R" Min="1" Max="1">
-				<Group ID="ORL_PATIENT " Name="PATIENT" Usage="R" Min="1" Max="1">
+			<Group ID="ORL_RESPONSE" Name="RESPONSE" Usage="R" Min="1" Max="1">
+				<Group ID="ORL_PATIENT" Name="PATIENT" Usage="R" Min="1" Max="1">
 					<Segment Ref="PID_ORL_NG" Usage="R" Min="1" Max="1"/>
 					<Group ID="ORL_ORDER" Name="ORDER" Usage="R" Min="1" Max="1">
 						<Segment Ref="ORC_LOI_NG" Usage="R" Min="1" Max="1"/>
-						<Group ID="ORL_TIMING " Name="TIMING " Usage="O" Min="0" Max="*">
+						<Group ID="ORL_TIMING" Name="TIMING" Usage="O" Min="0" Max="*">
 							<Segment Ref="TQ1_HL7" Usage="R" Min="1" Max="1"/>
 							<Segment Ref="TQ2_HL7" Usage="O" Min="0" Max="*"/>
 						</Group>
-						<Group ID="ORL_OBSERVATION_REQUEST " Name="OBSERVATION_REQUEST " Usage="R" Min="1" Max="1">
+						<Group ID="ORL_OBSERVATION_REQUEST" Name="OBSERVATION_REQUEST" Usage="R" Min="1" Max="1">
 							<Segment Ref="OBR_LOI_NG" Usage="R" Min="1" Max="1"/>
 							<Group ID="ORL_SPECIMEN" Name="SPECIMEN" Usage="O" Min="0" Max="*">
 								<Segment Ref="SPM_HL7" Usage="R" Min="1" Max="1"/>
@@ -5306,7 +5318,7 @@
 			<Component Datatype="CE" MaxLength="483" MinLength="1" Name="Range Units" Usage="O"/>
 			<Component Datatype="ID" MaxLength="1" MinLength="1" Name="Range Type" Binding="HL70298" Usage="O"/>
 		</Datatype>
-		<Datatype Description="Composite Quantity With Units " ID="CQ" Label="CQ" Name="CQ">
+		<Datatype Description="Composite Quantity With Units" ID="CQ" Label="CQ" Name="CQ">
 			<Component Datatype="NM" MaxLength="16" MinLength="1" Name="Quantity" Usage="O"/>
 			<Component Datatype="CE" MaxLength="483" MinLength="1" Name="Units" Usage="O"/>
 		</Datatype>
@@ -5408,7 +5420,7 @@
 			<Component Datatype="IS" MaxLength="20" MinLength="1" Name="Financial Class Code" Usage="R"/>
 			<Component Datatype="TS" MaxLength="26" MinLength="1" Name="Effective Date" Usage="O"/>
 		</Datatype>
-		<Datatype Description="Family Name " ID="FN" Label="FN" Name="FN">
+		<Datatype Description="Family Name" ID="FN" Label="FN" Name="FN">
 			<Component Datatype="ST" MaxLength="50" MinLength="1" Name="Surname" Usage="R"/>
 			<Component Datatype="ST" MaxLength="20" MinLength="1" Name="Own Surname Prefix" Usage="O"/>
 			<Component Datatype="ST" MaxLength="50" MinLength="1" Name="Own Surname" Usage="O"/>
@@ -5489,7 +5501,7 @@
 			<Component Datatype="ID" MaxLength="3" MinLength="1" Name="Trigger Event" Binding="HL70003" Usage="R"/>
 			<Component Datatype="ID" MaxLength="7" MinLength="1" Name="Message Structure" Binding="HL70354" Usage="R"/>
 		</Datatype>
-		<Datatype Description="Numeric Array " ID="NA" Label="NA" Name="NA">
+		<Datatype Description="Numeric Array" ID="NA" Label="NA" Name="NA">
 			<Component Datatype="NM" MaxLength="16" MinLength="1" Name="Value1" Usage="R"/>
 			<Component Datatype="NM" MaxLength="16" MinLength="1" Name="Value2" Usage="O"/>
 			<Component Datatype="NM" MaxLength="16" MinLength="1" Name="Value3" Usage="O"/>
@@ -5515,7 +5527,7 @@
 		</Datatype>
 		<!--		<Datatype Description="TODO" ID="NUL" Name="NUL"/> 
 -->
-		<Datatype Description="Occurrence Code And Date " ID="OCD" Label="OCD" Name="OCD">
+		<Datatype Description="Occurrence Code And Date" ID="OCD" Label="OCD" Name="OCD">
 			<Component Datatype="CNE" MaxLength="705" MinLength="1" Name="Occurrence Code" Binding="HL70350" Usage="R"/>
 			<Component Datatype="DT" MaxLength="8" MinLength="1" Name="Occurrence Date" Usage="R"/>
 		</Datatype>
@@ -5589,7 +5601,7 @@
 			<Component Datatype="CWE" MaxLength="705" MinLength="1" Name="Assigning Jurisdiction" Usage="O"/>
 			<Component Datatype="CWE" MaxLength="705" MinLength="1" Name="Assigning Agency or Department" Usage="O"/>
 		</Datatype>
-		<Datatype Description="Parent Result Link " ID="PRL" Label="PRL" Name="PRL">
+		<Datatype Description="Parent Result Link" ID="PRL" Label="PRL" Name="PRL">
 			<Component Datatype="CE" MaxLength="483" MinLength="1" Name="Parent Observation Identifier" Usage="R"/>
 			<Component Datatype="ST" MaxLength="20" MinLength="1" Name="Parent Observation Sub-identifier" Usage="O"/>
 			<Component Datatype="TX" MaxLength="250" MinLength="1" Name="Parent Observation Value Descriptor" Usage="O"/>
@@ -5614,7 +5626,7 @@
 			<Component Datatype="ST" MaxLength="199" MinLength="1" Name="Value" Usage="O"/>
 			<Component Datatype="ID" MaxLength="3" MinLength="1" Name="Relational Conjunction" Binding="HL70210" Usage="O"/>
 		</Datatype>
-		<Datatype Description="Row Column Definition " ID="RCD" Label="RCD" Name="RCD">
+		<Datatype Description="Row Column Definition" ID="RCD" Label="RCD" Name="RCD">
 			<Component Datatype="ST" MaxLength="12" MinLength="1" Name="Segment Field Datatype" Usage="O"/>
 			<Component Datatype="ID" MaxLength="3" MinLength="1" Name="HL7 Data Type" Binding="HL70440" Usage="O"/>
 			<Component Datatype="NM" MaxLength="2" MinLength="1" Name="Maximum Column Width" Usage="O"/>
@@ -5834,7 +5846,7 @@
 			<Component Datatype="DTM" MaxLength="26" MinLength="1" Name="Range End Date/Time" Usage="O"/>
 		</Datatype>
 		<!-- CQ_TQ created to avoid issues of "sub-subcomponents in the TQ datatype -->
-		<Datatype Description="Composite Quantity With Units " ID="CQ_TQ" Label="CQ_TQ" Name="CQ">
+		<Datatype Description="Composite Quantity With Units" ID="CQ_TQ" Label="CQ_TQ" Name="CQ">
 			<Component Datatype="NM" MaxLength="16" MinLength="1" Name="Quantity" Usage="O"/>
 			<!-- <Component Datatype="CE" MaxLength="483" MinLength="1" Name="Units" Usage="O"/> -->
 			<!-- The original Units component with CE datatype is replaced by the components of the CE datatype -->
