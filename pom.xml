@@ -7,12 +7,12 @@
 	<distributionManagement>
 		<repository>
 			<id>releases</id>
-			<url>http://vm-070.nist.gov:8081/nexus/content/repositories/releases</url>
-		</repository>
+			<url>${releases.url}</url>
+		</repository> 
 		<snapshotRepository>
 			<id>snapshots</id>
 			<name>Internal Snapshots</name>
-			<url>http://vm-070.nist.gov:8081/nexus/content/repositories/snapshots</url>
+			<url>${snapshots.url}</url> 
 		</snapshotRepository>
 	</distributionManagement>
 	<scm>
@@ -259,7 +259,7 @@
 		<dependency>
 			<groupId>gov.nist</groupId>
 			<artifactId>hl7-v2-validation</artifactId>
-			<version>1.1.5</version>
+			<version>1.1.18</version>
 			<optional>true</optional>
 		</dependency>
 	</dependencies>
