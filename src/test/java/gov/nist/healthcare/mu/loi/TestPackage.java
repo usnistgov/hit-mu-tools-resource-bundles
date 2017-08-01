@@ -63,6 +63,7 @@ public class TestPackage {
     }
 
     @Test
+    @Ignore
     public void testValidateTestMessage() throws Exception {
         System.out.println("*** Validate test messages ***");
         File f = new File("./src/test/resources/messages");
@@ -78,7 +79,6 @@ public class TestPackage {
     }
 
     @Test
-    @Ignore
     public void testValidateContextBased() throws Exception {
         System.out.println("*** Validate context-based messages ***");
         File f = new File(loiContext.getTESTCASE_DIR_F());
@@ -127,7 +127,7 @@ public class TestPackage {
                         for (Entry entry : entries) {
                             switch (entry.getClassification()) {
                             case "Error":
-                            case "Alert":
+                                // case "Alert":
                                 printEntry(entry);
                             }
                         }
