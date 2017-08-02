@@ -14,7 +14,6 @@ import gov.nist.healthcare.mu.bundle.documentation.model.json.JTestCase;
 import gov.nist.healthcare.mu.bundle.documentation.model.json.JTestCaseGroup;
 import gov.nist.healthcare.mu.bundle.documentation.model.json.JTestPlan;
 import gov.nist.healthcare.mu.bundle.documentation.model.json.JTestStep;
-import gov.nist.healthcare.mu.bundle.util.PDFUtil;
 import gov.nist.healthcare.mu.spreadsheet.model.TestCaseIdentifier;
 import gov.nist.healthcare.mu.spreadsheet.model.TestCaseMetadata;
 import java.io.File;
@@ -34,6 +33,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Properties;
+import java.util.Random;
 import java.util.Set;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipOutputStream;
@@ -54,12 +54,15 @@ import org.apache.commons.io.filefilter.NameFileFilter;
 import org.apache.commons.io.filefilter.NotFileFilter;
 import org.apache.commons.io.filefilter.PrefixFileFilter;
 import org.apache.commons.io.filefilter.SuffixFileFilter;
-import org.apache.commons.io.filefilter.WildcardFileFilter;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.log4j.Logger;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.SerializationFeature;
+import com.fasterxml.jackson.databind.node.ObjectNode;
 
 /**
  * eDOS resource bundle generator
@@ -249,6 +252,11 @@ public class EDOSGenerator extends BundleGenerator {
 
         long startTime = System.currentTimeMillis();
         EDOSGenerator generator = new EDOSGenerator();
+
+        File contextBased = new File(generator.getContext().getTESTCASE_DIR_F());
+        File contextFree = new File(
+                generator.getContext().getCONTEXT_FREE_DIR_F());
+
         String dir = generator.getContext().getTESTCASE_DIR_F();
         File testCasesDir = new File(dir);
 
@@ -267,62 +275,63 @@ public class EDOSGenerator extends BundleGenerator {
          * Uncomment to launch spreadsheet processing : - creates ER7 message -
          * creates test step specific validation context
          */
-        deleteFiles("Message", ".txt", testCasesDir);
-        deleteFiles("Message", ".html", testCasesDir);
-        deleteFiles("Message", ".xml", testCasesDir);
-        deleteFiles("Message", ".html", testCasesDir);
-        deleteFiles("Message", ".pdf", testCasesDir);
-
-        deleteFiles("Constraints", ".xml", testCasesDir);
-        deleteFiles("Constraints", ".json", testCasesDir);
-
+        // deleteFiles("Message", ".txt", testCasesDir);
+        // deleteFiles("Message", ".html", testCasesDir);
+        // deleteFiles("Message", ".xml", testCasesDir);
+        // deleteFiles("Message", ".html", testCasesDir);
+        // deleteFiles("Message", ".pdf", testCasesDir);
+        //
+        // deleteFiles("Constraints", ".xml", testCasesDir);
+        // deleteFiles("Constraints", ".json", testCasesDir);
+        //
         generator.init(lis, "LIS");
         generator.init(ehr, "EHR");
 
         /* XML MESSAGE */
-        generator.generateMessageXML(testCasesDir);
-        generator.generateMessage_HTML(testCasesDir);
-        generator.generateMessageContent_HTML(testCasesDir);
+        // generator.generateMessageXML(testCasesDir);
+        // generator.generateMessage_HTML(testCasesDir);
+        // generator.generateMessageContent_HTML(testCasesDir);
 
-        // LIS = lab
-        // EHR = provider
-        String[] labToProvider = { "*EDOS_0.0*", "*EDOS_1.0*", "*EDOS_2.1*",
-                "*EDOS_2.2*", "*EDOS_2.3*", "*EDOS_2.4*", "*EDOS_2.5*" };
-        String[] providerToLab = { "*MFK_0.0*" };
+        /*
+         * LIS = lab EHR = provider
+         */
+        // String[] labToProvider = { "*EDOS_0.0*", "*EDOS_1.0*", "*EDOS_2.1*",
+        // "*EDOS_2.2*", "*EDOS_2.3*", "*EDOS_2.4*", "*EDOS_2.5*" };
+        // String[] providerToLab = { "*MFK_0.0*" };
 
-        // TDS
-        deleteFiles("TestDataSpecification", ".html", testCasesDir);
-        deleteFiles("TestDataSpecification", ".pdf", testCasesDir);
-        deleteFiles("TestDataSpecification", ".json", testCasesDir);
-        deleteFiles("TestDataSpecification", ".xml", testCasesDir);
+        /* TDS */
+        // deleteFiles("TestDataSpecification", ".html", testCasesDir);
+        // deleteFiles("TestDataSpecification", ".pdf", testCasesDir);
+        // deleteFiles("TestDataSpecification", ".json", testCasesDir);
+        // deleteFiles("TestDataSpecification", ".xml", testCasesDir);
 
-        // IOFileFilter autoTds = null;
-        // IOFileFilter genericTds = null;
-        IOFileFilter autoTds = new WildcardFileFilter(Arrays.asList("*"));
-        IOFileFilter genericTds = new WildcardFileFilter(Arrays.asList(""));
+        // // IOFileFilter autoTds = null;
+        // // IOFileFilter genericTds = null;
+        // IOFileFilter autoTds = new WildcardFileFilter(Arrays.asList("*"));
+        // IOFileFilter genericTds = new WildcardFileFilter(Arrays.asList(""));
+        //
+        // generator.generateTDS(testCasesDir, autoTds, genericTds);
 
-        generator.generateTDS(testCasesDir, autoTds, genericTds);
+        /* TEST STORY */
+        // deleteFiles("TestStory", ".html", testCasesDir);
+        // deleteFiles("TestStory", ".pdf", testCasesDir);
+        // deleteFiles("TestStory", ".json", testCasesDir);
+        //
+        // generator.generateTestStory_HTML(testCasesDir);
 
-        // TEST STORY
-        deleteFiles("TestStory", ".html", testCasesDir);
-        deleteFiles("TestStory", ".pdf", testCasesDir);
-        deleteFiles("TestStory", ".json", testCasesDir);
-
-        generator.generateTestStory_HTML(testCasesDir);
-
-        // JUROR
-        String[] juror = { "*Smoke Test*", "*Smoke test*", "*Initial load*",
-                "*Update_*" };
-        IOFileFilter ehrAutoJuror = new WildcardFileFilter(juror);
-        IOFileFilter ehrGenericJuror = FileFilterUtils.falseFileFilter();
-
-        File EHRTestCasesDir = new File(testCasesDir, "EHR");
-        deleteFiles("Juror", ".xml", EHRTestCasesDir);
-        deleteFiles("JurorDocument", ".html", EHRTestCasesDir);
-        deleteFiles("JurorDocument", ".pdf", EHRTestCasesDir);
-        generator.mergeXmlStepMessages(EHRTestCasesDir);
-        generator.generateEHRJuror(EHRTestCasesDir, ehrAutoJuror,
-                ehrGenericJuror);
+        /* JUROR */
+        // String[] juror = { "*Smoke Test*", "*Smoke test*", "*Initial load*",
+        // "*Update_*" };
+        // IOFileFilter ehrAutoJuror = new WildcardFileFilter(juror);
+        // IOFileFilter ehrGenericJuror = FileFilterUtils.falseFileFilter();
+        //
+        // File EHRTestCasesDir = new File(testCasesDir, "EHR");
+        // deleteFiles("Juror", ".xml", EHRTestCasesDir);
+        // deleteFiles("JurorDocument", ".html", EHRTestCasesDir);
+        // deleteFiles("JurorDocument", ".pdf", EHRTestCasesDir);
+        // generator.mergeXmlStepMessages(EHRTestCasesDir);
+        // generator.generateEHRJuror(EHRTestCasesDir, ehrAutoJuror,
+        // ehrGenericJuror);
 
         // No need for html juror in LIS (hardcoded)
         // IOFileFilter lisAutoJuror = FileFilterUtils.falseFileFilter();
@@ -331,78 +340,83 @@ public class EDOSGenerator extends BundleGenerator {
         // generator.generateJuror(LISTestCasesDir,lisAutoJuror,lisGenericJuror);
 
         /* PDF generation */
-        IOFileFilter testStoryFilter = new NameFileFilter("TestStory.html");
-        generator.generatePDFs(testCasesDir, testStoryFilter);
-
-        IOFileFilter messageContentFilter = new NameFileFilter(
-                "MessageContent.html");
-        generator.generatePDFs(testCasesDir, messageContentFilter);
-
-        IOFileFilter tdsFilter = new NameFileFilter(
-                "TestDataSpecification_pdf.html");
-        generator.generatePDFs(testCasesDir, tdsFilter);
-
-        IOFileFilter jurorFilter = new NameFileFilter("JurorDocument_pdf.html");
-        generator.generatePDFs(testCasesDir, jurorFilter);
-
+        // IOFileFilter testStoryFilter = new NameFileFilter("TestStory.html");
+        // generator.generatePDFs(testCasesDir, testStoryFilter);
+        //
+        // IOFileFilter messageContentFilter = new NameFileFilter(
+        // "MessageContent.html");
+        // generator.generatePDFs(testCasesDir, messageContentFilter);
+        //
+        // IOFileFilter tdsFilter = new NameFileFilter(
+        // "TestDataSpecification_pdf.html");
+        // generator.generatePDFs(testCasesDir, tdsFilter);
+        //
+        // IOFileFilter jurorFilter = new
+        // NameFileFilter("JurorDocument_pdf.html");
+        // generator.generatePDFs(testCasesDir, jurorFilter);
+        //
         generator.update(testCasesDir);
 
         /* TEST PACKAGE */
-        deleteFiles("TestPackage", ".pdf", testCasesDir);
-        /* 1. Generate test package at test step level */
-        IOFileFilter stepFilter = new NameFileFilter("TestStep.json");
-        Collection<File> steps = FileUtils.listFiles(testCasesDir, stepFilter,
-                FileFilterUtils.trueFileFilter());
+        // deleteFiles("TestPackage", ".pdf", testCasesDir);
+        // /* 1. Generate test package at test step level */
+        // IOFileFilter stepFilter = new NameFileFilter("TestStep.json");
+        // Collection<File> steps = FileUtils.listFiles(testCasesDir,
+        // stepFilter,
+        // FileFilterUtils.trueFileFilter());
+        //
+        // for (File step : steps) {
+        // File stepDir = step.getParentFile();
+        // File pdfFile = new File(stepDir, "TestPackage.pdf");
+        // List<File> files = new ArrayList<File>();
+        // File ts = new File(stepDir, "TestStory.html");
+        // File mc = new File(stepDir, "MessageContent.html");
+        // File tds = new File(stepDir, "TestDataSpecification_pdf.html");
+        // File m = new File(stepDir, "Message.html");
+        //
+        // if (ts.exists()) {
+        // files.add(ts);
+        // }
+        // if (mc.exists()) {
+        // files.add(mc);
+        // }
+        // if (tds.exists()) {
+        // files.add(tds);
+        // }
+        // if (m.exists()) {
+        // files.add(m);
+        // }
+        // if (files.size() > 0) {
+        // PDFUtil.genPDF(files, pdfFile);
+        // }
+        // }
+        //
+        // /* 2. Generate test package at test case level */
+        // IOFileFilter testCaseFilter = new NameFileFilter("TestCase.json");
+        // Collection<File> testCases = FileUtils.listFiles(testCasesDir,
+        // testCaseFilter, FileFilterUtils.trueFileFilter());
+        //
+        // for (File testCase : testCases) {
+        // File testCaseDir = testCase.getParentFile();
+        // File pdfFile = new File(testCaseDir, "TestPackage.pdf");
+        // List<File> files = new ArrayList<File>();
+        // File ts = new File(testCaseDir, "TestStory.html");
+        // File jd = new File(testCaseDir, "JurorDocument_pdf.html");
+        //
+        // if (ts.exists()) {
+        // files.add(ts);
+        // }
+        // if (jd.exists()) {
+        // files.add(jd);
+        // }
+        //
+        // if (files.size() > 0) {
+        // PDFUtil.genPDF(files, pdfFile);
+        // }
+        // }
 
-        for (File step : steps) {
-            File stepDir = step.getParentFile();
-            File pdfFile = new File(stepDir, "TestPackage.pdf");
-            List<File> files = new ArrayList<File>();
-            File ts = new File(stepDir, "TestStory.html");
-            File mc = new File(stepDir, "MessageContent.html");
-            File tds = new File(stepDir, "TestDataSpecification_pdf.html");
-            File m = new File(stepDir, "Message.html");
-
-            if (ts.exists()) {
-                files.add(ts);
-            }
-            if (mc.exists()) {
-                files.add(mc);
-            }
-            if (tds.exists()) {
-                files.add(tds);
-            }
-            if (m.exists()) {
-                files.add(m);
-            }
-            if (files.size() > 0) {
-                PDFUtil.genPDF(files, pdfFile);
-            }
-        }
-
-        /* 2. Generate test package at test case level */
-        IOFileFilter testCaseFilter = new NameFileFilter("TestCase.json");
-        Collection<File> testCases = FileUtils.listFiles(testCasesDir,
-                testCaseFilter, FileFilterUtils.trueFileFilter());
-
-        for (File testCase : testCases) {
-            File testCaseDir = testCase.getParentFile();
-            File pdfFile = new File(testCaseDir, "TestPackage.pdf");
-            List<File> files = new ArrayList<File>();
-            File ts = new File(testCaseDir, "TestStory.html");
-            File jd = new File(testCaseDir, "JurorDocument_pdf.html");
-
-            if (ts.exists()) {
-                files.add(ts);
-            }
-            if (jd.exists()) {
-                files.add(jd);
-            }
-
-            if (files.size() > 0) {
-                PDFUtil.genPDF(files, pdfFile);
-            }
-        }
+        /* set ids */
+        generator.setIds(contextFree, contextBased);
 
         long endTime = System.currentTimeMillis();
         logger.info("total time : " + (endTime - startTime) / 1000 + " seconds");
@@ -1074,6 +1088,27 @@ public class EDOSGenerator extends BundleGenerator {
         tp.setName(name);
         tp.setDescription(description);
         return tp;
+    }
+
+    private void setIds(File contextFree, File contextBased) throws IOException {
+        List<String> names = Arrays.asList("TestObject.json", "TestPlan.json",
+                "TestCaseGroup.json", "TestCase.json", "TestStep.json");
+        NameFileFilter filter = new NameFileFilter(names);
+
+        Collection<File> files = FileUtils.listFiles(contextFree, filter,
+                FileFilterUtils.trueFileFilter());
+        files.addAll(FileUtils.listFiles(contextBased, filter,
+                FileFilterUtils.trueFileFilter()));
+
+        ObjectMapper mapper = new ObjectMapper();
+        mapper.enable(SerializationFeature.INDENT_OUTPUT);
+        Random r = new Random();
+        for (File file : files) {
+            JsonNode root = mapper.readTree(file);
+            long l = r.nextLong();
+            ((ObjectNode) root).put("id", l);
+            mapper.writeValue(file, root);
+        }
     }
 
 }
