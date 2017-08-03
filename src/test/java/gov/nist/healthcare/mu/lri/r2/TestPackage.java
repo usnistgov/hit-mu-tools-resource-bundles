@@ -64,7 +64,6 @@ public class TestPackage {
     @Test
     public void testValidatePackage() throws Exception {
         File f = new File(lriContext.getTESTCASE_DIR_F());
-
         File ehr = new File(f, "EHR");
         // File ehrGU = new File(ehr, "1-GU");
         // File ehrGU_LRI_0 = new File(ehrGU, "1-PT_and_INR");
@@ -74,9 +73,9 @@ public class TestPackage {
         // File lisNG = new File(lis, "2-NG");
 
         IOFileFilter msgFilter = new SuffixFileFilter("Message.txt");
-
         Collection<File> messages = FileUtils.listFiles(ehr, msgFilter,
                 TrueFileFilter.INSTANCE);
+
         for (File message : messages) {
             String folderName = message.getParentFile().getName();
             String messageString = FileUtils.readFileToString(message);
@@ -150,13 +149,15 @@ public class TestPackage {
         InputStream vsLibXML = TestPackage.class.getResourceAsStream(globalValueSetLibFileName);
 
         // The get() at the end will throw an exception if something goes wrong
+
         hl7.v2.profile.Profile profile = XMLDeserializer.deserialize(profileXML).get();
         ValueSetLibrary valueSetLibrary = ValueSetLibraryImpl.apply(vsLibXML).get();
-
         // A java friendly version of an HL7 validator
-        // This should be a singleton for a specific tool. We create it once and
+        // This should be a singleton for a specific tool. We create it once
+        // and
         // reuse it across validations
         return new SyncHL7Validator(profile, valueSetLibrary, context);
+
     }
 
 }

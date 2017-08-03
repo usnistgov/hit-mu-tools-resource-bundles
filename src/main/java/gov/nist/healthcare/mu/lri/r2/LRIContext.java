@@ -27,6 +27,10 @@ public class LRIContext implements BundleContext {
     private static final String TESTCASE_DIR = "/Contextbased";
     private static final String TESTCASE_DIR_F = RESOURCE_DIR_F + TESTCASE_DIR;
 
+    private static final String CONTEXT_FREE_DIR = "/Contextfree";
+    private static final String CONTEXT_FREE_DIR_F = RESOURCE_DIR_F
+            + CONTEXT_FREE_DIR;
+
     // spreadsheet-processing related
     private static final String SPREADSHEET_DIR = "/OLD_Documentation/Test_Case_Spreadsheet";
     private static final String SPREADSHEET = SPREADSHEET_DIR
@@ -226,6 +230,12 @@ public class LRIContext implements BundleContext {
     @Override
     public String getJUROR_XSLT() {
         return JUROR_XSLT;
+    }
+
+    @Override
+    public String getCONTEXT_FREE_DIR_F() {
+        return CONTEXT_FREE_DIR_F;
+
     }
 
 }
