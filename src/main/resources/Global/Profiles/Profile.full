@@ -3,7 +3,7 @@
 <!-- [Caroline] [TODO] do we want to add BindingStrength="U" to X & B usages ? -->
 <ConformanceProfile ID="51c61ea8-3424-49bd-b05c-b5c58c55c329" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/Jungyubw/NIST_healthcare_hl7_v2_profile_schema/master/Schema/NIST%20Validation%20Schema/Profile.xsd">
 	<!--   Added by Nicolas 9/11 -->
-	<MetaData Name="SS integration profile" OrgName="NIST" Version="1.0.1" Date="20170126"/>
+	<MetaData Name="SS integration profile" OrgName="NIST" Version="1.0.2" Date="20170809"/>
 	<Messages>
 		<Message ID="0d741773-619a-4ec1-b972-2589faa75b92" Type="ACK" Event="A01" StructID="ACK_A01" Description="ACK-A01-PH_SS-Ack">
 			<Segment Ref="MSH_SS" Usage="R" Min="1" Max="1"/>
@@ -1067,7 +1067,7 @@
 			<Field Name="VIP Indicator" Usage="X" Min="0" Max="1" Datatype="IS" MinLength="1" MaxLength="2" Binding="HL70099" ItemNo="01852"/>
 		</Segment> -->
 		<Segment ID="MSA_SS" Name="MSA" Label="MSA_SS" Description="Acknowledgement">
-			<Field Name="Acknowledgment Code" Usage="R" Min="1" Max="1" Datatype="ID_SS" Binding="PHVS_AcknowledgementCode_HL7_2x" MaxLength="2" MinLength="2"/>
+			<Field Name="Acknowledgment Code" Usage="R" Min="1" Max="1" Datatype="ID_SS" Binding="PHVS_AcknowledgmentCode_HL7_2x" MaxLength="2" MinLength="2"/>
 			<Field Name="Message Control ID" Usage="R" Min="1" Max="1" Datatype="ST_SS" MaxLength="20" MinLength="1"/>
 			<Field Name="Text Message" Usage="X" Min="0" Max="0" Datatype="ST" MaxLength="80" MinLength="1"/>
 			<Field Name="Expected Sequence Number" Usage="X" Min="0" Max="0" Datatype="NM" MaxLength="15" MinLength="1"/>
