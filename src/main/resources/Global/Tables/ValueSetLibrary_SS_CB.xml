@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- edited with XMLSpy v2016 (http://www.altova.com) by Nicolas Crouzier (NIST) -->
 <ValueSetLibrary xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ValueSetLibraryIdentifier="5674a4b2-0e26-4f6a-9dc8-ba78a4727c83" xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/Jungyubw/NIST_healthcare_hl7_v2_profile_schema/master/Schema/NIST%20Validation%20Schema/ValueSets.xsd">
-	<MetaData Name="Vocab for SS Context Based" OrgName="NIST" Version="1.0.0" Date="20160222"/>
+	<MetaData Name="Vocab for SS Context Based" OrgName="NIST" Version="1.0.1" Date="20170901"/>
 	<NoValidation>
 		<!-- excluded because empty -->
 		<BindingIdentifier>HL70010</BindingIdentifier>
@@ -173,7 +173,7 @@
 			<ValueElement Value="I25.110" CodeSystem="I10C" DisplayName="Atherosclerotic heart disease of native coronary artery with unstable angina pectoris"/>
 			<ValueElement Value="I25110" CodeSystem="I10C" DisplayName="Atherosclerotic heart disease of native coronary artery with unstable angina pectoris"/>
 			<ValueElement Value="I259" CodeSystem="I10C" DisplayName="Chronic ischemic heart disease, unspecified"/>
-			<ValueElement Value="I25.9 " CodeSystem="I10C" DisplayName="Chronic ischemic heart disease, unspecified"/>
+			<ValueElement Value="I25.9" CodeSystem="I10C" DisplayName="Chronic ischemic heart disease, unspecified"/>
 			<ValueElement Value="I209" CodeSystem="I10C" DisplayName="Angina pectoris, unspecified"/>
 			<ValueElement Value="I20.9" CodeSystem="I10C" DisplayName="Angina pectoris, unspecified"/>
 			<ValueElement Value="I499" CodeSystem="I10C" DisplayName="Cardiac arrhythmia, unspecified"/>
@@ -240,15 +240,15 @@
 			<ValueElement Value="9279-1" CodeSystem="LN" DisplayName="Breaths:NRat:Pt:Respiratory system:Qn:"/>
 			<ValueElement Value="3141-9" CodeSystem="LN" DisplayName="Body weight:Mass:Pt:^Patient:Qn:Measured"/>
 		</ValueSetDefinition>
-		<ValueSetDefinition BindingIdentifier="PHVS_AcknowledgementCode_HL7_2x" Oid="2.16.840.1.114222.4.11.958" Name="Acknowledgment Code (HL7)">
+		<!-- <ValueSetDefinition BindingIdentifier="PHVS_AcknowledgementCode_HL7_2x" Oid="2.16.840.1.114222.4.11.958" Name="Acknowledgment Code (HL7)">
 			<ValueElement Value="CA" CodeSystem="HL70008" DisplayName="Enhanced mode: Accept acknowledgment: Commit Accept"/>
 			<ValueElement Value="CE" CodeSystem="HL70008" DisplayName="Enhanced mode: Accept acknowledgment: Commit Error"/>
 			<ValueElement Value="CR" CodeSystem="HL70008" DisplayName="Enhanced mode: Accept acknowledgment: Commit Reject"/>
 			<ValueElement Value="AA" CodeSystem="HL70008" DisplayName="Original mode: Application Accept - Enhanced mode: Application acknowledgment: Accept"/>
 			<ValueElement Value="AE" CodeSystem="HL70008" DisplayName="Original mode: Application Error - Enhanced mode: Application acknowledgment: Error"/>
 			<ValueElement Value="AR" CodeSystem="HL70008" DisplayName="Original mode: Application Reject - Enhanced mode: Application acknowledgment: Reject"/>
-		</ValueSetDefinition>
-		<ValueSetDefinition BindingIdentifier="PHVS_County_FIPS_6-4" Oid="2.16.840.1.114222.4.11.829" Name="Country">
+		</ValueSetDefinition>-->
+		<ValueSetDefinition BindingIdentifier="PHVS_County_FIPS_6-4" Oid="2.16.840.1.114222.4.11.829" Name="County">
 			<ValueElement Value="45001" CodeSystem="FIPS6_4" DisplayName="Abbeville"/>
 			<ValueElement Value="22001" CodeSystem="FIPS6_4" DisplayName="Acadia"/>
 			<ValueElement Value="51001" CodeSystem="FIPS6_4" DisplayName="Accomack"/>
@@ -3525,6 +3525,227 @@
 			<ValueElement Value="46137" CodeSystem="FIPS6_4" DisplayName="Ziebach"/>
 		</ValueSetDefinition>
 		<!-- value sets from PHINVADS -->
+		<ValueSetDefinition BindingIdentifier="PHVS_FacilityVisitType_SyndromicSurveillance" Oid="2.16.840.1.114222.4.11.3401" Name="Facility / Visit Type (Syndromic Surveillance)">
+			<ValueElement Value="261QE0002X" CodeSystem="HCPTNUCC" DisplayName="Emergency Care"/>
+			<ValueElement Value="1021-5" CodeSystem="HSLOC" DisplayName="Inpatient practice setting"/>
+			<ValueElement Value="261QM2500X" CodeSystem="HCPTNUCC" DisplayName="Medical Specialty"/>
+			<ValueElement Value="261QP2300X" CodeSystem="HCPTNUCC" DisplayName="Primary Care"/>
+			<ValueElement Value="261QU0200X" CodeSystem="HCPTNUCC" DisplayName="Urgent Care"/>
+		</ValueSetDefinition>
+		<ValueSetDefinition BindingIdentifier="NHSNHealthcareServiceLocationCode" Oid="2.16.840.1.113883.13.19" Name="Healthcare Service Location (NHSN)">
+			<ValueElement Value="1162-7" CodeSystem="HSLOC" DisplayName="24-Hour Observation Area"/>
+			<ValueElement Value="1184-1" CodeSystem="HSLOC" DisplayName="Administrative Areas"/>
+			<ValueElement Value="1210-4" CodeSystem="HSLOC" DisplayName="Adult Mixed Acuity Unit"/>
+			<ValueElement Value="1099-1" CodeSystem="HSLOC" DisplayName="Adult Step Down Unit (post-critical care)"/>
+			<ValueElement Value="1110-6" CodeSystem="HSLOC" DisplayName="Allergy Clinic"/>
+			<ValueElement Value="1166-8" CodeSystem="HSLOC" DisplayName="Ambulatory Surgery Center"/>
+			<ValueElement Value="1212-0" CodeSystem="HSLOC" DisplayName="Any Age Mixed Acuity Unit"/>
+			<ValueElement Value="1106-4" CodeSystem="HSLOC" DisplayName="Assisted Living Area"/>
+			<ValueElement Value="1145-2" CodeSystem="HSLOC" DisplayName="Behavioral Health Clinic"/>
+			<ValueElement Value="1185-8" CodeSystem="HSLOC" DisplayName="Blood Bank"/>
+			<ValueElement Value="1195-7" CodeSystem="HSLOC" DisplayName="Blood Collection (Blood Drive Campaign)"/>
+			<ValueElement Value="1147-8" CodeSystem="HSLOC" DisplayName="Blood Collection Center"/>
+			<ValueElement Value="1022-3" CodeSystem="HSLOC" DisplayName="Bone Marrow Transplant SCA"/>
+			<ValueElement Value="1026-4" CodeSystem="HSLOC" DisplayName="Burn Critical Care"/>
+			<ValueElement Value="1005-8" CodeSystem="HSLOC" DisplayName="Cardiac Catheterization Room/Suite"/>
+			<ValueElement Value="1112-2" CodeSystem="HSLOC" DisplayName="Cardiac Rehabilitation Center"/>
+			<ValueElement Value="1113-0" CodeSystem="HSLOC" DisplayName="Cardiology Clinic"/>
+			<ValueElement Value="1186-6" CodeSystem="HSLOC" DisplayName="Central Sterile Supply"/>
+			<ValueElement Value="1187-4" CodeSystem="HSLOC" DisplayName="Central Trash Area"/>
+			<ValueElement Value="1095-9" CodeSystem="HSLOC" DisplayName="Cesarean Section Room/Suite"/>
+			<ValueElement Value="1011-6" CodeSystem="HSLOC" DisplayName="Clinical Chemistry"/>
+			<ValueElement Value="1010-8" CodeSystem="HSLOC" DisplayName="General Laboratory"/>
+			<ValueElement Value="1148-6" CodeSystem="HSLOC" DisplayName="Continence Clinic"/>
+			<ValueElement Value="1115-5" CodeSystem="HSLOC" DisplayName="Dermatology Clinic"/>
+			<ValueElement Value="1198-1" CodeSystem="HSLOC" DisplayName="Inpatient Acute Dialysis SCA"/>
+			<ValueElement Value="1207-0" CodeSystem="HSLOC" DisplayName="Donor Apheresis Center"/>
+			<ValueElement Value="1108-0" CodeSystem="HSLOC" DisplayName="Emergency Department"/>
+			<ValueElement Value="1116-3" CodeSystem="HSLOC" DisplayName="Diabetes/Endocrinology Clinic"/>
+			<ValueElement Value="1007-4" CodeSystem="HSLOC" DisplayName="Endoscopy Suite"/>
+			<ValueElement Value="1188-2" CodeSystem="HSLOC" DisplayName="Facility Grounds"/>
+			<ValueElement Value="1117-1" CodeSystem="HSLOC" DisplayName="Family Medicine Clinic"/>
+			<ValueElement Value="1206-2" CodeSystem="HSLOC" DisplayName="Float"/>
+			<ValueElement Value="1118-9" CodeSystem="HSLOC" DisplayName="Outpatient Gastrointestinal (GI) Clinic"/>
+			<ValueElement Value="1120-5" CodeSystem="HSLOC" DisplayName="Outpatient Medical Clinic"/>
+			<ValueElement Value="1121-3" CodeSystem="HSLOC" DisplayName="Gynecology Clinic"/>
+			<ValueElement Value="1012-4" CodeSystem="HSLOC" DisplayName="Hematology"/>
+			<ValueElement Value="1200-5" CodeSystem="HSLOC" DisplayName="Outpatient Hematology/Oncology Clinic"/>
+			<ValueElement Value="1088-4" CodeSystem="HSLOC" DisplayName="Hematology/Oncology SCA"/>
+			<ValueElement Value="1013-2" CodeSystem="HSLOC" DisplayName="Histology/Surgical Pathology"/>
+			<ValueElement Value="1161-9" CodeSystem="HSLOC" DisplayName="Holistic Medicine Center"/>
+			<ValueElement Value="1194-0" CodeSystem="HSLOC" DisplayName="Home-based Hospice"/>
+			<ValueElement Value="1182-5" CodeSystem="HSLOC" DisplayName="Housekeeping/Environmental Services"/>
+			<ValueElement Value="1017-3" CodeSystem="HSLOC" DisplayName="Hyperbaric Oxygen Center"/>
+			<ValueElement Value="1018-1" CodeSystem="HSLOC" DisplayName="Infusion Center"/>
+			<ValueElement Value="1071-0" CodeSystem="HSLOC" DisplayName="Acute Stroke Ward"/>
+			<ValueElement Value="1075-1" CodeSystem="HSLOC" DisplayName="Inpatient Adolescent Behavioral Health Ward"/>
+			<ValueElement Value="1205-4" CodeSystem="HSLOC" DisplayName="Inpatient antenatal ward"/>
+			<ValueElement Value="1051-2" CodeSystem="HSLOC" DisplayName="Inpatient Behavioral Health/Psych Ward"/>
+			<ValueElement Value="1052-0" CodeSystem="HSLOC" DisplayName="Inpatient Burn Ward"/>
+			<ValueElement Value="1053-8" CodeSystem="HSLOC" DisplayName="Inpatient Ear/Nose/Throat Ward"/>
+			<ValueElement Value="1054-6" CodeSystem="HSLOC" DisplayName="Inpatient Gastrointestinal Ward"/>
+			<ValueElement Value="1055-3" CodeSystem="HSLOC" DisplayName="Inpatient Genitourinary Ward"/>
+			<ValueElement Value="1056-1" CodeSystem="HSLOC" DisplayName="Inpatient Gerontology Ward"/>
+			<ValueElement Value="1057-9" CodeSystem="HSLOC" DisplayName="Inpatient Gynecology Ward"/>
+			<ValueElement Value="1165-0" CodeSystem="HSLOC" DisplayName="Inpatient Hospice"/>
+			<ValueElement Value="1171-8" CodeSystem="HSLOC" DisplayName="Inpatient Jail Unit"/>
+			<ValueElement Value="1060-3" CodeSystem="HSLOC" DisplayName="Inpatient Medical Ward"/>
+			<ValueElement Value="1061-1" CodeSystem="HSLOC" DisplayName="Inpatient Medical/Surgical Ward"/>
+			<ValueElement Value="1062-9" CodeSystem="HSLOC" DisplayName="Inpatient Neurology Ward"/>
+			<ValueElement Value="1063-7" CodeSystem="HSLOC" DisplayName="Inpatient Neurosurgical Ward"/>
+			<ValueElement Value="1096-7" CodeSystem="HSLOC" DisplayName="Inpatient Operating Room/Suite"/>
+			<ValueElement Value="1064-5" CodeSystem="HSLOC" DisplayName="Inpatient Ophthalmology Ward"/>
+			<ValueElement Value="1066-0" CodeSystem="HSLOC" DisplayName="Inpatient Orthopedic Trauma Ward"/>
+			<ValueElement Value="1065-2" CodeSystem="HSLOC" DisplayName="Inpatient Orthopedic Ward"/>
+			<ValueElement Value="1077-7" CodeSystem="HSLOC" DisplayName="Inpatient Pediatric Behavioral Health Ward"/>
+			<ValueElement Value="1078-5" CodeSystem="HSLOC" DisplayName="Inpatient Pediatric Burn Ward"/>
+			<ValueElement Value="1079-3" CodeSystem="HSLOC" DisplayName="Inpatient Pediatric Ear, Nose, Throat Ward"/>
+			<ValueElement Value="1080-1" CodeSystem="HSLOC" DisplayName="Inpatient Pediatric Genitourinary Ward"/>
+			<ValueElement Value="1076-9" CodeSystem="HSLOC" DisplayName="Inpatient Medical Pediatric Ward"/>
+			<ValueElement Value="1081-9" CodeSystem="HSLOC" DisplayName="Inpatient Pediatric Med/Surg Ward"/>
+			<ValueElement Value="1082-7" CodeSystem="HSLOC" DisplayName="Inpatient Pediatric Neurology Ward"/>
+			<ValueElement Value="1083-5" CodeSystem="HSLOC" DisplayName="Inpatient Pediatric Neurosurgical Ward"/>
+			<ValueElement Value="1084-3" CodeSystem="HSLOC" DisplayName="Inpatient Pediatric Orthopedic Ward"/>
+			<ValueElement Value="1085-0" CodeSystem="HSLOC" DisplayName="Inpatient Pediatric Rehabilitation Ward"/>
+			<ValueElement Value="1086-8" CodeSystem="HSLOC" DisplayName="Inpatient Pediatric Surgical Ward"/>
+			<ValueElement Value="1067-8" CodeSystem="HSLOC" DisplayName="Inpatient Plastic Surgery Ward"/>
+			<ValueElement Value="1068-6" CodeSystem="HSLOC" DisplayName="Inpatient Postpartum Ward"/>
+			<ValueElement Value="1069-4" CodeSystem="HSLOC" DisplayName="Inpatient Pulmonary Ward"/>
+			<ValueElement Value="1070-2" CodeSystem="HSLOC" DisplayName="Inpatient Rehabilitation Ward"/>
+			<ValueElement Value="1172-6" CodeSystem="HSLOC" DisplayName="Inpatient School Infirmary"/>
+			<ValueElement Value="1072-8" CodeSystem="HSLOC" DisplayName="Inpatient Surgical Ward"/>
+			<ValueElement Value="1073-6" CodeSystem="HSLOC" DisplayName="Inpatient Vascular Surgery Ward"/>
+			<ValueElement Value="1038-9" CodeSystem="HSLOC" DisplayName="Inpatient Well Baby Nursery (Level I)"/>
+			<ValueElement Value="1170-0" CodeSystem="HSLOC" DisplayName="School or Prison Infirmary"/>
+			<ValueElement Value="1203-9" CodeSystem="HSLOC" DisplayName="Interventional Radiology"/>
+			<ValueElement Value="1058-7" CodeSystem="HSLOC" DisplayName="Labor and Delivery Ward"/>
+			<ValueElement Value="1059-5" CodeSystem="HSLOC" DisplayName="Labor, Delivery, Recovery, Postpartum Suite (LDRP)"/>
+			<ValueElement Value="1183-3" CodeSystem="HSLOC" DisplayName="Laundry Room"/>
+			<ValueElement Value="1204-7" CodeSystem="HSLOC" DisplayName="Location outside facility"/>
+			<ValueElement Value="1090-0" CodeSystem="HSLOC" DisplayName="Long-Term Acute Care (LTAC)"/>
+			<ValueElement Value="1103-1" CodeSystem="HSLOC" DisplayName="Long-Term Care Alzheimer's Unit"/>
+			<ValueElement Value="1104-9" CodeSystem="HSLOC" DisplayName="Long-Term Care Behavioral Health/Psych Unit"/>
+			<ValueElement Value="1105-6" CodeSystem="HSLOC" DisplayName="Long-Term Care Rehabilitation Unit"/>
+			<ValueElement Value="1102-3" CodeSystem="HSLOC" DisplayName="Long-Term Care Unit"/>
+			<ValueElement Value="1028-0" CodeSystem="HSLOC" DisplayName="Medical Cardiac Critical Care"/>
+			<ValueElement Value="1027-2" CodeSystem="HSLOC" DisplayName="Medical Critical Care"/>
+			<ValueElement Value="1122-1" CodeSystem="HSLOC" DisplayName="Genetics Clinic"/>
+			<ValueElement Value="1029-8" CodeSystem="HSLOC" DisplayName="Medical/Surgical Critical Care"/>
+			<ValueElement Value="1014-0" CodeSystem="HSLOC" DisplayName="Microbiology"/>
+			<ValueElement Value="1176-7" CodeSystem="HSLOC" DisplayName="Mobile Blood Collection center"/>
+			<ValueElement Value="1174-2" CodeSystem="HSLOC" DisplayName="Mobile Emergency Services/EMS"/>
+			<ValueElement Value="1175-9" CodeSystem="HSLOC" DisplayName="Mobile MRI/CT"/>
+			<ValueElement Value="1189-0" CodeSystem="HSLOC" DisplayName="Morgue/Autopsy Room"/>
+			<ValueElement Value="1039-7" CodeSystem="HSLOC" DisplayName="Neonatal Critical Care(Level II/III)"/>
+			<ValueElement Value="1040-5" CodeSystem="HSLOC" DisplayName="Neonatal Critical Care (Level III)"/>
+			<ValueElement Value="1135-3" CodeSystem="HSLOC" DisplayName="Nephrology clinic"/>
+			<ValueElement Value="1123-9" CodeSystem="HSLOC" DisplayName="Neurology Clinic"/>
+			<ValueElement Value="1035-5" CodeSystem="HSLOC" DisplayName="Neurologic Critical Care"/>
+			<ValueElement Value="1031-4" CodeSystem="HSLOC" DisplayName="Neurosurgical Critical Care"/>
+			<ValueElement Value="1151-0" CodeSystem="HSLOC" DisplayName="Occupational Health Clinic"/>
+			<ValueElement Value="1152-8" CodeSystem="HSLOC" DisplayName="Occupational Therapy Clinic"/>
+			<ValueElement Value="1124-7" CodeSystem="HSLOC" DisplayName="Ophthalmology Clinic"/>
+			<ValueElement Value="1125-4" CodeSystem="HSLOC" DisplayName="Orthopedic Clinic"/>
+			<ValueElement Value="1149-4" CodeSystem="HSLOC" DisplayName="Ostomy Clinic"/>
+			<ValueElement Value="1126-2" CodeSystem="HSLOC" DisplayName="Ear, Nose, Throat Clinic"/>
+			<ValueElement Value="1150-2" CodeSystem="HSLOC" DisplayName="Outpatient Dental Clinic"/>
+			<ValueElement Value="1153-6" CodeSystem="HSLOC" DisplayName="Outpatient Hemodialysis Clinic"/>
+			<ValueElement Value="1154-4" CodeSystem="HSLOC" DisplayName="Outpatient HIV Clinic"/>
+			<ValueElement Value="1167-6" CodeSystem="HSLOC" DisplayName="Outpatient Pediatric Surgery Center"/>
+			<ValueElement Value="1168-4" CodeSystem="HSLOC" DisplayName="Outpatient Plastic Surgery Center"/>
+			<ValueElement Value="1155-1" CodeSystem="HSLOC" DisplayName="Outpatient Rehabilitation Clinic"/>
+			<ValueElement Value="1169-2" CodeSystem="HSLOC" DisplayName="Outpatient Surgery Recovery Room/Post-Anesthesia Care Unit"/>
+			<ValueElement Value="1127-0" CodeSystem="HSLOC" DisplayName="Pain Clinic"/>
+			<ValueElement Value="1192-4" CodeSystem="HSLOC" DisplayName="Home Care"/>
+			<ValueElement Value="1146-0" CodeSystem="HSLOC" DisplayName="Pediatric Behavioral Health Clinic"/>
+			<ValueElement Value="1023-1" CodeSystem="HSLOC" DisplayName="Pediatric Bone Marrow Transplant SCA"/>
+			<ValueElement Value="1042-1" CodeSystem="HSLOC" DisplayName="Pediatric Burn Critical Care"/>
+			<ValueElement Value="1129-6" CodeSystem="HSLOC" DisplayName="Pediatric Cardiology Center"/>
+			<ValueElement Value="1128-8" CodeSystem="HSLOC" DisplayName="Pediatric Clinic"/>
+			<ValueElement Value="1130-4" CodeSystem="HSLOC" DisplayName="Pediatric Dental Clinic"/>
+			<ValueElement Value="1131-2" CodeSystem="HSLOC" DisplayName="Pediatric Dermatology Clinic"/>
+			<ValueElement Value="1132-0" CodeSystem="HSLOC" DisplayName="Pediatric Diabetes/Endocrinology Clinic"/>
+			<ValueElement Value="1091-8" CodeSystem="HSLOC" DisplayName="Pediatric Dialysis SCA"/>
+			<ValueElement Value="1109-8" CodeSystem="HSLOC" DisplayName="Pediatric Emergency Department"/>
+			<ValueElement Value="1119-7" CodeSystem="HSLOC" DisplayName="Pediatric Gastrointestinal Clinic"/>
+			<ValueElement Value="1136-1" CodeSystem="HSLOC" DisplayName="Pediatric Hematology/Oncology Clinic"/>
+			<ValueElement Value="1089-2" CodeSystem="HSLOC" DisplayName="Pediatric Hematology/Oncology SCA"/>
+			<ValueElement Value="1213-8" CodeSystem="HSLOC" DisplayName="Pediatric long-term acute care (LTAC)"/>
+			<ValueElement Value="1044-7" CodeSystem="HSLOC" DisplayName="Pediatric Medical Critical Care"/>
+			<ValueElement Value="1045-4" CodeSystem="HSLOC" DisplayName="Pediatric Medical/Surgical Critical Care"/>
+			<ValueElement Value="1211-2" CodeSystem="HSLOC" DisplayName="Pediatric Mixed Acuity Unit"/>
+			<ValueElement Value="1137-9" CodeSystem="HSLOC" DisplayName="Pediatric Nephrology Clinic"/>
+			<ValueElement Value="1046-2" CodeSystem="HSLOC" DisplayName="Pediatric Neurosurgical Critical Care"/>
+			<ValueElement Value="1133-8" CodeSystem="HSLOC" DisplayName="Pediatric Orthopedic Clinic"/>
+			<ValueElement Value="1047-0" CodeSystem="HSLOC" DisplayName="Pediatric Respiratory Critical Care"/>
+			<ValueElement Value="1138-7" CodeSystem="HSLOC" DisplayName="Pediatric Rheumatology Clinic"/>
+			<ValueElement Value="1134-6" CodeSystem="HSLOC" DisplayName="Pediatric Scoliosis Clinic"/>
+			<ValueElement Value="1093-4" CodeSystem="HSLOC" DisplayName="Pediatric Solid Organ Transplant SCA"/>
+			<ValueElement Value="1100-7" CodeSystem="HSLOC" DisplayName="Pediatric Step Down Unit (post-critical care)"/>
+			<ValueElement Value="1043-9" CodeSystem="HSLOC" DisplayName="Pediatric Cardiothoracic Critical Care"/>
+			<ValueElement Value="1048-8" CodeSystem="HSLOC" DisplayName="Pediatric Surgical Critical Care"/>
+			<ValueElement Value="1049-6" CodeSystem="HSLOC" DisplayName="Pediatric Trauma Critical Care"/>
+			<ValueElement Value="1074-4" CodeSystem="HSLOC" DisplayName="Pediatric ward"/>
+			<ValueElement Value="1179-1" CodeSystem="HSLOC" DisplayName="Pharmacy"/>
+			<ValueElement Value="1181-7" CodeSystem="HSLOC" DisplayName="Physical Plant Operations Center"/>
+			<ValueElement Value="1202-1" CodeSystem="HSLOC" DisplayName="Physical Therapy Clinic"/>
+			<ValueElement Value="1140-3" CodeSystem="HSLOC" DisplayName="Podiatry Clinic"/>
+			<ValueElement Value="1097-5" CodeSystem="HSLOC" DisplayName="Post-Anesthesia Care Unit/Recovery Room"/>
+			<ValueElement Value="1156-9" CodeSystem="HSLOC" DisplayName="Prenatal Clinic"/>
+			<ValueElement Value="1034-8" CodeSystem="HSLOC" DisplayName="Prenatal Critical Care"/>
+			<ValueElement Value="1141-1" CodeSystem="HSLOC" DisplayName="Physician's Office"/>
+			<ValueElement Value="1180-9" CodeSystem="HSLOC" DisplayName="Public Area in Facility"/>
+			<ValueElement Value="1157-7" CodeSystem="HSLOC" DisplayName="Pulmonary Clinic"/>
+			<ValueElement Value="1009-0" CodeSystem="HSLOC" DisplayName="Pulmonary Function Testing"/>
+			<ValueElement Value="1008-2" CodeSystem="HSLOC" DisplayName="Radiology (includes Nuclear Medicine)"/>
+			<ValueElement Value="1033-0" CodeSystem="HSLOC" DisplayName="Respiratory Critical Care"/>
+			<ValueElement Value="1142-9" CodeSystem="HSLOC" DisplayName="Rheumatology Clinic"/>
+			<ValueElement Value="1201-3" CodeSystem="HSLOC" DisplayName="Scoliosis clinic"/>
+			<ValueElement Value="1015-7" CodeSystem="HSLOC" DisplayName="Serology Lab"/>
+			<ValueElement Value="1020-7" CodeSystem="HSLOC" DisplayName="Sleep Studies (for in- and outpatients)"/>
+			<ValueElement Value="1190-8" CodeSystem="HSLOC" DisplayName="Soiled Utility Area"/>
+			<ValueElement Value="1092-6" CodeSystem="HSLOC" DisplayName="Solid Organ Transplant SCA"/>
+			<ValueElement Value="1196-5" CodeSystem="HSLOC" DisplayName="Specimen Collection Area (Community)"/>
+			<ValueElement Value="1019-9" CodeSystem="HSLOC" DisplayName="Specimen Collection Area (Healthcare)"/>
+			<ValueElement Value="1158-5" CodeSystem="HSLOC" DisplayName="Speech Therapy Clinic"/>
+			<ValueElement Value="1041-3" CodeSystem="HSLOC" DisplayName="Step down Neonatal ICU (Level II)"/>
+			<ValueElement Value="1143-7" CodeSystem="HSLOC" DisplayName="Surgical Services Clinic"/>
+			<ValueElement Value="1032-2" CodeSystem="HSLOC" DisplayName="Surgical Cardiothoracic Critical Care"/>
+			<ValueElement Value="1030-6" CodeSystem="HSLOC" DisplayName="Surgical Critical Care"/>
+			<ValueElement Value="1208-8" CodeSystem="HSLOC" DisplayName="Telemetry Unit"/>
+			<ValueElement Value="1178-3" CodeSystem="HSLOC" DisplayName="Transport Service"/>
+			<ValueElement Value="1025-6" CodeSystem="HSLOC" DisplayName="Trauma Critical Care"/>
+			<ValueElement Value="1209-6" CodeSystem="HSLOC" DisplayName="Treatment Room"/>
+			<ValueElement Value="1160-1" CodeSystem="HSLOC" DisplayName="Urgent Care Center"/>
+			<ValueElement Value="1164-3" CodeSystem="HSLOC" DisplayName="Ventilator Dependent Unit"/>
+			<ValueElement Value="1016-5" CodeSystem="HSLOC" DisplayName="Virology Lab"/>
+			<ValueElement Value="1139-5" CodeSystem="HSLOC" DisplayName="Well Baby Clinic"/>
+			<ValueElement Value="1144-5" CodeSystem="HSLOC" DisplayName="Wound Center"/>
+			<ValueElement Value="1159-3" CodeSystem="HSLOC" DisplayName="Wound Ostomy Continence Clinic"/>
+		</ValueSetDefinition>
+		<ValueSetDefinition BindingIdentifier="PHVS_HeightUnit_UCUM" Oid="2.16.840.1.114222.4.11.891" Name="Height Unit">
+			<ValueElement Value="cm" CodeSystem="UCUM" DisplayName="CentiMeter [SI Length Units]"/>
+			<ValueElement Value="[ft_us]" CodeSystem="UCUM" DisplayName="foot [length]"/>
+			<ValueElement Value="[in_us]" CodeSystem="UCUM" DisplayName="inch [length]"/>
+			<ValueElement Value="m" CodeSystem="UCUM" DisplayName="meter [length]"/>
+		</ValueSetDefinition>
+		<ValueSetDefinition BindingIdentifier="PHVS_WeightUnit_UCUM" Oid="2.16.840.1.114222.4.11.879" Name="Weight Unit">
+			<ValueElement Value="g" CodeSystem="UCUM" DisplayName="gram [mass]"/>
+			<ValueElement Value="kg" CodeSystem="UCUM" DisplayName="KiloGram [SI Mass Units]"/>
+			<ValueElement Value="[oz_av]" CodeSystem="UCUM" DisplayName="ounce [mass]"/>
+			<ValueElement Value="[lb_av]" CodeSystem="UCUM" DisplayName="pound [mass]"/>
+		</ValueSetDefinition>
+		<ValueSetDefinition BindingIdentifier="PHVS_SmokingStatus_MU" Oid="2.16.840.1.114222.4.11.6027" Name="Smoking Status">
+			<ValueElement Value="428071000124103" CodeSystem="SCT" DisplayName="Current Heavy tobacco smoker"/>
+			<ValueElement Value="428061000124105" CodeSystem="SCT" DisplayName="Current Light tobacco smoker"/>
+			<ValueElement Value="428041000124106" CodeSystem="SCT" DisplayName="Current some day smoker"/>
+			<ValueElement Value="428041000124106" CodeSystem="SCT" DisplayName="Current some day smoker"/>
+			<ValueElement Value="8517006" CodeSystem="SCT" DisplayName="Former smoker"/>
+			<ValueElement Value="266919005" CodeSystem="SCT" DisplayName="Never smoker"/>
+			<ValueElement Value="77176002" CodeSystem="SCT" DisplayName="Smoker, current status unknown"/>
+			<ValueElement Value="449868002" CodeSystem="SCT" DisplayName="Current every day smoker"/>
+			<ValueElement Value="266927001" CodeSystem="SCT" DisplayName="Unknown if ever smoked"/>
+		</ValueSetDefinition>
 		<ValueSetDefinition BindingIdentifier="PHVS_VitalSignResult_HITSP" Oid="2.16.840.1.113883.3.88.12.80.62" Name="Vital Sign Result Value Set">
 			<!-- [Caroline] CodeSystem should be LN - not LOINC -->
 			<ValueElement Value="8310-5" CodeSystem="LOINC" DisplayName="Body temperature:Temp:Pt:^Patient:Qn:"/>
@@ -14777,7 +14998,7 @@
 			<ValueElement Value="R" DisplayName="Results entered -- not verified" CodeSystem="HL70085"/>
 			<ValueElement Value="S" DisplayName="Partial results" CodeSystem="HL70085"/>
 			<ValueElement Value="X" DisplayName="Results cannot be obtained for this observation" CodeSystem="HL70085"/>
-			<ValueElement Value="U" DisplayName="Results status change to final without retransmitting results already sent as 'preliminary.'  E.g., radiology changes status from preliminary to final" CodeSystem="HL70085"/>
+			<ValueElement Value="U" DisplayName="Results status change to final without retransmitting results already sent as 'preliminary'.  E.g., radiology changes status from preliminary to final" CodeSystem="HL70085"/>
 			<ValueElement Value="W" DisplayName="Post original as wrong, e.g., transmitted for wrong patient" CodeSystem="HL70085"/>
 		</ValueSetDefinition>
 		<ValueSetDefinition BindingIdentifier="HL70091" Name="Query priority" Version="2.5.1">

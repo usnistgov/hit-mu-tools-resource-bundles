@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ConformanceContext UUID="389e0acf-69a6-46b1-9834-7581ee13a60f" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/Jungyubw/NIST_healthcare_hl7_v2_profile_schema/master/Schema/NIST%20Validation%20Schema/ConformanceContext.xsd">
-	<MetaData Name="Conformance context for SS" OrgName="NIST" Version="1.0.0" Date="20160222"/>
+	<MetaData Name="Conformance context for SS" OrgName="NIST" Version="1.0.1" Date="20170811"/>
 	<Predicates>
 		<Datatype>
 			<ByID ID="CE_SS">
@@ -570,59 +570,10 @@
 						<SetID Path="1[1]"/>
 					</Assertion>
 				</Constraint>
-				<!-- OBX-6 -->
-				<Constraint ID="SS-029" Target="6[1].1[1]">
-					<Description>If OBX 3.1 (Observation Identifier) is valued with 21612-7 AGE-REPORTED (LOINC), then OBX-6.1 (Unit Identifier) SHALL be valued to a member of the set: PHVS_AgeUnit_SyndromicSurveillance</Description>
-					<Assertion>
-						<IMPLY>
-						
-							<AND>
-								<Presence Path="3[1].1[1]"/>
-								<PlainText Path="3[1].1[1]" Text="21612-7" IgnoreCase="false"/>
-							</AND>
-							
-							<ValueSet Path="6[1]" ValueSetID="PHVS_AgeUnit_SyndromicSurveillance" BindingStrength="R" BindingLocation="1"/>
-						</IMPLY>
-					</Assertion>
-				</Constraint>
-				<Constraint ID="SS-030" Target="6[1].1[1]">
-					<Description>If OBX 3.1 (Observation Identifier) is valued with 11289-6 BODY TEMPERATURE, INITIAL (LOINC), then OBX-6.1 (Unit Identifier) SHALL be valued to a member of the set: PHVS_TemperatureUnit_UCUM</Description>
-					<Assertion>
-						<IMPLY>
-							<AND>
-								<Presence Path="3[1].1[1]"/>
-								<PlainText Path="3[1].1[1]" Text="11289-6" IgnoreCase="false"/>
-							</AND>
-							<ValueSet Path="6[1]" ValueSetID="PHVS_TemperatureUnit_UCUM" BindingStrength="R" BindingLocation="1"/>
-						</IMPLY>
-					</Assertion>
-				</Constraint>
-				<Constraint ID="SS-031" Target="6[1].1[1]">
-					<Description>If OBX 3.1 (Observation Identifier) is valued with 59408-5 OXYGEN SATURATION IN ARTERIAL BLOOD BY PULSE OXIMETRY (LOINC),, then OBX-6.1 (Unit Identifier) SHALL be valued to a member of the set: PHVS_TemperatureUnit_UCUM.</Description>
-					<Assertion>
-						<IMPLY>
-							<AND>
-								<Presence Path="3[1].1[1]"/>
-								<PlainText Path="3[1].1[1]" Text="59408-5" IgnoreCase="false"/>
-							</AND>
-							<ValueSet Path="6[1]" ValueSetID="PHVS_PulseOximetryUnit_UCUM" BindingStrength="R" BindingLocation="1"/>
-						</IMPLY>
-					</Assertion>
-				</Constraint>
-				<Constraint ID="NIST-SS-011" Target="3[1]">
-					<Description>If OBX 3.1 (Observation Identifier) is valued with 8661-1 CHIEF COMPLAINT-REPORTED (LOINC), then OBX-2 (Value Type) SHALL be valued 'TX'.</Description>
-					<Assertion>
-						<IMPLY>
-							<FORALL>
-								<Presence Path="3[1].1[1]"/>
-								<PlainText Path="3[1].1[1]" Text="8661-1" IgnoreCase="false"/>
-								<Presence Path="3[1].3[1]"/>
-								<PlainText Path="3[1].3[1]" Text="LN" IgnoreCase="false"/>
-							</FORALL>
-							<PlainText Path="2[1]" Text="TX" IgnoreCase="false"/>
-						</IMPLY>
-					</Assertion>
-				</Constraint>
+				
+				<!-- co-constraints -->
+				<!-- OBX-3.1 = SS002 -->
+				<!-- OBX-2 value -->
 				<Constraint ID="NIST-SS-012" Target="3[1]">
 					<Description>If OBX 3.1 (Observation Identifier) is valued with SS002 TREATING FACILITY LOCATION (PHINQUESTION), then OBX-2 (Value Type) SHALL be valued 'XAD'.</Description>
 					<Assertion>
@@ -637,6 +588,290 @@
 						</IMPLY>
 					</Assertion>
 				</Constraint>
+				<!-- OBX-3.1 = SS003 -->
+				<!-- OBX-2 value -->
+				<Constraint ID="NIST-SS-014" Target="3[1]">
+					<Description>If OBX 3.1 (Observation Identifier) is valued with SS003 FACILITY/VISIT TYPE (PHINQUESTION), then OBX-2 (Value Type) SHALL be valued 'CWE'</Description>
+					<Assertion>
+						<IMPLY>
+							<FORALL>
+								<!-- OBX-3.1 = SS003 -->
+								<Presence Path="3[1].1[1]"/>
+								<PlainText Path="3[1].1[1]" Text="SS003" IgnoreCase="false"/>
+								<!-- OBX-3.3 = PHINQUESTION -->
+								<Presence Path="3[1].3[1]"/>
+								<PlainText Path="3[1].3[1]" Text="PHINQUESTION" IgnoreCase="false"/>
+							</FORALL>
+							<AND>
+								<!-- OBX-2 = CWE -->
+								<Presence Path="2[1]"/>
+								<PlainText Path="2[1]" Text="CWE" IgnoreCase="false"/>
+							</AND>
+						</IMPLY>
+					</Assertion>
+				</Constraint>	
+				<!-- OBX-5 value set -->				
+				<Constraint ID="NIST-SS-015" Target="3[1]">
+					<Description>If OBX 3.1 (Observation Identifier) is valued with SS003 FACILITY/VISIT TYPE (PHINQUESTION), then OBX-5 (Observation Value) SHALL be valued to a member of the set: PHVS_FacilityVisitType_SyndromicSurveillance</Description>
+					<Assertion>
+						<IMPLY>
+							<FORALL>
+								<!-- OBX-3.1 = SS003 -->
+								<Presence Path="3[1].1[1]"/>
+								<PlainText Path="3[1].1[1]" Text="SS003" IgnoreCase="false"/>
+								<!-- OBX-3.3 = PHINQUESTION -->
+								<Presence Path="3[1].3[1]"/>
+								<PlainText Path="3[1].3[1]" Text="PHINQUESTION" IgnoreCase="false"/>
+								<!-- OBX-2 = CWE -->
+								<Presence Path="2[1]"/>
+								<PlainText Path="2[1]" Text="CWE" IgnoreCase="false"/>
+							</FORALL>
+							<ValueSet Path="5[1]" ValueSetID="PHVS_FacilityVisitType_SyndromicSurveillance" BindingStrength="R" BindingLocation="1"/>
+						</IMPLY>
+					</Assertion>
+				</Constraint>
+				
+				<!-- OBX-3.1 = 21612-7 -->
+				<!-- OBX-2 value -->
+				<Constraint ID="NIST-SS-016" Target="3[1]">
+					<Description>If OBX 3.1 (Observation Identifier) is valued with 21612-7 AGE – REPORTED (LOINC), then OBX-2 (Value Type) SHALL be valued 'NM'.</Description>
+					<Assertion>
+						<IMPLY>
+							<FORALL>
+								<!-- OBX-3.1 = 21612-7 -->
+								<Presence Path="3[1].1[1]"/>
+								<PlainText Path="3[1].1[1]" Text="21612-7" IgnoreCase="false"/>
+								<!-- OBX-3.3 = LN -->
+								<Presence Path="3[1].3[1]"/>
+								<PlainText Path="3[1].3[1]" Text="LN" IgnoreCase="false"/>
+							</FORALL>
+							<AND>
+								<!-- OBX-2 = CWE -->
+								<Presence Path="2[1]"/>
+								<PlainText Path="2[1]" Text="NM" IgnoreCase="false"/>
+							</AND>
+						</IMPLY>
+					</Assertion>
+				</Constraint>	
+				<!-- OBX-6 value set -->
+				<Constraint ID="SS-029" Target="6[1].1[1]">
+					<Description>If OBX 3.1 (Observation Identifier) is valued with 21612-7 AGE-REPORTED (LOINC), then OBX-6.1 (Unit Identifier) SHALL be valued to a member of the set: PHVS_AgeUnit_SyndromicSurveillance</Description>
+					<Assertion>
+						<IMPLY>
+							<FORALL>
+								<!-- OBX-3.1 = 21612-7 -->
+								<Presence Path="3[1].1[1]"/>
+								<PlainText Path="3[1].1[1]" Text="21612-7" IgnoreCase="false"/>
+								<!-- OBX-3.3 = LN -->
+								<Presence Path="3[1].3[1]"/>
+								<PlainText Path="3[1].3[1]" Text="LN" IgnoreCase="false"/>
+							</FORALL>
+							<ValueSet Path="6[1]" ValueSetID="PHVS_AgeUnit_SyndromicSurveillance" BindingStrength="R" BindingLocation="1"/>
+						</IMPLY>
+					</Assertion>
+				</Constraint>	
+				
+				
+				<!-- OBX-3.1 = 8661-1 -->
+				<!-- OBX-2 value -->
+				<Constraint ID="NIST-SS-011" Target="3[1]">
+					<Description>If OBX 3.1 (Observation Identifier) is valued with 8661-1 CHIEF COMPLAINT-REPORTED (LOINC), then OBX-2 (Value Type) SHALL be valued 'TX'.</Description>
+					<Assertion>
+						<IMPLY>
+							<FORALL>
+								<Presence Path="3[1].1[1]"/>
+								<PlainText Path="3[1].1[1]" Text="8661-1" IgnoreCase="false"/>
+								<Presence Path="3[1].3[1]"/>
+								<PlainText Path="3[1].3[1]" Text="LN" IgnoreCase="false"/>
+							</FORALL>
+							<PlainText Path="2[1]" Text="TX" IgnoreCase="false"/>
+						</IMPLY>
+					</Assertion>
+				</Constraint>
+				
+				<!-- OBX-3.1 = 56816-2 -->
+				<!-- OBX-2 value -->
+				<Constraint ID="NIST-SS-017" Target="3[1]">
+					<Description>If OBX 3.1 (Observation Identifier) is valued with 56816-2 PATIENT LOCATION (LOINC), then OBX-2 (Value Type) SHALL be valued 'CWE'.</Description>
+					<Assertion>
+						<IMPLY>
+							<FORALL>
+								<Presence Path="3[1].1[1]"/>
+								<PlainText Path="3[1].1[1]" Text="56816-2" IgnoreCase="false"/>
+								<Presence Path="3[1].3[1]"/>
+								<PlainText Path="3[1].3[1]" Text="LN" IgnoreCase="false"/>
+							</FORALL>
+							<PlainText Path="2[1]" Text="CWE" IgnoreCase="false"/>
+						</IMPLY>
+					</Assertion>
+				</Constraint>
+				<!-- OBX-5 value set -->
+				<Constraint ID="NIST-SS-018" Target="3[1]">
+					<Description>If OBX 3.1 (Observation Identifier) is valued with 56816-2 PATIENT LOCATION (LOINC), then OBX-5 (Observation Value) SHALL be valued to a member of the set: NHSNHealthcareServiceLocationCode</Description>
+					<Assertion>
+						<IMPLY>
+							<FORALL>
+								<!-- OBX-3.1 = 56816-2 -->
+								<Presence Path="3[1].1[1]"/>
+								<PlainText Path="3[1].1[1]" Text="56816-2" IgnoreCase="false"/>
+								<!-- OBX-3.3 = LN -->
+								<Presence Path="3[1].3[1]"/>
+								<PlainText Path="3[1].3[1]" Text="LN" IgnoreCase="false"/>
+								<!-- OBX-2 = CWE -->
+								<Presence Path="2[1]"/>
+								<PlainText Path="2[1]" Text="CWE" IgnoreCase="false"/>
+							</FORALL>
+							<ValueSet Path="5[1]" ValueSetID="NHSNHealthcareServiceLocationCode" BindingStrength="R" BindingLocation="1"/>
+						</IMPLY>
+					</Assertion>
+				</Constraint>
+								
+				<!-- OBX-3.1 = 8302-2 -->
+				<!-- OBX-2 value -->
+				<Constraint ID="NIST-SS-019" Target="3[1]">
+					<Description>If OBX 3.1 (Observation Identifier) is valued with 8302-2 BODY HEIGHT (LOINC), then OBX-2 (Value Type) SHALL be valued 'NM'.</Description>
+					<Assertion>
+						<IMPLY>
+							<FORALL>
+								<!-- OBX-3.1 = 8302-2 -->
+								<Presence Path="3[1].1[1]"/>
+								<PlainText Path="3[1].1[1]" Text="8302-2" IgnoreCase="false"/>
+								<!-- OBX-3.3 = LN -->
+								<Presence Path="3[1].3[1]"/>
+								<PlainText Path="3[1].3[1]" Text="LN" IgnoreCase="false"/>
+							</FORALL>
+							<AND>
+								<!-- OBX-2 = NM -->
+								<Presence Path="2[1]"/>
+								<PlainText Path="2[1]" Text="NM" IgnoreCase="false"/>
+							</AND>
+						</IMPLY>
+					</Assertion>
+				</Constraint>	
+				<!-- OBX-6 value set -->
+				<Constraint ID="NIST-SS-020" Target="3[1]">
+					<Description>If OBX 3.1 (Observation Identifier) is valued with 8302-2 BODY HEIGHT (LOINC), then OBX-6.1 (Unit Identifier) SHALL be valued to a member of the set: PHVS_HeightUnit_UCUM</Description>
+					<Assertion>
+						<IMPLY>
+							<FORALL>
+								<!-- OBX-3.1 = 8302-2 -->
+								<Presence Path="3[1].1[1]"/>
+								<PlainText Path="3[1].1[1]" Text="8302-2" IgnoreCase="false"/>
+								<!-- OBX-3.3 = LN -->
+								<Presence Path="3[1].3[1]"/>
+								<PlainText Path="3[1].3[1]" Text="LN" IgnoreCase="false"/>
+							</FORALL>
+							<ValueSet Path="6[1]" ValueSetID="PHVS_HeightUnit_UCUM" BindingStrength="R" BindingLocation="1"/>
+						</IMPLY>
+					</Assertion>
+				</Constraint>
+								
+				<!-- OBX-3.1 = 3141-9 -->
+				<!-- OBX-2 value -->
+				<Constraint ID="NIST-SS-021" Target="3[1]">
+					<Description>If OBX 3.1 (Observation Identifier) is valued with 3141-9 BODY WEIGHT MEASURED (LOINC), then OBX-2 (Value Type) SHALL be valued 'NM'.</Description>
+					<Assertion>
+						<IMPLY>
+							<FORALL>
+								<!-- OBX-3.1 = 3141-9 -->
+								<Presence Path="3[1].1[1]"/>
+								<PlainText Path="3[1].1[1]" Text="3141-9" IgnoreCase="false"/>
+								<!-- OBX-3.3 = LN -->
+								<Presence Path="3[1].3[1]"/>
+								<PlainText Path="3[1].3[1]" Text="LN" IgnoreCase="false"/>
+							</FORALL>
+							<AND>
+								<!-- OBX-2 = NM -->
+								<Presence Path="2[1]"/>
+								<PlainText Path="2[1]" Text="NM" IgnoreCase="false"/>
+							</AND>
+						</IMPLY>
+					</Assertion>
+				</Constraint>	
+				<!-- OBX-6 value set -->
+				<Constraint ID="NIST-SS-022" Target="3[1]">
+					<Description>If OBX 3.1 (Observation Identifier) is valued with 3141-9 BODY WEIGHT MEASURED (LOINC), then OBX-6.1 (Unit Identifier) SHALL be valued to a member of the set: PHVS_WeightUnit_UCUM</Description>
+					<Assertion>
+						<IMPLY>
+							<FORALL>
+								<!-- OBX-3.1 = 3141-9 -->
+								<Presence Path="3[1].1[1]"/>
+								<PlainText Path="3[1].1[1]" Text="3141-9" IgnoreCase="false"/>
+								<!-- OBX-3.3 = LN -->
+								<Presence Path="3[1].3[1]"/>
+								<PlainText Path="3[1].3[1]" Text="LN" IgnoreCase="false"/>
+							</FORALL>
+							<ValueSet Path="6[1]" ValueSetID="PHVS_WeightUnit_UCUM" BindingStrength="R" BindingLocation="1"/>
+						</IMPLY>
+					</Assertion>
+				</Constraint>
+												
+				<!-- OBX-3.1 = 72166-2 -->
+				<!-- OBX-2 value -->
+				<Constraint ID="NIST-SS-023" Target="3[1]">
+					<Description>If OBX 3.1 (Observation Identifier) is valued with 72166-2 TOBACCO SMOKING STATUS (LOINC), then OBX-2 (Value Type) SHALL be valued 'CWE'.</Description>
+					<Assertion>
+						<IMPLY>
+							<FORALL>
+								<!-- OBX-3.1 = 72166-2 -->
+								<Presence Path="3[1].1[1]"/>
+								<PlainText Path="3[1].1[1]" Text="72166-2" IgnoreCase="false"/>
+								<!-- OBX-3.3 = LN -->
+								<Presence Path="3[1].3[1]"/>
+								<PlainText Path="3[1].3[1]" Text="LN" IgnoreCase="false"/>
+							</FORALL>
+							<PlainText Path="2[1]" Text="CWE" IgnoreCase="false"/>
+						</IMPLY>
+					</Assertion>
+				</Constraint>
+				<!-- OBX-5 value set -->
+				<Constraint ID="NIST-SS-024" Target="3[1]">
+					<Description>If OBX 3.1 (Observation Identifier) is valued with 72166-2 TOBACCO SMOKING STATUS (LOINC), then OBX-5 (Observation Value) SHALL be valued to a member of the set: PHVS_SmokingStatus_MU</Description>
+					<Assertion>
+						<IMPLY>
+							<FORALL>
+								<!-- OBX-3.1 = 72166-2 -->
+								<Presence Path="3[1].1[1]"/>
+								<PlainText Path="3[1].1[1]" Text="72166-2" IgnoreCase="false"/>
+								<!-- OBX-3.3 = LN -->
+								<Presence Path="3[1].3[1]"/>
+								<PlainText Path="3[1].3[1]" Text="LN" IgnoreCase="false"/>
+								<!-- OBX-2 = CWE -->
+								<Presence Path="2[1]"/>
+								<PlainText Path="2[1]" Text="CWE" IgnoreCase="false"/>
+							</FORALL>
+							<ValueSet Path="5[1]" ValueSetID="PHVS_SmokingStatus_MU" BindingStrength="R" BindingLocation="1"/>
+						</IMPLY>
+					</Assertion>
+				</Constraint>
+						
+			
+				<Constraint ID="SS-030" Target="6[1].1[1]">
+					<Description>If OBX 3.1 (Observation Identifier) is valued with 11289-6 BODY TEMPERATURE, INITIAL (LOINC), then OBX-6.1 (Unit Identifier) SHALL be valued to a member of the set: PHVS_TemperatureUnit_UCUM</Description>
+					<Assertion>
+						<IMPLY>
+							<AND>
+								<Presence Path="3[1].1[1]"/>
+								<PlainText Path="3[1].1[1]" Text="11289-6" IgnoreCase="false"/>
+							</AND>
+							<ValueSet Path="6[1]" ValueSetID="PHVS_TemperatureUnit_UCUM" BindingStrength="R" BindingLocation="1"/>
+						</IMPLY>
+					</Assertion>
+				</Constraint>
+				<Constraint ID="SS-031" Target="6[1].1[1]">
+					<Description>If OBX 3.1 (Observation Identifier) is valued with 59408-5 OXYGEN SATURATION IN ARTERIAL BLOOD BY PULSE OXIMETRY (LOINC), then OBX-6.1 (Unit Identifier) SHALL be valued to a member of the set: PHVS_TemperatureUnit_UCUM.</Description>
+					<Assertion>
+						<IMPLY>
+							<AND>
+								<Presence Path="3[1].1[1]"/>
+								<PlainText Path="3[1].1[1]" Text="59408-5" IgnoreCase="false"/>
+							</AND>
+							<ValueSet Path="6[1]" ValueSetID="PHVS_PulseOximetryUnit_UCUM" BindingStrength="R" BindingLocation="1"/>
+						</IMPLY>
+					</Assertion>
+				</Constraint>
+
+
 			</ByID>
 			<ByID ID="PR1_SS">
 				<!-- PR1-1 -->
