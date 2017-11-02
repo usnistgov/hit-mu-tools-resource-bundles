@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<ConformanceProfile ID="0d741773-619a-4ec1-b974-2589faa75b92" xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/Jungyubw/NIST_healthcare_hl7_v2_profile_schema/master/Schema/NIST%20Validation%20Schema/Profile.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-    <MetaData Name="SS integration profile" OrgName="NIST" Version="1.0.1" Date="20170126"/>
+<ConformanceProfile ID="0d741773-619a-4ec1-b974-2589faa75b92">
+    <MetaData Name="SS integration profile" OrgName="NIST" Version="1.0.2" Date="20170809"/>
     <Messages>
         <Message ID="0d741773-619a-4ec1-b974-2589faa75b92" Type="ACK" Event="A08" StructID="ACK_A01" Description="ACK-A08-PH_SS-Ack">
             <Segment Ref="MSH_SS" Usage="R" Min="1" Max="1"/>
@@ -34,7 +34,7 @@
             <Field ItemNo="00021" Min="1" Max="*" Name="Message Profile Identifier" Usage="R" Datatype="EI_SS" MinLength="1" MaxLength="427"/>
         </Segment>
         <Segment ID="MSA_SS" Name="MSA" Label="MSA_SS" Description="Acknowledgement">
-            <Field Min="1" Max="1" Name="Acknowledgment Code" Usage="R" Datatype="ID_SS" MinLength="2" MaxLength="2" Binding="PHVS_AcknowledgementCode_HL7_2x"/>
+            <Field Min="1" Max="1" Name="Acknowledgment Code" Usage="R" Datatype="ID_SS" MinLength="2" MaxLength="2" Binding="PHVS_AcknowledgmentCode_HL7_2x"/>
             <Field Min="1" Max="1" Name="Message Control ID" Usage="R" Datatype="ST_SS" MinLength="1" MaxLength="20"/>
             <Field Min="0" Max="0" Name="Text Message" Usage="X" Datatype="ST" MinLength="1" MaxLength="80"/>
             <Field Min="0" Max="0" Name="Expected Sequence Number" Usage="X" Datatype="NM" MinLength="1" MaxLength="15"/>
