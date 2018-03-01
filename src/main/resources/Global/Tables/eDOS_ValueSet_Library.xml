@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--2016-02-01T16:00:34-05:00-->
 <ValueSetLibrary xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ValueSetLibraryIdentifier="eDOS"  xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/Jungyubw/NIST_healthcare_hl7_v2_profile_schema/master/Schema/NIST%20Validation%20Schema/ValueSets.xsd">
-	<MetaData Name="eDOS value set library" OrgName="NIST" Version="1.0.0" Date="09142016">
-		<Authors>
-			<Author FirstName="Caroline" LastName="Rosin"/>
-		</Authors>
-	</MetaData>	
+	<MetaData Name="eDOS value set library" OrgName="NIST" Version="1.0.0" Date="09142016"/>	
 	<NoValidation>
 		<!-- Excluded because defiend as 'externally or locally defined' -->
 		<BindingIdentifier>9999</BindingIdentifier>
@@ -125,7 +121,7 @@
 		</ValueSetDefinition>
 		<ValueSetDefinition BindingIdentifier="HL70072_USL.1" ContentDefinition="Extensional" Description="" Extensibility="Open" Name="Insurance Plan ID" Oid="TBD" Stability="Static" Version="V1.1">
 			<!--PM1-1-->
-			<ValueElement CodeSystem="HL70353" CodeSystemVersion="2.5.1" Comments="LOI: If no user components of HL70072 or locally defined table, use the default value of ‘NA' (not applicable) from Table HL70353 CWE Status Codes or draw another appropriate value from Table HL70353." DisplayName="Not Applicable" Usage="E" Value="NA"/>
+			<ValueElement CodeSystem="HL70353" CodeSystemVersion="2.5.1" Comments="LOI: If no user components of HL70072 or locally defined table, use the default value of 'NA' (not applicable) from Table HL70353 CWE Status Codes or draw another appropriate value from Table HL70353." DisplayName="Not Applicable" Usage="E" Value="NA"/>
 		</ValueSetDefinition>
 		<ValueSetDefinition BindingIdentifier="HL70074_USL.1" ContentDefinition="Extensional" Description="" Extensibility="Open" Name="Diagnostic Service Section ID" Oid="TBD" Stability="Static" Version="V1.1">
 			<!--OM1-49-->
@@ -1182,7 +1178,7 @@
 		</ValueSetDefinition>
 		<ValueSetDefinition BindingIdentifier="HL70913_USL.1" ContentDefinition="Extensional" Description="" Extensibility="Closed" Name="ISO-4217 Monetary Denomination Code" Oid="TBD" Stability="Static" Version="V1.1">
 			<!--MO.2-->
-			<ValueElement CodeSystem="HL70913" CodeSystemVersion="2.7.1" Comments="Constrained to literal value ‘USD'" DisplayName="US Dollar" Usage="R" Value="USD"/>
+			<ValueElement CodeSystem="HL70913" CodeSystemVersion="2.7.1" Comments="Constrained to literal value 'USD'" DisplayName="US Dollar" Usage="R" Value="USD"/>
 		</ValueSetDefinition>
 		<ValueSetDefinition BindingIdentifier="HL70919_USL.1" ContentDefinition="Extensional" Description="" Extensibility="Closed" Name="Exclusive Test" Oid="TBD" Stability="Static" Version="V1.1">
 			<!--OM1-48-->
