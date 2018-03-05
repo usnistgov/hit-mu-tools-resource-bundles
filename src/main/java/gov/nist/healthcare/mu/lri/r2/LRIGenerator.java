@@ -9,14 +9,6 @@
 
 package gov.nist.healthcare.mu.lri.r2;
 
-import gov.nist.healthcare.mu.bundle.BundleGenerator;
-import gov.nist.healthcare.mu.bundle.documentation.model.json.FileSupplement;
-import gov.nist.healthcare.mu.bundle.documentation.model.json.JTestCase;
-import gov.nist.healthcare.mu.bundle.documentation.model.json.JTestCaseGroup;
-import gov.nist.healthcare.mu.bundle.documentation.model.json.JTestPlan;
-import gov.nist.healthcare.mu.bundle.documentation.model.json.JTestStep;
-import gov.nist.healthcare.mu.bundle.documentation.model.json.Supplement;
-import gov.nist.healthcare.mu.spreadsheet.model.TestCaseMetadata;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -49,6 +41,14 @@ import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
 import com.fasterxml.jackson.databind.node.ObjectNode;
+import gov.nist.healthcare.mu.bundle.BundleGenerator;
+import gov.nist.healthcare.mu.bundle.documentation.model.json.FileSupplement;
+import gov.nist.healthcare.mu.bundle.documentation.model.json.JTestCase;
+import gov.nist.healthcare.mu.bundle.documentation.model.json.JTestCaseGroup;
+import gov.nist.healthcare.mu.bundle.documentation.model.json.JTestPlan;
+import gov.nist.healthcare.mu.bundle.documentation.model.json.JTestStep;
+import gov.nist.healthcare.mu.bundle.documentation.model.json.Supplement;
+import gov.nist.healthcare.mu.spreadsheet.model.TestCaseMetadata;
 
 /**
  * LRI R2 resource bundle generator
@@ -192,10 +192,10 @@ public class LRIGenerator extends BundleGenerator {
         FileSupplement supp1 = new FileSupplement(
                 "Pacific Anatomic Pathology Services base64 encoding",
                 "11/04/2016", 1,
-                "Pacific Anatomic Pathology Services_base64_utf-8.txt");
+                "Pacific_Anatomic_Pathology_Services_base64_utf-8.txt");
         FileSupplement supp2 = new FileSupplement(
                 "Pacific Anatomic Pathology Services PDF", "11/04/2016", 2,
-                "Pacific Anatomic Pathology Services.pdf");
+                "Pacific_Anatomic_Pathology_Services.pdf");
         List<Supplement> sup = new ArrayList<Supplement>();
         sup.add(supp1);
         sup.add(supp2);
@@ -203,7 +203,8 @@ public class LRIGenerator extends BundleGenerator {
         supplements.put("LRI_6.0_1.1-GU", sup);
     }
 
-    private static Logger logger = Logger.getLogger(LRIGenerator.class.getName());
+    private static Logger logger = Logger.getLogger(
+            LRIGenerator.class.getName());
 
     /**
      * @param args
@@ -213,7 +214,8 @@ public class LRIGenerator extends BundleGenerator {
         long startTime = System.currentTimeMillis();
         LRIGenerator generator = new LRIGenerator();
 
-        File contextBased = new File(generator.getContext().getTESTCASE_DIR_F());
+        File contextBased = new File(
+                generator.getContext().getTESTCASE_DIR_F());
         File contextFree = new File(
                 generator.getContext().getCONTEXT_FREE_DIR_F());
 
@@ -348,7 +350,8 @@ public class LRIGenerator extends BundleGenerator {
 
         generator.setIds(contextFree, contextBased);
         long endTime = System.currentTimeMillis();
-        logger.info("total time : " + (endTime - startTime) / 1000 + " seconds");
+        logger.info(
+                "total time : " + (endTime - startTime) / 1000 + " seconds");
 
         // File zip = new File("lri-xml-messages.zip");
         // zip("Message.xml", zip, f);
@@ -453,8 +456,8 @@ public class LRIGenerator extends BundleGenerator {
                 FileInputStream in = new FileInputStream(file);
                 String path = file.getPath();
                 String trim = root.getPath() + "\\";
-                String zipPath = path.substring(path.indexOf(trim)
-                        + trim.length());
+                String zipPath = path.substring(
+                        path.indexOf(trim) + trim.length());
                 out.putNextEntry(new ZipEntry(zipPath));
                 // buffer size
                 byte[] b = new byte[1024];
@@ -491,8 +494,9 @@ public class LRIGenerator extends BundleGenerator {
         }
         // create/update the test steps
         Set<File> testCaseFolders = new HashSet<File>();
-        Collection<File> testSteps = FileUtils.listFiles(f, new NameFileFilter(
-                "TestStep.json"), FileFilterUtils.trueFileFilter());
+        Collection<File> testSteps = FileUtils.listFiles(f,
+                new NameFileFilter("TestStep.json"),
+                FileFilterUtils.trueFileFilter());
         for (File testStep : testSteps) {
             // test step folder
             File tStepFolder = testStep.getParentFile();
@@ -505,10 +509,12 @@ public class LRIGenerator extends BundleGenerator {
                 jTestStep.setDescription(split[1]);
                 // Add supplements
                 if (supplements.containsKey(jTestStep.getName())) {
-                    jTestStep.addSupplements(supplements.get(jTestStep.getName()));
+                    jTestStep.addSupplements(
+                            supplements.get(jTestStep.getName()));
                 }
 
-                FileUtils.writeStringToFile(testStep, jTestStep.toJson(), false);
+                FileUtils.writeStringToFile(testStep, jTestStep.toJson(),
+                        false);
             }
             // test case folder
             File tCaseFolder = tStepFolder.getParentFile();
@@ -524,7 +530,8 @@ public class LRIGenerator extends BundleGenerator {
                 jTestCase.setPosition(Integer.parseInt(split[0]));
                 jTestCase.setDescription("");
                 jTestCase.setName(StringUtils.replace(split[1], "_", " "));
-                FileUtils.writeStringToFile(testCase, jTestCase.toJson(), false);
+                FileUtils.writeStringToFile(testCase, jTestCase.toJson(),
+                        false);
             }
         }
         // create/update the test groups folders : find all directories that do
@@ -548,8 +555,8 @@ public class LRIGenerator extends BundleGenerator {
                     JTestCaseGroup jTestCaseGroup = new JTestCaseGroup();
                     jTestCaseGroup.setPosition(Integer.parseInt(split[0]));
                     jTestCaseGroup.setDescription("");
-                    jTestCaseGroup.setName(StringUtils.replace(split[1], "_",
-                            " "));
+                    jTestCaseGroup.setName(
+                            StringUtils.replace(split[1], "_", " "));
                     FileUtils.writeStringToFile(testCaseGroup,
                             jTestCaseGroup.toJson(), false);
                 }
@@ -564,8 +571,8 @@ public class LRIGenerator extends BundleGenerator {
                     JTestCaseGroup jTestCaseGroup = new JTestCaseGroup();
                     jTestCaseGroup.setPosition(Integer.parseInt(split[0]));
                     jTestCaseGroup.setDescription("");
-                    jTestCaseGroup.setName(StringUtils.replace(split[1], "_",
-                            " "));
+                    jTestCaseGroup.setName(
+                            StringUtils.replace(split[1], "_", " "));
                     FileUtils.writeStringToFile(testCaseGroup,
                             jTestCaseGroup.toJson(), false);
                 }
@@ -641,7 +648,8 @@ public class LRIGenerator extends BundleGenerator {
         int tplanIdx = 0;
         for (File plan : plans) {
             tplanIdx++;
-            JTestPlan jPlan = JTestPlan.fromJson(FileUtils.readFileToString(plan));
+            JTestPlan jPlan = JTestPlan.fromJson(
+                    FileUtils.readFileToString(plan));
             jPlan.setPosition(tplanIdx);
             FileUtils.writeStringToFile(plan, jPlan.toJson(), false);
             IOFileFilter testgroup = new NameFileFilter("TestCaseGroup.json");
@@ -652,7 +660,8 @@ public class LRIGenerator extends BundleGenerator {
                 if (group.getParentFile().getParentFile().equals(
                         plan.getParentFile())) {
                     tgIdx++;
-                    JTestCaseGroup jgroup = JTestCaseGroup.fromJson(FileUtils.readFileToString(group));
+                    JTestCaseGroup jgroup = JTestCaseGroup.fromJson(
+                            FileUtils.readFileToString(group));
                     jgroup.setPosition(tgIdx);
                     FileUtils.writeStringToFile(group, jgroup.toJson(), false);
                     // IOFileFilter testcase = new
@@ -665,7 +674,8 @@ public class LRIGenerator extends BundleGenerator {
                         if (tgoup2.getParentFile().getParentFile().equals(
                                 group.getParentFile())) {
                             // tg2Idx++;
-                            JTestCaseGroup jgroup2 = JTestCaseGroup.fromJson(FileUtils.readFileToString(tgoup2));
+                            JTestCaseGroup jgroup2 = JTestCaseGroup.fromJson(
+                                    FileUtils.readFileToString(tgoup2));
                             String name = tgoup2.getParentFile().getName();
                             String position = name.replaceAll("\\D", "");
                             jgroup2.setPosition(Integer.parseInt(position) + 1);
@@ -679,11 +689,14 @@ public class LRIGenerator extends BundleGenerator {
                             // int tcIdx = 0;
                             for (File tcase : testcases) {
                                 // tcIdx++;
-                                JTestCase jCase = JTestCase.fromJson(FileUtils.readFileToString(tcase));
+                                JTestCase jCase = JTestCase.fromJson(
+                                        FileUtils.readFileToString(tcase));
                                 String caseName = jCase.getName();
-                                String tmp = caseName.substring(caseName.indexOf("."));
+                                String tmp = caseName.substring(
+                                        caseName.indexOf("."));
                                 String casePosition = tmp.replaceAll("\\D", "");
-                                jCase.setPosition(Integer.parseInt(casePosition) + 1);
+                                jCase.setPosition(
+                                        Integer.parseInt(casePosition) + 1);
                                 FileUtils.writeStringToFile(tcase,
                                         jCase.toJson(), false);
 
@@ -694,7 +707,8 @@ public class LRIGenerator extends BundleGenerator {
                                         FileFilterUtils.trueFileFilter());
 
                                 for (File tstep : teststeps) {
-                                    JTestStep jStep = JTestStep.fromJson(FileUtils.readFileToString(tstep));
+                                    JTestStep jStep = JTestStep.fromJson(
+                                            FileUtils.readFileToString(tstep));
                                     // default to 1
                                     jStep.setPosition(1);
                                     FileUtils.writeStringToFile(tstep,
@@ -709,8 +723,8 @@ public class LRIGenerator extends BundleGenerator {
         }
     }
 
-    private void zipExampleMessages(String folder, String zipName, String suffix)
-            throws IOException {
+    private void zipExampleMessages(String folder, String zipName,
+            String suffix) throws IOException {
 
         String zipDir = "./src/main/resources/Documentation/" + folder
                 + "_Test_Plan";
@@ -733,16 +747,16 @@ public class LRIGenerator extends BundleGenerator {
 
         // create zip
         // output file
-        ZipOutputStream out = new ZipOutputStream(new FileOutputStream(
-                zipFileName));
+        ZipOutputStream out = new ZipOutputStream(
+                new FileOutputStream(zipFileName));
         // input
         for (File file : files) {
             if (file.isFile()) {
                 FileInputStream in = new FileInputStream(file);
                 String path = file.getPath();
                 String trim = f.getPath() + "\\";
-                String zipPath = path.substring(path.indexOf(trim)
-                        + trim.length());
+                String zipPath = path.substring(
+                        path.indexOf(trim) + trim.length());
                 out.putNextEntry(new ZipEntry(zipPath));
                 // buffer size
                 byte[] b = new byte[1024];
@@ -936,7 +950,8 @@ public class LRIGenerator extends BundleGenerator {
     }
 
     @Override
-    protected String getTestStepFolder(String prefix, TestCaseMetadata metadata) {
+    protected String getTestStepFolder(String prefix,
+            TestCaseMetadata metadata) {
         List<String> result = _getTestStepFolder(prefix, metadata);
         // int testPlanIdx = 0;
         // int testStepIdx = result.size() - 1;
@@ -1066,7 +1081,8 @@ public class LRIGenerator extends BundleGenerator {
         return tp;
     }
 
-    private void setIds(File contextFree, File contextBased) throws IOException {
+    private void setIds(File contextFree, File contextBased)
+            throws IOException {
         List<String> names = Arrays.asList("TestObject.json", "TestPlan.json",
                 "TestCaseGroup.json", "TestCase.json", "TestStep.json");
         NameFileFilter filter = new NameFileFilter(names);
