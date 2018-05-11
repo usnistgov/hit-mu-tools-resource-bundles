@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- edited with XMLSpy v2014 rel. 2 sp1 (http://www.altova.com) by Caroline Rosin (NIST) -->
 <ConformanceProfile ID="V251_IG_SIF_LABORDERS_R1_DSTUR2_2015NOV" Type="Constrainable" HL7Version="2.5.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/Jungyubw/NIST_healthcare_hl7_v2_profile_schema/master/Schema/NIST%20Validation%20Schema/Profile.xsd">
-	<MetaData Name="LOI integration profile" OrgName="NIST" Version="1.0" Date="02222018"/>
+	<MetaData Name="LOI integration profile" OrgName="NIST" Version="1.0" Date="05112018"/>
 	<Messages>
 		<!-- New and Append Order -->
 		<!-- GU -->
@@ -3995,6 +3995,34 @@
 			<Field Datatype="ID" Max="1" MaxLength="9999" Min="1" MinLength="1" Name="Observation Type" Binding="HL70936_USL.1" Usage="R"/>
 		</Segment>
 		<Segment Description="Observation/Result" ID="OBX_HL7" Label="OBX_HL7" Name="OBX">
+			<DynamicMapping>
+				<Mapping Position="5" Reference="2">
+					<Case Value="AD" Datatype="AD"/>
+					<Case Value="CE" Datatype="CE"/>
+					<Case Value="CF" Datatype="CF"/>
+					<Case Value="CK" Datatype="CK"/>
+					<Case Value="CN" Datatype="CN"/>
+					<Case Value="CX" Datatype="CX"/>
+					<Case Value="DT" Datatype="DT"/>
+					<Case Value="ED" Datatype="ED"/>
+					<Case Value="FT" Datatype="FT"/>
+					<Case Value="MO" Datatype="MO"/>
+					<Case Value="NM" Datatype="NM"/>
+					<Case Value="PN" Datatype="PN"/>
+					<Case Value="RP" Datatype="RP"/>
+					<Case Value="SN" Datatype="SN"/>
+					<Case Value="ST" Datatype="ST"/>
+					<Case Value="TM" Datatype="TM"/>
+					<Case Value="TN" Datatype="TN"/>
+					<Case Value="TS" Datatype="TS"/>
+					<Case Value="TX" Datatype="TX"/>
+					<Case Value="XAD" Datatype="XAD"/>
+					<Case Value="XCN" Datatype="XCN"/>
+					<Case Value="XON" Datatype="XON"/>
+					<Case Value="XPN" Datatype="XPN"/>
+					<Case Value="XTN" Datatype="XTN"/>
+				</Mapping>
+			</DynamicMapping>
 			<Field Datatype="SI" ItemNo="00569" Max="1" MaxLength="4" Min="0" MinLength="1" Name="Set ID - OBX" Usage="O"/>
 			<Field Datatype="ID" ItemNo="00570" Max="1" MaxLength="2" Min="0" MinLength="1" Name="Value Type" Binding="HL70125" Usage="C"/>
 			<Field Datatype="CE" ItemNo="00571" Max="1" MaxLength="250" Min="1" MinLength="1" Name="Observation Identifier" Usage="R"/>
