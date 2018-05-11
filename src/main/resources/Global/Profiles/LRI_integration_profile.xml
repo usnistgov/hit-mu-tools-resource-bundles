@@ -1150,6 +1150,34 @@
 		</Segment>
 		<!-- OBX HL7 -->
 		<Segment Name="OBX" ID="OBX_HL7" Label="OBX_HL7" Description="Observation/Result">
+			<DynamicMapping>
+				<Mapping Position="5" Reference="2">
+					<Case Value="AD" Datatype="AD"/>
+					<Case Value="CE" Datatype="CE"/>
+					<Case Value="CF" Datatype="CF"/>
+					<Case Value="CK" Datatype="CK"/>
+					<Case Value="CN" Datatype="CN"/>
+					<Case Value="CX" Datatype="CX"/>
+					<Case Value="DT" Datatype="DT"/>
+					<Case Value="ED" Datatype="ED"/>
+					<Case Value="FT" Datatype="FT"/>
+					<Case Value="MO" Datatype="MO"/>
+					<Case Value="NM" Datatype="NM"/>
+					<Case Value="PN" Datatype="PN"/>
+					<Case Value="RP" Datatype="RP"/>
+					<Case Value="SN" Datatype="SN"/>
+					<Case Value="ST" Datatype="ST"/>
+					<Case Value="TM" Datatype="TM"/>
+					<Case Value="TN" Datatype="TN"/>
+					<Case Value="TS" Datatype="TS"/>
+					<Case Value="TX" Datatype="TX"/>
+					<Case Value="XAD" Datatype="XAD"/>
+					<Case Value="XCN" Datatype="XCN"/>
+					<Case Value="XON" Datatype="XON"/>
+					<Case Value="XPN" Datatype="XPN"/>
+					<Case Value="XTN" Datatype="XTN"/>
+				</Mapping>
+			</DynamicMapping>
 			<Field Name="Set ID - OBX" Usage="O" Min="1" Max="1" Datatype="SI" MaxLength="4" MinLength="1"/>
 			<Field Name="Value Type" Usage="C" Min="0" Max="1" Datatype="ID" Binding="HL70125" BindingStrength="U" MaxLength="3" MinLength="2"/>
 			<Field Name="Observation Identifier" Usage="R" Min="1" Max="1" Datatype="CE" MaxLength="2161" MinLength="1"/>
