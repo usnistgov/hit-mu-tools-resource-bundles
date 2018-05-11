@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--2016-02-01T16:00:34-05:00-->
 <ValueSetLibrary xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ValueSetLibraryIdentifier="eDOS"  xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/Jungyubw/NIST_healthcare_hl7_v2_profile_schema/master/Schema/NIST%20Validation%20Schema/ValueSets.xsd">
-	<MetaData Name="eDOS value set library" OrgName="NIST" Version="1.0.0" Date="09142016"/>	
+	<MetaData Name="eDOS value set library" OrgName="NIST" Version="1.0.0" Date="05112018"/>	
 	<NoValidation>
 		<!-- Excluded because defiend as 'externally or locally defined' -->
 		<BindingIdentifier>9999</BindingIdentifier>
@@ -7117,8 +7117,7 @@
 		<ValueSetDefinition BindingIdentifier="HL70552" Name="Advanced beneficiary notice override reason" Version="2.5.1"/>
 		<ValueSetDefinition BindingIdentifier="HL79999" Name="" Version="2.5.1"/>
 	</ValueSetDefinitions>
-
-	<ValueSetDefinitions Group="NIST-LOI" Order="4">
+	<ValueSetDefinitions Group="NIST-eDOS" Order="4">
 		<ValueSetDefinition BindingIdentifier="NIST_HL70399_USL" ContentDefinition="Extensional" Description="" Extensibility="Closed" Name="Country code" Oid="TBD" Stability="Static" Version="V1.1">
 			<ValueElement CodeSystem="ISO3166_1" DisplayName="ANTIGUA AND BARBUDA" Usage="P" Value="ATG"/>
 			<ValueElement CodeSystem="ISO3166_1" DisplayName="ARGENTINA" Usage="P" Value="ARG"/>
