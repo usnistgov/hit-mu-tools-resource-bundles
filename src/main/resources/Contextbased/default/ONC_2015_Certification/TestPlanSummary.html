@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Test Plan Summary</title>
+
+<style>
+h1 {
+	color: #000099;
+	text-align: center;
+	font-family: "Cambria";
+}
+
+h2 {
+	color: #0066ff;
+	font-family: "Cambria";
+}
+
+h3 {
+	font-weight: bold;
+}
+
+table {
+    width: 100%;
+}
+
+table, th, td {
+   border: 1px solid black;
+}
+
+th {
+    text-align: center;
+}
+
+</style>
+</head>
+<body>
+
+	<h1>Test Plan Summary</h1>
+	<h1>ONC 2015 Certification</h1>
+
+	<h3>Description</h3>null<br/><h3>Test Objectives</h3>null<br/>
+<h2>Test Case Group: Urgent Care Visit</h2>
+<h3>Description</h3>null<br/><h3>Test Objectives</h3>null<br/>
+Patient is seen in Urgent Care Center and is discharged/dispositioned to home.
+<br/>
+<table>
+<tr>
+<th>Test Case</th>
+<th>SS-UC-1_UC_Visit_Influenza_Child</th>
+</tr>
+<tr>
+<td colspan='2'><h3>Description</h3>Syndromic surveillance is public health surveillance that emphasizes the use of near "real-time" health data and statistical tools for disease or hazardous event detection, situation awareness for mass gatherings and public health emergencies, and ad hoc and population health trend analyses. For syndromic surveillance purposes, required data on all clinical encounters must be sent to the jurisdictional public health agency within 24 hours of any given encounter, and in accordance with local or state laws and practices.
+<br>
+The Child_Influenza Test Case provides an example of a clinical encounter that could take place in either an urgent care or emergency clinical setting. It is therefore applicable to EHR technology used in some ambulatory settings. This test case also provides an example where the facility sending the syndromic surveillance message is different than the facility where the patient received care.
+<br>
+In this test case, an infant is seen at an urgent care center for fever, cough, and earache. Diagnostic tests show that he has influenza and stenosis of the external ear canal. He is discharged to home with treatment instructions and a prescription. Syndromic surveillance data about the visit are transmitted to the local health department.
+<br>
+This test case involves 2 steps: a registration message (ADT^A04) followed by a discharge message (ADT^A03).<br/><h3>Test Objectives</h3>No Test Objectives
+<br/></td>
+</tr>
+<tr>
+<th colspan='2'>Test Steps</th>
+</tr>
+<tr>
+<th>SS-UC-1.1_Registration_A04</th>
+<td><h3>Description</h3><p>A mother brings her 6-month old male infant to Big City Children`s Urgent Care on February 20, 2010 at 8:30 AM. A clerical assistant registers the patient. She records the patient`s name, date of birth, race, ethnicity, residence, insurance information, and health history. The clerical assistant also records the patient&#39;s chief complaint in free-text is, &quot;Fever, cough, and earache.&quot; At 8:35 AM a nurse sees the patient and performs a vital sign assessment, noting that the child currently has a temperature of 101.2 with a productive cough and right ear inflammation and fluid build-up. At 9:00 AM the physician orders a rapid influenza test, chest x-ray, and a treatment. The physician assigns the patient with working diagnoses of influenza with other respiratory manifestations (ICD-9 CM diagnosis code of 487.1), and stenosis of external ear canal due to inflammation (ICD-9 CM diagnosis code of 380.53) within the patient`s electronic medical record. Big City Children&#39;s Urgent Care is an outpatient facility operated by Children&#39;s Hospital of Big City that routinely sends electronic syndromic surveillance data to the Big City Health Department (BCHD) in accordance with a city regulation. At 10:00 AM on February 20, 2010, the facility`s electronic health record module for syndromic surveillance data assembles and transmits a Registration ADT message about this patient encounter.</p><br/><h3>Test Objectives</h3><p>This test step examines a Health IT Module&#39;s ability to create ADT^A04 Registration message within PHIN Messaging Guide&#39;s conformance requirements.</p><br/></td>
+</tr>
+<tr>
+<th>SS-UC-1.2_Discharge_A03</th>
+<td><h3>Description</h3><p>The patient`s vital signs gradually return to normal. At 2 PM, the patient`s laboratory and radiology tests results are provided to the attending physician. The tests indicate that the infant has influenza, and does not have pneumonia. The patient`s mother is provided with treatment information and prescriptions for her infant son. The working diagnoses (ICD-9 CM 487.1 and 380.53) are resolved/inactivated, and at 5 PM the patient is discharged home with final diagnoses of influenza and stenosis of external ear canal due to inflammation. Big City Children&#39;s Urgent Care is an outpatient facility operated by Children&#39;s Hospital of Big City that routinely sends electronic syndromic surveillance data to the Big City Health Department (BCHD) in accordance with a city regulation. At 6:00 PM on February 20, 2010, the facility`s electronic health record module for syndromic surveillance data assembles and transmits a Discharge ADT message about this patient encounter to BCHD.</p><br/><h3>Test Objectives</h3><p>This test step examines a Health IT Module&#39;s ability to create ADT^A03 Discharge message within PHIN Messaging Guide&#39;s conformance requirements.</p><br/></td>
+</tr>
+</table>
+<br/>
+<h2>Test Case Group: ED Visit with Mortality</h2>
+<h3>Description</h3>null<br/><h3>Test Objectives</h3>null<br/>
+Patient seen in ED and dies.
+<br/>
+<table>
+<tr>
+<th>Test Case</th>
+<th>SS-ED-2_ED_Visit_Patient_Dies</th>
+</tr>
+<tr>
+<td colspan='2'><h3>Description</h3>Syndromic surveillance is public health surveillance that emphasizes the use of near "real-time" health data and statistical tools for disease or hazardous event detection, situation awareness for mass gatherings and public health emergencies, and ad hoc and population health trend analyses. For syndromic surveillance purposes, required data on all clinical encounters must be sent to the jurisdictional public health agency within 24 hours of any given encounter, and in accordance with local or state laws and practices. <div><br>
+The ED Visit Test Case provides an example of an ED visit where the patient's demographic information is unavailable at registration, admit/encounter reason is captured as a coded value using an ICD-10 CM code, a working diagnosis and a final diagnosis are captured using ICD-10 CM codes, and the patient dies. </div><div><br>
+In this test case, an unconscious, unknown female patient is brought to an emergency department by ambulance after she sustained critical head and neck injuries due to a collision with a bus while she was riding a bicycle. She is placed on a ventilator, diagnosed as having severe head trauma, and expires from her injuries. Syndromic surveillance data about the visit are transmitted to the state health department.
+<br>
+This test case involves 3 steps: a registration message (ADT^A04), an update message (ADT^A08), and a discharge message (ADT^A03).</div><br/><h3>Test Objectives</h3>No Test Objectives<br/></td>
+</tr>
+<tr>
+<th colspan='2'>Test Steps</th>
+</tr>
+<tr>
+<th>SS-ED-2.1_Registration_A04</th>
+<td><h3>Description</h3><p>An unconscious white female with critical injuries to her head and neck is brought by ambulance to Western Regional Medical Center&#39;s Emergency Department at 5:00 PM on July 17, 2012. The paramedics report that the patient turned her bicycle in to a bus moving at 35 mph. The collision threw the cyclist, who was not wearing a helmet, head first to the ground. The patient&#39;s vital signs are stable, but she is on ventilation. Unable to find any identification, the patient is registered without her true name, date of birth, race, ethnicity, insurance information, and health history. Her admit/encounter reason is logged as V13.4XXA (Pedal cycle driver injured in collision with car, pick-up truck or van in traffic accident, initial encounter). No working diagnoses are assigned. Western Regional Medical Center reports syndromic surveillance data to the state health department (SHD). At 5:00 PM on July 17, 2012 the hospital&#39;s electronic health record module for syndromic surveillance data assembles and transmits an ADT^A04 Registration message about this encounter to SHD.</p><br/><h3>Test Objectives</h3><p>This test step examines a Health IT Module&#39;s ability to create ADT^A04 Registration message within PHIN Syndromic Surveillance Messaging Guide&#39;s conformance requirements.</p><br/></td>
+</tr>
+<tr>
+<th>SS-ED-2.2_Update_A08</th>
+<td><h3>Description</h3><p>Physical examination, CT scan of the head and neck reveal a fracture to the base of the patient&#39;s skull and massive intracranial bleeding. While the patient&#39;s examination and diagnostic tests are proceeding an emergency room tech uncovers the patient&#39;s driver&#39;s license among the belongings brought to the ED by the paramedics. At 5:20 PM the patient&#39;s medical record is updated with working diagnosis ICD-10 codes S02.112A (Type III occipital condyle fracture, initial encounter for closed fracture) and S06.9X3A (Unspecified intracranial injury with loss of consciousness of 1 hour to 5 hours 59 minutes, initial encounter). Also at this time, the patient&#39;s license is used to update the medical record with name and date of birth. Western Regional Medical Center reports syndromic surveillance data to the state health department (SHD). At 5:30 PM on July 17, 2012 the hospital&#39;s electronic health record module for syndromic surveillance data assembles and transmits an ADT 08 Update message about this encounter to SHD.</p><br/><h3>Test Objectives</h3><p>This test step examines a Health IT Module&#39;s ability to create ADT^A08 Update message within PHIN Messaging Guide&#39;s conformance requirements</p><br/></td>
+</tr>
+<tr>
+<th>SS-ED-2.3_Discharge_A03</th>
+<td><h3>Description</h3><p>At 5:41 PM, the patient dies. The working diagnoses (ICD-10-CM S02.112A and S06.9X3A) are resolved/inactivated, and the final diagnoses are S06.0X8A (Concussion with LOC of any duration with death due to other cause prior to regaining consciousness) and S02.112A (Type III occipital condyle fracture, initial encounter for closed fracture). Western Regional Medical Center reports syndromic surveillance data to the state health department (SHD). At 6:00 PM on July 17, 2012 the hospital&#39;s electronic health record module for syndromic surveillance data assembles and transmits an ADT^A03 Discharge message about this encounter to SHD.</p><br/><h3>Test Objectives</h3><p>This test step examines a Health IT Module&#39;s ability to create ADT^A03 Discharge message within PHIN Messaging Guide&#39;s conformance requirements for emergency department (ED) data.</p><br/></td>
+</tr>
+</table>
+<br/>
+<h2>Test Case Group: ED Visit with Inpatient Admission</h2>
+<h3>Description</h3>null<br/><h3>Test Objectives</h3>null<br/>
+Patient seen in ED and admitted to hospital.
+<br/>
+<table>
+<tr>
+<th>Test Case</th>
+<th>SS-ED-3_ED_ Visit_Patient_Admitted</th>
+</tr>
+<tr>
+<td colspan='2'><h3>Description</h3>Syndromic surveillance is public health surveillance that emphasizes the use of near "real-time" health data and statistical tools for disease or hazardous event detection, situation awareness for mass gatherings and public health emergencies, and ad hoc and population health trend analyses. For syndromic surveillance purposes, required data on all clinical encounters must be sent to the jurisdictional public health agency within 24 hours of the start of any given encounter, and in accordance with local or state laws and practices.
+<br><br>
+The ED Visit with Admit Test Case provides an example of an ED visit for which the patient's chief complaint is captured as free-text, working diagnosis and final diagnosis are captured with SNOMED CT codes, the patient is discharged from the ED and admitted for inpatient care, and the Admit/Encounter Reason is captured with a SNOMED CT code.
+<br><br>
+In this test case, a disoriented, elderly male is brought to the emergency department on the day following a blizzard that caused power outages. He was nearly unconscious when found in his kitchen next to a gas oven. He states that he has a headache, nausea, and dizziness. The physician diagnoses him with carbon monoxide poisoning and orders him to be admitted as an inpatient for hyperbaric oxygen therapy. He is discharged from the ED and prepared for admission. Syndromic surveillance data about the visit are transmitted to the state health department.
+<br><br>
+This test case involves 4 steps: a registration message (ADT^A04), an update message (ADT^A08), a discharge message (ADT^A03), and an admission message (ADT^A01).<br/><h3>Test Objectives</h3>No Test Objectives<br/></td>
+</tr>
+<tr>
+<th colspan='2'>Test Steps</th>
+</tr>
+<tr>
+<th>SS-ED-3.1_Registration_A04</th>
+<td><h3>Description</h3><p>A disoriented 70 year-old male is brought by his neighbor to Southern Midwest Medical Center&#39;s Emergency Department at 7:30 AM on February 1, 2010, the day following a blizzard that caused power outages in many city neighborhoods. The patient is complaining of &quot;a headache, nausea, and dizziness&quot;. The neighbor explains that he was concerned about the patient since the building&#39;s electric heating system was not working. At 7:00 AM, he entered the patient&#39;s apartment and found the patient unconscious in the kitchen next to a fully lit gas oven and stove running at high. A clerical assistant registers the patient with the neighbor&#39;s help. She records the patient&#39;s name, date of birth, race, ethnicity, residence, insurance information, and health history. The clerical assistant also enters the patient&#39;s chief complaint as, &quot;A headache, nausea, and dizziness&quot;. Southern Midwest Medical Center reports syndromic surveillance data to the state health department (SHD). At 7:45 AM on February 1, 2010, the hospital&#39;s electronic health record module for syndromic surveillance data assembles and transmits a Registration message about this encounter to SHD.</p><br/><h3>Test Objectives</h3><p>This test step examines a Health IT Module&#39;s ability to create ADT A04-Registration message within the PHIN Messaging Guide&#39;s conformance requirements for syndromic surveillance.</p><br/></td>
+</tr>
+<tr>
+<th>SS-ED-3.2_Update_A08</th>
+<td><h3>Description</h3><p>At 8:00 AM the attending physician determines, with lab results indicating that the patient is suffering from severe metabolic acidosis, that the patient has carbon monoxide poisoning. She orders a hospital admission for the patient to receive hyperbaric oxygen therapy (HBOT), overnight observation, and a full neurological assessment. At 8:10 AM, the physician updates the patient&#39;s record with a working diagnosis, coded with the SNOMED CT code 242383002 (accidental exposure to carbon monoxide), and orders admission for carbon monoxide poisoning. Southern Midwest Medical Center reports syndromic surveillance data to the city health department (CHD). At 8:15 AM on February 1, 2010, the hospital&#39;s electronic health record module for syndromic surveillance data assembles and transmits an Update message about this encounter to SHD.</p><br/><h3>Test Objectives</h3><p>This test step examines a Health IT Module&#39;s ability to create ADT^A08 Update message, within the parameters of the PHIN Messaging Guide&#39;s conformance requirements.</p><br/></td>
+</tr>
+<tr>
+<th>SS-ED-3.3_Discharge_A03</th>
+<td><h3>Description</h3><p>The patient is quickly discharged from the emergency department (ED) and transported within the facility to a hyperbaric chamber for HBOT. At 8:25 AM, ED staff complete the patient record and administratively discharge the patient from the ED. The working diagnosis is updated to final diagnosis. The patient&#39;s final diagnosis is, &quot;Accidental exposure to carbon monoxide,&quot; (SNOMED CT code 242383002). Southern Midwest Medical Center reports syndromic surveillance data to the city health department (CHD). At 8:30 AM on February 1, 2010, the hospital&#39;s electronic health record module for syndromic surveillance data assembles and transmits a Discharge message about this encounter to SHD.</p><br/><h3>Test Objectives</h3><p>This test step examines an Health IT Module&#39;s ability to create ADT^A03 Discharge message within the PHIN Messaging Guide&#39;s conformance requirements.</p><br/></td>
+</tr>
+<tr>
+<th>SS-ED-3.4_Admission_A01</th>
+<td><h3>Description</h3><p>While the patient is prepared for transport within the hospital for HBOT, the clinical staffers complete an admission record. The admit reason is recorded as, &quot;Accidental exposure to carbon monoxide,&quot; (SNOMED CT code 242383002). Southern Midwest Medical Center reports syndromic surveillance data to the city health department (CHD). At 8:35 AM on February 1, 2010, the hospitals electronic health record module for syndromic surveillance data assembles and transmits an Admission message about this encounter to SHD.</p><br/><h3>Test Objectives</h3><p>This test step examines a Health IT Module&#39;s ability to create ADT^A01 Admission message within the PHIN Messaging Guide&#39;s conformance requirements for syndromic surveillance.</p><br/></td>
+</tr>
+</table>
+<br/>
+<h2>Test Case Group: Inpatient Visit</h2>
+<h3>Description</h3>null<br/><h3>Test Objectives</h3>null<br/>
+Patient is admitted and discharged from hospital.
+<br/>
+<table>
+<tr>
+<th>Test Case</th>
+<th>SS-IP-4_Inpatient_Visit_Surgery</th>
+</tr>
+<tr>
+<td colspan='2'><h3>Description</h3>Syndromic surveillance is public health surveillance that emphasizes the use of near "real-time" health data and statistical tools for disease or hazardous event detection, situation awareness for mass gatherings and public health emergencies, and ad hoc and population health trend analyses. For syndromic surveillance purposes, required data on all clinical encounters must be sent to the jurisdictional public health agency within 24 hours of the any given encounter, and in accordance with local or state laws and practices.
+<br><br>
+The IP Visit-Cardiac Surgery Test Case provides an example of an inpatient surgical visit for a patient with multiple diagnoses. In this scenario, syndromic surveillance data are sent to a state public health agency in accordance with guidelines recommended by the International Society for Disease Surveillance (i.e., once following admission and once following discharge).
+<br><br>
+In this test case, a middle aged man is admitted for a pre-scheduled surgical removal of a coronary artery obstruction and insertion of stents, spends one night in the hospital for observation, and is discharged home.
+<br><br>
+This test case involves 2 steps: an admission message (ADT^A01); and a discharge message (ADT^A03).<br/><h3>Test Objectives</h3>No Test Objectives<br/></td>
+</tr>
+<tr>
+<th colspan='2'>Test Steps</th>
+</tr>
+<tr>
+<th>SS-IP-4.1_Admission_A01</th>
+<td><h3>Description</h3><p>On August 17, 2015 at 7:00 AM, a 51-year old male arrives at Mountainview General Hospital for a pre-scheduled surgical removal of a coronary artery obstruction and insertion of stents. A clerical assistant registers the patient for admission. He records the patient&#39;s name, date of birth, race, ethnicity, residence, and insurance information. At 7:30 AM the patient is escorted to a pre-operation room where a nurse captures the patient&#39;s health history, which includes chest pain, inputs the reason for visit as I25.110 (Atherosclerotic heart disease of native coronary artery with unstable angina pectoris), and inputs angina pectoris for the patient&#39;s diagnosis (I20.9).The patient is then prepared for the procedure, and at 8:30 AM the patient has the procedure. It occurs without incident, and the patient goes to post-operation recovery unit to wake from anesthesia, and receive a post-op examination. At 2:00 PM the patient, who is in good condition, is transported to a cardiac unit for overnight observation.Mountainview General Hospital reports inpatient syndromic surveillance data to the state health department (SHD) for all new patient admissions once per day. At 1:00 AM on August 18, 2015, the hospital&#39;s electronic health record module for syndromic surveillance data assembles and transmits an ADT^A01 Admission message about this encounter to SHD.</p><br/><h3>Test Objectives</h3><p>This test step examines a Health IT Module&#39;s ability to create ADT^A01 Admission message within PHIN Syndromic Surveillance Messaging Guide&#39;s conformance requirements.</p><br/></td>
+</tr>
+<tr>
+<th>SS-IP-4.2_Discharge_A03</th>
+<td><h3>Description</h3><p>At 9:00 AM the next day, August 18, 2015, the patient is visited by the surgeon and an attending physician who perform a physical to check for signs and symptoms of any post-operation compilations. The patient reports that he is not experiencing any chest pain. The physicians both observe that the patient has signs of cardiac arrhythmia (I49.9), but conclude that he is otherwise in good condition. They clear the patient for discharge. At 12:00 PM the patient goes home.</p><p><br></p><p>Mountainview General Hospital reports inpatient syndromic surveillance data to the state health department (SHD) for all new patient discharges once per day. At 1:00 AM on August 19, 2015, the hospital&#39;s electronic health record module for syndromic surveillance data assembles and transmits an ADT^A03 Discharge message about this encounter to SHD.</p><br/><h3>Test Objectives</h3><p>This test step examines a Health IT Module&#39;s ability to create ADT^A03 Discharge message within PHIN Messaging Guide&#39;s conformance requirements.</p><br/></td>
+</tr>
+</table>
+<br/>
+
+
+</body>
+</html>
